@@ -1,9 +1,11 @@
 cff-version: 1.2.0
 title: "TADA-Wiki: Best practice for sharing analytical code"
+message: >-
+  If you use this wiki, please cite the underlying papers listed under
+  `references` below. To cite the wiki itself, use the metadata in this file.
 type: software
 authors:
-  - given-names: Edward
-    name-particle: R.
+  - given-names: Edward R.
     family-names: Ivimey-Cook
     email: e.ivimeycook@gmail.com
     orcid: "https://orcid.org/0000-0003-4910-0443"
@@ -24,7 +26,86 @@ keywords:
   - code review
   - open science
 license:
-- MIT
-- CC-BY-4.0
+  - MIT
+  - CC-BY-4.0
+license-url: "https://creativecommons.org/licenses/by/4.0/"
 date-released: "2026-09-02"
 version: "1.0.0"
+
+references:
+  - type: article
+    title: >-
+      TADA! Simple guidelines to improve analytical code sharing for
+      transparency and reproducibility
+    authors:
+      - given-names: Edward R.
+        family-names: Ivimey-Cook
+        orcid: "https://orcid.org/0000-0003-4910-0443"
+      - given-names: Antica
+        family-names: Culina
+      - given-names: Shreya
+        family-names: Dimri
+      - given-names: Matthew J.
+        family-names: Grainger
+      - given-names: Fonti
+        family-names: Kar
+      - given-names: Malgorzata
+        family-names: Lagisz
+      - given-names: Nicholas P.
+        family-names: Moran
+      - given-names: Shinichi
+        family-names: Nakagawa
+      - given-names: Dominique G.
+        family-names: Roche
+      - given-names: Sean
+        family-names: Tattan
+      - given-names: Alfredo
+        family-names: Sánchez-Tójar
+      - given-names: Saras M.
+        family-names: Windecker
+      - given-names: Joel L.
+        family-names: Pick
+        orcid: "https://orcid.org/0000-0002-6295-3742"
+    year: 2025
+    doi: "10.32942/X2D93K"
+    url: "https://eivimeycook.github.io/TADA/"
+    notes: "Preprint, EcoEvoRxiv"
+
+  - type: article
+    title: >-
+      The SORTEE guidelines for data and code quality control in ecology and
+      evolutionary biology
+    authors:
+      - given-names: Joel L.
+        family-names: Pick
+        orcid: "https://orcid.org/0000-0002-6295-3742"
+      - given-names: Edward R.
+        family-names: Ivimey-Cook
+        orcid: "https://orcid.org/0000-0003-4910-0443"
+    journal: "Peer Community Journal"
+    volume: 6
+    year: 2026
+    doi: "10.24072/pcjournal.687"
+    url: "https://doi.org/10.24072/pcjournal.687"
+    notes: "Full author list of 26; see the publication record."
+
+  - type: article
+    title: >-
+      Implementing code review in the scientific workflow: Insights from ecology
+      and evolutionary biology
+    authors:
+      - given-names: Edward R.
+        family-names: Ivimey-Cook
+        orcid: "https://orcid.org/0000-0003-4910-0443"
+      - given-names: Joel L.
+        family-names: Pick
+        orcid: "https://orcid.org/0000-0002-6295-3742"
+    journal: "Journal of Evolutionary Biology"
+    volume: 36
+    issue: 10
+    start: 1347
+    end: 1356
+    year: 2023
+    doi: "10.1111/jeb.14230"
+    url: "https://doi.org/10.1111/jeb.14230"
+    notes: "Full author list of 13; see the publication record."
