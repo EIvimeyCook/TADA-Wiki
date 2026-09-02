@@ -23,7 +23,8 @@ keywords:
   - metadata
   - code review
   - open science
-license: CC-BY-4.0
-license-url: "https://creativecommons.org/licenses/by/4.0/"
+license:
+- MIT
+- CC-BY-4.0
 date-released: "2026-09-02"
 version: "1.0.0"
