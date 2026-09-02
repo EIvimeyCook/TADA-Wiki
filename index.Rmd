@@ -11,7 +11,7 @@ description: |
   chapters on data-sharing basics, metadata, licences, the SORTEE data and
   code quality control guidelines, and code review.
 link-citations: true
-github-repo: "YOUR-ORG/TADA-Wiki"
+github-repo: "EIvimeyCook/TADA-Wiki"
 ---
 
 ```{r setup, include = FALSE}
