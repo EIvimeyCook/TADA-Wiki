@@ -9,7 +9,6 @@
   <a href="LICENSE"><img alt="Code: MIT" src="https://img.shields.io/badge/code-MIT-blue.svg"></a>
   <a href="LICENSE-CONTENT"><img alt="Content: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg"></a>
   <img alt="Built with bookdown" src="https://img.shields.io/badge/built%20with-bookdown-1f6feb.svg">
-  <img alt="R >= 4.0" src="https://img.shields.io/static/v1?label=R&message=%E2%89%A5%204.0&color=276DC3">
 </p>
 
 ---
