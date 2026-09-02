@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="Code: MIT" src="https://img.shields.io/badge/code-MIT-blue.svg"></a>
-  <a href="LICENSE-CONTENT"><img alt="Content: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg"></a>
+  <a href="LICENSE-data.md"><img alt="Content: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg"></a>
   <img alt="Built with bookdown" src="https://img.shields.io/badge/built%20with-bookdown-1f6feb.svg">
 </p>
 
@@ -164,7 +164,7 @@ Edward R. Ivimey-Cook — e.ivimeycook@gmail.com
 ## License
 
 - **Code** —  under the [MIT License](LICENSE).
-- **Content** — under [CC BY 4.0](LICENSE-CONTENT).
+- **Content** — under [CC BY 4.0](LICENSE-data.md).
 
 ## AI Declaration
 
