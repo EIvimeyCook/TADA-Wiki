@@ -33,20 +33,5 @@ Scope and exceptions
   * The code in this repository (render.R, assets/, templates/) is licensed
     separately under the MIT License — see LICENSE.
 
-  * The PDFs in papers/ are not covered by this licence. They remain under
-    their original terms:
-
-      - Pick, J. L., et al. (2026). The SORTEE guidelines for data and code
-        quality control in ecology and evolutionary biology. Peer Community
-        Journal 6: e20. Open access under CC BY 4.0.
-
-      - Ivimey-Cook, E. R., et al. (2023). Implementing code review in the
-        scientific workflow. Journal of Evolutionary Biology 36: 1347-1356.
-        See the publisher's terms.
-
-      - Ivimey-Cook, E. R., et al. TADA! Simple guidelines to improve
-        analytical code sharing for transparency and reproducibility.
-        Manuscript; see the authors' terms.
-
   * Quotations from and summaries of these papers within the wiki text are
     attributed in the References chapter.
