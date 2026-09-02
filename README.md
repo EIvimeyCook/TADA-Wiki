@@ -95,8 +95,7 @@ RSTUDIO_PANDOC=/path/to/pandoc Rscript render.R
 | `_output.yml` | Theme, CSS, HTML includes |
 | `render.R` | Build script |
 | `assets/` | `style.css`, `tada.js`, and the HTML head/foot includes |
-| `templates/` | Copy-and-fill templates (see below) |
-| `papers/` | The three source PDFs, with their terms of use in `papers/README.md` |
+| `templates/` | Copy-and-fill templates (see below) ||
 | `docs/` | Rendered site — generated, not edited by hand |
 
 ## Templates
@@ -112,7 +111,7 @@ Four templates ship with the wiki, usable independently of it.
 
 ## Sources
 
-The wiki is a synthesis of three papers, all included in `papers/`:
+The wiki is a synthesis of three papers:
 
 - **Ivimey-Cook, E. R., Culina, A., Dimri, S., Grainger, M. J., Kar, F.,
   Lagisz, M., Moran, N. P., Nakagawa, S., Roche, D. G., Tattan, S.,
@@ -128,10 +127,6 @@ The wiki is a synthesis of three papers, all included in `papers/`:
   scientific workflow: Insights from ecology and evolutionary biology.* Journal
   of Evolutionary Biology 36: 1347–1356. <https://doi.org/10.1111/jeb.14230>
 
-Where the wiki extends beyond these papers — worked examples, comparison
-tables, checklists, the reviewer's script — that material is labelled **wiki
-guidance** rather than presented as a finding from the papers. This separation
-is the one rule for contributors.
 
 ## Bug reports and contributions
 
@@ -169,15 +164,8 @@ Edward R. Ivimey-Cook — e.ivimeycook@gmail.com
 
 ## License
 
-Dual licensed, as is usual for a project that is part code and part writing:
-
-- **Code** — the build script, `assets/style.css`, `assets/tada.js` and the
-  templates — under the [MIT License](LICENSE).
-- **Content** — the wiki text in the `.Rmd` chapters — under
-  [CC BY 4.0](LICENSE-CONTENT).
-
-The three PDFs in `papers/` remain under their original licences. The SORTEE
-guidelines paper is open access under CC BY 4.0.
+- **Code** —  under the [MIT License](LICENSE).
+- **Content** — under [CC BY 4.0](LICENSE-CONTENT).
 
 ## AI Declaration
 
