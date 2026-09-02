@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/EIvimeyCook/TADA-Wiki/blob/main/assets/Wizard.png" width = "200"/>
+</p>
+
 <h1 align="center">TADA-Wiki</h1>
 
 <p align="center">
