@@ -1,0 +1,272 @@
+# Contribute {#contribute}
+
+This is a wiki, which means it is meant to be added to. If you have a worked
+example, a repository comparison, a language-specific gotcha, or a correction —
+this page is how to get it in.
+
+::: {.tada-key}
+Copy [`templates/page-template.Rmd`](templates/page-template.Rmd), fill it in,
+add the filename to `_bookdown.yml`, run `Rscript render.R`, and open a pull
+request. The rest of this page is detail.
+:::
+
+## What belongs here {#contribute-scope}
+
+**Yes, please:**
+
+- Worked examples — a real README, a real project structure, a real code review
+- Language- or tool-specific guidance (Julia, MATLAB, Stata, Snakemake…)
+- Discipline-specific notes — TADA was developed in ecology and evolutionary
+  biology, and the authors explicitly encourage adaptation to other fields
+- Repository, licence or journal-policy information that has changed
+- Corrections, especially anywhere this wiki has drifted from the source papers
+
+**Probably not:**
+
+- General programming tutorials — link to them from
+  [Further reading](#further-reading) instead
+- Advocacy for a particular statistical method
+- Tool recommendations with no connection to sharing, archiving or review
+
+## The one rule {#contribute-sourcing}
+
+::: {.tada-warn}
+**Separate what the papers say from what you are adding.**
+
+If a claim comes from one of the three source papers, state that and cite it —
+by author and year, so a reader can find it in [References](#references). If it
+is your own practical advice, label it **wiki guidance**, as this wiki does
+throughout.
+
+This is the whole reason the wiki is trustworthy. A page that blends the two is
+worse than no page.
+:::
+
+Concretely:
+
+> The SORTEE guidelines require that code files are in an interoperable format
+> (Guideline 3.4). ✅ *sourced, and pinpointed*
+>
+> Wiki guidance: in practice, the quickest way to check this is to open every
+> file in a plain text editor before you deposit. ✅ *labelled as an addition*
+>
+> You must always use `.csv` for data. ❌ *unsourced, and stronger than the
+> source*
+
+## File layout {#contribute-layout}
+
+```
+TADA-Wiki/
+├── index.Rmd              Welcome page (chapter order lives in _bookdown.yml)
+├── 01-quickstart.Rmd      … one file per chapter, numbered in reading order
+├── 11-references.Rmd
+├── _bookdown.yml          Chapter list, output directory, labels
+├── _output.yml            Theme, CSS, includes
+├── render.R               Build script
+├── assets/
+│   ├── style.css          All styling. Tokens at the top; dark mode at the bottom
+│   ├── tada.js            Turns `.tabset` sections into tabs
+│   ├── head.html          Injected into <head> of every page
+│   └── foot.html          Injected at the end of <body> of every page
+├── templates/             Copy-and-fill templates for readers
+├── papers/                The three source PDFs
+└── docs/                  Rendered site — generated, do not edit by hand
+```
+
+## Adding a chapter {#contribute-chapter}
+
+1. **Copy the template.**
+
+   ```bash
+   cp templates/page-template.Rmd 12-my-new-chapter.Rmd
+   ```
+
+2. **Give it a heading and an ID.** Every chapter starts with a level-1
+   heading carrying an explicit ID, because other pages link to it:
+
+   ```markdown
+   # My new chapter {#my-new-chapter}
+   ```
+
+3. **Register it** in `_bookdown.yml`, in the position you want it to appear:
+
+   ```yaml
+   rmd_files:
+     - "index.Rmd"
+     ...
+     - "12-my-new-chapter.Rmd"
+     - "11-references.Rmd"   # keep references last
+   ```
+
+4. **Build and check.**
+
+   ```bash
+   Rscript render.R
+   ```
+
+   Open `docs/index.html`. The build fails loudly on a broken cross-reference,
+   so a clean build is a real check.
+
+## Writing conventions {#contribute-style}
+
+### Cross-references {.unlisted .unnumbered}
+
+Link by ID: `[Transferable](#transferable)`,
+`[the four Rs](#review-four-rs)`. Give every section you might want to link to
+an explicit `{#id}` — auto-generated IDs change when you edit a heading, and
+silently break links.
+
+### Callouts {.unlisted .unnumbered}
+
+Four are defined in `assets/style.css`. Use them sparingly; a page of callouts
+is a page with no emphasis at all.
+
+```markdown
+::: {.tada-key}
+The short version — one paragraph that summarises the section.
+:::
+
+::: {.tada-tip}
+Try this — a concrete, actionable suggestion.
+:::
+
+::: {.tada-warn}
+Watch out — a common, costly mistake.
+:::
+
+::: {.tada-note}
+Note — a caveat, exception, or aside.
+:::
+```
+
+### Tabs {.unlisted .unnumbered}
+
+Wrap the panes in a `.tabset` div. Each heading inside becomes a tab label, so
+mark them `{.unlisted .unnumbered}` to keep them out of the contents listing and
+out of the section numbering.
+
+```markdown
+::: {.tabset}
+
+#### R {.unlisted .unnumbered}
+
+...
+
+#### Python {.unlisted .unnumbered}
+
+...
+
+:::
+```
+
+`assets/tada.js` finds any element with the `tabset` class, so putting
+`{.tabset}` on a heading instead (`## How to do it {#some-id .tabset}`) also
+works. The div form is used throughout this wiki because it makes the extent of
+the tab group explicit.
+
+With JavaScript disabled every pane simply renders in sequence, so never put
+anything in a tab that the page depends on being hidden.
+
+### Before / after code {.unlisted .unnumbered}
+
+Use `::::` for the outer fence so the inner `:::` fences nest correctly.
+
+````markdown
+:::: {.tada-compare}
+::: {.tada-before}
+Before
+
+```r
+setwd("C:/Users/me/project")
+```
+:::
+
+::: {.tada-after}
+After
+
+```r
+library(here)
+```
+:::
+::::
+````
+
+### Checklists {.unlisted .unnumbered}
+
+End substantial chapters with one. Markdown task syntax, one item per line:
+
+```markdown
+- [ ] Something the reader can verify in under a minute
+```
+
+### Code chunks {.unlisted .unnumbered}
+
+Chunks are set to `eval = FALSE` globally in `index.Rmd` — code on this wiki is
+illustrative and is never executed at build time. If you genuinely need a chunk
+to run, set `eval = TRUE` on that chunk *and* state the dependency in your pull
+request, because it becomes a build requirement for everyone.
+
+### Voice {.unlisted .unnumbered}
+
+- Second person, present tense. "Save your code as `.R`", not "code should be
+  saved".
+- Say the thing, then say why. The *why* is what makes a guideline stick.
+- Prefer concrete numbers over adjectives. "74% of archived R files failed to
+  run" beats "many files fail to run".
+- Assume the reader is a competent researcher who has never archived code
+  before. Not a novice, not a software engineer.
+
+## References {#contribute-references}
+
+Add new sources to `11-references.Rmd`, alphabetically by first author, in the
+existing format:
+
+```markdown
+**Author, A. B., & Author, C. D.** (Year). *Title of the work.* Journal
+Volume: pages. <https://doi.org/…>
+```
+
+Include a DOI wherever one exists. If you cite something in a chapter, it must
+appear in that list.
+
+## Submitting {#contribute-submitting}
+
+If this wiki lives in a git repository:
+
+```bash
+git checkout -b add-julia-guidance
+git add 12-julia.Rmd _bookdown.yml 11-references.Rmd
+git commit -m "Add Julia-specific transferability guidance"
+git push -u origin add-julia-guidance
+```
+
+Then open a pull request describing **what you added** and **where it came
+from** — sourced from a paper, or your own practice.
+
+::: {.tada-note}
+Once a repository URL is set in `_output.yml` (the `repo:` block, currently
+commented out), bs4_book adds an **Edit this page** link to every chapter,
+which is the fastest route for small corrections.
+:::
+
+### Before you submit {.unlisted .unnumbered}
+
+- [ ] `Rscript render.R` completes without errors or warnings
+- [ ] Every claim from a source paper is attributed; every addition of your own is labelled as wiki guidance
+- [ ] New sources are in `11-references.Rmd`
+- [ ] Every heading you link to has an explicit `{#id}`
+- [ ] Cross-references resolve (click them in `docs/`)
+- [ ] Chapter is registered in `_bookdown.yml`
+- [ ] Checked in both light and dark mode, and at a narrow window width
+- [ ] `docs/` changes are included in the commit, or excluded consistently — pick one and say which in the PR
+
+## Templates {#contribute-templates}
+
+Ready to copy, both for contributing and for your own projects.
+
+| Template | Use |
+|---|---|
+| [`templates/page-template.Rmd`](templates/page-template.Rmd) | Skeleton for a new wiki chapter |
+| [`templates/README-template.md`](templates/README-template.md) | Project README covering every [Documented](#documented-readme) field |
+| [`templates/tada-checklist.md`](templates/tada-checklist.md) | The full TADA checklist, to drop into a project |
+| [`templates/code-review-checklist.md`](templates/code-review-checklist.md) | The four Rs, as a reviewer's worksheet |

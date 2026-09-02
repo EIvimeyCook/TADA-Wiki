@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>2 TADA at a glance | The TADA-Wiki</title>
+<meta name="author" content="A community wiki built on the TADA guidelines">
+<meta name="description" content="Transferable, Available, Documented, Annotated. Four steps that take analytical code from “on my laptop” to “runnable by a stranger in five years”.  2.1 Why a fifth set of guidelines? There is no...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="2 TADA at a glance | The TADA-Wiki">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Transferable, Available, Documented, Annotated. Four steps that take analytical code from “on my laptop” to “runnable by a stranger in five years”.  2.1 Why a fifth set of guidelines? There is no...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2 TADA at a glance | The TADA-Wiki">
+<meta name="twitter:description" content="Transferable, Available, Documented, Annotated. Four steps that take analytical code from “on my laptop” to “runnable by a stranger in five years”.  2.1 Why a fifth set of guidelines? There is no...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#0F6E7B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230F6E7B'/%3E%3Ctext%20x='50'%20y='70'%20font-family='Georgia,serif'%20font-size='58'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Best practice for sharing analytical code">The TADA-Wiki</a>:
+        <small class="text-muted">Best practice for sharing analytical code</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="quickstart.html"><span class="header-section-number">1</span> Start here</a></li>
+<li><a class="active" href="tada.html"><span class="header-section-number">2</span> TADA at a glance</a></li>
+<li><a class="" href="transferable.html"><span class="header-section-number">3</span> T — Transferable</a></li>
+<li><a class="" href="available.html"><span class="header-section-number">4</span> A — Available</a></li>
+<li><a class="" href="documented.html"><span class="header-section-number">5</span> D — Documented</a></li>
+<li><a class="" href="annotated.html"><span class="header-section-number">6</span> A — Annotated</a></li>
+<li><a class="" href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></li>
+<li><a class="" href="code-review.html"><span class="header-section-number">8</span> Code review</a></li>
+<li><a class="" href="further-reading.html"><span class="header-section-number">9</span> Further reading</a></li>
+<li><a class="" href="contribute.html"><span class="header-section-number">10</span> Contribute</a></li>
+<li><a class="" href="references.html"><span class="header-section-number">11</span> References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="tada" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> TADA at a glance<a class="anchor" aria-label="anchor" href="#tada"><i class="fas fa-link"></i></a>
+</h1>
+<p><strong>T</strong>ransferable, <strong>A</strong>vailable, <strong>D</strong>ocumented, <strong>A</strong>nnotated. Four steps that
+take analytical code from “on my laptop” to “runnable by a stranger in five
+years”.</p>
+<div id="tada-why" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> Why a fifth set of guidelines?<a class="anchor" aria-label="anchor" href="#tada-why"><i class="fas fa-link"></i></a>
+</h2>
+<p>There is no shortage of advice on writing good code. The problem is that almost
+none of it is about <em>archiving an analysis</em>.</p>
+<p>The TADA authors identify three specific gaps in the existing resources:</p>
+<ol style="list-style-type: decimal">
+<li>They do not sufficiently address <strong>how to archive analytical code</strong>.</li>
+<li>Few of them adhere to the <strong>FAIR principles</strong>.</li>
+<li>Those that do — notably <strong>FAIR4RS</strong>, the FAIR principles for Research
+Software — are broad in scope and aimed at <strong>software developers</strong>, which
+may be part of why they have not been widely adopted by researchers.</li>
+</ol>
+<p>The distinction that makes this matter is between <em>analytical code</em> and
+<em>software</em>:</p>
+<blockquote>
+<p><strong>Software</strong> is written to be general, modular, tested, and to work across
+systems with many different compatible datasets. Designing for that kind of
+reuse is genuinely complicated.</p>
+<p><strong>Analytical code</strong> is tailored to one dataset and one study. Its purpose is
+to be a transparent, reproducible record of that analysis — not to become a
+tool for other people.</p>
+</blockquote>
+<p>Holding analytical code to software standards sets the bar too high, and the
+result is that people clear neither bar. TADA sets a <strong>minimum standard</strong> that
+is achievable for researchers at any coding level, and that still delivers the
+transparency and computational reproducibility the sharing was for.</p>
+</div>
+<div id="tada-problem" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> The scale of the problem<a class="anchor" aria-label="anchor" href="#tada-problem"><i class="fas fa-link"></i></a>
+</h2>
+<p>The numbers behind that argument, all from the TADA paper’s review of the
+literature:</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr class="header">
+<th>What</th>
+<th>Figure</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Journals in ecology &amp; evolutionary biology with code-sharing policies</td>
+<td>15% in 2015 → <strong>88% in 2024</strong>
+</td>
+</tr>
+<tr class="even">
+<td>Articles in the field with open code</td>
+<td>
+<strong>5–33%</strong>, depending on the study</td>
+</tr>
+<tr class="odd">
+<td>Archived R files in Harvard Dataverse failing to run without error</td>
+<td>
+<strong>74%</strong> (falling to 56% after automated cleaning)</td>
+</tr>
+<tr class="even">
+<td>Scripts in species distribution/abundance papers that did not run, or ran with errors</td>
+<td><strong>93%</strong></td>
+</tr>
+<tr class="odd">
+<td>Meta-analyses computationally reproducible given working data and code</td>
+<td>
+<strong>27%</strong> (all results matched exactly) to <strong>73%</strong> (half of results within 10%)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Policies have moved. Practice has not followed. And even where code is present
+and functional, computational reproducibility is not guaranteed.</p>
+</div>
+<div id="tada-four" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> The four principles<a class="anchor" aria-label="anchor" href="#tada-four"><i class="fas fa-link"></i></a>
+</h2>
+<p>Each has its own chapter. This is the one-paragraph version of each.</p>
+<div class="tada-cards">
+<div class="tada-card t">
+<p><span class="tada-letter">T</span> <a href="transferable.html#transferable" class="tada-word">Transferable</a>
+<span class="tada-gloss">Anyone can <strong>open the file, view it and run it</strong> without conversion or
+alteration — on a different computer and a different operating system. Standard
+file extensions; no local file paths.</span></p>
+</div>
+<div class="tada-card a1">
+<p><span class="tada-letter">A</span> <a href="available.html#available" class="tada-word">Available</a>
+<span class="tada-gloss">The code is <strong>publicly archived</strong> so that any external user has long-term
+access to it, with a <strong>globally unique persistent identifier</strong> (e.g. a DOI)
+that is cited in the manuscript.</span></p>
+</div>
+<div class="tada-card d">
+<p><span class="tada-letter">D</span> <a href="documented.html#documented" class="tada-word">Documented</a>
+<span class="tada-gloss"><strong>Accurate, detailed metadata</strong> — typically a README — describing the code
+files and their usage: environment, versions, licence, where the data are, what
+runs in what order.</span></p>
+</div>
+<div class="tada-card a2">
+<p><span class="tada-letter">A</span> <a href="annotated.html#annotated" class="tada-word">Annotated</a>
+<span class="tada-gloss"><strong>Comments inside the code</strong> (or code embedded in RMarkdown/Quarto alongside
+descriptive text) explaining what each chunk does, why, and where its output
+appears in the paper.</span></p>
+</div>
+</div>
+</div>
+<div id="tada-fair" class="section level2" number="2.4">
+<h2>
+<span class="header-section-number">2.4</span> How TADA maps onto FAIR<a class="anchor" aria-label="anchor" href="#tada-fair"><i class="fas fa-link"></i></a>
+</h2>
+<p>TADA was built with the FAIR and FAIR4RS principles in mind, and each letter
+maps onto one or more of them — while in two cases deliberately going further.</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr class="header">
+<th>FAIR principle</th>
+<th>Definition</th>
+<th>Covered by</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>
+<strong>F</strong>indable</td>
+<td>Digital assets (metadata, data, code) can be easily found by both machines and humans</td>
+<td>
+<strong>Available</strong> — provision of a unique identifier</td>
+</tr>
+<tr class="even">
+<td>
+<strong>A</strong>ccessible</td>
+<td>Assets are retrievable via their identifier, with or without authorisation/authentication</td>
+<td>
+<strong>Available</strong> — code is retrievable via that identifier</td>
+</tr>
+<tr class="odd">
+<td>
+<strong>I</strong>nteroperable</td>
+<td>Assets can interoperate with other assets, and are readable using standard documented formats</td>
+<td>
+<strong>Transferable</strong> — <em>extended</em> to also mean runnable on different computers and operating systems</td>
+</tr>
+<tr class="even">
+<td>
+<strong>R</strong>eusable</td>
+<td>Assets are described sufficiently to enable reuse and attribution, ideally via a licence</td>
+<td>
+<strong>Documented</strong> — README plus licence</td>
+</tr>
+<tr class="odd">
+<td>—</td>
+<td><em>(no direct FAIR equivalent)</em></td>
+<td>
+<strong>Annotated</strong> — internal comments, for transparency and human comprehension</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tada-note">
+<p>The <strong>Transferable</strong> and <strong>Available</strong> rows are stated in the TADA paper. The
+<strong>Documented</strong> and <strong>Annotated</strong> rows are this wiki’s reading: the paper defines
+FAIR reusability as “sharing code in a way that clearly specifies what can be
+done with it, for example, via a license and a README file”, which is exactly
+what Documented delivers, and it makes no FAIR claim for Annotated.</p>
+</div>
+<p>Two things are worth noticing in that table.</p>
+<p><strong>Transferable is broader than Interoperable.</strong> Interoperability says anyone
+can open and use your code. Transferability adds that it must also <em>run</em> on
+someone else’s machine and operating system — which is where hard-coded file
+paths kill you.</p>
+<p><strong>Annotated has no FAIR counterpart.</strong> FAIR is largely about machines finding
+and parsing assets. Annotation is about a human being able to follow what the
+analysis actually did. It is the letter most specific to research code, and the
+one most often skipped.</p>
+<div class="tada-note">
+<p>On “reusable”: the word is used in two different senses. In the FAIR sense it
+means <em>sharing code in a way that clearly specifies what can be done with it</em> —
+a licence and a README. In the software-development sense it means writing
+generalised, modular, tested code that runs across systems and datasets. TADA
+targets the first. If you find a guideline demanding the second, check whether
+it was written for software.</p>
+</div>
+</div>
+<div id="tada-scope" class="section level2" number="2.5">
+<h2>
+<span class="header-section-number">2.5</span> What TADA does not cover<a class="anchor" aria-label="anchor" href="#tada-scope"><i class="fas fa-link"></i></a>
+</h2>
+<p>The TADA paper is explicit that two things sit beyond its scope, while noting
+that both support reproducible analyses:</p>
+<ul>
+<li>
+<strong>Containerisation</strong> — Docker, Singularity — which packages a complete
+software environment (programs and libraries) into an image, so that the
+environment itself is reproducible between systems. This is the standard
+answer to the “works on my computer” problem.</li>
+<li>
+<strong>Workflow managers</strong> — Snakemake, Nextflow — which specify the sequence of
+scripts or computational steps in a pipeline and their dependencies, so each
+step executes in a defined, reproducible order.</li>
+</ul>
+<p>Neither is a requirement of TADA. Both are worth knowing about; see
+<a href="further-reading.html#further-reading">Further reading</a>.</p>
+</div>
+<div id="tada-languages" class="section level2" number="2.6">
+<h2>
+<span class="header-section-number">2.6</span> Languages<a class="anchor" aria-label="anchor" href="#tada-languages"><i class="fas fa-link"></i></a>
+</h2>
+<p>TADA is tailored mainly to <strong>R and Python</strong>, because those are the open-source
+languages most widely used in ecology and evolutionary biology. The basic
+principles apply just as well to workflow languages (e.g. Snakemake) and
+compiled languages (e.g. C++), and — as the authors note — to disciplines other
+than ecology and evolutionary biology.</p>
+<p>Where a language does not save code in a standard file type, the test to apply
+is the Transferable one: <strong>can the resulting file be opened by a plain text
+editor?</strong> SPSS syntax <code>.sps</code> files, for instance, pass that test.</p>
+</div>
+<div id="tada-next" class="section level2" number="2.7">
+<h2>
+<span class="header-section-number">2.7</span> Where to go next<a class="anchor" aria-label="anchor" href="#tada-next"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>Working through it for the first time → <a href="transferable.html#transferable">Transferable</a>
+</li>
+<li>Need the checklist rather than the reasoning → <a href="quickstart.html#quickstart-checklist">Start here</a>
+</li>
+<li>Preparing for a journal data editor → <a href="data-sharing.html#sortee">The SORTEE guidelines</a>
+</li>
+</ul>
+</div>
+</div>
+<script src="assets/tada.js" defer></script><div class="chapter-nav">
+<div class="prev"><a href="quickstart.html"><span class="header-section-number">1</span> Start here</a></div>
+<div class="next"><a href="transferable.html"><span class="header-section-number">3</span> T — Transferable</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#tada"><span class="header-section-number">2</span> TADA at a glance</a></li>
+<li><a class="nav-link" href="#tada-why"><span class="header-section-number">2.1</span> Why a fifth set of guidelines?</a></li>
+<li><a class="nav-link" href="#tada-problem"><span class="header-section-number">2.2</span> The scale of the problem</a></li>
+<li><a class="nav-link" href="#tada-four"><span class="header-section-number">2.3</span> The four principles</a></li>
+<li><a class="nav-link" href="#tada-fair"><span class="header-section-number">2.4</span> How TADA maps onto FAIR</a></li>
+<li><a class="nav-link" href="#tada-scope"><span class="header-section-number">2.5</span> What TADA does not cover</a></li>
+<li><a class="nav-link" href="#tada-languages"><span class="header-section-number">2.6</span> Languages</a></li>
+<li><a class="nav-link" href="#tada-next"><span class="header-section-number">2.7</span> Where to go next</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 02 September 2026.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+# TADA at a glance {#tada}
+
+**T**ransferable, **A**vailable, **D**ocumented, **A**nnotated. Four steps that
+take analytical code from "on my laptop" to "runnable by a stranger in five
+years".
+
+## Why a fifth set of guidelines? {#tada-why}
+
+There is no shortage of advice on writing good code. The problem is that almost
+none of it is about *archiving an analysis*.
+
+The TADA authors identify three specific gaps in the existing resources:
+
+1. They do not sufficiently address **how to archive analytical code**.
+2. Few of them adhere to the **FAIR principles**.
+3. Those that do — notably **FAIR4RS**, the FAIR principles for Research
+   Software — are broad in scope and aimed at **software developers**, which
+   may be part of why they have not been widely adopted by researchers.
+
+The distinction that makes this matter is between *analytical code* and
+*software*:
+
+> **Software** is written to be general, modular, tested, and to work across
+> systems with many different compatible datasets. Designing for that kind of
+> reuse is genuinely complicated.
+>
+> **Analytical code** is tailored to one dataset and one study. Its purpose is
+> to be a transparent, reproducible record of that analysis — not to become a
+> tool for other people.
+
+Holding analytical code to software standards sets the bar too high, and the
+result is that people clear neither bar. TADA sets a **minimum standard** that
+is achievable for researchers at any coding level, and that still delivers the
+transparency and computational reproducibility the sharing was for.
+
+## The scale of the problem {#tada-problem}
+
+The numbers behind that argument, all from the TADA paper's review of the
+literature:
+
+| What | Figure |
+|---|---|
+| Journals in ecology & evolutionary biology with code-sharing policies | 15% in 2015 → **88% in 2024** |
+| Articles in the field with open code | **5–33%**, depending on the study |
+| Archived R files in Harvard Dataverse failing to run without error | **74%** (falling to 56% after automated cleaning) |
+| Scripts in species distribution/abundance papers that did not run, or ran with errors | **93%** |
+| Meta-analyses computationally reproducible given working data and code | **27%** (all results matched exactly) to **73%** (half of results within 10%) |
+
+Policies have moved. Practice has not followed. And even where code is present
+and functional, computational reproducibility is not guaranteed.
+
+## The four principles {#tada-four}
+
+Each has its own chapter. This is the one-paragraph version of each.
+
+::: {.tada-cards}
+::: {.tada-card .t}
+[T]{.tada-letter} [Transferable](#transferable){.tada-word}
+[Anyone can **open the file, view it and run it** without conversion or
+alteration — on a different computer and a different operating system. Standard
+file extensions; no local file paths.]{.tada-gloss}
+:::
+
+::: {.tada-card .a1}
+[A]{.tada-letter} [Available](#available){.tada-word}
+[The code is **publicly archived** so that any external user has long-term
+access to it, with a **globally unique persistent identifier** (e.g. a DOI)
+that is cited in the manuscript.]{.tada-gloss}
+:::
+
+::: {.tada-card .d}
+[D]{.tada-letter} [Documented](#documented){.tada-word}
+[**Accurate, detailed metadata** — typically a README — describing the code
+files and their usage: environment, versions, licence, where the data are, what
+runs in what order.]{.tada-gloss}
+:::
+
+::: {.tada-card .a2}
+[A]{.tada-letter} [Annotated](#annotated){.tada-word}
+[**Comments inside the code** (or code embedded in RMarkdown/Quarto alongside
+descriptive text) explaining what each chunk does, why, and where its output
+appears in the paper.]{.tada-gloss}
+:::
+:::
+
+## How TADA maps onto FAIR {#tada-fair}
+
+TADA was built with the FAIR and FAIR4RS principles in mind, and each letter
+maps onto one or more of them — while in two cases deliberately going further.
+
+| FAIR principle | Definition | Covered by |
+|---|---|---|
+| **F**indable | Digital assets (metadata, data, code) can be easily found by both machines and humans | **Available** — provision of a unique identifier |
+| **A**ccessible | Assets are retrievable via their identifier, with or without authorisation/authentication | **Available** — code is retrievable via that identifier |
+| **I**nteroperable | Assets can interoperate with other assets, and are readable using standard documented formats | **Transferable** — *extended* to also mean runnable on different computers and operating systems |
+| **R**eusable | Assets are described sufficiently to enable reuse and attribution, ideally via a licence | **Documented** — README plus licence |
+| — | *(no direct FAIR equivalent)* | **Annotated** — internal comments, for transparency and human comprehension |
+
+::: {.tada-note}
+The **Transferable** and **Available** rows are stated in the TADA paper. The
+**Documented** and **Annotated** rows are this wiki's reading: the paper defines
+FAIR reusability as "sharing code in a way that clearly specifies what can be
+done with it, for example, via a license and a README file", which is exactly
+what Documented delivers, and it makes no FAIR claim for Annotated.
+:::
+
+Two things are worth noticing in that table.
+
+**Transferable is broader than Interoperable.** Interoperability says anyone
+can open and use your code. Transferability adds that it must also *run* on
+someone else's machine and operating system — which is where hard-coded file
+paths kill you.
+
+**Annotated has no FAIR counterpart.** FAIR is largely about machines finding
+and parsing assets. Annotation is about a human being able to follow what the
+analysis actually did. It is the letter most specific to research code, and the
+one most often skipped.
+
+::: {.tada-note}
+On "reusable": the word is used in two different senses. In the FAIR sense it
+means *sharing code in a way that clearly specifies what can be done with it* —
+a licence and a README. In the software-development sense it means writing
+generalised, modular, tested code that runs across systems and datasets. TADA
+targets the first. If you find a guideline demanding the second, check whether
+it was written for software.
+:::
+
+## What TADA does not cover {#tada-scope}
+
+The TADA paper is explicit that two things sit beyond its scope, while noting
+that both support reproducible analyses:
+
+- **Containerisation** — Docker, Singularity — which packages a complete
+  software environment (programs and libraries) into an image, so that the
+  environment itself is reproducible between systems. This is the standard
+  answer to the "works on my computer" problem.
+- **Workflow managers** — Snakemake, Nextflow — which specify the sequence of
+  scripts or computational steps in a pipeline and their dependencies, so each
+  step executes in a defined, reproducible order.
+
+Neither is a requirement of TADA. Both are worth knowing about; see
+[Further reading](#further-reading).
+
+## Languages {#tada-languages}
+
+TADA is tailored mainly to **R and Python**, because those are the open-source
+languages most widely used in ecology and evolutionary biology. The basic
+principles apply just as well to workflow languages (e.g. Snakemake) and
+compiled languages (e.g. C++), and — as the authors note — to disciplines other
+than ecology and evolutionary biology.
+
+Where a language does not save code in a standard file type, the test to apply
+is the Transferable one: **can the resulting file be opened by a plain text
+editor?** SPSS syntax `.sps` files, for instance, pass that test.
+
+## Where to go next {#tada-next}
+
+- Working through it for the first time → [Transferable](#transferable)
+- Need the checklist rather than the reasoning → [Start here](#quickstart-checklist)
+- Preparing for a journal data editor → [The SORTEE guidelines](#sortee)

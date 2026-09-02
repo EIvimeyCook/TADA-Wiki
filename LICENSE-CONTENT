@@ -1,0 +1,52 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Edward R. Ivimey-Cook
+
+The prose content of the TADA-Wiki — the .Rmd chapter files and the rendered
+site in docs/ — is licensed under the Creative Commons Attribution 4.0
+International License.
+
+You are free to:
+
+  Share  — copy and redistribute the material in any medium or format
+  Adapt  — remix, transform, and build upon the material for any purpose,
+           even commercially
+
+Under the following terms:
+
+  Attribution — You must give appropriate credit, provide a link to the
+  license, and indicate if changes were made. You may do so in any reasonable
+  manner, but not in any way that suggests the licensor endorses you or your
+  use.
+
+  No additional restrictions — You may not apply legal terms or technological
+  measures that legally restrict others from doing anything the license
+  permits.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+
+---
+
+Scope and exceptions
+
+  * The code in this repository (render.R, assets/, templates/) is licensed
+    separately under the MIT License — see LICENSE.
+
+  * The PDFs in papers/ are not covered by this licence. They remain under
+    their original terms:
+
+      - Pick, J. L., et al. (2026). The SORTEE guidelines for data and code
+        quality control in ecology and evolutionary biology. Peer Community
+        Journal 6: e20. Open access under CC BY 4.0.
+
+      - Ivimey-Cook, E. R., et al. (2023). Implementing code review in the
+        scientific workflow. Journal of Evolutionary Biology 36: 1347-1356.
+        See the publisher's terms.
+
+      - Ivimey-Cook, E. R., et al. TADA! Simple guidelines to improve
+        analytical code sharing for transparency and reproducibility.
+        Manuscript; see the authors' terms.
+
+  * Quotations from and summaries of these papers within the wiki text are
+    attributed in the References chapter.

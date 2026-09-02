@@ -1,0 +1,385 @@
+# Data & code sharing {#data-sharing}
+
+TADA is about your code. This chapter is about everything sitting around it:
+what data to share, in what format, with what metadata, under what licence —
+and what a journal will check.
+
+## Why we archive at all {#sharing-goals}
+
+Worth being clear about, because the three goals pull in slightly different
+directions and different practices serve each one. The SORTEE guidelines set
+out three:
+
+::: {.tada-cards}
+::: {.tada-card .t}
+[1]{.tada-letter} [Data reuse]{.tada-word}
+[Prevents data loss; enables research synthesis and meta-analysis; allows
+re-analysis when methods improve; allows new questions of existing data — which
+also **reduces the use of animals in experiments**.]{.tada-gloss}
+:::
+
+::: {.tada-card .a1}
+[2]{.tada-letter} [Transparency]{.tada-word}
+[Readers can see what was actually done to obtain the reported results. Open
+data will not stop fabrication, but it makes it far easier to
+detect.]{.tada-gloss}
+:::
+
+::: {.tada-card .d}
+[3]{.tada-letter} [Computational reproducibility]{.tada-word}
+[Someone else can reproduce the published results from the archived data and
+code.]{.tada-gloss}
+:::
+:::
+
+Two points that follow from this framing and are easy to miss:
+
+- **Data are typically collected with public money**, and so can be seen as a
+  public good that should not be lost when a researcher changes job or a
+  computer breaks. Lost data and code represent a substantial source of
+  research waste.
+- Published results are often **not described in enough detail to be included
+  in a meta-analysis**. Archiving the data lets a synthesist re-analyse to get
+  what they need, and substantially increases the evidence available for
+  synthesis.
+
+## Vocabulary {#sharing-glossary}
+
+The SORTEE glossary, because these words are used loosely and the distinctions
+matter when someone asks you for "the raw data".
+
+| Term | Meaning |
+|---|---|
+| **Metadata** | A description of, and information about, the data and code. Typically a text file called a README; variants include a codebook or a data dictionary. |
+| **Raw data** | Unprocessed and unfiltered data, including any raw files — photos, audio recordings, videos, data sheets. |
+| **Data filtering** | Removing some data to create the dataset used in the analysis (e.g. removing individuals with a certain characteristic). The result is **filtered data**. |
+| **Data processing** | Transforming data from one form to another: extraction from images or video, summarising, transforming, calculating. The result is **processed data**. |
+| **Repository** | A framework providing long-term storage for many projects — Zenodo, Dryad, Figshare, etc. |
+| **Project** | A collection of files archived for a specific manuscript. (Similar to what GitHub calls a *repository* — hence the confusion.) |
+| **Data editor** | An editorial position at a journal, responsible for screening and quality-controlling the data and code archived alongside manuscripts under review. |
+| **Data and code quality control** | Checking the suitability of data and code for public archiving. |
+
+::: {.tada-note}
+Transcribing data from a written to a digital format, and the error-checking
+that follows, does **not** count as processing. A typed-up field sheet is still
+raw data.
+:::
+
+## What data to share {#sharing-what}
+
+Ideally, **both raw and processed data**. The SORTEE guidelines allow three
+acceptable forms, in descending order of preference:
+
+**a)** Raw data, along with the processed data and/or the code to prepare the
+data for analysis.
+
+**b)** A **sample** of raw data alongside the processed/filtered data, when a
+full raw data upload is not possible.
+
+**c)** Processed/filtered data with a **detailed description of how to both
+obtain and process/filter the raw data**.
+
+The reason raw data matters: without it, nobody can check the filtering and
+processing steps, which is exactly where silent errors live. Option (c) is
+acceptable, but it puts the burden on your written description being complete.
+
+## File formats {#sharing-formats}
+
+The rule is the same for data as for code: **universally interoperable**,
+meaning it can be exchanged and used across different software and operating
+systems.
+
+::: {.tabset}
+
+### Data formats {.unlisted .unnumbered}
+
+**Prefer simple text-based formats.** `.csv`, `.tsv` and `.txt` can be used by
+more software, across more systems, than anything else.
+
+| Format | Verdict |
+|---|---|
+| `.csv`, `.tsv`, `.txt` | **Preferred.** Maximally interoperable. |
+| `.parquet` | Interoperable, highly compressed, efficiently read, and highly accurate for large datasets. |
+| `.xlsx` | Not proprietary, so interoperable — but can carry information (e.g. formatting) that is **lost on import** into statistical software. |
+| `.xls` | Proprietary format. Avoid. |
+| `.RData`, `.rds` | Usable with open-source software, but requires knowledge of R to extract, and may depend on the R version used to save it. Restricts reuse. |
+| `.sps` and other proprietary formats | Not interoperable; does not facilitate reuse. |
+| `.pdf`, `.docx` | **Never.** Prone to error when copy-pasted, and cannot be readily imported into statistical programs. |
+
+Where there is genuinely no alternative — data collected by proprietary
+software, for instance — provide the non-interoperable file **alongside
+interoperable extracted data**, with a clear description of the conversion
+process in the metadata, **including the software version used**.
+
+### Code formats {.unlisted .unnumbered}
+
+Code must be in a format that can be readily opened by text editors and IDEs
+such as VS Code: `.R`, `.py`, `.cpp`, and so on. See
+[Transferable](#transferable-filetype).
+
+**Code must not be provided as a `.pdf` or pasted into a Word document.** Even
+where the script can be copied and pasted out, these programs often insert
+additional characters or spacing that the analysis software misinterprets — the
+canonical example being Python code that fails to run because the indentation
+was mangled.
+
+:::
+
+## Metadata: what a README must contain {#sharing-metadata}
+
+The [Documented](#documented-readme) chapter covers the code README in detail.
+The SORTEE guidelines set out what is needed on the **data** side, and the two
+overlap heavily.
+
+**General information**
+
+- Manuscript title and abstract
+- Authors and relevant contact information
+- Date and location of data collection
+- A list of all relevant funders
+- Licence information (e.g. CC-BY)
+- Information about data derived from other sources (other articles, online
+  data)
+
+**Detailed file descriptions**
+
+- What each data file contains and how it is structured
+- What variables it contains
+- **What units of measurement they are in**
+- How they link to the data described in the manuscript — e.g. every column in
+  a `.csv` explained and described
+
+You can deliver this three ways: as part of the main README; as additional
+README files describing the data and code separately; or as a **data
+dictionary** per data file (e.g. a `.csv` with one column for variable names
+and another for their descriptions).
+
+::: {.tada-key}
+The bar the guidelines set for both data and code metadata is the word
+**"adequate"**: metadata detailed enough that **anyone can understand the data,
+or the analysis code, without needing to read the manuscript**. If your README
+only makes sense to someone who has read your methods section, it is not there
+yet.
+:::
+
+::: {.tada-note}
+Under double-blind review, some sections can be **left blank until acceptance**
+and filled in then.
+:::
+
+**On LLMs.** The SORTEE guidelines add that the README should state **whether
+and how the authors have used large language models in code generation** —
+while noting it is unlikely a data editor could verify this.
+
+## Licences {#sharing-licences}
+
+Without a licence, data and code **cannot be legally reused** under many
+circumstances, depending on jurisdiction. Most researchers have little
+knowledge of licences, so this is a common and consequential gap.
+
+::: {.tabset}
+
+### For data {.unlisted .unnumbered}
+
+Typically **Creative Commons** licences. Chooser:
+<https://chooser-beta.creativecommons.org/>
+
+| Licence | What it means | Notes |
+|---|---|---|
+| **CC0** | Public domain; no attribution required | The most permissive. Default at Figshare; **mandated by Dryad**. |
+| **CC BY 4.0** | Reusers must credit the original author, but may distribute, remix, adapt and build upon the material, including commercially | Default at Zenodo. |
+| **CC BY-NC 4.0** | As CC BY, but prohibits commercial use | More restrictive. |
+
+### For code {.unlisted .unnumbered}
+
+Software licences rather than Creative Commons. Chooser:
+<https://choosealicense.com/>
+
+| Licence | What it means |
+|---|---|
+| **MIT** | Very permissive: copy, modify, merge, publish, share, with the licence notice retained |
+| **BSD 2-Clause / 3-Clause** | Permissive, similar in spirit to MIT |
+| **Apache 2.0** | Permissive, with an explicit patent grant |
+| **GPL v3.0** | Copyleft: derivatives must carry the same licence, and changes from the source must be listed |
+
+CC0 is **not well suited to code** — which is why Dryad, being CC0-only, points
+code deposits at Zenodo.
+
+### Choosing {.unlisted .unnumbered}
+
+The SORTEE guidelines **do not recommend or enforce any specific type of
+licence**. The requirement is that you choose one and state it.
+
+Things that should influence the choice:
+
+- Who the audience is, and whether commercial application is expected
+- Whether you want others to be able to modify or extend the work
+- What your **journal, institution and funder** require — some journals mandate
+  a licence on archiving (the *Journal of Statistical Software* requires a GPL)
+- Whether your **repository** already applies one by default, or mandates one
+
+Practical route: pick at <https://choosealicense.com/>, copy the licence text
+into a `LICENSE` file in the project, and name it in the README. Or select it
+in the repository's deposit form, as Zenodo allows.
+
+:::
+
+## The SORTEE guidelines {#sortee}
+
+The **SORTEE guidelines for data and code quality control** (Pick et al. 2026,
+*Peer Community Journal* 6: e20) are written for **data editors** — the
+editorial role responsible for screening and quality-controlling data and code
+at a journal. They are worth reading as an author precisely because they tell
+you what will be checked.
+
+::: {.tada-note}
+**What data and code quality control is not.** It is about ensuring archived
+data and code meet minimum standards — complete, usable, documented, runnable.
+It is explicitly **not** a code review: a data editor does not critique your
+analytical techniques, and it is not their role to review, interpret or correct
+your code. Nor do they check the *reliability* of the code. That is what
+[code review](#code-review) is for.
+:::
+
+### The six stages {#sortee-stages}
+
+The summary table from the paper, reproduced in full.
+
+| Stage | Guideline |
+|---|---|
+| **1. Data must be archived and adhere to FAIR guiding principles** | |
+| 1.1 Data files are accessible and in an open repository | Data are open and freely available and are located in a permanent public repository with an associated globally unique persistent identifier, that is cited in the text and reference list of the manuscript. |
+| 1.2 Data are associated with a license | Data must be associated with a license. |
+| 1.3 Data files are present and complete | Authors must either provide: a) raw data, along with the processed data and/or code to prepare the data for analysis, or b) a sample of raw data alongside processed/filtered data when full raw data upload is not possible, or c) processed/filtered data with a detailed description of how to both obtain and process/filter the raw data. |
+| 1.4 Data files are in an interoperable format | Data files must be provided in an interoperable format. |
+| 1.5 Data metadata is present and adequate | Detailed metadata, including (but not limited to) a README file, must accompany the data. |
+| **2. Archived data corresponds with the data reported in the manuscript** | The structure and contents of the archived data files must match the description in the manuscript. |
+| **3. Code must be archived and adhere to FAIR guiding principles** | |
+| 3.1 Code files are accessible and in an open repository | Code files are open and freely available and are located in a permanent public repository with an associated globally unique persistent identifier, preferably in the same archived project as the data files, and are cited in the text and the reference list of the manuscript. |
+| 3.2 Code is associated with a licence | The code must be associated with a license. |
+| 3.3 Code files are present and complete | All code used for generating the results of the manuscript (including filtering, processing, graphing, and analysis) must be present either in one or more code files. |
+| 3.4 Code is in an interoperable format | Code files must be provided in an interoperable format. |
+| 3.5 Code metadata is present and adequate | A sufficiently detailed README must accompany the code. Code must also be broken into sections with clear annotation stating the purpose of the code with clear links to the relevant sections, figures, and tables in the manuscript. |
+| **4. Archived code corresponds with the workflow reported in the manuscript** | The structure and content of the archived code must match the description of data filtering, processing, and analysis, and the presentation of results in the manuscript. |
+| **5. Archived code runs with the archived data** | Code must be able to run without error using the archived data. With the exception of easy to fix file path errors, all errors should be addressed by the author. |
+| **6. Results can be computationally reproduced by running the archived code** | Results reproduced by the data editor with the archived data and code must match those presented in the manuscript. A tolerance threshold can be given when there is not an exact match but the authors must state clearly in the code metadata why this mismatch might occur. If saved model outputs are instead provided, this must also be clearly stated in the metadata. |
+
+### How TADA maps onto the stages {#sortee-tada-map}
+
+Wiki guidance. TADA covers the author-side work for Stages 1 and 3 almost
+exactly:
+
+| TADA | SORTEE stages |
+|---|---|
+| **Transferable** | 1.4, 3.4 (interoperable formats) and, in practice, 5 (code runs — local file paths are the commonest cause of failure) |
+| **Available** | 1.1, 3.1 (open repository, PID, cited in the manuscript) |
+| **Documented** | 1.2, 1.5, 3.2, 3.5 (licence and metadata) |
+| **Annotated** | 3.5 (sectioned code with clear annotation and signposting), and it is what makes Stage 4 assessable at all |
+| *(Not TADA — your responsibility as author)* | 1.3, 3.3 (completeness), 2 (data matches manuscript), 6 (results reproduce) |
+
+### What trips people up at each stage {#sortee-common-failures}
+
+Drawn from the guidelines' own account of common problems.
+
+**Stage 5 — code runs.** The most common causes of failure:
+
+- a package or module not installed or loaded within the code
+- a missing code chunk
+- variable names in the code not matching those in the data files
+- code referencing data files whose names do not match the archived files
+- **local or absolute file paths** — singled out as one of the most common
+  reasons code does not run
+
+::: {.tada-note}
+Data editors are told to be pragmatic about paths: an absolute path, or a way
+of specifying relative paths they are not familiar with, **should not** be a
+reason to return the code, as long as they can make it run with minor changes.
+It is logged as a **minor error**. Everything else is on the author to fix — it
+is explicitly not the data editor's job to make your code run.
+:::
+
+**Stage 6 — results reproduce.** In most cases exact reproducibility is
+expected: the exact number in the manuscript should come out of the code.
+Legitimate reasons for a mismatch, all of which must be stated in the metadata:
+
+- **Stochastic methods** — simulations, MCMC. Avoidable by setting a seed
+  (`set.seed()` in R, `random.seed()` in Python) **at the beginning of any code
+  section that would be run independently**, including for figure generation
+  with jittering. Note that setting a seed does not *always* guarantee
+  reproducibility.
+- **Post-processing of figures in other software.** The data in the figure is
+  still expected to be the same, but the code may not reproduce the figure
+  exactly.
+- **Software version differences.** If results are sensitive to the version
+  used, flag it clearly and justify the version in the manuscript and metadata.
+
+**Computationally expensive or proprietary analyses.** Where code needs
+specialist hardware, takes a very long time, or depends on proprietary software
+(e.g. ASReml), full computational reproducibility cannot be assessed. What to
+do:
+
+- Indicate it clearly in the metadata, **alongside a saved output** (e.g. large
+  Bayesian model objects saved as `.rds`)
+- Ideally provide **example code** that demonstrates the code will run — an
+  analysis on a subset of data, or a model run for a reduced duration
+- Where only part of the analysis needs proprietary software, say **which**
+  parts a data editor can assess
+- Consider non-proprietary execution routes (GNU Octave for MATLAB code, or
+  MATLAB Compiler for standalone applications) — but test compatibility and
+  note any limitations in the metadata
+- Build systems such as **`targets`** (R) or **Snakemake** can provide
+  reproducibility signatures (hashes) for computationally intensive steps,
+  along with intermediate data objects
+
+## Advice for authors {#sharing-authors}
+
+The guidelines' own suggestions, which are the highest-return habits here.
+
+**1. Adhere to the guidelines from the beginning of the study.** Making a
+project accessible and reproducible at the *end* is a lot of work. Create a
+clear directory structure and a README at the start, and update the metadata as
+new files are added. Annotate code as you produce it. Working with
+reproducibility in mind also makes it far more likely that someone else can
+reuse the project and successfully run the code — which matters a great deal if
+several people will touch the study over its lifetime.
+
+**2. Prepare data and code before submission to any journal.** Having it ready
+minimises problems during submission and quality control, and makes transfer to
+another journal easy if the paper is rejected.
+
+**3. Perform a pre-submission code review.** Send the project to a colleague or
+co-author before submitting. They can check that the code runs with the data in
+the structure provided, that metadata is adequate, that data and code match the
+manuscript, and that results reproduce. Co-authors are also more likely to spot
+mistakes *in* the code, because they know the study and the data — and data
+editors do not check code reliability. See [Code review](#code-review).
+
+**4. Consider Markdown or Quarto.** Presenting everything in one self-contained
+document is very helpful for data editors and future readers, because it makes
+the link between code, data, and outputs explicit.
+
+::: {.tada-tip}
+**Say what was checked.** If your journal performs quality control, the
+guidelines suggest stating it in the data and code availability section — for
+example: *"Data and code were checked from Stage 1–4 of the SORTEE guidelines
+for Data and Code Quality Control"* — and noting explicitly where a check could
+not be performed (proprietary software, sensitive data, computationally
+expensive analyses).
+:::
+
+## Checklist {#sharing-checklist}
+
+- [ ] Raw data archived, or a documented reason and route to it (option a, b or c)
+- [ ] Processed/filtered data archived, or the code that produces it
+- [ ] All data in interoperable formats (`.csv`/`.tsv`/`.txt`/`.parquet` preferred)
+- [ ] Any proprietary-format file is accompanied by an interoperable extract and a description of the conversion, including software version
+- [ ] Nothing lives only in supplementary material
+- [ ] A data licence is chosen and stated
+- [ ] A code licence is chosen and stated
+- [ ] README covers manuscript, authors, contact, collection date and location, funders, licence, and derived-data sources
+- [ ] Every variable in every data file is described, **with units**
+- [ ] Data and code deposits are cited in the text and the reference list
+- [ ] All code used to generate results is archived — filtering, processing, graphing, analysis
+- [ ] Seeds are set before anything stochastic
+- [ ] Saved outputs are provided for anything slow or proprietary, and flagged in the metadata
+- [ ] LLM use in code generation is disclosed in the README

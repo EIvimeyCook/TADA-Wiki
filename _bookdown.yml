@@ -1,0 +1,26 @@
+book_filename: "tada-wiki"
+output_dir: "docs"
+delete_merged_file: true
+
+rmd_files:
+  - "index.Rmd"
+  - "01-quickstart.Rmd"
+  - "02-tada.Rmd"
+  - "03-transferable.Rmd"
+  - "04-available.Rmd"
+  - "05-documented.Rmd"
+  - "06-annotated.Rmd"
+  - "07-data-sharing.Rmd"
+  - "08-code-review.Rmd"
+  - "09-further-reading.Rmd"
+  - "10-contribute.Rmd"
+  - "11-references.Rmd"
+
+language:
+  label:
+    fig: "Figure "
+    tab: "Table "
+  ui:
+    chapter_name: ""
+    edit: "Edit this page"
+    search: "Search the wiki"

@@ -1,0 +1,437 @@
+# Code review {#code-review}
+
+::: {.tada-key}
+**Code review** is the process of either **formally** (as part of the
+peer-review process) or **informally** (as co-authors or colleagues) checking
+and evaluating each other's code. It is critical to help avoid **conceptual,
+programmatic, and syntactic errors**, and it can take place at any stage of the
+research cycle.
+:::
+
+This chapter follows Ivimey-Cook et al. (2023), *Implementing code review in
+the scientific workflow: Insights from ecology and evolutionary biology*
+(Journal of Evolutionary Biology 36: 1347–1356,
+<https://doi.org/10.1111/jeb.14230>).
+
+## Why it is missing, and why it matters {#review-why}
+
+Researchers increasingly rely on code written in open-source software such as R
+and Python to clean, manipulate, visualise and analyse data. Code-based
+software is more transparent and reproducible than point-and-click software,
+and far more flexible — researchers can tailor analyses to their exact needs.
+
+But that flexibility comes at a cost: **code is more error-prone**, and several
+high-profile retractions have centred on exactly this kind of mistake.
+
+In computer science and software development, code review is routine. In the
+academic disciplines that rely on code to make inferences and predictions, it
+is **noticeably absent** from the research and publication process. The paper
+argues for a fundamental shift in research culture that brings code review into
+**all stages** of the research process.
+
+There is a structural reason it does not happen. Informal training, combined
+with insufficient time and incentives, means that coding and analysis are
+usually the responsibility of **a single member of a team** for a project's
+entire lifetime — in stark contrast to the team-wide collaboration that is
+normal when developing methodology and experimental design. That individual
+nature of research code is precisely what makes pre-publication code review
+both unlikely and critical.
+
+## The four Rs {#review-four-rs}
+
+Whatever the stage, the core priorities are the same. The paper frames them as
+four questions.
+
+::: {.tada-cards}
+::: {.tada-card .t}
+[R]{.tada-letter} [Reported]{.tada-word}
+[Does the code match the description of what is reported in the methods
+section?]{.tada-gloss}
+:::
+
+::: {.tada-card .a1}
+[R]{.tada-letter} [Run]{.tada-word}
+[Can the code actually be executed?]{.tada-gloss}
+:::
+
+::: {.tada-card .d}
+[R]{.tada-letter} [Reliable]{.tada-word}
+[Does it do the right thing — not just *something* — every time?]{.tada-gloss}
+:::
+
+::: {.tada-card .a2}
+[R]{.tada-letter} [Reproducible]{.tada-word}
+[Do the outputs match the results reported in the paper?]{.tada-gloss}
+:::
+:::
+
+::: {.tabset}
+
+### Reported {.unlisted .unnumbered}
+
+Code is a key research output and a critical component of scientific
+methodology. Open code accompanying written methods sections is becoming more
+common, following the same push that produced Open and FAIR data. So the first
+check is **consistency between the code and the manuscript**. These questions
+catch **conceptual** errors.
+
+*Does the code match what the methods section says was done?* If the methods
+state a generalised linear model with Poisson error, and the code fits a
+Gaussian one, that mismatch has to be part of the review.
+
+**Software and package versions.** At minimum, the packages that are integral
+to the analysis or to visualisation should be listed, with version numbers,
+somewhere in the manuscript. In R these can be obtained with `citation()`; in
+Python, using `setuptools`. A full list of everything used — including packages
+involved in cleaning and tidying — can go elsewhere, such as an associated `.R`
+or `.py` file.
+
+This matters beyond bookkeeping: it means that if a package version is later
+found to contain a bug, papers depending on it can be identified.
+
+**Environment management** helps here. Packages such as **`renv`**
+(Ushey & Wickham 2023, which replaces `packrat`) and **`groundhog`**
+(Simonsohn & Gruson 2023) in R, or **`poetry`** (Eustace 2023) and **`pipenv`**
+(Pipenv Maintainer Team 2023) in Python, help ensure a reproducible
+environment and allow specific package versions to be loaded. Containerisation
+with **Docker** is another option.
+
+### Run {.unlisted .unnumbered}
+
+Even if code matches the methodology reported in a paper, that does not mean it
+is executable. **Programmatic and syntactic errors** can make code fail to
+re-run.
+
+Common causes:
+
+- calls to libraries or modules that are not installed in the current
+  environment
+- local or absolute file paths that do not exist on the reviewer's machine
+- missing files, or filenames in the code that do not match the archived files
+- a missing code chunk
+
+This is the cheapest check to perform and the one that fails most often — recall
+that **74% of over 9,000 archived R files** failed to complete without error.
+
+::: {.tada-tip}
+Run it in a **fresh session**, from a **fresh download**, in a **new folder**.
+Anything that only works because of what is already loaded in your environment
+will fail here, which is the point.
+:::
+
+### Reliable {.unlisted .unnumbered}
+
+The hardest of the four, and the one that most needs a human who knows the
+study.
+
+Errors can propagate through code that runs perfectly well and produces an
+output, because **code can produce incorrect results in a reproducible manner**
+— the same wrong answer, every time. The paper's example: if code selects or
+modifies the wrong column in a dataset, the analysis is wrong but nothing
+errors.
+
+**Unit testing** helps: **`testthat`** (Wickham 2011) in R, **`pytest`**
+(Okken 2022) in Python. But this type of error remains common and is
+**extremely difficult to pick up by anyone without deep familiarity with the
+dataset and code**. It is also thought to scale with the number of lines and
+the complexity of the code.
+
+::: {.tada-note}
+This is the strongest argument for **co-author** review over external review. A
+reviewer who does not know your data cannot tell that `mass` should have been
+`mass_g`. A co-author can.
+:::
+
+### Reproducible {.unlisted .unnumbered}
+
+The most fundamental question: **can the code produce the output, and thus
+support the conclusions, given in the paper?**
+
+The final step of code review is ensuring that outputs, when the code is
+re-run, match those reported in the analysis and results sections — including
+relevant figures and the narrative text within those sections.
+
+**When exact matching is not possible.** Some tolerance must be applied,
+especially with stochastic methods where parameter estimates change between
+runs, or with techniques that are computationally demanding and slow. This
+happens, for example, when `set.seed()` (R) or `random.seed()` (Python) was not
+used before stochastic sampling.
+
+Providing model outputs helps — save them with `saveRDS()` in R or
+`pickle.dump()` in Python — though it does not let a reviewer run the code
+themselves to see whether they obtain similar results. Where the code cannot be
+re-run in reasonable time, newly generated results should be compared against
+the originally reported ones.
+
+**Two ways to judge a match:**
+
+*Conclusion and numbers* (Archmiller et al. 2020). Compare the **conclusion**
+(direction and significance level) and the **numbers** (intervals matching
+within one significant figure). Their worked example:
+
+| Original | Reproduced | Verdict |
+|---|---|---|
+| mean 4.00, interval 3.30–5.00 | mean 4.12, interval 3.45–4.91 | Conclusion **and** numbers reproduced |
+| mean 4.00, interval 3.30–5.00 | mean 6.5, interval 6.0–7.0 | Same conclusion; numbers **not** quantitatively reproduced |
+| mean 4.00, interval 3.30–5.00 | mean 4.10, interval −1.00–8.40 | **Not** reproduced — the interval now overlaps zero |
+
+*Percentage error* (Hardwicke et al. 2021; see also Kambouris et al. 2023).
+Comparison at one significant figure is highly dependent on scale; percentage
+error is not. Using
+
+$$\text{PE} = \frac{\text{new} - \text{original}}{\text{original}} \times 100$$
+
+error is classified as **non-existent** when this value is 0, **minor** between
+0 and 10, and **major (and not reproducible)** at 10 or above.
+
+Importantly: as well as the overlap with 0 (or the null hypothesis) not
+changing, the reported and reproduced estimates and intervals should not
+significantly differ from each other. With stochastic MCMC methods, variation
+between chains is expected to be much lower than variation within a chain, so
+the reproduced value should sit well within the reported credible interval.
+
+:::
+
+## Writing reviewable code {#review-reviewable}
+
+Good readability is what makes effective code review possible at all. Four
+quick solutions from the paper:
+
+1. **Call packages explicitly** via the namespace — `package::function()` in R,
+   `package.module.function()` in Python.
+2. **Use relative file paths** — e.g. the `here` package (Müller 2020),
+   preferably with an associated R project file if using R and RStudio, or a
+   virtual environment in Python.
+3. **Remove redundant packages.**
+4. **Write analysis code with clear subheadings, intuitive comments and
+   easy-to-understand object names.**
+
+**Formatters** apply a standard style in one command: **`styler`**
+(Müller & Walthert 2020) in R, **`pycodestyle`** (Rocholl 2022) in Python.
+Both support standardised styles — Google, tidyverse in R, PEP 8 in Python.
+
+**Literate formats** — R/Python Markdown, Quarto, or Jupyter Notebook /
+JupyterLab — present code in chunks which, with suitably descriptive comments,
+are far easier to read. See [Annotated](#annotated-literate).
+
+### Structure {.unlisted .unnumbered}
+
+A simple folder and file structure goes a long way towards helping researchers
+at all skill levels understand the **order and flow** of an analysis:
+
+- **Sequentially labelled** subfolders and scripts, so someone following the
+  code knows the order to run things in — files beginning `01…`, `02…`
+- **Folders named for their purpose** — `data`, `scripts`, `functions`
+- **Raw data kept separate**, so it is not accidentally modified or overwritten
+  when cleaning or wrangling code runs
+- A **README** and additional metadata giving the signposts needed to re-run
+  the code: packages and version numbers, descriptions of the data files, the
+  project aim, author contact details, and any licences in place
+
+It is also crucial to **explain what data cleaning or curation happened before
+the analysis code** — what previous manipulation or pre-processing produced the
+data in its current state, or where an intermediate data file was used.
+
+::: {.tada-note}
+**Metadata tooling.** Packages such as `codemeta` (Boettiger 2017) and
+`dataReporter` (Petersen & Ekstrøm 2019) in R, or `CodeMetaPy` (van Gompel 2023)
+and `cookiecutter` (Feldroy 2022) in Python, can help produce consistent
+metadata and project templates. **Pipeline tools** — `targets` (Landau 2021),
+`workflowr` (Blischak et al. 2019) in R, or `luigi` in Python — automate the
+steps from raw dataset to results.
+:::
+
+## When code review happens {#review-when}
+
+Code review can begin as early as the first initiation of a project, and has a
+role beyond publication.
+
+::: {.tabset}
+
+### Pre-submission {.unlisted .unnumbered}
+
+**This is where most of the value is.** It is also the stage where a reviewer
+can catch *Reliable* errors, because they know the study.
+
+Keep **continuous code collaboration at all stages** of a manuscript.
+Collaboration can be facilitated by code-sharing platforms such as GitHub,
+where users can submit and comment on pull requests. At SORTEE, GitHub issues
+were used to summarise the discussion of an individual's code.
+
+The [SORTEE guidelines](#sortee) recommend the same thing from the journal
+side: send the project to a colleague or co-author before submission. They can
+check that the code runs with the data in the structure provided, that the
+metadata is adequate, that data and code match the manuscript, and that the
+results reproduce. And co-authors are more likely to spot mistakes in the code
+than an outsider, because they know the study and the data.
+
+### During peer review {.unlisted .unnumbered}
+
+One of the most crucial places for code review, because reviewers can carefully
+follow the logic of the analyses much as they follow the argument from
+introduction to discussion.
+
+Some journals already request code and data at submission — The Royal Society;
+*Behavioral Ecology and Sociobiology*. In some cases, such as the **Journal of
+Open Source Software**, the entire formal peer-review process, code and
+manuscript alike, is hosted on GitHub.
+
+The benefits run both ways: for authors, providing code during peer review
+could increase manuscript quality; for reviewers, available code gives far
+deeper insight, because there is a clearer link between experimental
+methodology and statistical analysis — the first R, code **as reported**.
+
+**The hurdles are real, though.**
+
+*Finding reviewers.* There is already a shortage of willing reviewers. It is
+reasonable to expect a reviewer to check that code is **as reported**; anything
+deeper takes time from already overworked academics who may not have the exact
+expertise. A workable compromise: reviewers state whether they are competent to
+check that the code is as reported, and the journal ensures **at least one**
+reviewer has checked the code.
+
+*Double-blind review.* Anonymised data and code can be submitted directly to
+the journal (e.g. as a zip file), or uploaded to figshare, OSF, GitHub or Dryad,
+which allow authors to provide an **anonymised link** for peer review.
+
+### Post-publication {.unlisted .unnumbered}
+
+Much less discussed. It does not prevent publication of incorrect results, but
+it does allow checking whether the code adheres to the four Rs.
+
+The first question is simply: **has all the code used to produce the results
+been made available?** If not, the main option is to contact the corresponding
+author — or the journal — and ask, much as data is requested "upon reasonable
+request".
+
+**If you find that the code does not adhere to one of the Rs:**
+
+1. **Contact the corresponding author** — or, if the paper uses the MeRIT
+   system, the person who actually conducted the analysis. A GitHub issue works
+   well if there is a repository; otherwise, email.
+2. **Rule out benign causes** first: differences in software version (R or
+   package versions), or inherent stochasticity (simulations, MCMC sampling).
+3. **Let the authors go to the journal themselves.** If there is a genuine
+   error, authors should be given the chance to contact the journal to
+   highlight and correct their own mistake.
+
+::: {.tada-note}
+Journal culture matters here. Under *The American Naturalist*'s stance, authors
+who contact the journal to correct code or data errors are **not penalised**,
+and corrections are encouraged where warranted. Where updated results would
+alter the narrative of a published paper, corrections are harder; publication
+versioning or "living" documents may be a first step.
+:::
+
+:::
+
+## Running a code club {#review-club}
+
+One of the most effective ways to establish a culture of peer code review in a
+lab or among colleagues. The following draws on the authors' experience
+building a code review club in collaboration with **SORTEE**.
+
+The barriers being addressed are worth naming, because the design of the club
+follows from them: **lack of time and incentive**, **lack of technical
+knowledge and unclear workflows**, and **social pressures and the fear of being
+judged by peers**.
+
+### Set a clear goal for each session {.unlisted .unnumbered}
+
+Is the focus **general learning and improving readability**, or is it to
+**error-check and scrutinise reproducibility**? Having a clear structure and
+goal for each session focuses comments and advice on the precise reason for the
+review.
+
+Related: unless the aim is specifically to evaluate different analytical
+options, it is better to **leave methodological questions aside**. A code
+review that drifts into "have you considered a different model?" stops being a
+code review.
+
+### Make it a judgement-free environment {.unlisted .unnumbered}
+
+Volunteers often feel very anxious about showing code that may have errors. It
+is vital to **normalise the existence of errors** and to highlight that
+perfection is never possible. It is also useful to stress that **there is no
+such thing as bad code**, and that there are usually multiple ways to approach
+the same problem.
+
+### Think about group size {.unlisted .unnumbered}
+
+A **smaller group** is a friendlier starting point: people feel more
+comfortable speaking up, and it better facilitates peer-to-peer learning and
+focused review.
+
+**Larger groups** work better for wider discussion of general themes and tips.
+
+Decide by aim: general discussion → bigger; focused review of code → smaller.
+
+### Decide on credit {.unlisted .unnumbered}
+
+Code review outside the formal peer-review process can have a large impact on a
+project, from error checking to validating that statistical analyses are
+appropriate. So what should reviewers get?
+
+- **Acknowledgement via MeRIT** (Method Reporting with Initials for
+  Transparency) — for example: *"…mixed model with a Gaussian error
+  distribution. Code was checked by E.I.C."*
+- **Co-authorship**, where the review fundamentally altered the project and the
+  resulting paper — for instance, where a reviewer finds a major coding error
+  that, once fixed, changes the results and conclusions.
+
+The principle: **incentives should be relative to the impact of the reviewer on
+the project.**
+
+## A reviewer's script {#review-script}
+
+Wiki guidance — a practical sequence for a single review session, built on the
+four Rs. The full checklist is at
+[`templates/code-review-checklist.md`](templates/code-review-checklist.md).
+
+**Before the session (reviewer, 20 minutes)**
+
+1. Download the project into a **new, empty folder**.
+2. Open the README. Can you tell what to run, in what order, and what you need
+   installed? Note anything you had to guess.
+3. Try to run it, in a **fresh session**. Record every error verbatim, and stop
+   at the first one you cannot resolve in two minutes.
+
+**In the session**
+
+4. **Reported** — walk the methods section against the code, section by
+   section. Flag anything described in the paper you cannot find in the code,
+   and anything in the code not described in the paper.
+5. **Run** — go through the errors you hit. Most will be environment or path
+   problems, and most are quick.
+6. **Reliable** — pick the two or three steps where a silent error would matter
+   most (the filtering step, the join, the model specification) and read them
+   closely with the author. Ask what each column is.
+7. **Reproducible** — take three numbers from the results section and find them
+   in the output.
+
+**Afterwards**
+
+8. Write it up as a short list, ordered by severity, separating **must fix**
+   from **would be nice**.
+9. Agree how the reviewer will be credited.
+
+::: {.tada-tip}
+**Give feedback on the code, not the coder.** "This line reads `mass` — is that
+the right column?" lands very differently from "you used the wrong column".
+Given that fear of judgement is one of the three named barriers to code review,
+this is not just politeness; it is what keeps people volunteering.
+:::
+
+## Checklist {#review-checklist}
+
+- [ ] **Reported** — the code does what the methods section says it does
+- [ ] Software and key packages, with versions, are stated
+- [ ] **Run** — the code executes from a fresh download in a fresh session
+- [ ] All required libraries are installed and loaded within the code
+- [ ] File paths are relative and resolve
+- [ ] **Reliable** — filtering, joins and model specifications have been read closely by someone who knows the data
+- [ ] Seeds are set before stochastic steps
+- [ ] **Reproducible** — spot-checked numbers from the results section match the output
+- [ ] Mismatches are explained (version, stochasticity, post-processing) and documented
+- [ ] Slow or proprietary steps have saved outputs archived
+- [ ] The reviewer's contribution is credited (MeRIT, acknowledgement, or authorship)

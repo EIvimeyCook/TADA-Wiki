@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+/* ==========================================================================
+   TADA-Wiki — theme
+   Palette is defined once here as custom properties so that light and dark
+   mode differ only in the token values, never in the rules.
+   ========================================================================== */
+
+:root {
+  --tada-t: #C1442E;   /* Transferable */
+  --tada-a1: #1F6B3B;  /* Available    */
+  --tada-d: #6A3D9A;   /* Documented   */
+  --tada-a2: #1D5FA8;  /* Annotated    */
+
+  --tada-ink: #1E2A32;
+  --tada-ink-soft: #4A5A66;
+  --tada-line: #E3E8EC;
+  --tada-surface: #F6F8F9;
+  --tada-surface-2: #EDF2F4;
+  --tada-accent: #0F6E7B;
+  --tada-accent-soft: #E6F2F3;
+
+  --tada-good: #1F6B3B;
+  --tada-good-bg: #EEF6F0;
+  --tada-bad: #B3301C;
+  --tada-bad-bg: #FCEFEC;
+  --tada-warn: #9A6209;
+  --tada-warn-bg: #FDF4E3;
+
+  --tada-radius: 12px;
+  --tada-shadow: 0 1px 2px rgba(19, 41, 51, .06), 0 6px 20px rgba(19, 41, 51, .06);
+}
+
+html body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--tada-ink);
+  font-size: 1.02rem;
+  line-height: 1.62;
+}
+
+h1, h2, h3, h4, .book .book-body .page-wrapper h1 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+h1 { font-size: 2.2rem; line-height: 1.2; }
+h2 { font-size: 1.55rem; margin-top: 2.4rem; }
+h3 { font-size: 1.2rem; margin-top: 1.8rem; }
+
+code, pre, kbd, .sourceCode {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+}
+
+/* Inline code reads as a token, not as body text. */
+:not(pre) > code {
+  background: var(--tada-surface-2);
+  border-radius: 5px;
+  padding: 0.12em 0.35em;
+  color: #0B4F58;
+}
+
+div.sourceCode, pre {
+  border: 1px solid var(--tada-line);
+  border-radius: var(--tada-radius);
+  background: var(--tada-surface);
+}
+
+/* --------------------------------------------------------------------------
+   Hero panel (front page)
+   -------------------------------------------------------------------------- */
+
+.tada-hero {
+  border: 1px solid var(--tada-line);
+  border-radius: 18px;
+  padding: 2rem 2rem 1.6rem;
+  background:
+    radial-gradient(1200px 260px at 0% 0%, var(--tada-accent-soft), transparent 60%),
+    linear-gradient(180deg, #fff, var(--tada-surface));
+  box-shadow: var(--tada-shadow);
+  margin: 0 0 2rem;
+}
+
+.tada-hero .tada-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--tada-accent);
+  margin: 0 0 .5rem;
+}
+
+.tada-hero h2 {
+  font-size: 1.9rem;
+  margin: 0 0 .6rem;
+}
+
+.tada-hero p { margin-bottom: .6rem; }
+.tada-hero p:last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+   Letter cards — the four TADA principles
+   -------------------------------------------------------------------------- */
+
+/* 230px keeps four cards as a tidy 2x2 in bs4_book's main column rather than
+   3 + 1 orphan; it drops to a single column on narrow screens. */
+.tada-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  margin: 1.6rem 0 2rem;
+}
+
+.tada-card {
+  border: 1px solid var(--tada-line);
+  border-top: 4px solid var(--tada-accent);
+  border-radius: var(--tada-radius);
+  padding: 1.05rem 1.1rem 1.1rem;
+  background: #fff;
+  box-shadow: var(--tada-shadow);
+}
+
+.tada-card p { margin-bottom: .4rem; }
+.tada-card p:last-child { margin-bottom: 0; }
+
+.tada-card .tada-letter {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+  margin-bottom: .35rem;
+}
+
+.tada-card .tada-word {
+  font-weight: 600;
+  font-size: 1.02rem;
+  display: block;
+  margin-bottom: .3rem;
+}
+
+.tada-card .tada-gloss {
+  color: var(--tada-ink-soft);
+  font-size: .93rem;
+}
+
+.tada-card.t  { border-top-color: var(--tada-t); }
+.tada-card.t  .tada-letter { color: var(--tada-t); }
+.tada-card.a1 { border-top-color: var(--tada-a1); }
+.tada-card.a1 .tada-letter { color: var(--tada-a1); }
+.tada-card.d  { border-top-color: var(--tada-d); }
+.tada-card.d  .tada-letter { color: var(--tada-d); }
+.tada-card.a2 { border-top-color: var(--tada-a2); }
+.tada-card.a2 .tada-letter { color: var(--tada-a2); }
+
+/* --------------------------------------------------------------------------
+   Callouts
+   -------------------------------------------------------------------------- */
+
+.tada-tip, .tada-warn, .tada-note, .tada-key {
+  border: 1px solid var(--tada-line);
+  border-left: 4px solid var(--tada-accent);
+  border-radius: 10px;
+  padding: .9rem 1.05rem;
+  margin: 1.4rem 0;
+  background: var(--tada-accent-soft);
+}
+
+.tada-tip > :last-child,
+.tada-warn > :last-child,
+.tada-note > :last-child,
+.tada-key > :last-child { margin-bottom: 0; }
+
+.tada-tip::before, .tada-warn::before, .tada-note::before, .tada-key::before {
+  display: block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .35rem;
+}
+
+.tada-tip::before  { content: "Try this"; color: var(--tada-good); }
+.tada-tip  { border-left-color: var(--tada-good); background: var(--tada-good-bg); }
+
+.tada-warn::before { content: "Watch out"; color: var(--tada-warn); }
+.tada-warn { border-left-color: var(--tada-warn); background: var(--tada-warn-bg); }
+
+.tada-note::before { content: "Note"; color: var(--tada-accent); }
+
+.tada-key::before  { content: "The short version"; color: var(--tada-d); }
+.tada-key  { border-left-color: var(--tada-d); background: #F5F0FB; }
+
+/* --------------------------------------------------------------------------
+   Before / after code comparison
+   -------------------------------------------------------------------------- */
+
+.tada-compare {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 1.4rem 0;
+}
+
+.tada-before, .tada-after {
+  border: 1px solid var(--tada-line);
+  border-radius: var(--tada-radius);
+  padding: .85rem 1rem 1rem;
+  background: #fff;
+}
+
+.tada-before { border-top: 4px solid var(--tada-bad); background: var(--tada-bad-bg); }
+.tada-after  { border-top: 4px solid var(--tada-good); background: var(--tada-good-bg); }
+
+.tada-before > p:first-child, .tada-after > p:first-child {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+
+.tada-before > p:first-child { color: var(--tada-bad); }
+.tada-after  > p:first-child { color: var(--tada-good); }
+
+.tada-compare div.sourceCode, .tada-compare pre {
+  background: #fff;
+  margin-bottom: .6rem;
+}
+
+.tada-compare > div > :last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+   Tabs — built from Pandoc `.tabset` sections by assets/tada.js
+   -------------------------------------------------------------------------- */
+
+.tada-tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  border-bottom: 2px solid var(--tada-line);
+  margin: 1.2rem 0 1.2rem;
+  padding: 0;
+}
+
+.tada-tab {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: .93rem;
+  font-weight: 500;
+  color: var(--tada-ink-soft);
+  padding: .5rem .85rem;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tada-tab:hover { background: var(--tada-surface); color: var(--tada-ink); }
+
+.tada-tab.is-active {
+  color: var(--tada-accent);
+  border-bottom-color: var(--tada-accent);
+  font-weight: 600;
+}
+
+.tada-tab:focus-visible {
+  outline: 2px solid var(--tada-accent);
+  outline-offset: 2px;
+}
+
+.tada-pane { display: none; }
+.tada-pane.is-active { display: block; }
+.tada-pane > h2:first-child,
+.tada-pane > h3:first-child,
+.tada-pane > h4:first-child { display: none; }
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+
+.book .book-body table, main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.4rem 0;
+  font-size: .94rem;
+  display: block;
+  overflow-x: auto;
+}
+
+main table th {
+  text-align: left;
+  background: var(--tada-surface-2);
+  font-weight: 600;
+  border-bottom: 2px solid var(--tada-line);
+}
+
+main table th, main table td {
+  padding: .55rem .7rem;
+  border-bottom: 1px solid var(--tada-line);
+  vertical-align: top;
+}
+
+main table tr:last-child td { border-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+   Checklists — `- [ ]` task lists get a real box
+   -------------------------------------------------------------------------- */
+
+main ul:has(> li > input[type="checkbox"]) { list-style: none; padding-left: .2rem; }
+
+main li > input[type="checkbox"] {
+  width: 1.05em;
+  height: 1.05em;
+  margin-right: .5em;
+  vertical-align: -0.15em;
+  accent-color: var(--tada-accent);
+}
+
+/* --------------------------------------------------------------------------
+   Misc
+   -------------------------------------------------------------------------- */
+
+blockquote {
+  border-left: 3px solid var(--tada-line);
+  color: var(--tada-ink-soft);
+  padding-left: 1rem;
+  margin-left: 0;
+}
+
+.tada-lede {
+  font-size: 1.12rem;
+  color: var(--tada-ink-soft);
+  line-height: 1.6;
+}
+
+.tada-meta {
+  font-size: .88rem;
+  color: var(--tada-ink-soft);
+}
+
+/* Sidebar / chapter nav polish */
+.sidebar-book-title, .book-title { font-family: "Fraunces", Georgia, serif; }
+
+/* Anything the four-letter colours should be usable inline. */
+.k-t  { color: var(--tada-t);  font-weight: 600; }
+.k-a1 { color: var(--tada-a1); font-weight: 600; }
+.k-d  { color: var(--tada-d);  font-weight: 600; }
+.k-a2 { color: var(--tada-a2); font-weight: 600; }
+
+/* --------------------------------------------------------------------------
+   Theme note
+   --------------------------------------------------------------------------
+   bs4_book renders with a fixed light bslib theme and has no dark mode of its
+   own, so this stylesheet commits to light too. A `prefers-color-scheme: dark`
+   block here would repaint only the wiki's own components and leave bookdown's
+   chrome — sidebar, page nav, search — light, which reads as broken rather
+   than as dark mode. If a dark theme is ever wanted, set it in `_output.yml`
+   under `bookdown::bs4_book: theme:` (bg/fg) and mirror it here.
+   -------------------------------------------------------------------------- */
+
+@media print {
+  .tada-pane { display: block !important; }
+  .tada-pane > h3:first-child { display: block !important; }
+  .tada-tablist { display: none; }
+}

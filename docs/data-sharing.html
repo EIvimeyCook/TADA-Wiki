@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>7 Data &amp; code sharing | The TADA-Wiki</title>
+<meta name="author" content="A community wiki built on the TADA guidelines">
+<meta name="description" content="TADA is about your code. This chapter is about everything sitting around it: what data to share, in what format, with what metadata, under what licence — and what a journal will check.  7.1 Why we...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="7 Data &amp; code sharing | The TADA-Wiki">
+<meta property="og:type" content="book">
+<meta property="og:description" content="TADA is about your code. This chapter is about everything sitting around it: what data to share, in what format, with what metadata, under what licence — and what a journal will check.  7.1 Why we...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="7 Data &amp; code sharing | The TADA-Wiki">
+<meta name="twitter:description" content="TADA is about your code. This chapter is about everything sitting around it: what data to share, in what format, with what metadata, under what licence — and what a journal will check.  7.1 Why we...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#0F6E7B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230F6E7B'/%3E%3Ctext%20x='50'%20y='70'%20font-family='Georgia,serif'%20font-size='58'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Best practice for sharing analytical code">The TADA-Wiki</a>:
+        <small class="text-muted">Best practice for sharing analytical code</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="quickstart.html"><span class="header-section-number">1</span> Start here</a></li>
+<li><a class="" href="tada.html"><span class="header-section-number">2</span> TADA at a glance</a></li>
+<li><a class="" href="transferable.html"><span class="header-section-number">3</span> T — Transferable</a></li>
+<li><a class="" href="available.html"><span class="header-section-number">4</span> A — Available</a></li>
+<li><a class="" href="documented.html"><span class="header-section-number">5</span> D — Documented</a></li>
+<li><a class="" href="annotated.html"><span class="header-section-number">6</span> A — Annotated</a></li>
+<li><a class="active" href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></li>
+<li><a class="" href="code-review.html"><span class="header-section-number">8</span> Code review</a></li>
+<li><a class="" href="further-reading.html"><span class="header-section-number">9</span> Further reading</a></li>
+<li><a class="" href="contribute.html"><span class="header-section-number">10</span> Contribute</a></li>
+<li><a class="" href="references.html"><span class="header-section-number">11</span> References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="data-sharing" class="section level1" number="7">
+<h1>
+<span class="header-section-number">7</span> Data &amp; code sharing<a class="anchor" aria-label="anchor" href="#data-sharing"><i class="fas fa-link"></i></a>
+</h1>
+<p>TADA is about your code. This chapter is about everything sitting around it:
+what data to share, in what format, with what metadata, under what licence —
+and what a journal will check.</p>
+<div id="sharing-goals" class="section level2" number="7.1">
+<h2>
+<span class="header-section-number">7.1</span> Why we archive at all<a class="anchor" aria-label="anchor" href="#sharing-goals"><i class="fas fa-link"></i></a>
+</h2>
+<p>Worth being clear about, because the three goals pull in slightly different
+directions and different practices serve each one. The SORTEE guidelines set
+out three:</p>
+<div class="tada-cards">
+<div class="tada-card t">
+<p><span class="tada-letter">1</span> <span class="tada-word">Data reuse</span>
+<span class="tada-gloss">Prevents data loss; enables research synthesis and meta-analysis; allows
+re-analysis when methods improve; allows new questions of existing data — which
+also <strong>reduces the use of animals in experiments</strong>.</span></p>
+</div>
+<div class="tada-card a1">
+<p><span class="tada-letter">2</span> <span class="tada-word">Transparency</span>
+<span class="tada-gloss">Readers can see what was actually done to obtain the reported results. Open
+data will not stop fabrication, but it makes it far easier to
+detect.</span></p>
+</div>
+<div class="tada-card d">
+<p><span class="tada-letter">3</span> <span class="tada-word">Computational reproducibility</span>
+<span class="tada-gloss">Someone else can reproduce the published results from the archived data and
+code.</span></p>
+</div>
+</div>
+<p>Two points that follow from this framing and are easy to miss:</p>
+<ul>
+<li>
+<strong>Data are typically collected with public money</strong>, and so can be seen as a
+public good that should not be lost when a researcher changes job or a
+computer breaks. Lost data and code represent a substantial source of
+research waste.</li>
+<li>Published results are often <strong>not described in enough detail to be included
+in a meta-analysis</strong>. Archiving the data lets a synthesist re-analyse to get
+what they need, and substantially increases the evidence available for
+synthesis.</li>
+</ul>
+</div>
+<div id="sharing-glossary" class="section level2" number="7.2">
+<h2>
+<span class="header-section-number">7.2</span> Vocabulary<a class="anchor" aria-label="anchor" href="#sharing-glossary"><i class="fas fa-link"></i></a>
+</h2>
+<p>The SORTEE glossary, because these words are used loosely and the distinctions
+matter when someone asks you for “the raw data”.</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Metadata</strong></td>
+<td>A description of, and information about, the data and code. Typically a text file called a README; variants include a codebook or a data dictionary.</td>
+</tr>
+<tr class="even">
+<td><strong>Raw data</strong></td>
+<td>Unprocessed and unfiltered data, including any raw files — photos, audio recordings, videos, data sheets.</td>
+</tr>
+<tr class="odd">
+<td><strong>Data filtering</strong></td>
+<td>Removing some data to create the dataset used in the analysis (e.g. removing individuals with a certain characteristic). The result is <strong>filtered data</strong>.</td>
+</tr>
+<tr class="even">
+<td><strong>Data processing</strong></td>
+<td>Transforming data from one form to another: extraction from images or video, summarising, transforming, calculating. The result is <strong>processed data</strong>.</td>
+</tr>
+<tr class="odd">
+<td><strong>Repository</strong></td>
+<td>A framework providing long-term storage for many projects — Zenodo, Dryad, Figshare, etc.</td>
+</tr>
+<tr class="even">
+<td><strong>Project</strong></td>
+<td>A collection of files archived for a specific manuscript. (Similar to what GitHub calls a <em>repository</em> — hence the confusion.)</td>
+</tr>
+<tr class="odd">
+<td><strong>Data editor</strong></td>
+<td>An editorial position at a journal, responsible for screening and quality-controlling the data and code archived alongside manuscripts under review.</td>
+</tr>
+<tr class="even">
+<td><strong>Data and code quality control</strong></td>
+<td>Checking the suitability of data and code for public archiving.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tada-note">
+<p>Transcribing data from a written to a digital format, and the error-checking
+that follows, does <strong>not</strong> count as processing. A typed-up field sheet is still
+raw data.</p>
+</div>
+</div>
+<div id="sharing-what" class="section level2" number="7.3">
+<h2>
+<span class="header-section-number">7.3</span> What data to share<a class="anchor" aria-label="anchor" href="#sharing-what"><i class="fas fa-link"></i></a>
+</h2>
+<p>Ideally, <strong>both raw and processed data</strong>. The SORTEE guidelines allow three
+acceptable forms, in descending order of preference:</p>
+<p><strong>a)</strong> Raw data, along with the processed data and/or the code to prepare the
+data for analysis.</p>
+<p><strong>b)</strong> A <strong>sample</strong> of raw data alongside the processed/filtered data, when a
+full raw data upload is not possible.</p>
+<p><strong>c)</strong> Processed/filtered data with a <strong>detailed description of how to both
+obtain and process/filter the raw data</strong>.</p>
+<p>The reason raw data matters: without it, nobody can check the filtering and
+processing steps, which is exactly where silent errors live. Option (c) is
+acceptable, but it puts the burden on your written description being complete.</p>
+</div>
+<div id="sharing-formats" class="section level2" number="7.4">
+<h2>
+<span class="header-section-number">7.4</span> File formats<a class="anchor" aria-label="anchor" href="#sharing-formats"><i class="fas fa-link"></i></a>
+</h2>
+<p>The rule is the same for data as for code: <strong>universally interoperable</strong>,
+meaning it can be exchanged and used across different software and operating
+systems.</p>
+<div class="tabset">
+<div id="data-formats" class="section level3 unlisted unnumbered">
+<h3>Data formats<a class="anchor" aria-label="anchor" href="#data-formats"><i class="fas fa-link"></i></a>
+</h3>
+<p><strong>Prefer simple text-based formats.</strong> <code>.csv</code>, <code>.tsv</code> and <code>.txt</code> can be used by
+more software, across more systems, than anything else.</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr class="header">
+<th>Format</th>
+<th>Verdict</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>
+<code>.csv</code>, <code>.tsv</code>, <code>.txt</code>
+</td>
+<td>
+<strong>Preferred.</strong> Maximally interoperable.</td>
+</tr>
+<tr class="even">
+<td><code>.parquet</code></td>
+<td>Interoperable, highly compressed, efficiently read, and highly accurate for large datasets.</td>
+</tr>
+<tr class="odd">
+<td><code>.xlsx</code></td>
+<td>Not proprietary, so interoperable — but can carry information (e.g. formatting) that is <strong>lost on import</strong> into statistical software.</td>
+</tr>
+<tr class="even">
+<td><code>.xls</code></td>
+<td>Proprietary format. Avoid.</td>
+</tr>
+<tr class="odd">
+<td>
+<code>.RData</code>, <code>.rds</code>
+</td>
+<td>Usable with open-source software, but requires knowledge of R to extract, and may depend on the R version used to save it. Restricts reuse.</td>
+</tr>
+<tr class="even">
+<td>
+<code>.sps</code> and other proprietary formats</td>
+<td>Not interoperable; does not facilitate reuse.</td>
+</tr>
+<tr class="odd">
+<td>
+<code>.pdf</code>, <code>.docx</code>
+</td>
+<td>
+<strong>Never.</strong> Prone to error when copy-pasted, and cannot be readily imported into statistical programs.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Where there is genuinely no alternative — data collected by proprietary
+software, for instance — provide the non-interoperable file <strong>alongside
+interoperable extracted data</strong>, with a clear description of the conversion
+process in the metadata, <strong>including the software version used</strong>.</p>
+</div>
+<div id="code-formats" class="section level3 unlisted unnumbered">
+<h3>Code formats<a class="anchor" aria-label="anchor" href="#code-formats"><i class="fas fa-link"></i></a>
+</h3>
+<p>Code must be in a format that can be readily opened by text editors and IDEs
+such as VS Code: <code>.R</code>, <code>.py</code>, <code>.cpp</code>, and so on. See
+<a href="transferable.html#transferable-filetype">Transferable</a>.</p>
+<p><strong>Code must not be provided as a <code>.pdf</code> or pasted into a Word document.</strong> Even
+where the script can be copied and pasted out, these programs often insert
+additional characters or spacing that the analysis software misinterprets — the
+canonical example being Python code that fails to run because the indentation
+was mangled.</p>
+</div>
+</div>
+</div>
+<div id="sharing-metadata" class="section level2" number="7.5">
+<h2>
+<span class="header-section-number">7.5</span> Metadata: what a README must contain<a class="anchor" aria-label="anchor" href="#sharing-metadata"><i class="fas fa-link"></i></a>
+</h2>
+<p>The <a href="documented.html#documented-readme">Documented</a> chapter covers the code README in detail.
+The SORTEE guidelines set out what is needed on the <strong>data</strong> side, and the two
+overlap heavily.</p>
+<p><strong>General information</strong></p>
+<ul>
+<li>Manuscript title and abstract</li>
+<li>Authors and relevant contact information</li>
+<li>Date and location of data collection</li>
+<li>A list of all relevant funders</li>
+<li>Licence information (e.g. CC-BY)</li>
+<li>Information about data derived from other sources (other articles, online
+data)</li>
+</ul>
+<p><strong>Detailed file descriptions</strong></p>
+<ul>
+<li>What each data file contains and how it is structured</li>
+<li>What variables it contains</li>
+<li><strong>What units of measurement they are in</strong></li>
+<li>How they link to the data described in the manuscript — e.g. every column in
+a <code>.csv</code> explained and described</li>
+</ul>
+<p>You can deliver this three ways: as part of the main README; as additional
+README files describing the data and code separately; or as a <strong>data
+dictionary</strong> per data file (e.g. a <code>.csv</code> with one column for variable names
+and another for their descriptions).</p>
+<div class="tada-key">
+<p>The bar the guidelines set for both data and code metadata is the word
+<strong>“adequate”</strong>: metadata detailed enough that <strong>anyone can understand the data,
+or the analysis code, without needing to read the manuscript</strong>. If your README
+only makes sense to someone who has read your methods section, it is not there
+yet.</p>
+</div>
+<div class="tada-note">
+<p>Under double-blind review, some sections can be <strong>left blank until acceptance</strong>
+and filled in then.</p>
+</div>
+<p><strong>On LLMs.</strong> The SORTEE guidelines add that the README should state <strong>whether
+and how the authors have used large language models in code generation</strong> —
+while noting it is unlikely a data editor could verify this.</p>
+</div>
+<div id="sharing-licences" class="section level2" number="7.6">
+<h2>
+<span class="header-section-number">7.6</span> Licences<a class="anchor" aria-label="anchor" href="#sharing-licences"><i class="fas fa-link"></i></a>
+</h2>
+<p>Without a licence, data and code <strong>cannot be legally reused</strong> under many
+circumstances, depending on jurisdiction. Most researchers have little
+knowledge of licences, so this is a common and consequential gap.</p>
+<div class="tabset">
+<div id="for-data" class="section level3 unlisted unnumbered">
+<h3>For data<a class="anchor" aria-label="anchor" href="#for-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>Typically <strong>Creative Commons</strong> licences. Chooser:
+<a href="https://chooser-beta.creativecommons.org/" class="uri">https://chooser-beta.creativecommons.org/</a></p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr class="header">
+<th>Licence</th>
+<th>What it means</th>
+<th>Notes</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>CC0</strong></td>
+<td>Public domain; no attribution required</td>
+<td>The most permissive. Default at Figshare; <strong>mandated by Dryad</strong>.</td>
+</tr>
+<tr class="even">
+<td><strong>CC BY 4.0</strong></td>
+<td>Reusers must credit the original author, but may distribute, remix, adapt and build upon the material, including commercially</td>
+<td>Default at Zenodo.</td>
+</tr>
+<tr class="odd">
+<td><strong>CC BY-NC 4.0</strong></td>
+<td>As CC BY, but prohibits commercial use</td>
+<td>More restrictive.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="for-code" class="section level3 unlisted unnumbered">
+<h3>For code<a class="anchor" aria-label="anchor" href="#for-code"><i class="fas fa-link"></i></a>
+</h3>
+<p>Software licences rather than Creative Commons. Chooser:
+<a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a></p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr class="header">
+<th>Licence</th>
+<th>What it means</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>MIT</strong></td>
+<td>Very permissive: copy, modify, merge, publish, share, with the licence notice retained</td>
+</tr>
+<tr class="even">
+<td><strong>BSD 2-Clause / 3-Clause</strong></td>
+<td>Permissive, similar in spirit to MIT</td>
+</tr>
+<tr class="odd">
+<td><strong>Apache 2.0</strong></td>
+<td>Permissive, with an explicit patent grant</td>
+</tr>
+<tr class="even">
+<td><strong>GPL v3.0</strong></td>
+<td>Copyleft: derivatives must carry the same licence, and changes from the source must be listed</td>
+</tr>
+</tbody>
+</table></div>
+<p>CC0 is <strong>not well suited to code</strong> — which is why Dryad, being CC0-only, points
+code deposits at Zenodo.</p>
+</div>
+<div id="choosing" class="section level3 unlisted unnumbered">
+<h3>Choosing<a class="anchor" aria-label="anchor" href="#choosing"><i class="fas fa-link"></i></a>
+</h3>
+<p>The SORTEE guidelines <strong>do not recommend or enforce any specific type of
+licence</strong>. The requirement is that you choose one and state it.</p>
+<p>Things that should influence the choice:</p>
+<ul>
+<li>Who the audience is, and whether commercial application is expected</li>
+<li>Whether you want others to be able to modify or extend the work</li>
+<li>What your <strong>journal, institution and funder</strong> require — some journals mandate
+a licence on archiving (the <em>Journal of Statistical Software</em> requires a GPL)</li>
+<li>Whether your <strong>repository</strong> already applies one by default, or mandates one</li>
+</ul>
+<p>Practical route: pick at <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a>, copy the licence text
+into a <code>LICENSE</code> file in the project, and name it in the README. Or select it
+in the repository’s deposit form, as Zenodo allows.</p>
+</div>
+</div>
+</div>
+<div id="sortee" class="section level2" number="7.7">
+<h2>
+<span class="header-section-number">7.7</span> The SORTEE guidelines<a class="anchor" aria-label="anchor" href="#sortee"><i class="fas fa-link"></i></a>
+</h2>
+<p>The <strong>SORTEE guidelines for data and code quality control</strong> (Pick et al. 2026,
+<em>Peer Community Journal</em> 6: e20) are written for <strong>data editors</strong> — the
+editorial role responsible for screening and quality-controlling data and code
+at a journal. They are worth reading as an author precisely because they tell
+you what will be checked.</p>
+<div class="tada-note">
+<p><strong>What data and code quality control is not.</strong> It is about ensuring archived
+data and code meet minimum standards — complete, usable, documented, runnable.
+It is explicitly <strong>not</strong> a code review: a data editor does not critique your
+analytical techniques, and it is not their role to review, interpret or correct
+your code. Nor do they check the <em>reliability</em> of the code. That is what
+<a href="code-review.html#code-review">code review</a> is for.</p>
+</div>
+<div id="sortee-stages" class="section level3" number="7.7.1">
+<h3>
+<span class="header-section-number">7.7.1</span> The six stages<a class="anchor" aria-label="anchor" href="#sortee-stages"><i class="fas fa-link"></i></a>
+</h3>
+<p>The summary table from the paper, reproduced in full.</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr class="header">
+<th>Stage</th>
+<th>Guideline</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Data must be archived and adhere to FAIR guiding principles</strong></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1.1 Data files are accessible and in an open repository</td>
+<td>Data are open and freely available and are located in a permanent public repository with an associated globally unique persistent identifier, that is cited in the text and reference list of the manuscript.</td>
+</tr>
+<tr class="odd">
+<td>1.2 Data are associated with a license</td>
+<td>Data must be associated with a license.</td>
+</tr>
+<tr class="even">
+<td>1.3 Data files are present and complete</td>
+<td>Authors must either provide: a) raw data, along with the processed data and/or code to prepare the data for analysis, or b) a sample of raw data alongside processed/filtered data when full raw data upload is not possible, or c) processed/filtered data with a detailed description of how to both obtain and process/filter the raw data.</td>
+</tr>
+<tr class="odd">
+<td>1.4 Data files are in an interoperable format</td>
+<td>Data files must be provided in an interoperable format.</td>
+</tr>
+<tr class="even">
+<td>1.5 Data metadata is present and adequate</td>
+<td>Detailed metadata, including (but not limited to) a README file, must accompany the data.</td>
+</tr>
+<tr class="odd">
+<td><strong>2. Archived data corresponds with the data reported in the manuscript</strong></td>
+<td>The structure and contents of the archived data files must match the description in the manuscript.</td>
+</tr>
+<tr class="even">
+<td><strong>3. Code must be archived and adhere to FAIR guiding principles</strong></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3.1 Code files are accessible and in an open repository</td>
+<td>Code files are open and freely available and are located in a permanent public repository with an associated globally unique persistent identifier, preferably in the same archived project as the data files, and are cited in the text and the reference list of the manuscript.</td>
+</tr>
+<tr class="even">
+<td>3.2 Code is associated with a licence</td>
+<td>The code must be associated with a license.</td>
+</tr>
+<tr class="odd">
+<td>3.3 Code files are present and complete</td>
+<td>All code used for generating the results of the manuscript (including filtering, processing, graphing, and analysis) must be present either in one or more code files.</td>
+</tr>
+<tr class="even">
+<td>3.4 Code is in an interoperable format</td>
+<td>Code files must be provided in an interoperable format.</td>
+</tr>
+<tr class="odd">
+<td>3.5 Code metadata is present and adequate</td>
+<td>A sufficiently detailed README must accompany the code. Code must also be broken into sections with clear annotation stating the purpose of the code with clear links to the relevant sections, figures, and tables in the manuscript.</td>
+</tr>
+<tr class="even">
+<td><strong>4. Archived code corresponds with the workflow reported in the manuscript</strong></td>
+<td>The structure and content of the archived code must match the description of data filtering, processing, and analysis, and the presentation of results in the manuscript.</td>
+</tr>
+<tr class="odd">
+<td><strong>5. Archived code runs with the archived data</strong></td>
+<td>Code must be able to run without error using the archived data. With the exception of easy to fix file path errors, all errors should be addressed by the author.</td>
+</tr>
+<tr class="even">
+<td><strong>6. Results can be computationally reproduced by running the archived code</strong></td>
+<td>Results reproduced by the data editor with the archived data and code must match those presented in the manuscript. A tolerance threshold can be given when there is not an exact match but the authors must state clearly in the code metadata why this mismatch might occur. If saved model outputs are instead provided, this must also be clearly stated in the metadata.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="sortee-tada-map" class="section level3" number="7.7.2">
+<h3>
+<span class="header-section-number">7.7.2</span> How TADA maps onto the stages<a class="anchor" aria-label="anchor" href="#sortee-tada-map"><i class="fas fa-link"></i></a>
+</h3>
+<p>Wiki guidance. TADA covers the author-side work for Stages 1 and 3 almost
+exactly:</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr class="header">
+<th>TADA</th>
+<th>SORTEE stages</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Transferable</strong></td>
+<td>1.4, 3.4 (interoperable formats) and, in practice, 5 (code runs — local file paths are the commonest cause of failure)</td>
+</tr>
+<tr class="even">
+<td><strong>Available</strong></td>
+<td>1.1, 3.1 (open repository, PID, cited in the manuscript)</td>
+</tr>
+<tr class="odd">
+<td><strong>Documented</strong></td>
+<td>1.2, 1.5, 3.2, 3.5 (licence and metadata)</td>
+</tr>
+<tr class="even">
+<td><strong>Annotated</strong></td>
+<td>3.5 (sectioned code with clear annotation and signposting), and it is what makes Stage 4 assessable at all</td>
+</tr>
+<tr class="odd">
+<td><em>(Not TADA — your responsibility as author)</em></td>
+<td>1.3, 3.3 (completeness), 2 (data matches manuscript), 6 (results reproduce)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="sortee-common-failures" class="section level3" number="7.7.3">
+<h3>
+<span class="header-section-number">7.7.3</span> What trips people up at each stage<a class="anchor" aria-label="anchor" href="#sortee-common-failures"><i class="fas fa-link"></i></a>
+</h3>
+<p>Drawn from the guidelines’ own account of common problems.</p>
+<p><strong>Stage 5 — code runs.</strong> The most common causes of failure:</p>
+<ul>
+<li>a package or module not installed or loaded within the code</li>
+<li>a missing code chunk</li>
+<li>variable names in the code not matching those in the data files</li>
+<li>code referencing data files whose names do not match the archived files</li>
+<li>
+<strong>local or absolute file paths</strong> — singled out as one of the most common
+reasons code does not run</li>
+</ul>
+<div class="tada-note">
+<p>Data editors are told to be pragmatic about paths: an absolute path, or a way
+of specifying relative paths they are not familiar with, <strong>should not</strong> be a
+reason to return the code, as long as they can make it run with minor changes.
+It is logged as a <strong>minor error</strong>. Everything else is on the author to fix — it
+is explicitly not the data editor’s job to make your code run.</p>
+</div>
+<p><strong>Stage 6 — results reproduce.</strong> In most cases exact reproducibility is
+expected: the exact number in the manuscript should come out of the code.
+Legitimate reasons for a mismatch, all of which must be stated in the metadata:</p>
+<ul>
+<li>
+<strong>Stochastic methods</strong> — simulations, MCMC. Avoidable by setting a seed
+(<code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> in R, <code>random.seed()</code> in Python) <strong>at the beginning of any code
+section that would be run independently</strong>, including for figure generation
+with jittering. Note that setting a seed does not <em>always</em> guarantee
+reproducibility.</li>
+<li>
+<strong>Post-processing of figures in other software.</strong> The data in the figure is
+still expected to be the same, but the code may not reproduce the figure
+exactly.</li>
+<li>
+<strong>Software version differences.</strong> If results are sensitive to the version
+used, flag it clearly and justify the version in the manuscript and metadata.</li>
+</ul>
+<p><strong>Computationally expensive or proprietary analyses.</strong> Where code needs
+specialist hardware, takes a very long time, or depends on proprietary software
+(e.g. ASReml), full computational reproducibility cannot be assessed. What to
+do:</p>
+<ul>
+<li>Indicate it clearly in the metadata, <strong>alongside a saved output</strong> (e.g. large
+Bayesian model objects saved as <code>.rds</code>)</li>
+<li>Ideally provide <strong>example code</strong> that demonstrates the code will run — an
+analysis on a subset of data, or a model run for a reduced duration</li>
+<li>Where only part of the analysis needs proprietary software, say <strong>which</strong>
+parts a data editor can assess</li>
+<li>Consider non-proprietary execution routes (GNU Octave for MATLAB code, or
+MATLAB Compiler for standalone applications) — but test compatibility and
+note any limitations in the metadata</li>
+<li>Build systems such as <strong><code>targets</code></strong> (R) or <strong>Snakemake</strong> can provide
+reproducibility signatures (hashes) for computationally intensive steps,
+along with intermediate data objects</li>
+</ul>
+</div>
+</div>
+<div id="sharing-authors" class="section level2" number="7.8">
+<h2>
+<span class="header-section-number">7.8</span> Advice for authors<a class="anchor" aria-label="anchor" href="#sharing-authors"><i class="fas fa-link"></i></a>
+</h2>
+<p>The guidelines’ own suggestions, which are the highest-return habits here.</p>
+<p><strong>1. Adhere to the guidelines from the beginning of the study.</strong> Making a
+project accessible and reproducible at the <em>end</em> is a lot of work. Create a
+clear directory structure and a README at the start, and update the metadata as
+new files are added. Annotate code as you produce it. Working with
+reproducibility in mind also makes it far more likely that someone else can
+reuse the project and successfully run the code — which matters a great deal if
+several people will touch the study over its lifetime.</p>
+<p><strong>2. Prepare data and code before submission to any journal.</strong> Having it ready
+minimises problems during submission and quality control, and makes transfer to
+another journal easy if the paper is rejected.</p>
+<p><strong>3. Perform a pre-submission code review.</strong> Send the project to a colleague or
+co-author before submitting. They can check that the code runs with the data in
+the structure provided, that metadata is adequate, that data and code match the
+manuscript, and that results reproduce. Co-authors are also more likely to spot
+mistakes <em>in</em> the code, because they know the study and the data — and data
+editors do not check code reliability. See <a href="code-review.html#code-review">Code review</a>.</p>
+<p><strong>4. Consider Markdown or Quarto.</strong> Presenting everything in one self-contained
+document is very helpful for data editors and future readers, because it makes
+the link between code, data, and outputs explicit.</p>
+<div class="tada-tip">
+<p><strong>Say what was checked.</strong> If your journal performs quality control, the
+guidelines suggest stating it in the data and code availability section — for
+example: <em>“Data and code were checked from Stage 1–4 of the SORTEE guidelines
+for Data and Code Quality Control”</em> — and noting explicitly where a check could
+not be performed (proprietary software, sensitive data, computationally
+expensive analyses).</p>
+</div>
+</div>
+<div id="sharing-checklist" class="section level2" number="7.9">
+<h2>
+<span class="header-section-number">7.9</span> Checklist<a class="anchor" aria-label="anchor" href="#sharing-checklist"><i class="fas fa-link"></i></a>
+</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Raw data archived, or a documented reason and route to it (option a, b or c)</label></li>
+<li><label><input type="checkbox">Processed/filtered data archived, or the code that produces it</label></li>
+<li><label><input type="checkbox">All data in interoperable formats (<code>.csv</code>/<code>.tsv</code>/<code>.txt</code>/<code>.parquet</code> preferred)</label></li>
+<li><label><input type="checkbox">Any proprietary-format file is accompanied by an interoperable extract and a description of the conversion, including software version</label></li>
+<li><label><input type="checkbox">Nothing lives only in supplementary material</label></li>
+<li><label><input type="checkbox">A data licence is chosen and stated</label></li>
+<li><label><input type="checkbox">A code licence is chosen and stated</label></li>
+<li><label><input type="checkbox">README covers manuscript, authors, contact, collection date and location, funders, licence, and derived-data sources</label></li>
+<li><label><input type="checkbox">Every variable in every data file is described, <strong>with units</strong></label></li>
+<li><label><input type="checkbox">Data and code deposits are cited in the text and the reference list</label></li>
+<li><label><input type="checkbox">All code used to generate results is archived — filtering, processing, graphing, analysis</label></li>
+<li><label><input type="checkbox">Seeds are set before anything stochastic</label></li>
+<li><label><input type="checkbox">Saved outputs are provided for anything slow or proprietary, and flagged in the metadata</label></li>
+<li><label><input type="checkbox">LLM use in code generation is disclosed in the README</label></li>
+</ul>
+</div>
+</div>
+<script src="assets/tada.js" defer></script><div class="chapter-nav">
+<div class="prev"><a href="annotated.html"><span class="header-section-number">6</span> A — Annotated</a></div>
+<div class="next"><a href="code-review.html"><span class="header-section-number">8</span> Code review</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#data-sharing"><span class="header-section-number">7</span> Data &amp; code sharing</a></li>
+<li><a class="nav-link" href="#sharing-goals"><span class="header-section-number">7.1</span> Why we archive at all</a></li>
+<li><a class="nav-link" href="#sharing-glossary"><span class="header-section-number">7.2</span> Vocabulary</a></li>
+<li><a class="nav-link" href="#sharing-what"><span class="header-section-number">7.3</span> What data to share</a></li>
+<li>
+<a class="nav-link" href="#sharing-formats"><span class="header-section-number">7.4</span> File formats</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#data-formats">Data formats</a></li>
+<li><a class="nav-link" href="#code-formats">Code formats</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#sharing-metadata"><span class="header-section-number">7.5</span> Metadata: what a README must contain</a></li>
+<li>
+<a class="nav-link" href="#sharing-licences"><span class="header-section-number">7.6</span> Licences</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#for-data">For data</a></li>
+<li><a class="nav-link" href="#for-code">For code</a></li>
+<li><a class="nav-link" href="#choosing">Choosing</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#sortee"><span class="header-section-number">7.7</span> The SORTEE guidelines</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sortee-stages"><span class="header-section-number">7.7.1</span> The six stages</a></li>
+<li><a class="nav-link" href="#sortee-tada-map"><span class="header-section-number">7.7.2</span> How TADA maps onto the stages</a></li>
+<li><a class="nav-link" href="#sortee-common-failures"><span class="header-section-number">7.7.3</span> What trips people up at each stage</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#sharing-authors"><span class="header-section-number">7.8</span> Advice for authors</a></li>
+<li><a class="nav-link" href="#sharing-checklist"><span class="header-section-number">7.9</span> Checklist</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 02 September 2026.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

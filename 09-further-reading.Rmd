@@ -1,0 +1,225 @@
+# Further reading {#further-reading}
+
+Everything here is cited in one of the three source papers, or is a tool those
+papers recommend. Grouped by what you are trying to do rather than by author.
+
+::: {.tada-note}
+Full bibliographic details for everything named on this page — and everywhere
+else in the wiki — are in [References](#references).
+:::
+
+## Start here {#reading-start}
+
+The three papers this wiki is built on.
+
+::: {.tabset}
+
+### TADA {.unlisted .unnumbered}
+
+**Ivimey-Cook et al.** *TADA! Simple guidelines to improve analytical code
+sharing for transparency and reproducibility.*
+
+The four guidelines, the evidence for why they are needed, and worked "How To"
+boxes for each letter with a pre-TADA / post-TADA code comparison. Includes a
+one-page checklist as supplementary Figure S1.
+
+Companion site: <https://eivimeycook.github.io/TADA/>
+
+### SORTEE guidelines {.unlisted .unnumbered}
+
+**Pick, J. L., et al. (2026).** *The SORTEE guidelines for data and code
+quality control in ecology and evolutionary biology.* Peer Community Journal 6:
+e20. <https://doi.org/10.24072/pcjournal.687>
+
+Six stages of checks, written for journal data editors but the clearest
+statement anywhere of what "good enough to archive" means. Also contains
+suggestions for authors and for journals. Open access, CC BY 4.0.
+
+### Code review {.unlisted .unnumbered}
+
+**Ivimey-Cook, E. R., et al. (2023).** *Implementing code review in the
+scientific workflow: Insights from ecology and evolutionary biology.* Journal
+of Evolutionary Biology 36: 1347–1356.
+<https://doi.org/10.1111/jeb.14230>
+
+The four Rs, how to write reviewable code, how code review fits at each stage
+of publication, and a practical primer on starting a code club.
+
+:::
+
+## Guides to reproducible code {#reading-guides}
+
+- **Cooper, N. & Hsing, P.-Y. (2025).** *Guide to Reproducible Code.* British
+  Ecological Society. — The standard field guide; the SORTEE guidelines point
+  authors here directly. (Earlier edition: Cooper, N. 2017.)
+- **Abdill, R. J., Talarico, E. & Grieneisen, L. (2024).** *A how-to guide for
+  code sharing in biology.* PLoS Biology 22: e3002815.
+- **Filazzola, A. & Lortie, C. (2022).** *A call for clean code to effectively
+  communicate science.* Methods in Ecology and Evolution 13: 2119–2128.
+- **Sandve, G. K., Nekrutenko, A., Taylor, J. & Hovig, E. (2013).** *Ten Simple
+  Rules for Reproducible Computational Research.* PLoS Computational Biology 9:
+  e1003285.
+- **Hunter-Zinck, H. et al. (2021).** *Ten simple rules on writing clean and
+  reliable open-source scientific software.* PLoS Computational Biology 17:
+  e1009481.
+- **Sweigart, A. (2020).** *Beyond the Basic Stuff with Python: Best Practices
+  for Writing Clean Code.* No Starch Press.
+- **Jiménez, R. C. et al. (2017).** *Four simple recommendations to encourage
+  best practices in research software.* F1000Research.
+- **Patel, B., Soundarajan, S., Ménager, H. & Hu, Z. (2023).** *Making
+  Biomedical Research Software FAIR: Actionable Step-by-step Guidelines with a
+  User-support Tool.* Scientific Data 10: 557.
+
+Also useful, and cited in the code review paper:
+<https://coderefinery.github.io/reproducible-research/> and Lakens' chapter on
+computational reproducibility,
+<https://lakens.github.io/statistical_inferences/14-computationalreproducibility.html>
+
+## Code review {#reading-review}
+
+- **Rokem, A. (2024).** *Ten simple rules for scientific code review.* PLoS
+  Computational Biology 20: e1012375.
+- **Hillemann, F., Burant, J. B., Culina, A. & Vriend, S. J. G. (2025).** *Code
+  review in practice: A checklist for computational reproducibility and
+  collaborative research in ecology and evolution.* EcoEvoRxiv.
+- **Indriasari, T. D., Luxton-Reilly, A. & Denny, P. (2020).** *A review of peer
+  code review in higher education.* ACM Transactions on Computing Education 20:
+  1–25.
+- **Fernández-Juricic, E. (2021).** *Why sharing data and code during peer
+  review can enhance behavioral ecology research.* Behavioral Ecology and
+  Sociobiology 75: 103.
+- **Nakagawa, S. et al. (2023).** *Method reporting with initials for
+  transparency (MeRIT) promotes more granularity and accountability for author
+  contributions.* Nature Communications. — how to credit a code reviewer in the
+  methods section.
+
+## FAIR and open-science principles {#reading-fair}
+
+- **Wilkinson, M. D. et al. (2016).** *The FAIR Guiding Principles for
+  scientific data management and stewardship.* Scientific Data 3: 160018. — The
+  original, for data.
+- **Barker, M. et al. (2022).** *Introducing the FAIR Principles for research
+  software.* Scientific Data 9: 622.
+- **Chue Hong, N. P. et al. (2022).** *FAIR Principles for Research Software
+  (FAIR4RS Principles).* Zenodo. <https://doi.org/10.15497/RDA00068>
+- **Lamprecht, A.-L. et al. (2020).** *Towards FAIR principles for research
+  software.* Data Science 3: 37–59.
+- GO FAIR's plain-language summary: <https://www.go-fair.org/fair-principles/>
+
+## The evidence base {#reading-evidence}
+
+If you need to make the case to a co-author, a supervisor or an editor.
+
+- **Culina, A., van den Berg, I., Evans, S. & Sánchez-Tójar, A. (2020).** *Low
+  availability of code in ecology: A call for urgent action.* PLoS Biology 18:
+  e3000763.
+- **Trisovic, A., Lau, M. K., Pasquier, T. & Crosas, M. (2022).** *A large-scale
+  study on research code quality and execution.* Scientific Data 9: 60. — The
+  74%/56% figures.
+- **Kellner, K. F., Doser, J. W. & Belant, J. L. (2025).** *Functional R code is
+  rare in species distribution and abundance papers.* Ecology 106: e4475. — The
+  93% figure.
+- **Kambouris, S., Wilkinson, D. P., Smith, E. T. & Fidler, F. (2024).**
+  *Computationally reproducing results from meta-analyses in ecology and
+  evolutionary biology using shared code and data.* PLOS ONE 19: e0300333.
+- **Gomes, D. G. E. et al. (2022).** *Why don't we share data and code?
+  Perceived barriers and benefits to public archiving practices.* Proceedings
+  of the Royal Society B 289: 20221113.
+- **Maitner, B. et al. (2024).** *Code sharing in ecology and evolution
+  increases citation rates but remains uncommon.* Ecology and Evolution 14:
+  e70030.
+- **Vandewalle, P. (2012).** *Code Sharing Is Associated with Research Impact in
+  Image Processing.* Computing in Science & Engineering 14: 42–47.
+- **McKiernan, E. C. et al. (2016).** *How open science helps researchers
+  succeed.* eLife 5: e16800.
+- **Jenkins, G. B. et al. (2023).** *Reproducibility in ecology and evolution:
+  Minimum standards for data and code.* Ecology and Evolution 13: e9961.
+- **Archmiller, A. A. et al. (2020).** *Computational reproducibility in The
+  Wildlife Society's flagship journals.* The Journal of Wildlife Management 84:
+  1012–1017. — the conclusion-and-numbers criterion used in
+  [code review](#review-four-rs).
+- **Hardwicke, T. E. et al. (2021).** *Analytic reproducibility in articles
+  receiving open data badges at the journal Psychological Science: An
+  observational study.* Royal Society Open Science 8: 201494. — the percentage
+  error criterion.
+
+## Tools {#reading-tools}
+
+::: {.tabset}
+
+### R {.unlisted .unnumbered}
+
+| Tool | What for |
+|---|---|
+| **`here`** (Müller & Bryan 2020) | Relative file paths — see [Transferable](#transferable-paths) |
+| **`renv`** (Ushey & Wickham 2023) | Project-level package environments; replaces `packrat` |
+| **`groundhog`** (Simonsohn & Gruson 2023) | Load packages as they were on a given date |
+| **`styler`** (Müller & Walthert 2020) | Reformat code to a standard style (tidyverse, Google) |
+| **`testthat`** (Wickham 2011) | Unit testing |
+| **`targets`** (Landau 2021) | Pipeline management; reproducibility hashes for expensive steps |
+| **`workflowr`** (Blischak et al. 2019) | Reproducible project scaffolding and websites |
+| **`codemeta`** (Boettiger 2017) | Generate standard code metadata |
+| **`dataReporter`** (Petersen & Ekstrøm 2019) | Document and screen data quality |
+| `sessionInfo()` | Base R — the environment section of your README |
+| `citation()` | Base R — package citations with version numbers |
+
+### Python {.unlisted .unnumbered}
+
+| Tool | What for |
+|---|---|
+| **`pyprojroot`** (Chen 2023) | Relative file paths — the `here` equivalent |
+| **`poetry`** (Eustace 2023) | Dependency management and packaging |
+| **`pipenv`** (Pipenv Maintainer Team 2023) | Reproducible environments |
+| **`pycodestyle`** (Rocholl 2022) | PEP 8 style checking |
+| **`pytest`** (Okken 2022) | Unit testing |
+| **`luigi`** | Pipeline management |
+| **`CodeMetaPy`** (van Gompel 2023) | Code metadata |
+| **`cookiecutter`** (Feldroy 2022) | Project templates |
+| **`setuptools`** | Package and version information |
+| `session-info` | The environment section of your README |
+
+### Environments & pipelines {.unlisted .unnumbered}
+
+Beyond the scope of TADA, but recommended where you have the appetite.
+
+| Tool | What for |
+|---|---|
+| **Docker** (Merkel 2014) | Containerisation — a complete, portable software environment |
+| **Singularity** (Kurtzer et al. 2017) | Containerisation, common on HPC systems |
+| **Snakemake** (Köster & Rahmann 2012) | Workflow management; defines step order and dependencies |
+| **Nextflow** (Di Tommaso et al. 2017) | Workflow management |
+
+A curated list of pipeline tools: <https://github.com/pditommaso/awesome-pipeline>
+
+### Choosing a licence {.unlisted .unnumbered}
+
+| Resource | For |
+|---|---|
+| <https://choosealicense.com/> | Code licences — MIT, GPL, BSD, Apache |
+| <https://choosealicense.com/no-permission/> | What happens with **no** licence |
+| <https://chooser-beta.creativecommons.org/> | Data licences — CC0, CC BY, CC BY-NC |
+
+:::
+
+## Repositories and archiving {#reading-repos}
+
+| Service | Link |
+|---|---|
+| Zenodo | <https://zenodo.org/> |
+| Linking GitHub to Zenodo | <https://help.zenodo.org/docs/profile/linking-accounts/> |
+| Figshare | <https://figshare.com/> |
+| Dryad | <https://datadryad.org/> |
+| Software Heritage | <https://www.softwareheritage.org/> |
+| Open Science Framework | <https://osf.io/> |
+| Choosing a repository (Harvard Longwood MA RDM Working Group 2023) | <https://doi.org/10.5281/zenodo.10651775> |
+| RStudio projects — getting started | <https://docs.posit.co/ide/user/ide/get-started/> |
+
+## Communities {#reading-communities}
+
+- **SORTEE** — the Society for Open, Reliable, and Transparent Ecology and
+  Evolutionary Biology. Runs code clubs that are open to join.
+  <https://www.sortee.org/>
+- **Code Refinery** — training in reproducible research practices.
+  <https://coderefinery.org/>
+
+Missing something that belongs here? See [Contribute](#contribute).
