@@ -1,37 +1,37 @@
 # [A]{.k-a2} — Annotated {#annotated}
 
 ::: {.tada-key}
-**Annotation** is adding comments **within each code file** — denoted with `#`
-in R and Python — or embedding code within an **RMarkdown or Quarto** document
-alongside descriptive text. It dramatically improves the ability of someone
-else to *understand* your archived code (transparency) and to *run* it
-(functionality and reproducibility).
+**Annotation** is adding comments **within each code file**, denoted with `#` in
+R and Python, or embedding code within an **RMarkdown or Quarto** document
+alongside descriptive text. It improves both a reader's ability to *understand*
+your archived code (transparency) and their ability to *run* it (functionality
+and reproducibility).
 :::
 
 Annotation is the letter with no direct FAIR equivalent, and the one most often
-skipped. It is also the cheapest: it costs minutes while you are writing, and
-hours if you leave it to the end.
+skipped. It is also much less work done while writing than reconstructed
+afterwards.
 
 ## Annotate chunks, not lines {#annotated-chunks}
 
-The recommendation is explicit: **annotate code chunks rather than every line
-of code.** Line-by-line annotation is possible, but simply denoting and
-describing relevant code chunks in sufficient detail is usually more helpful
-for tracking what code does and what it produces.
+The recommendation is explicit: **annotate code chunks rather than every line of
+code.** Line-by-line annotation is possible, but denoting and describing the
+relevant chunks in sufficient detail is usually more helpful for tracking what
+the code does and what it produces.
 
 A good chunk comment answers three questions:
 
-1. **What** is this chunk doing? — *"Run a Poisson generalised linear model…"*
-2. **Why** is it needed? — *"…to analyse caterpillar abundance varying with
+1. **What** is this chunk doing? *"Run a Poisson generalised linear model…"*
+2. **Why** is it needed? *"…to analyse caterpillar abundance varying with
    habitat…"*
-3. **Where** does its output appear? — *"Numeric results shown in Caterpillar
+3. **Where** does its output appear? *"Numeric results shown in Caterpillar
    Abundance section"*, or *"Figure 5A"*
 
-That third question is **signposting**, and it is the part people leave out. It
-is what lets a reader — or a data editor, or a reviewer — connect a number in
-your results section to the lines of code that produced it.
+The third question is **signposting**, and it is the part people leave out. It
+is what lets a reader, a data editor or a reviewer connect a number in your
+results section to the lines of code that produced it.
 
-::: {.tada-compare}
+:::: {.tada-compare}
 ::: {.tada-before}
 Before
 
@@ -62,13 +62,13 @@ summary(m1)
 plot(dat$habitat, dat$n)
 ```
 :::
-:::
+::::
 
 ## Collapsible sections {#annotated-sections}
 
-A small trick that pays off in long scripts. Certain comment markers create
-**collapsible sections** in the editor, which increases readability and
-facilitates structuring:
+Certain comment markers create **collapsible sections** in the editor, which
+increases readability and helps structure a file. This is most useful in long
+scripts.
 
 - **`#####`** in RStudio
 - **`#%%`** in Python
@@ -97,11 +97,11 @@ equally valid route to being annotated.
 
 ### RMarkdown / Quarto {.unlisted .unnumbered}
 
-Prose and code chunks in one file, with the output rendered inline. The
+Prose and code chunks sit in one file, with the output rendered inline. The
 narrative *is* the annotation, and the link between a paragraph of explanation
 and the code that follows it is unambiguous.
 
-````markdown
+````{verbatim, lang="markdown"}
 ## Caterpillar abundance
 
 We fitted a Poisson GLM of counts against habitat type, controlling for
@@ -114,36 +114,36 @@ summary(m1)
 ```
 ````
 
-There is a further advantage the [SORTEE guidelines](#sortee) highlight:
-presenting everything in one self-contained Markdown or Quarto document is
-**very helpful for data editors and future readers**, because it makes the link
-between the code, the data, and the resulting outputs explicit.
+The [SORTEE guidelines](#sortee) highlight a further advantage: presenting
+everything in one self-contained Markdown or Quarto document is **very helpful
+for data editors and future readers**, because it makes the link between the
+code, the data and the resulting outputs explicit.
 
 A rendered `.html` or `.pdf` of your Quarto document is a useful *addition* to
-the archive — but archive the `.qmd`/`.Rmd` source too. A rendered PDF on its
-own fails [Transferable](#transferable).
+the archive, but archive the `.qmd` or `.Rmd` source as well. A rendered PDF on
+its own fails [Transferable](#transferable).
 
 ### Jupyter Notebook {.unlisted .unnumbered}
 
-Notebooks (and JupyterLab) present code in chunks with descriptive text and
-inline output, and are listed in TADA as an alternative route to annotated
-code.
+Notebooks, and JupyterLab, present code in chunks with descriptive text and
+inline output, and are listed in TADA as an alternative route to annotated code.
 
-Two practical cautions when archiving one:
+Two cautions when archiving a notebook (wiki guidance):
 
 - **Restart and run all before you archive.** A notebook whose cells were run
-  out of order records state that nobody can reproduce.
-- **Notebooks store output in the file.** That is useful for readers, but means
-  the archived `.ipynb` can be large and awkward to diff. Consider archiving
-  both the notebook and a plain `.py` export.
+  out of order records a state that nobody can reproduce.
+- **Notebooks store output in the file.** That is useful for readers, but it
+  means the archived `.ipynb` can be large and awkward to diff. Consider
+  archiving both the notebook and a plain `.py` export.
 
 ### Plain scripts {.unlisted .unnumbered}
 
-Nothing is wrong with a well-commented `.R` or `.py` file, and for many
-analyses it is the clearest option. The requirements are the same:
+A well-commented `.R` or `.py` file is perfectly adequate, and for many analyses
+it is the clearest option. The requirements are the same:
 
-- logical chunks, marked with `#####` / `#%%`
-- a comment on each chunk giving what, why, and where the output appears
+- logical chunks, marked with `#####` or `#%%`
+- a comment on each chunk giving what it does, why it is needed and where the
+  output appears
 - object names that a reader can follow
 
 If the analysis is long, split it across numbered scripts (`01_`, `02_`, `03_`)
@@ -151,41 +151,37 @@ and describe the order in the [README](#documented-readme).
 
 :::
 
-## Readability, briefly {#annotated-readability}
+## Readability {#annotated-readability}
 
-Annotation works best on code that is already legible. Four quick wins,
-identified in the code review paper as ways to make code reviewable:
+Annotation works best on code that is already legible. The code review paper
+identifies four practices that make code reviewable, and they are set out in
+[Writing reviewable code](#review-reviewable): calling packages explicitly by
+namespace, using relative file paths, removing redundant packages, and writing
+code with clear subheadings, intuitive comments and interpretable object names.
 
-1. **Call packages explicitly** via the namespace — `package::function()` in R,
-   `package.module.function()` in Python — so a reader knows where a function
-   came from.
-2. **Use relative file paths** (see [Transferable](#transferable-paths)).
-3. **Remove redundant packages** — every `library()` call that is not needed is
-   a dependency someone else has to install.
-4. **Write analysis code with clear subheadings, intuitive comments and
-   easy-to-understand object names.**
-
-Formatters can enforce a consistent style with a single command: **`styler`**
-(Müller & Walthert 2020) in R, **`pycodestyle`** (Rocholl 2022) in Python. Both
-can format code to standardised styles — Google, tidyverse in R, or PEP 8 in
-Python.
+Tooling can enforce a consistent style. **`styler`** (Müller & Walthert 2020)
+reformats R code to a standard style in one command, and **`pycodestyle`**
+(Rocholl 2022) checks Python code against PEP 8, with `black` or `autopep8` to
+do the reformatting. Supported styles include Google and tidyverse in R, and
+PEP 8 in Python.
 
 ::: {.tada-note}
 Style is not the same as annotation. A perfectly formatted script with no
-comments still fails the Annotated test — and a slightly untidy script with
-good chunk comments and signposting passes it. Do the comments first.
+comments still fails the Annotated test. Comments and signposting matter more
+than layout.
 :::
 
-## Do it as you go {#annotated-asyougo}
+## Annotating as you go {#annotated-asyougo}
 
-The SORTEE guidelines make the point plainly: annotating code as you produce
-it — not only with section descriptions but also with information about how the
-code runs and what output it produces — is **far easier than going back and
-annotating at the end of the study**. The same applies to the README: create it
-at the start and update it as files are added.
+The SORTEE guidelines make the point plainly. Annotating code as you produce it,
+not only with section descriptions but also with information about how the code
+runs and what output it produces, is **far easier than going back and annotating
+at the end of the study**. The same applies to the README: create it at the
+start and update it as files are added.
 
-This is not just about effort. Annotation written six months after the fact is
-reconstructed from memory, and reconstructed memory is where the errors hide.
+The gain is not only in effort saved. Annotation written months after the fact is
+reconstructed from memory, and is more likely to describe what you intended the
+code to do than what it actually does.
 
 ## Checklist {#annotated-checklist}
 
@@ -197,7 +193,7 @@ reconstructed from memory, and reconstructed memory is where the errors hide.
 - [ ] Object names are interpretable by someone who did not write the code
 - [ ] Packages are called explicitly by namespace where it aids clarity
 - [ ] Unused `library()` / `import` calls have been removed
-- [ ] If using a notebook: restarted and run top to bottom before archiving
-- [ ] If using Quarto/RMarkdown: the **source** file is archived, not only the rendered output
+- [ ] If using a notebook: it has been restarted and run top to bottom before archiving
+- [ ] If using Quarto or RMarkdown: the **source** file is archived, not only the rendered output
 
-**Next:** [Data & code sharing](#data-sharing) — the wider practices around TADA.
+**Next:** [Data & code sharing](#data-sharing), on the wider practices around TADA.

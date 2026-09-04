@@ -21,6 +21,6 @@ language:
     fig: "Figure "
     tab: "Table "
   ui:
+    # bs4_book hardcodes its own search placeholder and edit-link text, so only
+    # chapter_name has any effect here.
     chapter_name: ""
-    edit: "Edit this page"
-    search: "Search the wiki"

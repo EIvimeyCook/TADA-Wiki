@@ -7,8 +7,8 @@
   2. Register the filename in `_bookdown.yml` under `rmd_files`.
   3. Build with `Rscript render.R` and check `docs/index.html`.
 
-  The one rule: separate what the source papers say from what you are adding.
-  Cite the former by author and year; label the latter "wiki guidance".
+  The sourcing rule: separate what the source papers say from what you are
+  adding. Cite the former by author and year; label the latter "wiki guidance".
   Delete these comments before committing.
 -->
 
@@ -22,22 +22,25 @@ should be able to do at the end of it.
 
 ## <First section> {#chapter-id-first}
 
-Prose. Second person, present tense. Say the thing, then say why.
+Prose. Second person, present tense. State the guideline, then give the reason
+for it.
 
 ::: {.tada-note}
 A caveat, exception, or aside.
 :::
 
-## <A section with tabs> {#chapter-id-tabs .tabset}
+## <A section with tabs> {#chapter-id-tabs}
 
-Tabs are good for parallel material — the same task in R and in Python, or a
-set of alternatives the reader picks between. They are bad for sequential
-material, because only one pane is visible at a time.
+Tabs suit parallel material: the same task in R and in Python, or a set of
+alternatives the reader chooses between. They do not suit sequential material,
+because only one pane is visible at a time.
+
+::: {.tabset}
 
 ### R {.unlisted .unnumbered}
 
 ```r
-# Illustrative only — chunks are not executed at build time.
+# Illustrative only: chunks are not executed at build time.
 library(here)
 dat <- read.csv(here("data", "raw", "example.csv"))
 ```
@@ -51,9 +54,12 @@ import pandas as pd
 dat = pd.read_csv(here("data/raw/example.csv"))
 ```
 
+:::
+
 ## <A before/after comparison> {#chapter-id-compare}
 
-Use `::::` for the outer fence so the inner `:::` fences nest correctly.
+Use `::::` for the outer fence. Pandoc nests same-width fences correctly either
+way, but the wider outer fence makes the grouping obvious.
 
 :::: {.tada-compare}
 ::: {.tada-before}

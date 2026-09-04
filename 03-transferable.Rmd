@@ -1,14 +1,14 @@
 # [T]{.k-t} — Transferable {#transferable}
 
 ::: {.tada-key}
-**Transferability** is the ability for anyone to open the file, view and run
-the code **without conversion or alteration**. It covers the FAIR principle of
-interoperability — anyone can open and use your code — and extends it so that
-the code also runs on **different computers and operating systems**.
+**Transferability** is the ability for anyone to open the file, view and run the
+code **without conversion or alteration**. It covers the FAIR principle of
+interoperability, meaning that anyone can open and use your code, and extends it
+so that the code also runs on **different computers and operating systems**.
 :::
 
-Two things make code transferable, and they are independent. Get one wrong and
-the other does not save you.
+Transferability has two independent requirements, and satisfying one does not
+compensate for failing the other.
 
 1. The code is saved in a **file type any text editor or IDE can open**.
 2. The code contains **no paths specific to your machine**.
@@ -19,24 +19,24 @@ Save code with an extension that matches the language: **`.R`**, **`.py`**,
 **`.cpp`**, or the equivalent standard format. These can be viewed, edited and
 saved by any text editor or IDE (RStudio, VS Code, PyCharm) on any system.
 
-**Do not share code inside `.PDF` or `.docx` files.** A PDF can be *viewed*,
-but it cannot be opened and edited in an IDE without extra libraries or
-software, or without converting it to another file type first.
+**Do not share code inside `.PDF` or `.docx` files.** A PDF can be *viewed*, but
+it cannot be opened and edited in an IDE without extra libraries or software, or
+without first converting it to another file type.
 
 ::: {.tada-warn}
 The deeper problem with PDFs and Word documents is what happens when someone
-copies out of them. Copy-pasting from these formats can change characters —
-apostrophes are the classic — alter white space, or drag in unwanted extras
-such as line numbers and headers. The result is code errors that are
-**sometimes difficult to spot or time consuming to fix**, because the code
-looks correct.
+copies out of them. Copy-pasting from these formats can change characters, of
+which apostrophes are the classic example, alter white space, or drag in
+unwanted extras such as line numbers and headers. The resulting errors are
+**sometimes difficult to spot or time consuming to fix**, because the code looks
+correct.
 :::
 
 **A note on `.txt`.** A plain text file does let people copy and paste without
-those problems. But it causes a different issue: many IDEs interpret the coding
-language from the extension. Without the `.R` extension, an IDE may not
-recognise the file as R and may not let you execute it until you re-save it as
-`.R`. Use the language's own extension.
+those problems, but it introduces a different one. Many IDEs infer the coding
+language from the extension, so without the `.R` extension an IDE may not
+recognise the file as R and may refuse to execute it until it is re-saved. Use
+the language's own extension.
 
 **If your language does not use a standard file type**, apply this test: *can
 the resulting file be opened by a text editor?* SPSS syntax `.sps` files, for
@@ -44,15 +44,16 @@ example, can be read in a text editor, so they pass.
 
 ## Avoid local and user-specific file paths {#transferable-paths}
 
-This is the single most common cause of code that "worked when I sent it".
+This is one of the most common reasons that code which ran perfectly well for
+its author fails for everyone else (SORTEE, Stage 5).
 
-File paths must be written so they do not depend on your local environment or
-directory structure. That means **relative** file paths rather than local or
-user-specific ones. It also means putting **data, code, and all necessary
-materials in a single project directory** — relative paths have to be relative
-to *something*.
+File paths must be written so that they do not depend on your local environment
+or directory structure, which means using **relative** file paths rather than
+local or user-specific ones. It also means putting **data, code and all
+necessary materials in a single project directory**, since a relative path has
+to be relative to something.
 
-::: {.tada-compare}
+:::: {.tada-compare}
 ::: {.tada-before}
 Before
 
@@ -61,9 +62,9 @@ setwd("C:/Users/ed/Desktop/caterpillar_paper/analysis")
 dat <- read.csv("caterpillars_2024.csv")
 ```
 
-Sets a working directory that exists on exactly one computer, running one
+This sets a working directory that exists on exactly one computer, running one
 operating system, belonging to one person. Everyone else gets an error before
-the data is even loaded.
+the data have even loaded.
 :::
 
 ::: {.tada-after}
@@ -74,10 +75,10 @@ library(here)
 dat <- read.csv(here("data", "raw", "caterpillars_2024.csv"))
 ```
 
-Agnostic of operating system and of where the project folder sits. Anyone who
-downloads the project can load the data.
+This is agnostic both of the operating system and of where the project folder
+sits, so anyone who downloads the project can load the data.
 :::
-:::
+::::
 
 ### How to do it {.unlisted .unnumbered}
 
@@ -89,11 +90,11 @@ There are several options, and they combine.
 
 **Use an RStudio project.** *File → New Project* creates a `.Rproj` file. Open
 the project and RStudio automatically sets the working directory to the project
-folder, so you never need `setwd()` at all.
+folder, so `setwd()` is never needed.
 See <https://docs.posit.co/ide/user/ide/get-started/>.
 
-**Use the `here` package** (Müller & Bryan 2020). `here()` builds paths
-relative to the project directory, whatever the operating system:
+**Use the `here` package** (Müller & Bryan 2020). `here()` builds paths relative
+to the project directory, whatever the operating system:
 
 ```r
 library(here)
@@ -103,23 +104,22 @@ clean   <- here("data", "processed", "caterpillars_clean.csv")
 figure  <- here("output", "figures", "fig3_abundance.png")
 ```
 
-**Use both.** The TADA authors recommend RStudio projects *and* `here` together
-to maximise transferability across operating systems.
+**Use both.** The TADA authors recommend RStudio projects and `here` together to
+maximise transferability across operating systems.
 
 **Without an IDE**, launching R from inside the project directory achieves a
 similar effect.
 
 ::: {.tada-warn}
 Whatever you do, avoid `setwd()`. It sets a path that is specific to both the
-operating system and the user, and it is the thing that causes other people to
-hit errors when they run your code.
+operating system and the user, and it is a frequent cause of errors when other
+people run your code.
 :::
 
 #### Python {.unlisted .unnumbered}
 
-**Use `pyprojroot`** (Chen 2023), which creates file paths relative to the
-project directory regardless of operating system — the Python counterpart to
-`here`:
+**Use `pyprojroot`** (Chen 2023), the Python counterpart to `here`, which builds
+file paths relative to the project directory regardless of operating system:
 
 ```python
 from pyprojroot import here
@@ -129,26 +129,26 @@ raw = pd.read_csv(here("data/raw/caterpillars_2024.csv"))
 ```
 
 **Work inside the project directory.** Running an instance of Python within the
-specific project folder removes the need for local file paths.
+project folder removes the need for local file paths.
 
 ::: {.tada-warn}
-Avoid `os.chdir()`, the Python equivalent of `setwd()`. It has the same
-problem: it hard-codes a path that only exists on your machine.
+Avoid `os.chdir()`, the Python equivalent of `setwd()`. It has the same problem:
+it hard-codes a path that only exists on your machine.
 :::
 
 #### Other IDEs {.unlisted .unnumbered}
 
-**VS Code.** Navigate to the project folder and open *the folder* (not the
-individual file). This performs a similar action to using an RStudio project —
-the workspace root becomes the reference point for relative paths.
+**VS Code.** Navigate to the project folder and open *the folder* rather than
+the individual file. This performs a similar action to using an RStudio project,
+in that the workspace root becomes the reference point for relative paths.
 
 **Standalone interpreters.** Launching R or Python from within the project
-directory does the same thing: the working directory is the project, and every
+directory does the same thing. The working directory is the project, and every
 path in the code can be relative to it.
 
-**Any language.** The principle does not depend on the tool. Organise
-everything into one project directory, then write every path relative to the
-top of that directory.
+**Any language.** The principle does not depend on the tool. Organise everything
+into one project directory, then write every path relative to the top of that
+directory.
 
 :::
 
@@ -161,23 +161,24 @@ file, or activate a virtual environment, before running anything. See
 
 ## Beyond TADA: environments and pipelines {#transferable-beyond}
 
-Explicitly beyond the scope of TADA, but worth knowing, because both address
-failures that relative paths alone cannot fix.
+Both of the following sit explicitly beyond the scope of TADA, but they are
+worth knowing about, because they address failures that relative paths alone
+cannot fix.
 
-**Containerisation** — **Docker** (Merkel 2014) and **Singularity** (Kurtzer et
-al. 2017) — uses images that encapsulate a complete software environment,
-including all required programs and libraries. This helps ensure environment
-reproducibility between systems and avoids the common *"works on my computer"*
-problem.
+**Containerisation**, through **Docker** (Merkel 2014) and **Singularity**
+(Kurtzer et al. 2017), uses images that encapsulate a complete software
+environment, including all required programs and libraries. This helps ensure
+environment reproducibility between systems and avoids the common *"works on my
+computer"* problem.
 
-**Workflow managers** — **Snakemake** (Köster & Rahmann 2012) and **Nextflow**
-(Di Tommaso et al. 2017) — specify the sequence of scripts or computational
-steps in a pipeline and their dependencies, ensuring each step executes in a
-defined and reproducible order.
+**Workflow managers**, such as **Snakemake** (Köster & Rahmann 2012) and
+**Nextflow** (Di Tommaso et al. 2017), specify the sequence of scripts or
+computational steps in a pipeline and their dependencies, ensuring that each
+step executes in a defined and reproducible order.
 
-Neither is required by TADA. If you are already comfortable with them, they
-strengthen transferability considerably. If not, relative paths and a good
-README get you most of the way.
+Neither is required by TADA. If you are already comfortable with them they
+strengthen transferability considerably, but relative paths and a good README
+will get you most of the way on their own.
 
 ## Checklist {#transferable-checklist}
 
@@ -187,7 +188,7 @@ README get you most of the way.
 - [ ] No `setwd()` (R) or `os.chdir()` (Python) anywhere in the code
 - [ ] No absolute paths (`/Users/…`, `C:/…`, `~/Dropbox/…`)
 - [ ] Paths are built with `here()` / `pyprojroot`, or are relative to the project root
-- [ ] The project opens via `.Rproj` / a virtual environment, and this is stated in the README
-- [ ] Test: copy the project to a different folder (ideally a different machine) and run it
+- [ ] The project opens via `.Rproj` or a virtual environment, and this is stated in the README
+- [ ] The project has been copied to a different folder, ideally on a different machine, and run successfully
 
-**Next:** [Available](#available) — getting it archived with a DOI.
+**Next:** [Available](#available), on getting the code archived with a DOI.

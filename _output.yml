@@ -7,10 +7,8 @@ bookdown::bs4_book:
   includes:
     in_header: "assets/head.html"
     after_body: "assets/foot.html"
-  # Uncomment once this wiki lives in a git repository. bs4_book will then add
-  # an "Edit this page" link to every chapter, which is the fastest route for
-  # contributors (see the Contribute chapter).
-  # repo:
-  #   base: https://github.com/YOUR-ORG/TADA-Wiki
-  #   branch: main
-  split_bib: false
+  # Drives the "View source" / "Edit this page" links in the page footer.
+  repo:
+    base: https://github.com/EIvimeyCook/TADA-Wiki
+    branch: main
+    icon: "fab fa-github"

@@ -2,42 +2,41 @@
 
 ::: {.tada-key}
 **Availability** is the act of **publicly archiving the code** in a way that
-provides long-term access to any external user. It covers two FAIR principles
-at once: **Findable** (provision of a unique identifier) and **Accessible**
-(the code is retrievable via that identifier).
+provides long-term access to any external user. It covers two FAIR principles at
+once: **Findable**, through the provision of a unique identifier, and
+**Accessible**, in that the code is retrievable via that identifier.
 :::
 
-Two requirements:
+There are two requirements:
 
-1. The code has an associated **globally unique persistent identifier (PID)** —
-   in practice, a DOI.
+1. The code has an associated **globally unique persistent identifier (PID)**,
+   in practice a DOI.
 2. That identifier is **cited in the corresponding manuscript**.
 
 ## Why GitHub is not an archive {#available-github}
 
-This is the point that most often surprises people, so it is worth being
-precise about it.
+This point surprises people more often than any other in TADA, so it is worth
+stating precisely.
 
 GitHub is an excellent platform for *developing* code. It provides transparent
-version control during the development phase, and it makes collaboration
-straightforward. None of that is in question.
+version control during development and makes collaboration straightforward, and
+none of that is in question here. For archiving the code behind a published
+paper, however, it fails on two counts:
 
-But for archiving the code behind a published paper, it fails on two counts:
+- **It does not readily provide a persistent identifier.** A GitHub URL is not a
+  PID.
+- **It is not immutable.** Files can be changed, or deleted, at any time,
+  including after the manuscript is published. If the exact code behind a result
+  is later edited or removed, the reproducibility of that published result goes
+  with it.
 
-- **It does not readily provide a persistent identifier.** A GitHub URL is not
-  a PID.
-- **It is not immutable.** Files can be changed — or deleted — at any time,
-  including after the manuscript is published. If the exact code behind a
-  result is later edited or removed, the reproducibility of that published
-  result is gone.
-
-The same applies to comparable platforms: **Codeberg, Bitbucket, GitLab**.
-They are development platforms, not archives.
+The same applies to comparable platforms such as **Codeberg**, **Bitbucket** and
+**GitLab**, which are development platforms rather than archives.
 
 ::: {.tada-tip}
-You do not have to choose. **Develop on GitHub, archive on Zenodo.** Create a
-release version on GitHub and link the repository to Zenodo; Zenodo then
-captures that release and mints a DOI for it. See
+You do not have to choose between them. **Develop on GitHub and archive on
+Zenodo.** Create a release version on GitHub and link the repository to Zenodo,
+which then captures that release and mints a DOI for it. See
 <https://help.zenodo.org/docs/profile/linking-accounts/>.
 :::
 
@@ -48,35 +47,35 @@ that assigns a DOI.
 
 | Repository | PID | Immutable | Notes |
 |---|---|---|---|
-| **Zenodo** | DOI | Yes | Connects directly to a GitHub project. Gives a base project-level DOI *and* version-specific DOIs. You can choose the licence at deposit; CC-BY 4.0 is the default. |
-| **Figshare** | DOI | Yes | General-purpose; widely used for code and supplementary material. Assigns CC0 by default. |
-| **Dryad** | DOI | Yes | Data-focused, and **mandates CC0**, which is not well suited to code — see [licences](#documented-licence). Dryad directs users to archive code with Zenodo. |
-| **DataVerse** | DOI | Yes | General-purpose; guarantees long-term storage and file immutability. |
+| **Zenodo** | DOI | Yes | Connects directly to a GitHub project. Gives a base project-level DOI as well as version-specific DOIs. You can choose the licence at deposit; CC-BY 4.0 is the default. |
+| **Figshare** | DOI | Yes | General-purpose, and widely used for code and supplementary material. Assigns CC0 by default. |
+| **Dryad** | DOI | Yes | Data-focused, and **mandates CC0**, which is not well suited to code (see [licences](#documented-licence)). Dryad directs users to archive code with Zenodo. |
+| **Dataverse** | DOI | Yes | General-purpose; guarantees long-term storage and file immutability. |
 | **Software Heritage** | SWHID | Yes | Preserves GitHub projects for long-term storage and provides PIDs as Software Hash Identifiers. |
-| **OSF** | DOI | **No** | Widely used and supports anonymised links for double-blind review, but the SORTEE guidelines note it **does not provide file immutability** — projects and files can be changed or deleted. Use it for review, archive elsewhere. |
+| **OSF** | DOI | **No** | Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it **does not provide file immutability**: projects and files can be changed or deleted. Suitable for review, but archive elsewhere. |
 | Domain repositories (e.g. **GenBank**) | Accession no. | Yes | For sequences and other domain-specific deposits. Other PID types include ARK, Handle and RRID. |
 | GitHub / GitLab / Bitbucket / Codeberg | **None** | **No** | Development platforms. Use for writing code, not for archiving it. |
 
 ::: {.tada-warn}
 **Supplementary material is not archiving.** The SORTEE guidelines are explicit
 that data should not be provided only as supplementary material attached to the
-article online: it carries no globally unique persistent identifier and may not
-be open and accessible. Everything must go in a public repository.
+article online, since it carries no globally unique persistent identifier and
+may not be open and accessible. Everything must go in a public repository.
 :::
 
 ::: {.tada-note}
 **DOI versioning.** On Zenodo, a new DOI is created whenever the code is
 subsequently updated, alongside a base project-level DOI that never changes.
-Cite the **version-specific DOI** in your paper — that is the version your
-results came from. The project-level DOI is the right thing to give someone who
-wants "the latest".
+Cite the **version-specific DOI** in your paper, since that is the version your
+results came from. The project-level DOI is the right one to give someone who
+wants the latest version.
 :::
 
 ## Cite the code in the manuscript {#available-cite}
 
-Archiving is only half of it. The PID must be cited in the corresponding
-manuscript — in the text *and* in the reference list, so that it is
-discoverable in the same way as any other cited work. The
+Archiving is only half of the requirement. The PID must also be cited in the
+corresponding manuscript, in the text and in the reference list, so that the
+code is discoverable in the same way as any other cited work. The
 [SORTEE guidelines](#sortee) make this explicit for both data (Guideline 1.1)
 and code (Guideline 3.1).
 
@@ -92,51 +91,49 @@ A worked example (wiki guidance):
 
 ## Data and code in the same place {#available-together}
 
-The SORTEE guidelines recommend that code files are archived **preferably in
-the same archived project as the data files** (Guideline 3.1). One deposit, one
-DOI, one download, and the relative paths in your code still resolve.
+The SORTEE guidelines recommend that code files are archived **preferably in the
+same archived project as the data files** (Guideline 3.1). That gives a reader
+one deposit, one DOI and one download, and it keeps the relative paths in your
+code working.
 
-Where that is not possible — some repositories treat data and code differently,
-and Dryad's CC0-only licensing is a real constraint for code — archive them
-separately and make the link explicit in **both** READMEs. See
+Where this is not possible, because some repositories treat data and code
+differently and Dryad's CC0-only licensing is a real constraint for code,
+archive them separately and make the link explicit in **both** READMEs. See
 [Documented](#documented).
 
-## What it looks like when this goes wrong {#available-wrong}
+## Consequences of not archiving {#available-wrong}
 
-The TADA paper's worked example is worth internalising. In the "pre-TADA"
-version of a project, the code is not archived and has no DOI. The consequence
-is not just inconvenience:
-
-- there is no permanent, immutable, citable store of the code;
-- a reader who finds the paper cannot reliably find the code;
-- and if the working copy is edited or lost, the analysis behind the published
-  result cannot be recovered.
+In the "pre-TADA" version of the TADA paper's worked example, the code is not
+archived and has no DOI, so there is no permanent, immutable, citable store of
+it. Two consequences follow (wiki guidance): a reader who finds the paper cannot
+reliably find the code, and if the working copy is edited or lost, the analysis
+behind the published result cannot be recovered.
 
 ## Sensitive data and embargoes {#available-sensitive}
 
-Availability is not absolute. Some data cannot be shared openly — protected
-species locations, personal data, third-party data under licence. The SORTEE
-guidelines allow for exceptions and note that many repositories offer
-**embargoes** where these are necessary.
+Availability admits of exceptions. Some data cannot be shared openly, including
+protected species locations, personal data, and third-party data held under
+licence. The SORTEE guidelines allow for these cases and note that many
+repositories offer **embargoes** where they are necessary.
 
-Two things to keep in mind:
+Two qualifications apply:
 
-- The exception normally applies to the **data**, not the **code**. Code that
-  cannot be run without restricted data is still worth archiving openly: it
-  documents exactly what was done.
-- State the restriction, and the route to legitimate access, in the data
+- Wiki guidance: the exception normally applies to the **data** rather than the
+  **code**. Code that cannot be run without restricted data is still worth
+  archiving openly, because it documents exactly what was done.
+- State the restriction, and the route to legitimate access, in both the data
   availability statement and the README.
 
 ## Anonymising for double-blind review {#available-anonymous}
 
-If your journal is double-blind, you still need reviewers to see the code. The
-established options:
+If your journal operates double-blind review, reviewers still need to see the
+code. There are two established options:
 
-- **Submit anonymised data and code directly to the journal**, e.g. as a zip
-  file.
-- **Upload to a repository that supports anonymised review links** — Figshare,
-  the Open Science Framework (OSF), GitHub, or Dryad (noting Dryad may not be
-  free).
+- **Submit anonymised data and code directly to the journal**, for example as a
+  zip file.
+- **Upload to a repository that supports anonymised review links**, such as
+  Figshare, the Open Science Framework (OSF), GitHub, or Dryad, though Dryad may
+  charge a deposit fee.
 
 The README can also be anonymised during peer review to comply with
 double-blind policies, then restored before archiving. See
@@ -150,7 +147,7 @@ double-blind policies, then restored before archiving. See
 - [ ] The DOI is cited in the manuscript text **and** the reference list
 - [ ] Data and code are in the same archived project where possible; where not, each README points to the other
 - [ ] If developed on GitHub: a release was created and linked to Zenodo
-- [ ] Any restricted data has its access route documented
+- [ ] Any restricted data have a documented access route
 - [ ] For double-blind review: an anonymised copy or anonymous link is available
 
-**Next:** [Documented](#documented) — the README and the licence.
+**Next:** [Documented](#documented), on the README and the licence.

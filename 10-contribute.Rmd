@@ -1,8 +1,8 @@
 # Contribute {#contribute}
 
-This is a wiki, which means it is meant to be added to. If you have a worked
-example, a repository comparison, a language-specific gotcha, or a correction —
-this page is how to get it in.
+This wiki is intended to be added to. If you have a worked example, a repository
+comparison, a language-specific pitfall, or a correction, this page explains how
+to get it in.
 
 ::: {.tada-key}
 Copy [`templates/page-template.Rmd`](templates/page-template.Rmd), fill it in,
@@ -14,32 +14,33 @@ request. The rest of this page is detail.
 
 **Yes, please:**
 
-- Worked examples — a real README, a real project structure, a real code review
+- Worked examples: a real README, a real project structure, a real code review
 - Language- or tool-specific guidance (Julia, MATLAB, Stata, Snakemake…)
-- Discipline-specific notes — TADA was developed in ecology and evolutionary
+- Discipline-specific notes. TADA was developed in ecology and evolutionary
   biology, and the authors explicitly encourage adaptation to other fields
 - Repository, licence or journal-policy information that has changed
 - Corrections, especially anywhere this wiki has drifted from the source papers
 
 **Probably not:**
 
-- General programming tutorials — link to them from
+- General programming tutorials. Link to them from
   [Further reading](#further-reading) instead
 - Advocacy for a particular statistical method
 - Tool recommendations with no connection to sharing, archiving or review
 
-## The one rule {#contribute-sourcing}
+## Sourcing {#contribute-sourcing}
 
 ::: {.tada-warn}
 **Separate what the papers say from what you are adding.**
 
-If a claim comes from one of the three source papers, state that and cite it —
-by author and year, so a reader can find it in [References](#references). If it
-is your own practical advice, label it **wiki guidance**, as this wiki does
+If a claim comes from one of the three source papers, state that and cite it, by
+author and year, so that a reader can find it in [References](#references). If
+it is your own practical advice, label it **wiki guidance**, as this wiki does
 throughout.
 
-This is the whole reason the wiki is trustworthy. A page that blends the two is
-worse than no page.
+This separation is what makes the wiki usable. A page that blends sourced
+findings with the contributor's own advice leaves a reader unable to tell which
+is which.
 :::
 
 Concretely:
@@ -61,10 +62,10 @@ TADA-Wiki/
 ├── 01-quickstart.Rmd      … one file per chapter, numbered in reading order
 ├── 11-references.Rmd
 ├── _bookdown.yml          Chapter list, output directory, labels
-├── _output.yml            Theme, CSS, includes
+├── _output.yml            Theme, CSS, includes, repository links
 ├── render.R               Build script
 ├── assets/
-│   ├── style.css          All styling. Tokens at the top; dark mode at the bottom
+│   ├── style.css          All styling. Design tokens at the top; light theme only
 │   ├── tada.js            Turns `.tabset` sections into tabs
 │   ├── head.html          Injected into <head> of every page
 │   └── foot.html          Injected at the end of <body> of every page
@@ -81,8 +82,8 @@ TADA-Wiki/
    cp templates/page-template.Rmd 12-my-new-chapter.Rmd
    ```
 
-2. **Give it a heading and an ID.** Every chapter starts with a level-1
-   heading carrying an explicit ID, because other pages link to it:
+2. **Give it a heading and an ID.** Every chapter starts with a level-1 heading
+   carrying an explicit ID, because other pages link to it:
 
    ```markdown
    # My new chapter {#my-new-chapter}
@@ -104,22 +105,27 @@ TADA-Wiki/
    Rscript render.R
    ```
 
-   Open `docs/index.html`. The build fails loudly on a broken cross-reference,
-   so a clean build is a real check.
+   Open `docs/index.html`.
+
+::: {.tada-warn}
+**Nothing validates your links.** A broken `](#some-id)` cross-reference does
+not fail the build, or even warn: it renders as a dead link and the build still
+exits successfully. Check new links by hand in `docs/`, or grep the built site
+for the anchor you expect.
+:::
 
 ## Writing conventions {#contribute-style}
 
 ### Cross-references {.unlisted .unnumbered}
 
-Link by ID: `[Transferable](#transferable)`,
-`[the four Rs](#review-four-rs)`. Give every section you might want to link to
-an explicit `{#id}` — auto-generated IDs change when you edit a heading, and
-silently break links.
+Link by ID: `[Transferable](#transferable)`, `[the four Rs](#review-four-rs)`.
+Give every section you might want to link to an explicit `{#id}`, because
+auto-generated IDs change when you edit a heading and silently break links.
 
 ### Callouts {.unlisted .unnumbered}
 
-Four are defined in `assets/style.css`. Use them sparingly; a page of callouts
-is a page with no emphasis at all.
+Four are defined in `assets/style.css`. Use them sparingly, since callouts lose
+their effect if most of a page sits inside one.
 
 ```markdown
 ::: {.tada-key}
@@ -161,15 +167,17 @@ out of the section numbering.
 
 `assets/tada.js` finds any element with the `tabset` class, so putting
 `{.tabset}` on a heading instead (`## How to do it {#some-id .tabset}`) also
-works. The div form is used throughout this wiki because it makes the extent of
-the tab group explicit.
+works. Use the div form in chapters, because it makes the extent of the tab
+group explicit.
 
-With JavaScript disabled every pane simply renders in sequence, so never put
-anything in a tab that the page depends on being hidden.
+With JavaScript disabled every pane renders in sequence, so never put anything
+in a tab that the page depends on being hidden.
 
 ### Before / after code {.unlisted .unnumbered}
 
-Use `::::` for the outer fence so the inner `:::` fences nest correctly.
+Use `::::` for the outer fence. Pandoc nests same-width fences correctly either
+way, but the wider outer fence makes the grouping obvious to the next person
+editing the file.
 
 ````markdown
 :::: {.tada-compare}
@@ -199,22 +207,42 @@ End substantial chapters with one. Markdown task syntax, one item per line:
 - [ ] Something the reader can verify in under a minute
 ```
 
+Keep every item in the same grammatical form: a declarative statement of the
+finished state, not a mixture of imperatives and noun phrases.
+
 ### Code chunks {.unlisted .unnumbered}
 
-Chunks are set to `eval = FALSE` globally in `index.Rmd` — code on this wiki is
-illustrative and is never executed at build time. If you genuinely need a chunk
-to run, set `eval = TRUE` on that chunk *and* state the dependency in your pull
-request, because it becomes a build requirement for everyone.
+Chunks are set to `eval = FALSE` globally in `index.Rmd`, because code on this
+wiki is illustrative and is never executed at build time. If you genuinely need
+a chunk to run, set `eval = TRUE` on that chunk *and* state the dependency in
+your pull request, because it becomes a build requirement for everyone.
+
+To show an R chunk *as an example* inside a fenced block, use knitr's verbatim
+engine, as [Annotated](#annotated-literate) does. Without it, knitr finds the
+inner chunk header and executes it, and the header vanishes from the rendered
+page:
+
+````markdown
+````{verbatim, lang="markdown"}
+```{r example-chunk}
+1 + 1
+```
+````
+````
 
 ### Voice {.unlisted .unnumbered}
 
 - Second person, present tense. "Save your code as `.R`", not "code should be
   saved".
-- Say the thing, then say why. The *why* is what makes a guideline stick.
-- Prefer concrete numbers over adjectives. "74% of archived R files failed to
-  run" beats "many files fail to run".
+- State the guideline, then give the reason for it. The reason is what makes it
+  memorable.
+- Prefer concrete numbers to adjectives. "74% of archived R files failed to run"
+  beats "many files fail to run".
 - Assume the reader is a competent researcher who has never archived code
-  before. Not a novice, not a software engineer.
+  before, rather than a novice programmer or a software engineer.
+- British spelling throughout (*licence* as the noun, *license* as the verb;
+  *organise*, *analyse*). Direct quotations from the source papers keep their
+  original spelling.
 
 ## References {#contribute-references}
 
@@ -231,7 +259,7 @@ appear in that list.
 
 ## Submitting {#contribute-submitting}
 
-If this wiki lives in a git repository:
+To propose a change:
 
 ```bash
 git checkout -b add-julia-guidance
@@ -241,24 +269,23 @@ git push -u origin add-julia-guidance
 ```
 
 Then open a pull request describing **what you added** and **where it came
-from** — sourced from a paper, or your own practice.
+from**, whether sourced from a paper or from your own practice.
 
 ::: {.tada-note}
-Once a repository URL is set in `_output.yml` (the `repo:` block, currently
-commented out), bs4_book adds an **Edit this page** link to every chapter,
-which is the fastest route for small corrections.
+For small corrections, the **Edit this page** link in the footer of every
+chapter is quicker: it opens the source `.Rmd` on GitHub, ready to edit.
 :::
 
 ### Before you submit {.unlisted .unnumbered}
 
-- [ ] `Rscript render.R` completes without errors or warnings
-- [ ] Every claim from a source paper is attributed; every addition of your own is labelled as wiki guidance
+- [ ] `Rscript render.R` completes without errors
+- [ ] Every claim from a source paper is attributed, and every addition of your own is labelled as wiki guidance
 - [ ] New sources are in `11-references.Rmd`
 - [ ] Every heading you link to has an explicit `{#id}`
-- [ ] Cross-references resolve (click them in `docs/`)
-- [ ] Chapter is registered in `_bookdown.yml`
-- [ ] Checked in both light and dark mode, and at a narrow window width
-- [ ] `docs/` changes are included in the commit, or excluded consistently — pick one and say which in the PR
+- [ ] Cross-references resolve when clicked in `docs/`
+- [ ] The chapter is registered in `_bookdown.yml`
+- [ ] The page has been checked at a narrow window width
+- [ ] `docs/` changes are either included in the commit or excluded consistently, and the pull request says which
 
 ## Templates {#contribute-templates}
 

@@ -26,8 +26,11 @@ keywords:
   - metadata
   - code review
   - open science
-license: CC-BY-4.0
-license-url: "https://creativecommons.org/licenses/by/4.0/"
+# Dual licensed: MIT for the build script, assets and templates; CC BY 4.0 for
+# the wiki text. See LICENSE and LICENSE-CONTENT.
+license:
+  - MIT
+  - CC-BY-4.0
 date-released: "2026-09-02"
 version: "1.0.0"
 

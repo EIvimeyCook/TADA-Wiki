@@ -48,15 +48,24 @@
       button.type = "button";
       button.className = "tada-tab";
       button.textContent = label;
+      button.id = paneId + "-tab";
       button.setAttribute("role", "tab");
       button.setAttribute("aria-controls", paneId);
 
+      // The pane's own heading is hidden by CSS, so name the panel from the tab.
+      pane.setAttribute("role", "tabpanel");
+      pane.setAttribute("aria-labelledby", button.id);
+      pane.tabIndex = 0;
+
       button.addEventListener("click", function () { activate(i); });
       button.addEventListener("keydown", function (event) {
-        var step = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
-        if (!step) return;
+        var next;
+        if (event.key === "ArrowRight") next = (i + 1) % panes.length;
+        else if (event.key === "ArrowLeft") next = (i - 1 + panes.length) % panes.length;
+        else if (event.key === "Home") next = 0;
+        else if (event.key === "End") next = panes.length - 1;
+        else return;
         event.preventDefault();
-        var next = (i + step + panes.length) % panes.length;
         activate(next);
         buttons[next].focus();
       });
@@ -75,8 +84,25 @@
       });
     }
 
+    // A link or search hit pointing at a pane must open that pane, not tab one.
+    function indexForHash() {
+      var hash = window.location.hash.replace(/^#/, "");
+      if (!hash) return -1;
+      for (var i = 0; i < panes.length; i++) {
+        if (panes[i].id === hash || panes[i].querySelector("#" + CSS.escape(hash))) return i;
+      }
+      return -1;
+    }
+
     tabset.insertBefore(list, panes[0]);
-    activate(0);
+
+    var initial = indexForHash();
+    activate(initial === -1 ? 0 : initial);
+
+    window.addEventListener("hashchange", function () {
+      var target = indexForHash();
+      if (target !== -1) activate(target);
+    });
 
     // The hidden pane headings would otherwise clutter the "On this page" nav.
     panes.forEach(function (pane) {

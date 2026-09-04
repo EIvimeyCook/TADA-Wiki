@@ -1,7 +1,7 @@
 # TADA checklist
 
 Drop this into your project and work down it before you deposit.
-From the TADA-Wiki — see the wiki for the reasoning behind each item.
+From the TADA-Wiki; see the wiki for the reasoning behind each item.
 
 ---
 
@@ -25,14 +25,14 @@ alteration, on a different computer and operating system.*
 
 *The code is publicly archived with long-term access for any external user.*
 
-- [ ] Deposited in an immutable, freely accessible repository (Zenodo, Figshare, DataVerse, …)
+- [ ] Deposited in an immutable, freely accessible repository (Zenodo, Figshare, Dataverse, …)
 - [ ] The deposit has a globally unique persistent identifier (DOI or SWHID)
 - [ ] The version-specific identifier matches the code that produced the published results
 - [ ] The identifier is cited in the manuscript text **and** the reference list
 - [ ] Code and data are in the same archived project where possible
 - [ ] If developed on GitHub: a release was created and linked to Zenodo
 - [ ] Nothing exists only as supplementary material attached to the article
-- [ ] Any restricted data has a documented access route
+- [ ] Any restricted data have a documented access route
 - [ ] For double-blind review: an anonymised copy or anonymous link exists
 
 ## D — Documented

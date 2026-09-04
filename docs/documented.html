@@ -6,19 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>5 D — Documented | The TADA-Wiki</title>
 <meta name="author" content="A community wiki built on the TADA guidelines">
-<meta name="description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. It covers the FAIR principle of Reusable: assets described sufficiently to enable...">
+<meta name="description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. Wiki guidance: this is the letter that delivers FAIR Reusability, meaning assets...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="5 D — Documented | The TADA-Wiki">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. It covers the FAIR principle of Reusable: assets described sufficiently to enable...">
+<meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/documented.html">
+<meta property="og:description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. Wiki guidance: this is the letter that delivers FAIR Reusability, meaning assets...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5 D — Documented | The TADA-Wiki">
-<meta name="twitter:description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. It covers the FAIR principle of Reusable: assets described sufficiently to enable...">
+<meta name="twitter:description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. Wiki guidance: this is the letter that delivers FAIR Reusability, meaning assets...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="theme-color" content="#0F6E7B">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230F6E7B'/%3E%3Ctext%20x='50'%20y='70'%20font-family='Georgia,serif'%20font-size='58'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -62,7 +62,7 @@
 </ul>
 
         <div class="book-extra">
-          
+          <p><a id="book-repo" href="https://github.com/EIvimeyCook/TADA-Wiki">View book source <i class="fab fa-github"></i></a></p>
         </div>
       </nav>
 </div>
@@ -72,29 +72,32 @@
 </h1>
 <div class="tada-key">
 <p><strong>Documentation</strong> is providing <strong>accurate and detailed metadata files that
-describe the code files and their usage</strong>. It covers the FAIR principle of
-<strong>Reusable</strong>: assets described sufficiently to enable reuse and attribution,
-ideally via a licence.</p>
+describe the code files and their usage</strong>. <em>Wiki guidance:</em> this is the letter
+that delivers FAIR <strong>Reusability</strong>, meaning assets described sufficiently to
+enable reuse and attribution, ideally via a licence. The TADA paper does not
+make that mapping explicitly; see
+<a href="tada.html#tada-fair">How TADA maps onto FAIR</a>.</p>
 </div>
-<p>In practice this is two artefacts:</p>
+<p>In practice, documentation means two files:</p>
 <ol style="list-style-type: decimal">
-<li>A <strong>README</strong> — a <code>.txt</code> or <code>.md</code> file describing the code and how to run it.</li>
-<li>A <strong>licence</strong> — stating how others may use, modify and share the code.</li>
+<li>A <strong>README</strong>, in <code>.txt</code> or <code>.md</code>, describing the code and how to run it.</li>
+<li>A <strong>licence</strong>, stating how others may use, modify and share the code.</li>
 </ol>
 <p>Documentation carries information that annotation cannot. Comments inside a
-script tell you what a line does; only the README can tell you which script to
-run first, what version of R you need, or where the data live.</p>
+script tell you what a line does, but only the README can tell you which script
+to run first, what version of R you need, or where the data live.</p>
 <div id="documented-readme" class="section level2" number="5.1">
 <h2>
 <span class="header-section-number">5.1</span> The README<a class="anchor" aria-label="anchor" href="#documented-readme"><i class="fas fa-link"></i></a>
 </h2>
 <p>You can provide a <strong>combined README</strong> covering both code and data metadata, or
-<strong>two separate READMEs</strong> — one for code, one for data — if that is more
-relevant to your project.</p>
+<strong>two separate READMEs</strong>, one for code and one for data, if that suits your
+project better.</p>
 <div id="what-must-be-in-it" class="section level3 unlisted unnumbered">
 <h3>What must be in it<a class="anchor" aria-label="anchor" href="#what-must-be-in-it"><i class="fas fa-link"></i></a>
 </h3>
-<p>Drawn directly from the TADA guidelines’ “Documented How To”:</p>
+<p>Drawn from the TADA guidelines’ “Documented How To” box and the accompanying
+text, with the package examples updated:</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="50%">
@@ -119,11 +122,11 @@ relevant to your project.</p>
 </tr>
 <tr class="even">
 <td><strong>Software</strong></td>
-<td>Language and <strong>version number</strong> — e.g. R v4.3.3</td>
+<td>Language and <strong>version number</strong>, e.g. R v4.3.3</td>
 </tr>
 <tr class="odd">
 <td><strong>Packages</strong></td>
-<td>Important libraries or packages used, <strong>with version numbers</strong> — e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> in R or <code>session-info</code> in Python</td>
+<td>Important libraries or packages used, <strong>with version numbers</strong>, e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> in R or <code>session-info</code> in Python</td>
 </tr>
 <tr class="even">
 <td><strong>Licence</strong></td>
@@ -144,7 +147,7 @@ relevant to your project.</p>
 </tr>
 <tr class="even">
 <td><strong>Runtime</strong></td>
-<td>Whether the code takes a long time to run — especially for computing-intensive processes</td>
+<td>Whether the code takes a long time to run, especially for computing-intensive processes</td>
 </tr>
 <tr class="odd">
 <td><strong>Inputs &amp; outputs</strong></td>
@@ -155,15 +158,15 @@ relevant to your project.</p>
 <div class="tada-tip">
 <p><code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> (R) and <code>session-info</code> (Python) will generate the environment
 section for you. Run it at the end of your final analysis session, paste the
-output into a <code>session_info.txt</code> alongside the README, and reference it. It
-takes ten seconds and removes a whole class of “which version did they use?”
-questions.</p>
+output into a <code>session_info.txt</code> alongside the README, and reference it there.
+It is a single command, and it answers most later questions about software
+versions before anyone has to ask them.</p>
 </div>
 </div>
 <div id="a-worked-readme" class="section level3 unlisted unnumbered">
 <h3>A worked README<a class="anchor" aria-label="anchor" href="#a-worked-readme"><i class="fas fa-link"></i></a>
 </h3>
-<p>Wiki guidance — a filled-in version of the fields above. The template is at
+<p>Wiki guidance: a filled-in version of the fields above. The template is at
 <a href="templates/README-template.md"><code>templates/README-template.md</code></a>.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="documented.html#cb7-1" tabindex="-1"></a><span class="fu"># Code for: Caterpillar abundance varies with woodland habitat type</span></span>
 <span id="cb7-2"><a href="documented.html#cb7-2" tabindex="-1"></a></span>
@@ -212,10 +215,10 @@ questions.</p>
 <span id="cb7-45"><a href="documented.html#cb7-45" tabindex="-1"></a>  functions/        Helper functions sourced by the scripts.</span>
 <span id="cb7-46"><a href="documented.html#cb7-46" tabindex="-1"></a>  output/           Figures and saved model objects.</span></code></pre></div>
 <div class="tada-note">
-<p>Note what that README makes possible without anyone asking you a question: a
-reader knows the runtime before starting, knows script 02 is the slow one and
-that its output is cached, knows which figure comes from where, and knows that
-<code>data/processed/</code> is disposable.</p>
+<p>That README tells a reader the total runtime, which step is slow and whether its
+output is cached, which figure comes from which script, and that
+<code>data/processed/</code> can be deleted and regenerated. None of it requires contacting
+the author.</p>
 </div>
 </div>
 <div id="the-sortee-view" class="section level3 unlisted unnumbered">
@@ -225,18 +228,18 @@ that its output is cached, knows which figure comes from where, and knows that
 side, and set the bar clearly:</p>
 <ul>
 <li>
-<strong>Guideline 1.5</strong> — detailed metadata, including (but not limited to) a
-README file, must accompany the <strong>data</strong>.</li>
+<strong>Guideline 1.5.</strong> Detailed metadata, including but not limited to a README
+file, must accompany the <strong>data</strong>.</li>
 <li>
-<strong>Guideline 3.5</strong> — a sufficiently detailed README must accompany the
-<strong>code</strong>. The code must also be broken into sections with clear annotation
-stating the purpose of the code, with clear links to the relevant sections,
-figures and tables in the manuscript.</li>
+<strong>Guideline 3.5.</strong> A sufficiently detailed README must accompany the <strong>code</strong>.
+The code must also be broken into sections with clear annotation stating the
+purpose of the code, with clear links to the relevant sections, figures and
+tables in the manuscript.</li>
 </ul>
-<p>The test a data editor applies to code metadata is, in effect: <em>could a reader
-understand the analysis code without reading the manuscript?</em> For data
-metadata, it is the equivalent: <em>could someone understand the contents of the
-data files without reading the paper?</em></p>
+<p>The test a data editor applies to code metadata is, in effect, whether a reader
+could understand the analysis code without reading the manuscript. For data
+metadata it is the equivalent question: could someone understand the contents of
+the data files without reading the paper?</p>
 </div>
 </div>
 <div id="documented-licence" class="section level2" number="5.2">
@@ -245,14 +248,14 @@ data files without reading the paper?</em></p>
 </h2>
 <div class="tada-warn">
 <p>Code with <strong>no licence</strong> is not open code. Without one, others are legally
-restricted from using, sharing or modifying what you archived — even though
-they can see it. This is the single most common documentation failure, and it
-quietly undoes the whole point of archiving.</p>
+restricted from using, sharing or modifying what you archived, even though they
+can see it. Omitting a licence is a common documentation failure, and it defeats
+the purpose of archiving: the code is visible but cannot lawfully be reused.</p>
 </div>
 <p>The documentation must specify an appropriate licence detailing how others can
 use, modify and share the code. Licences differ in their permission levels and
-conditions: whether attribution is required (i.e. whether you must be cited),
-whether the code can be modified, and whether it can be used commercially.</p>
+conditions: whether attribution is required, meaning whether you must be cited;
+whether the code can be modified; and whether it can be used commercially.</p>
 <div id="choosing-one" class="section level3 unlisted unnumbered">
 <h3>Choosing one<a class="anchor" aria-label="anchor" href="#choosing-one"><i class="fas fa-link"></i></a>
 </h3>
@@ -260,32 +263,32 @@ whether the code can be modified, and whether it can be used commercially.</p>
 <div id="permissive" class="section level4 unlisted unnumbered">
 <h4>Permissive<a class="anchor" aria-label="anchor" href="#permissive"><i class="fas fa-link"></i></a>
 </h4>
-<p><strong>MIT</strong> is the archetype: little to no restriction on use. Others may copy,
-modify, merge, publish and share the code, provided the licence and copyright
-notice travel with it.</p>
+<p><strong>MIT</strong> is the archetype, imposing little to no restriction on use. Others may
+copy, modify, merge, publish and share the code, provided the licence and
+copyright notice travel with it.</p>
 <p>Choose a permissive licence when you want the widest possible reuse and are not
-concerned about what downstream users do with derivatives — the usual case for
-analytical code accompanying a paper.</p>
+concerned about what downstream users do with derivatives, which is the usual
+case for analytical code accompanying a paper.</p>
 <p>Other permissive options include <strong>BSD 2-Clause</strong>, <strong>BSD 3-Clause</strong>, and
-<strong>Apache 2.0</strong> (which additionally grants patent rights explicitly).</p>
+<strong>Apache 2.0</strong>, which additionally grants patent rights explicitly.</p>
 </div>
 <div id="copyleft" class="section level4 unlisted unnumbered">
 <h4>Copyleft<a class="anchor" aria-label="anchor" href="#copyleft"><i class="fas fa-link"></i></a>
 </h4>
-<p><strong>GPL</strong> licences are more restrictive: they impose several conditions that must
-be met. Under <strong>GPL v3.0</strong>, for example, derivative works must carry the same
+<p><strong>GPL</strong> licences are more restrictive, imposing several conditions that must be
+met. Under <strong>GPL v3.0</strong>, for example, derivative works must carry the same
 licence, and any changes made from the source code must be listed.</p>
 <p>Choose a copyleft licence when you want to guarantee that derivatives remain
-open. Note that some journals require a specific licence on archiving — the
+open. Note that some journals require a specific licence on archiving: the
 <strong>Journal of Statistical Software</strong> requires a GPL.</p>
 </div>
 <div id="data-licences" class="section level4 unlisted unnumbered">
 <h4>Data licences<a class="anchor" aria-label="anchor" href="#data-licences"><i class="fas fa-link"></i></a>
 </h4>
 <p>Data and code are usually best licensed separately.</p>
-<p><strong>CC0</strong> places work in the public domain with no conditions, and is the
-standard choice for research data. <strong>Dryad only supports CC0</strong> — which is fine
-for data but <strong>not best suited for code</strong>.</p>
+<p><strong>CC0</strong> places work in the public domain with no conditions, and is the standard
+choice for research data. <strong>Dryad only supports CC0</strong>, which is appropriate for
+data but <strong>not well suited to code</strong>.</p>
 <p><strong>CC BY</strong> requires attribution and is also common for data.</p>
 <p>If your repository applies a single repository-wide licence, check whether it
 suits <em>both</em> your data and your code before depositing them together.</p>
@@ -293,21 +296,21 @@ suits <em>both</em> your data and your code before depositing them together.</p>
 <div id="how-to-attach-it" class="section level4 unlisted unnumbered">
 <h4>How to attach it<a class="anchor" aria-label="anchor" href="#how-to-attach-it"><i class="fas fa-link"></i></a>
 </h4>
-<p>Two routes, and either is acceptable:</p>
+<p>Either route is acceptable.</p>
 <p><strong>Add a licence file.</strong> Consult <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a>, decide which
-licence is most relevant to your project, copy the relevant licence text, and
-save it as a <code>LICENSE</code> (or <code>licence.txt</code>) file in your project alongside the
-code.</p>
+licence is most relevant to your project, copy the licence text, and save it as
+a <code>LICENSE</code> file, which is the spelling GitHub and Zenodo recognise, in your
+project alongside the code.</p>
 <p><strong>Let the repository do it.</strong> In some repositories, such as <strong>Zenodo</strong>, you can
 specify the licence when you archive the code. It is then attached to the
 project without you creating your own file.</p>
 </div>
 </div>
 </div>
-<div id="questions-that-decide-it" class="section level3 unlisted unnumbered">
-<h3>Questions that decide it<a class="anchor" aria-label="anchor" href="#questions-that-decide-it"><i class="fas fa-link"></i></a>
+<div id="questions-that-determine-the-choice" class="section level3 unlisted unnumbered">
+<h3>Questions that determine the choice<a class="anchor" aria-label="anchor" href="#questions-that-determine-the-choice"><i class="fas fa-link"></i></a>
 </h3>
-<p>The TADA paper identifies the factors that should drive the choice:</p>
+<p>The TADA paper identifies the factors that should drive the decision:</p>
 <ul>
 <li>
 <strong>Who is the audience?</strong> Is the code intended for commercial applications?</li>
@@ -317,13 +320,15 @@ project without you creating your own file.</p>
 mandate a specific licence on archiving.</li>
 <li>
 <strong>Does your repository already impose a licence?</strong> Dryad’s CC0-only policy is
-the example to watch for.</li>
+the case to watch for.</li>
 </ul>
 <div class="tada-note">
-<p>The SORTEE guidelines require that data (Guideline 1.2) and code
-(Guideline 3.2) each be associated with a licence, but deliberately <strong>do not
-recommend or enforce any specific type</strong>. The requirement is that you make a
-choice and state it — not that you make a particular choice.</p>
+<p>The SORTEE guidelines require a licence for both data (Guideline 1.2) and code
+(Guideline 3.2), but they treat the two differently. For <strong>data</strong> they
+deliberately <strong>do not recommend or enforce any specific type</strong>, so the
+requirement is simply that you choose and state one. For <strong>code</strong> they do
+express a preference: <em>“We suggest using permissive code licences whenever
+possible, for example, MIT, BSD 2-Clause, GNU, and Apache”</em> (Stage 3.2).</p>
 </div>
 </div>
 </div>
@@ -345,7 +350,7 @@ choice and state it — not that you make a particular choice.</p>
 <li><label><input type="checkbox">Data and code licences are each appropriate to what they cover</label></li>
 <li><label><input type="checkbox">For double-blind review, an anonymised version of the README exists</label></li>
 </ul>
-<p><strong>Next:</strong> <a href="annotated.html#annotated">Annotated</a> — comments inside the code.</p>
+<p><strong>Next:</strong> <a href="annotated.html#annotated">Annotated</a>, on comments inside the code.</p>
 
 </div>
 </div>
@@ -366,7 +371,7 @@ choice and state it — not that you make a particular choice.</p>
 <li>
 <a class="nav-link" href="#documented-licence"><span class="header-section-number">5.2</span> The licence</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#choosing-one">Choosing one</a></li>
-<li><a class="nav-link" href="#questions-that-decide-it">Questions that decide it</a></li>
+<li><a class="nav-link" href="#questions-that-determine-the-choice">Questions that determine the choice</a></li>
 </ul>
 </li>
 <li><a class="nav-link" href="#documented-checklist"><span class="header-section-number">5.3</span> Checklist</a></li>
@@ -374,7 +379,8 @@ choice and state it — not that you make a particular choice.</p>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+<li><a id="book-source" href="https://github.com/EIvimeyCook/TADA-Wiki/blob/main/05-documented.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/EIvimeyCook/TADA-Wiki/edit/main/05-documented.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -386,7 +392,7 @@ choice and state it — not that you make a particular choice.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 02 September 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 04 September 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -51,7 +51,7 @@ Errors encountered: ________________________________________________
 
 ## R3 — Reliable
 
-*Does it do the right thing — not just something?*
+*Does the code produce the correct result, and not merely a result?*
 
 This is the check that needs someone who knows the data. Read closely; do not
 skim.
@@ -105,7 +105,8 @@ Judging a match:
 1. ________________________________________________________________
 2. ________________________________________________________________
 
-**Worked well** — say so; this is a review of code, not of a person.
+**Worked well.** Say so. The review covers the code, and noting what works is
+part of it.
 
 1. ________________________________________________________________
 
@@ -118,6 +119,7 @@ How will the reviewer's contribution be recognised?
 - [ ] MeRIT statement in the methods
       (e.g. "…Gaussian error distribution. Code was checked by E.I.C.")
 - [ ] Acknowledgements
-- [ ] Co-authorship — where the review fundamentally altered the project
+- [ ] Co-authorship, where the review fundamentally altered the project
 
-Incentives should be relative to the impact of the reviewer on the project.
+The paper's principle is that incentives should be proportionate to the
+reviewer's impact on the project.

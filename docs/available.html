@@ -6,19 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>4 A — Available | The TADA-Wiki</title>
 <meta name="author" content="A community wiki built on the TADA guidelines">
-<meta name="description" content="Availability is the act of publicly archiving the code in a way that provides long-term access to any external user. It covers two FAIR principles at once: Findable (provision of a unique...">
+<meta name="description" content="Availability is the act of publicly archiving the code in a way that provides long-term access to any external user. It covers two FAIR principles at once: Findable, through the provision of a...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="4 A — Available | The TADA-Wiki">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Availability is the act of publicly archiving the code in a way that provides long-term access to any external user. It covers two FAIR principles at once: Findable (provision of a unique...">
+<meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/available.html">
+<meta property="og:description" content="Availability is the act of publicly archiving the code in a way that provides long-term access to any external user. It covers two FAIR principles at once: Findable, through the provision of a...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="4 A — Available | The TADA-Wiki">
-<meta name="twitter:description" content="Availability is the act of publicly archiving the code in a way that provides long-term access to any external user. It covers two FAIR principles at once: Findable (provision of a unique...">
+<meta name="twitter:description" content="Availability is the act of publicly archiving the code in a way that provides long-term access to any external user. It covers two FAIR principles at once: Findable, through the provision of a...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="theme-color" content="#0F6E7B">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230F6E7B'/%3E%3Ctext%20x='50'%20y='70'%20font-family='Georgia,serif'%20font-size='58'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -62,7 +62,7 @@
 </ul>
 
         <div class="book-extra">
-          
+          <p><a id="book-repo" href="https://github.com/EIvimeyCook/TADA-Wiki">View book source <i class="fab fa-github"></i></a></p>
         </div>
       </nav>
 </div>
@@ -72,42 +72,42 @@
 </h1>
 <div class="tada-key">
 <p><strong>Availability</strong> is the act of <strong>publicly archiving the code</strong> in a way that
-provides long-term access to any external user. It covers two FAIR principles
-at once: <strong>Findable</strong> (provision of a unique identifier) and <strong>Accessible</strong>
-(the code is retrievable via that identifier).</p>
+provides long-term access to any external user. It covers two FAIR principles at
+once: <strong>Findable</strong>, through the provision of a unique identifier, and
+<strong>Accessible</strong>, in that the code is retrievable via that identifier.</p>
 </div>
-<p>Two requirements:</p>
+<p>There are two requirements:</p>
 <ol style="list-style-type: decimal">
-<li>The code has an associated <strong>globally unique persistent identifier (PID)</strong> —
-in practice, a DOI.</li>
+<li>The code has an associated <strong>globally unique persistent identifier (PID)</strong>,
+in practice a DOI.</li>
 <li>That identifier is <strong>cited in the corresponding manuscript</strong>.</li>
 </ol>
 <div id="available-github" class="section level2" number="4.1">
 <h2>
 <span class="header-section-number">4.1</span> Why GitHub is not an archive<a class="anchor" aria-label="anchor" href="#available-github"><i class="fas fa-link"></i></a>
 </h2>
-<p>This is the point that most often surprises people, so it is worth being
-precise about it.</p>
+<p>This point surprises people more often than any other in TADA, so it is worth
+stating precisely.</p>
 <p>GitHub is an excellent platform for <em>developing</em> code. It provides transparent
-version control during the development phase, and it makes collaboration
-straightforward. None of that is in question.</p>
-<p>But for archiving the code behind a published paper, it fails on two counts:</p>
+version control during development and makes collaboration straightforward, and
+none of that is in question here. For archiving the code behind a published
+paper, however, it fails on two counts:</p>
 <ul>
 <li>
-<strong>It does not readily provide a persistent identifier.</strong> A GitHub URL is not
-a PID.</li>
+<strong>It does not readily provide a persistent identifier.</strong> A GitHub URL is not a
+PID.</li>
 <li>
-<strong>It is not immutable.</strong> Files can be changed — or deleted — at any time,
-including after the manuscript is published. If the exact code behind a
-result is later edited or removed, the reproducibility of that published
-result is gone.</li>
+<strong>It is not immutable.</strong> Files can be changed, or deleted, at any time,
+including after the manuscript is published. If the exact code behind a result
+is later edited or removed, the reproducibility of that published result goes
+with it.</li>
 </ul>
-<p>The same applies to comparable platforms: <strong>Codeberg, Bitbucket, GitLab</strong>.
-They are development platforms, not archives.</p>
+<p>The same applies to comparable platforms such as <strong>Codeberg</strong>, <strong>Bitbucket</strong> and
+<strong>GitLab</strong>, which are development platforms rather than archives.</p>
 <div class="tada-tip">
-<p>You do not have to choose. <strong>Develop on GitHub, archive on Zenodo.</strong> Create a
-release version on GitHub and link the repository to Zenodo; Zenodo then
-captures that release and mints a DOI for it. See
+<p>You do not have to choose between them. <strong>Develop on GitHub and archive on
+Zenodo.</strong> Create a release version on GitHub and link the repository to Zenodo,
+which then captures that release and mints a DOI for it. See
 <a href="https://help.zenodo.org/docs/profile/linking-accounts/" class="uri">https://help.zenodo.org/docs/profile/linking-accounts/</a>.</p>
 </div>
 </div>
@@ -135,22 +135,22 @@ that assigns a DOI.</p>
 <td><strong>Zenodo</strong></td>
 <td>DOI</td>
 <td>Yes</td>
-<td>Connects directly to a GitHub project. Gives a base project-level DOI <em>and</em> version-specific DOIs. You can choose the licence at deposit; CC-BY 4.0 is the default.</td>
+<td>Connects directly to a GitHub project. Gives a base project-level DOI as well as version-specific DOIs. You can choose the licence at deposit; CC-BY 4.0 is the default.</td>
 </tr>
 <tr class="even">
 <td><strong>Figshare</strong></td>
 <td>DOI</td>
 <td>Yes</td>
-<td>General-purpose; widely used for code and supplementary material. Assigns CC0 by default.</td>
+<td>General-purpose, and widely used for code and supplementary material. Assigns CC0 by default.</td>
 </tr>
 <tr class="odd">
 <td><strong>Dryad</strong></td>
 <td>DOI</td>
 <td>Yes</td>
-<td>Data-focused, and <strong>mandates CC0</strong>, which is not well suited to code — see <a href="documented.html#documented-licence">licences</a>. Dryad directs users to archive code with Zenodo.</td>
+<td>Data-focused, and <strong>mandates CC0</strong>, which is not well suited to code (see <a href="documented.html#documented-licence">licences</a>). Dryad directs users to archive code with Zenodo.</td>
 </tr>
 <tr class="even">
-<td><strong>DataVerse</strong></td>
+<td><strong>Dataverse</strong></td>
 <td>DOI</td>
 <td>Yes</td>
 <td>General-purpose; guarantees long-term storage and file immutability.</td>
@@ -165,7 +165,7 @@ that assigns a DOI.</p>
 <td><strong>OSF</strong></td>
 <td>DOI</td>
 <td><strong>No</strong></td>
-<td>Widely used and supports anonymised links for double-blind review, but the SORTEE guidelines note it <strong>does not provide file immutability</strong> — projects and files can be changed or deleted. Use it for review, archive elsewhere.</td>
+<td>Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it <strong>does not provide file immutability</strong>: projects and files can be changed or deleted. Suitable for review, but archive elsewhere.</td>
 </tr>
 <tr class="odd">
 <td>Domain repositories (e.g. <strong>GenBank</strong>)</td>
@@ -184,24 +184,24 @@ that assigns a DOI.</p>
 <div class="tada-warn">
 <p><strong>Supplementary material is not archiving.</strong> The SORTEE guidelines are explicit
 that data should not be provided only as supplementary material attached to the
-article online: it carries no globally unique persistent identifier and may not
-be open and accessible. Everything must go in a public repository.</p>
+article online, since it carries no globally unique persistent identifier and
+may not be open and accessible. Everything must go in a public repository.</p>
 </div>
 <div class="tada-note">
 <p><strong>DOI versioning.</strong> On Zenodo, a new DOI is created whenever the code is
 subsequently updated, alongside a base project-level DOI that never changes.
-Cite the <strong>version-specific DOI</strong> in your paper — that is the version your
-results came from. The project-level DOI is the right thing to give someone who
-wants “the latest”.</p>
+Cite the <strong>version-specific DOI</strong> in your paper, since that is the version your
+results came from. The project-level DOI is the right one to give someone who
+wants the latest version.</p>
 </div>
 </div>
 <div id="available-cite" class="section level2" number="4.3">
 <h2>
 <span class="header-section-number">4.3</span> Cite the code in the manuscript<a class="anchor" aria-label="anchor" href="#available-cite"><i class="fas fa-link"></i></a>
 </h2>
-<p>Archiving is only half of it. The PID must be cited in the corresponding
-manuscript — in the text <em>and</em> in the reference list, so that it is
-discoverable in the same way as any other cited work. The
+<p>Archiving is only half of the requirement. The PID must also be cited in the
+corresponding manuscript, in the text and in the reference list, so that the
+code is discoverable in the same way as any other cited work. The
 <a href="data-sharing.html#sortee">SORTEE guidelines</a> make this explicit for both data (Guideline 1.1)
 and code (Guideline 3.1).</p>
 <p>A worked example (wiki guidance):</p>
@@ -218,42 +218,39 @@ abundance varies with habitat</em> (v1.0.0) [Computer software]. Zenodo.
 <h2>
 <span class="header-section-number">4.4</span> Data and code in the same place<a class="anchor" aria-label="anchor" href="#available-together"><i class="fas fa-link"></i></a>
 </h2>
-<p>The SORTEE guidelines recommend that code files are archived <strong>preferably in
-the same archived project as the data files</strong> (Guideline 3.1). One deposit, one
-DOI, one download, and the relative paths in your code still resolve.</p>
-<p>Where that is not possible — some repositories treat data and code differently,
-and Dryad’s CC0-only licensing is a real constraint for code — archive them
-separately and make the link explicit in <strong>both</strong> READMEs. See
+<p>The SORTEE guidelines recommend that code files are archived <strong>preferably in the
+same archived project as the data files</strong> (Guideline 3.1). That gives a reader
+one deposit, one DOI and one download, and it keeps the relative paths in your
+code working.</p>
+<p>Where this is not possible, because some repositories treat data and code
+differently and Dryad’s CC0-only licensing is a real constraint for code,
+archive them separately and make the link explicit in <strong>both</strong> READMEs. See
 <a href="documented.html#documented">Documented</a>.</p>
 </div>
 <div id="available-wrong" class="section level2" number="4.5">
 <h2>
-<span class="header-section-number">4.5</span> What it looks like when this goes wrong<a class="anchor" aria-label="anchor" href="#available-wrong"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.5</span> Consequences of not archiving<a class="anchor" aria-label="anchor" href="#available-wrong"><i class="fas fa-link"></i></a>
 </h2>
-<p>The TADA paper’s worked example is worth internalising. In the “pre-TADA”
-version of a project, the code is not archived and has no DOI. The consequence
-is not just inconvenience:</p>
-<ul>
-<li>there is no permanent, immutable, citable store of the code;</li>
-<li>a reader who finds the paper cannot reliably find the code;</li>
-<li>and if the working copy is edited or lost, the analysis behind the published
-result cannot be recovered.</li>
-</ul>
+<p>In the “pre-TADA” version of the TADA paper’s worked example, the code is not
+archived and has no DOI, so there is no permanent, immutable, citable store of
+it. Two consequences follow (wiki guidance): a reader who finds the paper cannot
+reliably find the code, and if the working copy is edited or lost, the analysis
+behind the published result cannot be recovered.</p>
 </div>
 <div id="available-sensitive" class="section level2" number="4.6">
 <h2>
 <span class="header-section-number">4.6</span> Sensitive data and embargoes<a class="anchor" aria-label="anchor" href="#available-sensitive"><i class="fas fa-link"></i></a>
 </h2>
-<p>Availability is not absolute. Some data cannot be shared openly — protected
-species locations, personal data, third-party data under licence. The SORTEE
-guidelines allow for exceptions and note that many repositories offer
-<strong>embargoes</strong> where these are necessary.</p>
-<p>Two things to keep in mind:</p>
+<p>Availability admits of exceptions. Some data cannot be shared openly, including
+protected species locations, personal data, and third-party data held under
+licence. The SORTEE guidelines allow for these cases and note that many
+repositories offer <strong>embargoes</strong> where they are necessary.</p>
+<p>Two qualifications apply:</p>
 <ul>
-<li>The exception normally applies to the <strong>data</strong>, not the <strong>code</strong>. Code that
-cannot be run without restricted data is still worth archiving openly: it
-documents exactly what was done.</li>
-<li>State the restriction, and the route to legitimate access, in the data
+<li>Wiki guidance: the exception normally applies to the <strong>data</strong> rather than the
+<strong>code</strong>. Code that cannot be run without restricted data is still worth
+archiving openly, because it documents exactly what was done.</li>
+<li>State the restriction, and the route to legitimate access, in both the data
 availability statement and the README.</li>
 </ul>
 </div>
@@ -261,16 +258,16 @@ availability statement and the README.</li>
 <h2>
 <span class="header-section-number">4.7</span> Anonymising for double-blind review<a class="anchor" aria-label="anchor" href="#available-anonymous"><i class="fas fa-link"></i></a>
 </h2>
-<p>If your journal is double-blind, you still need reviewers to see the code. The
-established options:</p>
+<p>If your journal operates double-blind review, reviewers still need to see the
+code. There are two established options:</p>
 <ul>
 <li>
-<strong>Submit anonymised data and code directly to the journal</strong>, e.g. as a zip
-file.</li>
+<strong>Submit anonymised data and code directly to the journal</strong>, for example as a
+zip file.</li>
 <li>
-<strong>Upload to a repository that supports anonymised review links</strong> — Figshare,
-the Open Science Framework (OSF), GitHub, or Dryad (noting Dryad may not be
-free).</li>
+<strong>Upload to a repository that supports anonymised review links</strong>, such as
+Figshare, the Open Science Framework (OSF), GitHub, or Dryad, though Dryad may
+charge a deposit fee.</li>
 </ul>
 <p>The README can also be anonymised during peer review to comply with
 double-blind policies, then restored before archiving. See
@@ -287,10 +284,10 @@ double-blind policies, then restored before archiving. See
 <li><label><input type="checkbox">The DOI is cited in the manuscript text <strong>and</strong> the reference list</label></li>
 <li><label><input type="checkbox">Data and code are in the same archived project where possible; where not, each README points to the other</label></li>
 <li><label><input type="checkbox">If developed on GitHub: a release was created and linked to Zenodo</label></li>
-<li><label><input type="checkbox">Any restricted data has its access route documented</label></li>
+<li><label><input type="checkbox">Any restricted data have a documented access route</label></li>
 <li><label><input type="checkbox">For double-blind review: an anonymised copy or anonymous link is available</label></li>
 </ul>
-<p><strong>Next:</strong> <a href="documented.html#documented">Documented</a> — the README and the licence.</p>
+<p><strong>Next:</strong> <a href="documented.html#documented">Documented</a>, on the README and the licence.</p>
 
 </div>
 </div>
@@ -305,7 +302,7 @@ double-blind policies, then restored before archiving. See
 <li><a class="nav-link" href="#available-where"><span class="header-section-number">4.2</span> Where to archive</a></li>
 <li><a class="nav-link" href="#available-cite"><span class="header-section-number">4.3</span> Cite the code in the manuscript</a></li>
 <li><a class="nav-link" href="#available-together"><span class="header-section-number">4.4</span> Data and code in the same place</a></li>
-<li><a class="nav-link" href="#available-wrong"><span class="header-section-number">4.5</span> What it looks like when this goes wrong</a></li>
+<li><a class="nav-link" href="#available-wrong"><span class="header-section-number">4.5</span> Consequences of not archiving</a></li>
 <li><a class="nav-link" href="#available-sensitive"><span class="header-section-number">4.6</span> Sensitive data and embargoes</a></li>
 <li><a class="nav-link" href="#available-anonymous"><span class="header-section-number">4.7</span> Anonymising for double-blind review</a></li>
 <li><a class="nav-link" href="#available-checklist"><span class="header-section-number">4.8</span> Checklist</a></li>
@@ -313,7 +310,8 @@ double-blind policies, then restored before archiving. See
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+<li><a id="book-source" href="https://github.com/EIvimeyCook/TADA-Wiki/blob/main/04-available.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/EIvimeyCook/TADA-Wiki/edit/main/04-available.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -325,7 +323,7 @@ double-blind policies, then restored before archiving. See
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 02 September 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 04 September 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

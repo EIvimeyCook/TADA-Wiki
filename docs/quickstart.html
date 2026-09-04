@@ -6,19 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>1 Start here | The TADA-Wiki</title>
 <meta name="author" content="A community wiki built on the TADA guidelines">
-<meta name="description" content="You have a paper going out. Your code lives in a folder that made sense to you six months ago. This chapter is the shortest path from that to something a stranger can download, open and run. Four...">
+<meta name="description" content="This chapter is for the situation most people are actually in: a paper is going out, and the code behind it sits in a folder whose logic made sense at the time. What follows is the shortest route...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="1 Start here | The TADA-Wiki">
 <meta property="og:type" content="book">
-<meta property="og:description" content="You have a paper going out. Your code lives in a folder that made sense to you six months ago. This chapter is the shortest path from that to something a stranger can download, open and run. Four...">
+<meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/quickstart.html">
+<meta property="og:description" content="This chapter is for the situation most people are actually in: a paper is going out, and the code behind it sits in a folder whose logic made sense at the time. What follows is the shortest route...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1 Start here | The TADA-Wiki">
-<meta name="twitter:description" content="You have a paper going out. Your code lives in a folder that made sense to you six months ago. This chapter is the shortest path from that to something a stranger can download, open and run. Four...">
+<meta name="twitter:description" content="This chapter is for the situation most people are actually in: a paper is going out, and the code behind it sits in a folder whose logic made sense at the time. What follows is the shortest route...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="theme-color" content="#0F6E7B">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230F6E7B'/%3E%3Ctext%20x='50'%20y='70'%20font-family='Georgia,serif'%20font-size='58'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -62,7 +62,7 @@
 </ul>
 
         <div class="book-extra">
-          
+          <p><a id="book-repo" href="https://github.com/EIvimeyCook/TADA-Wiki">View book source <i class="fab fa-github"></i></a></p>
         </div>
       </nav>
 </div>
@@ -70,32 +70,34 @@
 <h1>
 <span class="header-section-number">1</span> Start here<a class="anchor" aria-label="anchor" href="#quickstart"><i class="fas fa-link"></i></a>
 </h1>
-<p>You have a paper going out. Your code lives in a folder that made sense to you
-six months ago. This chapter is the shortest path from that to something a
-stranger can download, open and run.</p>
+<p>This chapter is for the situation most people are actually in: a paper is going
+out, and the code behind it sits in a folder whose logic made sense at the time.
+What follows is the shortest route from that to something a stranger can
+download, open and run.</p>
 <div class="tada-key">
-<p>Four passes over your project, roughly in this order: fix the <strong>paths and file
-types</strong>, <strong>archive</strong> it and get a DOI, write the <strong>README</strong>, and <strong>annotate</strong>
-the scripts. Then have a colleague try to run it before a reviewer does.</p>
+<p>Make four passes over the project, roughly in this order. Fix the <strong>paths and
+file types</strong>, <strong>archive</strong> it and get a DOI, write the <strong>README</strong>, then
+<strong>annotate</strong> the scripts. Finally, ask a colleague to run the whole thing before
+a reviewer has to.</p>
 </div>
 <div id="quickstart-checklist" class="section level2" number="1.1">
 <h2>
 <span class="header-section-number">1.1</span> The pre-submission checklist<a class="anchor" aria-label="anchor" href="#quickstart-checklist"><i class="fas fa-link"></i></a>
 </h2>
-<p>This is TADA as a single list. Each item links to the chapter that explains it.</p>
+<p>This is TADA as a single list. Each group links to the chapter that explains it.</p>
 <p><strong>Transferable</strong> — <a href="transferable.html#transferable">full chapter</a></p>
 <ul class="task-list">
 <li><label><input type="checkbox">Every script is saved with a standard code extension (<code>.R</code>, <code>.py</code>, <code>.cpp</code>, …), not inside a <code>.docx</code> or <code>.pdf</code></label></li>
-<li><label><input type="checkbox">No <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> (R) or <code>os.chdir()</code> (Python) anywhere</label></li>
-<li><label><input type="checkbox">No absolute paths (<code>/Users/you/…</code>, <code>C:/Users/you/…</code>) — relative paths only</label></li>
+<li><label><input type="checkbox">No <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> (R) or <code>os.chdir()</code> (Python) appears anywhere in the code</label></li>
+<li><label><input type="checkbox">No absolute paths (<code>/Users/you/…</code>, <code>C:/Users/you/…</code>) remain; paths are relative</label></li>
 <li><label><input type="checkbox">Data, code and materials all live in <strong>one</strong> project directory</label></li>
-<li><label><input type="checkbox">You have opened the project from a clean start and it still runs</label></li>
+<li><label><input type="checkbox">The project has been opened from a clean start and still runs</label></li>
 </ul>
 <p><strong>Available</strong> — <a href="available.html#available">full chapter</a></p>
 <ul class="task-list">
 <li><label><input type="checkbox">Code is deposited in an immutable repository that mints a persistent identifier (Zenodo, Figshare, …)</label></li>
-<li><label><input type="checkbox">You have the DOI, and it is <strong>cited in the manuscript text and reference list</strong></label></li>
-<li><label><input type="checkbox">If you developed on GitHub, you made a release and linked it to Zenodo — GitHub alone is not an archive</label></li>
+<li><label><input type="checkbox">The DOI is <strong>cited in the manuscript text and reference list</strong></label></li>
+<li><label><input type="checkbox">If the code was developed on GitHub, a release has been created and linked to Zenodo, since GitHub alone is not an archive</label></li>
 </ul>
 <p><strong>Documented</strong> — <a href="documented.html#documented">full chapter</a></p>
 <ul class="task-list">
@@ -103,7 +105,7 @@ the scripts. Then have a colleague try to run it before a reviewer does.</p>
 <li><label><input type="checkbox">It names the manuscript, the authors, a contact address, and any funders</label></li>
 <li><label><input type="checkbox">It lists software <strong>and version</strong> (e.g. R v4.3.3) and key packages <strong>and versions</strong> (e.g. ggplot2 v3.5.1)</label></li>
 <li><label><input type="checkbox">It states the licence</label></li>
-<li><label><input type="checkbox">It says where the data are (ideally with their own DOI)</label></li>
+<li><label><input type="checkbox">It says where the data are, ideally with their own DOI</label></li>
 <li><label><input type="checkbox">It says what each file is, what order to run things in, what the code needs and what it produces</label></li>
 <li><label><input type="checkbox">It flags anything slow or resource-hungry</label></li>
 <li><label><input type="checkbox">A licence is actually attached to the deposit</label></li>
@@ -116,22 +118,25 @@ the scripts. Then have a colleague try to run it before a reviewer does.</p>
 </ul>
 <p><strong>Before you submit</strong> — <a href="code-review.html#code-review">full chapter</a></p>
 <ul class="task-list">
-<li><label><input type="checkbox">Someone else has run the whole thing from the archived files and it worked</label></li>
+<li><label><input type="checkbox">Someone else has run the whole project from the archived files, successfully</label></li>
 <li><label><input type="checkbox"><code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> / <code>random.seed()</code> is set before anything stochastic</label></li>
 </ul>
 <div class="tada-tip">
-<p>The single highest-value check on this page: <strong>download your own archived
-deposit into a fresh, empty folder on a different machine, and run it.</strong> Almost
-every reproducibility failure in the literature would have been caught by this.</p>
+<p>The most useful check on this page is to <strong>download your own archived deposit
+into a fresh, empty folder, ideally on a different machine, and run it.</strong> Wiki
+guidance: this is the cheapest way to catch the failures the SORTEE guidelines
+group under Stage 5, meaning paths, missing packages and missing files. It will
+not catch the Stage 6 failures, such as stochasticity and version sensitivity,
+which need a seed and a documented environment instead.</p>
 </div>
 </div>
 <div id="quickstart-layout" class="section level2" number="1.2">
 <h2>
 <span class="header-section-number">1.2</span> A project layout that works<a class="anchor" aria-label="anchor" href="#quickstart-layout"><i class="fas fa-link"></i></a>
 </h2>
-<p>Wiki guidance, following the folder-and-file conventions recommended for
-reviewable code. The point is not this exact tree — it is that the ordering and
-purpose of everything is obvious without asking you.</p>
+<p>The example tree below is wiki guidance; the two conventions it embodies are
+from Ivimey-Cook et al. (2023, §3.1). The specific layout matters less than the
+result: a reader can see the order and purpose of every file without asking you.</p>
 <pre><code>my-project/
 ├── README.md                 &lt;- start here: what this is, how to run it
 ├── LICENSE                   &lt;- how others may use the code
@@ -150,20 +155,20 @@ purpose of everything is obvious without asking you.</p>
 └── output/
     ├── figures/
     └── models/               &lt;- saved model objects for slow fits</code></pre>
-<p>Two conventions are doing most of the work here:</p>
+<p>Most of the work is being done by two conventions.</p>
 <ol style="list-style-type: decimal">
 <li>
 <strong>Numbered scripts.</strong> A reader knows the order to run things in without
-being told. <code>01_</code>, <code>02_</code>, <code>03_</code>.</li>
+being told: <code>01_</code>, <code>02_</code>, <code>03_</code>.</li>
 <li>
 <strong><code>data/raw/</code> is read-only.</strong> Cleaning writes to <code>data/processed/</code>. Raw data
-is never modified or overwritten by a script, so a botched cleaning step can
-never destroy the original.</li>
+are never modified or overwritten by a script, so a botched cleaning step
+cannot destroy the original.</li>
 </ol>
 </div>
 <div id="quickstart-mistakes" class="section level2" number="1.3">
 <h2>
-<span class="header-section-number">1.3</span> The three mistakes that break other people’s runs<a class="anchor" aria-label="anchor" href="#quickstart-mistakes"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.3</span> Three common causes of failure<a class="anchor" aria-label="anchor" href="#quickstart-mistakes"><i class="fas fa-link"></i></a>
 </h2>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -180,32 +185,33 @@ never destroy the original.</li>
 <tr class="odd">
 <td><code>setwd("C:/Users/ed/Desktop/analysis")</code></td>
 <td>The path exists on exactly one computer</td>
-<td>An RStudio project or a Python virtual environment in the project folder, plus <code>here()</code> / <code>pyprojroot</code>
+<td>Open the project through its <code>.Rproj</code> file, or start Python inside the project folder, and build paths with <code>here()</code> / <code>pyprojroot</code>
 </td>
 </tr>
 <tr class="even">
 <td>Code shared as a <code>.pdf</code> or <code>.docx</code>
 </td>
-<td>Copy-pasting silently mangles apostrophes, quotes, and whitespace, and drags in line numbers and headers</td>
+<td>Copy-pasting silently mangles apostrophes, quotes and whitespace, and drags in line numbers and headers</td>
 <td>Save as <code>.R</code> / <code>.py</code>
 </td>
 </tr>
 <tr class="odd">
 <td>No <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> before a simulation or MCMC run</td>
 <td>Results change every run, so nobody can tell a real mismatch from noise</td>
-<td>Set a seed at the top of each independently-runnable section</td>
+<td>Set a seed at the top of each independently runnable section</td>
 </tr>
 </tbody>
 </table></div>
 <div class="tada-warn">
-<p>The <code>.pdf</code>/<code>.docx</code> problem is nastier than it looks. The characters that get
-substituted — curly apostrophes for straight ones, non-breaking spaces — produce
-errors that are hard to see and slow to fix, because the code <em>looks</em> right.</p>
+<p>The <code>.pdf</code> and <code>.docx</code> problem is worse than it appears. The characters that get
+substituted, such as curly apostrophes for straight ones and non-breaking spaces
+for ordinary ones, produce errors that are hard to see and slow to fix, because
+the code still <em>looks</em> right.</p>
 </div>
 </div>
 <div id="quickstart-readme" class="section level2" number="1.4">
 <h2>
-<span class="header-section-number">1.4</span> A README you can fill in during a coffee break<a class="anchor" aria-label="anchor" href="#quickstart-readme"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.4</span> The README<a class="anchor" aria-label="anchor" href="#quickstart-readme"><i class="fas fa-link"></i></a>
 </h2>
 <p>Copy <a href="templates/README-template.md"><code>templates/README-template.md</code></a> into your
 project and replace the angle-bracketed parts. The
@@ -217,12 +223,13 @@ there.</p>
 <span class="header-section-number">1.5</span> What happens next<a class="anchor" aria-label="anchor" href="#quickstart-next"><i class="fas fa-link"></i></a>
 </h2>
 <p>If your target journal has a <strong>data editor</strong>, someone will check your deposit
-against something close to the <a href="data-sharing.html#sortee">SORTEE guidelines</a> — six stages, from
-“is it archived with a licence” through to “do the results actually come out
-the same”. Reading that section tells you what the checks will be before
-anyone runs them on you.</p>
-<p>If your journal does not, the checks still matter — they just fall to you and
-your co-authors. That is what <a href="code-review.html#code-review">code review</a> is for.</p>
+against something close to the <a href="data-sharing.html#sortee">SORTEE guidelines</a>: six stages running
+from whether the code is archived under a licence through to whether the results
+actually come out the same. Reading that section tells you what those checks are
+before anyone applies them to your submission.</p>
+<p>If your journal has no data editor, the checks still matter. They simply fall to
+you and your co-authors instead, which is what <a href="code-review.html#code-review">code review</a>
+provides.</p>
 
 </div>
 </div>
@@ -235,14 +242,15 @@ your co-authors. That is what <a href="code-review.html#code-review">code review
 <li><a class="nav-link" href="#quickstart"><span class="header-section-number">1</span> Start here</a></li>
 <li><a class="nav-link" href="#quickstart-checklist"><span class="header-section-number">1.1</span> The pre-submission checklist</a></li>
 <li><a class="nav-link" href="#quickstart-layout"><span class="header-section-number">1.2</span> A project layout that works</a></li>
-<li><a class="nav-link" href="#quickstart-mistakes"><span class="header-section-number">1.3</span> The three mistakes that break other people’s runs</a></li>
-<li><a class="nav-link" href="#quickstart-readme"><span class="header-section-number">1.4</span> A README you can fill in during a coffee break</a></li>
+<li><a class="nav-link" href="#quickstart-mistakes"><span class="header-section-number">1.3</span> Three common causes of failure</a></li>
+<li><a class="nav-link" href="#quickstart-readme"><span class="header-section-number">1.4</span> The README</a></li>
 <li><a class="nav-link" href="#quickstart-next"><span class="header-section-number">1.5</span> What happens next</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+<li><a id="book-source" href="https://github.com/EIvimeyCook/TADA-Wiki/blob/main/01-quickstart.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/EIvimeyCook/TADA-Wiki/edit/main/01-quickstart.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -254,7 +262,7 @@ your co-authors. That is what <a href="code-review.html#code-review">code review
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 02 September 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 04 September 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

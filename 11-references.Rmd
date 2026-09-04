@@ -5,6 +5,12 @@ draw on. Bibliographic details follow the reference lists of those papers; where
 a source gives an abbreviated form, that form is reproduced here rather than
 completed by guesswork.
 
+::: {.tada-note}
+DOIs are given for the three source papers and wherever the source reference
+lists supply one. Many entries below still lack a DOI that does exist; adding
+them is a standing task, and [contributions are welcome](#contribute).
+:::
+
 ## The source papers {#references-sources}
 
 **Ivimey-Cook, E. R., Culina, A., Dimri, S., Grainger, M. J., Kar, F.,
@@ -40,7 +46,7 @@ PDF:
 ## All references {#references-all}
 
 **Abdill, R. J., Talarico, E., & Grieneisen, L.** (2024). *A how-to guide for
-code sharing in biology.* PLoS Biology 22: e3002815.
+code sharing in biology.* PLOS Biology 22: e3002815.
 
 **Allen, C., & Mehler, D. M. A.** (2019). *Open science challenges, benefits
 and tips in early career and beyond.* PLOS Biology 17: e3000246.
@@ -55,7 +61,7 @@ flagship journals.* The Journal of Wildlife Management 84: 1012–1017.
 
 **Bakker, T. C. M., & Traniello, J. F. A.** (2020). *Ensuring data access,
 transparency, and preservation: Mandatory data deposition for Behavioral
-Ecology and Sociobiology.* Behavioral Ecology and Sociobiology.
+Ecology and Sociobiology.* Behavioral Ecology and Sociobiology 74: 132.
 
 **Barker, M., Chue Hong, N. P., Katz, D. S., Lamprecht, A.-L.,
 Martinez-Ortiz, C., Psomopoulos, F., et al.** (2022). *Introducing the FAIR
@@ -65,9 +71,10 @@ Principles for research software.* Scientific Data 9: 622.
 467: 753.
 
 **Blischak, J. D., Carbonetto, P., & Stephens, M.** (2019). *Creating and
-sharing reproducible research code the workflowr way.* F1000Research.
+sharing reproducible research code the workflowr way.* F1000Research 8: 1749.
 
 **Boettiger, C.** (2015). *An introduction to Docker for reproducible research.*
+ACM SIGOPS Operating Systems Review 49: 71–79.
 
 **Boettiger, C.** (2017). *Generating CodeMeta metadata for R packages.* The
 Journal of Open Source Software 2: 454.
@@ -104,13 +111,15 @@ how I structure my scientific research.* GitHub.
 <https://github.com/gchure/reproducible_research>
 
 **Cooper, N.** (2017). *A Guide to Reproducible Code in Ecology and Evolution.*
-British Ecological Society.
+British Ecological Society. (The source papers disagree on authorship: the TADA
+guidelines cite this as Cooper 2017, the code review paper as Cooper & Hsing
+2017.)
 
 **Cooper, N., & Hsing, P.-Y.** (2025). *Guide to Reproducible Code.* British
 Ecological Society.
 
 **Culina, A., van den Berg, I., Evans, S., & Sánchez-Tójar, A.** (2020). *Low
-availability of code in ecology: A call for urgent action.* PLoS Biology 18:
+availability of code in ecology: A call for urgent action.* PLOS Biology 18:
 e3000763.
 
 **Di Tommaso, P., Chatzou, M., Floden, E. W., Barja, P. P., Palumbo, E., &
@@ -173,7 +182,7 @@ collaborative research in ecology and evolution.* EcoEvoRxiv.
 
 **Hunter-Zinck, H., de Siqueira, A. F., Vásquez, V. N., Barnes, R., &
 Martinez, C. C.** (2021). *Ten simple rules on writing clean and reliable
-open-source scientific software.* PLoS Computational Biology 17: e1009481.
+open-source scientific software.* PLOS Computational Biology 17: e1009481.
 
 **Indriasari, T. D., Luxton-Reilly, A., & Denny, P.** (2020). *A review of peer
 code review in higher education.* ACM Transactions on Computing Education 20:
@@ -195,11 +204,11 @@ research software.* F1000Research.
 **Kambouris, S., Wilkinson, D. P., Smith, E. T., & Fidler, F.** (2024).
 *Computationally reproducing results from meta-analyses in ecology and
 evolutionary biology using shared code and data.* PLOS ONE 19: e0300333.
-(Earlier preprint: Kambouris et al. 2023, EcoEvoRxiv,
-<https://doi.org/10.32942/x2x602>.)
+(The code review paper cites the earlier preprint as Kambouris et al. 2023,
+EcoEvoRxiv, <https://doi.org/10.32942/x2x602>.)
 
-**Kane, & Amin.** (2023). *Amending the literature through version control.*
-Biology Letters 19: 20220463.
+**Kane, A., & Amin, B.** (2023). *Amending the literature through version
+control.* Biology Letters 19: 20220463.
 
 **Kang, D., Kang, T., & Jang, J.** (2023). *Papers with code or without code?
 Impact of GitHub repository usability on the diffusion of machine learning
@@ -219,7 +228,7 @@ et al.** (2025). *How to bolster employability through open science.* OSF.
 workflow engine.* Bioinformatics 28: 2520–2522.
 
 **Kurtzer, G. M., Sochat, V., & Bauer, M. W.** (2017). *Singularity: Scientific
-containers for mobility of compute.* PLoS ONE 12: e0177459.
+containers for mobility of compute.* PLOS ONE 12: e0177459.
 
 **Lai, J., Lortie, C. J., Muenchen, R. A., Yang, J., & Ma, K.** (2019).
 *Evaluating the popularity of R in ecology.* Ecosphere 10: e02567.
@@ -252,11 +261,8 @@ development and deployment.* Linux Journal 2014(239): 2.
 **Mislan, K. A. S., Heer, J. M., & White, E. P.** (2016). *Elevating the status
 of code in ecology.* Trends in Ecology & Evolution 31: 4–7.
 
-**Mitra-Behura, S., et al.** (2021). Cited in the TADA guidelines for the
-"works on my computer" problem.
-
-**Müller, K.** (2020). *here: A simpler way to find your files.* (Cited as
-Müller & Bryan 2020 in the TADA guidelines.)
+**Müller, K., & Bryan, J.** (2020). *here: A simpler way to find your files.*
+R package. (The 2023 code review paper cites this as Müller 2020.)
 
 **Müller, K., & Walthert, L.** (2020). *styler: Non-invasive pretty printing of
 R code.* R package version 1.3.2.
@@ -265,13 +271,13 @@ R code.* R package version 1.3.2.
 Drobniak, S. M., Gould, E., Macartney, E. L., Martinig, A. R., Morrison, K., &
 Paquet, M.** (2023). *Method reporting with initials for transparency (MeRIT)
 promotes more granularity and accountability for author contributions.* Nature
-Communications.
+Communications 14: 1788.
 
 **National Academies of Sciences, Engineering, and Medicine** (2019).
 *Understanding reproducibility and replicability.* In: *Reproducibility and
 Replicability in Science.* National Academies Press (US).
 
-**Okken, B.** (2022). *Python testing with pytest.*
+**Okken, B.** (2022). *Python testing with pytest.* Pragmatic Bookshelf.
 
 **Patel, B., Soundarajan, S., Ménager, H., & Hu, Z.** (2023). *Making
 biomedical research software FAIR: Actionable step-by-step guidelines with a
@@ -282,8 +288,8 @@ workflow with R Markdown, Git, Make, and Docker.* Quantitative and
 Computational Methods in Behavioral Sciences.
 
 **Petersen, A. H., & Ekstrøm, C. T.** (2019). *dataMaid: Your assistant for
-documenting supervised data quality screening in R.* (The package is now
-`dataReporter`.)
+documenting supervised data quality screening in R.* Journal of Statistical
+Software 90: 1–38. (The package is now `dataReporter`.)
 
 **Pipenv Maintainer Team** (2023). *pipenv: Python development workflow for
 humans.*
@@ -291,7 +297,7 @@ humans.*
 **Powers, S. M., & Hampton, S. E.** (2019). *Open science, reproducibility, and
 transparency in ecology.* Ecological Applications 29: e01822.
 
-**Rocholl** (2022). *pycodestyle.*
+**Rocholl, J. C.** (2022). *pycodestyle: Python style guide checker.*
 
 **Rokem, A.** (2024). *Ten simple rules for scientific code review.* PLOS
 Computational Biology 20: e1012375.

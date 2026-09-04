@@ -6,19 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>3 T — Transferable | The TADA-Wiki</title>
 <meta name="author" content="A community wiki built on the TADA guidelines">
-<meta name="description" content="Transferability is the ability for anyone to open the file, view and run the code without conversion or alteration. It covers the FAIR principle of interoperability — anyone can open and use your...">
+<meta name="description" content="Transferability is the ability for anyone to open the file, view and run the code without conversion or alteration. It covers the FAIR principle of interoperability, meaning that anyone can open...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="3 T — Transferable | The TADA-Wiki">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Transferability is the ability for anyone to open the file, view and run the code without conversion or alteration. It covers the FAIR principle of interoperability — anyone can open and use your...">
+<meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/transferable.html">
+<meta property="og:description" content="Transferability is the ability for anyone to open the file, view and run the code without conversion or alteration. It covers the FAIR principle of interoperability, meaning that anyone can open...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="3 T — Transferable | The TADA-Wiki">
-<meta name="twitter:description" content="Transferability is the ability for anyone to open the file, view and run the code without conversion or alteration. It covers the FAIR principle of interoperability — anyone can open and use your...">
+<meta name="twitter:description" content="Transferability is the ability for anyone to open the file, view and run the code without conversion or alteration. It covers the FAIR principle of interoperability, meaning that anyone can open...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="theme-color" content="#0F6E7B">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230F6E7B'/%3E%3Ctext%20x='50'%20y='70'%20font-family='Georgia,serif'%20font-size='58'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -62,7 +62,7 @@
 </ul>
 
         <div class="book-extra">
-          
+          <p><a id="book-repo" href="https://github.com/EIvimeyCook/TADA-Wiki">View book source <i class="fab fa-github"></i></a></p>
         </div>
       </nav>
 </div>
@@ -71,13 +71,13 @@
 <span class="header-section-number">3</span> <span class="k-t">T</span> — Transferable<a class="anchor" aria-label="anchor" href="#transferable"><i class="fas fa-link"></i></a>
 </h1>
 <div class="tada-key">
-<p><strong>Transferability</strong> is the ability for anyone to open the file, view and run
-the code <strong>without conversion or alteration</strong>. It covers the FAIR principle of
-interoperability — anyone can open and use your code — and extends it so that
-the code also runs on <strong>different computers and operating systems</strong>.</p>
+<p><strong>Transferability</strong> is the ability for anyone to open the file, view and run the
+code <strong>without conversion or alteration</strong>. It covers the FAIR principle of
+interoperability, meaning that anyone can open and use your code, and extends it
+so that the code also runs on <strong>different computers and operating systems</strong>.</p>
 </div>
-<p>Two things make code transferable, and they are independent. Get one wrong and
-the other does not save you.</p>
+<p>Transferability has two independent requirements, and satisfying one does not
+compensate for failing the other.</p>
 <ol style="list-style-type: decimal">
 <li>The code is saved in a <strong>file type any text editor or IDE can open</strong>.</li>
 <li>The code contains <strong>no paths specific to your machine</strong>.</li>
@@ -89,22 +89,22 @@ the other does not save you.</p>
 <p>Save code with an extension that matches the language: <strong><code>.R</code></strong>, <strong><code>.py</code></strong>,
 <strong><code>.cpp</code></strong>, or the equivalent standard format. These can be viewed, edited and
 saved by any text editor or IDE (RStudio, VS Code, PyCharm) on any system.</p>
-<p><strong>Do not share code inside <code>.PDF</code> or <code>.docx</code> files.</strong> A PDF can be <em>viewed</em>,
-but it cannot be opened and edited in an IDE without extra libraries or
-software, or without converting it to another file type first.</p>
+<p><strong>Do not share code inside <code>.PDF</code> or <code>.docx</code> files.</strong> A PDF can be <em>viewed</em>, but
+it cannot be opened and edited in an IDE without extra libraries or software, or
+without first converting it to another file type.</p>
 <div class="tada-warn">
 <p>The deeper problem with PDFs and Word documents is what happens when someone
-copies out of them. Copy-pasting from these formats can change characters —
-apostrophes are the classic — alter white space, or drag in unwanted extras
-such as line numbers and headers. The result is code errors that are
-<strong>sometimes difficult to spot or time consuming to fix</strong>, because the code
-looks correct.</p>
+copies out of them. Copy-pasting from these formats can change characters, of
+which apostrophes are the classic example, alter white space, or drag in
+unwanted extras such as line numbers and headers. The resulting errors are
+<strong>sometimes difficult to spot or time consuming to fix</strong>, because the code looks
+correct.</p>
 </div>
 <p><strong>A note on <code>.txt</code>.</strong> A plain text file does let people copy and paste without
-those problems. But it causes a different issue: many IDEs interpret the coding
-language from the extension. Without the <code>.R</code> extension, an IDE may not
-recognise the file as R and may not let you execute it until you re-save it as
-<code>.R</code>. Use the language’s own extension.</p>
+those problems, but it introduces a different one. Many IDEs infer the coding
+language from the extension, so without the <code>.R</code> extension an IDE may not
+recognise the file as R and may refuse to execute it until it is re-saved. Use
+the language’s own extension.</p>
 <p><strong>If your language does not use a standard file type</strong>, apply this test: <em>can
 the resulting file be opened by a text editor?</em> SPSS syntax <code>.sps</code> files, for
 example, can be read in a text editor, so they pass.</p>
@@ -113,29 +113,30 @@ example, can be read in a text editor, so they pass.</p>
 <h2>
 <span class="header-section-number">3.2</span> Avoid local and user-specific file paths<a class="anchor" aria-label="anchor" href="#transferable-paths"><i class="fas fa-link"></i></a>
 </h2>
-<p>This is the single most common cause of code that “worked when I sent it”.</p>
-<p>File paths must be written so they do not depend on your local environment or
-directory structure. That means <strong>relative</strong> file paths rather than local or
-user-specific ones. It also means putting <strong>data, code, and all necessary
-materials in a single project directory</strong> — relative paths have to be relative
-to <em>something</em>.</p>
+<p>This is one of the most common reasons that code which ran perfectly well for
+its author fails for everyone else (SORTEE, Stage 5).</p>
+<p>File paths must be written so that they do not depend on your local environment
+or directory structure, which means using <strong>relative</strong> file paths rather than
+local or user-specific ones. It also means putting <strong>data, code and all
+necessary materials in a single project directory</strong>, since a relative path has
+to be relative to something.</p>
 <div class="tada-compare">
 <div class="tada-before">
 <p>Before</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"C:/Users/ed/Desktop/caterpillar_paper/analysis"</span><span class="op">)</span></span>
 <span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"caterpillars_2024.csv"</span><span class="op">)</span></span></code></pre></div>
-<p>Sets a working directory that exists on exactly one computer, running one
+<p>This sets a working directory that exists on exactly one computer, running one
 operating system, belonging to one person. Everyone else gets an error before
-the data is even loaded.</p>
+the data have even loaded.</p>
 </div>
 <div class="tada-after">
 <p>After</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span></span>
 <span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"caterpillars_2024.csv"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p>Agnostic of operating system and of where the project folder sits. Anyone who
-downloads the project can load the data.</p>
+<p>This is agnostic both of the operating system and of where the project folder
+sits, so anyone who downloads the project can load the data.</p>
 </div>
 </div>
 <div id="how-to-do-it" class="section level3 unlisted unnumbered">
@@ -148,55 +149,54 @@ downloads the project can load the data.</p>
 </h4>
 <p><strong>Use an RStudio project.</strong> <em>File → New Project</em> creates a <code>.Rproj</code> file. Open
 the project and RStudio automatically sets the working directory to the project
-folder, so you never need <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> at all.
+folder, so <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> is never needed.
 See <a href="https://docs.posit.co/ide/user/ide/get-started/" class="uri">https://docs.posit.co/ide/user/ide/get-started/</a>.</p>
-<p><strong>Use the <code>here</code> package</strong> (Müller &amp; Bryan 2020). <code><a href="https://here.r-lib.org/reference/here.html">here()</a></code> builds paths
-relative to the project directory, whatever the operating system:</p>
+<p><strong>Use the <code>here</code> package</strong> (Müller &amp; Bryan 2020). <code><a href="https://here.r-lib.org/reference/here.html">here()</a></code> builds paths relative
+to the project directory, whatever the operating system:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">raw</span>     <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"caterpillars_2024.csv"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">clean</span>   <span class="op">&lt;-</span> <span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"processed"</span>, <span class="st">"caterpillars_clean.csv"</span><span class="op">)</span></span>
 <span><span class="va">figure</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"output"</span>, <span class="st">"figures"</span>, <span class="st">"fig3_abundance.png"</span><span class="op">)</span></span></code></pre></div>
-<p><strong>Use both.</strong> The TADA authors recommend RStudio projects <em>and</em> <code>here</code> together
-to maximise transferability across operating systems.</p>
+<p><strong>Use both.</strong> The TADA authors recommend RStudio projects and <code>here</code> together to
+maximise transferability across operating systems.</p>
 <p><strong>Without an IDE</strong>, launching R from inside the project directory achieves a
 similar effect.</p>
 <div class="tada-warn">
 <p>Whatever you do, avoid <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code>. It sets a path that is specific to both the
-operating system and the user, and it is the thing that causes other people to
-hit errors when they run your code.</p>
+operating system and the user, and it is a frequent cause of errors when other
+people run your code.</p>
 </div>
 </div>
 <div id="python" class="section level4 unlisted unnumbered">
 <h4>Python<a class="anchor" aria-label="anchor" href="#python"><i class="fas fa-link"></i></a>
 </h4>
-<p><strong>Use <code>pyprojroot</code></strong> (Chen 2023), which creates file paths relative to the
-project directory regardless of operating system — the Python counterpart to
-<code>here</code>:</p>
+<p><strong>Use <code>pyprojroot</code></strong> (Chen 2023), the Python counterpart to <code>here</code>, which builds
+file paths relative to the project directory regardless of operating system:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="transferable.html#cb6-1" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here</span>
 <span id="cb6-2"><a href="transferable.html#cb6-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb6-3"><a href="transferable.html#cb6-3" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="transferable.html#cb6-4" tabindex="-1"></a>raw <span class="op">=</span> pd.read_csv(here(<span class="st">"data/raw/caterpillars_2024.csv"</span>))</span></code></pre></div>
 <p><strong>Work inside the project directory.</strong> Running an instance of Python within the
-specific project folder removes the need for local file paths.</p>
+project folder removes the need for local file paths.</p>
 <div class="tada-warn">
-<p>Avoid <code>os.chdir()</code>, the Python equivalent of <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code>. It has the same
-problem: it hard-codes a path that only exists on your machine.</p>
+<p>Avoid <code>os.chdir()</code>, the Python equivalent of <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code>. It has the same problem:
+it hard-codes a path that only exists on your machine.</p>
 </div>
 </div>
 <div id="other-ides" class="section level4 unlisted unnumbered">
 <h4>Other IDEs<a class="anchor" aria-label="anchor" href="#other-ides"><i class="fas fa-link"></i></a>
 </h4>
-<p><strong>VS Code.</strong> Navigate to the project folder and open <em>the folder</em> (not the
-individual file). This performs a similar action to using an RStudio project —
-the workspace root becomes the reference point for relative paths.</p>
+<p><strong>VS Code.</strong> Navigate to the project folder and open <em>the folder</em> rather than
+the individual file. This performs a similar action to using an RStudio project,
+in that the workspace root becomes the reference point for relative paths.</p>
 <p><strong>Standalone interpreters.</strong> Launching R or Python from within the project
-directory does the same thing: the working directory is the project, and every
+directory does the same thing. The working directory is the project, and every
 path in the code can be relative to it.</p>
-<p><strong>Any language.</strong> The principle does not depend on the tool. Organise
-everything into one project directory, then write every path relative to the
-top of that directory.</p>
+<p><strong>Any language.</strong> The principle does not depend on the tool. Organise everything
+into one project directory, then write every path relative to the top of that
+directory.</p>
 </div>
 </div>
 <div class="tada-note">
@@ -211,20 +211,21 @@ file, or activate a virtual environment, before running anything. See
 <h2>
 <span class="header-section-number">3.3</span> Beyond TADA: environments and pipelines<a class="anchor" aria-label="anchor" href="#transferable-beyond"><i class="fas fa-link"></i></a>
 </h2>
-<p>Explicitly beyond the scope of TADA, but worth knowing, because both address
-failures that relative paths alone cannot fix.</p>
-<p><strong>Containerisation</strong> — <strong>Docker</strong> (Merkel 2014) and <strong>Singularity</strong> (Kurtzer et
-al. 2017) — uses images that encapsulate a complete software environment,
-including all required programs and libraries. This helps ensure environment
-reproducibility between systems and avoids the common <em>“works on my computer”</em>
-problem.</p>
-<p><strong>Workflow managers</strong> — <strong>Snakemake</strong> (Köster &amp; Rahmann 2012) and <strong>Nextflow</strong>
-(Di Tommaso et al. 2017) — specify the sequence of scripts or computational
-steps in a pipeline and their dependencies, ensuring each step executes in a
-defined and reproducible order.</p>
-<p>Neither is required by TADA. If you are already comfortable with them, they
-strengthen transferability considerably. If not, relative paths and a good
-README get you most of the way.</p>
+<p>Both of the following sit explicitly beyond the scope of TADA, but they are
+worth knowing about, because they address failures that relative paths alone
+cannot fix.</p>
+<p><strong>Containerisation</strong>, through <strong>Docker</strong> (Merkel 2014) and <strong>Singularity</strong>
+(Kurtzer et al. 2017), uses images that encapsulate a complete software
+environment, including all required programs and libraries. This helps ensure
+environment reproducibility between systems and avoids the common <em>“works on my
+computer”</em> problem.</p>
+<p><strong>Workflow managers</strong>, such as <strong>Snakemake</strong> (Köster &amp; Rahmann 2012) and
+<strong>Nextflow</strong> (Di Tommaso et al. 2017), specify the sequence of scripts or
+computational steps in a pipeline and their dependencies, ensuring that each
+step executes in a defined and reproducible order.</p>
+<p>Neither is required by TADA. If you are already comfortable with them they
+strengthen transferability considerably, but relative paths and a good README
+will get you most of the way on their own.</p>
 </div>
 <div id="transferable-checklist" class="section level2" number="3.4">
 <h2>
@@ -237,10 +238,10 @@ README get you most of the way.</p>
 <li><label><input type="checkbox">No <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> (R) or <code>os.chdir()</code> (Python) anywhere in the code</label></li>
 <li><label><input type="checkbox">No absolute paths (<code>/Users/…</code>, <code>C:/…</code>, <code>~/Dropbox/…</code>)</label></li>
 <li><label><input type="checkbox">Paths are built with <code><a href="https://here.r-lib.org/reference/here.html">here()</a></code> / <code>pyprojroot</code>, or are relative to the project root</label></li>
-<li><label><input type="checkbox">The project opens via <code>.Rproj</code> / a virtual environment, and this is stated in the README</label></li>
-<li><label><input type="checkbox">Test: copy the project to a different folder (ideally a different machine) and run it</label></li>
+<li><label><input type="checkbox">The project opens via <code>.Rproj</code> or a virtual environment, and this is stated in the README</label></li>
+<li><label><input type="checkbox">The project has been copied to a different folder, ideally on a different machine, and run successfully</label></li>
 </ul>
-<p><strong>Next:</strong> <a href="available.html#available">Available</a> — getting it archived with a DOI.</p>
+<p><strong>Next:</strong> <a href="available.html#available">Available</a>, on getting the code archived with a DOI.</p>
 
 </div>
 </div>
@@ -261,7 +262,8 @@ README get you most of the way.</p>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+<li><a id="book-source" href="https://github.com/EIvimeyCook/TADA-Wiki/blob/main/03-transferable.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/EIvimeyCook/TADA-Wiki/edit/main/03-transferable.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -273,7 +275,7 @@ README get you most of the way.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 02 September 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 04 September 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

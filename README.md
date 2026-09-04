@@ -1,7 +1,7 @@
 <h1 align="center">TADA-Wiki</h1>
 
 <p align="center">
-  <em>Best practice for sharing analytical code — a bookdown wiki built on the
+  <em>Best practice for sharing analytical code: a bookdown wiki built on the
   TADA guidelines.</em>
 </p>
 
@@ -19,14 +19,14 @@
 The TADA-Wiki is a practical reference on **how to share the analytical code
 behind a paper** so that someone else can actually run it.
 
-It is built around **TADA** — Transferable, Available, Documented, Annotated —
-and surrounds those four guidelines with the practices that go with them:
-metadata, licences, repository choice, the SORTEE guidelines for data and code
-quality control, and code review.
+It is built around **TADA** (Transferable, Available, Documented, Annotated) and
+sets those four guidelines alongside the practices that go with them: metadata,
+licences, repository choice, the SORTEE guidelines for data and code quality
+control, and code review.
 
 The wiki exists because the gap between policy and practice is wide. In ecology
-and evolutionary biology, 88% of journals had code-sharing policies by 2024,
-but only 5–33% of articles share code — and of the code that is shared, 74% of
+and evolutionary biology, 88% of journals had code-sharing policies by 2024, yet
+only 5–33% of articles share code, and of the code that is shared, 74% of
 archived R files in one large study failed to run without error. TADA sets a
 **minimum standard** that closes most of that gap, and is achievable by
 researchers at any level of coding experience.
@@ -36,7 +36,7 @@ researchers at any level of coding experience.
 | Chapter | What it covers |
 |---|---|
 | Welcome | What the wiki is, TADA in four cards, where the guidance comes from |
-| Start here | Pre-submission checklist, project layout, the three mistakes that break other people's runs |
+| Start here | Pre-submission checklist, project layout, three common causes of failure |
 | TADA at a glance | Why TADA exists, the evidence, how it maps onto FAIR |
 | Transferable | File types, relative paths, `here` / `pyprojroot`, containers and workflow managers |
 | Available | Persistent identifiers, why GitHub is not an archive, repository comparison, embargoes and anonymisation |
@@ -128,10 +128,10 @@ The wiki is a synthesis of three papers, all included in `papers/`:
   scientific workflow: Insights from ecology and evolutionary biology.* Journal
   of Evolutionary Biology 36: 1347–1356. <https://doi.org/10.1111/jeb.14230>
 
-Where the wiki extends beyond these papers — worked examples, comparison
-tables, checklists, the reviewer's script — that material is labelled **wiki
-guidance** rather than presented as a finding from the papers. This separation
-is the one rule for contributors.
+Where the wiki extends beyond these papers, with worked examples, comparison
+tables, checklists and the reviewer's script, that material is labelled **wiki
+guidance** rather than presented as a finding of the papers. That separation is
+the sourcing rule for contributors.
 
 ## Bug reports and contributions
 
@@ -142,9 +142,8 @@ evolutionary biology.
 - **Something wrong or out of date?** Open an
   [issue](https://github.com/EIvimeyCook/TADA-Wiki/issues).
 - **Adding a page?** Copy `templates/page-template.Rmd`, register it in
-  `_bookdown.yml`, build, and open a pull request. The *Contribute* chapter has
-  the full conventions — cross-references, callouts, tabs, and the sourcing
-  rule.
+  `_bookdown.yml`, build and open a pull request. The *Contribute* chapter has
+  the full conventions: cross-references, callouts, tabs and the sourcing rule.
 
 Before opening a PR, check that `Rscript render.R` completes without errors and
 that new sources are added to `11-references.Rmd`.
@@ -167,20 +166,28 @@ To cite the wiki itself, GitHub's *Cite this repository* button reads
 Edward R. Ivimey-Cook — e.ivimeycook@gmail.com
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--4910--0443-A6CE39.svg)](https://orcid.org/0000-0003-4910-0443)
 
-## License
+## Licence
 
 Dual licensed, as is usual for a project that is part code and part writing:
 
-- **Code** — the build script, `assets/style.css`, `assets/tada.js` and the
-  templates — under the [MIT License](LICENSE).
-- **Content** — the wiki text in the `.Rmd` chapters — under
+- **Code**, meaning the build script, `assets/style.css`, `assets/tada.js` and
+  the templates, under the [MIT License](LICENSE).
+- **Content**, meaning the wiki text in the `.Rmd` chapters, under
   [CC BY 4.0](LICENSE-CONTENT).
 
 The three PDFs in `papers/` remain under their original licences. The SORTEE
 guidelines paper is open access under CC BY 4.0.
 
-## AI Declaration
+## A note on third-party requests
+
+Every rendered page loads jQuery, Bootstrap and Font Awesome from
+`cdnjs.cloudflare.com` and `kit.fontawesome.com`. This is bookdown's default
+behaviour for `bs4_book`, not a choice made here, but it does mean the site
+needs a network connection and that visitor IP addresses reach those two
+services.
+
+## AI declaration
 
 Claude (Anthropic) was used to draft and structure the wiki chapters from the
 three source papers, and to write the CSS and JavaScript in `assets/`. All
-content was reviewed against the source papers by the author.
+content was subsequently checked against the source papers by the author.

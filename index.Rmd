@@ -4,14 +4,14 @@ subtitle: "Best practice for sharing analytical code"
 author: "A community wiki built on the TADA guidelines"
 date: "Last built: `r format(Sys.Date(), '%d %B %Y')`"
 site: bookdown::bookdown_site
-documentclass: book
-description: |
+description: >-
   A practical wiki on best practice for sharing analytical code, built around
   the TADA guidelines (Transferable, Available, Documented, Annotated), with
   chapters on data-sharing basics, metadata, licences, the SORTEE data and
   code quality control guidelines, and code review.
+url: https://eivimeycook.github.io/TADA-Wiki/
+github-repo: "EIvimeyCook/TADA-Wiki"
 link-citations: true
-github-repo: "YOUR-ORG/TADA-Wiki"
 ---
 
 ```{r setup, include = FALSE}
@@ -28,43 +28,44 @@ knitr::opts_chunk$set(
 ::: {.tada-hero}
 <p class="tada-eyebrow">Best practice for code sharing</p>
 
-## Your analysis should still run when someone else opens it. {.unlisted .unnumbered}
+## Code that still runs when someone else opens it {.unlisted .unnumbered}
 
-Most published analytical code is never shared. When it *is* shared, it very
-often does not run. This wiki is about closing that gap with four things you
-can do in an afternoon.
+Most of the analytical code behind published papers is never shared, and a good
+deal of what is shared does not run. This wiki covers four things you can do to
+a project before you submit it that, between them, fix most of the problem.
 :::
 
 ## What this wiki is {.unnumbered}
 
 Sharing code is essential for transparency and computational reproducibility,
-and journal policies increasingly require it. But the proportion of papers in
-ecology and evolutionary biology with open code remains low — reported rates
-range from roughly **5% to 33%** — and lags far behind open data. Worse, code
-that *is* shared often does not work: in one review of over 9,000 R files
-archived in the Harvard Dataverse, **74% failed to complete without error**,
-falling only to **56%** after automated cleaning (removing local file paths,
-fixing library installation and loading). In a study of species distribution
-and abundance papers, the authors had to abandon their reproducibility
-assessment because **93% of scripts** did not run, or ran with errors.
+and journal policies increasingly require it. Even so, the proportion of papers
+in ecology and evolutionary biology that share code remains low, with reported
+rates ranging from roughly **5% to 33%**, well behind the equivalent figures for
+open data. Code that is shared also frequently fails to run. In a review of over
+9,000 R files archived in the Harvard Dataverse, **74% failed to complete
+without error**, and that figure only fell to **56%** after automated cleaning
+(removing local file paths and fixing library installation and loading). A study
+of species distribution and abundance papers abandoned its reproducibility
+assessment altogether because **93% of scripts** either did not run or ran with
+errors.
 
-A major reason is simply not knowing how to archive analytical code properly.
-Existing resources tend to be written for *software developers* rather than for
-researchers writing a one-off analysis for one dataset.
+One reason is that researchers are rarely taught how to archive analytical code.
+The resources that do exist are written largely for *software developers*, not
+for someone preparing a one-off analysis of a single dataset.
 
-**TADA** — Transferable, Available, Documented, Annotated — is a set of simple
-guidelines aimed exactly at that gap. This wiki turns TADA into a working
-reference, and surrounds it with the related practices you need: metadata,
-licences, repository choice, the SORTEE data and code quality control
-guidelines, and code review.
+**TADA** (Transferable, Available, Documented, Annotated) is a set of simple
+guidelines aimed at that gap. This wiki expands them into a working reference and
+sets them alongside the practices that go with them: metadata, licences,
+repository choice, the SORTEE data and code quality control guidelines, and code
+review.
 
-## TADA in four cards {.unnumbered}
+## The four principles {.unnumbered}
 
 ::: {.tada-cards}
 ::: {.tada-card .t}
 [T]{.tada-letter} [Transferable]{.tada-word}
-[Anyone can open your file and run it, on their machine, without converting or
-editing it first.]{.tada-gloss}
+[Anyone can open your file and run it on their own machine, without converting
+or editing it first.]{.tada-gloss}
 :::
 
 ::: {.tada-card .a1}
@@ -81,24 +82,23 @@ where the data live.]{.tada-gloss}
 
 ::: {.tada-card .a2}
 [A]{.tada-letter} [Annotated]{.tada-word}
-[Comments inside the code say what each chunk does, why, and which result in
-the paper it produces.]{.tada-gloss}
+[Comments inside the code say what each chunk does, why it is needed and which
+result in the paper it produces.]{.tada-gloss}
 :::
 :::
 
 ::: {.tada-key}
-TADA is deliberately a **minimum standard**, not a counsel of perfection.
-Analytical code is usually tailored to one dataset and one study — its job is
-to be a transparent, reproducible record of that analysis, not to become
-reusable software. TADA sets the bar where it needs to be for that job, and
-maps onto the FAIR principles while it does so.
+TADA is deliberately a **minimum standard**. Analytical code is usually written
+for one dataset and one study, and its job is to be a transparent, reproducible
+record of that analysis rather than reusable software. TADA sets the bar at what
+that job requires, and maps onto the FAIR principles as it does so.
 :::
 
 ## How to use this wiki {.unnumbered}
 
 | If you want to… | Go to |
 |---|---|
-| Get code ready to submit, today | [Start here](#quickstart) |
+| Get code ready to submit | [Start here](#quickstart) |
 | Understand TADA and how it maps to FAIR | [TADA at a glance](#tada) |
 | Work through one principle at a time | [Transferable](#transferable), [Available](#available), [Documented](#documented), [Annotated](#annotated) |
 | Write a README, pick a licence, choose a repository | [Data & code sharing](#data-sharing) |
@@ -107,34 +107,33 @@ maps onto the FAIR principles while it does so.
 | Find guides, tutorials and papers | [Further reading](#further-reading) |
 | Add a page to this wiki | [Contribute](#contribute) |
 
-Each chapter is self-contained, so it is fine to arrive from a search and read
-only the section you need. Cross-references point to the rest.
+Each chapter stands on its own, so you can arrive from a search and read only
+the section you need. Cross-references will take you to the rest.
 
 ## Who this is for {.unnumbered}
 
-Researchers at **any** level of coding experience who need to share the code
-behind a paper. The examples use R and Python, because those are the languages
-most used in ecology and evolutionary biology, but the principles apply to
-workflow languages (e.g. Snakemake) and compiled languages (e.g. C++) too, and
-to disciplines well beyond ecology.
+Researchers at any level of coding experience who need to share the code behind
+a paper. The examples use R and Python, since those are the languages most used
+in ecology and evolutionary biology, but the principles apply equally to
+workflow languages such as Snakemake, to compiled languages such as C++, and to
+disciplines well beyond ecology.
 
-You do **not** need to know Git, Docker or unit testing to follow this wiki.
-Those tools appear where they genuinely help, and are always marked as
-optional extras rather than requirements.
+You do not need to know Git, Docker or unit testing to follow this wiki. Where
+those tools are useful they are mentioned, but always as optional extras rather
+than requirements.
 
 ## Where the guidance comes from {.unnumbered}
 
-This wiki is a synthesis of three sources, all of which are worth reading in
-full. Copies, and their terms of use, are in
-[`papers/`](papers/README.md).
+This wiki draws on three sources, all of which are worth reading in full. Copies,
+and their terms of use, are in [`papers/`](papers/README.md).
 
 - **Ivimey-Cook, E. R., Culina, A., Dimri, S., Grainger, M. J., Kar, F.,
   Lagisz, M., Moran, N. P., Nakagawa, S., Roche, D. G., Tattan, S.,
   Sánchez-Tójar, A., Windecker, S. M., & Pick, J. L.** *TADA! Simple guidelines
   to improve analytical code sharing for transparency and reproducibility.*
-  → the four TADA principles, and the [Transferable](#transferable),
-  [Available](#available), [Documented](#documented) and
-  [Annotated](#annotated) chapters.
+  <br>*Underpins* the four TADA principles and the
+  [Transferable](#transferable), [Available](#available),
+  [Documented](#documented) and [Annotated](#annotated) chapters.
 
 - **Pick, J. L., Allen, B. J., Bachelot, B., Bairos-Novak, K. R., Brand, J. A.,
   Class, B., Dallas, T., D'Amelio, P. B., Fenollosa, E., Fernández-Juricic, E.,
@@ -144,7 +143,7 @@ full. Copies, and their terms of use, are in
   & Ivimey-Cook, E. R. (2026).** *The SORTEE guidelines for data and code
   quality control in ecology and evolutionary biology.* **Peer Community
   Journal 6: e20.** <https://doi.org/10.24072/pcjournal.687>
-  → the [SORTEE guidelines](#sortee) section and most of
+  <br>*Underpins* the [SORTEE guidelines](#sortee) section and most of
   [Data & code sharing](#data-sharing).
 
 - **Ivimey-Cook, E. R., Pick, J. L., Bairos-Novak, K. R., Culina, A.,
@@ -153,14 +152,14 @@ full. Copies, and their terms of use, are in
   *Implementing code review in the scientific workflow: Insights from ecology
   and evolutionary biology.* **Journal of Evolutionary Biology 36: 1347–1356.**
   <https://doi.org/10.1111/jeb.14230>
-  → the [Code review](#code-review) chapter.
+  <br>*Underpins* the [Code review](#code-review) chapter.
 
 Full details, plus everything else cited, are in [References](#references).
 
 ::: {.tada-note}
-Where this wiki adds practical detail that goes beyond the source papers — a
-worked README, a repository comparison table, a reviewer script — it is marked
-as **wiki guidance** rather than presented as a finding from the papers.
+Where this wiki adds practical detail beyond the source papers, such as a worked
+README, a repository comparison table or a reviewer's script, that material is
+marked as **wiki guidance** rather than presented as a finding of the papers.
 :::
 
 ## Building this wiki {.unnumbered}
@@ -169,5 +168,5 @@ as **wiki guidance** rather than presented as a finding from the papers.
 Rscript render.R
 ```
 
-The rendered site lands in `docs/`. See [Contribute](#contribute) for the file
-layout, the page template, and how to add a chapter.
+The rendered site is written to `docs/`. See [Contribute](#contribute) for the
+file layout, the page template, and how to add a chapter.

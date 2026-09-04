@@ -83,4 +83,11 @@ bookdown::render_book(
 # render_book leaves this behind if a build fails partway through.
 if (file.exists("_main.Rmd")) file.remove("_main.Rmd")
 
+# GitHub Pages runs Jekyll by default, which ignores directories beginning with
+# an underscore (bookdown writes libs/ but rmarkdown can emit _files/ too). The
+# build does not create this, so a clean docs/ would silently break Pages.
+if (!file.exists(file.path("docs", ".nojekyll"))) {
+  file.create(file.path("docs", ".nojekyll"))
+}
+
 message("\nDone. Open docs/index.html to preview.")

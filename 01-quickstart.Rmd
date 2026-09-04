@@ -1,32 +1,34 @@
 # Start here {#quickstart}
 
-You have a paper going out. Your code lives in a folder that made sense to you
-six months ago. This chapter is the shortest path from that to something a
-stranger can download, open and run.
+This chapter is for the situation most people are actually in: a paper is going
+out, and the code behind it sits in a folder whose logic made sense at the time.
+What follows is the shortest route from that to something a stranger can
+download, open and run.
 
 ::: {.tada-key}
-Four passes over your project, roughly in this order: fix the **paths and file
-types**, **archive** it and get a DOI, write the **README**, and **annotate**
-the scripts. Then have a colleague try to run it before a reviewer does.
+Make four passes over the project, roughly in this order. Fix the **paths and
+file types**, **archive** it and get a DOI, write the **README**, then
+**annotate** the scripts. Finally, ask a colleague to run the whole thing before
+a reviewer has to.
 :::
 
 ## The pre-submission checklist {#quickstart-checklist}
 
-This is TADA as a single list. Each item links to the chapter that explains it.
+This is TADA as a single list. Each group links to the chapter that explains it.
 
 **Transferable** — [full chapter](#transferable)
 
 - [ ] Every script is saved with a standard code extension (`.R`, `.py`, `.cpp`, …), not inside a `.docx` or `.pdf`
-- [ ] No `setwd()` (R) or `os.chdir()` (Python) anywhere
-- [ ] No absolute paths (`/Users/you/…`, `C:/Users/you/…`) — relative paths only
+- [ ] No `setwd()` (R) or `os.chdir()` (Python) appears anywhere in the code
+- [ ] No absolute paths (`/Users/you/…`, `C:/Users/you/…`) remain; paths are relative
 - [ ] Data, code and materials all live in **one** project directory
-- [ ] You have opened the project from a clean start and it still runs
+- [ ] The project has been opened from a clean start and still runs
 
 **Available** — [full chapter](#available)
 
 - [ ] Code is deposited in an immutable repository that mints a persistent identifier (Zenodo, Figshare, …)
-- [ ] You have the DOI, and it is **cited in the manuscript text and reference list**
-- [ ] If you developed on GitHub, you made a release and linked it to Zenodo — GitHub alone is not an archive
+- [ ] The DOI is **cited in the manuscript text and reference list**
+- [ ] If the code was developed on GitHub, a release has been created and linked to Zenodo, since GitHub alone is not an archive
 
 **Documented** — [full chapter](#documented)
 
@@ -34,7 +36,7 @@ This is TADA as a single list. Each item links to the chapter that explains it.
 - [ ] It names the manuscript, the authors, a contact address, and any funders
 - [ ] It lists software **and version** (e.g. R v4.3.3) and key packages **and versions** (e.g. ggplot2 v3.5.1)
 - [ ] It states the licence
-- [ ] It says where the data are (ideally with their own DOI)
+- [ ] It says where the data are, ideally with their own DOI
 - [ ] It says what each file is, what order to run things in, what the code needs and what it produces
 - [ ] It flags anything slow or resource-hungry
 - [ ] A licence is actually attached to the deposit
@@ -47,20 +49,23 @@ This is TADA as a single list. Each item links to the chapter that explains it.
 
 **Before you submit** — [full chapter](#code-review)
 
-- [ ] Someone else has run the whole thing from the archived files and it worked
+- [ ] Someone else has run the whole project from the archived files, successfully
 - [ ] `set.seed()` / `random.seed()` is set before anything stochastic
 
 ::: {.tada-tip}
-The single highest-value check on this page: **download your own archived
-deposit into a fresh, empty folder on a different machine, and run it.** Almost
-every reproducibility failure in the literature would have been caught by this.
+The most useful check on this page is to **download your own archived deposit
+into a fresh, empty folder, ideally on a different machine, and run it.** Wiki
+guidance: this is the cheapest way to catch the failures the SORTEE guidelines
+group under Stage 5, meaning paths, missing packages and missing files. It will
+not catch the Stage 6 failures, such as stochasticity and version sensitivity,
+which need a seed and a documented environment instead.
 :::
 
 ## A project layout that works {#quickstart-layout}
 
-Wiki guidance, following the folder-and-file conventions recommended for
-reviewable code. The point is not this exact tree — it is that the ordering and
-purpose of everything is obvious without asking you.
+The example tree below is wiki guidance; the two conventions it embodies are
+from Ivimey-Cook et al. (2023, §3.1). The specific layout matters less than the
+result: a reader can see the order and purpose of every file without asking you.
 
 ```
 my-project/
@@ -83,29 +88,30 @@ my-project/
     └── models/               <- saved model objects for slow fits
 ```
 
-Two conventions are doing most of the work here:
+Most of the work is being done by two conventions.
 
 1. **Numbered scripts.** A reader knows the order to run things in without
-   being told. `01_`, `02_`, `03_`.
+   being told: `01_`, `02_`, `03_`.
 2. **`data/raw/` is read-only.** Cleaning writes to `data/processed/`. Raw data
-   is never modified or overwritten by a script, so a botched cleaning step can
-   never destroy the original.
+   are never modified or overwritten by a script, so a botched cleaning step
+   cannot destroy the original.
 
-## The three mistakes that break other people's runs {#quickstart-mistakes}
+## Three common causes of failure {#quickstart-mistakes}
 
 | Mistake | Why it breaks | Fix |
 |---|---|---|
-| `setwd("C:/Users/ed/Desktop/analysis")` | The path exists on exactly one computer | An RStudio project or a Python virtual environment in the project folder, plus `here()` / `pyprojroot` |
-| Code shared as a `.pdf` or `.docx` | Copy-pasting silently mangles apostrophes, quotes, and whitespace, and drags in line numbers and headers | Save as `.R` / `.py` |
-| No `set.seed()` before a simulation or MCMC run | Results change every run, so nobody can tell a real mismatch from noise | Set a seed at the top of each independently-runnable section |
+| `setwd("C:/Users/ed/Desktop/analysis")` | The path exists on exactly one computer | Open the project through its `.Rproj` file, or start Python inside the project folder, and build paths with `here()` / `pyprojroot` |
+| Code shared as a `.pdf` or `.docx` | Copy-pasting silently mangles apostrophes, quotes and whitespace, and drags in line numbers and headers | Save as `.R` / `.py` |
+| No `set.seed()` before a simulation or MCMC run | Results change every run, so nobody can tell a real mismatch from noise | Set a seed at the top of each independently runnable section |
 
 ::: {.tada-warn}
-The `.pdf`/`.docx` problem is nastier than it looks. The characters that get
-substituted — curly apostrophes for straight ones, non-breaking spaces — produce
-errors that are hard to see and slow to fix, because the code *looks* right.
+The `.pdf` and `.docx` problem is worse than it appears. The characters that get
+substituted, such as curly apostrophes for straight ones and non-breaking spaces
+for ordinary ones, produce errors that are hard to see and slow to fix, because
+the code still *looks* right.
 :::
 
-## A README you can fill in during a coffee break {#quickstart-readme}
+## The README {#quickstart-readme}
 
 Copy [`templates/README-template.md`](templates/README-template.md) into your
 project and replace the angle-bracketed parts. The
@@ -115,10 +121,11 @@ there.
 ## What happens next {#quickstart-next}
 
 If your target journal has a **data editor**, someone will check your deposit
-against something close to the [SORTEE guidelines](#sortee) — six stages, from
-"is it archived with a licence" through to "do the results actually come out
-the same". Reading that section tells you what the checks will be before
-anyone runs them on you.
+against something close to the [SORTEE guidelines](#sortee): six stages running
+from whether the code is archived under a licence through to whether the results
+actually come out the same. Reading that section tells you what those checks are
+before anyone applies them to your submission.
 
-If your journal does not, the checks still matter — they just fall to you and
-your co-authors. That is what [code review](#code-review) is for.
+If your journal has no data editor, the checks still matter. They simply fall to
+you and your co-authors instead, which is what [code review](#code-review)
+provides.
