@@ -170,8 +170,6 @@ Edward R. Ivimey-Cook — e.ivimeycook@gmail.com
 
 ## Licence
 
-Dual licensed, as is usual for a project that is part code and part writing:
-
 - **Code**, meaning the build script, `assets/style.css`, `assets/tada.js` and
 the templates, under the [MIT License](LICENSE).
 - **Content**, meaning the wiki text in the `.Rmd` chapters, under
@@ -179,14 +177,6 @@ the templates, under the [MIT License](LICENSE).
 
 The three PDFs in `papers/` remain under their original licences. The SORTEE
 guidelines paper is open access under CC BY 4.0.
-
-## A note on third-party requests
-
-Every rendered page loads jQuery, Bootstrap and Font Awesome from
-`cdnjs.cloudflare.com` and `kit.fontawesome.com`. This is bookdown's default
-behaviour for `bs4_book`, not a choice made here, but it does mean the site
-needs a network connection and that visitor IP addresses reach those two
-services.
 
 ## AI declaration
 
