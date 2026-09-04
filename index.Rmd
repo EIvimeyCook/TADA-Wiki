@@ -12,6 +12,7 @@ description: >-
 url: https://eivimeycook.github.io/TADA-Wiki/
 github-repo: "EIvimeyCook/TADA-Wiki"
 link-citations: true
+github-repo: "EIvimeyCook/TADA-Wiki"
 ---
 
 ```{r setup, include = FALSE}

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/EIvimeyCook/TADA-Wiki/blob/main/assets/Wizard.png" width = "200"/>
+</p>
+
 <h1 align="center">TADA-Wiki</h1>
 
 <p align="center">
@@ -7,9 +11,8 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="Code: MIT" src="https://img.shields.io/badge/code-MIT-blue.svg"></a>
-  <a href="LICENSE-CONTENT"><img alt="Content: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg"></a>
+  <a href="LICENSE-data.md"><img alt="Content: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg"></a>
   <img alt="Built with bookdown" src="https://img.shields.io/badge/built%20with-bookdown-1f6feb.svg">
-  <img alt="R >= 4.0" src="https://img.shields.io/badge/R-%E2%89%A5%204.0-276DC3.svg">
 </p>
 
 ---
@@ -95,8 +98,7 @@ RSTUDIO_PANDOC=/path/to/pandoc Rscript render.R
 | `_output.yml` | Theme, CSS, HTML includes |
 | `render.R` | Build script |
 | `assets/` | `style.css`, `tada.js`, and the HTML head/foot includes |
-| `templates/` | Copy-and-fill templates (see below) |
-| `papers/` | The three source PDFs, with their terms of use in `papers/README.md` |
+| `templates/` | Copy-and-fill templates (see below) ||
 | `docs/` | Rendered site — generated, not edited by hand |
 
 ## Templates
@@ -112,7 +114,7 @@ Four templates ship with the wiki, usable independently of it.
 
 ## Sources
 
-The wiki is a synthesis of three papers, all included in `papers/`:
+The wiki is a synthesis of three papers:
 
 - **Ivimey-Cook, E. R., Culina, A., Dimri, S., Grainger, M. J., Kar, F.,
   Lagisz, M., Moran, N. P., Nakagawa, S., Roche, D. G., Tattan, S.,
@@ -171,7 +173,7 @@ Edward R. Ivimey-Cook — e.ivimeycook@gmail.com
 Dual licensed, as is usual for a project that is part code and part writing:
 
 - **Code**, meaning the build script, `assets/style.css`, `assets/tada.js` and
-  the templates, under the [MIT License](LICENSE).
+the templates, under the [MIT License](LICENSE).
 - **Content**, meaning the wiki text in the `.Rmd` chapters, under
   [CC BY 4.0](LICENSE-CONTENT).
 
