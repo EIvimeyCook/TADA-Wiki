@@ -12,4 +12,3 @@ bookdown::bs4_book:
     base: https://github.com/EIvimeyCook/TADA-Wiki
     branch: main
     icon: "fab fa-github"
-  split_bib: false

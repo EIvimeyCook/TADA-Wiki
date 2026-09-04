@@ -5,7 +5,8 @@ message: >-
   `references` below. To cite the wiki itself, use the metadata in this file.
 type: software
 authors:
-  - given-names: Edward R.
+  - given-names: Edward
+    name-particle: R.
     family-names: Ivimey-Cook
     email: e.ivimeycook@gmail.com
     orcid: "https://orcid.org/0000-0003-4910-0443"
@@ -30,7 +31,6 @@ keywords:
 license:
   - MIT
   - CC-BY-4.0
-license-url: "https://creativecommons.org/licenses/by/4.0/"
 date-released: "2026-09-02"
 version: "1.0.0"
 
@@ -40,48 +40,111 @@ references:
       TADA! Simple guidelines to improve analytical code sharing for
       transparency and reproducibility
     authors:
-      - given-names: Edward R.
+      - given-names: Edward
+        name-particle: R.
         family-names: Ivimey-Cook
         orcid: "https://orcid.org/0000-0003-4910-0443"
       - given-names: Antica
         family-names: Culina
       - given-names: Shreya
         family-names: Dimri
-      - given-names: Matthew J.
+      - given-names: Matthew
+        name-particle: J.
         family-names: Grainger
       - given-names: Fonti
         family-names: Kar
       - given-names: Malgorzata
         family-names: Lagisz
-      - given-names: Nicholas P.
+      - given-names: Nicholas
+        name-particle: P.
         family-names: Moran
       - given-names: Shinichi
         family-names: Nakagawa
-      - given-names: Dominique G.
+      - given-names: Dominique
+        name-particle: G.
         family-names: Roche
       - given-names: Sean
         family-names: Tattan
       - given-names: Alfredo
         family-names: Sánchez-Tójar
-      - given-names: Saras M.
+      - given-names: Saras
+        name-particle: M.
         family-names: Windecker
-      - given-names: Joel L.
+      - given-names: Joel
+        name-particle: L.
         family-names: Pick
         orcid: "https://orcid.org/0000-0002-6295-3742"
-    year: 2025
-    doi: "10.32942/X2D93K"
     url: "https://eivimeycook.github.io/TADA/"
-    notes: "Preprint, EcoEvoRxiv"
 
   - type: article
     title: >-
       The SORTEE guidelines for data and code quality control in ecology and
       evolutionary biology
     authors:
-      - given-names: Joel L.
+      - given-names: Joel
+        name-particle: L.
         family-names: Pick
         orcid: "https://orcid.org/0000-0002-6295-3742"
-      - given-names: Edward R.
+      - given-names: Bethany
+        name-particle: J.
+        family-names: Allen
+      - given-names: Benedicte
+        family-names: Bachelot
+      - given-names: Kevin
+        name-particle: R.
+        family-names: Bairos-Novak
+      - given-names: Jack
+        name-particle: A.
+        family-names: Brand
+      - given-names: Barbara
+        family-names: Class
+      - given-names: Tad
+        family-names: Dallas
+      - given-names: Pietro
+        name-particle: B.
+        family-names: D'Amelio
+      - given-names: Erola
+        family-names: Fenollosa
+      - given-names: Esteban
+        family-names: Fernández-Juricic
+      - given-names: Dylan
+        name-particle: G. E.
+        family-names: Gomes
+      - given-names: Matthew
+        name-particle: J.
+        family-names: Grainger
+      - given-names: Thomas
+        family-names: Guillemaud
+      - given-names: Christian
+        family-names: John
+      - given-names: Ruby
+        family-names: Krasnow
+      - given-names: Malgorzata
+        family-names: Lagisz
+      - given-names: Sebastian
+        family-names: Lequime
+      - given-names: Daniel
+        name-particle: S.
+        family-names: Maynard
+      - given-names: Shinichi
+        family-names: Nakagawa
+      - given-names: Rose
+        name-particle: E.
+        family-names: O'Dea
+      - given-names: Matthieu
+        family-names: Paquet
+      - given-names: Quentin
+        family-names: Petitjean
+      - given-names: Alfredo
+        family-names: Sánchez-Tójar
+      - given-names: Natalie
+        name-particle: E.
+        family-names: van Dis
+      - given-names: Laura
+        name-particle: A. B.
+        family-names: Wilson
+      - given-names: Edward
+        name-particle: R.
         family-names: Ivimey-Cook
         orcid: "https://orcid.org/0000-0003-4910-0443"
     journal: "Peer Community Journal"
@@ -89,19 +152,54 @@ references:
     year: 2026
     doi: "10.24072/pcjournal.687"
     url: "https://doi.org/10.24072/pcjournal.687"
-    notes: "Full author list of 26; see the publication record."
 
   - type: article
     title: >-
       Implementing code review in the scientific workflow: Insights from ecology
       and evolutionary biology
     authors:
-      - given-names: Edward R.
+      - given-names: Edward
+        name-particle: R.
         family-names: Ivimey-Cook
         orcid: "https://orcid.org/0000-0003-4910-0443"
-      - given-names: Joel L.
+      - given-names: Joel
+        name-particle: L.
         family-names: Pick
         orcid: "https://orcid.org/0000-0002-6295-3742"
+      - given-names: Kevin
+        name-particle: R.
+        family-names: Bairos-Novak
+        orcid: "https://orcid.org/0000-0002-0152-1452"
+      - given-names: Antica
+        family-names: Culina
+        orcid: "https://orcid.org/0000-0003-2910-8085"
+      - given-names: Elliot
+        family-names: Gould
+        orcid: "https://orcid.org/0000-0002-6585-538X"
+      - given-names: Matthew
+        family-names: Grainger
+        orcid: "https://orcid.org/0000-0001-8426-6495"
+      - given-names: Benjamin
+        name-particle: M.
+        family-names: Marshall
+        orcid: "https://orcid.org/0000-0001-9554-0605"
+      - given-names: David
+        family-names: Moreau
+        orcid: "https://orcid.org/0000-0002-1957-1941"
+      - given-names: Matthieu
+        family-names: Paquet
+        orcid: "https://orcid.org/0000-0003-1182-2299"
+      - given-names: Raphaël
+        family-names: Royauté
+        orcid: "https://orcid.org/0000-0002-5837-633X"
+      - given-names: Alfredo
+        family-names: Sánchez-Tójar
+      - given-names: Inês
+        family-names: Silva
+      - given-names: Saras
+        name-particle: M.
+        family-names: Windecker
+        orcid: "https://orcid.org/0000-0002-4870-8353"
     journal: "Journal of Evolutionary Biology"
     volume: 36
     issue: 10
@@ -110,4 +208,3 @@ references:
     year: 2023
     doi: "10.1111/jeb.14230"
     url: "https://doi.org/10.1111/jeb.14230"
-    notes: "Full author list of 13; see the publication record."
