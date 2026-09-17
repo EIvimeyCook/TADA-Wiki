@@ -112,6 +112,10 @@ Psomopoulos, F. E., et al.** (2022). *FAIR Principles for Research Software
 how I structure my scientific research.* GitHub.
 <https://github.com/gchure/reproducible_research>
 
+**conda contributors** (2026). *conda: A system-level, binary package and
+environment manager running on all major operating systems and platforms.*
+Zenodo. <https://doi.org/10.5281/zenodo.20723337>
+
 **Cooper, N.** (2017). *A Guide to Reproducible Code in Ecology and Evolution.*
 British Ecological Society. (The source papers disagree on authorship: the TADA
 guidelines cite this as Cooper 2017, the code review paper as Cooper & Hsing

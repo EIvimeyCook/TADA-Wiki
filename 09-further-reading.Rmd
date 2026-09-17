@@ -203,7 +203,7 @@ A curated list of pipeline tools: <https://github.com/pditommaso/awesome-pipelin
 |---|---|
 | <https://choosealicense.com/> | Code licences: MIT, GPL, BSD, Apache |
 | <https://choosealicense.com/no-permission/> | What happens with **no** licence |
-| <https://chooser-beta.creativecommons.org/> | Data licences: CC0, CC BY, CC BY-NC |
+| <https://creativecommons.org/chooser/> | Data licences: CC0, CC BY, CC BY-NC |
 
 :::
 

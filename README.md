@@ -29,7 +29,7 @@ control, and code review.
 
 The wiki exists because the gap between policy and practice is wide. In ecology
 and evolutionary biology, 88% of journals had code-sharing policies by 2024, yet
-only 5–33% of articles share code, and of the code that is shared, 74% of
+only 5–35% of articles share code, and of the code that is shared, 74% of
 archived R files in one large study failed to run without error. TADA sets a
 **minimum standard** that closes most of that gap, and is achievable by
 researchers at any level of coding experience.
@@ -41,7 +41,7 @@ researchers at any level of coding experience.
 | Welcome | What the wiki is, TADA in four cards, where the guidance comes from |
 | Start here | Pre-submission checklist, project layout, three common causes of failure |
 | TADA at a glance | Why TADA exists, the evidence, how it maps onto FAIR |
-| Transferable | File types, relative paths, `here` / `pyprojroot`, containers and workflow managers |
+| Transferable | File types, relative paths, `here` / `pyprojroot`, dependency managers, containers and workflow managers |
 | Available | Persistent identifiers, why GitHub is not an archive, repository comparison, embargoes and anonymisation |
 | Documented | The README field by field, a worked example, choosing a licence |
 | Annotated | Chunk-level comments, signposting, collapsible sections, literate formats |
