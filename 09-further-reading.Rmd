@@ -14,8 +14,9 @@ else in the wiki, are in [References](#references).
 
 ### TADA {.unlisted .unnumbered}
 
-**Ivimey-Cook et al.** *TADA! Simple guidelines to improve analytical code
-sharing for transparency and reproducibility.*
+**Ivimey-Cook, E. R., et al. (2025).** *TADA! Simple guidelines to improve
+analytical code sharing for transparency and reproducibility.* EcoEvoRxiv.
+<https://doi.org/10.32942/X2D93K> (preprint)
 
 The four guidelines, the evidence for why they are needed, and worked "How To"
 boxes for each letter with a pre-TADA and post-TADA code comparison. Includes a

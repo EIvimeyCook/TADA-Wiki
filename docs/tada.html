@@ -95,7 +95,7 @@ reuse is genuinely complicated.</p>
 be a transparent, reproducible record of that analysis, not to become a tool for
 other people.</p>
 <p>Holding analytical code to software standards therefore sets an unrealistic
-target, and researchers faced with an unrealistic target tend to meet none of it.
+target, and researchers faced with an unrealistic target tend to give up on it entirely.
 TADA instead sets a <strong>minimum standard</strong> that is achievable at any level of
 coding experience while still delivering the transparency and computational
 reproducibility that sharing is meant to provide.</p>
@@ -104,8 +104,8 @@ reproducibility that sharing is meant to provide.</p>
 <h2>
 <span class="header-section-number">2.2</span> The scale of the problem<a class="anchor" aria-label="anchor" href="#tada-problem"><i class="fas fa-link"></i></a>
 </h2>
-<p>The numbers behind that argument, all from the TADA paper’s review of the
-literature:</p>
+<p>The numbers, all from the TADA paper’s review of the literature, are
+stark:</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="33%">
@@ -122,7 +122,7 @@ literature:</p>
 <td>Journals in ecology &amp; evolutionary biology with code-sharing policies</td>
 <td>15% in 2015, rising to <strong>88% in 2024</strong>
 </td>
-<td>Ivimey-Cook et al. 2025</td>
+<td>Mislan et al. 2016; Culina et al. 2020; Ivimey-Cook et al. 2025</td>
 </tr>
 <tr class="even">
 <td>Articles in the field with open code</td>
@@ -189,9 +189,29 @@ its output appears in the paper.</span></p>
 </div>
 </div>
 </div>
-<div id="tada-fair" class="section level2" number="2.4">
+<div id="tada-scope" class="section level2" number="2.4">
 <h2>
-<span class="header-section-number">2.4</span> How TADA maps onto FAIR<a class="anchor" aria-label="anchor" href="#tada-fair"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.4</span> What TADA does not cover<a class="anchor" aria-label="anchor" href="#tada-scope"><i class="fas fa-link"></i></a>
+</h2>
+<p>The TADA paper is explicit that two things sit beyond its scope, while noting
+that both support reproducible analyses:</p>
+<ul>
+<li>
+<strong>Containerisation</strong> (Docker, Singularity), which packages a complete software
+environment of programs and libraries into an image so that the environment
+itself is reproducible between systems. This is the standard answer to the
+“works on my computer” problem.</li>
+<li>
+<strong>Workflow managers</strong> (Snakemake, Nextflow), which specify the sequence of
+scripts or computational steps in a pipeline and their dependencies, so that
+each step executes in a defined, reproducible order.</li>
+</ul>
+<p>Neither is a requirement of TADA. Both are worth knowing about; see
+<a href="further-reading.html#further-reading">Further reading</a>.</p>
+</div>
+<div id="tada-fair" class="section level2" number="2.5">
+<h2>
+<span class="header-section-number">2.5</span> How TADA maps onto FAIR<a class="anchor" aria-label="anchor" href="#tada-fair"><i class="fas fa-link"></i></a>
 </h2>
 <p>TADA was built with the FAIR and FAIR4RS principles in mind. Each letter maps
 onto one or more of them, and in two cases deliberately goes further.</p>
@@ -267,26 +287,6 @@ TADA targets the first. If you meet a guideline demanding the second, check
 whether it was written for software.</p>
 </div>
 </div>
-<div id="tada-scope" class="section level2" number="2.5">
-<h2>
-<span class="header-section-number">2.5</span> What TADA does not cover<a class="anchor" aria-label="anchor" href="#tada-scope"><i class="fas fa-link"></i></a>
-</h2>
-<p>The TADA paper is explicit that two things sit beyond its scope, while noting
-that both support reproducible analyses:</p>
-<ul>
-<li>
-<strong>Containerisation</strong> (Docker, Singularity), which packages a complete software
-environment of programs and libraries into an image so that the environment
-itself is reproducible between systems. This is the standard answer to the
-“works on my computer” problem.</li>
-<li>
-<strong>Workflow managers</strong> (Snakemake, Nextflow), which specify the sequence of
-scripts or computational steps in a pipeline and their dependencies, so that
-each step executes in a defined, reproducible order.</li>
-</ul>
-<p>Neither is a requirement of TADA. Both are worth knowing about; see
-<a href="further-reading.html#further-reading">Further reading</a>.</p>
-</div>
 <div id="tada-languages" class="section level2" number="2.6">
 <h2>
 <span class="header-section-number">2.6</span> Languages<a class="anchor" aria-label="anchor" href="#tada-languages"><i class="fas fa-link"></i></a>
@@ -324,8 +324,8 @@ SPSS syntax <code>.sps</code> files, for instance, pass.</p>
 <li><a class="nav-link" href="#tada-why"><span class="header-section-number">2.1</span> Why another set of guidelines?</a></li>
 <li><a class="nav-link" href="#tada-problem"><span class="header-section-number">2.2</span> The scale of the problem</a></li>
 <li><a class="nav-link" href="#tada-four"><span class="header-section-number">2.3</span> The four principles</a></li>
-<li><a class="nav-link" href="#tada-fair"><span class="header-section-number">2.4</span> How TADA maps onto FAIR</a></li>
-<li><a class="nav-link" href="#tada-scope"><span class="header-section-number">2.5</span> What TADA does not cover</a></li>
+<li><a class="nav-link" href="#tada-scope"><span class="header-section-number">2.4</span> What TADA does not cover</a></li>
+<li><a class="nav-link" href="#tada-fair"><span class="header-section-number">2.5</span> How TADA maps onto FAIR</a></li>
 <li><a class="nav-link" href="#tada-languages"><span class="header-section-number">2.6</span> Languages</a></li>
 <li><a class="nav-link" href="#tada-next"><span class="header-section-number">2.7</span> Where to go next</a></li>
 </ul>
@@ -345,7 +345,7 @@ SPSS syntax <code>.sps</code> files, for instance, pass.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 04 September 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 17 September 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -84,7 +84,12 @@ a reviewer has to.</p>
 <h2>
 <span class="header-section-number">1.1</span> The pre-submission checklist<a class="anchor" aria-label="anchor" href="#quickstart-checklist"><i class="fas fa-link"></i></a>
 </h2>
-<p>This is TADA as a single list. Each group links to the chapter that explains it.</p>
+<p>TADA covers your code; the data beside it has its own short list. Each group
+links to the chapter that explains it.</p>
+<div class="tabset">
+<div id="code-tada" class="section level3 unlisted unnumbered">
+<h3>Code (TADA)<a class="anchor" aria-label="anchor" href="#code-tada"><i class="fas fa-link"></i></a>
+</h3>
 <p><strong>Transferable</strong> — <a href="transferable.html#transferable">full chapter</a></p>
 <ul class="task-list">
 <li><label><input type="checkbox">Every script is saved with a standard code extension (<code>.R</code>, <code>.py</code>, <code>.cpp</code>, …), not inside a <code>.docx</code> or <code>.pdf</code></label></li>
@@ -121,6 +126,38 @@ a reviewer has to.</p>
 <li><label><input type="checkbox">Someone else has run the whole project from the archived files, successfully</label></li>
 <li><label><input type="checkbox"><code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> / <code>random.seed()</code> is set before anything stochastic</label></li>
 </ul>
+</div>
+<div id="data" class="section level3 unlisted unnumbered">
+<h3>Data<a class="anchor" aria-label="anchor" href="#data"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Wiki guidance:</em> the data counterpart to the code checklist, condensed from the
+<a href="data-sharing.html#sortee">SORTEE guidelines</a> and the <a href="data-sharing.html#data-sharing">Data &amp; code sharing</a>
+chapter, where every point is explained in full.</p>
+<p><strong>Archived &amp; citable</strong> — <a href="available.html#available">Available</a></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Data deposited in an immutable repository with a DOI, cited in the manuscript text and reference list</label></li>
+<li><label><input type="checkbox">Nothing lives only in supplementary material</label></li>
+</ul>
+<p><strong>Present &amp; complete</strong> — <a href="data-sharing.html#sharing-what">what to share</a></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Raw data archived — or a sample plus the processed data, or a documented route to obtaining them</label></li>
+<li><label><input type="checkbox">Processed and filtered data archived, or the code that produces them</label></li>
+</ul>
+<p><strong>Interoperable format</strong> — <a href="data-sharing.html#sharing-formats">file formats</a></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Data in <code>.csv</code>, <code>.tsv</code>, <code>.txt</code> or <code>.parquet</code>, not <code>.xls</code>, <code>.sav</code> or <code>.pdf</code></label></li>
+</ul>
+<p><strong>Documented</strong> — <a href="data-sharing.html#sharing-metadata">metadata</a></p>
+<ul class="task-list">
+<li><label><input type="checkbox">A data README or dictionary describes every file and every variable, <strong>with units</strong></label></li>
+<li><label><input type="checkbox">Collection date and location, funders, and any derived-data sources are recorded</label></li>
+</ul>
+<p><strong>Licensed</strong> — <a href="data-sharing.html#sharing-licences">data licences</a></p>
+<ul class="task-list">
+<li><label><input type="checkbox">A data licence is chosen and stated (CC0 or CC BY are the usual choices)</label></li>
+</ul>
+</div>
+</div>
 <div class="tada-tip">
 <p>The most useful check on this page is to <strong>download your own archived deposit
 into a fresh, empty folder, ideally on a different machine, and run it.</strong> Wiki
@@ -217,6 +254,7 @@ the code still <em>looks</em> right.</p>
 project and replace the angle-bracketed parts. The
 <a href="documented.html#documented-readme">Documented</a> chapter explains each field and why it is
 there.</p>
+<p><em>Wiki guidance:</em> or generate one with <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a> (<code>devtools::install_github("EIvimeyCook/READMEBuilder")</code>, then <code>build_readme()</code>), a Shiny app that fills in these fields from your project and writes the <code>README.md</code> for you.</p>
 </div>
 <div id="quickstart-next" class="section level2" number="1.5">
 <h2>
@@ -240,7 +278,12 @@ provides.</p>
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#quickstart"><span class="header-section-number">1</span> Start here</a></li>
-<li><a class="nav-link" href="#quickstart-checklist"><span class="header-section-number">1.1</span> The pre-submission checklist</a></li>
+<li>
+<a class="nav-link" href="#quickstart-checklist"><span class="header-section-number">1.1</span> The pre-submission checklist</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#code-tada">Code (TADA)</a></li>
+<li><a class="nav-link" href="#data">Data</a></li>
+</ul>
+</li>
 <li><a class="nav-link" href="#quickstart-layout"><span class="header-section-number">1.2</span> A project layout that works</a></li>
 <li><a class="nav-link" href="#quickstart-mistakes"><span class="header-section-number">1.3</span> Three common causes of failure</a></li>
 <li><a class="nav-link" href="#quickstart-readme"><span class="header-section-number">1.4</span> The README</a></li>
@@ -262,7 +305,7 @@ provides.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 04 September 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 17 September 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

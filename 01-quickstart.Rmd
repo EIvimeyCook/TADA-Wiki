@@ -14,7 +14,12 @@ a reviewer has to.
 
 ## The pre-submission checklist {#quickstart-checklist}
 
-This is TADA as a single list. Each group links to the chapter that explains it.
+TADA covers your code; the data beside it has its own short list. Each group
+links to the chapter that explains it.
+
+::: {.tabset}
+
+### Code (TADA) {.unlisted .unnumbered}
 
 **Transferable** — [full chapter](#transferable)
 
@@ -51,6 +56,37 @@ This is TADA as a single list. Each group links to the chapter that explains it.
 
 - [ ] Someone else has run the whole project from the archived files, successfully
 - [ ] `set.seed()` / `random.seed()` is set before anything stochastic
+
+### Data {.unlisted .unnumbered}
+
+*Wiki guidance:* the data counterpart to the code checklist, condensed from the
+[SORTEE guidelines](#sortee) and the [Data & code sharing](#data-sharing)
+chapter, where every point is explained in full.
+
+**Archived & citable** — [Available](#available)
+
+- [ ] Data deposited in an immutable repository with a DOI, cited in the manuscript text and reference list
+- [ ] Nothing lives only in supplementary material
+
+**Present & complete** — [what to share](#sharing-what)
+
+- [ ] Raw data archived — or a sample plus the processed data, or a documented route to obtaining them
+- [ ] Processed and filtered data archived, or the code that produces them
+
+**Interoperable format** — [file formats](#sharing-formats)
+
+- [ ] Data in `.csv`, `.tsv`, `.txt` or `.parquet`, not `.xls`, `.sav` or `.pdf`
+
+**Documented** — [metadata](#sharing-metadata)
+
+- [ ] A data README or dictionary describes every file and every variable, **with units**
+- [ ] Collection date and location, funders, and any derived-data sources are recorded
+
+**Licensed** — [data licences](#sharing-licences)
+
+- [ ] A data licence is chosen and stated (CC0 or CC BY are the usual choices)
+
+:::
 
 ::: {.tada-tip}
 The most useful check on this page is to **download your own archived deposit
@@ -117,6 +153,8 @@ Copy [`templates/README-template.md`](templates/README-template.md) into your
 project and replace the angle-bracketed parts. The
 [Documented](#documented-readme) chapter explains each field and why it is
 there.
+
+*Wiki guidance:* or generate one with [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder) (`devtools::install_github("EIvimeyCook/READMEBuilder")`, then `build_readme()`), a Shiny app that fills in these fields from your project and writes the `README.md` for you.
 
 ## What happens next {#quickstart-next}
 

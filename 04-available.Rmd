@@ -111,7 +111,7 @@ behind the published result cannot be recovered.
 
 ## Sensitive data and embargoes {#available-sensitive}
 
-Availability admits of exceptions. Some data cannot be shared openly, including
+Availability has exceptions. Some data cannot be shared openly, including
 protected species locations, personal data, and third-party data held under
 licence. The SORTEE guidelines allow for these cases and note that many
 repositories offer **embargoes** where they are necessary.

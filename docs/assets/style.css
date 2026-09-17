@@ -312,13 +312,31 @@ main table tr:last-child td { border-bottom: 0; }
    Checklists — `- [ ]` task lists get a real box
    -------------------------------------------------------------------------- */
 
-main ul:has(> li > input[type="checkbox"]) { list-style: none; padding-left: .2rem; }
+/* Pandoc renders task lists as ul.task-list > li > label > input. Remove the
+   disc bullet (old selectors assumed li > input and never matched) and hang the
+   box in the left padding. The label is NOT flexed: flex would turn inline
+   <code> chips and <strong> into separate items and scramble the line. */
+main ul.task-list {
+  list-style: none;
+  padding-left: 1.7em;
+  margin: 1rem 0 1.4rem;
+}
 
-main li > input[type="checkbox"] {
+main ul.task-list > li {
+  position: relative;
+  margin: .4rem 0;
+}
+
+main ul.task-list > li > label { cursor: pointer; }
+
+/* Box hangs in the padding, aligned to the first line; text flows normally. */
+main ul.task-list input[type="checkbox"] {
+  position: absolute;
+  left: -1.6em;
+  top: .3em;
   width: 1.05em;
   height: 1.05em;
-  margin-right: .5em;
-  vertical-align: -0.15em;
+  margin: 0;
   accent-color: var(--tada-accent);
 }
 

@@ -4,6 +4,10 @@ TADA is about your code. This chapter covers everything sitting around it: what
 data to share, in what format, with what metadata, under what licence, and what
 a journal will check.
 
+::: {.tada-note}
+**On this page:** [what archiving is for](#sharing-goals) · [vocabulary](#sharing-glossary) · [what data to share](#sharing-what) · [file formats](#sharing-formats) · [metadata](#sharing-metadata) · [licences](#sharing-licences) · [the SORTEE guidelines](#sortee) · [advice for authors](#sharing-authors) · [checklist](#sharing-checklist)
+:::
+
 ## What archiving is for {#sharing-goals}
 
 This is worth stating explicitly, because the three goals pull in slightly

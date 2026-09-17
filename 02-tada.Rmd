@@ -28,19 +28,19 @@ be a transparent, reproducible record of that analysis, not to become a tool for
 other people.
 
 Holding analytical code to software standards therefore sets an unrealistic
-target, and researchers faced with an unrealistic target tend to meet none of it.
+target, and researchers faced with an unrealistic target tend to give up on it entirely.
 TADA instead sets a **minimum standard** that is achievable at any level of
 coding experience while still delivering the transparency and computational
 reproducibility that sharing is meant to provide.
 
 ## The scale of the problem {#tada-problem}
 
-The numbers behind that argument, all from the TADA paper's review of the
-literature:
+The numbers, all from the TADA paper's review of the literature, are
+stark:
 
 | What | Figure | Primary source |
 |---|---|---|
-| Journals in ecology & evolutionary biology with code-sharing policies | 15% in 2015, rising to **88% in 2024** | Ivimey-Cook et al. 2025 |
+| Journals in ecology & evolutionary biology with code-sharing policies | 15% in 2015, rising to **88% in 2024** | Mislan et al. 2016; Culina et al. 2020; Ivimey-Cook et al. 2025 |
 | Articles in the field with open code | **5–33%**, depending on the study | various |
 | Archived R files in Harvard Dataverse failing to run without error | **74%**, falling to 56% after automated cleaning | Trisovic et al. 2022 |
 | Scripts in species distribution and abundance papers that did not run, or ran with errors | **93%** | Kellner et al. 2025 |
@@ -90,6 +90,22 @@ its output appears in the paper.]{.tada-gloss}
 :::
 :::
 
+## What TADA does not cover {#tada-scope}
+
+The TADA paper is explicit that two things sit beyond its scope, while noting
+that both support reproducible analyses:
+
+- **Containerisation** (Docker, Singularity), which packages a complete software
+  environment of programs and libraries into an image so that the environment
+  itself is reproducible between systems. This is the standard answer to the
+  "works on my computer" problem.
+- **Workflow managers** (Snakemake, Nextflow), which specify the sequence of
+  scripts or computational steps in a pipeline and their dependencies, so that
+  each step executes in a defined, reproducible order.
+
+Neither is a requirement of TADA. Both are worth knowing about; see
+[Further reading](#further-reading).
+
 ## How TADA maps onto FAIR {#tada-fair}
 
 TADA was built with the FAIR and FAIR4RS principles in mind. Each letter maps
@@ -129,22 +145,6 @@ writing generalised, modular, tested code that runs across systems and datasets.
 TADA targets the first. If you meet a guideline demanding the second, check
 whether it was written for software.
 :::
-
-## What TADA does not cover {#tada-scope}
-
-The TADA paper is explicit that two things sit beyond its scope, while noting
-that both support reproducible analyses:
-
-- **Containerisation** (Docker, Singularity), which packages a complete software
-  environment of programs and libraries into an image so that the environment
-  itself is reproducible between systems. This is the standard answer to the
-  "works on my computer" problem.
-- **Workflow managers** (Snakemake, Nextflow), which specify the sequence of
-  scripts or computational steps in a pipeline and their dependencies, so that
-  each step executes in a defined, reproducible order.
-
-Neither is a requirement of TADA. Both are worth knowing about; see
-[Further reading](#further-reading).
 
 ## Languages {#tada-languages}
 

@@ -8,8 +8,8 @@ tada
 tada-why
 tada-problem
 tada-four
-tada-fair
 tada-scope
+tada-fair
 tada-languages
 tada-next
 transferable
@@ -68,13 +68,8 @@ reading-tools
 reading-repos
 reading-communities
 contribute
-contribute-scope
-contribute-sourcing
-contribute-layout
-contribute-chapter
-contribute-style
-contribute-references
-contribute-submitting
+contribute-page
+contribute-rule
 contribute-templates
 references
 references-sources

@@ -90,4 +90,30 @@ if (!file.exists(file.path("docs", ".nojekyll"))) {
   file.create(file.path("docs", ".nojekyll"))
 }
 
+# --- Cross-reference check ---------------------------------------------------
+# bookdown does not warn on a broken ](#id) link: it renders a dead link and
+# still exits 0. This flags referenced anchors that are never defined. Inline
+# `code` spans are stripped first so documented examples do not trip it, and
+# the whole thing is wrapped so a checker bug can never break the build.
+
+check_crossrefs <- function() {
+  rmds <- list.files(pattern = "\\.Rmd$")
+  txt  <- unlist(lapply(rmds, readLines, warn = FALSE, encoding = "UTF-8"))
+  txt  <- gsub("`[^`]*`", "", txt)
+  refs <- unlist(regmatches(txt, gregexpr("\\]\\(#[A-Za-z0-9_-]+\\)", txt)))
+  refs <- unique(sub("^\\]\\(#", "", sub("\\)$", "", refs)))
+  defs <- unlist(regmatches(txt, gregexpr("\\{#[A-Za-z0-9_-]+", txt)))
+  defs <- unique(sub("^\\{#", "", defs))
+  missing <- setdiff(refs, defs)
+  if (length(missing)) {
+    warning("Broken cross-reference(s) to undefined anchor(s): #",
+            paste(missing, collapse = ", #"), call. = FALSE)
+  } else {
+    message("Cross-reference check: all ", length(refs),
+            " referenced anchors resolve.")
+  }
+}
+tryCatch(check_crossrefs(), error = function(e)
+  message("Cross-reference check skipped: ", conditionMessage(e)))
+
 message("\nDone. Open docs/index.html to preview.")

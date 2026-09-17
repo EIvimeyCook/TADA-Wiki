@@ -75,7 +75,7 @@ library(here)
 dat <- read.csv(here("data", "raw", "caterpillars_2024.csv"))
 ```
 
-This is agnostic both of the operating system and of where the project folder
+This is independent of the operating system and of where the project folder
 sits, so anyone who downloads the project can load the data.
 :::
 ::::

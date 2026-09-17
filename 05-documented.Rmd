@@ -56,6 +56,10 @@ versions before anyone has to ask them.
 Wiki guidance: a filled-in version of the fields above. The template is at
 [`templates/README-template.md`](templates/README-template.md).
 
+::: {.tada-tip}
+**Wiki guidance: generate the README instead of writing it.** [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder), an R package with a built-in Shiny app, walks you through the fields above and writes a `README.md` covering project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with `devtools::install_github("EIvimeyCook/READMEBuilder")`, then run `build_readme()`.
+:::
+
 ````markdown
 # Code for: Caterpillar abundance varies with woodland habitat type
 
