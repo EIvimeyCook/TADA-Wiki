@@ -8,9 +8,11 @@ your archived code (transparency) and their ability to *run* it (functionality
 and reproducibility).
 :::
 
-Annotation is the letter with no direct FAIR equivalent, and the one most often
-skipped. It is also much less work done while writing than reconstructed
-afterwards.
+Annotation, like Documentation, corresponds to the FAIR principle of Reusable —
+the TADA paper states that it does the same job "but rather than describing the
+code 'externally', provides clear commenting within each coding script." It is
+the letter most often skipped, and it is also much less work done while writing
+than reconstructed afterwards.
 
 ## Annotate chunks, not lines {#annotated-chunks}
 

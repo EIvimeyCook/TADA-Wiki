@@ -40,7 +40,7 @@ a project before you submit it that, between them, fix most of the problem.
 Sharing code is essential for transparency and computational reproducibility,
 and journal policies increasingly require it. Even so, the proportion of papers
 in ecology and evolutionary biology that share code remains low, with reported
-rates ranging from roughly **5% to 33%**, well behind the equivalent figures for
+rates ranging from roughly **5% to 35%**, well behind the equivalent figures for
 open data. Code that is shared also frequently fails to run. In a review of over
 9,000 R files archived in the Harvard Dataverse, **74% failed to complete
 without error**, and that figure only fell to **56%** after automated cleaning

@@ -2,10 +2,10 @@
 
 ::: {.tada-key}
 **Documentation** is providing **accurate and detailed metadata files that
-describe the code files and their usage**. *Wiki guidance:* this is the letter
-that delivers FAIR **Reusability**, meaning assets described sufficiently to
-enable reuse and attribution, ideally via a licence. The TADA paper does not
-make that mapping explicitly; see
+describe the code files and their usage**. The TADA paper states that this
+corresponds to the FAIR principles of **Reusable** (assets described
+sufficiently to enable reuse and attribution, ideally via a licence) and
+**Findable** (through the provision of rich metadata); see
 [How TADA maps onto FAIR](#tada-fair).
 :::
 
@@ -35,7 +35,7 @@ text, with the package examples updated:
 | **Authors & contact** | Authors, with an email address for correspondence. *May be anonymised during peer review* to adhere to double-blind policies |
 | **Funders** | Any relevant funders |
 | **Software** | Language and **version number**, e.g. R v4.3.3 |
-| **Packages** | Important libraries or packages used, **with version numbers**, e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from `sessionInfo()` in R or `session-info` in Python |
+| **Packages** | Important libraries or packages used, **with version numbers**, e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from `sessionInfo()` in R or `session_info` in Python |
 | **Licence** | A mention of the code-specific licence |
 | **Data location** | Where the relevant data are, ideally with a **PID** |
 | **File contents** | What each file contains |
@@ -44,7 +44,7 @@ text, with the package examples updated:
 | **Inputs & outputs** | What data the code requires to run, and what data it produces, if any |
 
 ::: {.tada-tip}
-`sessionInfo()` (R) and `session-info` (Python) will generate the environment
+`sessionInfo()` (R) and `session_info` (Python) will generate the environment
 section for you. Run it at the end of your final analysis session, paste the
 output into a `session_info.txt` alongside the README, and reference it there.
 It is a single command, and it answers most later questions about software
@@ -227,7 +227,7 @@ possible, for example, MIT, BSD 2-Clause, GNU, and Apache"* (Stage 3.2).
 - [ ] A README (`.md` or `.txt`) is at the top level of the archived project
 - [ ] It names the manuscript, authors, contact email, and funders
 - [ ] It states software and version, and key packages with versions
-- [ ] A full environment dump (`sessionInfo()` / `session-info`) is included or referenced
+- [ ] A full environment dump (`sessionInfo()` / `session_info`) is included or referenced
 - [ ] It states where the data are, with a PID if archived separately
 - [ ] It describes what each file contains
 - [ ] It gives the run order

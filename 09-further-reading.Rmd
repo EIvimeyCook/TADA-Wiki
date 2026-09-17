@@ -155,8 +155,8 @@ editor.
 | Tool | What for |
 |---|---|
 | **`here`** (Müller & Bryan 2020) | Relative file paths; see [Transferable](#transferable-paths) |
-| **`renv`** (Ushey & Wickham 2023) | Project-level package environments; replaces `packrat` |
-| **`groundhog`** (Simonsohn & Gruson 2023) | Load packages as they were on a given date |
+| **`renv`** (Ushey & Wickham 2023) | Project-level package environments; replaces `packrat`. Beyond the scope of TADA. |
+| **`groundhog`** (Simonsohn & Gruson 2023) | Load packages as they were on a given date. Beyond the scope of TADA. |
 | **`styler`** (Müller & Walthert 2020) | Reformat code to a standard style (tidyverse, Google) |
 | **`testthat`** (Wickham 2011) | Unit testing |
 | **`targets`** (Landau 2021) | Pipeline management; reproducibility hashes for expensive steps |
@@ -171,19 +171,22 @@ editor.
 | Tool | What for |
 |---|---|
 | **`pyprojroot`** (Chen 2023) | Relative file paths; the `here` equivalent |
-| **`poetry`** (Eustace 2023) | Dependency management and packaging |
-| **`pipenv`** (Pipenv Maintainer Team 2023) | Reproducible environments |
+| **`poetry`** (Eustace 2023) | Dependency management and packaging. Beyond the scope of TADA. |
+| **`pipenv`** (Pipenv Maintainer Team 2023) | Reproducible environments. Beyond the scope of TADA. |
 | **`pycodestyle`** (Rocholl 2022) | PEP 8 style checking |
 | **`pytest`** (Okken 2022) | Unit testing |
 | **`luigi`** (The Luigi Authors 2023) | Pipeline management |
 | **`CodeMetaPy`** (van Gompel 2023) | Code metadata |
 | **`cookiecutter`** (Feldroy 2022) | Project templates |
 | **`setuptools`** | Package and version information |
-| `session-info` | The environment section of your README |
+| `session_info` | The environment section of your README |
 
 ### Environments & pipelines {.unlisted .unnumbered}
 
-Beyond the scope of TADA, but recommended where you have the appetite.
+Beyond the scope of TADA, but recommended where you have the appetite. This
+covers all three categories the TADA paper names as beyond scope: dependency
+and environment managers (`renv`, `groundhog`, `conda`, `poetry`, `pipenv` —
+see the R and Python tabs), containerisation and workflow managers (below).
 
 | Tool | What for |
 |---|---|

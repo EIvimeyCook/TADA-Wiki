@@ -55,7 +55,7 @@ links to the chapter that explains it.
 **Before you submit** — [full chapter](#code-review)
 
 - [ ] Someone else has run the whole project from the archived files, successfully
-- [ ] `set.seed()` / `random.seed()` is set before anything stochastic
+- [ ] `set.seed()` / `random.seed()` is set before anything stochastic (SORTEE, Stage 6 — not a TADA requirement; see [Code review](#code-review))
 
 ### Data {.unlisted .unnumbered}
 
