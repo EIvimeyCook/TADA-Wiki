@@ -92,7 +92,7 @@ that all three support reproducible analyses:
 - **Dependency and environment managers** (`{renv}` in R, `{conda}` in Python),
   which help ensure the same computational environment is used each time, for
   example via a lockfile.
-- **Containerisation** (Docker, Singularity), which packages a complete software
+- **Containerisation** (Docker, Apptainer — formerly Singularity), which packages a complete software
   environment of programs and libraries into an image so that the environment
   itself is reproducible between systems. This is the standard answer to the
   "works on my computer" problem.

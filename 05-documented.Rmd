@@ -31,7 +31,7 @@ text, with the package examples updated:
 
 | Field | Detail |
 |---|---|
-| **Manuscript** | The title of the manuscript the code is associated with |
+| **Manuscript** | The title **and abstract** of the manuscript the code is associated with |
 | **Authors & contact** | Authors, with an email address for correspondence. *May be anonymised during peer review* to adhere to double-blind policies |
 | **Funders** | Any relevant funders |
 | **Software** | Language and **version number**, e.g. R v4.3.3 |
@@ -65,6 +65,12 @@ Wiki guidance: a filled-in version of the fields above. The template is at
 
 Associated manuscript: Ivimey-Cook et al. (2026), *Journal of Example Ecology*.
 Preprint: https://doi.org/10.00000/example
+
+## Abstract
+We tested whether caterpillar abundance differs between woodland habitat
+types, using count data collected across three seasons. Abundance was higher
+in mixed woodland than in conifer plantation after controlling for year
+(Poisson GLM); we discuss implications for habitat management.
 
 ## Contact
 Edward Ivimey-Cook — e.ivimeycook@gmail.com

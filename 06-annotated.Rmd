@@ -14,6 +14,22 @@ code 'externally', provides clear commenting within each coding script." It is
 the letter most often skipped, and it is also much less work done while writing
 than reconstructed afterwards.
 
+## Script headers {#annotated-header}
+
+Before chunk-level annotation, the TADA guidelines recommend a **script
+header**: a short block at the very top of the file describing what the whole
+script does and what it will produce.
+
+```r
+##### Caterpillar abundance analysis #####
+# Fits Poisson GLMs of caterpillar counts against habitat and year, and
+# produces the coefficients and figures reported in Table 2 and Figure 3
+# of the manuscript. Run after 01_clean_data.R.
+```
+
+A header takes a reader from "what is this file for?" to an answer in the
+time it takes to read three lines, before they have opened a single chunk.
+
 ## Annotate chunks, not lines {#annotated-chunks}
 
 The recommendation is explicit: **annotate code chunks rather than every line of
@@ -72,8 +88,8 @@ Certain comment markers create **collapsible sections** in the editor, which
 increases readability and helps structure a file. This is most useful in long
 scripts.
 
-- **`#####`** in RStudio
-- **`#%%`** in Python
+- **`#####`** or **`#----`** in RStudio
+- **`#%%`** in VSCode or Spyder (Python IDEs)
 
 ```r
 ##### 1. Load and clean data #####
@@ -143,7 +159,7 @@ Two cautions when archiving a notebook (wiki guidance):
 A well-commented `.R` or `.py` file is perfectly adequate, and for many analyses
 it is the clearest option. The requirements are the same:
 
-- logical chunks, marked with `#####` or `#%%`
+- logical chunks, marked with `#####` / `#----` (RStudio) or `#%%` (VSCode/Spyder)
 - a comment on each chunk giving what it does, why it is needed and where the
   output appears
 - object names that a reader can follow
@@ -187,11 +203,12 @@ code to do than what it actually does.
 
 ## Checklist {#annotated-checklist}
 
+- [ ] The script has a header at the top describing what it does and what it produces
 - [ ] Code is broken into logical, labelled chunks
 - [ ] Each chunk states what it does
 - [ ] Each chunk states why it is needed
 - [ ] Chunks that produce results signpost the manuscript location (figure, table, section)
-- [ ] Collapsible section markers (`#####` / `#%%`) are used in long scripts
+- [ ] Collapsible section markers (`#####` / `#----` / `#%%`) are used in long scripts
 - [ ] Object names are interpretable by someone who did not write the code
 - [ ] Packages are called explicitly by namespace where it aids clarity
 - [ ] Unused `library()` / `import` calls have been removed

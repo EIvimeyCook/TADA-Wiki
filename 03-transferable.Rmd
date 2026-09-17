@@ -169,8 +169,8 @@ cannot fix.
 and **`{conda}`** in Python, help ensure the same computational environment is
 used each time a project is run, typically via a lockfile.
 
-**Containerisation**, through **Docker** (Merkel 2014) and **Singularity**
-(Kurtzer et al. 2017), uses images that encapsulate a complete software
+**Containerisation**, through **Docker** (Merkel 2014) and **Apptainer**,
+formerly called Singularity (Kurtzer et al. 2017), uses images that encapsulate a complete software
 environment, including all required programs and libraries. This helps ensure
 environment reproducibility between systems and avoids the common *"works on my
 computer"* problem.

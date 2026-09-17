@@ -191,7 +191,7 @@ see the R and Python tabs), containerisation and workflow managers (below).
 | Tool | What for |
 |---|---|
 | **Docker** (Merkel 2014; Boettiger 2015) | Containerisation; a complete, portable software environment |
-| **Singularity** (Kurtzer et al. 2017) | Containerisation, common on HPC systems |
+| **Apptainer**, formerly Singularity (Kurtzer et al. 2017) | Containerisation, common on HPC systems |
 | **Snakemake** (Köster & Rahmann 2012) | Workflow management; defines step order and dependencies |
 | **Nextflow** (Di Tommaso et al. 2017) | Workflow management |
 
