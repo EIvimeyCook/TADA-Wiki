@@ -195,7 +195,7 @@ of licences, so this is a common and consequential gap.
 ### For data {.unlisted .unnumbered}
 
 Typically **Creative Commons** licences. Chooser:
-<https://chooser-beta.creativecommons.org/>
+<https://creativecommons.org/chooser/>
 
 | Licence | What it means | Notes |
 |---|---|---|

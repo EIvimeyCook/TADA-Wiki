@@ -127,7 +127,7 @@ stark:</p>
 <tr class="even">
 <td>Articles in the field with open code</td>
 <td>
-<strong>5–33%</strong>, depending on the study</td>
+<strong>5–35%</strong>, depending on the study</td>
 <td>various</td>
 </tr>
 <tr class="odd">
@@ -188,11 +188,15 @@ its output appears in the paper.</span></p>
 <h2>
 <span class="header-section-number">2.4</span> What TADA does not cover<a class="anchor" aria-label="anchor" href="#tada-scope"><i class="fas fa-link"></i></a>
 </h2>
-<p>The TADA paper is explicit that two things sit beyond its scope, while noting
-that both support reproducible analyses:</p>
+<p>The TADA paper is explicit that three things sit beyond its scope, while noting
+that all three support reproducible analyses:</p>
 <ul>
 <li>
-<strong>Containerisation</strong> (Docker, Singularity), which packages a complete software
+<strong>Dependency and environment managers</strong> (<a href="https://rstudio.github.io/renv/">renv</a> in R, <code>{conda}</code> in Python),
+which help ensure the same computational environment is used each time, for
+example via a lockfile.</li>
+<li>
+<strong>Containerisation</strong> (Docker, Apptainer — formerly Singularity), which packages a complete software
 environment of programs and libraries into an image so that the environment
 itself is reproducible between systems. This is the standard answer to the
 “works on my computer” problem.</li>
@@ -201,7 +205,7 @@ itself is reproducible between systems. This is the standard answer to the
 scripts or computational steps in a pipeline and their dependencies, so that
 each step executes in a defined, reproducible order.</li>
 </ul>
-<p>Neither is a requirement of TADA. Both are worth knowing about; see
+<p>None of these is a requirement of TADA. All three are worth knowing about; see
 <a href="further-reading.html#further-reading">Further reading</a>.</p>
 </div>
 <div id="tada-fair" class="section level2" number="2.5">
@@ -227,7 +231,7 @@ onto one or more of them, and in two cases deliberately goes further.</p>
 <strong>F</strong>indable</td>
 <td>Digital assets (metadata, data, code) can be easily found by both machines and humans</td>
 <td>
-<strong>Available</strong>, through the provision of a unique identifier</td>
+<strong>Available</strong>, through the provision of a unique identifier, and <strong>Documented</strong>, through the provision of rich metadata</td>
 </tr>
 <tr class="even">
 <td>
@@ -248,31 +252,35 @@ onto one or more of them, and in two cases deliberately goes further.</p>
 <strong>R</strong>eusable</td>
 <td>Assets are described sufficiently to enable reuse and attribution, ideally via a licence</td>
 <td>
-<strong>Documented</strong>, through a README and a licence</td>
-</tr>
-<tr class="odd">
-<td><em>(none)</em></td>
-<td>No direct FAIR equivalent</td>
-<td>
-<strong>Annotated</strong>, for transparency and human comprehension</td>
+<strong>Documented</strong>, through a README and a licence, and <strong>Annotated</strong>, through commenting within the code itself</td>
 </tr>
 </tbody>
 </table></div>
 <div class="tada-note">
-<p>The <strong>Transferable</strong> and <strong>Available</strong> rows are stated in the TADA paper. The
-<strong>Documented</strong> and <strong>Annotated</strong> rows are this wiki’s reading: the paper defines
-FAIR reusability as “sharing code in a way that clearly specifies what can be
-done with it, for example, via a license and a README file”, which is what
-Documented delivers, and it makes no FAIR claim for Annotated.</p>
+<p>All four rows are stated in the TADA paper, not inferred by the wiki. In the
+paper’s own words: Transferable “corresponds to the FAIR principle of
+interoperability… and extends it”; Available “corresponds to the FAIR
+principles of both Findable… and Accessible”; Documented “corresponds to…
+the FAIR principle of Reusable… and Findable (the provision of rich
+metadata)”; and Annotated, “similar to documentation, corresponds to the FAIR
+principle of Reusable… but rather than describing the code ‘externally’,
+provides clear commenting within each coding script.” Documented and Annotated
+therefore share the same FAIR principle (Reusable), distinguished only by
+whether the description sits outside the code (a README) or inside it
+(comments).</p>
 </div>
 <p><strong>Transferable is broader than Interoperable.</strong> Interoperability means anyone
 can open and use your code. Transferability adds the requirement that it also
 <em>runs</em> on someone else’s machine and operating system, which is precisely where
 hard-coded file paths cause problems.</p>
-<p><strong>Annotated has no FAIR counterpart.</strong> FAIR is largely concerned with machines
-finding and parsing assets, whereas annotation is about a human being able to
-follow what the analysis actually did. It is the letter most specific to
-research code, and the one most often skipped.</p>
+<p><strong>Annotated shares its FAIR principle with Documented, not with a principle of
+its own.</strong> Both map to Reusable, since both are ultimately about enabling
+someone to understand and reuse the code; they differ in <em>where</em> that
+description lives, externally in a README (Documented) or internally as
+comments (Annotated). Annotated remains the letter most specific to research
+code, in the sense that FAIR is largely concerned with machines finding and
+parsing assets, whereas annotation is about a human being able to follow what
+the analysis actually did — and it is the letter most often skipped.</p>
 <div class="tada-note">
 <p>On “reusable”: the word is used in two different senses. In the FAIR sense it
 means sharing code in a way that clearly specifies what can be done with it,

@@ -211,11 +211,14 @@ file, or activate a virtual environment, before running anything. See
 <h2>
 <span class="header-section-number">3.3</span> Beyond TADA: environments and pipelines<a class="anchor" aria-label="anchor" href="#transferable-beyond"><i class="fas fa-link"></i></a>
 </h2>
-<p>Both of the following sit explicitly beyond the scope of TADA, but they are
+<p>All of the following sit explicitly beyond the scope of TADA, but they are
 worth knowing about, because they address failures that relative paths alone
 cannot fix.</p>
-<p><strong>Containerisation</strong>, through <strong>Docker</strong> (Merkel 2014) and <strong>Singularity</strong>
-(Kurtzer et al. 2017), uses images that encapsulate a complete software
+<p><strong>Dependency and environment managers</strong>, such as <strong><a href="https://rstudio.github.io/renv/">renv</a></strong> (Ushey 2023) in R
+and <strong><code>{conda}</code></strong> in Python, help ensure the same computational environment is
+used each time a project is run, typically via a lockfile.</p>
+<p><strong>Containerisation</strong>, through <strong>Docker</strong> (Merkel 2014) and <strong>Apptainer</strong>,
+formerly called Singularity (Kurtzer et al. 2017), uses images that encapsulate a complete software
 environment, including all required programs and libraries. This helps ensure
 environment reproducibility between systems and avoids the common <em>“works on my
 computer”</em> problem.</p>
@@ -223,9 +226,9 @@ computer”</em> problem.</p>
 <strong>Nextflow</strong> (Di Tommaso et al. 2017), specify the sequence of scripts or
 computational steps in a pipeline and their dependencies, ensuring that each
 step executes in a defined and reproducible order.</p>
-<p>Neither is required by TADA. If you are already comfortable with them they
-strengthen transferability considerably, but relative paths and a good README
-will get you most of the way on their own.</p>
+<p>None of these is required by TADA. If you are already comfortable with them
+they strengthen transferability considerably, but relative paths and a good
+README will get you most of the way on their own.</p>
 </div>
 <div id="transferable-checklist" class="section level2" number="3.4">
 <h2>

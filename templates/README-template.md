@@ -15,6 +15,10 @@
 Associated manuscript: <AUTHORS> (<YEAR>), *<JOURNAL>*.
 <PREPRINT OR ARTICLE DOI>
 
+## Abstract
+
+<Paste the manuscript abstract here.>
+
 ## Contact
 
 <NAME> — <EMAIL>
@@ -64,7 +68,7 @@ Key packages:
   - <package>   v<version>   <what it is used for>
 
 <Full environment in `session_info.txt`, produced with `sessionInfo()` in R or
-`session-info` in Python.>
+`session_info` in Python.>
 
 <!-- State whether and how large language models were used in code generation. -->
 LLM use: <none / describe>

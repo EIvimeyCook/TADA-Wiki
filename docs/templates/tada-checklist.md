@@ -40,12 +40,12 @@ alteration, on a different computer and operating system.*
 *Accurate, detailed metadata describing the code files and their usage.*
 
 - [ ] A README (`.md` or `.txt`) is at the top level of the project
-- [ ] Manuscript title
+- [ ] Manuscript title and abstract
 - [ ] Authors, with a contact email
 - [ ] Relevant funders
 - [ ] Software and version (e.g. R v4.3.3)
 - [ ] Key packages with version numbers
-- [ ] Full environment dump (`sessionInfo()` / `session-info`) included or referenced
+- [ ] Full environment dump (`sessionInfo()` / `session_info`) included or referenced
 - [ ] Where the data are, with a persistent identifier if archived separately
 - [ ] What each file contains
 - [ ] The order in which the code should be run
@@ -61,11 +61,12 @@ alteration, on a different computer and operating system.*
 *Comments within each code file, or code embedded in RMarkdown/Quarto with
 descriptive text.*
 
+- [ ] The script has a header at the top describing what it does and what it produces
 - [ ] Code is broken into logical, labelled chunks
 - [ ] Each chunk says what it does
 - [ ] Each chunk says why it is needed
 - [ ] Chunks producing results signpost the manuscript location (figure, table, section)
-- [ ] Collapsible section markers used in long scripts (`#####` in RStudio, `#%%` in Python)
+- [ ] Collapsible section markers used in long scripts (`#####` / `#----` in RStudio, `#%%` in VSCode/Spyder)
 - [ ] Object names are interpretable by someone who did not write the code
 - [ ] Unused `library()` / `import` calls removed
 - [ ] Notebooks were restarted and run top to bottom before archiving

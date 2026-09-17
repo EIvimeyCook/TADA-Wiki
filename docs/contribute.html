@@ -84,20 +84,20 @@ run <code>Rscript render.R</code>, and open a pull request. For a small fix, use
 <ol style="list-style-type: decimal">
 <li>
 <p><strong>Copy the template.</strong></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="contribute.html#cb12-1" tabindex="-1"></a><span class="fu">cp</span> templates/page-template.Rmd 12-my-page.Rmd</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="contribute.html#cb13-1" tabindex="-1"></a><span class="fu">cp</span> templates/page-template.Rmd 12-my-page.Rmd</span></code></pre></div>
 <p><a href="templates/page-template.Rmd"><code>templates/page-template.Rmd</code></a> is a working
 example of everything this wiki uses: the callouts, the R/Python tabs, the
 before/after blocks, a checklist, and the house style. Write over it.</p>
 </li>
 <li>
 <p><strong>Start with a level-1 heading and an ID</strong>, because other pages link to it:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb13-1"><a href="contribute.html#cb13-1" tabindex="-1"></a><span class="fu"># My page {#my-page}</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb14-1"><a href="contribute.html#cb14-1" tabindex="-1"></a><span class="fu"># My page {#my-page}</span></span></code></pre></div>
 </li>
 <li><p><strong>Register the file</strong> in <code>_bookdown.yml</code>, in the position you want it to
 appear. Keep <code>11-references.Rmd</code> last.</p></li>
 <li>
 <p><strong>Build and check.</strong></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="contribute.html#cb14-1" tabindex="-1"></a><span class="ex">Rscript</span> render.R</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="contribute.html#cb15-1" tabindex="-1"></a><span class="ex">Rscript</span> render.R</span></code></pre></div>
 <p>Open <code>docs/index.html</code>. If you cited anything, add it to
 <code>11-references.Rmd</code>, alphabetically by first author.</p>
 </li>

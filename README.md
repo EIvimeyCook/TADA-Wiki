@@ -29,7 +29,7 @@ control, and code review.
 
 The wiki exists because the gap between policy and practice is wide. In ecology
 and evolutionary biology, 88% of journals had code-sharing policies by 2024, yet
-only 5–33% of articles share code, and of the code that is shared, 74% of
+only 5–35% of articles share code, and of the code that is shared, 74% of
 archived R files in one large study failed to run without error. TADA sets a
 **minimum standard** that closes most of that gap, and is achievable by
 researchers at any level of coding experience.
@@ -41,7 +41,7 @@ researchers at any level of coding experience.
 | Welcome | What the wiki is, TADA in four cards, where the guidance comes from |
 | Start here | Pre-submission checklist, project layout, three common causes of failure |
 | TADA at a glance | Why TADA exists, the evidence, how it maps onto FAIR |
-| Transferable | File types, relative paths, `here` / `pyprojroot`, containers and workflow managers |
+| Transferable | File types, relative paths, `here` / `pyprojroot`, dependency managers, containers and workflow managers |
 | Available | Persistent identifiers, why GitHub is not an archive, repository comparison, embargoes and anonymisation |
 | Documented | The README field by field, a worked example, choosing a licence |
 | Annotated | Chunk-level comments, signposting, collapsible sections, literate formats |
@@ -98,7 +98,7 @@ RSTUDIO_PANDOC=/path/to/pandoc Rscript render.R
 | `_output.yml` | Theme, CSS, HTML includes |
 | `render.R` | Build script |
 | `assets/` | `style.css`, `tada.js`, and the HTML head/foot includes |
-| `templates/` | Copy-and-fill templates (see below) ||
+| `templates/` | Copy-and-fill templates (see below) |
 | `docs/` | Rendered site — generated, not edited by hand |
 
 ## Templates
@@ -173,9 +173,9 @@ Edward R. Ivimey-Cook — e.ivimeycook@gmail.com
 - **Code**, meaning the build script, `assets/style.css`, `assets/tada.js` and
 the templates, under the [MIT License](LICENSE).
 - **Content**, meaning the wiki text in the `.Rmd` chapters, under
-  [CC BY 4.0](LICENSE-CONTENT).
+  [CC BY 4.0](LICENSE-data.md).
 
-The three PDFs in `papers/` remain under their original licences. The SORTEE
+The three PDFs in `docs/papers/` remain under their original licences. The SORTEE
 guidelines paper is open access under CC BY 4.0.
 
 ## AI declaration

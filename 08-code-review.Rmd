@@ -265,9 +265,9 @@ Collaboration can be facilitated by code-sharing platforms such as GitHub, where
 users can submit and comment on pull requests. At SORTEE, GitHub issues were
 used to summarise the discussion of an individual's code.
 
-The [SORTEE guidelines](#sortee) recommend the same practice from the journal
-side; see [Advice for authors](#sharing-authors) for what a pre-submission
-review should cover.
+The [SORTEE guidelines](#sortee) make the same recommendation directly to
+authors, under "Perform a pre-submission code review"; see
+[Advice for authors](#sharing-authors) for what that review should cover.
 
 ### During peer review {.unlisted .unnumbered}
 

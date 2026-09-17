@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>5 D — Documented | The TADA-Wiki</title>
 <meta name="author" content="A community wiki built on the TADA guidelines">
-<meta name="description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. Wiki guidance: this is the letter that delivers FAIR Reusability, meaning assets...">
+<meta name="description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. The TADA paper states that this corresponds to the FAIR principles of Reusable (assets...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="5 D — Documented | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/documented.html">
-<meta property="og:description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. Wiki guidance: this is the letter that delivers FAIR Reusability, meaning assets...">
+<meta property="og:description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. The TADA paper states that this corresponds to the FAIR principles of Reusable (assets...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5 D — Documented | The TADA-Wiki">
-<meta name="twitter:description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. Wiki guidance: this is the letter that delivers FAIR Reusability, meaning assets...">
+<meta name="twitter:description" content="Documentation is providing accurate and detailed metadata files that describe the code files and their usage. The TADA paper states that this corresponds to the FAIR principles of Reusable (assets...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -72,10 +72,10 @@
 </h1>
 <div class="tada-key">
 <p><strong>Documentation</strong> is providing <strong>accurate and detailed metadata files that
-describe the code files and their usage</strong>. <em>Wiki guidance:</em> this is the letter
-that delivers FAIR <strong>Reusability</strong>, meaning assets described sufficiently to
-enable reuse and attribution, ideally via a licence. The TADA paper does not
-make that mapping explicitly; see
+describe the code files and their usage</strong>. The TADA paper states that this
+corresponds to the FAIR principles of <strong>Reusable</strong> (assets described
+sufficiently to enable reuse and attribution, ideally via a licence) and
+<strong>Findable</strong> (through the provision of rich metadata); see
 <a href="tada.html#tada-fair">How TADA maps onto FAIR</a>.</p>
 </div>
 <p>In practice, documentation means two files:</p>
@@ -110,7 +110,7 @@ text, with the package examples updated:</p>
 <tbody>
 <tr class="odd">
 <td><strong>Manuscript</strong></td>
-<td>The title of the manuscript the code is associated with</td>
+<td>The title <strong>and abstract</strong> of the manuscript the code is associated with</td>
 </tr>
 <tr class="even">
 <td><strong>Authors &amp; contact</strong></td>
@@ -126,7 +126,7 @@ text, with the package examples updated:</p>
 </tr>
 <tr class="odd">
 <td><strong>Packages</strong></td>
-<td>Important libraries or packages used, <strong>with version numbers</strong>, e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> in R or <code>session-info</code> in Python</td>
+<td>Important libraries or packages used, <strong>with version numbers</strong>, e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> in R or <code>session_info</code> in Python</td>
 </tr>
 <tr class="even">
 <td><strong>Licence</strong></td>
@@ -156,7 +156,7 @@ text, with the package examples updated:</p>
 </tbody>
 </table></div>
 <div class="tada-tip">
-<p><code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> (R) and <code>session-info</code> (Python) will generate the environment
+<p><code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> (R) and <code>session_info</code> (Python) will generate the environment
 section for you. Run it at the end of your final analysis session, paste the
 output into a <code>session_info.txt</code> alongside the README, and reference it there.
 It is a single command, and it answers most later questions about software
@@ -176,47 +176,53 @@ versions before anyone has to ask them.</p>
 <span id="cb7-3"><a href="documented.html#cb7-3" tabindex="-1"></a>Associated manuscript: Ivimey-Cook et al. (2026), *Journal of Example Ecology*.</span>
 <span id="cb7-4"><a href="documented.html#cb7-4" tabindex="-1"></a>Preprint: https://doi.org/10.00000/example</span>
 <span id="cb7-5"><a href="documented.html#cb7-5" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="documented.html#cb7-6" tabindex="-1"></a><span class="fu">## Contact</span></span>
-<span id="cb7-7"><a href="documented.html#cb7-7" tabindex="-1"></a>Edward Ivimey-Cook — e.ivimeycook@gmail.com</span>
-<span id="cb7-8"><a href="documented.html#cb7-8" tabindex="-1"></a>(Anonymised for peer review; restored on acceptance.)</span>
-<span id="cb7-9"><a href="documented.html#cb7-9" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="documented.html#cb7-10" tabindex="-1"></a><span class="fu">## Funding</span></span>
-<span id="cb7-11"><a href="documented.html#cb7-11" tabindex="-1"></a>Example Research Council, grant ABC/123456/1.</span>
-<span id="cb7-12"><a href="documented.html#cb7-12" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="documented.html#cb7-13" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb7-14"><a href="documented.html#cb7-14" tabindex="-1"></a>Archived with this project. If archived separately:</span>
-<span id="cb7-15"><a href="documented.html#cb7-15" tabindex="-1"></a>https://doi.org/10.5061/dryad.000000 (<span class="in">`caterpillars_2024.csv`</span>).</span>
-<span id="cb7-16"><a href="documented.html#cb7-16" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="documented.html#cb7-17" tabindex="-1"></a><span class="fu">## Licence</span></span>
-<span id="cb7-18"><a href="documented.html#cb7-18" tabindex="-1"></a>MIT (see LICENSE). Data are released under CC0.</span>
-<span id="cb7-19"><a href="documented.html#cb7-19" tabindex="-1"></a></span>
-<span id="cb7-20"><a href="documented.html#cb7-20" tabindex="-1"></a><span class="fu">## Software environment</span></span>
-<span id="cb7-21"><a href="documented.html#cb7-21" tabindex="-1"></a>R v4.3.3. Full session details in <span class="in">`session_info.txt`</span>.</span>
+<span id="cb7-6"><a href="documented.html#cb7-6" tabindex="-1"></a><span class="fu">## Abstract</span></span>
+<span id="cb7-7"><a href="documented.html#cb7-7" tabindex="-1"></a>We tested whether caterpillar abundance differs between woodland habitat</span>
+<span id="cb7-8"><a href="documented.html#cb7-8" tabindex="-1"></a>types, using count data collected across three seasons. Abundance was higher</span>
+<span id="cb7-9"><a href="documented.html#cb7-9" tabindex="-1"></a>in mixed woodland than in conifer plantation after controlling for year</span>
+<span id="cb7-10"><a href="documented.html#cb7-10" tabindex="-1"></a>(Poisson GLM); we discuss implications for habitat management.</span>
+<span id="cb7-11"><a href="documented.html#cb7-11" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="documented.html#cb7-12" tabindex="-1"></a><span class="fu">## Contact</span></span>
+<span id="cb7-13"><a href="documented.html#cb7-13" tabindex="-1"></a>Edward Ivimey-Cook — e.ivimeycook@gmail.com</span>
+<span id="cb7-14"><a href="documented.html#cb7-14" tabindex="-1"></a>(Anonymised for peer review; restored on acceptance.)</span>
+<span id="cb7-15"><a href="documented.html#cb7-15" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="documented.html#cb7-16" tabindex="-1"></a><span class="fu">## Funding</span></span>
+<span id="cb7-17"><a href="documented.html#cb7-17" tabindex="-1"></a>Example Research Council, grant ABC/123456/1.</span>
+<span id="cb7-18"><a href="documented.html#cb7-18" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="documented.html#cb7-19" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb7-20"><a href="documented.html#cb7-20" tabindex="-1"></a>Archived with this project. If archived separately:</span>
+<span id="cb7-21"><a href="documented.html#cb7-21" tabindex="-1"></a>https://doi.org/10.5061/dryad.000000 (<span class="in">`caterpillars_2024.csv`</span>).</span>
 <span id="cb7-22"><a href="documented.html#cb7-22" tabindex="-1"></a></span>
-<span id="cb7-23"><a href="documented.html#cb7-23" tabindex="-1"></a>Key packages:</span>
-<span id="cb7-24"><a href="documented.html#cb7-24" tabindex="-1"></a><span class="ss">  - </span>here        v1.0.1   (relative file paths)</span>
-<span id="cb7-25"><a href="documented.html#cb7-25" tabindex="-1"></a><span class="ss">  - </span>lme4        v1.1-35  (mixed models)</span>
-<span id="cb7-26"><a href="documented.html#cb7-26" tabindex="-1"></a><span class="ss">  - </span>ggplot2     v3.5.1   (figures)</span>
-<span id="cb7-27"><a href="documented.html#cb7-27" tabindex="-1"></a></span>
-<span id="cb7-28"><a href="documented.html#cb7-28" tabindex="-1"></a><span class="fu">## How to run</span></span>
-<span id="cb7-29"><a href="documented.html#cb7-29" tabindex="-1"></a>Open <span class="in">`caterpillars.Rproj`</span> in RStudio, then run the scripts in order:</span>
-<span id="cb7-30"><a href="documented.html#cb7-30" tabindex="-1"></a></span>
-<span id="cb7-31"><a href="documented.html#cb7-31" tabindex="-1"></a><span class="ss">  1. </span><span class="in">`R/01_clean_data.R`</span>    reads data/raw/caterpillars_2024.csv</span>
-<span id="cb7-32"><a href="documented.html#cb7-32" tabindex="-1"></a>                            writes data/processed/caterpillars_clean.csv</span>
-<span id="cb7-33"><a href="documented.html#cb7-33" tabindex="-1"></a><span class="ss">  2. </span><span class="in">`R/02_fit_models.R`</span>    fits the models reported in Table 2</span>
-<span id="cb7-34"><a href="documented.html#cb7-34" tabindex="-1"></a>                            writes output/models/*.rds   (~25 min)</span>
-<span id="cb7-35"><a href="documented.html#cb7-35" tabindex="-1"></a><span class="ss">  3. </span><span class="in">`R/03_make_figures.R`</span>  produces Figures 2 and 3</span>
-<span id="cb7-36"><a href="documented.html#cb7-36" tabindex="-1"></a>                            writes output/figures/*.png</span>
-<span id="cb7-37"><a href="documented.html#cb7-37" tabindex="-1"></a></span>
-<span id="cb7-38"><a href="documented.html#cb7-38" tabindex="-1"></a>Total runtime approximately 30 minutes on a 2023 MacBook Pro. Script 02 is</span>
-<span id="cb7-39"><a href="documented.html#cb7-39" tabindex="-1"></a>the slow step; its outputs are saved so 03 can be re-run on its own.</span>
-<span id="cb7-40"><a href="documented.html#cb7-40" tabindex="-1"></a></span>
-<span id="cb7-41"><a href="documented.html#cb7-41" tabindex="-1"></a><span class="fu">## Files</span></span>
-<span id="cb7-42"><a href="documented.html#cb7-42" tabindex="-1"></a>  data/raw/         Unmodified field data. Never written to by any script.</span>
-<span id="cb7-43"><a href="documented.html#cb7-43" tabindex="-1"></a>  data/processed/   Generated by script 01. Safe to delete and regenerate.</span>
-<span id="cb7-44"><a href="documented.html#cb7-44" tabindex="-1"></a>  R/                Analysis scripts, numbered in run order.</span>
-<span id="cb7-45"><a href="documented.html#cb7-45" tabindex="-1"></a>  functions/        Helper functions sourced by the scripts.</span>
-<span id="cb7-46"><a href="documented.html#cb7-46" tabindex="-1"></a>  output/           Figures and saved model objects.</span></code></pre></div>
+<span id="cb7-23"><a href="documented.html#cb7-23" tabindex="-1"></a><span class="fu">## Licence</span></span>
+<span id="cb7-24"><a href="documented.html#cb7-24" tabindex="-1"></a>MIT (see LICENSE). Data are released under CC0.</span>
+<span id="cb7-25"><a href="documented.html#cb7-25" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="documented.html#cb7-26" tabindex="-1"></a><span class="fu">## Software environment</span></span>
+<span id="cb7-27"><a href="documented.html#cb7-27" tabindex="-1"></a>R v4.3.3. Full session details in <span class="in">`session_info.txt`</span>.</span>
+<span id="cb7-28"><a href="documented.html#cb7-28" tabindex="-1"></a></span>
+<span id="cb7-29"><a href="documented.html#cb7-29" tabindex="-1"></a>Key packages:</span>
+<span id="cb7-30"><a href="documented.html#cb7-30" tabindex="-1"></a><span class="ss">  - </span>here        v1.0.1   (relative file paths)</span>
+<span id="cb7-31"><a href="documented.html#cb7-31" tabindex="-1"></a><span class="ss">  - </span>lme4        v1.1-35  (mixed models)</span>
+<span id="cb7-32"><a href="documented.html#cb7-32" tabindex="-1"></a><span class="ss">  - </span>ggplot2     v3.5.1   (figures)</span>
+<span id="cb7-33"><a href="documented.html#cb7-33" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="documented.html#cb7-34" tabindex="-1"></a><span class="fu">## How to run</span></span>
+<span id="cb7-35"><a href="documented.html#cb7-35" tabindex="-1"></a>Open <span class="in">`caterpillars.Rproj`</span> in RStudio, then run the scripts in order:</span>
+<span id="cb7-36"><a href="documented.html#cb7-36" tabindex="-1"></a></span>
+<span id="cb7-37"><a href="documented.html#cb7-37" tabindex="-1"></a><span class="ss">  1. </span><span class="in">`R/01_clean_data.R`</span>    reads data/raw/caterpillars_2024.csv</span>
+<span id="cb7-38"><a href="documented.html#cb7-38" tabindex="-1"></a>                            writes data/processed/caterpillars_clean.csv</span>
+<span id="cb7-39"><a href="documented.html#cb7-39" tabindex="-1"></a><span class="ss">  2. </span><span class="in">`R/02_fit_models.R`</span>    fits the models reported in Table 2</span>
+<span id="cb7-40"><a href="documented.html#cb7-40" tabindex="-1"></a>                            writes output/models/*.rds   (~25 min)</span>
+<span id="cb7-41"><a href="documented.html#cb7-41" tabindex="-1"></a><span class="ss">  3. </span><span class="in">`R/03_make_figures.R`</span>  produces Figures 2 and 3</span>
+<span id="cb7-42"><a href="documented.html#cb7-42" tabindex="-1"></a>                            writes output/figures/*.png</span>
+<span id="cb7-43"><a href="documented.html#cb7-43" tabindex="-1"></a></span>
+<span id="cb7-44"><a href="documented.html#cb7-44" tabindex="-1"></a>Total runtime approximately 30 minutes on a 2023 MacBook Pro. Script 02 is</span>
+<span id="cb7-45"><a href="documented.html#cb7-45" tabindex="-1"></a>the slow step; its outputs are saved so 03 can be re-run on its own.</span>
+<span id="cb7-46"><a href="documented.html#cb7-46" tabindex="-1"></a></span>
+<span id="cb7-47"><a href="documented.html#cb7-47" tabindex="-1"></a><span class="fu">## Files</span></span>
+<span id="cb7-48"><a href="documented.html#cb7-48" tabindex="-1"></a>  data/raw/         Unmodified field data. Never written to by any script.</span>
+<span id="cb7-49"><a href="documented.html#cb7-49" tabindex="-1"></a>  data/processed/   Generated by script 01. Safe to delete and regenerate.</span>
+<span id="cb7-50"><a href="documented.html#cb7-50" tabindex="-1"></a>  R/                Analysis scripts, numbered in run order.</span>
+<span id="cb7-51"><a href="documented.html#cb7-51" tabindex="-1"></a>  functions/        Helper functions sourced by the scripts.</span>
+<span id="cb7-52"><a href="documented.html#cb7-52" tabindex="-1"></a>  output/           Figures and saved model objects.</span></code></pre></div>
 <div class="tada-note">
 <p>That README tells a reader the total runtime, which step is slow and whether its
 output is cached, which figure comes from which script, and that
@@ -343,7 +349,7 @@ possible, for example, MIT, BSD 2-Clause, GNU, and Apache”</em> (Stage 3.2).</
 <li><label><input type="checkbox">A README (<code>.md</code> or <code>.txt</code>) is at the top level of the archived project</label></li>
 <li><label><input type="checkbox">It names the manuscript, authors, contact email, and funders</label></li>
 <li><label><input type="checkbox">It states software and version, and key packages with versions</label></li>
-<li><label><input type="checkbox">A full environment dump (<code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> / <code>session-info</code>) is included or referenced</label></li>
+<li><label><input type="checkbox">A full environment dump (<code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> / <code>session_info</code>) is included or referenced</label></li>
 <li><label><input type="checkbox">It states where the data are, with a PID if archived separately</label></li>
 <li><label><input type="checkbox">It describes what each file contains</label></li>
 <li><label><input type="checkbox">It gives the run order</label></li>

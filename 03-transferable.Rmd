@@ -161,12 +161,16 @@ file, or activate a virtual environment, before running anything. See
 
 ## Beyond TADA: environments and pipelines {#transferable-beyond}
 
-Both of the following sit explicitly beyond the scope of TADA, but they are
+All of the following sit explicitly beyond the scope of TADA, but they are
 worth knowing about, because they address failures that relative paths alone
 cannot fix.
 
-**Containerisation**, through **Docker** (Merkel 2014) and **Singularity**
-(Kurtzer et al. 2017), uses images that encapsulate a complete software
+**Dependency and environment managers**, such as **`{renv}`** (Ushey 2023) in R
+and **`{conda}`** in Python, help ensure the same computational environment is
+used each time a project is run, typically via a lockfile.
+
+**Containerisation**, through **Docker** (Merkel 2014) and **Apptainer**,
+formerly called Singularity (Kurtzer et al. 2017), uses images that encapsulate a complete software
 environment, including all required programs and libraries. This helps ensure
 environment reproducibility between systems and avoids the common *"works on my
 computer"* problem.
@@ -176,9 +180,9 @@ computer"* problem.
 computational steps in a pipeline and their dependencies, ensuring that each
 step executes in a defined and reproducible order.
 
-Neither is required by TADA. If you are already comfortable with them they
-strengthen transferability considerably, but relative paths and a good README
-will get you most of the way on their own.
+None of these is required by TADA. If you are already comfortable with them
+they strengthen transferability considerably, but relative paths and a good
+README will get you most of the way on their own.
 
 ## Checklist {#transferable-checklist}
 

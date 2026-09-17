@@ -56,6 +56,14 @@ that assigns a DOI.
 | Domain repositories (e.g. **GenBank**) | Accession no. | Yes | For sequences and other domain-specific deposits. Other PID types include ARK, Handle and RRID. |
 | GitHub / GitLab / Bitbucket / Codeberg | **None** | **No** | Development platforms. Use for writing code, not for archiving it. |
 
+::: {.tada-note}
+**Where this list comes from.** Zenodo, Figshare and Software Heritage are the
+repositories the TADA paper itself names. Dryad is discussed in the paper too,
+in the Documented section, on licensing. Dataverse and domain repositories such
+as GenBank are additional options (wiki guidance), not named in the paper,
+included here for completeness.
+:::
+
 ::: {.tada-warn}
 **Supplementary material is not archiving.** The SORTEE guidelines are explicit
 that data should not be provided only as supplementary material attached to the
