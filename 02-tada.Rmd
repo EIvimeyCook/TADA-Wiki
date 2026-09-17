@@ -46,12 +46,6 @@ stark:
 | Scripts in species distribution and abundance papers that did not run, or ran with errors | **93%** | Kellner et al. 2025 |
 | Meta-analyses computationally reproducible given working data and code | between **27%** (every result matching exactly) and **73%** (half of results within 10%) | Kambouris et al. 2024 |
 
-::: {.tada-note}
-The SORTEE guidelines summarise the same Kambouris study using a different
-criterion, giving 27% exactly reproduced and **58%** within 10% of the original.
-The figures are not in conflict; they count different things.
-:::
-
 Journal policy has changed a great deal over the past decade; practice has been
 much slower to follow. Even where code is present and does run, computational
 reproducibility still cannot be assumed.
