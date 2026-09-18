@@ -98,7 +98,7 @@ RSTUDIO_PANDOC=/path/to/pandoc Rscript render.R
 | `_output.yml` | Theme, CSS, HTML includes |
 | `render.R` | Build script |
 | `assets/` | `style.css`, `tada.js`, and the HTML head/foot includes |
-| `templates/` | Copy-and-fill templates (see below) ||
+| `templates/` | Copy-and-fill templates (see below) |
 | `docs/` | Rendered site — generated, not edited by hand |
 
 ## Templates
@@ -173,9 +173,9 @@ Edward R. Ivimey-Cook — e.ivimeycook@gmail.com
 - **Code**, meaning the build script, `assets/style.css`, `assets/tada.js` and
 the templates, under the [MIT License](LICENSE).
 - **Content**, meaning the wiki text in the `.Rmd` chapters, under
-  [CC BY 4.0](LICENSE-CONTENT).
+  [CC BY 4.0](LICENSE-data.md).
 
-The three PDFs in `papers/` remain under their original licences. The SORTEE
+The three PDFs in `docs/papers/` remain under their original licences. The SORTEE
 guidelines paper is open access under CC BY 4.0.
 
 ## AI declaration
