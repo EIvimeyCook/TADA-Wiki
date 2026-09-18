@@ -7,7 +7,7 @@
 <title>6 A — Annotated | The TADA-Wiki</title>
 <meta name="author" content="A community wiki built on the TADA guidelines">
 <meta name="description" content="Annotation is adding comments within each code file, denoted with # in R and Python, or embedding code within an RMarkdown or Quarto document alongside descriptive text. It improves both a...">
-<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta name="generator" content="bookdown 0.37 with bs4_book()">
 <meta property="og:title" content="6 A — Annotated | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/annotated.html">
@@ -15,9 +15,9 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="6 A — Annotated | The TADA-Wiki">
 <meta name="twitter:description" content="Annotation is adding comments within each code file, denoted with # in R and Python, or embedding code within an RMarkdown or Quarto document alongside descriptive text. It improves both a...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.1/jquery-3.6.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.6.1/transition.js"></script><script src="libs/bs3compat-0.6.1/tabs.js"></script><script src="libs/bs3compat-0.6.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230F6E7B'/%3E%3Ctext%20x='50'%20y='70'%20font-family='Georgia,serif'%20font-size='58'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
@@ -77,12 +77,29 @@ alongside descriptive text. It improves both a reader’s ability to <em>underst
 your archived code (transparency) and their ability to <em>run</em> it (functionality
 and reproducibility).</p>
 </div>
-<p>Annotation is the letter with no direct FAIR equivalent, and the one most often
-skipped. It is also much less work done while writing than reconstructed
-afterwards.</p>
-<div id="annotated-chunks" class="section level2" number="6.1">
+<p>Annotation, like Documentation, corresponds to the FAIR principle of Reusable —
+the TADA paper states that it does the same job “but rather than describing the
+code ‘externally’, provides clear commenting within each coding script.” It is
+the letter most often skipped, and it is also much less work done while writing
+than reconstructed afterwards.</p>
+<div id="annotated-header" class="section level2" number="6.1">
 <h2>
-<span class="header-section-number">6.1</span> Annotate chunks, not lines<a class="anchor" aria-label="anchor" href="#annotated-chunks"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.1</span> Script headers<a class="anchor" aria-label="anchor" href="#annotated-header"><i class="fas fa-link"></i></a>
+</h2>
+<p>Before chunk-level annotation, the TADA guidelines recommend a <strong>script
+header</strong>: a short block at the very top of the file describing what the whole
+script does and what it will produce.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">##### Caterpillar abundance analysis #####</span></span>
+<span><span class="co"># Fits Poisson GLMs of caterpillar counts against habitat and year, and</span></span>
+<span><span class="co"># produces the coefficients and figures reported in Table 2 and Figure 3</span></span>
+<span><span class="co"># of the manuscript. Run after 01_clean_data.R.</span></span></code></pre></div>
+<p>A header takes a reader from “what is this file for?” to an answer in the
+time it takes to read three lines, before they have opened a single chunk.</p>
+</div>
+<div id="annotated-chunks" class="section level2" number="6.2">
+<h2>
+<span class="header-section-number">6.2</span> Annotate chunks, not lines<a class="anchor" aria-label="anchor" href="#annotated-chunks"><i class="fas fa-link"></i></a>
 </h2>
 <p>The recommendation is explicit: <strong>annotate code chunks rather than every line of
 code.</strong> Line-by-line annotation is possible, but denoting and describing the
@@ -108,7 +125,7 @@ results section to the lines of code that produced it.</p>
 <div class="tada-compare">
 <div class="tada-before">
 <p>Before</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">n</span> <span class="op">~</span> <span class="va">habitat</span> <span class="op">+</span> <span class="va">year</span>, family <span class="op">=</span> <span class="va">poisson</span>, data <span class="op">=</span> <span class="va">dat</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">habitat</span>, <span class="va">dat</span><span class="op">$</span><span class="va">n</span><span class="op">)</span></span></code></pre></div>
@@ -117,7 +134,7 @@ produces. There is no signposting at all.</p>
 </div>
 <div class="tada-after">
 <p>After</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">##### Caterpillar abundance model #####</span></span>
 <span><span class="co"># Poisson GLM of caterpillar counts against habitat type, controlling</span></span>
 <span><span class="co"># for year, to test H1 (abundance differs between woodland types).</span></span>
@@ -132,20 +149,20 @@ produces. There is no signposting at all.</p>
 </div>
 </div>
 </div>
-<div id="annotated-sections" class="section level2" number="6.2">
+<div id="annotated-sections" class="section level2" number="6.3">
 <h2>
-<span class="header-section-number">6.2</span> Collapsible sections<a class="anchor" aria-label="anchor" href="#annotated-sections"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3</span> Collapsible sections<a class="anchor" aria-label="anchor" href="#annotated-sections"><i class="fas fa-link"></i></a>
 </h2>
 <p>Certain comment markers create <strong>collapsible sections</strong> in the editor, which
 increases readability and helps structure a file. This is most useful in long
 scripts.</p>
 <ul>
 <li>
-<strong><code>#####</code></strong> in RStudio</li>
+<strong><code>#####</code></strong> or <strong><code>#----</code></strong> in RStudio</li>
 <li>
-<strong><code>#%%</code></strong> in Python</li>
+<strong><code>#%%</code></strong> in VSCode or Spyder (Python IDEs)</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">##### 1. Load and clean data #####</span></span>
 <span><span class="co"># ...</span></span>
 <span></span>
@@ -157,9 +174,9 @@ scripts.</p>
 <p>In RStudio these appear in the document outline, so a reader can navigate a
 600-line script from a sidebar instead of scrolling.</p>
 </div>
-<div id="annotated-literate" class="section level2" number="6.3">
+<div id="annotated-literate" class="section level2" number="6.4">
 <h2>
-<span class="header-section-number">6.3</span> Literate alternatives<a class="anchor" aria-label="anchor" href="#annotated-literate"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.4</span> Literate alternatives<a class="anchor" aria-label="anchor" href="#annotated-literate"><i class="fas fa-link"></i></a>
 </h2>
 <p>Rather than commenting a plain script, you can <strong>embed the code within a
 document alongside descriptive text</strong>. The TADA guidelines list this as an
@@ -171,19 +188,20 @@ equally valid route to being annotated.</p>
 <p>Prose and code chunks sit in one file, with the output rendered inline. The
 narrative <em>is</em> the annotation, and the link between a paragraph of explanation
 and the code that follows it is unambiguous.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="annotated.html#cb11-1" tabindex="-1"></a><span class="fu">## Caterpillar abundance</span></span>
-<span id="cb11-2"><a href="annotated.html#cb11-2" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="annotated.html#cb11-3" tabindex="-1"></a>We fitted a Poisson GLM of counts against habitat type, controlling for</span>
-<span id="cb11-4"><a href="annotated.html#cb11-4" tabindex="-1"></a>year, to test whether abundance differs between woodland types. These</span>
-<span id="cb11-5"><a href="annotated.html#cb11-5" tabindex="-1"></a>coefficients are reported in Table 2.</span>
-<span id="cb11-6"><a href="annotated.html#cb11-6" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="annotated.html#cb11-7" tabindex="-1"></a><span class="in">```{r abundance-model}</span></span>
-<span id="cb11-8"><a href="annotated.html#cb11-8" tabindex="-1"></a><span class="in">m1 &lt;- glm(n ~ habitat + year, family = poisson, data = dat)</span></span>
-<span id="cb11-9"><a href="annotated.html#cb11-9" tabindex="-1"></a><span class="in">summary(m1)</span></span>
-<span id="cb11-10"><a href="annotated.html#cb11-10" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="annotated.html#cb12-1" tabindex="-1"></a><span class="fu">## Caterpillar abundance</span></span>
+<span id="cb12-2"><a href="annotated.html#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="annotated.html#cb12-3" tabindex="-1"></a>We fitted a Poisson GLM of counts against habitat type, controlling for</span>
+<span id="cb12-4"><a href="annotated.html#cb12-4" tabindex="-1"></a>year, to test whether abundance differs between woodland types. These</span>
+<span id="cb12-5"><a href="annotated.html#cb12-5" tabindex="-1"></a>coefficients are reported in Table 2.</span>
+<span id="cb12-6"><a href="annotated.html#cb12-6" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="annotated.html#cb12-7" tabindex="-1"></a><span class="in">```{r abundance-model}</span></span>
+<span id="cb12-8"><a href="annotated.html#cb12-8" tabindex="-1"></a><span class="in">m1 &lt;- glm(n ~ habitat + year, family = poisson, data = dat)</span></span>
+<span id="cb12-9"><a href="annotated.html#cb12-9" tabindex="-1"></a><span class="in">summary(m1)</span></span>
+<span id="cb12-10"><a href="annotated.html#cb12-10" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <p>The <a href="data-sharing.html#sortee">SORTEE guidelines</a> highlight a further advantage: presenting
 everything in one self-contained Markdown or Quarto document is <strong>very helpful
-for data editors and future readers</strong>, because it makes the link between the
+for data editors and future readers</strong>
+(<span class="tada-cite" data-key="buckley-2025">Buckley et al. 2025</span>), because it makes the link between the
 code, the data and the resulting outputs explicit.</p>
 <p>A rendered <code>.html</code> or <code>.pdf</code> of your Quarto document is a useful <em>addition</em> to
 the archive, but archive the <code>.qmd</code> or <code>.Rmd</code> source as well. A rendered PDF on
@@ -211,8 +229,7 @@ archiving both the notebook and a plain <code>.py</code> export.</li>
 <p>A well-commented <code>.R</code> or <code>.py</code> file is perfectly adequate, and for many analyses
 it is the clearest option. The requirements are the same:</p>
 <ul>
-<li>logical chunks, marked with <code>#####</code> or <code>#%%</code>
-</li>
+<li>logical chunks, marked with <code>#####</code> / <code>#----</code> (RStudio) or <code>#%%</code> (VSCode/Spyder)</li>
 <li>a comment on each chunk giving what it does, why it is needed and where the
 output appears</li>
 <li>object names that a reader can follow</li>
@@ -222,18 +239,18 @@ and describe the order in the <a href="documented.html#documented-readme">README
 </div>
 </div>
 </div>
-<div id="annotated-readability" class="section level2" number="6.4">
+<div id="annotated-readability" class="section level2" number="6.5">
 <h2>
-<span class="header-section-number">6.4</span> Readability<a class="anchor" aria-label="anchor" href="#annotated-readability"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.5</span> Readability<a class="anchor" aria-label="anchor" href="#annotated-readability"><i class="fas fa-link"></i></a>
 </h2>
 <p>Annotation works best on code that is already legible. The code review paper
 identifies four practices that make code reviewable, and they are set out in
 <a href="code-review.html#review-reviewable">Writing reviewable code</a>: calling packages explicitly by
 namespace, using relative file paths, removing redundant packages, and writing
 code with clear subheadings, intuitive comments and interpretable object names.</p>
-<p>Tooling can enforce a consistent style. <strong><code>styler</code></strong> (Müller &amp; Walthert 2020)
+<p>Tooling can enforce a consistent style. <strong><code>styler</code></strong> (<span class="tada-cite" data-key="muller-walthert-2020">Müller &amp; Walthert 2020</span>)
 reformats R code to a standard style in one command, and <strong><code>pycodestyle</code></strong>
-(Rocholl 2022) checks Python code against PEP 8, with <code>black</code> or <code>autopep8</code> to
+(<span class="tada-cite" data-key="rocholl-2022">Rocholl 2022</span>) checks Python code against PEP 8, with <code>black</code> or <code>autopep8</code> to
 do the reformatting. Supported styles include Google and tidyverse in R, and
 PEP 8 in Python.</p>
 <div class="tada-note">
@@ -242,9 +259,9 @@ comments still fails the Annotated test. Comments and signposting matter more
 than layout.</p>
 </div>
 </div>
-<div id="annotated-asyougo" class="section level2" number="6.5">
+<div id="annotated-asyougo" class="section level2" number="6.6">
 <h2>
-<span class="header-section-number">6.5</span> Annotating as you go<a class="anchor" aria-label="anchor" href="#annotated-asyougo"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.6</span> Annotating as you go<a class="anchor" aria-label="anchor" href="#annotated-asyougo"><i class="fas fa-link"></i></a>
 </h2>
 <p>The SORTEE guidelines make the point plainly. Annotating code as you produce it,
 not only with section descriptions but also with information about how the code
@@ -255,16 +272,17 @@ start and update it as files are added.</p>
 reconstructed from memory, and is more likely to describe what you intended the
 code to do than what it actually does.</p>
 </div>
-<div id="annotated-checklist" class="section level2" number="6.6">
+<div id="annotated-checklist" class="section level2" number="6.7">
 <h2>
-<span class="header-section-number">6.6</span> Checklist<a class="anchor" aria-label="anchor" href="#annotated-checklist"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.7</span> Checklist<a class="anchor" aria-label="anchor" href="#annotated-checklist"><i class="fas fa-link"></i></a>
 </h2>
 <ul class="task-list">
+<li><label><input type="checkbox">The script has a header at the top describing what it does and what it produces</label></li>
 <li><label><input type="checkbox">Code is broken into logical, labelled chunks</label></li>
 <li><label><input type="checkbox">Each chunk states what it does</label></li>
 <li><label><input type="checkbox">Each chunk states why it is needed</label></li>
 <li><label><input type="checkbox">Chunks that produce results signpost the manuscript location (figure, table, section)</label></li>
-<li><label><input type="checkbox">Collapsible section markers (<code>#####</code> / <code>#%%</code>) are used in long scripts</label></li>
+<li><label><input type="checkbox">Collapsible section markers (<code>#####</code> / <code>#----</code> / <code>#%%</code>) are used in long scripts</label></li>
 <li><label><input type="checkbox">Object names are interpretable by someone who did not write the code</label></li>
 <li><label><input type="checkbox">Packages are called explicitly by namespace where it aids clarity</label></li>
 <li><label><input type="checkbox">Unused <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> / <code>import</code> calls have been removed</label></li>
@@ -275,25 +293,26 @@ code to do than what it actually does.</p>
 
 </div>
 </div>
-<script src="assets/tada.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><div class="chapter-nav">
 <div class="prev"><a href="documented.html"><span class="header-section-number">5</span> D — Documented</a></div>
 <div class="next"><a href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#annotated"><span class="header-section-number">6</span> A — Annotated</a></li>
-<li><a class="nav-link" href="#annotated-chunks"><span class="header-section-number">6.1</span> Annotate chunks, not lines</a></li>
-<li><a class="nav-link" href="#annotated-sections"><span class="header-section-number">6.2</span> Collapsible sections</a></li>
+<li><a class="nav-link" href="#annotated-header"><span class="header-section-number">6.1</span> Script headers</a></li>
+<li><a class="nav-link" href="#annotated-chunks"><span class="header-section-number">6.2</span> Annotate chunks, not lines</a></li>
+<li><a class="nav-link" href="#annotated-sections"><span class="header-section-number">6.3</span> Collapsible sections</a></li>
 <li>
-<a class="nav-link" href="#annotated-literate"><span class="header-section-number">6.3</span> Literate alternatives</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#annotated-literate"><span class="header-section-number">6.4</span> Literate alternatives</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#rmarkdown-quarto">RMarkdown / Quarto</a></li>
 <li><a class="nav-link" href="#jupyter-notebook">Jupyter Notebook</a></li>
 <li><a class="nav-link" href="#plain-scripts">Plain scripts</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#annotated-readability"><span class="header-section-number">6.4</span> Readability</a></li>
-<li><a class="nav-link" href="#annotated-asyougo"><span class="header-section-number">6.5</span> Annotating as you go</a></li>
-<li><a class="nav-link" href="#annotated-checklist"><span class="header-section-number">6.6</span> Checklist</a></li>
+<li><a class="nav-link" href="#annotated-readability"><span class="header-section-number">6.5</span> Readability</a></li>
+<li><a class="nav-link" href="#annotated-asyougo"><span class="header-section-number">6.6</span> Annotating as you go</a></li>
+<li><a class="nav-link" href="#annotated-checklist"><span class="header-section-number">6.7</span> Checklist</a></li>
 </ul>
 
       <div class="book-extra">
@@ -311,7 +330,7 @@ code to do than what it actually does.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 17 September 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 18 September 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

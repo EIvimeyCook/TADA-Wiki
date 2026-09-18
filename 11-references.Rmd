@@ -60,10 +60,12 @@ reproducible research.* Bulletin of the Ecological Society of America 102: e0180
 Ferguson, J. M., Iannarilli, F., Vélez, J., Vitense, K., Johnson, D. H., &
 Fieberg, J.** (2020). *Computational reproducibility in The Wildlife Society's
 flagship journals.* The Journal of Wildlife Management 84: 1012–1017.
+<https://doi.org/10.1002/jwmg.21855>
 
 **Bakker, T. C. M., & Traniello, J. F. A.** (2020). *Ensuring data access,
 transparency, and preservation: Mandatory data deposition for Behavioral
 Ecology and Sociobiology.* Behavioral Ecology and Sociobiology 74: 132.
+<https://doi.org/10.1007/s00265-020-02910-4>
 
 **Barker, M., Chue Hong, N. P., Katz, D. S., Lamprecht, A.-L.,
 Martinez-Ortiz, C., Psomopoulos, F., et al.** (2022). *Introducing the FAIR
@@ -71,20 +73,25 @@ Principles for research software.* Scientific Data 9: 622.
 
 **Barnes, N.** (2010). *Publish your computer code: it is good enough.* Nature
 467: 753.
+<https://doi.org/10.1038/467753a>
 
 **Blischak, J. D., Carbonetto, P., & Stephens, M.** (2019). *Creating and
 sharing reproducible research code the workflowr way.* F1000Research 8: 1749.
+<https://doi.org/10.12688/f1000research.20843.1>
 
 **Boettiger, C.** (2015). *An introduction to Docker for reproducible research.*
 ACM SIGOPS Operating Systems Review 49: 71–79.
+<https://doi.org/10.1145/2723872.2723882>
 
 **Boettiger, C.** (2017). *Generating CodeMeta metadata for R packages.* The
 Journal of Open Source Software 2: 454.
+<https://doi.org/10.21105/joss.00454>
 
 **Bolnick, D. I., & Paull, J. S.** (2009). *Morphological and dietary
 differences between individuals are weakly but positively correlated within a
 population of threespine stickleback.* Evolutionary Ecology Research 11:
 1217–1233.
+<https://bolnicklab.wordpress.com/wp-content/uploads/2015/10/bolnick-and-paull-2009-eer.pdf>
 
 **Bolnick, D.** (2022). *EIC update: American Naturalist policy on data and
 code archiving.*
@@ -103,6 +110,7 @@ reproducible research pipeline.* Journal of Ecology 113: 270–274.
 **Budd, J. M., Sievert, M. E., & Schultz, T. R.** (1998). *Phenomena of
 retraction: Reasons for retraction and citations to the publications.* JAMA
 280: 296–297.
+<https://doi.org/10.1001/jama.280.3.296>
 
 **Cadwallader, L., & Hrynaszkiewicz, I.** (2022). *A survey of researchers'
 code sharing and code reuse practices, and assessment of interactive notebook
@@ -117,6 +125,7 @@ rise of open science: Tracking the evolution and perceived value of data and
 methods link-sharing practices.* arXiv.
 
 **Chen, D.** (2023). *pyprojroot: Project-oriented workflow in Python.*
+<https://pypi.org/project/pyprojroot/>
 
 **Chue Hong, N. P., Katz, D. S., Barker, M., Lamprecht, A.-L., Martinez, C.,
 Psomopoulos, F. E., et al.** (2022). *FAIR Principles for Research Software
@@ -146,10 +155,12 @@ recommendations for future improvements.* Methods in Ecology and Evolution 17:
 **Culina, A., van den Berg, I., Evans, S., & Sánchez-Tójar, A.** (2020). *Low
 availability of code in ecology: A call for urgent action.* PLOS Biology 18:
 e3000763.
+<https://doi.org/10.1371/journal.pbio.3000763>
 
 **Di Tommaso, P., Chatzou, M., Floden, E. W., Barja, P. P., Palumbo, E., &
 Notredame, C.** (2017). *Nextflow enables reproducible computational
 workflows.* Nature Biotechnology 35: 316–319.
+<https://doi.org/10.1038/nbt.3820>
 
 **Eglen, S. J., Marwick, B., Halchenko, Y. O., Hanke, M., Sufi, S.,
 Gleeson, P., et al.** (2017). *Toward standard practices for sharing computer
@@ -157,13 +168,16 @@ code and programs in neuroscience.* Nature Neuroscience 20: 770–773.
 
 **Eustace, S.** (2023). *Poetry: Python dependency management and packaging
 made easy.*
+<https://python-poetry.org/>
 
 **Feldroy, A.** (2022). *Cookiecutter: A command-line utility that creates
 projects from project templates.*
+<https://github.com/cookiecutter/cookiecutter>
 
 **Fernández-Juricic, E.** (2021). *Why sharing data and code during peer review
 can enhance behavioral ecology research.* Behavioral Ecology and Sociobiology
 75: 103.
+<https://doi.org/10.1007/s00265-021-03036-x>
 
 **Fidler, F., Chee, Y. E., Wintle, B. C., Burgman, M. A., McCarthy, M. A., &
 Gordon, A.** (2017). *Metaresearch for evaluating reproducibility in ecology
@@ -187,6 +201,7 @@ should share their analytic code.* BMJ 367: l6365.
 Foroughirad, V., Sánchez-Reyes, L. L., et al.** (2022). *Why don't we share data
 and code? Perceived barriers and benefits to public archiving practices.*
 Proceedings of the Royal Society B 289: 20221113.
+<https://doi.org/10.1098/rspb.2022.1113>
 
 **Goodman, S. N., Fanelli, D., & Ioannidis, J. P. A.** (2016). *What does
 research reproducibility mean?* Science Translational Medicine 8: 341ps12.
@@ -196,6 +211,7 @@ Peloquin, B. N., de Mayo, B. E., Long, B., Yoon, E. J., & Frank, M. C.** (2021).
 *Analytic reproducibility in articles receiving open data badges at the journal
 Psychological Science: An observational study.* Royal Society Open Science 8:
 201494.
+<https://doi.org/10.1098/rsos.201494>
 
 **Harvard Longwood Medical Area Research Data Management Working Group** (2023).
 *Harvard Biomedical Repository Matrix.* Zenodo.
@@ -204,12 +220,14 @@ Psychological Science: An observational study.* Royal Society Open Science 8:
 **Hillemann, F., Burant, J. B., Culina, A., & Vriend, S. J. G.** (2025). *Code
 review in practice: A checklist for computational reproducibility and
 collaborative research in ecology and evolution.* EcoEvoRxiv.
+<https://doi.org/10.32942/X26S6P>
 
 **Huijgen, R., Boekholdt, S. M., Arsenault, B. J., Bao, W., Davaine, J.-M.,
 Tabet, F., Petrides, F., Rye, K. A., DeMicco, D. A., Barter, P. J.,
 Kastelein, J. J., & Lambert, G.** (2012). *Plasma PCSK9 levels and clinical
 outcomes in the TNT (treating to new targets) trial: A nested case-control
 study.* Journal of the American College of Cardiology 59: 1778–1784.
+<https://doi.org/10.1016/j.jacc.2011.12.043>
 
 **Hunter-Zinck, H., de Siqueira, A. F., Vásquez, V. N., Barnes, R., &
 Martinez, C. C.** (2021). *Ten simple rules on writing clean and reliable
@@ -218,6 +236,7 @@ open-source scientific software.* PLOS Computational Biology 17: e1009481.
 **Indriasari, T. D., Luxton-Reilly, A., & Denny, P.** (2020). *A review of peer
 code review in higher education.* ACM Transactions on Computing Education 20:
 1–25.
+<https://doi.org/10.1145/3403935>
 
 **Ivimey-Cook, E. R., Sánchez-Tójar, A., Berberi, I., Culina, A., Roche, D. G.,
 Almeida, R. A., et al.** (2025). *From policy to practice: Progress towards
@@ -238,11 +257,13 @@ research software.* F1000Research.
 **Kambouris, S., Wilkinson, D. P., Smith, E. T., & Fidler, F.** (2024).
 *Computationally reproducing results from meta-analyses in ecology and
 evolutionary biology using shared code and data.* PLOS ONE 19: e0300333.
+<https://doi.org/10.1371/journal.pone.0300333>
 (The code review paper cites the earlier preprint as Kambouris et al. 2023,
 EcoEvoRxiv, <https://doi.org/10.32942/x2x602>.)
 
 **Kane, A., & Amin, B.** (2023). *Amending the literature through version
 control.* Biology Letters 19: 20220463.
+<https://doi.org/10.1098/rsbl.2022.0463>
 
 **Kang, D., Kang, T., & Jang, J.** (2023). *Papers with code or without code?
 Impact of GitHub repository usability on the diffusion of machine learning
@@ -250,19 +271,23 @@ research.* Information Processing & Management 60: 103477.
 
 **Kellner, K. F., Doser, J. W., & Belant, J. L.** (2025). *Functional R code is
 rare in species distribution and abundance papers.* Ecology 106: e4475.
+<https://doi.org/10.1002/ecy.4475>
 
 **Kimmel, K., Avolio, M. L., & Ferraro, P. J.** (2023). *Empirical evidence of
 widespread exaggeration bias and selective reporting in ecology.* Nature
 Ecology & Evolution 7: 1525–1536.
+<https://doi.org/10.1038/s41559-023-02144-3>
 
 **König, L., Gärtner, A., Slack, H., Dhakal, S., Adetula, A., Dougherty, M.,
 et al.** (2025). *How to bolster employability through open science.* OSF.
 
 **Köster, J., & Rahmann, S.** (2012). *Snakemake — a scalable bioinformatics
 workflow engine.* Bioinformatics 28: 2520–2522.
+<https://doi.org/10.1093/bioinformatics/bts480>
 
 **Kurtzer, G. M., Sochat, V., & Bauer, M. W.** (2017). *Singularity: Scientific
 containers for mobility of compute.* PLOS ONE 12: e0177459.
+<https://doi.org/10.1371/journal.pone.0177459>
 
 **Lai, J., Lortie, C. J., Muenchen, R. A., Yang, J., & Ma, K.** (2019).
 *Evaluating the popularity of R in ecology.* Ecosphere 10: e02567.
@@ -274,39 +299,48 @@ software.* Data Science 3: 37–59.
 **Landau, W. M.** (2021). *The targets R package: A dynamic make-like
 function-oriented pipeline toolkit for reproducibility and high-performance
 computing.* Journal of Open Source Software 6: 2959.
+<https://doi.org/10.21105/joss.02959>
 
 **Light, R. P., Polley, D. E., & Börner, K.** (2014). *Open data and open code
 for big science of science studies.* Scientometrics 101: 1535–1551.
 
 **Lipow, M.** (1982). *Number of faults per line of code.* IEEE Transactions on
 Software Engineering SE-8: 437–439.
+<https://doi.org/10.1109/TSE.1982.235579>
 
 **Ma, C., & Chang, G.** (2007). *Retraction for Ma and Chang, structure of the
 multidrug resistance efflux transporter EmrE from Escherichia coli.*
 Proceedings of the National Academy of Sciences 104: 3668.
+<https://doi.org/10.1073/pnas.0700711104>
 
 **Maitner, B., Santos Andrade, P. E., Lei, L., Kass, J., Owens, H. L.,
 Barbosa, G. C. G., et al.** (2024). *Code sharing in ecology and evolution
 increases citation rates but remains uncommon.* Ecology and Evolution 14:
 e70030.
+<https://doi.org/10.1002/ece3.70030>
 
 **McKiernan, E. C., Bourne, P. E., Brown, C. T., Buck, S., Kenall, A., Lin, J.,
 et al.** (2016). *How open science helps researchers succeed.* eLife 5: e16800.
 
 **Merkel, D.** (2014). *Docker: Lightweight Linux containers for consistent
 development and deployment.* Linux Journal 2014(239): 2.
+<https://dl.acm.org/doi/10.5555/2600239.2600241>
 
 **Miller, G.** (2006). *A scientist's nightmare: Software problem leads to five
 retractions.* Science 314: 1856–1857.
+<https://doi.org/10.1126/science.314.5807.1856>
 
 **Mislan, K. A. S., Heer, J. M., & White, E. P.** (2016). *Elevating the status
 of code in ecology.* Trends in Ecology & Evolution 31: 4–7.
+<https://doi.org/10.1016/j.tree.2015.11.006>
 
 **Müller, K., & Bryan, J.** (2020). *here: A simpler way to find your files.*
 R package. (The 2023 code review paper cites this as Müller 2020.)
+<https://cran.r-project.org/package=here>
 
 **Müller, K., & Walthert, L.** (2020). *styler: Non-invasive pretty printing of
 R code.* R package version 1.3.2.
+<https://cran.r-project.org/package=styler>
 
 **Nakagawa, S., Ivimey-Cook, E. R., Grainger, M. J., O'Dea, R. E., Burke, S.,
 Drobniak, S. M., Gould, E., Macartney, E. L., Martinig, A. R., Morrison, K.,
@@ -319,6 +353,7 @@ Communications 14: 1788.
 Replicability in Science.* National Academies Press (US).
 
 **Okken, B.** (2022). *Python testing with pytest.* Pragmatic Bookshelf.
+<https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/>
 
 **Patel, B., Soundarajan, S., Ménager, H., & Hu, Z.** (2023). *Making
 biomedical research software FAIR: Actionable step-by-step guidelines with a
@@ -331,9 +366,11 @@ Computational Methods in Behavioral Sciences.
 **Petersen, A. H., & Ekstrøm, C. T.** (2019). *dataMaid: Your assistant for
 documenting supervised data quality screening in R.* Journal of Statistical
 Software 90: 1–38. (The package is now `dataReporter`.)
+<https://doi.org/10.18637/jss.v090.i06>
 
 **Pipenv Maintainer Team** (2023). *pipenv: Python development workflow for
 humans.*
+<https://pipenv.pypa.io/>
 
 **Powers, S. M., & Hampton, S. E.** (2019). *Open science, reproducibility, and
 transparency in ecology.* Ecological Applications 29: e01822.
@@ -344,6 +381,7 @@ optional, or unnecessary?* Accountability in Research 24: 1–13.
 <https://doi.org/10.1080/08989621.2025.2481949>
 
 **Rocholl, J. C.** (2022). *pycodestyle: Python style guide checker.*
+<https://github.com/PyCQA/pycodestyle>
 
 **Rokem, A.** (2024). *Ten simple rules for scientific code review.* PLOS
 Computational Biology 20: e1012375.
@@ -354,6 +392,7 @@ Computational Biology 20: e1012375.
 **Sánchez-Tójar, A., Bezine, A., Purgar, M., & Culina, A.** (2025).
 *Code-sharing policies are associated with increased reproducibility potential
 of ecological findings.* Peer Community Journal 5.
+<https://doi.org/10.24072/pcjournal.541>
 
 **Sandve, G. K., Nekrutenko, A., Taylor, J., & Hovig, E.** (2013). *Ten simple
 rules for reproducible computational research.* PLOS Computational Biology 9:
@@ -365,6 +404,7 @@ research.* PeerJ Computer Science 10: e2066.
 
 **Simonsohn, U., & Gruson, H.** (2023). *groundhog: Version-control for CRAN,
 GitHub, and GitLab packages.*
+<https://cran.r-project.org/package=groundhog>
 
 **Stodden, V.** (2011). *Trust your science? Open your data and code* (pp.
 21–22). Amstat News.
@@ -374,26 +414,33 @@ for writing clean code.* No Starch Press.
 
 **The Luigi Authors** (2023). *luigi: Workflow management, task scheduling and
 dependency resolution.*
+<https://github.com/spotify/luigi>
 
 **Touchon, J. C., & McCoy, M. W.** (2016). *The mismatch between current
 statistical practice and doctoral training in ecology.* Ecosphere 7: e01394.
+<https://doi.org/10.1002/ecs2.1394>
 
 **Trisovic, A., Lau, M. K., Pasquier, T., & Crosas, M.** (2022). *A large-scale
 study on research code quality and execution.* Scientific Data 9: 60.
+<https://doi.org/10.1038/s41597-022-01143-6>
 
 **Ushey, K., McPherson, J., Cheng, J., Atkins, A., Allaire, J. J., & Allen, T.**
 (2022). *Packrat: A dependency management system for projects and their R
 package dependencies.*
+<https://cran.r-project.org/package=packrat>
 
 **Ushey, K., & Wickham, H.** (2023). *renv: Project environments.*
+<https://cran.r-project.org/package=renv>
 
 **van Gompel, M.** (2023). *CodeMetaPy 2.5.1.* Humanities Cluster.
+<https://doi.org/10.5281/zenodo.8355866>
 
 **Vandewalle, P.** (2012). *Code sharing is associated with research impact in
 image processing.* Computing in Science & Engineering 14: 42–47.
 
 **Wickham, H.** (2011). *testthat: Get started with testing.* The R Journal 3:
 5–10.
+<https://doi.org/10.32614/RJ-2011-002>
 
 **Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G.,
 Axton, M., Baak, A., et al.** (2016). *The FAIR Guiding Principles for
@@ -401,6 +448,7 @@ scientific data management and stewardship.* Scientific Data 3: 160018.
 
 **Williams, D., & Bürkner, P.-C.** (2020). *Coding errors lead to unsupported
 conclusions: A critique of Hofmann et al. (2015).* Meta-Psychology 4: 4.
+<https://doi.org/10.15626/MP.2018.872>
 
 ## About this wiki {#references-about}
 

@@ -100,7 +100,7 @@ which need a seed and a documented environment instead.
 ## A project layout that works {#quickstart-layout}
 
 The example tree below is wiki guidance; the two conventions it embodies are
-from [Ivimey-Cook et al. (2023, §3.1)]{.tada-cite key="ivimey-cook-2023"}. The specific layout matters less than the
+from [Ivimey-Cook et al. (2023, §3.1)]{.tada-cite data-key="ivimey-cook-2023"}. The specific layout matters less than the
 result: a reader can see the order and purpose of every file without asking you.
 
 ```

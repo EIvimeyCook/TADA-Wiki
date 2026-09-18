@@ -390,9 +390,22 @@ blockquote {
    -------------------------------------------------------------------------- */
 
 .tada-cite {
-  cursor: help;
+  /* Most citations render as a real <a href="…DOI…">: keep the same subtle
+     dotted-underline look as plain text rather than a default blue link, and
+     use a pointer cursor since a click now navigates to the source. A
+     citation backed by several papers at once has no single link and stays
+     a <span>; cursor: help there signals "hover for info" instead. */
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
   border-bottom: 1px dotted var(--tada-ink-soft);
   text-underline-offset: 2px;
+}
+
+span.tada-cite { cursor: help; }
+
+.tada-cite:visited {
+  color: inherit;
 }
 
 .tada-cite:hover,
@@ -464,6 +477,7 @@ blockquote {
   color: var(--tada-accent);
   font-weight: 500;
   font-size: .85rem;
+  word-break: break-all;
 }
 
 /* A claim backed by several papers at once (data-key="a,b,c") stacks their

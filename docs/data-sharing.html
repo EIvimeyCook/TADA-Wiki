@@ -7,7 +7,7 @@
 <title>7 Data &amp; code sharing | The TADA-Wiki</title>
 <meta name="author" content="A community wiki built on the TADA guidelines">
 <meta name="description" content="TADA is about your code. This chapter covers everything sitting around it: what data to share, in what format, with what metadata, under what licence, and what a journal will check. On this page:...">
-<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta name="generator" content="bookdown 0.37 with bs4_book()">
 <meta property="og:title" content="7 Data &amp; code sharing | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/data-sharing.html">
@@ -15,9 +15,9 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="7 Data &amp; code sharing | The TADA-Wiki">
 <meta name="twitter:description" content="TADA is about your code. This chapter covers everything sitting around it: what data to share, in what format, with what metadata, under what licence, and what a journal will check. On this page:...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.1/jquery-3.6.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.6.1/transition.js"></script><script src="libs/bs3compat-0.6.1/tabs.js"></script><script src="libs/bs3compat-0.6.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230F6E7B'/%3E%3Ctext%20x='50'%20y='70'%20font-family='Georgia,serif'%20font-size='58'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
@@ -317,7 +317,8 @@ only makes sense alongside your methods section does not meet that bar.</p>
 and filled in then.</p>
 </div>
 <p><strong>On LLMs.</strong> The SORTEE guidelines add that the README should state <strong>whether
-and how the authors have used large language models in code generation</strong>, while
+and how the authors have used large language models in code generation</strong>
+(<span class="tada-cite" data-key="resnik-2025">Resnik &amp; Hosseini 2025</span>), while
 noting that a data editor is unlikely to be able to verify this.</p>
 </div>
 <div id="sharing-licences" class="section level2" number="7.6">
@@ -332,7 +333,7 @@ of licences, so this is a common and consequential gap.</p>
 <h3>For data<a class="anchor" aria-label="anchor" href="#for-data"><i class="fas fa-link"></i></a>
 </h3>
 <p>Typically <strong>Creative Commons</strong> licences. Chooser:
-<a href="https://chooser-beta.creativecommons.org/" class="uri">https://chooser-beta.creativecommons.org/</a></p>
+<a href="https://creativecommons.org/chooser/" class="uri">https://creativecommons.org/chooser/</a></p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="33%">
@@ -428,7 +429,7 @@ it in the repository’s deposit form, as Zenodo allows.</p>
 <h2>
 <span class="header-section-number">7.7</span> The SORTEE guidelines<a class="anchor" aria-label="anchor" href="#sortee"><i class="fas fa-link"></i></a>
 </h2>
-<p>The <strong>SORTEE guidelines for data and code quality control</strong> (Pick et al. 2026,
+<p>The <strong>SORTEE guidelines for data and code quality control</strong> (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>,
 <em>Peer Community Journal</em> 6: e20) are written for <strong>data editors</strong>, the editorial
 role responsible for screening and quality-controlling data and code at a
 journal. They are worth reading as an author precisely because they tell you
@@ -438,7 +439,8 @@ what will be checked.</p>
 meet minimum standards: complete, usable, documented and runnable. It is
 explicitly <strong>not</strong> a code review. A data editor does not critique your
 analytical techniques, and it is not their role to review, interpret or correct
-your code, nor to check its reliability. That is what
+your code, nor to check its reliability
+(<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>; <span class="tada-cite" data-key="hillemann-2025">Hillemann et al. 2025</span>). That is what
 <a href="code-review.html#code-review">code review</a> is for.</p>
 </div>
 <div id="sortee-stages" class="section level3" number="7.7.1">
@@ -644,7 +646,8 @@ the manuscript, and that results reproduce. Co-authors are also more likely to
 spot mistakes <em>in</em> the code, because they know the study and the data, and data
 editors do not check code reliability. See <a href="code-review.html#code-review">Code review</a>.</p>
 <p><strong>4. Consider Markdown or Quarto.</strong> Presenting everything in one self-contained
-document is very helpful for data editors and future readers, because it makes
+document is very helpful for data editors and future readers
+(<span class="tada-cite" data-key="buckley-2025">Buckley et al. 2025</span>), because it makes
 the link between code, data and outputs explicit.</p>
 <div class="tada-tip">
 <p><strong>Say what was checked.</strong> If your journal performs quality control, the
@@ -677,7 +680,7 @@ computationally expensive analyses.</p>
 </ul>
 </div>
 </div>
-<script src="assets/tada.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><div class="chapter-nav">
 <div class="prev"><a href="annotated.html"><span class="header-section-number">6</span> A — Annotated</a></div>
 <div class="next"><a href="code-review.html"><span class="header-section-number">8</span> Code review</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -727,7 +730,7 @@ computationally expensive analyses.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 17 September 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 18 September 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

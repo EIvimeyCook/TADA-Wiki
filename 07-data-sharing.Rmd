@@ -182,7 +182,7 @@ and filled in then.
 
 **On LLMs.** The SORTEE guidelines add that the README should state **whether
 and how the authors have used large language models in code generation**
-([Resnik & Hosseini 2025]{.tada-cite key="resnik-2025"}), while
+([Resnik & Hosseini 2025]{.tada-cite data-key="resnik-2025"}), while
 noting that a data editor is unlikely to be able to verify this.
 
 ## Licences {#sharing-licences}
@@ -247,7 +247,7 @@ it in the repository's deposit form, as Zenodo allows.
 
 ## The SORTEE guidelines {#sortee}
 
-The **SORTEE guidelines for data and code quality control** ([Pick et al. 2026]{.tada-cite key="pick-2026"},
+The **SORTEE guidelines for data and code quality control** ([Pick et al. 2026]{.tada-cite data-key="pick-2026"},
 *Peer Community Journal* 6: e20) are written for **data editors**, the editorial
 role responsible for screening and quality-controlling data and code at a
 journal. They are worth reading as an author precisely because they tell you
@@ -259,7 +259,7 @@ meet minimum standards: complete, usable, documented and runnable. It is
 explicitly **not** a code review. A data editor does not critique your
 analytical techniques, and it is not their role to review, interpret or correct
 your code, nor to check its reliability
-([Ivimey-Cook et al. 2023]{.tada-cite key="ivimey-cook-2023"}; [Hillemann et al. 2025]{.tada-cite key="hillemann-2025"}). That is what
+([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}; [Hillemann et al. 2025]{.tada-cite data-key="hillemann-2025"}). That is what
 [code review](#code-review) is for.
 :::
 
@@ -377,7 +377,7 @@ editors do not check code reliability. See [Code review](#code-review).
 
 **4. Consider Markdown or Quarto.** Presenting everything in one self-contained
 document is very helpful for data editors and future readers
-([Buckley et al. 2025]{.tada-cite key="buckley-2025"}), because it makes
+([Buckley et al. 2025]{.tada-cite data-key="buckley-2025"}), because it makes
 the link between code, data and outputs explicit.
 
 ::: {.tada-tip}

@@ -7,7 +7,7 @@
 <title>8 Code review | The TADA-Wiki</title>
 <meta name="author" content="A community wiki built on the TADA guidelines">
 <meta name="description" content="Code review is the process of checking and evaluating each other’s code, either formally, as part of the peer-review process, or informally, as co-authors or colleagues. It is critical in avoiding...">
-<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta name="generator" content="bookdown 0.37 with bs4_book()">
 <meta property="og:title" content="8 Code review | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/code-review.html">
@@ -15,9 +15,9 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8 Code review | The TADA-Wiki">
 <meta name="twitter:description" content="Code review is the process of checking and evaluating each other’s code, either formally, as part of the peer-review process, or informally, as co-authors or colleagues. It is critical in avoiding...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.1/jquery-3.6.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.6.1/transition.js"></script><script src="libs/bs3compat-0.6.1/tabs.js"></script><script src="libs/bs3compat-0.6.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230F6E7B'/%3E%3Ctext%20x='50'%20y='70'%20font-family='Georgia,serif'%20font-size='58'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
@@ -76,7 +76,7 @@ either <strong>formally</strong>, as part of the peer-review process, or <strong
 co-authors or colleagues. It is critical in avoiding <strong>conceptual, programmatic
 and syntactic errors</strong>, and it can take place at any stage of the research cycle.</p>
 </div>
-<p>This chapter follows Ivimey-Cook et al. (2023), <em>Implementing code review in the
+<p>This chapter follows <span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. (2023)</span>, <em>Implementing code review in the
 scientific workflow: Insights from ecology and evolutionary biology</em> (Journal of
 Evolutionary Biology 36: 1347–1356, <a href="https://doi.org/10.1111/jeb.14230" class="uri">https://doi.org/10.1111/jeb.14230</a>).</p>
 <div id="review-why" class="section level2" number="8.1">
@@ -87,17 +87,25 @@ Evolutionary Biology 36: 1347–1356, <a href="https://doi.org/10.1111/jeb.14230
 clean, manipulate, visualise and analyse your data. Code-based software is more
 transparent and reproducible than point-and-click software, and far more
 flexible, since analyses can be tailored to exactly what a study needs.</p>
-<p>That flexibility comes at a cost. <strong>Code is more error-prone</strong>, and several
-high-profile retractions have centred on exactly this kind of mistake.</p>
+<p>That flexibility comes at a cost. <strong>Code is more error-prone</strong>
+(<span class="tada-cite" data-key="budd-1998">Budd et al. 1998</span>), and several high-profile
+retractions have centred on exactly this kind of mistake
+(<span class="tada-cite" data-key="bolnick-2009">Bolnick &amp; Paull 2009</span>;
+<span class="tada-cite" data-key="huijgen-2012">Huijgen et al. 2012</span>;
+<span class="tada-cite" data-key="ma-2007">Ma &amp; Chang 2007</span>;
+<span class="tada-cite" data-key="miller-2006">Miller 2006</span>;
+<span class="tada-cite" data-key="williams-2020">Williams &amp; Bürkner 2020</span>).</p>
 <p>In computer science and software development, code review is routine. In the
 academic disciplines that rely on code to make inferences and predictions, it is
-<strong>noticeably absent</strong> from the research and publication process. Ivimey-Cook et
+<strong>noticeably absent</strong> from the research and publication process
+(<span class="tada-cite" data-key="indriasari-2020">Indriasari et al. 2020</span>). Ivimey-Cook et
 al. argue for a fundamental shift in research culture that brings code review
 into <strong>all stages</strong> of the research process.</p>
 <p>There is a structural reason it does not happen. Informal training, combined
-with insufficient time and incentives, means that coding and analysis are
-usually the responsibility of <strong>a single member of a team</strong> for a project’s
-entire lifetime, in stark contrast to the team-wide collaboration that is normal
+with insufficient time and incentives
+(<span class="tada-cite" data-key="touchon-2016">Touchon &amp; McCoy 2016</span>), means that coding and
+analysis are usually the responsibility of <strong>a single member of a team</strong> for a
+project’s entire lifetime, in stark contrast to the team-wide collaboration that is normal
 when developing methodology and experimental design. That individual character
 of research code is precisely what makes pre-publication code review both
 unlikely and critical.</p>
@@ -149,11 +157,11 @@ file.</p>
 <p>This matters beyond bookkeeping. If a package version is later found to contain
 a bug, papers depending on it can be identified.</p>
 <p><strong>Environment management</strong> helps here. Packages such as <strong><code>renv</code></strong>
-(Ushey &amp; Wickham 2023), which replaces <code>packrat</code> (Ushey et al. 2022), and
-<strong><code>groundhog</code></strong> (Simonsohn &amp; Gruson 2023) in R, or <strong><code>poetry</code></strong> (Eustace 2023)
-and <strong><code>pipenv</code></strong> (Pipenv Maintainer Team 2023) in Python, help ensure a
+(<span class="tada-cite" data-key="ushey-2023">Ushey &amp; Wickham 2023</span>), which replaces <code>packrat</code> (<span class="tada-cite" data-key="ushey-2022">Ushey et al. 2022</span>), and
+<strong><code>groundhog</code></strong> (<span class="tada-cite" data-key="simonsohn-2023">Simonsohn &amp; Gruson 2023</span>) in R, or <strong><code>poetry</code></strong> (<span class="tada-cite" data-key="eustace-2023">Eustace 2023</span>)
+and <strong><code>pipenv</code></strong> (<span class="tada-cite" data-key="pipenv-2023">Pipenv Maintainer Team 2023</span>) in Python, help ensure a
 reproducible environment and allow specific package versions to be loaded.
-Containerisation with <strong>Docker</strong> (Boettiger 2015) is another option.</p>
+Containerisation with <strong>Docker</strong> (<span class="tada-cite" data-key="boettiger-2015">Boettiger 2015</span>) is another option.</p>
 </div>
 <div id="run" class="section level3 unlisted unnumbered">
 <h3>Run<a class="anchor" aria-label="anchor" href="#run"><i class="fas fa-link"></i></a>
@@ -173,8 +181,8 @@ environment</li>
 <li>a missing code chunk</li>
 </ul>
 <p>It is the least demanding of the four checks and the one that fails most often:
-74% of over 9,000 archived R files failed to complete without error (Trisovic et
-al. 2022).</p>
+74% of over 9,000 archived R files failed to complete without error (<span class="tada-cite" data-key="trisovic-2022">Trisovic
+et al. 2022</span>).</p>
 <div class="tada-tip">
 <p>Run it in a <strong>fresh session</strong>, from a <strong>fresh download</strong>, in a <strong>new folder</strong>.
 Anything that only works because of what is already loaded in your environment
@@ -191,11 +199,11 @@ output, because <strong>code can produce incorrect results in a reproducible man
 returning the same wrong answer every time. The paper’s example: if code selects
 or modifies the wrong column in a dataset, the analysis is wrong but nothing
 errors.</p>
-<p><strong>Unit testing</strong> helps, through <strong><code>testthat</code></strong> (Wickham 2011) in R and
-<strong><code>pytest</code></strong> (Okken 2022) in Python. But this type of error remains common and
+<p><strong>Unit testing</strong> helps, through <strong><code>testthat</code></strong> (<span class="tada-cite" data-key="wickham-2011">Wickham 2011</span>) in R and
+<strong><code>pytest</code></strong> (<span class="tada-cite" data-key="okken-2022">Okken 2022</span>) in Python. But this type of error remains common and
 is <strong>extremely difficult to pick up by anyone without deep familiarity with the
 dataset and code</strong>. It is also thought to scale with the number of lines and the
-complexity of the code (Lipow 1982).</p>
+complexity of the code (<span class="tada-cite" data-key="lipow-1982">Lipow 1982</span>).</p>
 <div class="tada-note">
 <p>This is the strongest argument for <strong>co-author</strong> review over external review. A
 reviewer who does not know your data cannot tell that <code>mass</code> should have been
@@ -221,7 +229,7 @@ themselves to see whether they obtain similar results. Where the code cannot be
 re-run in reasonable time, compare the newly generated results against those
 originally reported.</p>
 <p>The literature offers two criteria for judging a match.</p>
-<p><em>Conclusion and numbers</em> (Archmiller et al. 2020). Compare the <strong>conclusion</strong>,
+<p><em>Conclusion and numbers</em> (<span class="tada-cite" data-key="archmiller-2020">Archmiller et al. 2020</span>). Compare the <strong>conclusion</strong>,
 meaning direction and significance level, and the <strong>numbers</strong>, meaning intervals
 matching within one significant figure. Their worked example:</p>
 <div class="inline-table"><table class="table table-sm">
@@ -254,7 +262,7 @@ matching within one significant figure. Their worked example:</p>
 </tr>
 </tbody>
 </table></div>
-<p><em>Percentage error</em> (Hardwicke et al. 2021; see also Kambouris et al. 2024).
+<p><em>Percentage error</em> (<span class="tada-cite" data-key="hardwicke-2021">Hardwicke et al. 2021</span>; see also <span class="tada-cite" data-key="kambouris-2024">Kambouris et al. 2024</span>).
 Comparison at one significant figure is highly dependent on scale, whereas
 percentage error is not. Using</p>
 <p><span class="math display">\[\text{PE} = \frac{\text{new} - \text{original}}{\text{original}} \times 100\]</span></p>
@@ -282,14 +290,14 @@ offers four solutions:</p>
 <code>package.module.function()</code> in Python.</li>
 <li>
 <strong>Use relative file paths</strong>, for example the <code>here</code> package
-(Müller &amp; Bryan 2020), preferably with an associated R project file if using
+(<span class="tada-cite" data-key="muller-bryan-2020">Müller &amp; Bryan 2020</span>), preferably with an associated R project file if using
 R and RStudio, or a virtual environment in Python.</li>
 <li><strong>Remove redundant packages.</strong></li>
 <li><strong>Write analysis code with clear subheadings, intuitive comments and
 easy-to-understand object names.</strong></li>
 </ol>
-<p>For style tooling, <strong><code>styler</code></strong> (Müller &amp; Walthert 2020) reformats R code to a
-standard style in one command, while <strong><code>pycodestyle</code></strong> (Rocholl 2022) checks
+<p>For style tooling, <strong><code>styler</code></strong> (<span class="tada-cite" data-key="muller-walthert-2020">Müller &amp; Walthert 2020</span>) reformats R code to a
+standard style in one command, while <strong><code>pycodestyle</code></strong> (<span class="tada-cite" data-key="rocholl-2022">Rocholl 2022</span>) checks
 Python code against PEP 8. Supported styles include Google and tidyverse in R,
 and PEP 8 in Python.</p>
 <p>Literate formats, meaning R and Python Markdown, Quarto, and Jupyter Notebook or
@@ -320,12 +328,12 @@ the analysis code</strong>, meaning what previous manipulation or pre-processing
 produced the data in its current state, or where an intermediate data file was
 used.</p>
 <div class="tada-note">
-<p><strong>Metadata tooling.</strong> Packages such as <code>codemeta</code> (Boettiger 2017) and
-<code>dataReporter</code> (Petersen &amp; Ekstrøm 2019) in R, or <code>CodeMetaPy</code> (van Gompel 2023)
-and <code>cookiecutter</code> (Feldroy 2022) in Python, can help produce consistent
+<p><strong>Metadata tooling.</strong> Packages such as <code>codemeta</code> (<span class="tada-cite" data-key="boettiger-2017">Boettiger 2017</span>) and
+<code>dataReporter</code> (<span class="tada-cite" data-key="petersen-2019">Petersen &amp; Ekstrøm 2019</span>) in R, or <code>CodeMetaPy</code> (<span class="tada-cite" data-key="van-gompel-2023">van Gompel 2023</span>)
+and <code>cookiecutter</code> (<span class="tada-cite" data-key="feldroy-2022">Feldroy 2022</span>) in Python, can help produce consistent
 metadata and project templates. Pipeline tools automate the steps from raw
-dataset to results: <code>targets</code> (Landau 2021) and <code>workflowr</code>
-(Blischak et al. 2019) in R, and <code>luigi</code> (The Luigi Authors 2023) in Python.</p>
+dataset to results: <code>targets</code> (<span class="tada-cite" data-key="landau-2021">Landau 2021</span>) and <code>workflowr</code>
+(<span class="tada-cite" data-key="blischak-2019">Blischak et al. 2019</span>) in R, and <code>luigi</code> (<span class="tada-cite" data-key="luigi-authors-2023">The Luigi Authors 2023</span>) in Python.</p>
 </div>
 </div>
 </div>
@@ -345,9 +353,9 @@ can catch <em>Reliable</em> errors, because they know the study.</p>
 Collaboration can be facilitated by code-sharing platforms such as GitHub, where
 users can submit and comment on pull requests. At SORTEE, GitHub issues were
 used to summarise the discussion of an individual’s code.</p>
-<p>The <a href="data-sharing.html#sortee">SORTEE guidelines</a> recommend the same practice from the journal
-side; see <a href="data-sharing.html#sharing-authors">Advice for authors</a> for what a pre-submission
-review should cover.</p>
+<p>The <a href="data-sharing.html#sortee">SORTEE guidelines</a> make the same recommendation directly to
+authors, under “Perform a pre-submission code review”; see
+<a href="data-sharing.html#sharing-authors">Advice for authors</a> for what that review should cover.</p>
 </div>
 <div id="during-peer-review" class="section level3 unlisted unnumbered">
 <h3>During peer review<a class="anchor" aria-label="anchor" href="#during-peer-review"><i class="fas fa-link"></i></a>
@@ -355,15 +363,19 @@ review should cover.</p>
 <p>This is one of the most crucial places for code review, because reviewers can
 follow the logic of the analyses carefully, much as they follow the argument
 from introduction to discussion.</p>
-<p>Some journals already request code and data at submission, including The Royal
-Society, <em>Behavioral Ecology and Sociobiology</em> and <em>The American Naturalist</em>,
-though the paper’s authors note that in their experience this is not enforced.
-In some cases, such as the <strong>Journal of Open Source Software</strong>, the entire
-formal peer-review process, code and manuscript alike, is hosted on GitHub.</p>
-<p>The benefits run both ways. For authors, providing code during peer review could
-increase manuscript quality. For reviewers, available code gives far deeper
-insight, because there is a clearer link between experimental methodology and
-statistical analysis, which is the first R, code <strong>as reported</strong>.</p>
+<p>Some journals already request code and data at submission, including
+<span class="tada-cite" data-key="royal-society-2023">The Royal Society</span>,
+<em><span class="tada-cite" data-key="bakker-2020">Behavioral Ecology and Sociobiology</span></em> and
+<em><span class="tada-cite" data-key="bolnick-2022">The American Naturalist</span></em>, though the paper’s
+authors note that in their experience this is not enforced. In some cases, such
+as the <strong>Journal of Open Source Software</strong>, the entire formal peer-review
+process, code and manuscript alike, is hosted on GitHub.</p>
+<p>The benefits run both ways
+(<span class="tada-cite" data-key="fernandez-juricic-2021">Fernández-Juricic 2021</span>). For
+authors, providing code during peer review could increase manuscript quality.
+For reviewers, available code gives far deeper insight, because there is a
+clearer link between experimental methodology and statistical analysis, which
+is the first R, code <strong>as reported</strong>.</p>
 <p>There are two practical obstacles.</p>
 <p><em>Finding reviewers.</em> There is already a shortage of willing reviewers. It is
 reasonable to expect a reviewer to check that code is <strong>as reported</strong>, but
@@ -402,11 +414,11 @@ and correct their own mistake.</li>
 </ol>
 <div class="tada-note">
 <p>Journal culture matters here. Under <em>The American Naturalist</em>’s stance
-(Bolnick 2022), authors who contact the journal to correct code or data errors
+(<span class="tada-cite" data-key="bolnick-2022">Bolnick 2022</span>), authors who contact the journal to correct code or data errors
 are <strong>not penalised</strong>, and corrections are encouraged where warranted. Where
 updated results would alter the narrative of a published paper, corrections are
 harder; publication versioning or “living” documents may be a first step
-(Kane &amp; Amin 2023).</p>
+(<span class="tada-cite" data-key="kane-2023">Kane &amp; Amin 2023</span>).</p>
 </div>
 </div>
 </div>
@@ -419,7 +431,7 @@ harder; publication versioning or “living” documents may be a first step
 within a lab or among colleagues. The following draws on the authors’ experience
 building a code review club in collaboration with <strong>SORTEE</strong>.</p>
 <p>The barriers being addressed are worth naming, because the design of the club
-follows from them (Gomes et al. 2022): <strong>lack of time and incentive</strong>, <strong>lack of
+follows from them (<span class="tada-cite" data-key="gomes-2022">Gomes et al. 2022</span>): <strong>lack of time and incentive</strong>, <strong>lack of
 technical knowledge and unclear workflows</strong>, and <strong>social pressures and the fear
 of being judged by peers</strong>.</p>
 <div id="set-a-clear-goal-for-each-session" class="section level3 unlisted unnumbered">
@@ -438,7 +450,7 @@ that drifts into the choice of model is no longer reviewing the code.</p>
 <p>Volunteers often feel very anxious about showing code that may have errors. It
 is vital to <strong>normalise the existence of errors</strong> and to highlight that
 perfection is never possible. It is also useful to stress that <strong>there is no
-such thing as bad code</strong> (Barnes 2010), and that there are usually multiple ways
+such thing as bad code</strong> (<span class="tada-cite" data-key="barnes-2010">Barnes 2010</span>), and that there are usually multiple ways
 to approach the same problem.</p>
 </div>
 <div id="think-about-group-size" class="section level3 unlisted unnumbered">
@@ -535,7 +547,7 @@ are phrased affects whether people keep volunteering.</p>
 </ul>
 </div>
 </div>
-<script src="assets/tada.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><div class="chapter-nav">
 <div class="prev"><a href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></div>
 <div class="next"><a href="further-reading.html"><span class="header-section-number">9</span> Further reading</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -588,7 +600,7 @@ are phrased affects whether people keep volunteering.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 17 September 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 18 September 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

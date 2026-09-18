@@ -40,11 +40,11 @@ stark:
 
 | What | Figure | Primary source |
 |---|---|---|
-| Journals in ecology & evolutionary biology with code-sharing policies | 15% in 2015, rising to **88% in 2024** | [Mislan et al. 2016]{.tada-cite key="mislan-2016"}; [Culina et al. 2020]{.tada-cite key="culina-2020"}; [Ivimey-Cook et al. 2025]{.tada-cite key="ivimey-cook-2025-policy"} |
-| Articles in the field with open code | **5–35%**, depending on the study | [Culina et al. 2020]{.tada-cite key="culina-2020"}; [Kimmel et al. 2023]{.tada-cite key="kimmel-2023"}; [Maitner et al. 2024]{.tada-cite key="maitner-2024"}; [Kellner et al. 2025]{.tada-cite key="kellner-2025"}; [Sánchez-Tójar et al. 2025]{.tada-cite key="sanchez-tojar-2025"}; [Cooper & the BES Data and Code Hackathon Group 2026]{.tada-cite key="cooper-2026"} |
-| Archived R files in Harvard Dataverse failing to run without error | **74%**, falling to 56% after automated cleaning | [Trisovic et al. 2022]{.tada-cite key="trisovic-2022"} |
-| Scripts in species distribution and abundance papers that did not run, or ran with errors | **93%** | [Kellner et al. 2025]{.tada-cite key="kellner-2025"} |
-| Meta-analyses computationally reproducible given working data and code | between **27%** (every result matching exactly) and **73%** (half of results within 10%) | [Kambouris et al. 2024]{.tada-cite key="kambouris-2024"} |
+| Journals in ecology & evolutionary biology with code-sharing policies | 15% in 2015, rising to **88% in 2024** | [Mislan et al. 2016]{.tada-cite data-key="mislan-2016"}; [Culina et al. 2020]{.tada-cite data-key="culina-2020"}; [Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-policy"} |
+| Articles in the field with open code | **5–35%**, depending on the study | [Culina et al. 2020]{.tada-cite data-key="culina-2020"}; [Kimmel et al. 2023]{.tada-cite data-key="kimmel-2023"}; [Maitner et al. 2024]{.tada-cite data-key="maitner-2024"}; [Kellner et al. 2025]{.tada-cite data-key="kellner-2025"}; [Sánchez-Tójar et al. 2025]{.tada-cite data-key="sanchez-tojar-2025"}; [Cooper & the BES Data and Code Hackathon Group 2026]{.tada-cite data-key="cooper-2026"} |
+| Archived R files in Harvard Dataverse failing to run without error | **74%**, falling to 56% after automated cleaning | [Trisovic et al. 2022]{.tada-cite data-key="trisovic-2022"} |
+| Scripts in species distribution and abundance papers that did not run, or ran with errors | **93%** | [Kellner et al. 2025]{.tada-cite data-key="kellner-2025"} |
+| Meta-analyses computationally reproducible given working data and code | between **27%** (every result matching exactly) and **73%** (half of results within 10%) | [Kambouris et al. 2024]{.tada-cite data-key="kambouris-2024"} |
 
 Journal policy has changed a great deal over the past decade; practice has been
 much slower to follow. Even where code is present and does run, computational
