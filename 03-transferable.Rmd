@@ -93,7 +93,7 @@ the project and RStudio automatically sets the working directory to the project
 folder, so `setwd()` is never needed.
 See <https://docs.posit.co/ide/user/ide/get-started/>.
 
-**Use the `here` package** (Müller & Bryan 2020). `here()` builds paths relative
+**Use the `here` package** ([Müller & Bryan 2020]{.tada-cite key="muller-bryan-2020"}). `here()` builds paths relative
 to the project directory, whatever the operating system:
 
 ```r
@@ -118,7 +118,7 @@ people run your code.
 
 #### Python {.unlisted .unnumbered}
 
-**Use `pyprojroot`** (Chen 2023), the Python counterpart to `here`, which builds
+**Use `pyprojroot`** ([Chen 2023]{.tada-cite key="chen-2023"}), the Python counterpart to `here`, which builds
 file paths relative to the project directory regardless of operating system:
 
 ```python
@@ -165,18 +165,18 @@ All of the following sit explicitly beyond the scope of TADA, but they are
 worth knowing about, because they address failures that relative paths alone
 cannot fix.
 
-**Dependency and environment managers**, such as **`{renv}`** (Ushey 2023) in R
+**Dependency and environment managers**, such as **`{renv}`** ([Ushey 2023]{.tada-cite key="ushey-2023"}) in R
 and **`{conda}`** in Python, help ensure the same computational environment is
 used each time a project is run, typically via a lockfile.
 
-**Containerisation**, through **Docker** (Merkel 2014) and **Apptainer**,
-formerly called Singularity (Kurtzer et al. 2017), uses images that encapsulate a complete software
+**Containerisation**, through **Docker** ([Merkel 2014]{.tada-cite key="merkel-2014"}) and **Apptainer**,
+formerly called Singularity ([Kurtzer et al. 2017]{.tada-cite key="kurtzer-2017"}), uses images that encapsulate a complete software
 environment, including all required programs and libraries. This helps ensure
 environment reproducibility between systems and avoids the common *"works on my
 computer"* problem.
 
-**Workflow managers**, such as **Snakemake** (Köster & Rahmann 2012) and
-**Nextflow** (Di Tommaso et al. 2017), specify the sequence of scripts or
+**Workflow managers**, such as **Snakemake** ([Köster & Rahmann 2012]{.tada-cite key="koster-2012"}) and
+**Nextflow** ([Di Tommaso et al. 2017]{.tada-cite key="di-tommaso-2017"}), specify the sequence of scripts or
 computational steps in a pipeline and their dependencies, ensuring that each
 step executes in a defined and reproducible order.
 

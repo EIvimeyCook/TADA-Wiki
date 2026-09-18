@@ -7,7 +7,7 @@ co-authors or colleagues. It is critical in avoiding **conceptual, programmatic
 and syntactic errors**, and it can take place at any stage of the research cycle.
 :::
 
-This chapter follows Ivimey-Cook et al. (2023), *Implementing code review in the
+This chapter follows [Ivimey-Cook et al. (2023)]{.tada-cite key="ivimey-cook-2023"}, *Implementing code review in the
 scientific workflow: Insights from ecology and evolutionary biology* (Journal of
 Evolutionary Biology 36: 1347–1356, <https://doi.org/10.1111/jeb.14230>).
 
@@ -89,11 +89,11 @@ This matters beyond bookkeeping. If a package version is later found to contain
 a bug, papers depending on it can be identified.
 
 **Environment management** helps here. Packages such as **`renv`**
-(Ushey & Wickham 2023), which replaces `packrat` (Ushey et al. 2022), and
-**`groundhog`** (Simonsohn & Gruson 2023) in R, or **`poetry`** (Eustace 2023)
-and **`pipenv`** (Pipenv Maintainer Team 2023) in Python, help ensure a
+([Ushey & Wickham 2023]{.tada-cite key="ushey-2023"}), which replaces `packrat` ([Ushey et al. 2022]{.tada-cite key="ushey-2022"}), and
+**`groundhog`** ([Simonsohn & Gruson 2023]{.tada-cite key="simonsohn-2023"}) in R, or **`poetry`** ([Eustace 2023]{.tada-cite key="eustace-2023"})
+and **`pipenv`** ([Pipenv Maintainer Team 2023]{.tada-cite key="pipenv-2023"}) in Python, help ensure a
 reproducible environment and allow specific package versions to be loaded.
-Containerisation with **Docker** (Boettiger 2015) is another option.
+Containerisation with **Docker** ([Boettiger 2015]{.tada-cite key="boettiger-2015"}) is another option.
 
 ### Run {.unlisted .unnumbered}
 
@@ -133,11 +133,11 @@ returning the same wrong answer every time. The paper's example: if code selects
 or modifies the wrong column in a dataset, the analysis is wrong but nothing
 errors.
 
-**Unit testing** helps, through **`testthat`** (Wickham 2011) in R and
-**`pytest`** (Okken 2022) in Python. But this type of error remains common and
+**Unit testing** helps, through **`testthat`** ([Wickham 2011]{.tada-cite key="wickham-2011"}) in R and
+**`pytest`** ([Okken 2022]{.tada-cite key="okken-2022"}) in Python. But this type of error remains common and
 is **extremely difficult to pick up by anyone without deep familiarity with the
 dataset and code**. It is also thought to scale with the number of lines and the
-complexity of the code (Lipow 1982).
+complexity of the code ([Lipow 1982]{.tada-cite key="lipow-1982"}).
 
 ::: {.tada-note}
 This is the strongest argument for **co-author** review over external review. A
@@ -168,7 +168,7 @@ originally reported.
 
 The literature offers two criteria for judging a match.
 
-*Conclusion and numbers* (Archmiller et al. 2020). Compare the **conclusion**,
+*Conclusion and numbers* ([Archmiller et al. 2020]{.tada-cite key="archmiller-2020"}). Compare the **conclusion**,
 meaning direction and significance level, and the **numbers**, meaning intervals
 matching within one significant figure. Their worked example:
 
@@ -178,7 +178,7 @@ matching within one significant figure. Their worked example:
 | mean 4.00, interval 3.30–5.00 | mean 6.5, interval 6.0–7.0 | Same conclusion; numbers **not** quantitatively reproduced |
 | mean 4.00, interval 3.30–5.00 | mean 4.10, interval −1.00–8.40 | **Not** reproduced, because the interval now overlaps zero |
 
-*Percentage error* (Hardwicke et al. 2021; see also Kambouris et al. 2024).
+*Percentage error* ([Hardwicke et al. 2021]{.tada-cite key="hardwicke-2021"}; see also [Kambouris et al. 2024]{.tada-cite key="kambouris-2024"}).
 Comparison at one significant figure is highly dependent on scale, whereas
 percentage error is not. Using
 
@@ -205,14 +205,14 @@ offers four solutions:
 1. **Call packages explicitly** via the namespace: `package::function()` in R,
    `package.module.function()` in Python.
 2. **Use relative file paths**, for example the `here` package
-   (Müller & Bryan 2020), preferably with an associated R project file if using
+   ([Müller & Bryan 2020]{.tada-cite key="muller-bryan-2020"}), preferably with an associated R project file if using
    R and RStudio, or a virtual environment in Python.
 3. **Remove redundant packages.**
 4. **Write analysis code with clear subheadings, intuitive comments and
    easy-to-understand object names.**
 
-For style tooling, **`styler`** (Müller & Walthert 2020) reformats R code to a
-standard style in one command, while **`pycodestyle`** (Rocholl 2022) checks
+For style tooling, **`styler`** ([Müller & Walthert 2020]{.tada-cite key="muller-walthert-2020"}) reformats R code to a
+standard style in one command, while **`pycodestyle`** ([Rocholl 2022]{.tada-cite key="rocholl-2022"}) checks
 Python code against PEP 8. Supported styles include Google and tidyverse in R,
 and PEP 8 in Python.
 
@@ -240,12 +240,12 @@ produced the data in its current state, or where an intermediate data file was
 used.
 
 ::: {.tada-note}
-**Metadata tooling.** Packages such as `codemeta` (Boettiger 2017) and
-`dataReporter` (Petersen & Ekstrøm 2019) in R, or `CodeMetaPy` (van Gompel 2023)
-and `cookiecutter` (Feldroy 2022) in Python, can help produce consistent
+**Metadata tooling.** Packages such as `codemeta` ([Boettiger 2017]{.tada-cite key="boettiger-2017"}) and
+`dataReporter` ([Petersen & Ekstrøm 2019]{.tada-cite key="petersen-2019"}) in R, or `CodeMetaPy` ([van Gompel 2023]{.tada-cite key="van-gompel-2023"})
+and `cookiecutter` ([Feldroy 2022]{.tada-cite key="feldroy-2022"}) in Python, can help produce consistent
 metadata and project templates. Pipeline tools automate the steps from raw
-dataset to results: `targets` (Landau 2021) and `workflowr`
-(Blischak et al. 2019) in R, and `luigi` (The Luigi Authors 2023) in Python.
+dataset to results: `targets` ([Landau 2021]{.tada-cite key="landau-2021"}) and `workflowr`
+([Blischak et al. 2019]{.tada-cite key="blischak-2019"}) in R, and `luigi` ([The Luigi Authors 2023]{.tada-cite key="luigi-authors-2023"}) in Python.
 :::
 
 ## When code review happens {#review-when}
@@ -324,11 +324,11 @@ reasonable request".
 
 ::: {.tada-note}
 Journal culture matters here. Under *The American Naturalist*'s stance
-(Bolnick 2022), authors who contact the journal to correct code or data errors
+([Bolnick 2022]{.tada-cite key="bolnick-2022"}), authors who contact the journal to correct code or data errors
 are **not penalised**, and corrections are encouraged where warranted. Where
 updated results would alter the narrative of a published paper, corrections are
 harder; publication versioning or "living" documents may be a first step
-(Kane & Amin 2023).
+([Kane & Amin 2023]{.tada-cite key="kane-2023"}).
 :::
 
 :::
@@ -340,7 +340,7 @@ within a lab or among colleagues. The following draws on the authors' experience
 building a code review club in collaboration with **SORTEE**.
 
 The barriers being addressed are worth naming, because the design of the club
-follows from them (Gomes et al. 2022): **lack of time and incentive**, **lack of
+follows from them ([Gomes et al. 2022]{.tada-cite key="gomes-2022"}): **lack of time and incentive**, **lack of
 technical knowledge and unclear workflows**, and **social pressures and the fear
 of being judged by peers**.
 
@@ -359,7 +359,7 @@ that drifts into the choice of model is no longer reviewing the code.
 Volunteers often feel very anxious about showing code that may have errors. It
 is vital to **normalise the existence of errors** and to highlight that
 perfection is never possible. It is also useful to stress that **there is no
-such thing as bad code** (Barnes 2010), and that there are usually multiple ways
+such thing as bad code** ([Barnes 2010]{.tada-cite key="barnes-2010"}), and that there are usually multiple ways
 to approach the same problem.
 
 ### Think about group size {.unlisted .unnumbered}

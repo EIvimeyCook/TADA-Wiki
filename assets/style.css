@@ -380,3 +380,93 @@ blockquote {
   .tada-pane > h4:first-child { display: block !important; }
   .tada-tablist { display: none; }
 }
+
+/* --------------------------------------------------------------------------
+   Citation hover cards — built from `[text]{.tada-cite key="..."}` spans by
+   assets/tada-cite.js, using the data in assets/tada-citations.js.
+
+   Degrades safely: with JavaScript off, or for a key missing from the
+   database, the span is still plain inline text and no content is lost.
+   -------------------------------------------------------------------------- */
+
+.tada-cite {
+  cursor: help;
+  border-bottom: 1px dotted var(--tada-ink-soft);
+  text-underline-offset: 2px;
+}
+
+.tada-cite:hover,
+.tada-cite:focus-visible {
+  border-bottom-color: var(--tada-accent);
+  color: var(--tada-accent);
+}
+
+.tada-cite:focus-visible {
+  outline: 2px solid var(--tada-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.tada-cite-card {
+  position: absolute;
+  z-index: 60;
+  width: min(340px, calc(100vw - 2rem));
+  border: 1px solid var(--tada-line);
+  border-radius: var(--tada-radius);
+  background: #fff;
+  box-shadow: var(--tada-shadow);
+  padding: .85rem 1rem;
+  font-size: .88rem;
+  line-height: 1.5;
+  color: var(--tada-ink);
+  opacity: 0;
+  transform: translateY(4px);
+  pointer-events: none;
+  transition: opacity .12s ease, transform .12s ease;
+}
+
+.tada-cite-card.is-above { transform: translateY(-4px); }
+
+.tada-cite-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.tada-cite-card .tada-cite-authors {
+  font-weight: 600;
+  display: block;
+  margin-bottom: .15rem;
+}
+
+.tada-cite-card .tada-cite-title {
+  font-style: italic;
+  display: block;
+  margin-bottom: .2rem;
+}
+
+.tada-cite-card .tada-cite-venue {
+  color: var(--tada-ink-soft);
+  display: block;
+}
+
+.tada-cite-card .tada-cite-note {
+  color: var(--tada-ink-soft);
+  display: block;
+  margin-top: .35rem;
+  padding-top: .35rem;
+  border-top: 1px solid var(--tada-line);
+}
+
+.tada-cite-card .tada-cite-link {
+  display: inline-block;
+  margin-top: .4rem;
+  color: var(--tada-accent);
+  font-weight: 500;
+  font-size: .85rem;
+}
+
+@media print {
+  .tada-cite { border-bottom: none; }
+  .tada-cite-card { display: none !important; }
+}

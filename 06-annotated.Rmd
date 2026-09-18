@@ -177,9 +177,9 @@ identifies four practices that make code reviewable, and they are set out in
 namespace, using relative file paths, removing redundant packages, and writing
 code with clear subheadings, intuitive comments and interpretable object names.
 
-Tooling can enforce a consistent style. **`styler`** (Müller & Walthert 2020)
+Tooling can enforce a consistent style. **`styler`** ([Müller & Walthert 2020]{.tada-cite key="muller-walthert-2020"})
 reformats R code to a standard style in one command, and **`pycodestyle`**
-(Rocholl 2022) checks Python code against PEP 8, with `black` or `autopep8` to
+([Rocholl 2022]{.tada-cite key="rocholl-2022"}) checks Python code against PEP 8, with `black` or `autopep8` to
 do the reformatting. Supported styles include Google and tidyverse in R, and
 PEP 8 in Python.
 

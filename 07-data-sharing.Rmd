@@ -246,7 +246,7 @@ it in the repository's deposit form, as Zenodo allows.
 
 ## The SORTEE guidelines {#sortee}
 
-The **SORTEE guidelines for data and code quality control** (Pick et al. 2026,
+The **SORTEE guidelines for data and code quality control** ([Pick et al. 2026]{.tada-cite key="pick-2026"},
 *Peer Community Journal* 6: e20) are written for **data editors**, the editorial
 role responsible for screening and quality-controlling data and code at a
 journal. They are worth reading as an author precisely because they tell you
