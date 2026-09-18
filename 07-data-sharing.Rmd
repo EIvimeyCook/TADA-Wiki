@@ -181,7 +181,8 @@ and filled in then.
 :::
 
 **On LLMs.** The SORTEE guidelines add that the README should state **whether
-and how the authors have used large language models in code generation**, while
+and how the authors have used large language models in code generation**
+([Resnik & Hosseini 2025]{.tada-cite key="resnik-2025"}), while
 noting that a data editor is unlikely to be able to verify this.
 
 ## Licences {#sharing-licences}
@@ -257,7 +258,8 @@ what will be checked.
 meet minimum standards: complete, usable, documented and runnable. It is
 explicitly **not** a code review. A data editor does not critique your
 analytical techniques, and it is not their role to review, interpret or correct
-your code, nor to check its reliability. That is what
+your code, nor to check its reliability
+([Ivimey-Cook et al. 2023]{.tada-cite key="ivimey-cook-2023"}; [Hillemann et al. 2025]{.tada-cite key="hillemann-2025"}). That is what
 [code review](#code-review) is for.
 :::
 
@@ -374,7 +376,8 @@ spot mistakes *in* the code, because they know the study and the data, and data
 editors do not check code reliability. See [Code review](#code-review).
 
 **4. Consider Markdown or Quarto.** Presenting everything in one self-contained
-document is very helpful for data editors and future readers, because it makes
+document is very helpful for data editors and future readers
+([Buckley et al. 2025]{.tada-cite key="buckley-2025"}), because it makes
 the link between code, data and outputs explicit.
 
 ::: {.tada-tip}

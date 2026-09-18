@@ -95,6 +95,11 @@ Sánchez Reyes, L. L., et al.** (2023). *Not just for programmers: How GitHub
 can accelerate collaborative and reproducible research in ecology and
 evolution.* Methods in Ecology and Evolution 14: 1364–1380.
 
+**Buckley, Y. M., Bardgett, R., Gordon, R., Iler, A., Mariotte, P., Ponton, S.,
+& Hector, A.** (2025). *Using dynamic documents to mend cracks in the
+reproducible research pipeline.* Journal of Ecology 113: 270–274.
+<https://doi.org/10.1111/1365-2745.14454>
+
 **Budd, J. M., Sievert, M. E., & Schultz, T. R.** (1998). *Phenomena of
 retraction: Reasons for retraction and citations to the publications.* JAMA
 280: 296–297.
@@ -332,6 +337,11 @@ humans.*
 
 **Powers, S. M., & Hampton, S. E.** (2019). *Open science, reproducibility, and
 transparency in ecology.* Ecological Applications 29: e01822.
+
+**Resnik, D. B., & Hosseini, M.** (2025). *Disclosing artificial intelligence use
+in scientific research and publication: When should disclosure be mandatory,
+optional, or unnecessary?* Accountability in Research 24: 1–13.
+<https://doi.org/10.1080/08989621.2025.2481949>
 
 **Rocholl, J. C.** (2022). *pycodestyle: Python style guide checker.*
 

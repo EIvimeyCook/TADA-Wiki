@@ -134,7 +134,8 @@ summary(m1)
 
 The [SORTEE guidelines](#sortee) highlight a further advantage: presenting
 everything in one self-contained Markdown or Quarto document is **very helpful
-for data editors and future readers**, because it makes the link between the
+for data editors and future readers**
+([Buckley et al. 2025]{.tada-cite key="buckley-2025"}), because it makes the link between the
 code, the data and the resulting outputs explicit.
 
 A rendered `.html` or `.pdf` of your Quarto document is a useful *addition* to

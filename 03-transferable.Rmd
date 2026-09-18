@@ -166,7 +166,7 @@ worth knowing about, because they address failures that relative paths alone
 cannot fix.
 
 **Dependency and environment managers**, such as **`{renv}`** ([Ushey 2023]{.tada-cite key="ushey-2023"}) in R
-and **`{conda}`** in Python, help ensure the same computational environment is
+and **`{conda}`** ([conda contributors 2026]{.tada-cite key="conda-2026"}) in Python, help ensure the same computational environment is
 used each time a project is run, typically via a lockfile.
 
 **Containerisation**, through **Docker** ([Merkel 2014]{.tada-cite key="merkel-2014"}) and **Apptainer**,
