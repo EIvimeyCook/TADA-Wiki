@@ -34,6 +34,8 @@ archived R files in one large study failed to run without error. TADA sets a
 **minimum standard** that closes most of that gap, and is achievable by
 researchers at any level of coding experience.
 
+Read it at: <https://eivimeycook.github.io/TADA-Wiki/>
+
 ## Contents
 
 | Chapter | What it covers |
@@ -50,56 +52,6 @@ researchers at any level of coding experience.
 | Further reading | Guides, tools, repositories, communities |
 | Contribute | How to add a page, with a template |
 | References | Everything cited |
-
-## Installation
-
-The wiki is built with [**bookdown**](https://bookdown.org/). You need R
-(≥ 4.0) and Pandoc — RStudio ships with Pandoc, so if you build from RStudio
-there is nothing else to install.
-
-```r
-install.packages(c("bookdown", "rmarkdown", "knitr", "downlit", "bslib"))
-```
-
-## Usage
-
-Clone the repository and build:
-
-```bash
-git clone https://github.com/EIvimeyCook/TADA-Wiki.git
-cd TADA-Wiki
-Rscript render.R
-```
-
-Or, from R:
-
-```r
-bookdown::render_book("index.Rmd")
-```
-
-The rendered site is written to `docs/`, ready to serve from GitHub Pages
-(*Settings → Pages → Deploy from a branch → `main` / `docs`*). Open
-`docs/index.html` to preview locally.
-
-If Pandoc is not on your `PATH`, `render.R` will look for the copy bundled with
-RStudio and use that. To point it somewhere else:
-
-```bash
-RSTUDIO_PANDOC=/path/to/pandoc Rscript render.R
-```
-
-## Directory structure
-
-| Path | Contents |
-|---|---|
-| `index.Rmd` | Welcome page and book-level YAML |
-| `01-…` to `11-…` | One `.Rmd` file per chapter, numbered in reading order |
-| `_bookdown.yml` | Chapter list, output directory, UI labels |
-| `_output.yml` | Theme, CSS, HTML includes |
-| `render.R` | Build script |
-| `assets/` | `style.css`, `tada.js`, and the HTML head/foot includes |
-| `templates/` | Copy-and-fill templates (see below) |
-| `docs/` | Rendered site — generated, not edited by hand |
 
 ## Templates
 
@@ -135,7 +87,11 @@ tables, checklists and the reviewer's script, that material is labelled **wiki
 guidance** rather than presented as a finding of the papers. That separation is
 the sourcing rule for contributors.
 
-## Bug reports and contributions
+Every claim taken from the source papers, or from other published work, is
+linked inline: click a citation to go to its DOI, or hover it to see the full
+reference (title, journal, DOI) without leaving the page.
+
+## Contributing
 
 Corrections, additions and new chapters are all welcome — especially
 language-specific guidance and adaptations to disciplines beyond ecology and
@@ -143,12 +99,9 @@ evolutionary biology.
 
 - **Something wrong or out of date?** Open an
   [issue](https://github.com/EIvimeyCook/TADA-Wiki/issues).
-- **Adding a page?** Copy `templates/page-template.Rmd`, register it in
-  `_bookdown.yml`, build and open a pull request. The *Contribute* chapter has
-  the full conventions: cross-references, callouts, tabs and the sourcing rule.
-
-Before opening a PR, check that `Rscript render.R` completes without errors and
-that new sources are added to `11-references.Rmd`.
+- **Adding a page?** The *Contribute* chapter on the wiki has the full
+  conventions — cross-references, callouts, tabs, the sourcing rule above, and
+  how to register a new chapter.
 
 ## Citation
 
@@ -170,8 +123,9 @@ Edward R. Ivimey-Cook — e.ivimeycook@gmail.com
 
 ## Licence
 
-- **Code**, meaning the build script, `assets/style.css`, `assets/tada.js` and
-the templates, under the [MIT License](LICENSE).
+- **Code**, meaning the build script, `assets/style.css`, `assets/tada.js`,
+  `assets/tada-cite.js`, `assets/tada-citations.js`, and the templates, under
+  the [MIT License](LICENSE).
 - **Content**, meaning the wiki text in the `.Rmd` chapters, under
   [CC BY 4.0](LICENSE-data.md).
 
