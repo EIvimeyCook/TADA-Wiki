@@ -18,19 +18,27 @@ clean, manipulate, visualise and analyse your data. Code-based software is more
 transparent and reproducible than point-and-click software, and far more
 flexible, since analyses can be tailored to exactly what a study needs.
 
-That flexibility comes at a cost. **Code is more error-prone**, and several
-high-profile retractions have centred on exactly this kind of mistake.
+That flexibility comes at a cost. **Code is more error-prone**
+([Budd et al. 1998]{.tada-cite key="budd-1998"}), and several high-profile
+retractions have centred on exactly this kind of mistake
+([Bolnick & Paull 2009]{.tada-cite key="bolnick-2009"};
+[Huijgen et al. 2012]{.tada-cite key="huijgen-2012"};
+[Ma & Chang 2007]{.tada-cite key="ma-2007"};
+[Miller 2006]{.tada-cite key="miller-2006"};
+[Williams & Bürkner 2020]{.tada-cite key="williams-2020"}).
 
 In computer science and software development, code review is routine. In the
 academic disciplines that rely on code to make inferences and predictions, it is
-**noticeably absent** from the research and publication process. Ivimey-Cook et
+**noticeably absent** from the research and publication process
+([Indriasari et al. 2020]{.tada-cite key="indriasari-2020"}). Ivimey-Cook et
 al. argue for a fundamental shift in research culture that brings code review
 into **all stages** of the research process.
 
 There is a structural reason it does not happen. Informal training, combined
-with insufficient time and incentives, means that coding and analysis are
-usually the responsibility of **a single member of a team** for a project's
-entire lifetime, in stark contrast to the team-wide collaboration that is normal
+with insufficient time and incentives
+([Touchon & McCoy 2016]{.tada-cite key="touchon-2016"}), means that coding and
+analysis are usually the responsibility of **a single member of a team** for a
+project's entire lifetime, in stark contrast to the team-wide collaboration that is normal
 when developing methodology and experimental design. That individual character
 of research code is precisely what makes pre-publication code review both
 unlikely and critical.
@@ -113,8 +121,8 @@ editor's side:
 - a missing code chunk
 
 It is the least demanding of the four checks and the one that fails most often:
-74% of over 9,000 archived R files failed to complete without error (Trisovic et
-al. 2022).
+74% of over 9,000 archived R files failed to complete without error ([Trisovic
+et al. 2022]{.tada-cite key="trisovic-2022"}).
 
 ::: {.tada-tip}
 Run it in a **fresh session**, from a **fresh download**, in a **new folder**.
@@ -275,16 +283,20 @@ This is one of the most crucial places for code review, because reviewers can
 follow the logic of the analyses carefully, much as they follow the argument
 from introduction to discussion.
 
-Some journals already request code and data at submission, including The Royal
-Society, *Behavioral Ecology and Sociobiology* and *The American Naturalist*,
-though the paper's authors note that in their experience this is not enforced.
-In some cases, such as the **Journal of Open Source Software**, the entire
-formal peer-review process, code and manuscript alike, is hosted on GitHub.
+Some journals already request code and data at submission, including
+[The Royal Society]{.tada-cite key="royal-society-2023"},
+*[Behavioral Ecology and Sociobiology]{.tada-cite key="bakker-2020"}* and
+*[The American Naturalist]{.tada-cite key="bolnick-2022"}*, though the paper's
+authors note that in their experience this is not enforced. In some cases, such
+as the **Journal of Open Source Software**, the entire formal peer-review
+process, code and manuscript alike, is hosted on GitHub.
 
-The benefits run both ways. For authors, providing code during peer review could
-increase manuscript quality. For reviewers, available code gives far deeper
-insight, because there is a clearer link between experimental methodology and
-statistical analysis, which is the first R, code **as reported**.
+The benefits run both ways
+([Fernández-Juricic 2021]{.tada-cite key="fernandez-juricic-2021"}). For
+authors, providing code during peer review could increase manuscript quality.
+For reviewers, available code gives far deeper insight, because there is a
+clearer link between experimental methodology and statistical analysis, which
+is the first R, code **as reported**.
 
 There are two practical obstacles.
 

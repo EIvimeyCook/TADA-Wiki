@@ -26,7 +26,7 @@
     return div.innerHTML;
   }
 
-  function buildCardContent(entry) {
+  function buildEntryContent(entry) {
     var html = "";
     html += '<span class="tada-cite-authors">' + escapeHtml(entry.authors) + " (" + escapeHtml(entry.year) + ")</span>";
     if (entry.title) {
@@ -44,6 +44,17 @@
       html += '<a class="tada-cite-link" href="' + escapeHtml(link) + '" target="_blank" rel="noopener">' + label + "</a>";
     }
     return html;
+  }
+
+  // A trigger's data-key can be a single key or a comma-separated list, for a
+  // claim the source papers back with more than one citation at once (e.g.
+  // the "5% to 35%" code-sharing figure, which cites six papers together).
+  function buildCardContent(entries) {
+    if (entries.length === 1) return buildEntryContent(entries[0]);
+    return entries.map(function (entry, i) {
+      var cls = "tada-cite-multi" + (i > 0 ? " tada-cite-multi-sep" : "");
+      return '<span class="' + cls + '">' + buildEntryContent(entry) + "</span>";
+    }).join("");
   }
 
   function positionCard(card, trigger) {
@@ -100,10 +111,11 @@
     cancelClose();
     if (openTrigger === trigger) return; // already open
 
-    var key = trigger.getAttribute("data-key");
+    var keys = (trigger.getAttribute("data-key") || "").split(",").map(function (k) { return k.trim(); }).filter(Boolean);
     var db = window.TADA_CITATIONS || {};
-    var entry = db[key];
-    if (!entry) return; // unknown key: degrade to plain text, no card
+    var entries = keys.map(function (k) { return db[k]; }).filter(Boolean);
+    // Degrade to plain text, no card, unless at least one key resolved.
+    if (!entries.length) return;
 
     if (openCard) closeCard();
 
@@ -112,8 +124,8 @@
       card = document.createElement("span");
       card.className = "tada-cite-card";
       card.setAttribute("role", "note");
-      card.id = "tada-cite-card-" + key + "-" + Math.random().toString(36).slice(2, 8);
-      card.innerHTML = buildCardContent(entry);
+      card.id = "tada-cite-card-" + keys[0] + "-" + Math.random().toString(36).slice(2, 8);
+      card.innerHTML = buildCardContent(entries);
       // Keep the card near its trigger in the DOM, but out of normal flow
       // (position: absolute), so it never disturbs surrounding text layout.
       trigger.parentNode.insertBefore(card, trigger.nextSibling);

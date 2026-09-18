@@ -81,6 +81,11 @@ ACM SIGOPS Operating Systems Review 49: 71–79.
 **Boettiger, C.** (2017). *Generating CodeMeta metadata for R packages.* The
 Journal of Open Source Software 2: 454.
 
+**Bolnick, D. I., & Paull, J. S.** (2009). *Morphological and dietary
+differences between individuals are weakly but positively correlated within a
+population of threespine stickleback.* Evolutionary Ecology Research 11:
+1217–1233.
+
 **Bolnick, D.** (2022). *EIC update: American Naturalist policy on data and
 code archiving.*
 <http://comments.amnat.org/2022/09/eic-update-american-naturalist-policy.html>
@@ -89,6 +94,10 @@ code archiving.*
 Sánchez Reyes, L. L., et al.** (2023). *Not just for programmers: How GitHub
 can accelerate collaborative and reproducible research in ecology and
 evolution.* Methods in Ecology and Evolution 14: 1364–1380.
+
+**Budd, J. M., Sievert, M. E., & Schultz, T. R.** (1998). *Phenomena of
+retraction: Reasons for retraction and citations to the publications.* JAMA
+280: 296–297.
 
 **Cadwallader, L., & Hrynaszkiewicz, I.** (2022). *A survey of researchers'
 code sharing and code reuse practices, and assessment of interactive notebook
@@ -123,6 +132,11 @@ guidelines cite this as Cooper 2017, the code review paper as Cooper & Hsing
 
 **Cooper, N., & Hsing, P.-Y.** (2025). *Guide to Reproducible Code.* British
 Ecological Society.
+
+**Cooper, N., & the BES Data and Code Hackathon Group** (2026). *Data- and
+code-archiving in the British Ecological Society journals: Present status and
+recommendations for future improvements.* Methods in Ecology and Evolution 17:
+1954–1966. <https://doi.org/10.1111/2041-210X.70338>
 
 **Culina, A., van den Berg, I., Evans, S., & Sánchez-Tójar, A.** (2020). *Low
 availability of code in ecology: A call for urgent action.* PLOS Biology 18:
@@ -186,6 +200,12 @@ Psychological Science: An observational study.* Royal Society Open Science 8:
 review in practice: A checklist for computational reproducibility and
 collaborative research in ecology and evolution.* EcoEvoRxiv.
 
+**Huijgen, R., Boekholdt, S. M., Arsenault, B. J., Bao, W., Davaine, J.-M.,
+Tabet, F., Petrides, F., Rye, K. A., DeMicco, D. A., Barter, P. J.,
+Kastelein, J. J., & Lambert, G.** (2012). *Plasma PCSK9 levels and clinical
+outcomes in the TNT (treating to new targets) trial: A nested case-control
+study.* Journal of the American College of Cardiology 59: 1778–1784.
+
 **Hunter-Zinck, H., de Siqueira, A. F., Vásquez, V. N., Barnes, R., &
 Martinez, C. C.** (2021). *Ten simple rules on writing clean and reliable
 open-source scientific software.* PLOS Computational Biology 17: e1009481.
@@ -196,7 +216,10 @@ code review in higher education.* ACM Transactions on Computing Education 20:
 
 **Ivimey-Cook, E. R., Sánchez-Tójar, A., Berberi, I., Culina, A., Roche, D. G.,
 Almeida, R. A., et al.** (2025). *From policy to practice: Progress towards
-data- and code-sharing in ecology and evolution.* EcoEvoRxiv.
+data- and code-sharing in ecology and evolution.* Proceedings of the Royal
+Society B 292: 20251394. <https://doi.org/10.1098/rspb.2025.1394> (Cited
+elsewhere in this wiki, and in the source papers, as the EcoEvoRxiv preprint;
+now published.)
 
 **Jenkins, G. B., Beckerman, A. P., Bellard, C., Benítez-López, A.,
 Ellison, A. M., Foote, C. G., et al.** (2023). *Reproducibility in ecology and
@@ -253,6 +276,10 @@ for big science of science studies.* Scientometrics 101: 1535–1551.
 **Lipow, M.** (1982). *Number of faults per line of code.* IEEE Transactions on
 Software Engineering SE-8: 437–439.
 
+**Ma, C., & Chang, G.** (2007). *Retraction for Ma and Chang, structure of the
+multidrug resistance efflux transporter EmrE from Escherichia coli.*
+Proceedings of the National Academy of Sciences 104: 3668.
+
 **Maitner, B., Santos Andrade, P. E., Lei, L., Kass, J., Owens, H. L.,
 Barbosa, G. C. G., et al.** (2024). *Code sharing in ecology and evolution
 increases citation rates but remains uncommon.* Ecology and Evolution 14:
@@ -263,6 +290,9 @@ et al.** (2016). *How open science helps researchers succeed.* eLife 5: e16800.
 
 **Merkel, D.** (2014). *Docker: Lightweight Linux containers for consistent
 development and deployment.* Linux Journal 2014(239): 2.
+
+**Miller, G.** (2006). *A scientist's nightmare: Software problem leads to five
+retractions.* Science 314: 1856–1857.
 
 **Mislan, K. A. S., Heer, J. M., & White, E. P.** (2016). *Elevating the status
 of code in ecology.* Trends in Ecology & Evolution 31: 4–7.
@@ -307,6 +337,9 @@ transparency in ecology.* Ecological Applications 29: e01822.
 
 **Rokem, A.** (2024). *Ten simple rules for scientific code review.* PLOS
 Computational Biology 20: e1012375.
+
+**Royal Society** (2023). *Data sharing and mining.*
+<https://royalsociety.org/journals/ethics-policies/data-sharing-mining/>
 
 **Sánchez-Tójar, A., Bezine, A., Purgar, M., & Culina, A.** (2025).
 *Code-sharing policies are associated with increased reproducibility potential
@@ -355,6 +388,9 @@ image processing.* Computing in Science & Engineering 14: 42–47.
 **Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G.,
 Axton, M., Baak, A., et al.** (2016). *The FAIR Guiding Principles for
 scientific data management and stewardship.* Scientific Data 3: 160018.
+
+**Williams, D., & Bürkner, P.-C.** (2020). *Coding errors lead to unsupported
+conclusions: A critique of Hofmann et al. (2015).* Meta-Psychology 4: 4.
 
 ## About this wiki {#references-about}
 

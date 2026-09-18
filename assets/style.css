@@ -466,6 +466,18 @@ blockquote {
   font-size: .85rem;
 }
 
+/* A claim backed by several papers at once (data-key="a,b,c") stacks their
+   entries in one card, each after the first separated by a rule. */
+.tada-cite-card .tada-cite-multi {
+  display: block;
+}
+
+.tada-cite-card .tada-cite-multi-sep {
+  margin-top: .5rem;
+  padding-top: .5rem;
+  border-top: 1px solid var(--tada-line);
+}
+
 @media print {
   .tada-cite { border-bottom: none; }
   .tada-cite-card { display: none !important; }
