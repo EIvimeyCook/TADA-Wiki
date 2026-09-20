@@ -53,17 +53,6 @@ Read it at: <https://eivimeycook.github.io/TADA-Wiki/>
 | Contribute | How to add a page, with a template |
 | References | Everything cited |
 
-## Templates
-
-Four templates ship with the wiki, usable independently of it.
-
-| File | Use |
-|---|---|
-| [`templates/README-template.md`](templates/README-template.md) | Project README covering every field required by TADA's *Documented* guideline and SORTEE Stages 1.5 and 3.5 |
-| [`templates/tada-checklist.md`](templates/tada-checklist.md) | The full TADA checklist, to drop into a project |
-| [`templates/code-review-checklist.md`](templates/code-review-checklist.md) | The four Rs, as a reviewer's worksheet |
-| [`templates/page-template.Rmd`](templates/page-template.Rmd) | Skeleton for a new wiki chapter |
-
 ## Sources
 
 The wiki is a synthesis of three papers:
