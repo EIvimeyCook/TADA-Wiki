@@ -391,6 +391,15 @@ computationally expensive analyses.
 
 ## Checklist {#sharing-checklist}
 
+::: {.tada-dog-float}
+![](assets/figures/dog-sad.png){.tada-dog-sad alt="A sad cartoon dog wearing a wizard hat"}
+![](assets/figures/dog-happy.png){.tada-dog-happy alt="A happy cartoon dog wearing a wizard hat"}
+:::
+
+::: {.tada-dog-hint}
+Try doing all of these to make the dog happy.
+:::
+
 - [ ] Raw data are archived, or a documented reason and route to them is given (option a, b or c)
 - [ ] Processed and filtered data are archived, or the code that produces them is
 - [ ] All data are in interoperable formats (`.csv`, `.tsv`, `.txt` or `.parquet` preferred)

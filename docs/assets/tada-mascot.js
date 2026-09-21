@@ -5,13 +5,16 @@
    1. Drops the wizard next to the book title in bs4_book's sidebar, which is
       shared markup repeated on every page, so the mascot appears site-wide
       rather than only on the homepage hero.
-   2. On the Quickstart pre-submission checklist, swaps the sad dog for the
-      happy dog as soon as any checkbox in the checklist is ticked, and back
-      again if every box is cleared.
+   2. On every interactive checklist (any heading whose section contains a
+      .tada-dog-float), crossfades the sad dog into the happy dog once every
+      checkbox in that section is ticked, and back again as soon as one is
+      cleared. This is generic across the whole site: it looks for each
+      .tada-dog-float, walks up to its enclosing bookdown section, and wires
+      up whatever checkboxes live in that section — no per-page IDs needed.
 
    Both features degrade safely: without JavaScript the sidebar title is
-   unchanged and the dog simply stays on its default image, so no content is
-   ever lost.
+   unchanged and every dog simply stays on its default (sad) image, so no
+   content is ever lost.
    --------------------------------------------------------------------------- */
 (function () {
   "use strict";
@@ -27,34 +30,32 @@
     heading.insertBefore(img, heading.firstChild);
   }
 
-  function initChecklistDog() {
-    var section = document.getElementById("quickstart-checklist");
-    if (!section) return;
-    var img = document.getElementById("tada-checklist-dog-img");
-    if (!img) return;
-    var checkboxes = section.querySelectorAll('input[type="checkbox"]');
-    if (!checkboxes.length) return;
+  function initChecklistDogs() {
+    var floats = document.querySelectorAll(".tada-dog-float");
 
-    function update() {
-      var anyChecked = Array.prototype.some.call(checkboxes, function (cb) {
-        return cb.checked;
-      });
-      if (anyChecked) {
-        img.src = "assets/figures/dog-happy.png";
-        img.alt = "A happy cartoon dog wearing a wizard hat";
-      } else {
-        img.src = "assets/figures/dog-sad.png";
-        img.alt = "A sad cartoon dog wearing a wizard hat";
+    floats.forEach(function (float) {
+      var section = float.closest("div.section");
+      if (!section) return;
+      var checkboxes = section.querySelectorAll('input[type="checkbox"]');
+      if (!checkboxes.length) return;
+
+      function update() {
+        var allChecked = Array.prototype.every.call(checkboxes, function (cb) {
+          return cb.checked;
+        });
+        float.classList.toggle("is-happy", allChecked);
       }
-    }
 
-    checkboxes.forEach(function (cb) {
-      cb.addEventListener("change", update);
+      checkboxes.forEach(function (cb) {
+        cb.addEventListener("change", update);
+      });
+
+      update();
     });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
     addSidebarLogo();
-    initChecklistDog();
+    initChecklistDogs();
   });
 })();

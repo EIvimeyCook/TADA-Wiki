@@ -192,6 +192,15 @@ README will get you most of the way on their own.
 
 ## Checklist {#transferable-checklist}
 
+::: {.tada-dog-float}
+![](assets/figures/dog-sad.png){.tada-dog-sad alt="A sad cartoon dog wearing a wizard hat"}
+![](assets/figures/dog-happy.png){.tada-dog-happy alt="A happy cartoon dog wearing a wizard hat"}
+:::
+
+::: {.tada-dog-hint}
+Try doing all of these to make the dog happy.
+:::
+
 - [ ] Every script has a standard extension for its language (`.R`, `.py`, `.cpp`, …)
 - [ ] No code is distributed only inside a `.pdf` or `.docx`
 - [ ] Data, code and materials are all inside a single project directory

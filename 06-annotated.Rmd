@@ -210,6 +210,15 @@ code to do than what it actually does.
 
 ## Checklist {#annotated-checklist}
 
+::: {.tada-dog-float}
+![](assets/figures/dog-sad.png){.tada-dog-sad alt="A sad cartoon dog wearing a wizard hat"}
+![](assets/figures/dog-happy.png){.tada-dog-happy alt="A happy cartoon dog wearing a wizard hat"}
+:::
+
+::: {.tada-dog-hint}
+Try doing all of these to make the dog happy.
+:::
+
 - [ ] The script has a header at the top describing what it does and what it produces
 - [ ] Code is broken into logical, labelled chunks
 - [ ] Each chunk states what it does

@@ -15,11 +15,16 @@ a reviewer has to.
 ## The pre-submission checklist {#quickstart-checklist}
 
 ::: {.tada-dog-float}
-![](assets/figures/dog-sad.png){id="tada-checklist-dog-img" alt="A sad cartoon dog wearing a wizard hat"}
+![](assets/figures/dog-sad.png){.tada-dog-sad alt="A sad cartoon dog wearing a wizard hat"}
+![](assets/figures/dog-happy.png){.tada-dog-happy alt="A happy cartoon dog wearing a wizard hat"}
+:::
+
+::: {.tada-dog-hint}
+Try doing all of these to make the dog happy.
 :::
 
 TADA covers your code; the data beside it has its own short list. Each group
-links to the chapter that explains it. Tick a box below and see what happens.
+links to the chapter that explains it. Tick every box below and see what happens.
 
 ::: {.tabset}
 
@@ -162,8 +167,8 @@ there.
 
 ## What happens next {#quickstart-next}
 
-::: {.tada-dog-float}
-![](assets/figures/dog-happy.png){alt="A happy cartoon dog wearing a wizard hat"}
+::: {.tada-dog-float .is-happy}
+![](assets/figures/dog-happy.png){.tada-dog-happy alt="A happy cartoon dog wearing a wizard hat"}
 :::
 
 

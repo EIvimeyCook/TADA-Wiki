@@ -97,14 +97,13 @@ div.sourceCode, pre {
 
 .tada-hero-figure img {
   display: block;
-  width: 172px;
+  width: 200px;
   height: auto;
-  filter: drop-shadow(0 10px 20px rgba(19, 41, 51, .18));
 }
 
 @media (max-width: 620px) {
   .tada-hero { flex-direction: column-reverse; }
-  .tada-hero-figure img { width: 128px; }
+  .tada-hero-figure img { width: 148px; }
 }
 
 .tada-hero .tada-eyebrow {
@@ -146,6 +145,9 @@ div.sourceCode, pre {
   box-shadow: var(--tada-shadow);
 }
 
+/* Each card takes a faint tint of its own letter's colour, so the 2x2 grid
+   reads as four distinct principles rather than four identical white boxes. */
+
 .tada-card p { margin-bottom: .4rem; }
 .tada-card p:last-child { margin-bottom: 0; }
 
@@ -170,13 +172,13 @@ div.sourceCode, pre {
   font-size: .93rem;
 }
 
-.tada-card.t  { border-top-color: var(--tada-t); }
+.tada-card.t  { border-top-color: var(--tada-t); background: #FBEEEC; }
 .tada-card.t  .tada-letter { color: var(--tada-t); }
-.tada-card.a1 { border-top-color: var(--tada-a1); }
+.tada-card.a1 { border-top-color: var(--tada-a1); background: #EAF5EE; }
 .tada-card.a1 .tada-letter { color: var(--tada-a1); }
-.tada-card.d  { border-top-color: var(--tada-d); }
+.tada-card.d  { border-top-color: var(--tada-d); background: #F3EEF8; }
 .tada-card.d  .tada-letter { color: var(--tada-d); }
-.tada-card.a2 { border-top-color: var(--tada-a2); }
+.tada-card.a2 { border-top-color: var(--tada-a2); background: #EAF1F9; }
 .tada-card.a2 .tada-letter { color: var(--tada-a2); }
 
 /* --------------------------------------------------------------------------
@@ -563,22 +565,86 @@ span.tada-cite { cursor: help; }
 .tada-figure-caption strong { color: var(--tada-ink); }
 
 /* --------------------------------------------------------------------------
+   Yes / No badges, for table cells such as the repository comparison table
+   in Available. Use as [Yes]{.tada-yes} / [No]{.tada-no} in the markdown.
+   -------------------------------------------------------------------------- */
+
+.tada-yes, .tada-no {
+  display: inline-block;
+  font-weight: 600;
+  font-size: .82rem;
+  line-height: 1.5;
+  padding: .05rem .6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.tada-yes { color: var(--tada-good); background: var(--tada-good-bg); }
+.tada-no  { color: var(--tada-bad); background: var(--tada-bad-bg); }
+
+
+/* --------------------------------------------------------------------------
+   Footer — a scatter of small stars over the solid teal bar, echoing the
+   stars on the wizard's hat rather than leaving it a flat block of colour.
+   -------------------------------------------------------------------------- */
+
+footer.bg-primary {
+  position: relative;
+  background-image:
+    radial-gradient(1.6px 1.6px at 6% 30%,  rgba(255,255,255,.55) 50%, transparent 52%),
+    radial-gradient(1.3px 1.3px at 14% 70%, rgba(255,255,255,.4)  50%, transparent 52%),
+    radial-gradient(1.8px 1.8px at 24% 18%, rgba(255,255,255,.5)  50%, transparent 52%),
+    radial-gradient(1.4px 1.4px at 35% 55%, rgba(255,255,255,.35) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 47% 82%, rgba(255,255,255,.45) 50%, transparent 52%),
+    radial-gradient(1.3px 1.3px at 58% 25%, rgba(255,255,255,.4)  50%, transparent 52%),
+    radial-gradient(1.9px 1.9px at 68% 62%, rgba(255,255,255,.5)  50%, transparent 52%),
+    radial-gradient(1.4px 1.4px at 78% 15%, rgba(255,255,255,.35) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 88% 48%, rgba(255,255,255,.45) 50%, transparent 52%),
+    radial-gradient(1.3px 1.3px at 95% 78%, rgba(255,255,255,.4)  50%, transparent 52%);
+  background-repeat: no-repeat;
+}
+
+/* --------------------------------------------------------------------------
    Sad / happy dog — the before/after motif from Figure 2 of the TADA paper.
    Floated beside a heading so the surrounding text wraps around it.
    -------------------------------------------------------------------------- */
 
 .tada-dog-float {
+  position: relative;
   float: right;
   width: 104px;
+  aspect-ratio: 460 / 747;
   margin: .15rem 0 1rem 1.3rem;
 }
 
 .tada-dog-float img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
   display: block;
+  opacity: 0;
+  transition: opacity .5s ease;
 }
+
+/* The sad dog is the resting state, shown whenever .is-happy is not set. */
+.tada-dog-float img.tada-dog-sad { opacity: 1; }
+
+.tada-dog-float.is-happy img.tada-dog-sad { opacity: 0; }
+.tada-dog-float.is-happy img.tada-dog-happy { opacity: 1; }
 
 @media (max-width: 560px) {
   .tada-dog-float { width: 72px; }
+}
+
+/* --------------------------------------------------------------------------
+   Interactive-checklist hint, sitting under the heading next to the dog.
+   -------------------------------------------------------------------------- */
+
+.tada-dog-hint {
+  color: var(--tada-ink-soft);
+  font-size: .93rem;
+  font-style: italic;
+  margin: -.4rem 0 1.1rem;
 }

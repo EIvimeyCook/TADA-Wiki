@@ -53,14 +53,14 @@ that assigns a DOI.
 
 | Repository | PID | Immutable | Notes |
 |---|---|---|---|
-| **Zenodo** | DOI | Yes | Connects directly to a GitHub project. Gives a base project-level DOI as well as version-specific DOIs. You can choose the licence at deposit; CC-BY 4.0 is the default. |
-| **Figshare** | DOI | Yes | General-purpose, and widely used for code and supplementary material. Assigns CC0 by default. |
-| **Dryad** | DOI | Yes | Data-focused, and **mandates CC0**, which is not well suited to code (see [licences](#documented-licence)). Dryad directs users to archive code with Zenodo. |
-| **Dataverse** | DOI | Yes | General-purpose; guarantees long-term storage and file immutability. |
-| **Software Heritage** | SWHID | Yes | Preserves GitHub projects for long-term storage and provides PIDs as Software Hash Identifiers. |
-| **OSF** | DOI | **No** | Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it **does not provide file immutability**: projects and files can be changed or deleted. Suitable for review, but archive elsewhere. |
-| Domain repositories (e.g. **GenBank**) | Accession no. | Yes | For sequences and other domain-specific deposits. Other PID types include ARK, Handle and RRID. |
-| GitHub / GitLab / Bitbucket / Codeberg | **None** | **No** | Development platforms. Use for writing code, not for archiving it. |
+| **Zenodo** | DOI | [Yes]{.tada-yes} | Connects directly to a GitHub project. Gives a base project-level DOI as well as version-specific DOIs. You can choose the licence at deposit; CC-BY 4.0 is the default. |
+| **Figshare** | DOI | [Yes]{.tada-yes} | General-purpose, and widely used for code and supplementary material. Assigns CC0 by default. |
+| **Dryad** | DOI | [Yes]{.tada-yes} | Data-focused, and **mandates CC0**, which is not well suited to code (see [licences](#documented-licence)). Dryad directs users to archive code with Zenodo. |
+| **Dataverse** | DOI | [Yes]{.tada-yes} | General-purpose; guarantees long-term storage and file immutability. |
+| **Software Heritage** | SWHID | [Yes]{.tada-yes} | Preserves GitHub projects for long-term storage and provides PIDs as Software Hash Identifiers. |
+| **OSF** | DOI | [No]{.tada-no} | Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it **does not provide file immutability**: projects and files can be changed or deleted. Suitable for review, but archive elsewhere. |
+| Domain repositories (e.g. **GenBank**) | Accession no. | [Yes]{.tada-yes} | For sequences and other domain-specific deposits. Other PID types include ARK, Handle and RRID. |
+| GitHub / GitLab / Bitbucket / Codeberg | **None** | [No]{.tada-no} | Development platforms. Use for writing code, not for archiving it. |
 
 ::: {.tada-note}
 **Where this list comes from.** Zenodo, Figshare and Software Heritage are the
@@ -154,6 +154,15 @@ double-blind policies, then restored before archiving. See
 [Documented](#documented-readme).
 
 ## Checklist {#available-checklist}
+
+::: {.tada-dog-float}
+![](assets/figures/dog-sad.png){.tada-dog-sad alt="A sad cartoon dog wearing a wizard hat"}
+![](assets/figures/dog-happy.png){.tada-dog-happy alt="A happy cartoon dog wearing a wizard hat"}
+:::
+
+::: {.tada-dog-hint}
+Try doing all of these to make the dog happy.
+:::
 
 - [ ] Code is deposited in an immutable, freely accessible repository
 - [ ] The deposit has a globally unique persistent identifier (a DOI, or a SWHID)

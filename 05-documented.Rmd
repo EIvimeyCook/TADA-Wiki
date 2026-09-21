@@ -236,6 +236,15 @@ possible, for example, MIT, BSD 2-Clause, GNU, and Apache"* (Stage 3.2).
 
 ## Checklist {#documented-checklist}
 
+::: {.tada-dog-float}
+![](assets/figures/dog-sad.png){.tada-dog-sad alt="A sad cartoon dog wearing a wizard hat"}
+![](assets/figures/dog-happy.png){.tada-dog-happy alt="A happy cartoon dog wearing a wizard hat"}
+:::
+
+::: {.tada-dog-hint}
+Try doing all of these to make the dog happy.
+:::
+
 - [ ] A README (`.md` or `.txt`) is at the top level of the archived project
 - [ ] It names the manuscript, authors, contact email, and funders
 - [ ] It states software and version, and key packages with versions
