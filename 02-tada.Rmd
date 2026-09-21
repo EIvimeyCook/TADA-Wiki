@@ -46,6 +46,12 @@ stark:
 | Scripts in species distribution and abundance papers that did not run, or ran with errors | **93%** | [Kellner et al. 2025]{.tada-cite data-key="kellner-2025"} |
 | Meta-analyses computationally reproducible given working data and code | between **27%** (every result matching exactly) and **73%** (half of results within 10%) | [Kambouris et al. 2024]{.tada-cite data-key="kambouris-2024"} |
 
+::: {.tada-figure}
+![](assets/figures/fig-cascade.png){alt="Funnel diagram: published articles narrow to 5-35% with available code, then 7-26% of those are functional, then 27-73% of functional code is reproducible."}
+
+<p class="tada-figure-caption"><strong>The code-sharing cascade.</strong> Reproducible results depend on code that is available (shared with the article) and functional (runs without error). Figure 1 from [Ivimey-Cook et al.]{.tada-cite data-key="ivimey-cook-2025-tada"}</p>
+:::
+
 Journal policy has changed a great deal over the past decade; practice has been
 much slower to follow. Even where code is present and does run, computational
 reproducibility still cannot be assumed.
@@ -82,6 +88,15 @@ runs in what order.]{.tada-gloss}
 descriptive text, explaining what each chunk does, why it is needed and where
 its output appears in the paper.]{.tada-gloss}
 :::
+:::
+
+Figure 2 below shows all four applied at once, in a small piece of generic R
+code: the same script, before and after.
+
+::: {.tada-figure}
+![](assets/figures/fig-code-example.png){alt="Side-by-side comparison of a pre-TADA and post-TADA R script, showing coloured annotations for Transferable, Available, Documented and Annotated, alongside a README file."}
+
+<p class="tada-figure-caption"><strong>TADA applied to analytical code written in R.</strong> A pre-TADA script (left) and a post-TADA script (right); coloured letters mark which guideline each change addresses — Transferable (red), Available (green), Documented (purple), Annotated (blue). The code shown is generic, designed only to illustrate the guidelines. Figure 2 from [Ivimey-Cook et al.]{.tada-cite data-key="ivimey-cook-2025-tada"}</p>
 :::
 
 ## What TADA does not cover {#tada-scope}

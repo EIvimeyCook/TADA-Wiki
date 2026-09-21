@@ -7,6 +7,12 @@ interoperability, meaning that anyone can open and use your code, and extends it
 so that the code also runs on **different computers and operating systems**.
 :::
 
+::: {.tada-figure}
+![](assets/figures/fig-transferable.png){alt="The TADA paper’s summary of advice on making analytical code Transferable."}
+
+<p class="tada-figure-caption">Figure 3 from [Ivimey-Cook et al.]{.tada-cite data-key="ivimey-cook-2025-tada"}</p>
+:::
+
 Transferability has two independent requirements, and satisfying one does not
 compensate for failing the other.
 

@@ -26,6 +26,7 @@ knitr::opts_chunk$set(
 # Welcome {#welcome .unnumbered}
 
 ::: {.tada-hero}
+::: {.tada-hero-text}
 <p class="tada-eyebrow">Best practice for code sharing</p>
 
 ## Code that still runs when someone else opens it {.unlisted .unnumbered}
@@ -35,6 +36,11 @@ of the code that is shared cannot be readily used or run. This Wiki sets out
 four practical practices to apply before you submit a project. Together, they
 provide a simple foundation for making analytical code more transferable,
 available, documented, and annotated.
+:::
+
+::: {.tada-hero-figure}
+![](assets/figures/wizard-tada.png){alt="A cartoon wizard casting a spell, saying TADA!"}
+:::
 :::
 
 ## What this wiki is {.unnumbered}

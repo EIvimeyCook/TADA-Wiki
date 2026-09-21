@@ -9,6 +9,12 @@ sufficiently to enable reuse and attribution, ideally via a licence) and
 [How TADA maps onto FAIR](#tada-fair).
 :::
 
+::: {.tada-figure}
+![](assets/figures/fig-documented.png){alt="The TADA paper’s summary of advice on making analytical code Documented."}
+
+<p class="tada-figure-caption">Figure 5 from [Ivimey-Cook et al.]{.tada-cite data-key="ivimey-cook-2025-tada"}</p>
+:::
+
 In practice, documentation means two files:
 
 1. A **README**, in `.txt` or `.md`, describing the code and how to run it.

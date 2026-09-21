@@ -82,6 +82,29 @@ div.sourceCode, pre {
     linear-gradient(180deg, #fff, var(--tada-surface));
   box-shadow: var(--tada-shadow);
   margin: 0 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tada-hero-text { flex: 1 1 320px; min-width: 0; }
+
+.tada-hero-figure {
+  flex: 0 0 auto;
+  margin: 0 auto;
+}
+
+.tada-hero-figure img {
+  display: block;
+  width: 172px;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(19, 41, 51, .18));
+}
+
+@media (max-width: 620px) {
+  .tada-hero { flex-direction: column-reverse; }
+  .tada-hero-figure img { width: 128px; }
 }
 
 .tada-hero .tada-eyebrow {
@@ -495,4 +518,57 @@ span.tada-cite { cursor: help; }
 @media print {
   .tada-cite { border-bottom: none; }
   .tada-cite-card { display: none !important; }
+}
+
+
+/* --------------------------------------------------------------------------
+   Manuscript figures — reused, with permission, from the TADA paper
+   (Ivimey-Cook et al., EcoEvoRxiv). See each figure's caption for the source.
+   -------------------------------------------------------------------------- */
+
+.tada-figure {
+  border: 1px solid var(--tada-line);
+  border-radius: var(--tada-radius);
+  background: #fff;
+  box-shadow: var(--tada-shadow);
+  padding: 1.3rem 1.3rem 1rem;
+  margin: 1.8rem 0;
+  text-align: center;
+}
+
+.tada-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.tada-figure-caption {
+  margin: .8rem 0 0;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: var(--tada-ink-soft);
+  text-align: left;
+}
+
+.tada-figure-caption strong { color: var(--tada-ink); }
+
+/* --------------------------------------------------------------------------
+   Sad / happy dog — the before/after motif from Figure 2 of the TADA paper.
+   Floated beside a heading so the surrounding text wraps around it.
+   -------------------------------------------------------------------------- */
+
+.tada-dog-float {
+  float: right;
+  width: 104px;
+  margin: .15rem 0 1rem 1.3rem;
+}
+
+.tada-dog-float img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 560px) {
+  .tada-dog-float { width: 72px; }
 }

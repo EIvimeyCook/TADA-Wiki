@@ -7,6 +7,12 @@ once: **Findable**, through the provision of a unique identifier, and
 **Accessible**, in that the code is retrievable via that identifier.
 :::
 
+::: {.tada-figure}
+![](assets/figures/fig-available.png){alt="The TADA paper’s summary of advice on making analytical code Available."}
+
+<p class="tada-figure-caption">Figure 4 from [Ivimey-Cook et al.]{.tada-cite data-key="ivimey-cook-2025-tada"}</p>
+:::
+
 There are two requirements:
 
 1. The code has an associated **globally unique persistent identifier (PID)**,

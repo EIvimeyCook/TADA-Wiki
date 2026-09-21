@@ -7,7 +7,7 @@
 <title>2 TADA at a glance | The TADA-Wiki</title>
 <meta name="author" content="A community wiki built on the TADA guidelines">
 <meta name="description" content="Transferable, Available, Documented, Annotated. Four steps that take analytical code from a working copy on one machine to an archived record that another researcher can still run.  2.1 Why...">
-<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta name="generator" content="bookdown 0.37 with bs4_book()">
 <meta property="og:title" content="2 TADA at a glance | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/tada.html">
@@ -15,9 +15,9 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2 TADA at a glance | The TADA-Wiki">
 <meta name="twitter:description" content="Transferable, Available, Documented, Annotated. Four steps that take analytical code from a working copy on one machine to an archived record that another researcher can still run.  2.1 Why...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.1/jquery-3.6.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.6.1/transition.js"></script><script src="libs/bs3compat-0.6.1/tabs.js"></script><script src="libs/bs3compat-0.6.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230F6E7B'/%3E%3Ctext%20x='50'%20y='70'%20font-family='Georgia,serif'%20font-size='58'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
@@ -152,6 +152,12 @@ stark:</p>
 </tr>
 </tbody>
 </table></div>
+<div class="tada-figure">
+<div class="inline-figure"><img src="assets/figures/fig-cascade.png" alt="Funnel diagram: published articles narrow to 5-35% with available code, then 7-26% of those are functional, then 27-73% of functional code is reproducible."></div>
+<p class="tada-figure-caption">
+<strong>The code-sharing cascade.</strong> Reproducible results depend on code that is available (shared with the article) and functional (runs without error). Figure 1 from <span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al.</span>
+</p>
+</div>
 <p>Journal policy has changed a great deal over the past decade; practice has been
 much slower to follow. Even where code is present and does run, computational
 reproducibility still cannot be assumed.</p>
@@ -186,6 +192,14 @@ runs in what order.</span></p>
 descriptive text, explaining what each chunk does, why it is needed and where
 its output appears in the paper.</span></p>
 </div>
+</div>
+<p>Figure 2 below shows all four applied at once, in a small piece of generic R
+code: the same script, before and after.</p>
+<div class="tada-figure">
+<div class="inline-figure"><img src="assets/figures/fig-code-example.png" alt="Side-by-side comparison of a pre-TADA and post-TADA R script, showing coloured annotations for Transferable, Available, Documented and Annotated, alongside a README file."></div>
+<p class="tada-figure-caption">
+<strong>TADA applied to analytical code written in R.</strong> A pre-TADA script (left) and a post-TADA script (right); coloured letters mark which guideline each change addresses — Transferable (red), Available (green), Documented (purple), Annotated (blue). The code shown is generic, designed only to illustrate the guidelines. Figure 2 from <span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al.</span>
+</p>
 </div>
 </div>
 <div id="tada-scope" class="section level2" number="2.4">
@@ -352,7 +366,7 @@ SPSS syntax <code>.sps</code> files, for instance, pass.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 18 September 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by A community wiki built on the TADA guidelines. It was last built on Last built: 21 September 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

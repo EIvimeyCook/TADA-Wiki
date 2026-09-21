@@ -134,6 +134,11 @@ Most of the work is being done by two conventions.
 
 ## Three common causes of failure {#quickstart-mistakes}
 
+::: {.tada-dog-float}
+![](assets/figures/dog-sad.png){alt="A sad cartoon dog wearing a wizard hat"}
+:::
+
+
 | Mistake | Why it breaks | Fix |
 |---|---|---|
 | `setwd("C:/Users/ed/Desktop/analysis")` | The path exists on exactly one computer | Open the project through its `.Rproj` file, or start Python inside the project folder, and build paths with `here()` / `pyprojroot` |
@@ -157,6 +162,11 @@ there.
 *Wiki guidance:* or generate one with [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder) (`devtools::install_github("EIvimeyCook/READMEBuilder")`, then `build_readme()`), a Shiny app that fills in these fields from your project and writes the `README.md` for you.
 
 ## What happens next {#quickstart-next}
+
+::: {.tada-dog-float}
+![](assets/figures/dog-happy.png){alt="A happy cartoon dog wearing a wizard hat"}
+:::
+
 
 If your target journal has a **data editor**, someone will check your deposit
 against something close to the [SORTEE guidelines](#sortee): six stages running

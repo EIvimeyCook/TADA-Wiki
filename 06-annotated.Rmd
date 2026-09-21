@@ -8,6 +8,12 @@ your archived code (transparency) and their ability to *run* it (functionality
 and reproducibility).
 :::
 
+::: {.tada-figure}
+![](assets/figures/fig-annotated.png){alt="The TADA paper’s summary of advice on making analytical code Annotated."}
+
+<p class="tada-figure-caption">Figure 6 from [Ivimey-Cook et al.]{.tada-cite data-key="ivimey-cook-2025-tada"}</p>
+:::
+
 Annotation, like Documentation, corresponds to the FAIR principle of Reusable —
 the TADA paper states that it does the same job "but rather than describing the
 code 'externally', provides clear commenting within each coding script." It is
