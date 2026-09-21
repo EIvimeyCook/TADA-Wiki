@@ -379,6 +379,16 @@ blockquote {
    .book-title, which this theme never emits. */
 .sidebar h1, .sidebar h1 a { font-family: "Fraunces", Georgia, serif; }
 
+/* Wizard mark next to the book title, inserted by assets/tada-mascot.js.
+   Floated so the existing title/subtitle text flow (link + colon + muted
+   subtitle) is untouched; it just wraps around the image. */
+.tada-logo {
+  float: left;
+  width: 34px;
+  height: auto;
+  margin: 2px 9px 4px 0;
+}
+
 /* The four letter colours, for use inline. */
 .k-t  { color: var(--tada-t);  font-weight: 600; }
 .k-a1 { color: var(--tada-a1); font-weight: 600; }

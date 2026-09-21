@@ -14,8 +14,12 @@ a reviewer has to.
 
 ## The pre-submission checklist {#quickstart-checklist}
 
+::: {.tada-dog-float}
+![](assets/figures/dog-sad.png){id="tada-checklist-dog-img" alt="A sad cartoon dog wearing a wizard hat"}
+:::
+
 TADA covers your code; the data beside it has its own short list. Each group
-links to the chapter that explains it.
+links to the chapter that explains it. Tick a box below and see what happens.
 
 ::: {.tabset}
 
@@ -133,11 +137,6 @@ Most of the work is being done by two conventions.
    cannot destroy the original.
 
 ## Three common causes of failure {#quickstart-mistakes}
-
-::: {.tada-dog-float}
-![](assets/figures/dog-sad.png){alt="A sad cartoon dog wearing a wizard hat"}
-:::
-
 
 | Mistake | Why it breaks | Fix |
 |---|---|---|
