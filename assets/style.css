@@ -613,17 +613,21 @@ span.tada-cite { cursor: help; }
 
 footer.bg-primary {
   position: relative;
+  /* Was too small/faint to read at normal viewing size (1.3-1.9px dots at
+     .35-.55 opacity); sized and lightened up so the scatter actually
+     registers as a callback to the stars on the wizard's hat, rather
+     than a flat teal bar. */
   background-image:
-    radial-gradient(1.6px 1.6px at 6% 30%,  rgba(255,255,255,.55) 50%, transparent 52%),
-    radial-gradient(1.3px 1.3px at 14% 70%, rgba(255,255,255,.4)  50%, transparent 52%),
-    radial-gradient(1.8px 1.8px at 24% 18%, rgba(255,255,255,.5)  50%, transparent 52%),
-    radial-gradient(1.4px 1.4px at 35% 55%, rgba(255,255,255,.35) 50%, transparent 52%),
-    radial-gradient(1.6px 1.6px at 47% 82%, rgba(255,255,255,.45) 50%, transparent 52%),
-    radial-gradient(1.3px 1.3px at 58% 25%, rgba(255,255,255,.4)  50%, transparent 52%),
-    radial-gradient(1.9px 1.9px at 68% 62%, rgba(255,255,255,.5)  50%, transparent 52%),
-    radial-gradient(1.4px 1.4px at 78% 15%, rgba(255,255,255,.35) 50%, transparent 52%),
-    radial-gradient(1.6px 1.6px at 88% 48%, rgba(255,255,255,.45) 50%, transparent 52%),
-    radial-gradient(1.3px 1.3px at 95% 78%, rgba(255,255,255,.4)  50%, transparent 52%);
+    radial-gradient(3.2px 3.2px at 6% 30%,  rgba(255,255,255,.85) 50%, transparent 52%),
+    radial-gradient(2.6px 2.6px at 14% 70%, rgba(255,255,255,.65) 50%, transparent 52%),
+    radial-gradient(3.4px 3.4px at 24% 18%, rgba(255,255,255,.8)  50%, transparent 52%),
+    radial-gradient(2.8px 2.8px at 35% 55%, rgba(255,255,255,.6)  50%, transparent 52%),
+    radial-gradient(3.2px 3.2px at 47% 82%, rgba(255,255,255,.75) 50%, transparent 52%),
+    radial-gradient(2.6px 2.6px at 58% 25%, rgba(255,255,255,.65) 50%, transparent 52%),
+    radial-gradient(3.6px 3.6px at 68% 62%, rgba(255,255,255,.8)  50%, transparent 52%),
+    radial-gradient(2.8px 2.8px at 78% 15%, rgba(255,255,255,.6)  50%, transparent 52%),
+    radial-gradient(3.2px 3.2px at 88% 48%, rgba(255,255,255,.75) 50%, transparent 52%),
+    radial-gradient(2.6px 2.6px at 95% 78%, rgba(255,255,255,.65) 50%, transparent 52%);
   background-repeat: no-repeat;
 }
 
