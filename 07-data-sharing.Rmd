@@ -15,7 +15,7 @@ different directions and different practices serve each one. The SORTEE
 guidelines set out three:
 
 ::: {.tada-cards}
-::: {.tada-card .t}
+::: {.tada-card .neutral}
 [1]{.tada-letter} [Data reuse]{.tada-word}
 [Prevents data loss; enables research synthesis and meta-analysis; allows
 re-analysis as methods improve; and allows new questions to be asked of existing
@@ -23,14 +23,14 @@ data, which in turn **reduces the number of animals used in
 experiments**.]{.tada-gloss}
 :::
 
-::: {.tada-card .a1}
+::: {.tada-card .neutral}
 [2]{.tada-letter} [Transparency]{.tada-word}
 [Readers can see what was actually done to obtain the reported results. Open
 data will not stop fabrication, but it makes fabrication far easier to
 detect.]{.tada-gloss}
 :::
 
-::: {.tada-card .d}
+::: {.tada-card .neutral}
 [3]{.tada-letter} [Computational reproducibility]{.tada-word}
 [Someone else can reproduce the published results from the archived data and
 code.]{.tada-gloss}

@@ -49,24 +49,24 @@ Whatever the stage, the core priorities are the same. The paper frames them as
 four questions.
 
 ::: {.tada-cards}
-::: {.tada-card .t}
+::: {.tada-card .neutral}
 [R]{.tada-letter} [Reported]{.tada-word}
 [Does the code match the description of what is reported in the methods
 section?]{.tada-gloss}
 :::
 
-::: {.tada-card .a1}
+::: {.tada-card .neutral}
 [R]{.tada-letter} [Run]{.tada-word}
 [Can the code actually be executed?]{.tada-gloss}
 :::
 
-::: {.tada-card .d}
+::: {.tada-card .neutral}
 [R]{.tada-letter} [Reliable]{.tada-word}
 [Does the code produce the correct result, and not merely a result, on every
 run?]{.tada-gloss}
 :::
 
-::: {.tada-card .a2}
+::: {.tada-card .neutral}
 [R]{.tada-letter} [Reproducible]{.tada-word}
 [Do the outputs match the results reported in the paper?]{.tada-gloss}
 :::

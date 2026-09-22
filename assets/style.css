@@ -77,9 +77,7 @@ div.sourceCode, pre {
   border: 1px solid var(--tada-line);
   border-radius: 18px;
   padding: 2rem 2rem 1.6rem;
-  background:
-    radial-gradient(1200px 260px at 0% 0%, var(--tada-accent-soft), transparent 60%),
-    linear-gradient(180deg, #fff, var(--tada-surface));
+  background: #fff;
   box-shadow: var(--tada-shadow);
   margin: 0 0 2rem;
   display: flex;
@@ -180,6 +178,12 @@ div.sourceCode, pre {
 .tada-card.d  .tada-letter { color: var(--tada-d); }
 .tada-card.a2 { border-top-color: var(--tada-a2); background: #EAF1F9; }
 .tada-card.a2 .tada-letter { color: var(--tada-a2); }
+
+/* For card grids that reuse this component for non-TADA content (e.g. the
+   three goals of archiving, the "Four Rs" of code review) -- neutral, so it
+   doesn't borrow a colour that means something specific elsewhere. */
+.tada-card.neutral { border-top-color: var(--tada-accent); background: var(--tada-surface); }
+.tada-card.neutral .tada-letter { color: var(--tada-accent); }
 
 /* --------------------------------------------------------------------------
    Callouts
@@ -316,6 +320,7 @@ main table {
   font-size: .94rem;
   display: block;
   overflow-x: auto;
+  table-layout: fixed;
 }
 
 main table th {
@@ -328,6 +333,8 @@ main table th {
 main table th, main table td {
   padding: .55rem .7rem;
   border-bottom: 1px solid var(--tada-line);
+  word-break: break-word;
+  overflow-wrap: anywhere;
   vertical-align: top;
 }
 
@@ -345,6 +352,7 @@ main ul.task-list {
   list-style: none;
   padding-left: 1.7em;
   margin: 1rem 0 1.4rem;
+  clear: right;
 }
 
 main ul.task-list > li {
@@ -613,7 +621,7 @@ footer.bg-primary {
   position: relative;
   float: right;
   width: 104px;
-  aspect-ratio: 460 / 747;
+  aspect-ratio: 494 / 747;
   margin: .15rem 0 1rem 1.3rem;
 }
 
