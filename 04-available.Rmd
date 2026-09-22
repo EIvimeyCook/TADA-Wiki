@@ -155,6 +155,7 @@ double-blind policies, then restored before archiving. See
 
 ## Checklist {#available-checklist}
 
+:::: {.tada-checklist-head}
 ::: {.tada-dog-float}
 ![](assets/figures/dog-sad.png){.tada-dog-sad alt="A sad cartoon dog wearing a wizard hat"}
 ![](assets/figures/dog-happy.png){.tada-dog-happy alt="A happy cartoon dog wearing a wizard hat"}
@@ -163,6 +164,7 @@ double-blind policies, then restored before archiving. See
 ::: {.tada-dog-hint}
 Try doing all of these to make the dog happy.
 :::
+::::
 
 - [ ] Code is deposited in an immutable, freely accessible repository
 - [ ] The deposit has a globally unique persistent identifier (a DOI, or a SWHID)

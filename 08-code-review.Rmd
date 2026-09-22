@@ -440,6 +440,7 @@ are phrased affects whether people keep volunteering.
 
 ## Checklist {#review-checklist}
 
+:::: {.tada-checklist-head}
 ::: {.tada-dog-float}
 ![](assets/figures/dog-sad.png){.tada-dog-sad alt="A sad cartoon dog wearing a wizard hat"}
 ![](assets/figures/dog-happy.png){.tada-dog-happy alt="A happy cartoon dog wearing a wizard hat"}
@@ -448,6 +449,7 @@ are phrased affects whether people keep volunteering.
 ::: {.tada-dog-hint}
 Try doing all of these to make the dog happy.
 :::
+::::
 
 - [ ] **Reported.** The code does what the methods section says it does
 - [ ] Software and key packages, with versions, are stated

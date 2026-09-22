@@ -99,6 +99,22 @@ div.sourceCode, pre {
   height: auto;
 }
 
+/* Pandoc wraps a paragraph containing a single image in an implicit
+   "figure" div; bs4_book's own stylesheet styles that wrapper
+   (.inline-figure) with a site-wide 2px light-grey border and bottom
+   margin meant for content screenshots/diagrams. Our mascot art (the
+   hero wizard, and the standalone "what happens next" dog) lands in
+   that same wrapper, which is what reads as a faint border around
+   them. Strip it here rather than globally, so real content figures
+   keep their border. */
+.tada-hero-figure .inline-figure,
+.tada-dog-float--standalone .inline-figure {
+  border: none;
+  margin-bottom: 0;
+  width: auto;
+  overflow: visible;
+}
+
 @media (max-width: 620px) {
   .tada-hero { flex-direction: column-reverse; }
   .tada-hero-figure img { width: 148px; }
@@ -352,7 +368,6 @@ main ul.task-list {
   list-style: none;
   padding-left: 1.7em;
   margin: 1rem 0 1.4rem;
-  clear: right;
 }
 
 main ul.task-list > li {
@@ -619,10 +634,9 @@ footer.bg-primary {
 
 .tada-dog-float {
   position: relative;
-  float: right;
   width: 104px;
   aspect-ratio: 494 / 747;
-  margin: .15rem 0 1rem 1.3rem;
+  flex: 0 0 auto;
 }
 
 .tada-dog-float img {
@@ -643,16 +657,46 @@ footer.bg-primary {
 .tada-dog-float.is-happy img.tada-dog-happy { opacity: 1; }
 
 @media (max-width: 560px) {
-  .tada-dog-float { width: 72px; }
+  .tada-dog-float { width: 76px; }
+}
+
+/* Standalone usage beside running text (e.g. "What happens next"): float it,
+   same as any other inline figure -- no list follows it, so a float is safe. */
+.tada-dog-float--standalone {
+  float: right;
+  margin: .15rem 0 1rem 1.3rem;
 }
 
 /* --------------------------------------------------------------------------
-   Interactive-checklist hint, sitting under the heading next to the dog.
+   Checklist head -- the dog and its hint sit in a flex row beside the
+   "## Checklist" heading. NOT a float: a floated dog was wrapping the task
+   list's first few items around it, which does not combine safely with the
+   task list's own absolutely positioned checkbox (see ul.task-list below) --
+   it was pushing checkbox label text far down, disconnected from its box.
+   A flex row has a definite height and the list simply starts after it, so
+   there is nothing to clip and nothing to leave a gap.
    -------------------------------------------------------------------------- */
 
+.tada-checklist-head {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: .9rem 0 1.2rem;
+}
+
+.tada-checklist-head .tada-dog-float {
+  width: 88px;
+}
+
 .tada-dog-hint {
+  flex: 1 1 auto;
   color: var(--tada-ink-soft);
   font-size: .93rem;
   font-style: italic;
-  margin: -.4rem 0 1.1rem;
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .tada-checklist-head { gap: .8rem; }
+  .tada-checklist-head .tada-dog-float { width: 64px; }
 }
