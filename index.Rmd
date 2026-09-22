@@ -2,7 +2,7 @@
 title: "The TADA-Wiki"
 subtitle: "Best practice for sharing analytical code"
 author: "A community wiki built on the TADA guidelines"
-date: "Last built: `r format(Sys.Date(), '%d %B %Y')`"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
 site: bookdown::bookdown_site
 description: >-
   A practical wiki on best practice for sharing analytical code, built around
