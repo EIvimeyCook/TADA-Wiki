@@ -20,8 +20,6 @@ to improve analytical code sharing for transparency and reproducibility.*
 EcoEvoRxiv. <https://doi.org/10.32942/X2D93K> (Preprint, posted 2025-08-02;
 not yet peer reviewed.)
 Companion site: <https://eivimeycook.github.io/TADA/>
-Manuscript:
-[`papers/ivimey-cook_etal_TADA_guidelines.pdf`](papers/ivimey-cook_etal_TADA_guidelines.pdf)
 
 **Ivimey-Cook, E. R., Pick, J. L., Bairos-Novak, K. R., Culina, A., Gould, E.,
 Grainger, M., Marshall, B. M., Moreau, D., Paquet, M., Royauté, R.,
@@ -29,8 +27,6 @@ Sánchez-Tójar, A., Silva, I., & Windecker, S. M.** (2023). *Implementing code
 review in the scientific workflow: Insights from ecology and evolutionary
 biology.* Journal of Evolutionary Biology 36: 1347–1356.
 <https://doi.org/10.1111/jeb.14230>
-PDF:
-[`papers/ivimey-cook_etal_2023_code_review.pdf`](papers/ivimey-cook_etal_2023_code_review.pdf)
 
 **Pick, J. L., Allen, B. J., Bachelot, B., Bairos-Novak, K. R., Brand, J. A.,
 Class, B., Dallas, T., D'Amelio, P. B., Fenollosa, E., Fernández-Juricic, E.,
@@ -42,8 +38,6 @@ control in ecology and evolutionary biology.* Peer Community Journal 6: e20.
 <https://doi.org/10.24072/pcjournal.687> (Published 2026-03-13; CC BY 4.0. Peer
 reviewed and recommended by PCI Ecology,
 <https://doi.org/10.24072/pci.ecology.100857>.)
-PDF:
-[`papers/pick_etal_2026_SORTEE_guidelines.pdf`](papers/pick_etal_2026_SORTEE_guidelines.pdf)
 
 ## All references {#references-all}
 
@@ -457,5 +451,6 @@ extends beyond the source papers — worked examples, comparison tables,
 checklists, reviewer scripts — that material is labelled **wiki guidance**.
 Corrections are welcome; see [Contribute](#contribute).
 
-The three source PDFs are in [`papers/`](papers/README.md), with their terms of
-use. The SORTEE guidelines paper is open access under CC BY 4.0.
+The three source papers are linked by DOI above, in
+[The source papers](#references-sources). The SORTEE guidelines paper is open
+access under CC BY 4.0.

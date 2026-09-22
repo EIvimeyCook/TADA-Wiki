@@ -133,8 +133,8 @@ than requirements.
 
 ## Where the guidance comes from {.unnumbered}
 
-This wiki draws on three sources, all of which are worth reading in full. Copies,
-and their terms of use, are in [`papers/`](papers/README.md).
+This wiki draws on three sources, all of which are worth reading in full and
+are linked by DOI below.
 
 - **Ivimey-Cook, E. R., Culina, A., Dimri, S., Grainger, M. J., Kar, F.,
   Lagisz, M., Moran, N. P., Nakagawa, S., Roche, D. G., Tattan, S.,
