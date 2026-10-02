@@ -1,7 +1,7 @@
 # Contribute {#contribute}
 
-This wiki is meant to be added to. If you have a worked example, a
-language-specific tip, or a correction, here is the whole process.
+This wiki is meant to be added to. If you have a worked example, a topic you think needs adding, a
+coding language-specific tip, or a correction, here is how to add it to the wiki.
 
 ::: {.tada-key}
 Copy the page template, write your page, add its filename to `_bookdown.yml`,
