@@ -60,7 +60,7 @@ Collected <WHEN> at <WHERE>.
 
 ## Software environment
 
-<LANGUAGE> v<VERSION>   <!-- e.g. R v4.3.3 -->
+<LANGUAGE> v<VERSION>   <!-- e.g. R v4.5.2 -->
 
 Key packages:
 

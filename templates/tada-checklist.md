@@ -43,7 +43,7 @@ alteration, on a different computer and operating system.*
 - [ ] Manuscript title and abstract
 - [ ] Authors, with a contact email
 - [ ] Relevant funders
-- [ ] Software and version (e.g. R v4.3.3)
+- [ ] Software and version (e.g. R v4.5.2)
 - [ ] Key packages with version numbers
 - [ ] Full environment dump (`sessionInfo()` / `session_info`) included or referenced
 - [ ] Where the data are, with a persistent identifier if archived separately

@@ -50,7 +50,7 @@ Condensed from the TADA guidelines.
 
 - [ ] A `README.md` (or `README.txt`) sits at the top of the project
 - [ ] It names the manuscript, the authors, a contact address, and any funders
-- [ ] It lists software **and version** (e.g. R v4.3.3) and key packages **and versions** (e.g. ggplot2 v3.5.1)
+- [ ] It lists software **and version** (e.g. R v4.5.2) and key packages **and versions** (e.g. ggplot2 v4.0.2)
 - [ ] It states the licence
 - [ ] It says where the data are, ideally with their own DOI
 - [ ] It says what each file is, what order to run things in, what the code needs and what it produces

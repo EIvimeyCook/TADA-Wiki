@@ -172,7 +172,7 @@ README that only makes sense next to your methods section does not meet it.
 :::
 
 ::: {.tada-note}
-Under double-blind review, some sections must be **left blank until acceptance**
+Under double-blind review, some sections can be **left blank until acceptance**
 and filled in then.
 :::
 
@@ -209,7 +209,7 @@ Try doing all of these to make the dog happy.
 
 - [ ] Raw data are archived, or a documented reason and route to them is given (option a, b or c)
 - [ ] Processed and filtered data are archived, or the code that produces them is
-- [ ] All data are in interoperable formats (`.csv`, `.tsv`, `.txt` or `.parquet` preferred)
+- [ ] All data are in interoperable formats (`.csv`, `.tsv` or `.txt` preferred; `.parquet` for large datasets)
 - [ ] Any proprietary-format file is accompanied by an interoperable extract and a description of the conversion, including software version
 - [ ] Nothing lives only in supplementary material
 - [ ] A data licence is chosen and stated

@@ -435,7 +435,7 @@ is at [`templates/code-review-checklist.md`](templates/code-review-checklist.md)
 ::: {.tada-tip}
 **Give feedback on the code, not the coder.** "This line reads `mass`, is that
 the right column?" is easier to act on than "you used the wrong column". Fear of
-being judged is one of the barriers we identified ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}; [Gomes et al. 2022]{.tada-cite data-key="gomes-2022"}), so the way you phrase comments affects whether people keep volunteering.
+being judged is one of the barriers our code review paper highlights ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}), drawing on [Gomes et al. (2022)]{.tada-cite data-key="gomes-2022"}, so the way you phrase comments affects whether people keep volunteering.
 :::
 
 ## Checklist {#review-checklist}

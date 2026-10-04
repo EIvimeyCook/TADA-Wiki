@@ -32,15 +32,15 @@ You can provide a **combined README** covering both code and data metadata, or
 ### What must be in it {.unlisted .unnumbered}
 
 This comes from the "Documented How To" box and its accompanying text in the TADA
-paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}), with the package examples updated:
+paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}):
 
 | Field | Detail |
 |---|---|
 | **Manuscript** | The title **and abstract** of the manuscript the code is associated with |
 | **Authors & contact** | Authors, with an email address for correspondence. *May be anonymised during peer review* to adhere to double-blind policies |
 | **Funders** | Any relevant funders |
-| **Software** | Language and **version number**, e.g. R v4.3.3 |
-| **Packages** | Important libraries or packages used, **with version numbers**, e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from `sessionInfo()` in R or `session_info` in Python (from the `session-info` package) |
+| **Software** | Language and **version number**, e.g. R v4.5.2 |
+| **Packages** | Important libraries or packages used, **with version numbers**, e.g. ggplot2 v4.0.2. Can also be supplied as a separate text file listing every loaded package and version, from `sessionInfo()` in R or `session_info` in Python (from the `session-info` package) |
 | **Licence** | A mention of the code-specific licence |
 | **Data location** | Where the relevant data are, ideally with a **PID** |
 | **File contents** | What each file contains |
@@ -92,11 +92,11 @@ https://doi.org/10.5061/dryad.000000 (`caterpillars_2024.csv`).
 MIT (see LICENSE). Data are released under CC0.
 
 ## Software environment
-R v4.3.3. Full session details in `session_info.txt`.
+R v4.5.2. Full session details in `session_info.txt`.
 
 Key packages:
   - here        v1.0.1   (relative file paths)
-  - ggplot2     v3.5.1   (figures)
+  - ggplot2     v4.0.2   (figures)
 
 ## How to run
 Open `caterpillars.Rproj` in RStudio, then run the scripts in order:
@@ -226,15 +226,18 @@ such as MIT for the code.
 
 ### Questions that determine the choice {.unlisted .unnumbered}
 
-In the TADA paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}) we set out the questions that should decide the
+In the TADA paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}) we set out three questions that should decide the
 choice:
 
 - **Who is the audience?** Is the code intended for commercial applications?
 - **Do you want others to be able to modify or extend it?**
 - **What do your journal, institution and funder require?** Some journals
   mandate a specific licence on archiving.
-- **Does your repository already impose a licence?** Dryad's CC0-only policy is
-  the case to watch for.
+
+::: {.tada-wiki}
+Also check whether your repository already imposes a licence. Dryad's CC0-only
+policy is the case to watch for.
+:::
 
 ::: {.tada-note}
 The SORTEE guidelines require a licence for both data (Guideline 1.2) and code
