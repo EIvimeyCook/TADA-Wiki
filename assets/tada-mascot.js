@@ -28,6 +28,14 @@
     img.setAttribute("aria-hidden", "true");
     img.className = "tada-logo";
     heading.insertBefore(img, heading.firstChild);
+
+    // bs4_book writes "Title: <small>subtitle</small>". With the logo, the
+    // title and subtitle sit stacked beside it (see .tada-has-logo in
+    // style.css), so the joining colon is dropped.
+    Array.prototype.forEach.call(heading.childNodes, function (node) {
+      if (node.nodeType === 3 && node.textContent.trim() === ":") node.textContent = "";
+    });
+    heading.classList.add("tada-has-logo");
   }
 
   function initChecklistDogs() {

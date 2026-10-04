@@ -4,7 +4,8 @@
    TADA-Wiki — theme
    The palette is defined once here as custom properties, so that a change of
    colour is a change of token value rather than a change to the rules.
-   This stylesheet is light-theme only; see the note at the foot of the file.
+   The light theme is the default; the dark theme (bottom of the file)
+   redefines the same tokens under html[data-theme="dark"].
    ========================================================================== */
 
 :root {
@@ -27,6 +28,16 @@
   --tada-bad-bg: #FCEFEC;
   --tada-warn: #8A5708;   /* 5.4:1 on --tada-warn-bg; the label is small caps */
   --tada-warn-bg: #FDF4E3;
+
+  /* Surfaces that were hard-coded white, and the tints that sit on them. */
+  --tada-page: #FFFFFF;
+  --tada-card: #FFFFFF;
+  --tada-code-ink: #0B4F58;
+  --tada-t-bg: #FBEEEC;
+  --tada-a1-bg: #EAF5EE;
+  --tada-d-bg: #F3EEF8;
+  --tada-a2-bg: #EAF1F9;
+  --tada-key-bg: #F5F0FB;
 
   --tada-radius: 12px;
   --tada-shadow: 0 1px 2px rgba(19, 41, 51, .06), 0 6px 20px rgba(19, 41, 51, .06);
@@ -60,7 +71,7 @@ code, pre, kbd, .sourceCode {
   background: var(--tada-surface-2);
   border-radius: 5px;
   padding: 0.12em 0.35em;
-  color: #0B4F58;
+  color: var(--tada-code-ink);
 }
 
 div.sourceCode, pre {
@@ -77,7 +88,7 @@ div.sourceCode, pre {
   border: 1px solid var(--tada-line);
   border-radius: 18px;
   padding: 2rem 2rem 1.6rem;
-  background: #fff;
+  background: var(--tada-card);
   box-shadow: var(--tada-shadow);
   margin: 0 0 2rem;
   display: flex;
@@ -155,7 +166,7 @@ div.sourceCode, pre {
   border-top: 4px solid var(--tada-accent);
   border-radius: var(--tada-radius);
   padding: 1.05rem 1.1rem 1.1rem;
-  background: #fff;
+  background: var(--tada-card);
   box-shadow: var(--tada-shadow);
 }
 
@@ -186,13 +197,13 @@ div.sourceCode, pre {
   font-size: .93rem;
 }
 
-.tada-card.t  { border-top-color: var(--tada-t); background: #FBEEEC; }
+.tada-card.t  { border-top-color: var(--tada-t); background: var(--tada-t-bg); }
 .tada-card.t  .tada-letter { color: var(--tada-t); }
-.tada-card.a1 { border-top-color: var(--tada-a1); background: #EAF5EE; }
+.tada-card.a1 { border-top-color: var(--tada-a1); background: var(--tada-a1-bg); }
 .tada-card.a1 .tada-letter { color: var(--tada-a1); }
-.tada-card.d  { border-top-color: var(--tada-d); background: #F3EEF8; }
+.tada-card.d  { border-top-color: var(--tada-d); background: var(--tada-d-bg); }
 .tada-card.d  .tada-letter { color: var(--tada-d); }
-.tada-card.a2 { border-top-color: var(--tada-a2); background: #EAF1F9; }
+.tada-card.a2 { border-top-color: var(--tada-a2); background: var(--tada-a2-bg); }
 .tada-card.a2 .tada-letter { color: var(--tada-a2); }
 
 /* For card grids that reuse this component for non-TADA content (e.g. the
@@ -237,7 +248,7 @@ div.sourceCode, pre {
 .tada-note::before { content: "Note"; color: var(--tada-accent); }
 
 .tada-key::before  { content: "The short version"; color: var(--tada-d); }
-.tada-key  { border-left-color: var(--tada-d); background: #F5F0FB; }
+.tada-key  { border-left-color: var(--tada-d); background: var(--tada-key-bg); }
 
 /* --------------------------------------------------------------------------
    Before / after code comparison
@@ -254,7 +265,7 @@ div.sourceCode, pre {
   border: 1px solid var(--tada-line);
   border-radius: var(--tada-radius);
   padding: .85rem 1rem 1rem;
-  background: #fff;
+  background: var(--tada-card);
 }
 
 .tada-before { border-top: 4px solid var(--tada-bad); background: var(--tada-bad-bg); }
@@ -272,7 +283,7 @@ div.sourceCode, pre {
 .tada-after  > p:first-child { color: var(--tada-good); }
 
 .tada-compare div.sourceCode, .tada-compare pre {
-  background: #fff;
+  background: var(--tada-card);
   margin-bottom: .6rem;
 }
 
@@ -405,13 +416,38 @@ blockquote {
 .sidebar h1, .sidebar h1 a { font-family: "Fraunces", Georgia, serif; }
 
 /* Wizard mark next to the book title, inserted by assets/tada-mascot.js.
-   Floated so the existing title/subtitle text flow (link + colon + muted
-   subtitle) is untouched; it just wraps around the image. */
+   Without JavaScript there is no logo and the title keeps bs4_book's own
+   layout. With it, the heading becomes a two-column grid: the logo on the
+   left, centred against the title and subtitle stacked on the right, so the
+   two lines start at the same edge instead of wrapping round a float. */
 .tada-logo {
-  float: left;
   width: 34px;
   height: auto;
-  margin: 2px 9px 4px 0;
+}
+
+.sidebar h1.tada-has-logo {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  column-gap: 10px;
+  row-gap: .2rem;
+  align-items: start;
+}
+
+.sidebar h1.tada-has-logo .tada-logo {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: center;
+  margin: 0;
+}
+
+.sidebar h1.tada-has-logo > a,
+.sidebar h1.tada-has-logo > small {
+  grid-column: 2;
+}
+
+.sidebar h1.tada-has-logo > small {
+  display: block;
+  line-height: 1.35;
 }
 
 /* The four letter colours, for use inline. */
@@ -419,17 +455,6 @@ blockquote {
 .k-a1 { color: var(--tada-a1); font-weight: 600; }
 .k-d  { color: var(--tada-d);  font-weight: 600; }
 .k-a2 { color: var(--tada-a2); font-weight: 600; }
-
-/* --------------------------------------------------------------------------
-   Theme note
-   --------------------------------------------------------------------------
-   bs4_book renders with a fixed light bslib theme and has no dark mode of its
-   own, so this stylesheet commits to light too. A `prefers-color-scheme: dark`
-   block here would repaint only the wiki's own components and leave bookdown's
-   chrome — sidebar, page nav, search — light, which reads as broken rather
-   than as dark mode. If a dark theme is ever wanted, set it in `_output.yml`
-   under `bookdown::bs4_book: theme:` (bg/fg) and mirror it here.
-   -------------------------------------------------------------------------- */
 
 @media print {
   .tada-pane { display: block !important; }
@@ -484,7 +509,7 @@ span.tada-cite { cursor: help; }
   width: min(340px, calc(100vw - 2rem));
   border: 1px solid var(--tada-line);
   border-radius: var(--tada-radius);
-  background: #fff;
+  background: var(--tada-card);
   box-shadow: var(--tada-shadow);
   padding: .85rem 1rem;
   font-size: .88rem;
@@ -564,7 +589,7 @@ span.tada-cite { cursor: help; }
 .tada-figure {
   border: 1px solid var(--tada-line);
   border-radius: var(--tada-radius);
-  background: #fff;
+  background: var(--tada-card);
   box-shadow: var(--tada-shadow);
   padding: 1.3rem 1.3rem 1rem;
   margin: 1.8rem 0;
@@ -703,4 +728,258 @@ footer.bg-primary {
 @media (max-width: 560px) {
   .tada-checklist-head { gap: .8rem; }
   .tada-checklist-head .tada-dog-float { width: 64px; }
+}
+
+/* --------------------------------------------------------------------------
+   Theme toggle -- the sun/moon button beside the book title, inserted by
+   assets/tada-theme.js. margin-left: auto pushes it to the right of the title
+   row, next to bs4_book's mobile menu button.
+   -------------------------------------------------------------------------- */
+
+.tada-theme-toggle {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin: 1.5rem 0 0 auto;   /* same top margin as bs4_book's sidebar h1 */
+  padding: 0;
+  border: 1px solid var(--tada-line);
+  border-radius: 999px;
+  background: var(--tada-card);
+  color: var(--tada-ink-soft);
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease;
+}
+
+.tada-theme-toggle:hover { color: var(--tada-accent); border-color: var(--tada-accent); }
+
+.tada-theme-toggle:focus-visible {
+  outline: 2px solid var(--tada-accent);
+  outline-offset: 2px;
+}
+
+.tada-theme-toggle svg { width: 1.05rem; height: 1.05rem; display: block; }
+
+/* Show the moon in light mode ("switch to dark") and the sun in dark mode. */
+.tada-theme-toggle .tada-icon-sun { display: none; }
+html[data-theme="dark"] .tada-theme-toggle .tada-icon-sun { display: block; }
+html[data-theme="dark"] .tada-theme-toggle .tada-icon-moon { display: none; }
+
+@media (max-width: 991.98px) {
+  .tada-theme-toggle { margin-top: .25rem; }
+}
+
+@media print {
+  .tada-theme-toggle { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Dark theme
+   --------------------------------------------------------------------------
+   Switched on by data-theme="dark" on <html>. An inline script in
+   assets/head.html sets that attribute before the page paints, from the
+   reader's saved choice or, failing that, their system setting; the toggle in
+   assets/tada-theme.js changes and saves it. Without JavaScript the site stays
+   light.
+
+   Two layers. The tokens repaint every wiki component above. The overrides
+   after them repaint bs4_book's and Bootstrap's own chrome (page background,
+   sidebar, search, chapter nav, code blocks, syntax colours, footer), which
+   bslib compiles to fixed light values, so a token change alone would leave
+   them light.
+
+   Everything sits inside @media screen, so printing always uses the light
+   theme. Text and accent colours below keep at least 4.5:1 contrast against
+   the surfaces they sit on.
+   -------------------------------------------------------------------------- */
+
+@media screen {
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --tada-t: #F08A75;
+    --tada-a1: #6FCF8E;
+    --tada-d: #B99CE3;
+    --tada-a2: #7AAEF0;
+
+    --tada-ink: #E2E8EC;
+    --tada-ink-soft: #A3B1BA;
+    --tada-line: #2C3A43;
+    --tada-surface: #172127;
+    --tada-surface-2: #1F2B32;
+    --tada-accent: #52C2CE;
+    --tada-accent-soft: #11282D;
+
+    --tada-good: #6FCF8E;
+    --tada-good-bg: #12241A;
+    --tada-bad: #F08A75;
+    --tada-bad-bg: #2B1916;
+    --tada-warn: #E9B866;
+    --tada-warn-bg: #2A2113;
+
+    --tada-page: #0F161A;
+    --tada-card: #141D22;
+    --tada-code-ink: #8FD7DF;
+    --tada-t-bg: #261815;
+    --tada-a1-bg: #12231A;
+    --tada-d-bg: #1F1929;
+    --tada-a2-bg: #13202F;
+    --tada-key-bg: #1C1826;
+
+    --tada-shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 6px 20px rgba(0, 0, 0, .3);
+  }
+
+  /* Page, text and links */
+  html[data-theme="dark"] body {
+    background-color: var(--tada-page);
+    color: var(--tada-ink);
+  }
+  html[data-theme="dark"] a { color: var(--tada-accent); }
+  html[data-theme="dark"] a:hover { color: #7FD6DF; }
+  html[data-theme="dark"] .text-muted { color: var(--tada-ink-soft) !important; }
+  html[data-theme="dark"] .header-section-number { color: var(--tada-ink-soft); }
+  html[data-theme="dark"] hr { border-top-color: var(--tada-line); }
+  html[data-theme="dark"] mark {
+    color: var(--tada-ink);
+    background: rgba(233, 184, 102, .35);
+  }
+
+  /* Sidebars and navigation */
+  html[data-theme="dark"] .book-extra { border-top-color: var(--tada-line); }
+  html[data-theme="dark"] nav[data-toggle="toc"] .nav a.nav-link.active,
+  html[data-theme="dark"] nav[data-toggle="toc"] .nav .nav-link.active > li > a {
+    background-color: var(--tada-surface-2);
+  }
+  /* The sidebars need a real background: they are sticky, so each is its own
+     stacking context, and without a backdrop the logo's screen blend (below)
+     has nothing to blend with and shows as a black square. */
+  html[data-theme="dark"] .sidebar { background-color: var(--tada-page); }
+  /* Below the lg breakpoint bs4_book turns the contents into a drop-down panel. */
+  @media (max-width: 991.98px) {
+    html[data-theme="dark"] .collapse-lg {
+      background: var(--tada-surface);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    }
+  }
+  html[data-theme="dark"] .btn-outline-primary {
+    color: var(--tada-accent);
+    border-color: var(--tada-accent);
+  }
+  html[data-theme="dark"] .btn-outline-primary:hover,
+  html[data-theme="dark"] .btn-outline-primary:not(:disabled):active {
+    color: var(--tada-page);
+    background-color: var(--tada-accent);
+  }
+  html[data-theme="dark"] .chapter-nav .prev,
+  html[data-theme="dark"] .chapter-nav .next {
+    border-color: var(--tada-line);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
+  }
+  html[data-theme="dark"] .chapter-nav .empty { box-shadow: none; }
+
+  /* Search box and its results dropdown */
+  html[data-theme="dark"] .form-control {
+    background-color: var(--tada-surface);
+    border-color: var(--tada-line);
+    color: var(--tada-ink);
+  }
+  html[data-theme="dark"] .form-control::placeholder { color: var(--tada-ink-soft); }
+  html[data-theme="dark"] .form-control:focus {
+    border-color: var(--tada-accent);
+    box-shadow: 0 0 0 .2rem rgba(82, 194, 206, .25);
+  }
+  html[data-theme="dark"] .algolia-autocomplete .aa-dropdown-menu {
+    background-color: var(--tada-surface);
+    border-color: var(--tada-line);
+  }
+  html[data-theme="dark"] .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+    color: var(--tada-ink);
+    border-bottom-color: var(--tada-line);
+  }
+  html[data-theme="dark"] .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+    background-color: var(--tada-surface-2);
+  }
+  html[data-theme="dark"] .algolia-autocomplete .aa-hint { color: var(--tada-ink-soft); }
+
+  /* Footnote popovers */
+  html[data-theme="dark"] .popover {
+    background-color: var(--tada-card);
+    border-color: var(--tada-line);
+  }
+  html[data-theme="dark"] .popover-body { color: var(--tada-ink); }
+  html[data-theme="dark"] .bs-popover-top > .arrow::after,
+  html[data-theme="dark"] .bs-popover-auto[x-placement^="top"] > .arrow::after { border-top-color: var(--tada-card); }
+  html[data-theme="dark"] .bs-popover-bottom > .arrow::after,
+  html[data-theme="dark"] .bs-popover-auto[x-placement^="bottom"] > .arrow::after { border-bottom-color: var(--tada-card); }
+
+  /* Figures and captions from bs4_book itself */
+  html[data-theme="dark"] .inline-figure,
+  html[data-theme="dark"] .figure { border-color: var(--tada-line); }
+  html[data-theme="dark"] caption,
+  html[data-theme="dark"] p.caption { color: var(--tada-ink-soft); }
+
+  /* Code blocks: bs4_book paints a light gradient and dark text */
+  html[data-theme="dark"] pre {
+    background-image: none;
+    border-color: var(--tada-line);
+  }
+  html[data-theme="dark"] pre,
+  html[data-theme="dark"] code { color: var(--tada-ink); }
+  html[data-theme="dark"] code { background-color: var(--tada-surface-2); }
+  html[data-theme="dark"] pre code { background-color: transparent; }
+  html[data-theme="dark"] :not(pre) > code { color: var(--tada-code-ink); }
+  html[data-theme="dark"] code a:any-link { text-decoration-color: var(--tada-ink-soft); }
+  /* The copy button's icon is a black SVG data URL that ignores currentColor. */
+  html[data-theme="dark"] div.sourceCode > button > i.bi::before { filter: invert(1); }
+
+  /* Syntax highlighting: the same token roles as bs4_book's light palette,
+     lightened for a dark background. */
+  html[data-theme="dark"] code span.kw,
+  html[data-theme="dark"] code span.cf,
+  html[data-theme="dark"] code span.bu,
+  html[data-theme="dark"] code span.ot { color: #6CC6EC; }
+  html[data-theme="dark"] code span.im { color: #6CC6EC; font-weight: bold; }
+  html[data-theme="dark"] code span.fu { color: #A3B6FF; }
+  html[data-theme="dark"] code span.st,
+  html[data-theme="dark"] code span.vs,
+  html[data-theme="dark"] code span.ch,
+  html[data-theme="dark"] code span.sc { color: #8FD38B; }
+  html[data-theme="dark"] code span.dv,
+  html[data-theme="dark"] code span.bn,
+  html[data-theme="dark"] code span.fl { color: #F2A0C4; }
+  html[data-theme="dark"] code span.va { color: #C7B8FF; }
+  html[data-theme="dark"] code span.co,
+  html[data-theme="dark"] code span.an,
+  html[data-theme="dark"] code span.in { color: #93A1AB; }
+  html[data-theme="dark"] code span.cv,
+  html[data-theme="dark"] code span.wa { color: #93A1AB; font-style: italic; }
+  html[data-theme="dark"] code span.do { color: #F08A75; font-style: italic; }
+  html[data-theme="dark"] code span.op { color: #B5BEC5; }
+  html[data-theme="dark"] code span.dt,
+  html[data-theme="dark"] code span.pp { color: #E9B866; }
+  html[data-theme="dark"] code span.at { color: #BFD474; }
+  html[data-theme="dark"] code span.ss { color: #E9A8CA; }
+  html[data-theme="dark"] code span.cn { color: #FF8F84; }
+  html[data-theme="dark"] code span.er,
+  html[data-theme="dark"] code span.al { color: #FF7070; }
+
+  /* Footer: a deeper teal so the bar does not glare against the dark page. */
+  html[data-theme="dark"] footer.bg-primary { background-color: #0B4F58 !important; }
+
+  /* Mascots (wizard, dogs, sidebar logo) are black line art on white with no
+     transparency. Inverting turns them into light line art on black, and the
+     screen blend then drops the black, so they sit directly on the page. */
+  html[data-theme="dark"] .tada-hero-figure img,
+  html[data-theme="dark"] .tada-logo,
+  html[data-theme="dark"] .tada-dog-float img {
+    filter: invert(1) hue-rotate(180deg);
+    mix-blend-mode: screen;
+  }
+
+  /* The paper's figures keep their white backgrounds, toned down slightly. */
+  html[data-theme="dark"] .tada-figure img { filter: brightness(.92); }
 }

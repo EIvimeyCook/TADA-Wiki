@@ -1,5 +1,18 @@
 <!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. -->
 <meta name="theme-color" content="#0F6E7B">
+<!-- Set the colour theme before the page paints, so a dark-mode reader never
+     sees a flash of white. Uses the saved choice from the toggle
+     (assets/tada-theme.js) or, if there is none, the system setting. -->
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("tada-theme"); } catch (e) {}
+    if (t !== "light" && t !== "dark") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 
