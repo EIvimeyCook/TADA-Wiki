@@ -1,7 +1,7 @@
 # Contribute {#contribute}
 
-This wiki is meant to be added to. If you have a worked example, a missing
-topic, a language-specific tip or a correction, here is how to add it.
+You are welcome to add to this wiki. If you have a worked example, a missing
+topic, a language-specific tip or a correction, this is how to add it.
 
 ::: {.tada-key}
 Copy the page template, write your page, add its filename to `_bookdown.yml`,
@@ -19,15 +19,15 @@ run `Rscript render.R`, and open a pull request. For a small fix, use the
 
    [`templates/page-template.Rmd`](templates/page-template.Rmd) is a working
    example of everything this wiki uses: the callouts, the R/Python tabs, the
-   before/after blocks, a checklist, and the house style. Write over it.
+   before/after blocks, a checklist and the house style. Write over it.
 
-2. **Start with a level-1 heading and an ID**, because other pages link to it:
+2. **Start with a level-1 heading and an ID**, so other pages can link to it:
 
    ```markdown
    # My page {#my-page}
    ```
 
-3. **Register the file** in `_bookdown.yml`, in the position you want it to
+3. **Register the file** in `_bookdown.yml`, in the position where you want it to
    appear. Keep `11-references.Rmd` last.
 
 4. **Build and check.**
@@ -46,15 +46,15 @@ run `Rscript render.R`, and open a pull request. For a small fix, use the
 ## The one rule {#contribute-rule}
 
 ::: {.tada-warn}
-**Separate what the papers say from what you are adding.** Cite anything from a
-source paper by author and year; label your own practical advice **wiki
-guidance**, as this wiki does throughout. Keeping the two apart lets readers
-check every claim.
+**Keep what the papers say apart from what you are adding.** Cite anything from
+a source paper by author and year, and put your own practical advice in a
+**Wiki Tip** box (`::: {.tada-wiki}`), as this wiki does throughout. That way
+readers can check every claim.
 :::
 
 ## Templates {#contribute-templates}
 
-Ready to copy, both for contributing and for your own projects.
+Copy these for contributing or for your own projects.
 
 | Template | Use |
 |---|---|

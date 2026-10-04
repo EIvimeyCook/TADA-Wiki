@@ -2,13 +2,12 @@
 
 **T**ransferable, **A**vailable, **D**ocumented, **A**nnotated. Four steps that
 take analytical code from a working copy on one machine to an archived record
-that another researcher can still run.
+that another researcher can run.
 
 ## Why another set of guidelines? {#tada-why}
 
-There is plenty of advice on writing good code, but little of it deals with
-the specific task of *archiving an analysis*. In the TADA paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}) we
-identified four gaps in the existing resources:
+There is plenty of advice on writing good code, but little of it covers
+*archiving an analysis*. In the TADA paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}) we identified four gaps in the existing resources:
 
 1. They do not sufficiently address **how to archive analytical code**.
 2. Few of them adhere to the **FAIR principles**.
@@ -20,26 +19,26 @@ identified four gaps in the existing resources:
    scope and focused on software development, which may be part of why it
    has not been widely adopted outside that community.
 
-The fourth gap rests on a distinction between *analytical code* and *software*.
+The fourth gap depends on the difference between *analytical code* and *software*.
 
 **Software** is written to be general, modular and tested, and to work across
 systems with many different compatible datasets. Designing for that kind of
-reuse is complicated.
+reuse is hard.
 
 **Analytical code** is tailored to one dataset and one study. Its purpose is to
 be a transparent, reproducible record of that analysis, not to become a tool for
 other people.
 
-Software standards therefore set too high a bar for analytical code, and researchers faced with an unrealistic target tend to give up
-on it. <!-- [add source: researchers give up on unrealistic coding standards] -->
-TADA instead sets a **minimum standard** that is achievable at any level of
-coding experience and still delivers the transparency and computational
-reproducibility that sharing is meant to provide.
+Software standards therefore set too high a bar for analytical code, and researchers
+faced with an unrealistic target tend to give up on it. 
+
+TADA instead sets a **minimum standard** that anyone can meet, whatever their
+coding experience, and helps coders archived code that is transparent and helps enable computational
+reproducibility.
 
 ## The scale of the problem {#tada-problem}
 
-The figures below all come from our review of the literature in the TADA
-paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}).
+All the figures below come from the TADA paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}).
 
 | What | Figure | Primary source |
 |---|---|---|
@@ -55,15 +54,15 @@ paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}).
 <p class="tada-figure-caption"><strong>The code-sharing cascade.</strong> Reproducible results depend on code that is available (shared with the article) and functional (runs without error). Figure 1 from [Ivimey-Cook et al.]{.tada-cite data-key="ivimey-cook-2025-tada"}</p>
 :::
 
-Journal policy has changed a great deal over the past decade, and practice has
-been much slower to follow
+Journal policy has changed a lot over the past decade, but practice has been
+much slower to follow
 ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-policy"}). Even
-where code is present and runs, computational reproducibility cannot be assumed
+where code is present and functional, computational reproducibility is not always possible
 ([Kambouris et al. 2024]{.tada-cite data-key="kambouris-2024"}).
 
 ## The four principles {#tada-four}
 
-Each has its own chapter. These are the one-paragraph versions.
+Each has its own chapter. Here is each in a paragraph.
 
 ::: {.tada-cards}
 ::: {.tada-card .t}
@@ -95,41 +94,41 @@ its output appears in the paper.]{.tada-gloss}
 :::
 :::
 
-Figure 2 below shows all four applied at once, in a small piece of generic R
-code: the same script, before and after.
+Figure 2 below applies all four to a small piece of generic R code, showing the
+same script before and after.
 
 ::: {.tada-figure}
 ![](assets/figures/fig-code-example.png){alt="Side-by-side comparison of a pre-TADA and post-TADA R script, showing coloured annotations for Transferable, Available, Documented and Annotated, alongside a README file."}
 
-<p class="tada-figure-caption"><strong>TADA applied to analytical code written in R.</strong> A pre-TADA script (left) and a post-TADA script (right); coloured letters mark which guideline each change addresses — Transferable (red), Available (green), Documented (purple), Annotated (blue). The code shown is generic, designed only to illustrate the guidelines. Figure 2 from [Ivimey-Cook et al.]{.tada-cite data-key="ivimey-cook-2025-tada"}</p>
+<p class="tada-figure-caption"><strong>TADA applied to analytical code written in R.</strong> A pre-TADA script (left) and a post-TADA script (right); coloured letters mark which guideline each change addresses: Transferable (red), Available (green), Documented (purple), Annotated (blue). The code shown is generic, designed only to illustrate the guidelines. Figure 2 from [Ivimey-Cook et al.]{.tada-cite data-key="ivimey-cook-2025-tada"}</p>
 :::
 
 ## What TADA does not cover {#tada-scope}
 
-We deliberately left three things out of TADA's scope, although all three
-support reproducible analyses ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}):
+We left three things out of the TADA's paper scope, although all three
+support reproducible analyses ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}) (if you fancy writing a section of the wiki on this, please get in touch!):
 
 - **Dependency and environment managers** (`{renv}` in R, `{conda}` in Python),
   which help ensure the same computational environment is used each time, for
   example via a lockfile.
 - **Containerisation** (Docker, Apptainer — formerly Singularity), which packages a complete software
-  environment of programs and libraries into an image so that the environment
-  itself is reproducible between systems. This is the standard answer to the
+  environment of programs and libraries into an image, so the environment
+  itself is reproducible between systems. It is the standard answer to the
   "works on my computer" problem.
 - **Workflow managers** (Snakemake, Nextflow), which specify the sequence of
   scripts or computational steps in a pipeline and their dependencies, so that
   each step executes in a defined, reproducible order.
 
-None of these is a requirement of TADA, but all three are worth knowing about;
-see [Further reading](#further-reading).
+None of these is a TADA requirement, but all three are worth knowing about.
+See [Further reading](#further-reading).
 
 ## How TADA maps onto FAIR {#tada-fair}
 
 TADA was built with the FAIR
 ([Wilkinson et al. 2016]{.tada-cite data-key="wilkinson-2016"}) and FAIR4RS
 ([Chue Hong et al. 2022]{.tada-cite data-key="chue-hong-2022"}) principles in
-mind. Each letter maps onto one or more of them, and Transferable deliberately
-goes further.
+mind. Each letter maps onto one or more of them, and Transferable goes further on
+purpose.
 
 | FAIR principle | Definition | Covered by |
 |---|---|---|
@@ -139,40 +138,36 @@ goes further.
 | **R**eusable | Assets are described sufficiently to enable reuse and attribution, ideally via a licence | **Documented**, through a README and a licence, and **Annotated**, through commenting within the code itself |
 
 ::: {.tada-note}
-All four rows come directly from the TADA paper, where we wrote: Transferable "corresponds to the FAIR principle of
+All four rows come from the TADA paper, where we wrote that Transferable "corresponds to the FAIR principle of
 interoperability... and extends it"; Available "corresponds to the FAIR
 principles of both Findable... and Accessible"; Documented "corresponds to...
 the FAIR principle of Reusable... and Findable (the provision of rich
 metadata)"; and Annotated, "similar to documentation, corresponds to the FAIR
 principle of Reusable... but rather than describing the code 'externally',
 provides clear commenting within each coding script." Documented and Annotated
-therefore share the same FAIR principle (Reusable), distinguished only by
-whether the description sits outside the code (a README) or inside it
-(comments).
+therefore share one FAIR principle (Reusable). The only difference is whether
+the description sits outside the code (a README) or inside it (comments).
 :::
 
 **Transferable is broader than Interoperable.** Interoperability means anyone
-can open and use your code. Transferability adds the requirement that it also
-*runs* on someone else's machine and operating system, which is
-where hard-coded file paths cause problems.
+can open and use your code. Transferability also requires that it *runs* on
+someone else's machine and operating system, which is where hard-coded file
+paths cause problems.
 
-**Annotated shares its FAIR principle with Documented, not with a principle of
-its own.** Both map to Reusable, since both are ultimately about enabling
-someone to understand and reuse the code; they differ in *where* that
-description lives: externally in a README (Documented) or internally as
+**Annotated has no FAIR principle of its own.** It shares Reusable with
+Documented, because both help someone understand and reuse the code. They differ
+in *where* the description lives: in a README (Documented) or in the code as
 comments (Annotated). Annotated is the letter most specific to research code.
-FAIR is largely concerned with machines finding and parsing assets, whereas
-annotation is about a person being able to follow what the analysis did. It is
-also the letter most often skipped.
-<!-- [add source: Annotated is the TADA letter most often skipped] -->
+FAIR is mostly about machines finding and parsing assets, whereas annotation is
+about a person being able to follow what the analysis did. 
 
 ::: {.tada-note}
-On "reusable": the word is used in two senses. In the FAIR sense it
-means sharing code in a way that clearly specifies what can be done with it,
-through a licence and a README. In the software-development sense it means
+"Reusable" has two senses. In the FAIR sense it
+means sharing code so that it is clear what can be done with it, through a
+licence and a README. In the software-development sense it means
 writing generalised, modular, tested code that runs across systems and datasets.
-TADA targets the first. If you meet a guideline demanding the second, check
-whether it was written for software.
+TADA targets the first. If a guideline demands the second, check whether it was
+written for software.
 :::
 
 ## Languages {#tada-languages}
@@ -188,6 +183,6 @@ SPSS syntax `.sps` files, for instance, pass.
 
 ## Where to go next {#tada-next}
 
-- Working through it for the first time: [Transferable](#transferable)
-- Want the checklist rather than the reasoning: [Start here](#quickstart-checklist)
+- Reading it for the first time: [Transferable](#transferable)
+- Want the checklist, not the reasoning: [Start here](#quickstart-checklist)
 - Preparing for a journal data editor: [The SORTEE guidelines](#sortee)

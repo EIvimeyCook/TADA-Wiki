@@ -1,15 +1,14 @@
 # Start here {#quickstart}
 
-This chapter is for the situation most people are actually in: a paper is going
-out, and the code behind it sits in a folder whose logic made sense at the time.
-What follows is the shortest route from that to something a stranger can
-download, open and run.
+Use this chapter if you are about to submit a paper and need to get the code
+behind it ready to share. It covers the minimum steps to turn your project
+folder into an archive that someone else can download, open and run.
 
 ::: {.tada-key}
-Make four passes over the project, roughly in this order. Fix the **paths and
-file types**, **archive** it and get a DOI, write the **README**, then
-**annotate** the scripts. Finally, ask a colleague to run the whole thing before
-a reviewer has to.
+Go through the project in four passes, roughly in this order: fix the **paths
+and file types**, **archive** it and get a DOI, write the **README**, then
+**annotate** the scripts. Finally, ask a colleague to run the whole thing
+before a reviewer has to.
 :::
 
 ## The pre-submission checklist {#quickstart-checklist}
@@ -25,8 +24,7 @@ Try doing all of these to make the dog happy.
 :::
 ::::
 
-TADA covers your code; the data beside it has its own short list. Each group
-links to the chapter that explains it. Tick every box below and see what happens.
+TADA covers your code. The data have their own short list. Tick every box and see what happens.
 
 ::: {.tabset}
 
@@ -46,7 +44,7 @@ Condensed from the TADA guidelines.
 
 - [ ] Code is deposited in an immutable repository that mints a persistent identifier (Zenodo, Figshare, …)
 - [ ] The DOI is **cited in the manuscript text and reference list**
-- [ ] If the code was developed on GitHub, a release has been created and linked to Zenodo, since GitHub alone is not an archive
+- [ ] If the code was developed on GitHub, a release has been created and linked to Zenodo, since GitHub does not produced DOIs
 
 **Documented** — [full chapter](#documented)
 
@@ -72,9 +70,11 @@ Condensed from the TADA guidelines.
 
 ### Data {.unlisted .unnumbered}
 
-*Wiki guidance:* the data counterpart to the code checklist, condensed from the
+::: {.tada-wiki}
+This is the data counterpart to the code checklist, condensed from the
 [SORTEE guidelines](#sortee) and the [Data & code sharing](#data-sharing)
 chapter, where every point is explained in full.
+:::
 
 **Archived & citable** — [Available](#available)
 
@@ -101,20 +101,23 @@ chapter, where every point is explained in full.
 
 :::
 
-::: {.tada-tip}
+::: {.tada-wiki}
 The most useful check on this page is to **download your own archived deposit
-into a fresh, empty folder, ideally on a different machine, and run it.** Wiki
-guidance: this is the cheapest way to catch the failures the SORTEE guidelines
-group under Stage 5: paths, missing packages and missing files ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). It
-will not catch Stage 6 failures, such as stochasticity and version sensitivity,
-which need a seed and a documented environment instead.
+into a fresh, empty folder, ideally on a different machine, and run it.** It catches the failures the SORTEE guidelines group under
+Stage 5: wrong paths, missing packages and missing files ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). It
+will not catch Stage 6 failures, such as stochasticity and version sensitivity.
+Those need a seed and a documented environment.
 :::
 
 ## A project layout that works {#quickstart-layout}
 
-The example tree below is wiki guidance; the two conventions it embodies are
-from [Ivimey-Cook et al. (2023, §3.1)]{.tada-cite data-key="ivimey-cook-2023"}. The specific layout matters less than the
-result: a reader can see the order and purpose of every file without asking you.
+The two conventions in the tree below come from
+[Ivimey-Cook et al. (2023, §3.1)]{.tada-cite data-key="ivimey-cook-2023"}.
+
+::: {.tada-wiki}
+The layout itself is our own suggestion. The exact layout matters less than whether
+a reader can see the order and purpose of every file without asking you.
+:::
 
 ```
 my-project/
@@ -137,7 +140,7 @@ my-project/
     └── models/               <- saved model objects for slow fits
 ```
 
-Most of the work is being done by two conventions.
+Two conventions do most of the work.
 
 1. **Numbered scripts.** A reader knows the order to run things in without
    being told: `01_`, `02_`, `03_`.
@@ -147,7 +150,7 @@ Most of the work is being done by two conventions.
 
 ## Three common causes of failure {#quickstart-mistakes}
 
-The first two rows come from the TADA guidelines; the third from the
+The first two rows come from the TADA guidelines and the third from the
 SORTEE guidelines ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}, Stage 6).
 
 | Mistake | Why it breaks | Fix |
@@ -157,10 +160,10 @@ SORTEE guidelines ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}, Stage 6)
 | No `set.seed()` before a simulation or MCMC run | Results change every run, so nobody can tell a real mismatch from noise | Set a seed at the top of each independently runnable section |
 
 ::: {.tada-warn}
-The `.pdf` and `.docx` problem is easy to underestimate. Copying out of these
-formats can change characters (curly apostrophes for straight ones, say) and
-white space (non-breaking spaces for ordinary ones). The
-resulting errors are sometimes difficult to spot or time-consuming to fix, because the code still *looks* right.
+People underestimate the `.pdf` and `.docx` problem. Copying code out of these
+formats can change characters (curly apostrophes for straight ones) and white
+space (non-breaking spaces for ordinary ones). The code still *looks* right, so
+the errors can be hard to spot and slow to fix.
 :::
 
 ## The README {#quickstart-readme}
@@ -170,7 +173,7 @@ project and replace the angle-bracketed parts. The
 [Documented](#documented-readme) chapter explains each field and why it is
 there.
 
-*Wiki guidance:* or generate one with [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder) (`devtools::install_github("EIvimeyCook/READMEBuilder")`, then `build_readme()`), a Shiny app that fills in these fields from your project and writes the `README.md` for you.
+Or generate one with [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder) (`devtools::install_github("EIvimeyCook/READMEBuilder")`, then `build_readme()`), a Shiny app that fills in these fields from your project and writes the `README.md`.
 
 ## What happens next {#quickstart-next}
 
@@ -180,10 +183,10 @@ there.
 
 
 If your target journal has a **data editor**, someone will check your deposit
-against something close to the [SORTEE guidelines](#sortee) ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}): six
-stages running from whether the code is archived under a licence to whether the
-results come out the same. Reading that section tells you what those checks are
-before anyone applies them to your submission.
+against something close to the [SORTEE guidelines](#sortee) ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
+These have six stages, from whether the code is archived under a licence to
+whether the results reproduce. Read that section to see what the checks
+are before they are applied to your submission.
 
-If your journal has no data editor, the checks still matter; they fall to you
-and your co-authors instead, through [code review](#code-review).
+If your journal has no data editor, the checks still matter. They fall to you
+and your co-authors, through [code review](#code-review).

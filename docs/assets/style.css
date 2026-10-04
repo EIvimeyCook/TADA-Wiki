@@ -38,6 +38,8 @@
   --tada-d-bg: #F3EEF8;
   --tada-a2-bg: #EAF1F9;
   --tada-key-bg: #F5F0FB;
+  --tada-wiki: #3A57A6;
+  --tada-wiki-bg: #EEF1FA;
 
   --tada-radius: 12px;
   --tada-shadow: 0 1px 2px rgba(19, 41, 51, .06), 0 6px 20px rgba(19, 41, 51, .06);
@@ -216,7 +218,7 @@ div.sourceCode, pre {
    Callouts
    -------------------------------------------------------------------------- */
 
-.tada-tip, .tada-warn, .tada-note, .tada-key {
+.tada-tip, .tada-warn, .tada-note, .tada-key, .tada-wiki {
   border: 1px solid var(--tada-line);
   border-left: 4px solid var(--tada-accent);
   border-radius: 10px;
@@ -228,9 +230,10 @@ div.sourceCode, pre {
 .tada-tip > :last-child,
 .tada-warn > :last-child,
 .tada-note > :last-child,
-.tada-key > :last-child { margin-bottom: 0; }
+.tada-key > :last-child,
+.tada-wiki > :last-child { margin-bottom: 0; }
 
-.tada-tip::before, .tada-warn::before, .tada-note::before, .tada-key::before {
+.tada-tip::before, .tada-warn::before, .tada-note::before, .tada-key::before, .tada-wiki::before {
   display: block;
   font-size: .72rem;
   font-weight: 700;
@@ -249,6 +252,59 @@ div.sourceCode, pre {
 
 .tada-key::before  { content: "The short version"; color: var(--tada-d); }
 .tada-key  { border-left-color: var(--tada-d); background: var(--tada-key-bg); }
+
+.tada-wiki::before { content: "Wiki Tip"; color: var(--tada-wiki); }
+.tada-wiki { border-left-color: var(--tada-wiki); background: var(--tada-wiki-bg); }
+
+/* Terms on this page (sidebar, built by assets/tada-glossary.js) */
+.tada-terms { margin-top: 1.5rem; }
+.tada-terms ul { list-style: none; padding: 0; margin: 0; }
+.tada-terms li { margin: 0 0 .1rem; }
+.tada-terms summary {
+  cursor: pointer;
+  font-size: .875rem;
+  padding: .15rem 0;
+  color: var(--tada-ink-soft);
+}
+.tada-terms summary:hover,
+.tada-terms details[open] > summary { color: var(--tada-accent); }
+.tada-term-def {
+  font-size: .8125rem;
+  line-height: 1.45;
+  color: var(--tada-ink);
+  margin: .25rem 0 .55rem;
+  padding: .45rem .6rem;
+  border-left: 2px solid var(--tada-accent);
+  background: var(--tada-accent-soft);
+  border-radius: 0 6px 6px 0;
+}
+.tada-term-def code { font-size: .78rem; }
+.tada-term-more { display: block; margin-top: .35rem; font-weight: 600; }
+.tada-terms-all { display: inline-block; margin-top: .6rem; font-size: .8125rem; }
+
+/* Glossary */
+.tada-glossary dl { margin: 1.2rem 0; }
+.tada-glossary dt { font-weight: 700; margin-top: 1.1rem; scroll-margin-top: 1rem; }
+.tada-glossary dd {
+  margin: .25rem 0 0;
+  padding-left: .9rem;
+  border-left: 2px solid var(--tada-line);
+}
+.tada-glossary dd > p { margin-bottom: .4rem; }
+.tada-gloss-tag {
+  display: inline-block;
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  vertical-align: .15em;
+  margin-left: .35rem;
+  padding: .05rem .4rem;
+  border-radius: 999px;
+  color: var(--tada-accent);
+  background: var(--tada-accent-soft);
+  border: 1px solid var(--tada-line);
+}
 
 /* --------------------------------------------------------------------------
    Before / after code comparison
@@ -349,6 +405,15 @@ main table {
   overflow-x: auto;
   table-layout: fixed;
 }
+
+/* Bootstrap fixes .table text at #343F46, which is unreadable on the dark
+   theme; use the theme's ink colour in both themes instead. */
+main table,
+main .table { color: var(--tada-ink); }
+
+/* Bootstrap's .text-muted grey (the sidebar subtitle) is just under 4.5:1 on
+   white; use the theme's soft ink, as dark mode already does. */
+.text-muted { color: var(--tada-ink-soft) !important; }
 
 main table th {
   text-align: left;
@@ -829,6 +894,8 @@ html[data-theme="dark"] .tada-theme-toggle .tada-icon-moon { display: none; }
     --tada-d-bg: #1F1929;
     --tada-a2-bg: #13202F;
     --tada-key-bg: #1C1826;
+    --tada-wiki: #93A9EA;
+    --tada-wiki-bg: #171C2E;
 
     --tada-shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 6px 20px rgba(0, 0, 0, .3);
   }

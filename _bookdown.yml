@@ -13,6 +13,7 @@ rmd_files:
   - "07-data-sharing.Rmd"
   - "08-code-review.Rmd"
   - "09-further-reading.Rmd"
+  - "12-glossary.Rmd"
   - "10-contribute.Rmd"
   - "11-references.Rmd"
 

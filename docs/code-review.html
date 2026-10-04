@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>8 Code review | The TADA-Wiki</title>
 <meta name="author" content="a community wiki built on the TADA guidelines">
-<meta name="description" content="Code review is the process of checking and evaluating each other’s code, either formally, as part of the peer-review process, or informally, as co-authors or colleagues. It helps catch conceptual,...">
+<meta name="description" content="Code review means checking and evaluating each other’s code, either formally, as part of peer review, or informally, as co-authors or colleagues. It helps catch conceptual, programmatic and...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="8 Code review | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/code-review.html">
-<meta property="og:description" content="Code review is the process of checking and evaluating each other’s code, either formally, as part of the peer-review process, or informally, as co-authors or colleagues. It helps catch conceptual,...">
+<meta property="og:description" content="Code review means checking and evaluating each other’s code, either formally, as part of peer review, or informally, as co-authors or colleagues. It helps catch conceptual, programmatic and...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8 Code review | The TADA-Wiki">
-<meta name="twitter:description" content="Code review is the process of checking and evaluating each other’s code, either formally, as part of the peer-review process, or informally, as co-authors or colleagues. It helps catch conceptual,...">
+<meta name="twitter:description" content="Code review means checking and evaluating each other’s code, either formally, as part of peer review, or informally, as co-authors or colleagues. It helps catch conceptual, programmatic and...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -75,8 +75,9 @@
 <li><a class="" href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></li>
 <li><a class="active" href="code-review.html"><span class="header-section-number">8</span> Code review</a></li>
 <li><a class="" href="further-reading.html"><span class="header-section-number">9</span> Further reading</a></li>
-<li><a class="" href="contribute.html"><span class="header-section-number">10</span> Contribute</a></li>
-<li><a class="" href="references.html"><span class="header-section-number">11</span> References</a></li>
+<li><a class="" href="glossary.html"><span class="header-section-number">10</span> Glossary</a></li>
+<li><a class="" href="contribute.html"><span class="header-section-number">11</span> Contribute</a></li>
+<li><a class="" href="references.html"><span class="header-section-number">12</span> References</a></li>
 </ul>
 
         <div class="book-extra">
@@ -89,10 +90,10 @@
 <span class="header-section-number">8</span> Code review<a class="anchor" aria-label="anchor" href="#code-review"><i class="fas fa-link"></i></a>
 </h1>
 <div class="tada-key">
-<p><strong>Code review</strong> is the process of checking and evaluating each other’s code,
-either <strong>formally</strong>, as part of the peer-review process, or <strong>informally</strong>, as
-co-authors or colleagues. It helps catch <strong>conceptual, programmatic and
-syntactic errors</strong>, and it can take place at any stage of the research cycle.</p>
+<p><strong>Code review</strong> means checking and evaluating each other’s code, either
+<strong>formally</strong>, as part of peer review, or <strong>informally</strong>, as co-authors or
+colleagues. It helps catch <strong>conceptual, programmatic and syntactic errors</strong>, and
+it can happen at any stage of the research cycle.</p>
 </div>
 <p>This chapter follows <span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. (2023)</span>, <em>Implementing code review in the
 scientific workflow: Insights from ecology and evolutionary biology</em> (Journal of
@@ -101,11 +102,11 @@ Evolutionary Biology 36: 1347–1356, <a href="https://doi.org/10.1111/jeb.14230
 <h2>
 <span class="header-section-number">8.1</span> Why it is missing, and why it matters<a class="anchor" aria-label="anchor" href="#review-why"><i class="fas fa-link"></i></a>
 </h2>
-<p>You are probably already using open-source software such as R or Python to
-clean, manipulate, visualise and analyse your data. Code-based software is more
-transparent and reproducible than point-and-click software, and more flexible,
-since analyses can be tailored to what a study needs.</p>
-<p>That flexibility comes at a cost. <strong>Code is more error-prone</strong>
+<p>You probably already use open-source software such as R or Python to clean,
+manipulate, visualise and analyse your data. Code-based software is more
+transparent, reproducible and flexible than point-and-click software, because
+analyses can be tailored to what a study needs.</p>
+<p>That flexibility has a cost. <strong>Code is more error-prone</strong>
 (<span class="tada-cite" data-key="budd-1998">Budd et al. 1998</span>), and several high-profile
 retractions have followed coding mistakes
 (<span class="tada-cite" data-key="bolnick-2009">Bolnick &amp; Paull 2009</span>;
@@ -115,25 +116,24 @@ retractions have followed coding mistakes
 <span class="tada-cite" data-key="williams-2020">Williams &amp; Bürkner 2020</span>).</p>
 <p>In computer science and software development, code review is routine. In the
 academic disciplines that rely on code to make inferences and predictions, it is
-<strong>noticeably absent</strong> from the research and publication process
-(<span class="tada-cite" data-key="indriasari-2020">Indriasari et al. 2020</span>). Ivimey-Cook et
-al. argue for a shift in research culture that brings code review into <strong>all
-stages</strong> of the research process (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
-<p>There is a structural reason it does not happen. Informal training, combined
-with insufficient time and incentives
-(<span class="tada-cite" data-key="touchon-2016">Touchon &amp; McCoy 2016</span>), means that coding and
-analysis are often the responsibility of <strong>a single member of a team</strong> for a
-project’s entire lifetime, unlike methodology and experimental
-design, which are usually developed by the whole team. Because research code is
-so often one person’s work, pre-publication code review is both unlikely to
-happen and important when it does.</p>
+<strong>largely absent</strong> from the research and publication process
+(<span class="tada-cite" data-key="indriasari-2020">Indriasari et al. 2020</span>). We argue for a
+shift in research culture that brings code review into <strong>all stages</strong> of the
+research process (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
+<p>Part of the reason is structural. Informal training, together with too little
+time and too few incentives
+(<span class="tada-cite" data-key="touchon-2016">Touchon &amp; McCoy 2016</span>), means coding and
+analysis are often the responsibility of <strong>a single member of a team</strong> for the
+whole project, unlike methodology and experimental design, which the whole team
+usually develops. Because research code is so often one person’s work,
+pre-publication code review is unlikely to happen, and important when it does.</p>
 </div>
 <div id="review-four-rs" class="section level2" number="8.2">
 <h2>
 <span class="header-section-number">8.2</span> The four Rs<a class="anchor" aria-label="anchor" href="#review-four-rs"><i class="fas fa-link"></i></a>
 </h2>
-<p>Whatever the stage, the core priorities are the same. The paper frames them as
-four questions (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
+<p>The core priorities are the same at every stage. We frame them as four
+questions (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
 <div class="tada-cards">
 <div class="tada-card neutral">
 <p><span class="tada-letter">R</span> <span class="tada-word">Reported</span>
@@ -146,7 +146,7 @@ section?</span></p>
 </div>
 <div class="tada-card neutral">
 <p><span class="tada-letter">R</span> <span class="tada-word">Reliable</span>
-<span class="tada-gloss">Does the code produce the correct result, and not merely a result, on every
+<span class="tada-gloss">Does the code give the correct result, not just a result, on every
 run?</span></p>
 </div>
 <div class="tada-card neutral">
@@ -158,37 +158,36 @@ run?</span></p>
 <div id="reported" class="section level3 unlisted unnumbered">
 <h3>Reported<a class="anchor" aria-label="anchor" href="#reported"><i class="fas fa-link"></i></a>
 </h3>
-<p>Code is a key research output and part of the scientific method. Open code
-accompanying written methods sections is becoming more common, following similar
-pushes for Open and FAIR data
+<p>Code is a key research output and part of the scientific method. Open code to
+accompany written methods is becoming more common, following similar pushes for
+Open and FAIR data
 (<span class="tada-cite" data-key="lamprecht-2020">Lamprecht et al. 2020</span>). The first
-check is therefore <strong>consistency between the code and the manuscript</strong>, and
-these questions catch <strong>conceptual</strong> errors.</p>
+check is therefore <strong>consistency between the code and the manuscript</strong>, which
+catches <strong>conceptual</strong> errors.</p>
 <p><em>Does the code match what the methods section says was done?</em> If the methods
-state a generalised linear model with Poisson error and the code fits a Gaussian
-one, that mismatch has to be part of the review.</p>
-<p><strong>Software and package versions.</strong> At minimum, the packages integral to the
-analysis or to visualisation should be listed, with version numbers, somewhere
-in the manuscript. In R these can be obtained with <code><a href="https://rdrr.io/r/utils/citation.html">citation()</a></code>; in Python,
-using <code>setuptools</code>. A full list of everything used, including packages involved
-in cleaning and tidying, can go elsewhere, such as an associated <code>.R</code> or <code>.py</code>
-file.</p>
-<p>This matters beyond bookkeeping. If a package version is later found to contain
-a bug, papers depending on it can be identified.</p>
-<p><strong>Environment management</strong> helps here. Packages such as <strong><code>renv</code></strong>
+describe a generalised linear model with Poisson error and the code fits a
+Gaussian one, the review has to pick that up.</p>
+<p><strong>Software and package versions.</strong> At minimum, list the packages central to the
+analysis or visualisation, with version numbers, somewhere in the manuscript. In
+R you can get these with <code><a href="https://rdrr.io/r/utils/citation.html">citation()</a></code>; in Python, with <code>setuptools</code>. A full list
+of everything used, including packages for cleaning and tidying, can go
+elsewhere, such as an associated <code>.R</code> or <code>.py</code> file.</p>
+<p>This is more than bookkeeping. If a package version is later found to contain a
+bug, you can identify the papers that depend on it.</p>
+<p><strong>Environment management</strong> also helps. Packages such as <strong><code>renv</code></strong>
 (<span class="tada-cite" data-key="ushey-2023">Ushey &amp; Wickham 2023</span>), which replaces <code>packrat</code> (<span class="tada-cite" data-key="ushey-2022">Ushey et al. 2022</span>), and
 <strong><code>groundhog</code></strong> (<span class="tada-cite" data-key="simonsohn-2023">Simonsohn &amp; Gruson 2023</span>) in R, or <strong><code>poetry</code></strong> (<span class="tada-cite" data-key="eustace-2023">Eustace 2023</span>)
-and <strong><code>pipenv</code></strong> (<span class="tada-cite" data-key="pipenv-2023">Pipenv Maintainer Team 2023</span>) in Python, help ensure a
-reproducible environment and allow specific package versions to be loaded.
+and <strong><code>pipenv</code></strong> (<span class="tada-cite" data-key="pipenv-2023">Pipenv Maintainer Team 2023</span>) in Python, help make the
+environment reproducible and let you load specific package versions.
 Containerisation with <strong>Docker</strong> (<span class="tada-cite" data-key="boettiger-2015">Boettiger 2015</span>) is another option.</p>
 </div>
 <div id="run" class="section level3 unlisted unnumbered">
 <h3>Run<a class="anchor" aria-label="anchor" href="#run"><i class="fas fa-link"></i></a>
 </h3>
-<p>Code that matches the methodology reported in a paper is not necessarily
-executable. <strong>Programmatic and syntactic errors</strong> can stop code re-running.</p>
-<p>Common causes, the first two from the code review paper (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>) and the
-rest from the SORTEE guidelines’ Stage 5 (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>), which lists the same
+<p>Code that matches the methods in a paper does not necessarily run.
+<strong>Programmatic and syntactic errors</strong> can stop it re-running.</p>
+<p>Common causes are listed below. The first two are from our code review paper (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>) and the
+rest from Stage 5 of the SORTEE guidelines (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>), which lists the same
 failures from the data editor’s side:</p>
 <ul>
 <li>calls to libraries or modules that are not installed in the current
@@ -199,54 +198,54 @@ environment</li>
 <li>variable names in the code that do not match those in the data files</li>
 <li>a missing code chunk</li>
 </ul>
-<p>It is the least demanding of the four checks and the one that fails most often:
-74% of over 9,000 archived R files failed to complete without error (<span class="tada-cite" data-key="trisovic-2022">Trisovic
+<p>This is the easiest of the four checks, yet it fails often: 74% of over 9,000
+archived R files failed to complete without error (<span class="tada-cite" data-key="trisovic-2022">Trisovic
 et al. 2022</span>).</p>
 <div class="tada-tip">
 <p>Run it in a <strong>fresh session</strong>, from a <strong>fresh download</strong>, in a <strong>new folder</strong>.
 Anything that only works because of what is already loaded in your environment
-will fail here, which is what the check is for.</p>
+will fail, and that is what you are trying to find.</p>
 </div>
 </div>
 <div id="reliable" class="section level3 unlisted unnumbered">
 <h3>Reliable<a class="anchor" aria-label="anchor" href="#reliable"><i class="fas fa-link"></i></a>
 </h3>
-<p>This is the hardest of the four checks, and the one that most needs a reviewer
-who knows the study.</p>
-<p>Errors can propagate through code that runs perfectly well and produces an
-output, because <strong>code can produce incorrect results in a reproducible manner</strong>,
-returning the same wrong answer every time. The paper’s example: if code selects
-or modifies the wrong column in a dataset, the analysis is wrong but nothing
-errors (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
-<p><strong>Unit testing</strong> helps, through <strong><code>testthat</code></strong> (<span class="tada-cite" data-key="wickham-2011">Wickham 2011</span>) in R and
+<p>This is the hardest of the four checks, and it needs a reviewer who knows the
+study.</p>
+<p>Code can run perfectly well, produce an output and still be wrong, because
+<strong>code can produce incorrect results reproducibly</strong>, giving the same wrong
+answer every time. For example, if code selects or modifies the wrong column in
+a dataset, the analysis is wrong but nothing errors (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
+<p><strong>Unit testing</strong> helps, with <strong><code>testthat</code></strong> (<span class="tada-cite" data-key="wickham-2011">Wickham 2011</span>) in R and
 <strong><code>pytest</code></strong> (<span class="tada-cite" data-key="okken-2022">Okken 2022</span>) in Python. But this type of error remains common and
-is <strong>extremely difficult to pick up by anyone without deep familiarity with the
-dataset and code</strong>. It is also thought to scale with the number of lines and the
+is <strong>extremely difficult to pick up without deep familiarity with the dataset
+and code</strong>. It is also thought to increase with the number of lines and the
 complexity of the code (<span class="tada-cite" data-key="lipow-1982">Lipow 1982</span>).</p>
 <div class="tada-note">
-<p>This is the strongest argument for <strong>co-author</strong> review over external review. A reviewer who does not know your data cannot tell that <code>mass</code>
-should have been <code>mass_g</code>. A co-author can.</p>
+<p>This is the strongest argument for <strong>co-author</strong> review over external review. A
+reviewer who does not know your data cannot tell that <code>mass</code> should have been
+<code>mass_g</code>. A co-author can.</p>
 </div>
 </div>
 <div id="reproducible" class="section level3 unlisted unnumbered">
 <h3>Reproducible<a class="anchor" aria-label="anchor" href="#reproducible"><i class="fas fa-link"></i></a>
 </h3>
-<p>The most basic question is whether <strong>the code can produce the output, and
-thus support the conclusions, given in the paper</strong>.</p>
-<p>The final step of code review is ensuring that outputs, when the code is re-run,
-match those reported in the analysis and results sections, including relevant
-figures and the narrative text within those sections.</p>
+<p>The basic question is whether <strong>the code can produce the output, and so
+support the conclusions, given in the paper</strong>.</p>
+<p>The final step of code review is to check that the outputs, when the code is
+re-run, match those reported in the analysis and results sections, including
+the relevant figures and the narrative text.</p>
 <p><strong>When exact matching is not possible.</strong> Apply some tolerance, especially with
-stochastic methods where parameter estimates change between runs, or with
-techniques that are computationally demanding and slow. This happens, for
-example, when <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> (R) or <code>random.seed()</code> (Python) was not used before
-stochastic sampling.</p>
+stochastic methods, where parameter estimates change between runs, or with
+computationally demanding and slow techniques. A mismatch happens, for example,
+when <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> (R) or <code>random.seed()</code> (Python) was not used before stochastic
+sampling.</p>
 <p>Providing model outputs helps. Save them with <code><a href="https://rdrr.io/r/base/readRDS.html">saveRDS()</a></code> in R or
-<code>pickle.dump()</code> in Python, though this does not let a reviewer run the code
-themselves to see whether they obtain similar results. Where the code cannot be
-re-run in reasonable time, compare the newly generated results against those
-originally reported.</p>
-<p>The literature offers two criteria for judging a match.</p>
+<code>pickle.dump()</code> in Python, though a reviewer then cannot run the code themselves
+to see whether they get similar results. Where the code cannot be re-run in
+reasonable time, compare the newly generated results with those originally
+reported.</p>
+<p>The literature gives two criteria for judging a match.</p>
 <p><em>Conclusion and numbers</em> (<span class="tada-cite" data-key="archmiller-2020">Archmiller et al. 2020</span>). Compare the <strong>conclusion</strong>,
 meaning direction and significance level, and the <strong>numbers</strong>, meaning intervals
 matching within one significant figure. Their worked example:</p>
@@ -281,16 +280,18 @@ matching within one significant figure. Their worked example:</p>
 </tbody>
 </table></div>
 <p><em>Percentage error</em> (<span class="tada-cite" data-key="hardwicke-2021">Hardwicke et al. 2021</span>; see also <span class="tada-cite" data-key="kambouris-2024">Kambouris et al. 2024</span>).
-Comparison at one significant figure is highly dependent on scale, whereas
-percentage error is not. Using</p>
+Comparison at one significant figure depends heavily on scale, whereas
+percentage error does not. Using</p>
 <p><span class="math display">\[\text{PE} = \frac{\text{new} - \text{original}}{\text{original}} \times 100\]</span></p>
 <p>error is classified as <strong>non-existent</strong> when this value is 0, <strong>minor</strong> between
-0 and 10, and <strong>major (and not reproducible)</strong> at 10 or above. Wiki guidance:
-the formula as published is signed; in practice it is the absolute value that
+0 and 10, and <strong>major (and not reproducible)</strong> at 10 or above.</p>
+<div class="tada-wiki">
+<p>The formula as published is signed. In practice, it is the absolute value that
 is compared against those thresholds.</p>
-<p>As well as the overlap with 0, or with the null hypothesis, not changing, the
-reported and reproduced estimates and intervals should not differ significantly
-from each other. With stochastic MCMC methods, variation between chains is
+</div>
+<p>As well as the overlap with 0, or with the null hypothesis, staying the same,
+the reported and reproduced estimates and intervals should not differ
+significantly from each other. With stochastic MCMC methods, variation between chains is
 expected to be much lower than variation within a chain, so the reproduced value
 should sit well within the reported credible interval.</p>
 </div>
@@ -300,7 +301,7 @@ should sit well within the reported credible interval.</p>
 <h2>
 <span class="header-section-number">8.3</span> Writing reviewable code<a class="anchor" aria-label="anchor" href="#review-reviewable"><i class="fas fa-link"></i></a>
 </h2>
-<p>Effective code review depends on readable code. The paper offers four
+<p>Code review depends on readable code. We suggest four
 solutions (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>):</p>
 <ol style="list-style-type: decimal">
 <li>
@@ -308,49 +309,48 @@ solutions (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al
 <code>package.module.function()</code> in Python.</li>
 <li>
 <strong>Use relative file paths</strong>, for example the <code>here</code> package
-(<span class="tada-cite" data-key="muller-bryan-2020">Müller &amp; Bryan 2020</span>), preferably with an associated R project file if using
-R and RStudio, or a virtual environment in Python.</li>
+(<span class="tada-cite" data-key="muller-bryan-2020">Müller &amp; Bryan 2020</span>), preferably with an R project file if you use R and
+RStudio, or a virtual environment in Python.</li>
 <li><strong>Remove redundant packages.</strong></li>
 <li><strong>Write analysis code with clear subheadings, intuitive comments and
 easy-to-understand object names.</strong></li>
 </ol>
-<p>For style tooling, <strong><code>styler</code></strong> (<span class="tada-cite" data-key="muller-walthert-2020">Müller &amp; Walthert 2020</span>) reformats R code to a
+<p>For style, <strong><code>styler</code></strong> (<span class="tada-cite" data-key="muller-walthert-2020">Müller &amp; Walthert 2020</span>) reformats R code to a
 standard style in one command, while <strong><code>pycodestyle</code></strong> (<span class="tada-cite" data-key="rocholl-2022">Rocholl 2022</span>) checks
 Python code against PEP 8. Supported styles include Google and tidyverse in R,
 and PEP 8 in Python.</p>
-<p>Literate formats, meaning R and Python Markdown, Quarto, and Jupyter Notebook or
-JupyterLab, present code in chunks which, with descriptive comments, are much
-easier to read. See <a href="annotated.html#annotated-literate">Annotated</a>.</p>
+<p>Literate formats (R and Python Markdown, Quarto, and Jupyter Notebook or
+JupyterLab) show code in chunks that, with descriptive comments, are much easier
+to read. See <a href="annotated.html#annotated-literate">Annotated</a>.</p>
 <div id="structure" class="section level3 unlisted unnumbered">
 <h3>Structure<a class="anchor" aria-label="anchor" href="#structure"><i class="fas fa-link"></i></a>
 </h3>
-<p>A simple folder and file structure helps researchers at all skill levels
-understand the <strong>order and flow</strong> of an analysis:</p>
+<p>A simple folder and file structure helps researchers at any skill level follow
+the <strong>order and flow</strong> of an analysis:</p>
 <ul>
 <li>
-<strong>Sequentially labelled</strong> subfolders and scripts, so that someone following
-the code knows the order to run things in, with files beginning <code>01…</code>, <code>02…</code>
+<strong>Sequentially labelled</strong> subfolders and scripts, so someone following the
+code knows the order to run things in, with files beginning <code>01…</code>, <code>02…</code>
 </li>
 <li>
 <strong>Folders named for their purpose</strong>, such as <code>data</code>, <code>scripts</code> and <code>functions</code>
 </li>
 <li>
-<strong>Raw data kept separate</strong>, so that it is not accidentally modified or
-overwritten when cleaning or wrangling code runs</li>
-<li>A <strong>README</strong> and additional metadata giving the signposts needed to re-run the
-code: packages and version numbers, descriptions of the data files, the
-project aim, author contact details, and any licences in place</li>
+<strong>Raw data kept separate</strong>, so cleaning or wrangling code cannot modify or
+overwrite it by accident</li>
+<li>A <strong>README</strong> and any other metadata a reader needs to re-run the code:
+packages and version numbers, descriptions of the data files, the project aim,
+author contact details and any licences</li>
 </ul>
-<p>It is also important to <strong>explain what data cleaning or curation happened before
-the analysis code</strong>, meaning what previous manipulation or pre-processing
-produced the data in its current state, or where an intermediate data file was
-used.</p>
+<p>You should also <strong>explain any data cleaning or curation that happened before the
+analysis code</strong>: what manipulation or pre-processing produced the data in its
+current state, or where an intermediate data file was used.</p>
 <div class="tada-note">
 <p><strong>Metadata tooling.</strong> Packages such as <code>codemeta</code> (<span class="tada-cite" data-key="boettiger-2017">Boettiger 2017</span>) and
 <code>dataReporter</code> (<span class="tada-cite" data-key="petersen-2019">Petersen &amp; Ekstrøm 2019</span>) in R, or <code>CodeMetaPy</code> (<span class="tada-cite" data-key="van-gompel-2023">van Gompel 2023</span>)
 and <code>cookiecutter</code> (<span class="tada-cite" data-key="feldroy-2022">Feldroy 2022</span>) in Python, can help produce consistent
 metadata and project templates. Pipeline tools automate the steps from raw
-dataset to results: <code>targets</code> (<span class="tada-cite" data-key="landau-2021">Landau 2021</span>) and <code>workflowr</code>
+data to results: <code>targets</code> (<span class="tada-cite" data-key="landau-2021">Landau 2021</span>) and <code>workflowr</code>
 (<span class="tada-cite" data-key="blischak-2019">Blischak et al. 2019</span>) in R, and <code>luigi</code> (<span class="tada-cite" data-key="luigi-authors-2023">The Luigi Authors 2023</span>) in Python.</p>
 </div>
 </div>
@@ -359,48 +359,49 @@ dataset to results: <code>targets</code> (<span class="tada-cite" data-key="land
 <h2>
 <span class="header-section-number">8.4</span> When code review happens<a class="anchor" aria-label="anchor" href="#review-when"><i class="fas fa-link"></i></a>
 </h2>
-<p>Code review can begin when a project starts, and it has a role beyond
+<p>Code review can start when a project starts, and it is useful beyond
 publication.</p>
 <div class="tabset">
 <div id="pre-submission" class="section level3 unlisted unnumbered">
 <h3>Pre-submission<a class="anchor" aria-label="anchor" href="#pre-submission"><i class="fas fa-link"></i></a>
 </h3>
-<p>Wiki guidance: <strong>this is where most of the value is.</strong> It is also the stage
-where a reviewer can catch <em>Reliable</em> errors, because they know the study.</p>
-<p>Keep <strong>continuous code collaboration at all stages</strong> of a manuscript.
-Code-sharing platforms such as GitHub help, since users can submit and comment
-on pull requests. At SORTEE, GitHub issues were used to summarise the
-discussion of an individual’s code.</p>
-<p>The <a href="data-sharing.html#sortee">SORTEE guidelines</a> make the same recommendation directly to
-authors, under “Perform a pre-submission code review” (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>); see
+<div class="tada-wiki">
+<p><strong>This is where most of the value is.</strong> It is also where a reviewer can catch
+<em>Reliable</em> errors, because they know the study.</p>
+</div>
+<p>Collaborate on code <strong>continuously, at every stage</strong> of a manuscript.
+Platforms such as GitHub help, since users can submit and comment on pull
+requests. At SORTEE, we used GitHub issues to summarise the discussion of an
+individual’s code.</p>
+<p>The <a href="data-sharing.html#sortee">SORTEE guidelines</a> give authors the same advice, under “Perform a pre-submission code review” (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>); see
 <a href="data-sharing.html#sharing-authors">Advice for authors</a> for what that review should cover.</p>
 </div>
 <div id="during-peer-review" class="section level3 unlisted unnumbered">
 <h3>During peer review<a class="anchor" aria-label="anchor" href="#during-peer-review"><i class="fas fa-link"></i></a>
 </h3>
-<p>This is one of the most important places for code review, because reviewers can
-follow the logic of the analyses, much as they follow the argument from
-introduction to discussion.</p>
+<p>Peer review is one of the most important places for code review, because
+reviewers can follow the logic of the analyses much as they follow the argument
+from introduction to discussion.</p>
 <p>Some journals already request code and data at submission, including
 <span class="tada-cite" data-key="royal-society-2023">The Royal Society</span>,
 <em><span class="tada-cite" data-key="bakker-2020">Behavioral Ecology and Sociobiology</span></em> and
-<em><span class="tada-cite" data-key="bolnick-2022">The American Naturalist</span></em>, though the paper’s
-authors note that in their experience this is not enforced (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>). In some
+<em><span class="tada-cite" data-key="bolnick-2022">The American Naturalist</span></em>, though in our
+experience this is not enforced (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>). In some
 cases, such as the <strong>Journal of Open Source Software</strong>, the entire formal
 peer-review process, code and manuscript alike, is hosted on GitHub.</p>
-<p>The benefits run both ways
+<p>Both sides benefit
 (<span class="tada-cite" data-key="fernandez-juricic-2021">Fernández-Juricic 2021</span>). For
-authors, providing code during peer review could increase manuscript quality.
-For reviewers, available code gives much more insight, because there is a
-clearer link between experimental methodology and statistical analysis, which
-is the first R, code <strong>as reported</strong>.</p>
+authors, providing code during peer review could improve the manuscript. For
+reviewers, available code gives much more insight, because the link between
+experimental methods and statistical analysis is clearer. That is the first R,
+code <strong>as reported</strong>.</p>
 <p>There are two practical obstacles.</p>
-<p><em>Finding reviewers.</em> There is already a shortage of willing reviewers. It is
+<p><em>Finding reviewers.</em> Willing reviewers are already in short supply. It is
 reasonable to expect a reviewer to check that code is <strong>as reported</strong>, but
-anything deeper takes time from already overworked academics who may not have
-the exact expertise. A workable compromise is for reviewers to state whether
-they are competent to check that the code is as reported, and for the journal to
-ensure <strong>at least one</strong> reviewer has checked the code.</p>
+anything deeper takes time from overworked academics who may not have the right
+expertise. A workable compromise is for reviewers to say whether they can check
+that the code is as reported, and for the journal to make sure <strong>at least one</strong>
+reviewer has checked the code.</p>
 <p><em>Double-blind review.</em> Anonymised data and code can be submitted directly to the
 journal, for example as a zip file, or uploaded to Figshare, OSF, GitHub or
 Dryad, which allow authors to provide an <strong>anonymised link</strong> for peer review.</p>
@@ -408,34 +409,31 @@ Dryad, which allow authors to provide an <strong>anonymised link</strong> for pe
 <div id="post-publication" class="section level3 unlisted unnumbered">
 <h3>Post-publication<a class="anchor" aria-label="anchor" href="#post-publication"><i class="fas fa-link"></i></a>
 </h3>
-<p>Post-publication review is much less discussed. It cannot prevent the
-publication of incorrect results, but it does allow the four Rs to be checked
-after the fact.</p>
-<p>The first question is simply whether <strong>all the code used to produce the results
-has been made available</strong>. If it has not, the main option is to contact the
-corresponding author, or the journal, and ask, much as data are requested “upon
-reasonable request”.</p>
+<p>Post-publication review is discussed much less. It cannot stop incorrect results
+being published, but it does let you check the four Rs afterwards.</p>
+<p>The first question is whether <strong>all the code used to produce the results has been
+made available</strong>. If not, the main option is to ask the corresponding author or
+the journal, much as data are requested “upon reasonable request”.</p>
 <p><strong>If you find that the code does not adhere to one of the Rs:</strong></p>
 <ol style="list-style-type: decimal">
 <li>
 <strong>Contact the corresponding author</strong>, or, if the paper uses the MeRIT system
 (<span class="tada-cite" data-key="nakagawa-2023">Nakagawa et al. 2023</span>), the person who conducted the analysis. A GitHub issue works well if
-there is a repository; otherwise, email.</li>
+there is a repository. Otherwise, email.</li>
 <li>
-<strong>Rule out benign causes</strong> first, such as differences in software version, in
-R or in package versions, or inherent stochasticity from simulations and MCMC
-sampling.</li>
+<strong>Rule out harmless causes</strong> first, such as differences in R or package
+versions, or the stochasticity inherent in simulations and MCMC sampling.</li>
 <li>
 <strong>Let the authors go to the journal themselves.</strong> If there is a genuine
-error, authors should be given the chance to contact the journal to highlight
-and correct their own mistake.</li>
+error, the authors should get the chance to contact the journal and correct
+their own mistake.</li>
 </ol>
 <div class="tada-note">
 <p>Journal culture matters here. Under <em>The American Naturalist</em>’s stance
 (<span class="tada-cite" data-key="bolnick-2022">Bolnick 2022</span>), authors who contact the journal to correct code or data errors
 are <strong>not penalised</strong>, and corrections are encouraged where warranted. Where
-updated results would alter the narrative of a published paper, corrections are
-harder; publication versioning or “living” documents may be a first step
+updated results would change the narrative of a published paper, corrections are
+harder, and publication versioning or “living” documents may be a first step
 (<span class="tada-cite" data-key="kane-2023">Kane &amp; Amin 2023</span>).</p>
 </div>
 </div>
@@ -445,46 +443,46 @@ harder; publication versioning or “living” documents may be a first step
 <h2>
 <span class="header-section-number">8.5</span> Running a code club<a class="anchor" aria-label="anchor" href="#review-club"><i class="fas fa-link"></i></a>
 </h2>
-<p>A code club is a good way to establish peer code review within a lab or among
-colleagues. The following draws on the authors’ experience building a code
-review club in collaboration with <strong>SORTEE</strong> (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
-<p>The design of the club follows from the barriers it addresses (<span class="tada-cite" data-key="gomes-2022">Gomes et al. 2022</span>): <strong>lack of time and incentive</strong>, <strong>lack of
+<p>A code club is a good way to set up peer code review within a lab or among
+colleagues. This section draws on our experience building a code review club
+with <strong>SORTEE</strong> (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
+<p>The club is designed around the barriers it addresses (<span class="tada-cite" data-key="gomes-2022">Gomes et al. 2022</span>): <strong>lack of time and incentive</strong>, <strong>lack of
 technical knowledge and unclear workflows</strong>, and <strong>social pressures and the fear
 of being judged by peers</strong>.</p>
 <div id="set-a-clear-goal-for-each-session" class="section level3 unlisted unnumbered">
 <h3>Set a clear goal for each session<a class="anchor" aria-label="anchor" href="#set-a-clear-goal-for-each-session"><i class="fas fa-link"></i></a>
 </h3>
 <p>Is the focus <strong>general learning and improving readability</strong>, or is it to
-<strong>error-check and scrutinise reproducibility</strong>? A clear structure and goal for
-each session keeps comments and advice on the reason for the review.</p>
+<strong>error-check and scrutinise reproducibility</strong>? A clear structure and goal for each session keeps comments and advice focused
+on the reason for the review.</p>
 <p>Unless the aim is specifically to evaluate different analytical options, it is
-better to <strong>leave methodological questions aside</strong>. A session that
-drifts into the choice of model is no longer reviewing the code.</p>
+better to <strong>leave methodological questions aside</strong>. A session that drifts into
+the choice of model is no longer reviewing the code.</p>
 </div>
 <div id="make-it-a-judgement-free-environment" class="section level3 unlisted unnumbered">
 <h3>Make it a judgement-free environment<a class="anchor" aria-label="anchor" href="#make-it-a-judgement-free-environment"><i class="fas fa-link"></i></a>
 </h3>
-<p>Volunteers often feel anxious about showing code that may have errors. It is
-important to <strong>normalise the existence of errors</strong> and to stress that
-perfection is never possible. It is also useful to stress that <strong>there is no
-such thing as bad code</strong> (<span class="tada-cite" data-key="barnes-2010">Barnes 2010</span>), and that there are usually multiple ways
-to approach the same problem.</p>
+<p>Volunteers often feel anxious about showing code that may have errors.
+<strong>Normalise errors</strong> and stress that perfection is never possible. It also
+helps to say that <strong>there is no such thing as bad code</strong>
+(<span class="tada-cite" data-key="barnes-2010">Barnes 2010</span>), and that there are usually several ways to approach the same
+problem.</p>
 </div>
 <div id="think-about-group-size" class="section level3 unlisted unnumbered">
 <h3>Think about group size<a class="anchor" aria-label="anchor" href="#think-about-group-size"><i class="fas fa-link"></i></a>
 </h3>
-<p>A <strong>smaller group</strong> is a friendlier starting point, since people feel more
-comfortable speaking up and it better facilitates peer-to-peer learning and
-focused review. <strong>Larger groups</strong> work better for wider discussion of general
-themes and tips. Choose by aim: larger groups for general discussion, smaller
-ones for focused review of a specific script.</p>
+<p>A <strong>smaller group</strong> is a friendlier place to start: people feel more comfortable
+speaking up, and it suits peer-to-peer learning and focused review. <strong>Larger
+groups</strong> work better for general discussion of themes and tips. Choose by aim,
+with larger groups for general discussion and smaller ones for focused review of
+a specific script.</p>
 </div>
 <div id="decide-on-credit" class="section level3 unlisted unnumbered">
 <h3>Decide on credit<a class="anchor" aria-label="anchor" href="#decide-on-credit"><i class="fas fa-link"></i></a>
 </h3>
-<p>Code review outside the formal peer-review process can have a large impact on a
-project, from error checking to validating that statistical analyses are
-appropriate. So what should reviewers get?</p>
+<p>Code review outside formal peer review can have a large impact on a project,
+from error checking to confirming that the statistical analyses are appropriate.
+So what should reviewers get?</p>
 <ul>
 <li>
 <strong>Acknowledgement via MeRIT</strong> (Method Reporting with Initials for
@@ -492,27 +490,27 @@ Transparency; <span class="tada-cite" data-key="nakagawa-2023">Nakagawa et al. 
 Code was checked by E.I.C.”</em>
 </li>
 <li>
-<strong>Co-authorship</strong>, where the review fundamentally altered the project and the
-resulting paper, for instance where a reviewer finds a major coding error
-that, once fixed, changes the results and conclusions.</li>
+<strong>Co-authorship</strong>, where the review substantially changed the project and the
+paper, for instance where a reviewer finds a major coding error that, once
+fixed, changes the results and conclusions.</li>
 </ul>
-<p>The paper’s principle is that incentives should be proportionate to the
-reviewer’s impact on the project (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
+<p>We think credit should match the reviewer’s impact on the project (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
 </div>
 </div>
 <div id="review-script" class="section level2" number="8.6">
 <h2>
 <span class="header-section-number">8.6</span> A reviewer’s script<a class="anchor" aria-label="anchor" href="#review-script"><i class="fas fa-link"></i></a>
 </h2>
-<p>Wiki guidance: a practical sequence for a single review session, built on the
-four Rs. The full checklist is at
-<a href="templates/code-review-checklist.md"><code>templates/code-review-checklist.md</code></a>.</p>
+<div class="tada-wiki">
+<p>A sequence for a single review session, built on the four Rs. The full checklist
+is at <a href="templates/code-review-checklist.md"><code>templates/code-review-checklist.md</code></a>.</p>
+</div>
 <p><strong>Before the session (reviewer, 20 minutes)</strong></p>
 <ol style="list-style-type: decimal">
 <li>Download the project into a <strong>new, empty folder</strong>.</li>
 <li>Open the README. Can you tell what to run, in what order, and what you need
 installed? Note anything you had to guess.</li>
-<li>Try to run it, in a <strong>fresh session</strong>. Record every error verbatim, and stop
+<li>Try to run it, in a <strong>fresh session</strong>. Record every error word for word, and stop
 at the first one you cannot resolve in two minutes.</li>
 </ol>
 <p><strong>In the session</strong></p>
@@ -523,11 +521,11 @@ Flag anything described in the paper you cannot find in the code, and
 anything in the code not described in the paper.</li>
 <li>
 <strong>Run.</strong> Go through the errors you hit. Most will be environment or path
-problems, and most are quick.</li>
+problems, and most are quick to fix.</li>
 <li>
 <strong>Reliable.</strong> Pick the two or three steps where a silent error would matter
-most, such as the filtering step, the join, or the model specification, and
-read them closely with the author. Ask what each column is.</li>
+most, such as the filtering step, a join or the model specification, and read
+them closely with the author. Ask what each column is.</li>
 <li>
 <strong>Reproducible.</strong> Take three numbers from the results section and find them
 in the output.</li>
@@ -541,8 +539,7 @@ from <strong>would be nice</strong>.</li>
 <div class="tada-tip">
 <p><strong>Give feedback on the code, not the coder.</strong> “This line reads <code>mass</code>, is that
 the right column?” is easier to act on than “you used the wrong column”. Fear of
-being judged is one of the barriers the paper identifies (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>; <span class="tada-cite" data-key="gomes-2022">Gomes et al. 2022</span>), so how comments
-are phrased affects whether people keep volunteering.</p>
+being judged is one of the barriers we identified (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>; <span class="tada-cite" data-key="gomes-2022">Gomes et al. 2022</span>), so the way you phrase comments affects whether people keep volunteering.</p>
 </div>
 </div>
 <div id="review-checklist" class="section level2" number="8.7">
@@ -572,7 +569,7 @@ are phrased affects whether people keep volunteering.</p>
 </ul>
 </div>
 </div>
-<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><script src="assets/tada-glossary.js" defer></script><div class="chapter-nav">
 <div class="prev"><a href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></div>
 <div class="next"><a href="further-reading.html"><span class="header-section-number">9</span> Further reading</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">

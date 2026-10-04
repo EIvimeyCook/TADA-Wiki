@@ -5,12 +5,6 @@ draw on. Bibliographic details follow the reference lists of those papers; where
 a source gives an abbreviated form, that form is reproduced here rather than
 completed by guesswork.
 
-::: {.tada-note}
-DOIs are given for the three source papers and wherever the source reference
-lists supply one. Many entries below still lack a DOI that does exist; adding
-them is a standing task, and [contributions are welcome](#contribute).
-:::
-
 ## The source papers {#references-sources}
 
 **Ivimey-Cook, E. R., Culina, A., Dimri, S., Grainger, M. J., Kar, F.,
@@ -35,7 +29,7 @@ Lagisz, M., Lequime, S., Maynard, D. S., Nakagawa, S., O'Dea, R. E., Paquet, M.,
 Petitjean, Q., Sánchez-Tójar, A., van Dis, N. E., Wilson, L. A. B., &
 Ivimey-Cook, E. R.** (2026). *The SORTEE guidelines for data and code quality
 control in ecology and evolutionary biology.* Peer Community Journal 6: e20.
-<https://doi.org/10.24072/pcjournal.687> (Published 2026-03-13; CC BY 4.0. Peer
+<https://doi.org/10.24072/pcjournal.687> (Published 2026-03-13; Peer
 reviewed and recommended by PCI Ecology,
 <https://doi.org/10.24072/pci.ecology.100857>.)
 
@@ -504,7 +498,7 @@ conclusions: A critique of Hofmann et al. (2015).* Meta-Psychology 4: 4.
 
 This wiki is a synthesis and does not present original findings. Where it
 extends beyond the source papers — worked examples, comparison tables,
-checklists, reviewer scripts — that material is labelled **wiki guidance**.
+checklists, reviewer scripts — that material is shown in a **Wiki Tip** box.
 Corrections are welcome; see [Contribute](#contribute).
 
 The three source papers are linked by DOI above, in

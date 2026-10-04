@@ -1,10 +1,10 @@
 # [A]{.k-a1} — Available {#available}
 
 ::: {.tada-key}
-**Availability** is the act of **publicly archiving the code** in a way that
-provides long-term access to any external user. It covers two FAIR principles at
-once: **Findable**, through the provision of a unique identifier, and
-**Accessible**, in that the code is retrievable via that identifier.
+**Availability** means **publicly archiving the code** so that anyone outside
+the project has long-term access to it. It covers two FAIR principles:
+**Findable**, through a unique identifier, and **Accessible**, because the code
+can be retrieved via that identifier.
 :::
 
 ::: {.tada-figure}
@@ -21,31 +21,29 @@ There are two requirements:
 
 ## Why GitHub is not an archive {#available-github}
 
-GitHub is a good platform for *developing* code. It provides transparent
-version control and makes collaboration straightforward. For archiving the code
-behind a published paper, however, it fails on two counts:
+GitHub is a good platform for *developing* code, with transparent version
+control and easy collaboration. For archiving the code behind a published paper,
+though, it fails on two counts:
 
-- **It does not readily provide a persistent identifier.** A GitHub URL is not a
-  PID.
-- **It is not immutable.** Files can be changed, or deleted, at any time,
-  including after the manuscript is published. If the exact code behind a result
-  is later edited or removed, the reproducibility of that published result goes
-  with it.
+- **It has no persistent identifier.** A GitHub URL is not a PID.
+- **It is not immutable.** Files can be changed or deleted at any time,
+  including after the manuscript is published. If the code behind a result is
+  later edited or removed, that result can no longer be reproduced.
 
-The same applies to similar platforms such as **Codeberg**, **Bitbucket** and
+The same goes for similar platforms such as **Codeberg**, **Bitbucket** and
 **GitLab**.
 
 ::: {.tada-tip}
-You do not have to choose between them. **Develop on GitHub and archive on
-Zenodo.** Link the repository to Zenodo and create a release on GitHub; Zenodo
-captures that release and mints a DOI for it. See
+You do not have to choose. **Develop on GitHub and archive on Zenodo.** Link
+the repository to Zenodo and create a release on GitHub. Zenodo copies that
+release and mints a DOI for it. See
 <https://help.zenodo.org/docs/profile/linking-accounts/>.
 :::
 
 ## Where to archive {#available-where}
 
-You need a repository that is **immutable** and **free to access**, and that
-assigns a DOI.
+You need a repository that is **immutable**, **free to access** and assigns a
+DOI.
 
 | Repository | PID | Immutable | Notes |
 |---|---|---|---|
@@ -54,43 +52,33 @@ assigns a DOI.
 | **Dryad** | DOI | [Yes]{.tada-yes} | Data-focused, and **mandates CC0**, which is not well suited to code (see [licences](#documented-licence)). Code uploaded to Dryad as software is published on Zenodo instead ([Lowenberg 2021]{.tada-cite data-key="lowenberg-2021"}). |
 | **Dataverse** | DOI | [Yes]{.tada-yes} | General-purpose. Published versions are fixed: editing a published dataset creates a new draft version ([Dataverse Project n.d.]{.tada-cite data-key="dataverse-guide"}). |
 | **Software Heritage** | SWHID | [Yes]{.tada-yes} | Preserves GitHub projects for long-term storage and provides PIDs as Software Hash Identifiers. |
-| **OSF** | DOI | [No]{.tada-no} | Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it **does not provide file immutability**: projects and files can be changed or deleted ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). Suitable for review, but archive elsewhere. |
+| **OSF** | DOI | [No]{.tada-no} | Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it **does not provide file immutability**, so projects and files can be changed or deleted ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). Fine for review, but archive elsewhere. |
 | Domain repositories (e.g. **GenBank**) | Accession no. | [Yes]{.tada-yes} | For sequences and other domain-specific deposits. Other PID types include ARK, Handle and RRID. |
 | GitHub / GitLab / Bitbucket / Codeberg | **None** | [No]{.tada-no} | Development platforms. Use for writing code, not for archiving it. |
 
-::: {.tada-note}
-**Where this list comes from.** Zenodo, Figshare and Software Heritage are the
-repositories we name in the TADA paper. We discuss Dryad there too,
-in the Documented section, on licensing. Dataverse and domain repositories such
-as GenBank are not named in the TADA paper; they come from the SORTEE
-guidelines ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
-:::
-
 ::: {.tada-warn}
-**Supplementary material is not archiving.** The SORTEE guidelines are explicit
-that data should not be provided only as supplementary material attached to the
+**Supplementary material is not archiving.** The SORTEE guidelines say that
+data should not be provided only as supplementary material attached to the
 article online, because it has no globally unique persistent identifier and may
-not be open and accessible ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). Everything must go in a public
-repository.
+not be open and accessible ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). The same goes for code. Everything must go in a public repository.
 :::
 
-::: {.tada-note}
-**DOI versioning.** On Zenodo, a new DOI is created whenever the code is
-updated, alongside a base project-level DOI that never changes.
-Wiki guidance: cite the **version-specific DOI** in your paper, since that is
-the version your results came from. The project-level DOI is the one to give
-someone who wants the latest version.
+::: {.tada-wiki}
+**DOI versioning.** On Zenodo, every update to the code gets a new DOI, and a base project-level
+DOI stays the same. Cite the **version-specific DOI** in your
+paper, because that is the version your results came from. Give the
+project-level DOI to someone who wants the latest version.
 :::
 
 ## Cite the code in the manuscript {#available-cite}
 
 Archiving is only half of the requirement. The PID must also be cited in the
-manuscript, in the text and in the reference list, so that the
-code can be found like any other cited work. The [SORTEE guidelines](#sortee)
-make this explicit for both data (Guideline 1.1) and code (Guideline 3.1;
+manuscript, in the text and in the reference list, so the code can be found like
+any other cited work. The [SORTEE guidelines](#sortee) require this for both data (Guideline 1.1) and code (Guideline 3.1;
 [Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 
-A worked example (wiki guidance):
+::: {.tada-wiki}
+A worked example:
 
 > **In the data availability statement.** All data and code needed to reproduce
 > the analyses are archived on Zenodo:
@@ -99,41 +87,48 @@ A worked example (wiki guidance):
 > **In the reference list.** Ivimey-Cook, E. R. (2026). *Code for: Caterpillar
 > abundance varies with habitat* (v1.0.0) [Computer software]. Zenodo.
 > <https://doi.org/10.5281/zenodo.0000000>
+:::
 
 ## Data and code in the same place {#available-together}
 
 The SORTEE guidelines recommend archiving code files **preferably in the same
 archived project as the data files** (Guideline 3.1), which minimises problems
-with computational reproducibility ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). It gives a reader one deposit,
-one DOI and one download, and keeps the relative paths in your code working.
+with computational reproducibility ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). A reader gets one deposit,
+one DOI and one download, and the relative paths in your code keep working.
 
-Where this is not possible, because some repositories treat data and code
-differently and Dryad's CC0-only licensing is a real constraint for code,
-archive them separately and make the link explicit in **both** READMEs. See
+Sometimes this is not possible: some repositories treat data and code
+differently, and Dryad's CC0-only licensing is a real constraint for code. In
+that case, archive them separately and link them in **both** READMEs. See
 [Documented](#documented).
 
 ## Consequences of not archiving {#available-wrong}
 
 In the "pre-TADA" version of our worked example in the TADA paper, the code is not
-archived and has no DOI, so there is no permanent, immutable, citable store of
-it ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}). Two consequences follow (wiki guidance): a reader who finds the paper cannot
-reliably find the code, and if the working copy is edited or lost, the analysis
-behind the published result cannot be recovered.
+archived and has no DOI, so there is no permanent, immutable, citable copy of
+it ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}). 
+
+::: {.tada-wiki}
+Two things follow. A reader who finds the paper cannot reliably find the code,
+and if the working copy is edited or lost, the analysis behind the published
+result cannot be recovered.
+:::
 
 ## Sensitive data and embargoes {#available-sensitive}
 
-Availability has exceptions. Some data cannot be shared openly, including
-protected species locations, personal data, and third-party data held under
-licence. The SORTEE guidelines allow for these cases and note that many
-repositories offer **embargoes** where necessary ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
+Some data cannot be shared openly, including protected species locations,
+personal data and third-party data held under licence. The SORTEE guidelines
+allow for these cases and note that many repositories offer **embargoes** ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 
-Two qualifications apply:
+Two points apply.
 
-- Wiki guidance: the exception normally applies to the **data** rather than the
-  **code**. Code that cannot be run without restricted data is still worth
-  archiving openly, because it documents exactly what was done.
-- State the restriction, and the route to legitimate access, in both the data
-  availability statement and the README.
+::: {.tada-wiki}
+The exception normally applies to the **data**, not the **code**. Code that
+cannot run without restricted data is still worth archiving openly, because it
+documents exactly what was done.
+:::
+
+Describe the restriction, and how to get legitimate access, in both the data
+availability statement and the README.
 
 ## Anonymising for double-blind review {#available-anonymous}
 

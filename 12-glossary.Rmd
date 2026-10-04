@@ -1,0 +1,287 @@
+# Glossary {#glossary}
+
+Plain-language definitions of the terms used across this wiki. Terms tagged
+[SORTEE]{.tada-gloss-tag} follow the glossary in the SORTEE guidelines (Table 1;
+[Pick et al. 2026]{.tada-cite data-key="pick-2026"}). The rest are our own
+definitions. Where a chapter covers a term in depth, the definition links to it.
+
+::: {.tada-glossary}
+
+[Absolute path]{#gloss-absolute-path data-match="absolute path|absolute file path|local file path|hard-coded path"}
+:   A file path written out in full from the top of one computer's file system,
+    such as `C:/Users/ed/Desktop/data.csv`. Also called a local or hard-coded
+    path. It only exists on that machine, so code that uses one fails for
+    everyone else. Compare *relative path*. See
+    [Transferable](#transferable-paths).
+
+[Analytical code]{#gloss-analytical-code data-match="analytical code"}
+:   Code written to analyse one dataset for one study. Its job is to be a
+    transparent, reproducible record of that analysis, not a tool for other
+    people. Compare *software*. See [TADA at a glance](#tada-why).
+
+[Annotated]{#gloss-annotated}
+:   The fourth TADA principle: comments inside the code say what each chunk
+    does, why, and where its output appears in the paper. See
+    [Annotated](#annotated).
+
+[Archiving]{#gloss-archiving} [SORTEE]{.tada-gloss-tag}
+:   Depositing data and code in a public repository. Archiving is not the same
+    as putting files on GitHub or in supplementary material; see *immutable*
+    and *persistent identifier*.
+
+[Available]{#gloss-available}
+:   The second TADA principle: the code is publicly archived with a persistent
+    identifier that is cited in the paper. See [Available](#available).
+
+[CC0 and CC BY]{#gloss-cc data-match="CC0|CC BY|CC-BY"}
+:   Two Creative Commons licences, common for data. CC0 places work in the
+    public domain with no conditions. CC BY lets others reuse the work as long
+    as they credit you. Neither is designed for code. See
+    [Licences](#sharing-licences).
+
+[Code review]{#gloss-code-review data-match="code review"}
+:   Checking and evaluating each other's code, either formally during peer
+    review or informally among co-authors and colleagues. See
+    [Code review](#code-review).
+
+[Computational reproducibility]{#gloss-computational-reproducibility data-match="computational reproducibility|computationally reproducible|computationally reproduced"}
+:   Obtaining consistent results using the same input data, computational
+    methods and conditions of analysis, the definition the SORTEE guidelines
+    use. In practice, it means getting the paper's results by running its
+    archived code on its archived data. This is Stage 6 of the
+    [SORTEE guidelines](#sortee-stages).
+
+[Container]{#gloss-container data-match="container|containerisation|Docker|Apptainer|Singularity"}
+:   An image that packages a complete software environment, including all the
+    programs and libraries your code needs, so it runs the same way on another
+    computer. Docker and Apptainer are the common tools.
+    Beyond the scope of TADA.
+
+[Copyleft licence]{#gloss-copyleft data-match="copyleft|GPL"}
+:   A licence that requires anything built from your code to be released under
+    the same licence. The GPL is the usual example. Compare *permissive
+    licence*.
+
+[Data and code quality control]{#gloss-quality-control data-match="quality control|quality-control"} [SORTEE]{.tada-gloss-tag}
+:   Checking whether data and code are suitable for public archiving. It is not
+    a code review: it does not judge whether the analysis is correct. See
+    [The SORTEE guidelines](#sortee).
+
+[Data availability statement]{#gloss-das data-match="data availability statement|data and code availability"}
+:   The section of a paper that says where the data and code are archived and
+    how to access them, usually with their DOIs.
+
+[Data dictionary]{#gloss-data-dictionary data-match="data dictionary|data dictionaries|codebook"}
+:   A file listing every variable in a dataset with its description and units.
+    Also called a codebook. A form of *metadata*.
+
+[Data editor]{#gloss-data-editor data-match="data editor"} [SORTEE]{.tada-gloss-tag}
+:   An editor at a journal whose job is to screen and quality-control the data
+    and code that will be archived alongside papers under review.
+
+[Data filtering]{#gloss-filtering data-match="data filtering|filtered data"} [SORTEE]{.tada-gloss-tag}
+:   Removing some data to create the dataset used in the analysis, for example
+    removing individuals with a certain characteristic. The result is
+    *filtered data*.
+
+[Data processing]{#gloss-processing data-match="data processing|processed data"} [SORTEE]{.tada-gloss-tag}
+:   Transforming data from one form to another: extracting data from images or
+    videos, summarising, transforming or calculating new values. The result is
+    *processed data*. Typing up a field sheet does not count.
+
+[Dependency]{#gloss-dependency data-match="dependency|dependencies"}
+:   A package or library that your code needs in order to run.
+
+[DOI]{#gloss-doi data-match="DOI"}
+:   Digital Object Identifier. A persistent identifier for a published object,
+    such as a paper, dataset or code deposit, written like
+    `10.5281/zenodo.1234567`. Adding `https://doi.org/` in front gives a link
+    that keeps working even if the object's web address changes. Repositories
+    such as Zenodo and Figshare assign one when you deposit. See
+    [Available](#available).
+
+[Documented]{#gloss-documented}
+:   The third TADA principle: a README and a licence describe the code, its
+    software environment, where the data are and how to run it. See
+    [Documented](#documented).
+
+[Double-blind review]{#gloss-double-blind data-match="double-blind"}
+:   Peer review in which neither the authors nor the reviewers know who the
+    others are. Code and READMEs have to be anonymised for it. See
+    [Anonymising for double-blind review](#available-anonymous).
+
+[Embargo]{#gloss-embargo data-match="embargo"}
+:   A period during which an archived deposit exists but is not yet public.
+    Many repositories offer one for sensitive data.
+
+[Environment manager]{#gloss-environment-manager data-match="environment manager|dependency manager|renv|conda|poetry|pipenv|groundhog"}
+:   A tool that records and restores the exact package versions a project uses,
+    usually in a *lockfile*. `renv` (R) and `conda`, `poetry` and `pipenv`
+    (Python) are examples. Beyond the scope of TADA.
+
+[FAIR principles]{#gloss-fair data-match="FAIR"} [SORTEE]{.tada-gloss-tag}
+:   Findable, Accessible, Interoperable and Reusable: principles for sharing
+    data and code ([Wilkinson et al. 2016]{.tada-cite data-key="wilkinson-2016"}).
+    See [How TADA maps onto FAIR](#tada-fair).
+
+[FAIR4RS]{#gloss-fair4rs data-match="FAIR4RS"}
+:   The FAIR principles adapted for research software
+    ([Chue Hong et al. 2022]{.tada-cite data-key="chue-hong-2022"}).
+
+[File extension]{#gloss-extension data-match="file extension|extension"}
+:   The ending of a file name, such as `.R`, `.py` or `.csv`, which tells
+    software what kind of file it is. See
+    [Transferable](#transferable-filetype).
+
+[GitHub]{#gloss-github data-match="GitHub"}
+:   A website for developing code with version control and collaborating on it.
+    It is not an archive, because files can be changed or deleted and it does
+    not give a persistent identifier. See
+    [Why GitHub is not an archive](#available-github).
+
+[IDE]{#gloss-ide data-match="IDE"}
+:   Integrated development environment: an application for writing and running
+    code, such as RStudio, Positron, VS Code, PyCharm or Spyder.
+
+[Immutable]{#gloss-immutable data-match="immutable|immutability"}
+:   Cannot be changed or deleted once published. In an immutable repository,
+    such as Zenodo, an update creates a new version instead of overwriting the
+    old one, so the exact files behind a paper stay available. GitHub and OSF
+    are not immutable.
+
+[Interoperable]{#gloss-interoperable data-match="interoperable|interoperability"}
+:   Able to be opened and used across different software and operating systems.
+    Plain-text formats such as `.csv` for data and `.R` or `.py` for code are
+    interoperable; `.xls`, `.docx` and `.pdf` are not. The "I" in FAIR.
+
+[Licence]{#gloss-licence data-match="licence|license|licensing|licensed"}
+:   A statement of what others may legally do with your code or data. Without
+    one, others cannot lawfully reuse it, even if they can see it. See
+    [The licence](#documented-licence).
+
+[Lockfile]{#gloss-lockfile data-match="lockfile|lock file|renv.lock"}
+:   A file written by an environment manager (for example `renv.lock`) that
+    records the exact version of every package a project uses.
+
+[MCMC]{#gloss-mcmc data-match="MCMC"}
+:   Markov chain Monte Carlo, a family of stochastic sampling methods, common in
+    Bayesian models. Results differ slightly between runs unless a *seed* is
+    set.
+
+[MeRIT]{#gloss-merit data-match="MeRIT"}
+:   Method Reporting with Initials for Transparency: adding the initials of the
+    person who did each step to the methods section, for example "Code was
+    checked by E.I.C."
+    ([Nakagawa et al. 2023]{.tada-cite data-key="nakagawa-2023"}).
+
+[Metadata]{#gloss-metadata data-match="metadata"} [SORTEE]{.tada-gloss-tag}
+:   A description of, and information about, the data and code. Usually a text
+    file called a README, sometimes with a data dictionary.
+
+[Namespace]{#gloss-namespace data-match="namespace"}
+:   The package a function belongs to. Calling a function with its namespace,
+    as in `dplyr::filter()`, shows the reader which package it comes from.
+
+[PEP 8]{#gloss-pep8 data-match="PEP 8|PEP8"}
+:   The standard style guide for Python code.
+
+[Permissive licence]{#gloss-permissive data-match="permissive"}
+:   A licence with few conditions, usually just that the licence and copyright
+    notice are kept. MIT, BSD and Apache 2.0 are examples. Compare *copyleft
+    licence*.
+
+[Persistent identifier (PID)]{#gloss-pid data-match="persistent identifier|PID"}
+:   A globally unique, long-lasting reference to a digital object that keeps
+    pointing to it even if it moves. DOIs are the most common kind; others
+    include SWHIDs, ARKs, Handles, RRIDs and accession numbers such as those
+    from GenBank. A GitHub URL is not one.
+
+[Processed data]{#gloss-processed-data}
+:   Data that have been through *data processing*.
+
+[Project]{#gloss-project} [SORTEE]{.tada-gloss-tag}
+:   The collection of files archived for one manuscript. GitHub calls this a
+    *repository*, which causes some confusion; see *repository*.
+
+[Proprietary format]{#gloss-proprietary data-match="proprietary"}
+:   A file format controlled by one company and needing its software to open,
+    such as `.xls` or SPSS `.sav`. The opposite of an interoperable format.
+
+[Pull request]{#gloss-pull-request data-match="pull request"}
+:   On GitHub, a proposed change to a repository that others can review and
+    comment on before it is merged.
+
+[Raw data]{#gloss-raw-data data-match="raw data"} [SORTEE]{.tada-gloss-tag}
+:   Unprocessed and unfiltered data, including raw files such as photos, audio
+    recordings, videos and data sheets.
+
+[README]{#gloss-readme data-match="README"}
+:   A plain-text file (`README.md` or `README.txt`) at the top of a project
+    that says what the project is, what each file does and how to run it. See
+    [The README](#documented-readme).
+
+[Relative path]{#gloss-relative-path data-match="relative path|relative file path"}
+:   A file path written from the top of the project folder, such as
+    `data/raw/counts.csv`. It works on any computer, wherever the folder sits.
+    Compare *absolute path*.
+
+[Release]{#gloss-release data-match="release"}
+:   On GitHub, a named, fixed snapshot of a repository. Zenodo can archive each
+    release and give it a DOI.
+
+[Repository]{#gloss-repository data-match="repository|repositories"} [SORTEE]{.tada-gloss-tag}
+:   A service that stores many projects for the long term, such as Zenodo,
+    Dryad or Figshare. On GitHub the word means a single project instead.
+
+[Seed]{#gloss-seed data-match="seed"}
+:   A number that fixes the starting point of a random number generator, so
+    stochastic code generates the same pseudorandom numbers, and gives the
+    same result, each run. Set with `set.seed()` in R
+    or `random.seed()` in Python.
+
+[Session info]{#gloss-session-info data-match="sessionInfo|session_info|session info"}
+:   A printout of the software environment: language version, operating system
+    and every loaded package with its version. Produced by `sessionInfo()` in R
+    or `session_info` in Python.
+
+[Software]{#gloss-software}
+:   Code written to be general, modular and tested, so it works across systems
+    and on many datasets. Compare *analytical code*.
+
+[Stochastic]{#gloss-stochastic data-match="stochastic"}
+:   Involving randomness, so the output can differ between runs. Simulations,
+    bootstrapping and MCMC are stochastic.
+
+[Supplementary material]{#gloss-supplementary data-match="supplementary material"}
+:   Files attached to a journal article. Not an archive: it has no persistent
+    identifier of its own and may not stay open and accessible.
+
+[SWHID]{#gloss-swhid data-match="SWHID|Software Heritage"}
+:   SoftWare Hash IDentifier, the persistent identifier used by Software
+    Heritage to reference archived source code.
+
+[Transferable]{#gloss-transferable}
+:   The first TADA principle: anyone can open and run your code on their own
+    computer without converting or editing it. See
+    [Transferable](#transferable).
+
+[Unit test]{#gloss-unit-test data-match="unit test|unit testing"}
+:   A small automated check that a function gives the expected output for a
+    known input, written with `testthat` (R) or `pytest` (Python).
+
+[Virtual environment]{#gloss-virtual-environment data-match="virtual environment"}
+:   In Python, a self-contained setup for one project with its own packages,
+    kept separate from the rest of the computer.
+
+[Working directory]{#gloss-working-directory data-match="working directory|setwd"}
+:   The folder R or Python treats as its starting point when reading and saving
+    files. Opening an RStudio project sets it to the project folder.
+
+[Workflow manager]{#gloss-workflow-manager data-match="workflow manager|Snakemake|Nextflow"}
+:   A tool that runs the steps of an analysis in a defined order and tracks
+    which steps depend on which, such as Snakemake or Nextflow. Beyond the
+    scope of TADA.
+
+:::
+
+Missing a term? See [Contribute](#contribute).

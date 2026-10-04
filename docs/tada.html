@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>2 TADA at a glance | The TADA-Wiki</title>
 <meta name="author" content="a community wiki built on the TADA guidelines">
-<meta name="description" content="Transferable, Available, Documented, Annotated. Four steps that take analytical code from a working copy on one machine to an archived record that another researcher can still run.  2.1 Why...">
+<meta name="description" content="Transferable, Available, Documented, Annotated. Four steps that take analytical code from a working copy on one machine to an archived record that another researcher can run.  2.1 Why another set...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="2 TADA at a glance | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/tada.html">
-<meta property="og:description" content="Transferable, Available, Documented, Annotated. Four steps that take analytical code from a working copy on one machine to an archived record that another researcher can still run.  2.1 Why...">
+<meta property="og:description" content="Transferable, Available, Documented, Annotated. Four steps that take analytical code from a working copy on one machine to an archived record that another researcher can run.  2.1 Why another set...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2 TADA at a glance | The TADA-Wiki">
-<meta name="twitter:description" content="Transferable, Available, Documented, Annotated. Four steps that take analytical code from a working copy on one machine to an archived record that another researcher can still run.  2.1 Why...">
+<meta name="twitter:description" content="Transferable, Available, Documented, Annotated. Four steps that take analytical code from a working copy on one machine to an archived record that another researcher can run.  2.1 Why another set...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -75,8 +75,9 @@
 <li><a class="" href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></li>
 <li><a class="" href="code-review.html"><span class="header-section-number">8</span> Code review</a></li>
 <li><a class="" href="further-reading.html"><span class="header-section-number">9</span> Further reading</a></li>
-<li><a class="" href="contribute.html"><span class="header-section-number">10</span> Contribute</a></li>
-<li><a class="" href="references.html"><span class="header-section-number">11</span> References</a></li>
+<li><a class="" href="glossary.html"><span class="header-section-number">10</span> Glossary</a></li>
+<li><a class="" href="contribute.html"><span class="header-section-number">11</span> Contribute</a></li>
+<li><a class="" href="references.html"><span class="header-section-number">12</span> References</a></li>
 </ul>
 
         <div class="book-extra">
@@ -90,14 +91,14 @@
 </h1>
 <p><strong>T</strong>ransferable, <strong>A</strong>vailable, <strong>D</strong>ocumented, <strong>A</strong>nnotated. Four steps that
 take analytical code from a working copy on one machine to an archived record
-that another researcher can still run.</p>
+that another researcher can run.</p>
 <div id="tada-why" class="section level2" number="2.1">
 <h2>
 <span class="header-section-number">2.1</span> Why another set of guidelines?<a class="anchor" aria-label="anchor" href="#tada-why"><i class="fas fa-link"></i></a>
 </h2>
-<p>There is plenty of advice on writing good code, but little of it deals with
-the specific task of <em>archiving an analysis</em>. The TADA authors identify four
-gaps in the existing resources (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>):</p>
+<p>There is plenty of advice on writing good code, but little of it covers
+<em>archiving an analysis</em>. In the TADA paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>) we
+identified four gaps in the existing resources:</p>
 <ol style="list-style-type: decimal">
 <li>They do not sufficiently address <strong>how to archive analytical code</strong>.</li>
 <li>Few of them adhere to the <strong>FAIR principles</strong>.</li>
@@ -109,25 +110,24 @@ gaps in the existing resources (<span class="tada-cite" data-key="ivimey-cook-20
 scope and focused on software development, which may be part of why it
 has not been widely adopted outside that community.</li>
 </ol>
-<p>The fourth gap rests on a distinction between <em>analytical code</em> and <em>software</em>.</p>
+<p>The fourth gap depends on the difference between <em>analytical code</em> and <em>software</em>.</p>
 <p><strong>Software</strong> is written to be general, modular and tested, and to work across
 systems with many different compatible datasets. Designing for that kind of
-reuse is complicated.</p>
+reuse is hard.</p>
 <p><strong>Analytical code</strong> is tailored to one dataset and one study. Its purpose is to
 be a transparent, reproducible record of that analysis, not to become a tool for
 other people.</p>
-<p>Software standards therefore set too high a bar for analytical code, and researchers faced with an unrealistic target tend to give up
-on it. <!-- [add source: researchers give up on unrealistic coding standards] -->
-TADA instead sets a <strong>minimum standard</strong> that is achievable at any level of
-coding experience and still delivers the transparency and computational
-reproducibility that sharing is meant to provide.</p>
+<p>Software standards therefore set too high a bar for analytical code, and researchers
+faced with an unrealistic target tend to give up on it. <!-- [add source: researchers give up on unrealistic coding standards] -->
+TADA instead sets a <strong>minimum standard</strong> that anyone can meet, whatever their
+coding experience, and that still gives the transparency and computational
+reproducibility that sharing is for.</p>
 </div>
 <div id="tada-problem" class="section level2" number="2.2">
 <h2>
 <span class="header-section-number">2.2</span> The scale of the problem<a class="anchor" aria-label="anchor" href="#tada-problem"><i class="fas fa-link"></i></a>
 </h2>
-<p>The figures below all come from the TADA paper’s review of the literature
-(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>).</p>
+<p>All the figures below come from our literature review in the TADA paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>).</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="33%">
@@ -180,8 +180,8 @@ reproducibility that sharing is meant to provide.</p>
 <strong>The code-sharing cascade.</strong> Reproducible results depend on code that is available (shared with the article) and functional (runs without error). Figure 1 from <span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al.</span>
 </p>
 </div>
-<p>Journal policy has changed a great deal over the past decade, and practice has
-been much slower to follow
+<p>Journal policy has changed a lot over the past decade, but practice has been
+much slower to follow
 (<span class="tada-cite" data-key="ivimey-cook-2025-policy">Ivimey-Cook et al. 2025</span>). Even
 where code is present and runs, computational reproducibility cannot be assumed
 (<span class="tada-cite" data-key="kambouris-2024">Kambouris et al. 2024</span>).</p>
@@ -190,7 +190,7 @@ where code is present and runs, computational reproducibility cannot be assumed
 <h2>
 <span class="header-section-number">2.3</span> The four principles<a class="anchor" aria-label="anchor" href="#tada-four"><i class="fas fa-link"></i></a>
 </h2>
-<p>Each has its own chapter. These are the one-paragraph versions.</p>
+<p>Each has its own chapter. Here is each in a paragraph.</p>
 <div class="tada-cards">
 <div class="tada-card t">
 <p><span class="tada-letter">T</span> <a href="transferable.html#transferable" class="tada-word">Transferable</a>
@@ -217,12 +217,12 @@ descriptive text, explaining what each chunk does, why it is needed and where
 its output appears in the paper.</span></p>
 </div>
 </div>
-<p>Figure 2 below shows all four applied at once, in a small piece of generic R
-code: the same script, before and after.</p>
+<p>Figure 2 below applies all four to a small piece of generic R code, showing the
+same script before and after.</p>
 <div class="tada-figure">
 <div class="inline-figure"><img src="assets/figures/fig-code-example.png" alt="Side-by-side comparison of a pre-TADA and post-TADA R script, showing coloured annotations for Transferable, Available, Documented and Annotated, alongside a README file."></div>
 <p class="tada-figure-caption">
-<strong>TADA applied to analytical code written in R.</strong> A pre-TADA script (left) and a post-TADA script (right); coloured letters mark which guideline each change addresses — Transferable (red), Available (green), Documented (purple), Annotated (blue). The code shown is generic, designed only to illustrate the guidelines. Figure 2 from <span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al.</span>
+<strong>TADA applied to analytical code written in R.</strong> A pre-TADA script (left) and a post-TADA script (right); coloured letters mark which guideline each change addresses: Transferable (red), Available (green), Documented (purple), Annotated (blue). The code shown is generic, designed only to illustrate the guidelines. Figure 2 from <span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al.</span>
 </p>
 </div>
 </div>
@@ -230,8 +230,8 @@ code: the same script, before and after.</p>
 <h2>
 <span class="header-section-number">2.4</span> What TADA does not cover<a class="anchor" aria-label="anchor" href="#tada-scope"><i class="fas fa-link"></i></a>
 </h2>
-<p>The TADA paper places three things beyond its scope, while noting that all
-three support reproducible analyses (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>):</p>
+<p>We left three things out of TADA’s scope on purpose, although all three
+support reproducible analyses (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>):</p>
 <ul>
 <li>
 <strong>Dependency and environment managers</strong> (<a href="https://rstudio.github.io/renv/">renv</a> in R, <code>{conda}</code> in Python),
@@ -239,16 +239,16 @@ which help ensure the same computational environment is used each time, for
 example via a lockfile.</li>
 <li>
 <strong>Containerisation</strong> (Docker, Apptainer — formerly Singularity), which packages a complete software
-environment of programs and libraries into an image so that the environment
-itself is reproducible between systems. This is the standard answer to the
+environment of programs and libraries into an image, so the environment
+itself is reproducible between systems. It is the standard answer to the
 “works on my computer” problem.</li>
 <li>
 <strong>Workflow managers</strong> (Snakemake, Nextflow), which specify the sequence of
 scripts or computational steps in a pipeline and their dependencies, so that
 each step executes in a defined, reproducible order.</li>
 </ul>
-<p>None of these is a requirement of TADA, but all three are worth knowing about;
-see <a href="further-reading.html#further-reading">Further reading</a>.</p>
+<p>None of these is a TADA requirement, but all three are worth knowing about.
+See <a href="further-reading.html#further-reading">Further reading</a>.</p>
 </div>
 <div id="tada-fair" class="section level2" number="2.5">
 <h2>
@@ -257,8 +257,8 @@ see <a href="further-reading.html#further-reading">Further reading</a>.</p>
 <p>TADA was built with the FAIR
 (<span class="tada-cite" data-key="wilkinson-2016">Wilkinson et al. 2016</span>) and FAIR4RS
 (<span class="tada-cite" data-key="chue-hong-2022">Chue Hong et al. 2022</span>) principles in
-mind. Each letter maps onto one or more of them, and Transferable deliberately
-goes further.</p>
+mind. Each letter maps onto one or more of them, and Transferable goes further on
+purpose.</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="33%">
@@ -302,38 +302,35 @@ goes further.</p>
 </tbody>
 </table></div>
 <div class="tada-note">
-<p>All four rows are stated in the TADA paper, not inferred by the wiki. In the
-paper’s own words: Transferable “corresponds to the FAIR principle of
+<p>All four rows come from the TADA paper, where we wrote that Transferable “corresponds to the FAIR principle of
 interoperability… and extends it”; Available “corresponds to the FAIR
 principles of both Findable… and Accessible”; Documented “corresponds to…
 the FAIR principle of Reusable… and Findable (the provision of rich
 metadata)”; and Annotated, “similar to documentation, corresponds to the FAIR
 principle of Reusable… but rather than describing the code ‘externally’,
 provides clear commenting within each coding script.” Documented and Annotated
-therefore share the same FAIR principle (Reusable), distinguished only by
-whether the description sits outside the code (a README) or inside it
-(comments).</p>
+therefore share one FAIR principle (Reusable). The only difference is whether
+the description sits outside the code (a README) or inside it (comments).</p>
 </div>
 <p><strong>Transferable is broader than Interoperable.</strong> Interoperability means anyone
-can open and use your code. Transferability adds the requirement that it also
-<em>runs</em> on someone else’s machine and operating system, which is
-where hard-coded file paths cause problems.</p>
-<p><strong>Annotated shares its FAIR principle with Documented, not with a principle of
-its own.</strong> Both map to Reusable, since both are ultimately about enabling
-someone to understand and reuse the code; they differ in <em>where</em> that
-description lives: externally in a README (Documented) or internally as
+can open and use your code. Transferability also requires that it <em>runs</em> on
+someone else’s machine and operating system, which is where hard-coded file
+paths cause problems.</p>
+<p><strong>Annotated has no FAIR principle of its own.</strong> It shares Reusable with
+Documented, because both help someone understand and reuse the code. They differ
+in <em>where</em> the description lives: in a README (Documented) or in the code as
 comments (Annotated). Annotated is the letter most specific to research code.
-FAIR is largely concerned with machines finding and parsing assets, whereas
-annotation is about a person being able to follow what the analysis did. It is
-also the letter most often skipped.
+FAIR is mostly about machines finding and parsing assets, whereas annotation is
+about a person being able to follow what the analysis did. It is also the letter
+most often skipped.
 <!-- [add source: Annotated is the TADA letter most often skipped] --></p>
 <div class="tada-note">
-<p>On “reusable”: the word is used in two senses. In the FAIR sense it
-means sharing code in a way that clearly specifies what can be done with it,
-through a licence and a README. In the software-development sense it means
+<p>“Reusable” has two senses. In the FAIR sense it
+means sharing code so that it is clear what can be done with it, through a
+licence and a README. In the software-development sense it means
 writing generalised, modular, tested code that runs across systems and datasets.
-TADA targets the first. If you meet a guideline demanding the second, check
-whether it was written for software.</p>
+TADA targets the first. If a guideline demands the second, check whether it was
+written for software.</p>
 </div>
 </div>
 <div id="tada-languages" class="section level2" number="2.6">
@@ -353,16 +350,16 @@ SPSS syntax <code>.sps</code> files, for instance, pass.</p>
 <span class="header-section-number">2.7</span> Where to go next<a class="anchor" aria-label="anchor" href="#tada-next"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
-<li>Working through it for the first time: <a href="transferable.html#transferable">Transferable</a>
+<li>Reading it for the first time: <a href="transferable.html#transferable">Transferable</a>
 </li>
-<li>Want the checklist rather than the reasoning: <a href="quickstart.html#quickstart-checklist">Start here</a>
+<li>Want the checklist, not the reasoning: <a href="quickstart.html#quickstart-checklist">Start here</a>
 </li>
 <li>Preparing for a journal data editor: <a href="data-sharing.html#sortee">The SORTEE guidelines</a>
 </li>
 </ul>
 </div>
 </div>
-<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><script src="assets/tada-glossary.js" defer></script><div class="chapter-nav">
 <div class="prev"><a href="quickstart.html"><span class="header-section-number">1</span> Start here</a></div>
 <div class="next"><a href="transferable.html"><span class="header-section-number">3</span> T — Transferable</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">

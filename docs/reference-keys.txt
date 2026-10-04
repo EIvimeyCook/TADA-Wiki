@@ -68,6 +68,7 @@ reading-evidence
 reading-tools
 reading-repos
 reading-communities
+glossary
 contribute
 contribute-page
 contribute-rule

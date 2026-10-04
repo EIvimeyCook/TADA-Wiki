@@ -6,22 +6,13 @@ date: "`r format(Sys.Date(), '%d %B %Y')`"
 site: bookdown::bookdown_site
 description: >-
   A wiki on sharing analytical code, built around the TADA guidelines
-  (Transferable, Available, Documented, Annotated). Chapters cover data-sharing
+  (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing
   basics, metadata, licences, the SORTEE data and code quality control
   guidelines, and code review.
 url: https://eivimeycook.github.io/TADA-Wiki/
 github-repo: "EIvimeyCook/TADA-Wiki"
 link-citations: true
 ---
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  eval = FALSE,        # Code here is illustrative: it is shown, never run.
-  comment = "#>",
-  collapse = TRUE
-)
-```
 
 # Welcome {#welcome .unnumbered}
 
@@ -52,7 +43,7 @@ Even so, few papers in the field share code: reported rates range from roughly
 [**5% to 35%**]{.tada-cite data-key="culina-2020,kimmel-2023,maitner-2024,kellner-2025,sanchez-tojar-2025,cooper-2026"},
 and code sharing still lags behind data sharing
 ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-policy"}).
-Shared code also often fails to run. Of over 9,000 R files archived in the
+However, shared code also often fails to run. Of over 9,000 R files archived in the
 Harvard Dataverse, [**74% failed to complete without error**]{.tada-cite data-key="trisovic-2022"},
 and **56%** still failed after automated cleaning (removing local file paths
 and fixing library installation and loading). A study of species distribution
@@ -61,7 +52,6 @@ and abundance papers abandoned its reproducibility assessment because
 ran with errors.
 
 One reason is that researchers are rarely taught how to archive analytical code.
-<!-- [add source: researchers are rarely taught how to archive analytical code] -->
 The resources that do exist are written largely for *software developers*, not
 for someone preparing a one-off analysis of a single dataset.
 
@@ -119,9 +109,6 @@ and maps onto the FAIR principles.
 | Find guides, tutorials and papers | [Further reading](#further-reading) |
 | Add a page to this wiki | [Contribute](#contribute) |
 
-Each chapter stands on its own, so you can arrive from a search and read only
-the section you need. Cross-references lead to the rest.
-
 ## Who this is for {.unnumbered}
 
 Researchers at any level of coding experience who need to share the code behind
@@ -175,9 +162,5 @@ marked as **wiki guidance**, not as a finding of the papers.
 
 ## Building this wiki {.unnumbered}
 
-```bash
-Rscript render.R
-```
-
-The rendered site is written to `docs/`. See [Contribute](#contribute) for the page
+See [Contribute](#contribute) for the page
 template and how to add a chapter.

@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Welcome | The TADA-Wiki</title>
 <meta name="author" content="a community wiki built on the TADA guidelines">
-<meta name="description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
+<meta name="description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="Welcome | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/">
-<meta property="og:description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
+<meta property="og:description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Welcome | The TADA-Wiki">
-<meta name="twitter:description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
+<meta name="twitter:description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -75,8 +75,9 @@
 <li><a class="" href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></li>
 <li><a class="" href="code-review.html"><span class="header-section-number">8</span> Code review</a></li>
 <li><a class="" href="further-reading.html"><span class="header-section-number">9</span> Further reading</a></li>
-<li><a class="" href="contribute.html"><span class="header-section-number">10</span> Contribute</a></li>
-<li><a class="" href="references.html"><span class="header-section-number">11</span> References</a></li>
+<li><a class="" href="glossary.html"><span class="header-section-number">10</span> Glossary</a></li>
+<li><a class="" href="contribute.html"><span class="header-section-number">11</span> Contribute</a></li>
+<li><a class="" href="references.html"><span class="header-section-number">12</span> References</a></li>
 </ul>
 
         <div class="book-extra">
@@ -116,7 +117,7 @@ Even so, few papers in the field share code: reported rates range from roughly
 <span class="tada-cite" data-key="culina-2020,kimmel-2023,maitner-2024,kellner-2025,sanchez-tojar-2025,cooper-2026"><strong>5% to 35%</strong></span>,
 and code sharing still lags behind data sharing
 (<span class="tada-cite" data-key="ivimey-cook-2025-policy">Ivimey-Cook et al. 2025</span>).
-Shared code also often fails to run. Of over 9,000 R files archived in the
+However, shared code also often fails to run. Of over 9,000 R files archived in the
 Harvard Dataverse, <span class="tada-cite" data-key="trisovic-2022"><strong>74% failed to complete without error</strong></span>,
 and <strong>56%</strong> still failed after automated cleaning (removing local file paths
 and fixing library installation and loading). A study of species distribution
@@ -124,7 +125,6 @@ and abundance papers abandoned its reproducibility assessment because
 <span class="tada-cite" data-key="kellner-2025"><strong>93% of scripts</strong></span> either did not run or
 ran with errors.</p>
 <p>One reason is that researchers are rarely taught how to archive analytical code.
-<!-- [add source: researchers are rarely taught how to archive analytical code] -->
 The resources that do exist are written largely for <em>software developers</em>, not
 for someone preparing a one-off analysis of a single dataset.</p>
 <p><strong>TADA</strong> (Transferable, Available, Documented, Annotated) is a set of simple
@@ -214,8 +214,6 @@ and maps onto the FAIR principles.</p>
 </tr>
 </tbody>
 </table></div>
-<p>Each chapter stands on its own, so you can arrive from a search and read only
-the section you need. Cross-references lead to the rest.</p>
 </div>
 <div id="who-this-is-for" class="section level2 unnumbered">
 <h2>Who this is for<a class="anchor" aria-label="anchor" href="#who-this-is-for"><i class="fas fa-link"></i></a>
@@ -275,7 +273,7 @@ template and how to add a chapter.</p>
 
 </div>
 </div>
-<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><script src="assets/tada-glossary.js" defer></script><div class="chapter-nav">
 <div class="empty"></div>
 <div class="next"><a href="quickstart.html"><span class="header-section-number">1</span> Start here</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">

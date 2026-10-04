@@ -8,7 +8,7 @@
   3. Build with `Rscript render.R` and check `docs/index.html`.
 
   The sourcing rule: separate what the source papers say from what you are
-  adding. Cite the former by author and year; label the latter "wiki guidance".
+  adding. Cite the former by author and year; put the latter in a Wiki Tip box (::: {.tada-wiki}).
   Delete these comments before committing.
 -->
 
@@ -85,6 +85,10 @@ One sentence on why this works.
 
 ::: {.tada-tip}
 A concrete, actionable suggestion.
+:::
+
+::: {.tada-wiki}
+Your own practical advice, which is not from a source paper.
 :::
 
 ::: {.tada-warn}

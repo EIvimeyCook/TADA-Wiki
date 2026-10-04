@@ -1,11 +1,10 @@
 # [A]{.k-a2} — Annotated {#annotated}
 
 ::: {.tada-key}
-**Annotation** is adding comments **within each code file**, denoted with `#` in
-R and Python, or embedding code within an **RMarkdown or Quarto** document
-alongside descriptive text. It improves both a reader's ability to *understand*
-your archived code (transparency) and their ability to *run* it (functionality
-and reproducibility).
+**Annotation** means adding comments **within each code file** (with `#` in R and
+Python), or embedding code in an **RMarkdown or Quarto** document alongside
+descriptive text. It helps a reader both *understand* your archived code
+(transparency) and *run* it (functionality and reproducibility).
 :::
 
 ::: {.tada-figure}
@@ -17,15 +16,12 @@ and reproducibility).
 Annotation, like Documentation, corresponds to the FAIR principle of Reusable.
 As we put it in the TADA paper, it does the same job "but rather than describing the code
 'externally', provides clear commenting within each coding script"
-([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}). It is the letter most often skipped, and it is much less work
-to do while writing than to reconstruct afterwards.
-<!-- [add source: Annotated is the TADA letter most often skipped] -->
+([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}).
 
 ## Script headers {#annotated-header}
 
-Before chunk-level annotation, we recommend a **script
-header**: a short block at the very top of the file describing what the whole
-script does and what it will produce.
+Before annotating chunks, we recommend a **script header**: a short block at the
+top of the file saying what the whole script does and what it produces.
 
 ```r
 ##### Caterpillar abundance analysis #####
@@ -34,14 +30,14 @@ script does and what it will produce.
 # of the manuscript. Run after 01_clean_data.R.
 ```
 
-A header answers "what is this file for?" in three lines, before the reader
-has opened a single chunk.
+A header answers "what is this file for?" in a few lines, before the reader
+reaches the first chunk.
 
 ## Annotate chunks, not lines {#annotated-chunks}
 
-**Annotate code chunks rather than every line of code.** Line-by-line annotation
-is possible, but describing the relevant chunks in enough detail is usually more
-helpful for tracking what the code does and what it produces.
+**Annotate code chunks, not every line.** Line-by-line annotation is possible,
+but describing each chunk in enough detail is usually more useful for following
+what the code does and what it produces.
 
 A good chunk comment answers three questions:
 
@@ -51,9 +47,9 @@ A good chunk comment answers three questions:
 3. **Where** does its output appear? *"Numeric results shown in Caterpillar
    Abundance section"*, or *"Figure 5A"*
 
-The third question is **signposting**, and it is the part people leave out. It
-lets a reader, a data editor or a reviewer connect a number in your results
-section to the lines of code that produced it.
+The third question is **signposting**, and people tend to leave it out. It lets
+a reader, a data editor or a reviewer connect a number in your results section
+to the lines of code that produced it.
 
 :::: {.tada-compare}
 ::: {.tada-before}
@@ -65,8 +61,8 @@ summary(m1)
 plot(dat$habitat, dat$n)
 ```
 
-Nothing tells a reader what is being run, why it is being run, or what it
-produces. There is no signposting at all.
+Nothing tells a reader what is being run, why, or what it produces. There is no
+signposting.
 :::
 
 ::: {.tada-after}
@@ -90,9 +86,8 @@ plot(dat$habitat, dat$n)
 
 ## Collapsible sections {#annotated-sections}
 
-Certain comment markers create **collapsible sections** in the editor, which
-make a file easier to read and structure. This is most useful in
-long scripts.
+Some comment markers create **collapsible sections** in the editor, which make a
+file easier to read and navigate. They help most in long scripts.
 
 - **`#####`** or **`#----`** in RStudio
 - **`#%%`** in VSCode or Spyder (Python IDEs)
@@ -108,20 +103,20 @@ long scripts.
 # ...
 ```
 
-In RStudio these appear in the document outline, so a reader can navigate a
-600-line script from a sidebar instead of scrolling.
+In RStudio these appear in the document outline, so a reader can move around a
+600-line script from the sidebar instead of scrolling.
 
 ## Literate alternatives {#annotated-literate}
 
-Rather than commenting a plain script, you can **embed the code within a
-document alongside descriptive text**. We list this as an alternative
-route to annotated code.
+Instead of commenting a plain script, you can **embed the code in a document
+alongside descriptive text**. We list this as an alternative route to annotated
+code.
 
 ::: {.tabset}
 
 ### RMarkdown / Quarto {.unlisted .unnumbered}
 
-Prose and code chunks sit in one file, with the output rendered inline. The
+Prose and code chunks sit in one file, with the output shown inline. The
 narrative *is* the annotation, and it is clear which paragraph explains which
 chunk.
 
@@ -138,38 +133,42 @@ summary(m1)
 ```
 ````
 
-The [SORTEE guidelines](#sortee) note a further advantage: presenting
-everything in one self-contained Markdown or Quarto document is **very helpful
-for data editors and future readers**
-([Pick et al. 2026]{.tada-cite data-key="pick-2026"}; [Buckley et al. 2025]{.tada-cite data-key="buckley-2025"}), because it makes the link between the
-code, the data and the resulting outputs explicit.
+The [SORTEE guidelines](#sortee) add that presenting everything in one
+self-contained Markdown or Quarto document is **very helpful for data editors
+and future readers**
+([Pick et al. 2026]{.tada-cite data-key="pick-2026"}; [Buckley et al. 2025]{.tada-cite data-key="buckley-2025"}), because it shows how the
+code, the data and the outputs connect.
 
-Wiki guidance: a rendered `.html` or `.pdf` of your Quarto document is a useful
-*addition* to the archive, but archive the `.qmd` or `.Rmd` source as well. A
-rendered PDF on its own fails [Transferable](#transferable).
+::: {.tada-wiki}
+A rendered `.html` or `.pdf` of your Quarto document is a useful *addition* to
+the archive, but archive the `.qmd` or `.Rmd` source too. A rendered PDF on its
+own fails [Transferable](#transferable).
+:::
 
 ### Jupyter Notebook {.unlisted .unnumbered}
 
-Notebooks, and JupyterLab, present code in chunks with descriptive text and
-inline output, and are another route to annotated code.
+Notebooks and JupyterLab show code in chunks with descriptive text and inline
+output, and are another route to annotated code.
 
-Two cautions when archiving a notebook (wiki guidance):
+::: {.tada-wiki}
+Two cautions about archiving a notebook:
 
-- **Restart and run all before you archive.** A notebook whose cells were run
-  out of order records a state that nobody can reproduce.
-- **Notebooks store output in the file.** That is useful for readers, but it
-  means the archived `.ipynb` can be large and awkward to diff. Consider
-  archiving both the notebook and a plain `.py` export.
+- **Restart and run all before you archive.** If the cells were run out of
+  order, the notebook records a state that nobody can reproduce.
+- **Notebooks store output in the file.** That helps readers, but it
+  makes the archived `.ipynb` large and awkward to diff. Consider archiving a
+  plain `.py` export as well.
+:::
 
 ### Plain scripts {.unlisted .unnumbered}
 
-A well-commented `.R` or `.py` file is adequate, and for many analyses it is
-the clearest option. The requirements are the same:
+A well-commented `.R` or `.py` file is enough, and for many analyses it is the
+clearest option. The requirements are the same:
 
 - logical chunks, marked with `#####` / `#----` (RStudio) or `#%%` (VSCode/Spyder)
 - a comment on each chunk giving what it does, why it is needed and where the
   output appears
-- object names that a reader can follow
+- object names a reader can follow
 
 If the analysis is long, split it across numbered scripts (`01_`, `02_`, `03_`)
 and describe the order in the [README](#documented-readme).
@@ -178,13 +177,13 @@ and describe the order in the [README](#documented-readme).
 
 ## Readability {#annotated-readability}
 
-Annotation works best on code that is already legible. In our code review paper
-([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}) we identified four practices that make code reviewable, set out in
+Annotation works best on code that is already easy to read. In our code review
+paper ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}) we identified four practices that make code reviewable, described in
 [Writing reviewable code](#review-reviewable): calling packages explicitly by
 namespace, using relative file paths, removing redundant packages, and writing
 code with clear subheadings, intuitive comments and interpretable object names.
 
-Tooling can enforce a consistent style. **`styler`** ([Müller & Walthert 2020]{.tada-cite data-key="muller-walthert-2020"})
+Tools can enforce a consistent style. **`styler`** ([Müller & Walthert 2020]{.tada-cite data-key="muller-walthert-2020"})
 reformats R code to a standard style in one command, and **`pycodestyle`**
 ([Rocholl 2022]{.tada-cite data-key="rocholl-2022"}) checks Python code against PEP 8, with `black`
 ([Python Software Foundation n.d.]{.tada-cite data-key="black"}) or `autopep8`
@@ -193,23 +192,17 @@ reformatting. Supported styles include Google and tidyverse in R, and PEP 8 in
 Python.
 
 ::: {.tada-note}
-Style is not the same as annotation. A perfectly formatted script with no
-comments still fails the Annotated test; comments and signposting matter more
-than layout.
+Style is not annotation. A neatly formatted script with no comments still fails
+the Annotated test. Comments and signposting matter more than layout.
 :::
 
 ## Annotating as you go {#annotated-asyougo}
 
-The SORTEE guidelines put it plainly: annotating code as you produce it, not
-only with section descriptions but also with information about how the code runs
-and what output it produces, is **far easier than going back and annotating at
-the end of the study** ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
-The same applies to the README: create it at the start and update it as files
-are added.
-
-Effort is not the only reason (wiki guidance). Annotation written months after
-the fact is reconstructed from memory, and is more likely to describe what you
-meant the code to do than what it does.
+The SORTEE guidelines say that annotating code as you write it is **far easier
+than going back and annotating at the end of the study**. That means describing
+not only each section but also how the code runs and what it produces ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
+The same goes for the README: create it at the start and update it as files are
+added.
 
 ## Checklist {#annotated-checklist}
 
