@@ -90,12 +90,15 @@ Gaussian one, the review has to pick that up.
 analysis or visualisation, with version numbers, somewhere in the manuscript. In
 R you can get these with `citation()`; in Python, with `setuptools`. A full list
 of everything used, including packages for cleaning and tidying, can go
-elsewhere, such as an associated `.R` or `.py` file.
+elsewhere: the README, or the `session_info.txt` described in
+[Documented](#documented-readme), is the natural place.
 
 This is more than bookkeeping. If a package version is later found to contain a
 bug, you can identify the papers that depend on it.
 
-**Environment management** also helps. Packages such as **`renv`**
+**Environment management** also helps. It is beyond TADA's minimum standard
+(see [Beyond TADA](#transferable-beyond)), but worth using where you can.
+Packages such as **`renv`**
 ([Ushey & Wickham 2023]{.tada-cite data-key="ushey-2023"}), which replaces `packrat` ([Ushey et al. 2022]{.tada-cite data-key="ushey-2022"}), and
 **`groundhog`** ([Simonsohn & Gruson 2023]{.tada-cite data-key="simonsohn-2023"}) in R, or **`poetry`** ([Eustace 2023]{.tada-cite data-key="eustace-2023"})
 and **`pipenv`** ([Pipenv Maintainer Team 2023]{.tada-cite data-key="pipenv-2023"}) in Python, help make the
@@ -198,9 +201,9 @@ The formula as published is signed. In practice, it is the absolute value that
 is compared against those thresholds.
 :::
 
-As well as the overlap with 0, or with the null hypothesis, staying the same,
-the reported and reproduced estimates and intervals should not differ
-significantly from each other. With stochastic MCMC methods, variation between chains is
+Whether the interval overlaps zero (or the null value) should be the same in
+the reported and reproduced results, and the two sets of estimates and intervals
+should not differ significantly from each other. With stochastic MCMC methods, variation between chains is
 expected to be much lower than variation within a chain, so the reproduced value
 should sit well within the reported credible interval.
 
@@ -222,8 +225,11 @@ solutions ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}):
 
 For style, **`styler`** ([Müller & Walthert 2020]{.tada-cite data-key="muller-walthert-2020"}) reformats R code to a
 standard style in one command, while **`pycodestyle`** ([Rocholl 2022]{.tada-cite data-key="rocholl-2022"}) checks
-Python code against PEP 8. Supported styles include Google and tidyverse in R,
-and PEP 8 in Python.
+Python code against PEP 8, with `black`
+([Python Software Foundation n.d.]{.tada-cite data-key="black"}) or `autopep8`
+([autopep8 contributors n.d.]{.tada-cite data-key="autopep8"}) to do the
+reformatting. Supported styles include Google and tidyverse in R, and PEP 8 in
+Python.
 
 Literate formats (R and Python Markdown, Quarto, and Jupyter Notebook or
 JupyterLab) show code in chunks that, with descriptive comments, are much easier
@@ -375,9 +381,7 @@ problem.
 
 A **smaller group** is a friendlier place to start: people feel more comfortable
 speaking up, and it suits peer-to-peer learning and focused review. **Larger
-groups** work better for general discussion of themes and tips. Choose by aim,
-with larger groups for general discussion and smaller ones for focused review of
-a specific script.
+groups** work better for general discussion of themes and tips.
 
 ### Decide on credit {.unlisted .unnumbered}
 

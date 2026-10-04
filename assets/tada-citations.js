@@ -1,12 +1,12 @@
 /* ---------------------------------------------------------------------------
    TADA-Wiki — citation database
 
-   Generated from 11-references.Rmd. One entry per bibliography item, keyed by
+   Generated from 13-references.Rmd. One entry per bibliography item, keyed by
    the same slug used in the `key="..."` attribute on `.tada-cite` spans in the
    chapter source (e.g. `[Müller & Bryan 2020]{.tada-cite key="muller-bryan-2020"}`).
    Consumed by assets/tada-cite.js to build the hover/focus citation card.
 
-   Regenerate by re-running the parser against 11-references.Rmd rather than
+   Regenerate by re-running the parser against 13-references.Rmd rather than
    hand-editing — see scratchpad; keep this comment if you do hand-edit an entry.
    --------------------------------------------------------------------------- */
 window.TADA_CITATIONS = {

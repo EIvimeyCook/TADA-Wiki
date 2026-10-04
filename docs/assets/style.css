@@ -258,16 +258,26 @@ div.sourceCode, pre {
 
 /* Terms on this page (sidebar, built by assets/tada-glossary.js) */
 .tada-terms { margin-top: 1.5rem; }
+.tada-terms > summary.tada-terms-head {
+  cursor: pointer;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  letter-spacing: -0.01em;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--tada-ink);
+  padding: .1rem 0 .35rem;
+}
+.tada-terms > summary.tada-terms-head:hover { color: var(--tada-accent); }
 .tada-terms ul { list-style: none; padding: 0; margin: 0; }
 .tada-terms li { margin: 0 0 .1rem; }
-.tada-terms summary {
+.tada-terms li summary {
   cursor: pointer;
   font-size: .875rem;
   padding: .15rem 0;
   color: var(--tada-ink-soft);
 }
-.tada-terms summary:hover,
-.tada-terms details[open] > summary { color: var(--tada-accent); }
+.tada-terms li summary:hover,
+.tada-terms li details[open] > summary { color: var(--tada-accent); }
 .tada-term-def {
   font-size: .8125rem;
   line-height: 1.45;

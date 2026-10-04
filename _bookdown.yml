@@ -11,11 +11,12 @@ rmd_files:
   - "05-documented.Rmd"
   - "06-annotated.Rmd"
   - "07-data-sharing.Rmd"
-  - "08-code-review.Rmd"
-  - "09-further-reading.Rmd"
-  - "12-glossary.Rmd"
-  - "10-contribute.Rmd"
-  - "11-references.Rmd"
+  - "08-sortee.Rmd"
+  - "09-code-review.Rmd"
+  - "10-further-reading.Rmd"
+  - "11-glossary.Rmd"
+  - "12-contribute.Rmd"
+  - "13-references.Rmd"
 
 language:
   label:

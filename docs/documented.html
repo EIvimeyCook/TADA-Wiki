@@ -73,11 +73,12 @@
 <li><a class="active" href="documented.html"><span class="header-section-number">5</span> D — Documented</a></li>
 <li><a class="" href="annotated.html"><span class="header-section-number">6</span> A — Annotated</a></li>
 <li><a class="" href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></li>
-<li><a class="" href="code-review.html"><span class="header-section-number">8</span> Code review</a></li>
-<li><a class="" href="further-reading.html"><span class="header-section-number">9</span> Further reading</a></li>
-<li><a class="" href="glossary.html"><span class="header-section-number">10</span> Glossary</a></li>
-<li><a class="" href="contribute.html"><span class="header-section-number">11</span> Contribute</a></li>
-<li><a class="" href="references.html"><span class="header-section-number">12</span> References</a></li>
+<li><a class="" href="sortee.html"><span class="header-section-number">8</span> The SORTEE guidelines</a></li>
+<li><a class="" href="code-review.html"><span class="header-section-number">9</span> Code review</a></li>
+<li><a class="" href="further-reading.html"><span class="header-section-number">10</span> Further reading</a></li>
+<li><a class="" href="glossary.html"><span class="header-section-number">11</span> Glossary</a></li>
+<li><a class="" href="contribute.html"><span class="header-section-number">12</span> Contribute</a></li>
+<li><a class="" href="references.html"><span class="header-section-number">13</span> References</a></li>
 </ul>
 
         <div class="book-extra">
@@ -150,7 +151,7 @@ paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et a
 </tr>
 <tr class="odd">
 <td><strong>Packages</strong></td>
-<td>Important libraries or packages used, <strong>with version numbers</strong>, e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> in R or <code>session_info</code> in Python</td>
+<td>Important libraries or packages used, <strong>with version numbers</strong>, e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> in R or <code>session_info</code> in Python (from the <code>session-info</code> package)</td>
 </tr>
 <tr class="even">
 <td><strong>Licence</strong></td>
@@ -180,8 +181,8 @@ paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et a
 </tbody>
 </table></div>
 <div class="tada-wiki">
-<p><code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> (R) and <code>session_info</code> (Python) list every loaded package and
-its version. Run it at the end of your final
+<p><code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> (R) and <code>session_info.show()</code> (Python, from the <code>session-info</code>
+package) list every loaded package and its version. Run it at the end of your final
 analysis session, paste the output into a <code>session_info.txt</code> next to the README
 and refer to it there. That one command answers most later questions about
 software versions.</p>
@@ -195,58 +196,57 @@ software versions.</p>
 <div class="tada-wiki">
 <p><strong>Generate the README instead of writing it.</strong> <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a>, an R package with a built-in Shiny app, walks you through the fields above and writes a <code>README.md</code>. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with <code>devtools::install_github("EIvimeyCook/READMEBuilder")</code>, then run <code>build_readme()</code>.</p>
 </div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="documented.html#cb7-1" tabindex="-1"></a><span class="fu"># Code for: Caterpillar abundance varies with woodland habitat type</span></span>
-<span id="cb7-2"><a href="documented.html#cb7-2" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="documented.html#cb7-3" tabindex="-1"></a>Associated manuscript: Ivimey-Cook et al. (2026), *Journal of Example Ecology*.</span>
-<span id="cb7-4"><a href="documented.html#cb7-4" tabindex="-1"></a>Preprint: https://doi.org/10.00000/example</span>
-<span id="cb7-5"><a href="documented.html#cb7-5" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="documented.html#cb7-6" tabindex="-1"></a><span class="fu">## Abstract</span></span>
-<span id="cb7-7"><a href="documented.html#cb7-7" tabindex="-1"></a>We tested whether caterpillar abundance differs between woodland habitat</span>
-<span id="cb7-8"><a href="documented.html#cb7-8" tabindex="-1"></a>types, using count data collected across three seasons. Abundance was higher</span>
-<span id="cb7-9"><a href="documented.html#cb7-9" tabindex="-1"></a>in mixed woodland than in conifer plantation after controlling for year</span>
-<span id="cb7-10"><a href="documented.html#cb7-10" tabindex="-1"></a>(Poisson GLM); we discuss implications for habitat management.</span>
-<span id="cb7-11"><a href="documented.html#cb7-11" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="documented.html#cb7-12" tabindex="-1"></a><span class="fu">## Contact</span></span>
-<span id="cb7-13"><a href="documented.html#cb7-13" tabindex="-1"></a>Edward Ivimey-Cook — e.ivimeycook@gmail.com</span>
-<span id="cb7-14"><a href="documented.html#cb7-14" tabindex="-1"></a>(Anonymised for peer review; restored on acceptance.)</span>
-<span id="cb7-15"><a href="documented.html#cb7-15" tabindex="-1"></a></span>
-<span id="cb7-16"><a href="documented.html#cb7-16" tabindex="-1"></a><span class="fu">## Funding</span></span>
-<span id="cb7-17"><a href="documented.html#cb7-17" tabindex="-1"></a>Example Research Council, grant ABC/123456/1.</span>
-<span id="cb7-18"><a href="documented.html#cb7-18" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="documented.html#cb7-19" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb7-20"><a href="documented.html#cb7-20" tabindex="-1"></a>Archived with this project. If archived separately:</span>
-<span id="cb7-21"><a href="documented.html#cb7-21" tabindex="-1"></a>https://doi.org/10.5061/dryad.000000 (<span class="in">`caterpillars_2024.csv`</span>).</span>
-<span id="cb7-22"><a href="documented.html#cb7-22" tabindex="-1"></a></span>
-<span id="cb7-23"><a href="documented.html#cb7-23" tabindex="-1"></a><span class="fu">## Licence</span></span>
-<span id="cb7-24"><a href="documented.html#cb7-24" tabindex="-1"></a>MIT (see LICENSE). Data are released under CC0.</span>
-<span id="cb7-25"><a href="documented.html#cb7-25" tabindex="-1"></a></span>
-<span id="cb7-26"><a href="documented.html#cb7-26" tabindex="-1"></a><span class="fu">## Software environment</span></span>
-<span id="cb7-27"><a href="documented.html#cb7-27" tabindex="-1"></a>R v4.3.3. Full session details in <span class="in">`session_info.txt`</span>.</span>
-<span id="cb7-28"><a href="documented.html#cb7-28" tabindex="-1"></a></span>
-<span id="cb7-29"><a href="documented.html#cb7-29" tabindex="-1"></a>Key packages:</span>
-<span id="cb7-30"><a href="documented.html#cb7-30" tabindex="-1"></a><span class="ss">  - </span>here        v1.0.1   (relative file paths)</span>
-<span id="cb7-31"><a href="documented.html#cb7-31" tabindex="-1"></a><span class="ss">  - </span>lme4        v1.1-35  (mixed models)</span>
-<span id="cb7-32"><a href="documented.html#cb7-32" tabindex="-1"></a><span class="ss">  - </span>ggplot2     v3.5.1   (figures)</span>
-<span id="cb7-33"><a href="documented.html#cb7-33" tabindex="-1"></a></span>
-<span id="cb7-34"><a href="documented.html#cb7-34" tabindex="-1"></a><span class="fu">## How to run</span></span>
-<span id="cb7-35"><a href="documented.html#cb7-35" tabindex="-1"></a>Open <span class="in">`caterpillars.Rproj`</span> in RStudio, then run the scripts in order:</span>
-<span id="cb7-36"><a href="documented.html#cb7-36" tabindex="-1"></a></span>
-<span id="cb7-37"><a href="documented.html#cb7-37" tabindex="-1"></a><span class="ss">  1. </span><span class="in">`R/01_clean_data.R`</span>    reads data/raw/caterpillars_2024.csv</span>
-<span id="cb7-38"><a href="documented.html#cb7-38" tabindex="-1"></a>                            writes data/processed/caterpillars_clean.csv</span>
-<span id="cb7-39"><a href="documented.html#cb7-39" tabindex="-1"></a><span class="ss">  2. </span><span class="in">`R/02_fit_models.R`</span>    fits the models reported in Table 2</span>
-<span id="cb7-40"><a href="documented.html#cb7-40" tabindex="-1"></a>                            writes output/models/*.rds   (~25 min)</span>
-<span id="cb7-41"><a href="documented.html#cb7-41" tabindex="-1"></a><span class="ss">  3. </span><span class="in">`R/03_make_figures.R`</span>  produces Figures 2 and 3</span>
-<span id="cb7-42"><a href="documented.html#cb7-42" tabindex="-1"></a>                            writes output/figures/*.png</span>
-<span id="cb7-43"><a href="documented.html#cb7-43" tabindex="-1"></a></span>
-<span id="cb7-44"><a href="documented.html#cb7-44" tabindex="-1"></a>Total runtime approximately 30 minutes on a 2023 MacBook Pro. Script 02 is</span>
-<span id="cb7-45"><a href="documented.html#cb7-45" tabindex="-1"></a>the slow step; its outputs are saved so 03 can be re-run on its own.</span>
-<span id="cb7-46"><a href="documented.html#cb7-46" tabindex="-1"></a></span>
-<span id="cb7-47"><a href="documented.html#cb7-47" tabindex="-1"></a><span class="fu">## Files</span></span>
-<span id="cb7-48"><a href="documented.html#cb7-48" tabindex="-1"></a>  data/raw/         Unmodified field data. Never written to by any script.</span>
-<span id="cb7-49"><a href="documented.html#cb7-49" tabindex="-1"></a>  data/processed/   Generated by script 01. Safe to delete and regenerate.</span>
-<span id="cb7-50"><a href="documented.html#cb7-50" tabindex="-1"></a>  R/                Analysis scripts, numbered in run order.</span>
-<span id="cb7-51"><a href="documented.html#cb7-51" tabindex="-1"></a>  functions/        Helper functions sourced by the scripts.</span>
-<span id="cb7-52"><a href="documented.html#cb7-52" tabindex="-1"></a>  output/           Figures and saved model objects.</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="documented.html#cb6-1" tabindex="-1"></a><span class="fu"># Code for: Caterpillar abundance varies with woodland habitat type</span></span>
+<span id="cb6-2"><a href="documented.html#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="documented.html#cb6-3" tabindex="-1"></a>Associated manuscript: Ivimey-Cook et al. (2026), *Journal of Example Ecology*.</span>
+<span id="cb6-4"><a href="documented.html#cb6-4" tabindex="-1"></a>Preprint: https://doi.org/10.00000/example</span>
+<span id="cb6-5"><a href="documented.html#cb6-5" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="documented.html#cb6-6" tabindex="-1"></a><span class="fu">## Abstract</span></span>
+<span id="cb6-7"><a href="documented.html#cb6-7" tabindex="-1"></a>We tested whether caterpillar abundance differs between woodland habitat</span>
+<span id="cb6-8"><a href="documented.html#cb6-8" tabindex="-1"></a>types, using count data collected across three seasons. Abundance was higher</span>
+<span id="cb6-9"><a href="documented.html#cb6-9" tabindex="-1"></a>in mixed woodland than in conifer plantation after controlling for year</span>
+<span id="cb6-10"><a href="documented.html#cb6-10" tabindex="-1"></a>(Poisson GLM); we discuss implications for habitat management.</span>
+<span id="cb6-11"><a href="documented.html#cb6-11" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="documented.html#cb6-12" tabindex="-1"></a><span class="fu">## Contact</span></span>
+<span id="cb6-13"><a href="documented.html#cb6-13" tabindex="-1"></a>Your Name — your.name@example.ac.uk</span>
+<span id="cb6-14"><a href="documented.html#cb6-14" tabindex="-1"></a>(Anonymised for peer review; restored on acceptance.)</span>
+<span id="cb6-15"><a href="documented.html#cb6-15" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="documented.html#cb6-16" tabindex="-1"></a><span class="fu">## Funding</span></span>
+<span id="cb6-17"><a href="documented.html#cb6-17" tabindex="-1"></a>Example Research Council, grant ABC/123456/1.</span>
+<span id="cb6-18"><a href="documented.html#cb6-18" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="documented.html#cb6-19" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb6-20"><a href="documented.html#cb6-20" tabindex="-1"></a>Archived with this project. If archived separately:</span>
+<span id="cb6-21"><a href="documented.html#cb6-21" tabindex="-1"></a>https://doi.org/10.5061/dryad.000000 (<span class="in">`caterpillars_2024.csv`</span>).</span>
+<span id="cb6-22"><a href="documented.html#cb6-22" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="documented.html#cb6-23" tabindex="-1"></a><span class="fu">## Licence</span></span>
+<span id="cb6-24"><a href="documented.html#cb6-24" tabindex="-1"></a>MIT (see LICENSE). Data are released under CC0.</span>
+<span id="cb6-25"><a href="documented.html#cb6-25" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="documented.html#cb6-26" tabindex="-1"></a><span class="fu">## Software environment</span></span>
+<span id="cb6-27"><a href="documented.html#cb6-27" tabindex="-1"></a>R v4.3.3. Full session details in <span class="in">`session_info.txt`</span>.</span>
+<span id="cb6-28"><a href="documented.html#cb6-28" tabindex="-1"></a></span>
+<span id="cb6-29"><a href="documented.html#cb6-29" tabindex="-1"></a>Key packages:</span>
+<span id="cb6-30"><a href="documented.html#cb6-30" tabindex="-1"></a><span class="ss">  - </span>here        v1.0.1   (relative file paths)</span>
+<span id="cb6-31"><a href="documented.html#cb6-31" tabindex="-1"></a><span class="ss">  - </span>ggplot2     v3.5.1   (figures)</span>
+<span id="cb6-32"><a href="documented.html#cb6-32" tabindex="-1"></a></span>
+<span id="cb6-33"><a href="documented.html#cb6-33" tabindex="-1"></a><span class="fu">## How to run</span></span>
+<span id="cb6-34"><a href="documented.html#cb6-34" tabindex="-1"></a>Open <span class="in">`caterpillars.Rproj`</span> in RStudio, then run the scripts in order:</span>
+<span id="cb6-35"><a href="documented.html#cb6-35" tabindex="-1"></a></span>
+<span id="cb6-36"><a href="documented.html#cb6-36" tabindex="-1"></a><span class="ss">  1. </span><span class="in">`R/01_clean_data.R`</span>    reads data/raw/caterpillars_2024.csv</span>
+<span id="cb6-37"><a href="documented.html#cb6-37" tabindex="-1"></a>                            writes data/processed/caterpillars_clean.csv</span>
+<span id="cb6-38"><a href="documented.html#cb6-38" tabindex="-1"></a><span class="ss">  2. </span><span class="in">`R/02_fit_models.R`</span>    fits the models reported in Table 2</span>
+<span id="cb6-39"><a href="documented.html#cb6-39" tabindex="-1"></a>                            writes output/models/*.rds   (~25 min)</span>
+<span id="cb6-40"><a href="documented.html#cb6-40" tabindex="-1"></a><span class="ss">  3. </span><span class="in">`R/03_make_figures.R`</span>  produces Figures 2 and 3</span>
+<span id="cb6-41"><a href="documented.html#cb6-41" tabindex="-1"></a>                            writes output/figures/*.png</span>
+<span id="cb6-42"><a href="documented.html#cb6-42" tabindex="-1"></a></span>
+<span id="cb6-43"><a href="documented.html#cb6-43" tabindex="-1"></a>Total runtime approximately 30 minutes on a 2023 MacBook Pro. Script 02 is</span>
+<span id="cb6-44"><a href="documented.html#cb6-44" tabindex="-1"></a>the slow step; its outputs are saved so 03 can be re-run on its own.</span>
+<span id="cb6-45"><a href="documented.html#cb6-45" tabindex="-1"></a></span>
+<span id="cb6-46"><a href="documented.html#cb6-46" tabindex="-1"></a><span class="fu">## Files</span></span>
+<span id="cb6-47"><a href="documented.html#cb6-47" tabindex="-1"></a>  data/raw/         Unmodified field data. Never written to by any script.</span>
+<span id="cb6-48"><a href="documented.html#cb6-48" tabindex="-1"></a>  data/processed/   Generated by script 01. Safe to delete and regenerate.</span>
+<span id="cb6-49"><a href="documented.html#cb6-49" tabindex="-1"></a>  R/                Analysis scripts, numbered in run order.</span>
+<span id="cb6-50"><a href="documented.html#cb6-50" tabindex="-1"></a>  functions/        Helper functions sourced by the scripts.</span>
+<span id="cb6-51"><a href="documented.html#cb6-51" tabindex="-1"></a>  output/           Figures and saved model objects.</span></code></pre></div>
 <div class="tada-note">
 <p>That README gives the total runtime, says which step is slow and whether its
 output is cached, which script makes which figure, and that <code>data/processed/</code>
@@ -257,7 +257,7 @@ any of it.</p>
 <div id="the-sortee-view" class="section level3 unlisted unnumbered">
 <h3>The SORTEE view<a class="anchor" aria-label="anchor" href="#the-sortee-view"><i class="fas fa-link"></i></a>
 </h3>
-<p>The <a href="data-sharing.html#sortee">SORTEE guidelines</a> ask for the same thing from the checking
+<p>The <a href="sortee.html#sortee">SORTEE guidelines</a> ask for the same thing from the checking
 side (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>):</p>
 <ul>
 <li>
@@ -283,8 +283,7 @@ it is the same question about the data files.</p>
 restricted from using, sharing or modifying what you archived, even though they
 can see it (<span class="tada-cite" data-key="github-licensing">GitHub Docs n.d.</span>).
 Omitting a licence is a common documentation failure. The code is visible but
-cannot lawfully be reused, which defeats the point of archiving it.
-<!-- [add source: omitting a licence is a common documentation failure] --></p>
+cannot lawfully be reused.</p>
 </div>
 <p>The documentation must name a licence that says how others can use, modify and
 share the code. Licences differ in whether attribution is required (whether you
@@ -322,11 +321,42 @@ changes to the source code must be listed.</p>
 <div id="data-licences" class="section level4 unlisted unnumbered">
 <h4>Data licences<a class="anchor" aria-label="anchor" href="#data-licences"><i class="fas fa-link"></i></a>
 </h4>
-<p>Data and code are usually best licensed separately.</p>
-<p><strong>CC0</strong> places work in the public domain with no conditions, and is common for
-research data. <strong>Dryad only supports CC0</strong>, which suits data but is <strong>not well
-suited to code</strong>.</p>
-<p><strong>CC BY</strong> requires attribution and is also common for data.</p>
+<p>Data and code are usually best licensed separately. Without a licence, data
+<strong>cannot be legally reused</strong> in many circumstances, depending on jurisdiction.
+Data usually take a <strong>Creative Commons</strong> licence (chooser:
+<a href="https://creativecommons.org/chooser/" class="uri">https://creativecommons.org/chooser/</a>).</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr class="header">
+<th>Licence</th>
+<th>What it means</th>
+<th>Notes</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>CC0</strong></td>
+<td>Public domain; no attribution required</td>
+<td>The most permissive. Default at Figshare; <strong>mandated by Dryad</strong>.</td>
+</tr>
+<tr class="even">
+<td><strong>CC BY 4.0</strong></td>
+<td>Reusers must credit the original author, but may distribute, remix, adapt and build upon the material, including commercially</td>
+<td>Default at Zenodo.</td>
+</tr>
+<tr class="odd">
+<td><strong>CC BY-NC 4.0</strong></td>
+<td>As CC BY, but prohibits commercial use</td>
+<td>More restrictive.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Dryad only supports CC0</strong>, which suits data but is <strong>not well suited to
+code</strong>. Code uploaded to Dryad as software is published on Zenodo instead
+(<span class="tada-cite" data-key="lowenberg-2021">Lowenberg 2021</span>).</p>
 <p>If your repository applies a single repository-wide licence, check whether it
 suits <em>both</em> your data and your code before depositing them together.</p>
 </div>
@@ -340,7 +370,9 @@ the code as a <code>LICENSE</code> file, the name GitHub looks for
 (<span class="tada-cite" data-key="github-licensing">GitHub Docs n.d.</span>).</p>
 <p><strong>Let the repository do it.</strong> Some repositories, such as <strong>Zenodo</strong>, let you
 choose the licence when you archive the code. It is then attached to the project
-without you creating a file.</p>
+without you creating a file. Check what you select: repository defaults are
+data licences (CC BY 4.0 at Zenodo, CC0 at Figshare), so pick a code licence
+such as MIT for the code.</p>
 </div>
 </div>
 </div>
@@ -365,7 +397,7 @@ the case to watch for.</li>
 (Guideline 3.2; <span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>), but they treat the two differently. For <strong>data</strong> they
 <strong>do not recommend or enforce any specific type</strong>, so you only have to choose
 and state one. For <strong>code</strong> they state a preference: <em>“We suggest using permissive code licences whenever
-possible, for example, MIT, BSD 2-Clause, GNU, and Apache”</em> (Stage 3.2).</p>
+possible, for example, MIT, BSD 2-Clause, GNU, and Apache”</em> (Guideline 3.2).</p>
 </div>
 </div>
 </div>

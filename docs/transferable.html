@@ -73,11 +73,12 @@
 <li><a class="" href="documented.html"><span class="header-section-number">5</span> D — Documented</a></li>
 <li><a class="" href="annotated.html"><span class="header-section-number">6</span> A — Annotated</a></li>
 <li><a class="" href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></li>
-<li><a class="" href="code-review.html"><span class="header-section-number">8</span> Code review</a></li>
-<li><a class="" href="further-reading.html"><span class="header-section-number">9</span> Further reading</a></li>
-<li><a class="" href="glossary.html"><span class="header-section-number">10</span> Glossary</a></li>
-<li><a class="" href="contribute.html"><span class="header-section-number">11</span> Contribute</a></li>
-<li><a class="" href="references.html"><span class="header-section-number">12</span> References</a></li>
+<li><a class="" href="sortee.html"><span class="header-section-number">8</span> The SORTEE guidelines</a></li>
+<li><a class="" href="code-review.html"><span class="header-section-number">9</span> Code review</a></li>
+<li><a class="" href="further-reading.html"><span class="header-section-number">10</span> Further reading</a></li>
+<li><a class="" href="glossary.html"><span class="header-section-number">11</span> Glossary</a></li>
+<li><a class="" href="contribute.html"><span class="header-section-number">12</span> Contribute</a></li>
+<li><a class="" href="references.html"><span class="header-section-number">13</span> References</a></li>
 </ul>
 
         <div class="book-extra">
@@ -101,8 +102,7 @@ so that the code also runs on <strong>different computers and operating systems<
 Figure 3 from <span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al.</span>
 </p>
 </div>
-<p>Transferability has two independent requirements. Meeting one does not make up
-for failing the other.</p>
+<p>Transferability has two requirements, and you need both.</p>
 <ol style="list-style-type: decimal">
 <li>The code is saved in a <strong>file type any text editor or IDE can open</strong>.</li>
 <li>The code contains <strong>no paths specific to your machine</strong>.</li>
@@ -144,7 +144,7 @@ path has to be relative to something.</p>
 <div class="tada-compare">
 <div class="tada-before">
 <p>Before</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"C:/Users/ed/Desktop/caterpillar_paper/analysis"</span><span class="op">)</span></span>
 <span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"caterpillars_2024.csv"</span><span class="op">)</span></span></code></pre></div>
 <p>This sets a working directory that exists on one computer, with one operating
@@ -153,7 +153,7 @@ have loaded.</p>
 </div>
 <div class="tada-after">
 <p>After</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span></span>
 <span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"caterpillars_2024.csv"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>This works on any operating system and wherever the project folder sits, so
@@ -174,7 +174,7 @@ never need <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code>.
 See <a href="https://docs.posit.co/ide/user/ide/get-started/" class="uri">https://docs.posit.co/ide/user/ide/get-started/</a>.</p>
 <p><strong>Use the <code>here</code> package</strong> (<span class="tada-cite" data-key="muller-bryan-2020">Müller &amp; Bryan 2020</span>). <code><a href="https://here.r-lib.org/reference/here.html">here()</a></code> builds paths relative
 to the project directory, whatever the operating system:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">raw</span>     <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"caterpillars_2024.csv"</span><span class="op">)</span><span class="op">)</span></span>
@@ -195,10 +195,10 @@ other people run your code on other systems.</p>
 </h4>
 <p><strong>Use <code>pyprojroot</code></strong> (<span class="tada-cite" data-key="chen-2023">Chen 2023</span>), the Python counterpart to <code>here</code>, which builds
 file paths relative to the project directory regardless of operating system:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="transferable.html#cb6-1" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here</span>
-<span id="cb6-2"><a href="transferable.html#cb6-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb6-3"><a href="transferable.html#cb6-3" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="transferable.html#cb6-4" tabindex="-1"></a>raw <span class="op">=</span> pd.read_csv(here(<span class="st">"data/raw/caterpillars_2024.csv"</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="transferable.html#cb5-1" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here</span>
+<span id="cb5-2"><a href="transferable.html#cb5-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-3"><a href="transferable.html#cb5-3" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="transferable.html#cb5-4" tabindex="-1"></a>raw <span class="op">=</span> pd.read_csv(here(<span class="st">"data/raw/caterpillars_2024.csv"</span>))</span></code></pre></div>
 <p><strong>Work inside the project directory.</strong> If you run Python from within the
 project folder, you do not need local file paths.</p>
 <div class="tada-warn">

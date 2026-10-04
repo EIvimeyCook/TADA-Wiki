@@ -73,11 +73,12 @@
 <li><a class="" href="documented.html"><span class="header-section-number">5</span> D — Documented</a></li>
 <li><a class="" href="annotated.html"><span class="header-section-number">6</span> A — Annotated</a></li>
 <li><a class="" href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></li>
-<li><a class="" href="code-review.html"><span class="header-section-number">8</span> Code review</a></li>
-<li><a class="" href="further-reading.html"><span class="header-section-number">9</span> Further reading</a></li>
-<li><a class="" href="glossary.html"><span class="header-section-number">10</span> Glossary</a></li>
-<li><a class="" href="contribute.html"><span class="header-section-number">11</span> Contribute</a></li>
-<li><a class="" href="references.html"><span class="header-section-number">12</span> References</a></li>
+<li><a class="" href="sortee.html"><span class="header-section-number">8</span> The SORTEE guidelines</a></li>
+<li><a class="" href="code-review.html"><span class="header-section-number">9</span> Code review</a></li>
+<li><a class="" href="further-reading.html"><span class="header-section-number">10</span> Further reading</a></li>
+<li><a class="" href="glossary.html"><span class="header-section-number">11</span> Glossary</a></li>
+<li><a class="" href="contribute.html"><span class="header-section-number">12</span> Contribute</a></li>
+<li><a class="" href="references.html"><span class="header-section-number">13</span> References</a></li>
 </ul>
 
         <div class="book-extra">
@@ -93,10 +94,10 @@
 behind it ready to share. It covers the minimum steps to turn your project
 folder into an archive that someone else can download, open and run.</p>
 <div class="tada-key">
-<p>Go through the project in four passes, roughly in this order: fix the <strong>paths
-and file types</strong>, <strong>archive</strong> it and get a DOI, write the <strong>README</strong>, then
-<strong>annotate</strong> the scripts. Finally, ask a colleague to run the whole thing
-before a reviewer has to.</p>
+<p>Work through the project roughly in this order: fix the <strong>paths and file
+types</strong>, <strong>annotate</strong> the scripts, write the <strong>README</strong>, and ask a colleague to
+run the whole thing. Then <strong>archive</strong> it and get a DOI. Archiving last means the
+DOI points to the version that has already been checked.</p>
 </div>
 <div id="quickstart-checklist" class="section level2" number="1.1">
 <h2>
@@ -128,7 +129,7 @@ before a reviewer has to.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Code is deposited in an immutable repository that mints a persistent identifier (Zenodo, Figshare, …)</label></li>
 <li><label><input type="checkbox">The DOI is <strong>cited in the manuscript text and reference list</strong></label></li>
-<li><label><input type="checkbox">If the code was developed on GitHub, a release has been created and linked to Zenodo, since GitHub does not produced DOIs</label></li>
+<li><label><input type="checkbox">If the code was developed on GitHub, a release has been created and linked to Zenodo, since GitHub does not produce DOIs</label></li>
 </ul>
 <p><strong>Documented</strong> — <a href="documented.html#documented">full chapter</a></p>
 <ul class="task-list">
@@ -158,7 +159,7 @@ before a reviewer has to.</p>
 </h3>
 <div class="tada-wiki">
 <p>This is the data counterpart to the code checklist, condensed from the
-<a href="data-sharing.html#sortee">SORTEE guidelines</a> and the <a href="data-sharing.html#data-sharing">Data &amp; code sharing</a>
+<a href="sortee.html#sortee">SORTEE guidelines</a> and the <a href="data-sharing.html#data-sharing">Data &amp; code sharing</a>
 chapter, where every point is explained in full.</p>
 </div>
 <p><strong>Archived &amp; citable</strong> — <a href="available.html#available">Available</a></p>
@@ -261,7 +262,7 @@ SORTEE guidelines (<span class="tada-cite" data-key="pick-2026">Pick et al. 202
 <td>Code shared as a <code>.pdf</code> or <code>.docx</code>
 </td>
 <td>Copy-pasting silently mangles apostrophes, quotes and whitespace, and drags in line numbers and headers</td>
-<td>Save as <code>.R</code> / <code>.py</code>
+<td>Save as <code>.R</code> / <code>.py</code>; see <a href="transferable.html#transferable-filetype">Transferable</a>
 </td>
 </tr>
 <tr class="odd">
@@ -271,12 +272,6 @@ SORTEE guidelines (<span class="tada-cite" data-key="pick-2026">Pick et al. 202
 </tr>
 </tbody>
 </table></div>
-<div class="tada-warn">
-<p>People underestimate the <code>.pdf</code> and <code>.docx</code> problem. Copying code out of these
-formats can change characters (curly apostrophes for straight ones) and white
-space (non-breaking spaces for ordinary ones). The code still <em>looks</em> right, so
-the errors can be hard to spot and slow to fix.</p>
-</div>
 </div>
 <div id="quickstart-readme" class="section level2" number="1.4">
 <h2>
@@ -296,9 +291,9 @@ there.</p>
 <div class="inline-figure"><img src="assets/figures/dog-happy.png" class="tada-dog-happy" alt="A happy cartoon dog wearing a wizard hat"></div>
 </div>
 <p>If your target journal has a <strong>data editor</strong>, someone will check your deposit
-against something close to the <a href="data-sharing.html#sortee">SORTEE guidelines</a> (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).
+against something close to the <a href="sortee.html#sortee">SORTEE guidelines</a> (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).
 These have six stages, from whether the code is archived under a licence to
-whether the results come out the same. Read that section to see what the checks
+whether the results reproduce. Read that chapter to see what the checks
 are before they are applied to your submission.</p>
 <p>If your journal has no data editor, the checks still matter. They fall to you
 and your co-authors, through <a href="code-review.html#code-review">code review</a>.</p>

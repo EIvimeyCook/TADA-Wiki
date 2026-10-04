@@ -45,12 +45,12 @@ sharing-what
 sharing-formats
 sharing-metadata
 sharing-licences
+sharing-checklist
 sortee
 sortee-stages
 sortee-tada-map
 sortee-common-failures
 sharing-authors
-sharing-checklist
 code-review
 review-why
 review-four-rs

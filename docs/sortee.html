@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>8 The SORTEE guidelines | The TADA-Wiki</title>
+<meta name="author" content="a community wiki built on the TADA guidelines">
+<meta name="description" content="The SORTEE guidelines for data and code quality control (Pick et al. 2026, Peer Community Journal 6: e20) come from SORTEE, the Society for Open, Reliable, and Transparent Ecology and Evolutionary...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="8 The SORTEE guidelines | The TADA-Wiki">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/sortee.html">
+<meta property="og:description" content="The SORTEE guidelines for data and code quality control (Pick et al. 2026, Peer Community Journal 6: e20) come from SORTEE, the Society for Open, Reliable, and Transparent Ecology and Evolutionary...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="8 The SORTEE guidelines | The TADA-Wiki">
+<meta name="twitter:description" content="The SORTEE guidelines for data and code quality control (Pick et al. 2026, Peer Community Journal 6: e20) come from SORTEE, the Society for Open, Reliable, and Transparent Ecology and Evolutionary...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
+<!-- Set the colour theme before the page paints, so a dark-mode reader never
+         sees a flash of white. Uses the saved choice from the toggle
+         (assets/tada-theme.js) or, if there is none, the system setting. --><script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("tada-theme"); } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script><link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<!-- The site's type system (Inter body text, Fraunces display serif for
+         headings, JetBrains Mono for code); style.css already declares these
+         as the primary font-family, with the system-font stack kept as the
+         fallback if this fails to load. --><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Best practice for sharing analytical code">The TADA-Wiki</a>:
+        <small class="text-muted">Best practice for sharing analytical code</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="quickstart.html"><span class="header-section-number">1</span> Start here</a></li>
+<li><a class="" href="tada.html"><span class="header-section-number">2</span> TADA at a glance</a></li>
+<li><a class="" href="transferable.html"><span class="header-section-number">3</span> T — Transferable</a></li>
+<li><a class="" href="available.html"><span class="header-section-number">4</span> A — Available</a></li>
+<li><a class="" href="documented.html"><span class="header-section-number">5</span> D — Documented</a></li>
+<li><a class="" href="annotated.html"><span class="header-section-number">6</span> A — Annotated</a></li>
+<li><a class="" href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></li>
+<li><a class="active" href="sortee.html"><span class="header-section-number">8</span> The SORTEE guidelines</a></li>
+<li><a class="" href="code-review.html"><span class="header-section-number">9</span> Code review</a></li>
+<li><a class="" href="further-reading.html"><span class="header-section-number">10</span> Further reading</a></li>
+<li><a class="" href="glossary.html"><span class="header-section-number">11</span> Glossary</a></li>
+<li><a class="" href="contribute.html"><span class="header-section-number">12</span> Contribute</a></li>
+<li><a class="" href="references.html"><span class="header-section-number">13</span> References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/EIvimeyCook/TADA-Wiki">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="sortee" class="section level1" number="8">
+<h1>
+<span class="header-section-number">8</span> The SORTEE guidelines<a class="anchor" aria-label="anchor" href="#sortee"><i class="fas fa-link"></i></a>
+</h1>
+<p>The <strong>SORTEE guidelines for data and code quality control</strong>
+(<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>, <em>Peer Community Journal</em>
+6: e20) come from SORTEE, the Society for Open, Reliable, and Transparent
+Ecology and Evolutionary Biology. They are written for <strong>data editors</strong>, who
+screen and quality-control data and code at a journal. They are worth reading as an author because they tell you what will
+be checked.</p>
+<div class="tada-note">
+<p><strong>The limits of quality control.</strong> Quality control checks that archived data and
+code meet minimum standards: complete, usable, documented and runnable. It is
+<strong>not</strong> a code review. A data editor does not critique your analytical
+techniques, and it is not their role to review, interpret or correct your code,
+or to check its reliability
+(<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>; <span class="tada-cite" data-key="hillemann-2025">Hillemann et al. 2025</span>). That is what
+<a href="code-review.html#code-review">code review</a> is for.</p>
+</div>
+<div id="sortee-stages" class="section level2" number="8.1">
+<h2>
+<span class="header-section-number">8.1</span> The six stages<a class="anchor" aria-label="anchor" href="#sortee-stages"><i class="fas fa-link"></i></a>
+</h2>
+<p>Table 2 of the paper (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>) is reproduced below.</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr class="header">
+<th>Stage</th>
+<th>Guideline</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Data must be archived and adhere to FAIR guiding principles</strong></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1.1 Data files are accessible and in an open repository</td>
+<td>Data are open and freely available and are located in a permanent public repository with an associated globally unique persistent identifier, that is cited in the text and reference list of the manuscript.</td>
+</tr>
+<tr class="odd">
+<td>1.2 Data are associated with a license</td>
+<td>Data must be associated with a license.</td>
+</tr>
+<tr class="even">
+<td>1.3 Data files are present and complete</td>
+<td>Authors must either provide: a) raw data, along with the processed data and/or code to prepare the data for analysis, or b) a sample of raw data alongside processed/filtered data when full raw data upload is not possible, or c) processed/filtered data with a detailed description of how to both obtain and process/filter the raw data.</td>
+</tr>
+<tr class="odd">
+<td>1.4 Data files are in an interoperable format</td>
+<td>Data files must be provided in an interoperable format.</td>
+</tr>
+<tr class="even">
+<td>1.5 Data metadata is present and adequate</td>
+<td>Detailed metadata, including (but not limited to) a README file, must accompany the data.</td>
+</tr>
+<tr class="odd">
+<td><strong>2. Archived data corresponds with the data reported in the manuscript</strong></td>
+<td>The structure and contents of the archived data files must match the description in the manuscript.</td>
+</tr>
+<tr class="even">
+<td><strong>3. Code must be archived and adhere to FAIR guiding principles</strong></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3.1 Code files are accessible and in an open repository</td>
+<td>Code files are open and freely available and are located in a permanent public repository with an associated globally unique persistent identifier, preferably in the same archived project as the data files, and are cited in the text and the reference list of the manuscript.</td>
+</tr>
+<tr class="even">
+<td>3.2 Code is associated with a license</td>
+<td>The code must be associated with a license.</td>
+</tr>
+<tr class="odd">
+<td>3.3 Code files are present and complete</td>
+<td>All code used for generating the results of the manuscript (including filtering, processing, graphing, and analysis) must be present either in one or more code files.</td>
+</tr>
+<tr class="even">
+<td>3.4 Code is in an interoperable format</td>
+<td>Code files must be provided in an interoperable format.</td>
+</tr>
+<tr class="odd">
+<td>3.5 Code metadata is present and adequate</td>
+<td>A sufficiently detailed README must accompany the code. Code must also be broken into sections with clear annotation stating the purpose of the code with clear links to the relevant sections, figures, and tables in the manuscript.</td>
+</tr>
+<tr class="even">
+<td><strong>4. Archived code corresponds with the workflow reported in the manuscript</strong></td>
+<td>The structure and content of the archived code must match the description of data filtering, processing, and analysis, and the presentation of results in the manuscript.</td>
+</tr>
+<tr class="odd">
+<td><strong>5. Archived code runs with the archived data</strong></td>
+<td>Code must be able to run without error using the archived data. With the exception of easy to fix file path errors, all errors should be addressed by the author.</td>
+</tr>
+<tr class="even">
+<td><strong>6. Results can be computationally reproduced by running the archived code</strong></td>
+<td>Results reproduced by the data editor with the archived data and code must match those presented in the manuscript. A tolerance threshold can be given when there is not an exact match but the authors must state clearly in the code metadata why this mismatch might occur. If saved model outputs are instead provided, this must also be clearly stated in the metadata.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="sortee-tada-map" class="section level2" number="8.2">
+<h2>
+<span class="header-section-number">8.2</span> How TADA maps onto the stages<a class="anchor" aria-label="anchor" href="#sortee-tada-map"><i class="fas fa-link"></i></a>
+</h2>
+<div class="tada-wiki">
+<p>This mapping is ours, not from the SORTEE paper. TADA covers almost exactly the
+author-side work for Stages 1 and 3.</p>
+</div>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr class="header">
+<th>TADA</th>
+<th>SORTEE stages</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Transferable</strong></td>
+<td>1.4 and 3.4 (interoperable formats) and, in practice, 5 (code runs, since local file paths are the most common cause of failure)</td>
+</tr>
+<tr class="even">
+<td><strong>Available</strong></td>
+<td>1.1 and 3.1 (open repository, PID, cited in the manuscript)</td>
+</tr>
+<tr class="odd">
+<td><strong>Documented</strong></td>
+<td>1.2, 1.5, 3.2 and 3.5 (licence and metadata)</td>
+</tr>
+<tr class="even">
+<td><strong>Annotated</strong></td>
+<td>3.5 (sectioned code with clear annotation and signposting), and it is what makes Stage 4 assessable at all</td>
+</tr>
+<tr class="odd">
+<td><em>(Not TADA: your responsibility as author)</em></td>
+<td>1.3 and 3.3 (completeness), 2 (data matches manuscript), 6 (results reproduce)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="sortee-common-failures" class="section level2" number="8.3">
+<h2>
+<span class="header-section-number">8.3</span> Common failures at each stage<a class="anchor" aria-label="anchor" href="#sortee-common-failures"><i class="fas fa-link"></i></a>
+</h2>
+<p>From the guidelines’ account of common problems (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</p>
+<p><strong>Stage 5, code runs.</strong> The most frequent causes of failure are:</p>
+<ul>
+<li>a package or module not installed or loaded within the code</li>
+<li>a missing code chunk</li>
+<li>variable names in the code not matching those in the data files</li>
+<li>code referencing data files whose names do not match the archived files</li>
+<li>
+<strong>local or absolute file paths</strong>, which the guidelines single out as one of the
+most common reasons code does not run</li>
+</ul>
+<div class="tada-note">
+<p>Data editors are told to be pragmatic about paths. An absolute path, or a way of
+specifying relative paths they do not know, <strong>should not</strong> be a reason to return
+the code if they can make it run with minor changes. It is logged as a <strong>minor
+error</strong>. Every other error is the author’s to fix, because it is not the data
+editor’s job to make your code run.</p>
+</div>
+<p><strong>Stage 6, results reproduce.</strong> In most cases exact reproducibility is expected,
+so the code should give the same number as the manuscript. If a mismatch has
+one of the following legitimate causes, say so in the metadata:</p>
+<ul>
+<li>
+<strong>Stochastic methods</strong> such as simulations and MCMC. Set a seed (<code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code>
+in R, <code>random.seed()</code> in Python) <strong>at the beginning of any code section that
+would be run independently</strong>, including for figure generation with jittering.
+Note that setting a seed does not <em>always</em> guarantee reproducibility.</li>
+<li>
+<strong>Post-processing of figures in other software.</strong> The data in the figure are
+still expected to be the same, but the code may not reproduce the figure
+exactly.</li>
+<li>
+<strong>Software version differences.</strong> If results are sensitive to the version
+used, flag it clearly and justify the version in the manuscript and metadata.</li>
+</ul>
+<p><strong>Computationally expensive or proprietary analyses.</strong> If code needs
+specialist hardware, takes a very long time or depends on proprietary software
+such as ASReml, full computational reproducibility cannot be assessed. In those
+cases:</p>
+<ul>
+<li>Indicate it clearly in the metadata, <strong>alongside a saved output</strong>, for example
+large Bayesian model objects saved as <code>.rds</code>
+</li>
+<li>Ideally provide <strong>example code</strong> demonstrating that the code will run, such as
+an analysis on a subset of the data, or a model run for a reduced duration</li>
+<li>Where only part of the analysis needs proprietary software, say <strong>which</strong>
+parts a data editor can assess</li>
+<li>Consider non-proprietary execution routes, such as GNU Octave for MATLAB code
+or MATLAB Compiler for standalone applications, but test compatibility and
+note any limitations in the metadata</li>
+<li>Build systems such as <strong><code>targets</code></strong> (R; <span class="tada-cite" data-key="landau-2021">Landau 2021</span>)
+or <strong>Snakemake</strong> (<span class="tada-cite" data-key="koster-2012">Köster &amp; Rahmann 2012</span>)
+can provide reproducibility signatures (hashes) for computationally intensive
+steps, along with intermediate data objects</li>
+</ul>
+</div>
+<div id="sharing-authors" class="section level2" number="8.4">
+<h2>
+<span class="header-section-number">8.4</span> Advice for authors<a class="anchor" aria-label="anchor" href="#sharing-authors"><i class="fas fa-link"></i></a>
+</h2>
+<p>The guidelines’ suggestions (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>):</p>
+<p><strong>1. Adhere to the guidelines from the beginning of the study.</strong> Making a
+project accessible and reproducible at the <em>end</em> is a lot of work. Create a
+clear directory structure and a README at the start, and update the metadata as
+new files are added. Annotate code as you write it. Working with reproducibility
+in mind also makes it far more likely that someone else can reuse the project
+and run the code, which matters if several people will work on the study over
+its lifetime.</p>
+<p><strong>2. Prepare data and code before submission to any journal.</strong> Having it ready
+minimises problems during submission and quality control, and makes it easy to
+move to another journal if the paper is rejected.</p>
+<p><strong>3. Perform a pre-submission code review.</strong> Send the project to a colleague or
+co-author before submitting. They can check that the code runs with the data in
+the structure provided, that the metadata are adequate, that data and code match
+the manuscript, and that results reproduce. Co-authors are also more likely to
+spot mistakes <em>in</em> the code, because they know the study and the data, while
+data editors do not check code reliability. See
+<a href="code-review.html#code-review">Code review</a>.</p>
+<p><strong>4. Consider Markdown or Quarto.</strong> Presenting everything in one self-contained
+document is very helpful for data editors and future readers
+(<span class="tada-cite" data-key="buckley-2025">Buckley et al. 2025</span>), because it shows how
+code, data and outputs connect.</p>
+<div class="tada-tip">
+<p><strong>Say what was checked.</strong> If your journal does quality control, the guidelines
+suggest saying so in the data and code availability section, for example: <em>“Data and code were checked from Stage 1–4 of the SORTEE guidelines
+for Data and Code Quality Control”</em>. Say where a check could not be performed, whether because of proprietary
+software, sensitive data or computationally expensive analyses.</p>
+</div>
+
+</div>
+</div>
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><script src="assets/tada-glossary.js" defer></script><div class="chapter-nav">
+<div class="prev"><a href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></div>
+<div class="next"><a href="code-review.html"><span class="header-section-number">9</span> Code review</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sortee"><span class="header-section-number">8</span> The SORTEE guidelines</a></li>
+<li><a class="nav-link" href="#sortee-stages"><span class="header-section-number">8.1</span> The six stages</a></li>
+<li><a class="nav-link" href="#sortee-tada-map"><span class="header-section-number">8.2</span> How TADA maps onto the stages</a></li>
+<li><a class="nav-link" href="#sortee-common-failures"><span class="header-section-number">8.3</span> Common failures at each stage</a></li>
+<li><a class="nav-link" href="#sharing-authors"><span class="header-section-number">8.4</span> Advice for authors</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/EIvimeyCook/TADA-Wiki/blob/main/08-sortee.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/EIvimeyCook/TADA-Wiki/edit/main/08-sortee.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 04 October 2026.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

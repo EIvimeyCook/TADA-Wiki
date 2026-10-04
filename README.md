@@ -45,11 +45,13 @@ Read it at: <https://eivimeycook.github.io/TADA-Wiki/>
 | TADA at a glance | Why TADA exists, the evidence, how it maps onto FAIR |
 | Transferable | File types, relative paths, `here` / `pyprojroot`, dependency managers, containers and workflow managers |
 | Available | Persistent identifiers, why GitHub is not an archive, repository comparison, embargoes and anonymisation |
-| Documented | The README field by field, a worked example, choosing a licence |
+| Documented | The README field by field, a worked example, choosing and attaching code and data licences |
 | Annotated | Chunk-level comments, signposting, collapsible sections, literate formats |
-| Data & code sharing | Raw vs processed data, file formats, metadata, data licences, the six SORTEE stages |
+| Data & code sharing | Raw vs processed data, file formats, metadata, licences in brief |
+| The SORTEE guidelines | The six stages a data editor checks, common failures, advice for authors |
 | Code review | The four Rs, when review happens, running a code club, a reviewer's script |
 | Further reading | Guides, tools, repositories, communities |
+| Glossary | Plain-language definitions of the terms used across the wiki |
 | Contribute | How to add a page, with a template |
 | References | Everything cited |
 

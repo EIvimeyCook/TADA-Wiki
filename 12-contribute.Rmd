@@ -14,7 +14,7 @@ run `Rscript render.R`, and open a pull request. For a small fix, use the
 1. **Copy the template.**
 
    ```bash
-   cp templates/page-template.Rmd 12-my-page.Rmd
+   cp templates/page-template.Rmd 14-my-page.Rmd
    ```
 
    [`templates/page-template.Rmd`](templates/page-template.Rmd) is a working
@@ -28,7 +28,7 @@ run `Rscript render.R`, and open a pull request. For a small fix, use the
    ```
 
 3. **Register the file** in `_bookdown.yml`, in the position where you want it to
-   appear. Keep `11-references.Rmd` last.
+   appear. Keep `13-references.Rmd` last.
 
 4. **Build and check.**
 
@@ -37,7 +37,7 @@ run `Rscript render.R`, and open a pull request. For a small fix, use the
    ```
 
    Open `docs/index.html`. If you cited anything, add it to
-   `11-references.Rmd`, alphabetically by first author, and give it an entry
+   `13-references.Rmd`, alphabetically by first author, and give it an entry
    in `assets/tada-citations.js` so the hover card works. Cite it in the text
    as `[Author Year]{.tada-cite data-key="author-year"}`.
 

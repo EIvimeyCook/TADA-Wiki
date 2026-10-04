@@ -3,10 +3,11 @@
 
    Reads the glossary page (glossary.html), finds which glossary terms appear
    in the current chapter, and lists them in the right-hand sidebar below
-   "On this page". Each term expands to show its definition and links to its
-   full glossary entry.
+   "On this page". The list is collapsed by default to a single line showing
+   how many terms there are; each term then expands to show its definition and
+   links to its full glossary entry.
 
-   Which words count as a match is set in 12-glossary.Rmd, on each term's span:
+   Which words count as a match is set in 11-glossary.Rmd, on each term's span:
      [DOI]{#gloss-doi data-match="DOI"}
    Alternatives are separated by "|"; a trailing plural "s" is allowed.
    Phrases containing a capital letter match case-sensitively (DOI, GitHub);
@@ -62,13 +63,13 @@
   }
 
   function render(found, toc) {
-    var box = document.createElement("div");
+    var box = document.createElement("details");
     box.className = "tada-terms";
-    box.setAttribute("aria-label", "Terms on this page");
 
-    var h = document.createElement("h2");
-    h.textContent = "Terms on this page";
-    box.appendChild(h);
+    var head = document.createElement("summary");
+    head.className = "tada-terms-head";
+    head.textContent = "Terms on this page (" + found.length + ")";
+    box.appendChild(head);
 
     var ul = document.createElement("ul");
     found.forEach(function (t) {

@@ -5,10 +5,10 @@ behind it ready to share. It covers the minimum steps to turn your project
 folder into an archive that someone else can download, open and run.
 
 ::: {.tada-key}
-Go through the project in four passes, roughly in this order: fix the **paths
-and file types**, **archive** it and get a DOI, write the **README**, then
-**annotate** the scripts. Finally, ask a colleague to run the whole thing
-before a reviewer has to.
+Work through the project roughly in this order: fix the **paths and file
+types**, **annotate** the scripts, write the **README**, and ask a colleague to
+run the whole thing. Then **archive** it and get a DOI. Archiving last means the
+DOI points to the version that has already been checked.
 :::
 
 ## The pre-submission checklist {#quickstart-checklist}
@@ -44,7 +44,7 @@ Condensed from the TADA guidelines.
 
 - [ ] Code is deposited in an immutable repository that mints a persistent identifier (Zenodo, Figshare, …)
 - [ ] The DOI is **cited in the manuscript text and reference list**
-- [ ] If the code was developed on GitHub, a release has been created and linked to Zenodo, since GitHub does not produced DOIs
+- [ ] If the code was developed on GitHub, a release has been created and linked to Zenodo, since GitHub does not produce DOIs
 
 **Documented** — [full chapter](#documented)
 
@@ -156,15 +156,8 @@ SORTEE guidelines ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}, Stage 6)
 | Mistake | Why it breaks | Fix |
 |---|---|---|
 | `setwd("C:/Users/ed/Desktop/analysis")` | The path exists on exactly one computer | Open the project through its `.Rproj` file, or start Python inside the project folder, and build paths with `here()` / `pyprojroot` |
-| Code shared as a `.pdf` or `.docx` | Copy-pasting silently mangles apostrophes, quotes and whitespace, and drags in line numbers and headers | Save as `.R` / `.py` |
+| Code shared as a `.pdf` or `.docx` | Copy-pasting silently mangles apostrophes, quotes and whitespace, and drags in line numbers and headers | Save as `.R` / `.py`; see [Transferable](#transferable-filetype) |
 | No `set.seed()` before a simulation or MCMC run | Results change every run, so nobody can tell a real mismatch from noise | Set a seed at the top of each independently runnable section |
-
-::: {.tada-warn}
-People underestimate the `.pdf` and `.docx` problem. Copying code out of these
-formats can change characters (curly apostrophes for straight ones) and white
-space (non-breaking spaces for ordinary ones). The code still *looks* right, so
-the errors can be hard to spot and slow to fix.
-:::
 
 ## The README {#quickstart-readme}
 
@@ -185,7 +178,7 @@ Or generate one with [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilde
 If your target journal has a **data editor**, someone will check your deposit
 against something close to the [SORTEE guidelines](#sortee) ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 These have six stages, from whether the code is archived under a licence to
-whether the results reproduce. Read that section to see what the checks
+whether the results reproduce. Read that chapter to see what the checks
 are before they are applied to your submission.
 
 If your journal has no data editor, the checks still matter. They fall to you

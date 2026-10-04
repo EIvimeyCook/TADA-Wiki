@@ -171,7 +171,7 @@ Use these if you need to persuade a co-author, a supervisor or an editor.
 | **`CodeMetaPy`** ([van Gompel 2023]{.tada-cite data-key="van-gompel-2023"}) | Code metadata |
 | **`cookiecutter`** ([Feldroy 2022]{.tada-cite data-key="feldroy-2022"}) | Project templates |
 | **`setuptools`** | Package and version information |
-| `session_info` | The environment section of your README |
+| `session_info` (from the `session-info` package) | The environment section of your README |
 
 ### Environments & pipelines {.unlisted .unnumbered}
 

@@ -119,8 +119,6 @@ Some data cannot be shared openly, including protected species locations,
 personal data and third-party data held under licence. The SORTEE guidelines
 allow for these cases and note that many repositories offer **embargoes** ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 
-Two points apply.
-
 ::: {.tada-wiki}
 The exception normally applies to the **data**, not the **code**. Code that
 cannot run without restricted data is still worth archiving openly, because it

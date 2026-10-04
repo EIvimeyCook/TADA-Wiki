@@ -105,6 +105,6 @@ End substantial chapters with items a reader can verify in under a minute each.
 **Next:** [<Next chapter>](#next-chapter-id)
 
 <!--
-  Anything you cited above must be added to `11-references.Rmd`,
+  Anything you cited above must be added to `13-references.Rmd`,
   alphabetically by first author, in the existing format.
 -->

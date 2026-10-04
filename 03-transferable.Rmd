@@ -13,8 +13,7 @@ so that the code also runs on **different computers and operating systems**.
 <p class="tada-figure-caption">Figure 3 from [Ivimey-Cook et al.]{.tada-cite data-key="ivimey-cook-2025-tada"}</p>
 :::
 
-Transferability has two independent requirements. Meeting one does not make up
-for failing the other.
+Transferability has two requirements, and you need both.
 
 1. The code is saved in a **file type any text editor or IDE can open**.
 2. The code contains **no paths specific to your machine**.

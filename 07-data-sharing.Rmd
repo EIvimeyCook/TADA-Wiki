@@ -1,11 +1,12 @@
 # Data & code sharing {#data-sharing}
 
 TADA is about your code. This chapter covers everything around it: which data to
-share, in what format, with what metadata, under what licence, and what a
-journal will check.
+share, in what format, with what metadata and under what licence. What a
+journal's data editor will check is in the next chapter,
+[The SORTEE guidelines](#sortee).
 
 ::: {.tada-note}
-**On this page:** [what archiving is for](#sharing-goals) · [vocabulary](#sharing-glossary) · [what data to share](#sharing-what) · [file formats](#sharing-formats) · [metadata](#sharing-metadata) · [licences](#sharing-licences) · [the SORTEE guidelines](#sortee) · [advice for authors](#sharing-authors) · [checklist](#sharing-checklist)
+**On this page:** [what archiving is for](#sharing-goals) · [vocabulary](#sharing-glossary) · [what data to share](#sharing-what) · [file formats](#sharing-formats) · [metadata](#sharing-metadata) · [licences](#sharing-licences) · [checklist](#sharing-checklist)
 :::
 
 ## What archiving is for {#sharing-goals}
@@ -129,13 +130,9 @@ used**.
 ### Code formats {.unlisted .unnumbered}
 
 Code must be in a format that text editors and IDEs such as VS Code can open:
-`.R`, `.py`, `.cpp` and so on. See
-[Transferable](#transferable-filetype).
-
-**Code must not be provided as a `.pdf` or pasted into a Word document.** Even
-if you can copy the script out, these programs often insert extra characters or
-spacing that the analysis software misreads. Python code, for example, can fail
-to run because the indentation was mangled.
+`.R`, `.py`, `.cpp` and so on. **Code must not be provided as a `.pdf` or pasted
+into a Word document**, because copying code out of these formats can introduce
+errors. [Transferable](#transferable-filetype) explains why.
 
 :::
 
@@ -188,207 +185,14 @@ a data editor is unlikely to be able to verify this ([Pick et al. 2026]{.tada-ci
 
 Without a licence, data **cannot be legally reused** in many circumstances,
 depending on jurisdiction, and most researchers know little about licences. The
-same goes for code.
+same goes for code. Data and code usually need different licences: Creative
+Commons licences such as CC0 or CC BY for data, and software licences such as
+MIT or the GPL for code. The SORTEE guidelines require a licence for both, but
+state a preference only for code, where they suggest permissive licences
+([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 
-::: {.tabset}
-
-### For data {.unlisted .unnumbered}
-
-Typically **Creative Commons** licences. Chooser:
-<https://creativecommons.org/chooser/>
-
-| Licence | What it means | Notes |
-|---|---|---|
-| **CC0** | Public domain; no attribution required | The most permissive. Default at Figshare; **mandated by Dryad**. |
-| **CC BY 4.0** | Reusers must credit the original author, but may distribute, remix, adapt and build upon the material, including commercially | Default at Zenodo. |
-| **CC BY-NC 4.0** | As CC BY, but prohibits commercial use | More restrictive. |
-
-### For code {.unlisted .unnumbered}
-
-Software licences, not Creative Commons. Chooser:
-<https://choosealicense.com/>
-
-| Licence | What it means |
-|---|---|
-| **MIT** | Very permissive: copy, modify, merge, publish and share, with the licence notice retained ([choosealicense.com n.d.]{.tada-cite data-key="choosealicense"}) |
-| **BSD 2-Clause / 3-Clause** | Permissive, very similar to MIT ([choosealicense.com n.d.]{.tada-cite data-key="choosealicense"}) |
-| **Apache 2.0** | Permissive, with an explicit patent grant ([choosealicense.com n.d.]{.tada-cite data-key="choosealicense"}) |
-| **GPL v3.0** | Copyleft: derivatives must carry the same licence, and changes from the source must be listed |
-
-The SORTEE guidelines suggest permissive code licences wherever possible,
-naming MIT, BSD 2-Clause, GNU and Apache (Stage 3.2; [Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
-
-CC0 is **not well suited to code**, which is why Dryad, which is
-CC0-only, sends code deposits to Zenodo
-([Lowenberg 2021]{.tada-cite data-key="lowenberg-2021"}).
-
-### Choosing {.unlisted .unnumbered}
-
-The SORTEE guidelines treat data and code differently. For **data** they
-**do not recommend or enforce any specific type of licence**, so you only have to
-choose one and state it. For **code** they suggest
-**permissive licences wherever possible**, naming MIT, BSD 2-Clause, GNU and
-Apache (Stage 3.2).
-
-Four more things should influence the choice:
-
-- Who the audience is, and whether commercial application is expected
-- Whether you want others to be able to modify or extend the work
-- What your **journal, institution and funder** require, since some journals
-  mandate a licence on archiving (the *Journal of Statistical Software* requires
-  a GPL)
-- Whether your **repository** already applies one by default, or mandates one
-
-In practice, pick a licence at <https://choosealicense.com/>, copy its text into
-a `LICENSE` file in the project, and name it in the README. Or select it in the
-repository's deposit form, as Zenodo allows.
-
-:::
-
-## The SORTEE guidelines {#sortee}
-
-The **SORTEE guidelines for data and code quality control** ([Pick et al. 2026]{.tada-cite data-key="pick-2026"},
-*Peer Community Journal* 6: e20) are written for **data editors**, who screen and quality-control data and code at
-a journal. They are worth reading as an author because they tell you what will
-be checked.
-
-::: {.tada-note}
-**The limits of quality control.** Quality control checks that archived data and
-code meet minimum standards: complete, usable, documented and runnable. It is
-**not** a code review. A data editor does not critique your analytical
-techniques, and it is not their role to review, interpret or correct your code,
-or to check its reliability
-([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}; [Hillemann et al. 2025]{.tada-cite data-key="hillemann-2025"}). That is what
-[code review](#code-review) is for.
-:::
-
-### The six stages {#sortee-stages}
-
-Table 2 of the paper ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}) is reproduced below.
-
-| Stage | Guideline |
-|---|---|
-| **1. Data must be archived and adhere to FAIR guiding principles** | |
-| 1.1 Data files are accessible and in an open repository | Data are open and freely available and are located in a permanent public repository with an associated globally unique persistent identifier, that is cited in the text and reference list of the manuscript. |
-| 1.2 Data are associated with a license | Data must be associated with a license. |
-| 1.3 Data files are present and complete | Authors must either provide: a) raw data, along with the processed data and/or code to prepare the data for analysis, or b) a sample of raw data alongside processed/filtered data when full raw data upload is not possible, or c) processed/filtered data with a detailed description of how to both obtain and process/filter the raw data. |
-| 1.4 Data files are in an interoperable format | Data files must be provided in an interoperable format. |
-| 1.5 Data metadata is present and adequate | Detailed metadata, including (but not limited to) a README file, must accompany the data. |
-| **2. Archived data corresponds with the data reported in the manuscript** | The structure and contents of the archived data files must match the description in the manuscript. |
-| **3. Code must be archived and adhere to FAIR guiding principles** | |
-| 3.1 Code files are accessible and in an open repository | Code files are open and freely available and are located in a permanent public repository with an associated globally unique persistent identifier, preferably in the same archived project as the data files, and are cited in the text and the reference list of the manuscript. |
-| 3.2 Code is associated with a license | The code must be associated with a license. |
-| 3.3 Code files are present and complete | All code used for generating the results of the manuscript (including filtering, processing, graphing, and analysis) must be present either in one or more code files. |
-| 3.4 Code is in an interoperable format | Code files must be provided in an interoperable format. |
-| 3.5 Code metadata is present and adequate | A sufficiently detailed README must accompany the code. Code must also be broken into sections with clear annotation stating the purpose of the code with clear links to the relevant sections, figures, and tables in the manuscript. |
-| **4. Archived code corresponds with the workflow reported in the manuscript** | The structure and content of the archived code must match the description of data filtering, processing, and analysis, and the presentation of results in the manuscript. |
-| **5. Archived code runs with the archived data** | Code must be able to run without error using the archived data. With the exception of easy to fix file path errors, all errors should be addressed by the author. |
-| **6. Results can be computationally reproduced by running the archived code** | Results reproduced by the data editor with the archived data and code must match those presented in the manuscript. A tolerance threshold can be given when there is not an exact match but the authors must state clearly in the code metadata why this mismatch might occur. If saved model outputs are instead provided, this must also be clearly stated in the metadata. |
-
-### How TADA maps onto the stages {#sortee-tada-map}
-
-::: {.tada-wiki}
-This mapping is ours, not from the SORTEE paper. TADA covers almost exactly the
-author-side work for Stages 1 and 3.
-:::
-
-| TADA | SORTEE stages |
-|---|---|
-| **Transferable** | 1.4 and 3.4 (interoperable formats) and, in practice, 5 (code runs, since local file paths are the most common cause of failure) |
-| **Available** | 1.1 and 3.1 (open repository, PID, cited in the manuscript) |
-| **Documented** | 1.2, 1.5, 3.2 and 3.5 (licence and metadata) |
-| **Annotated** | 3.5 (sectioned code with clear annotation and signposting), and it is what makes Stage 4 assessable at all |
-| *(Not TADA: your responsibility as author)* | 1.3 and 3.3 (completeness), 2 (data matches manuscript), 6 (results reproduce) |
-
-### Common failures at each stage {#sortee-common-failures}
-
-From the guidelines' account of common problems ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
-
-**Stage 5, code runs.** The most frequent causes of failure are:
-
-- a package or module not installed or loaded within the code
-- a missing code chunk
-- variable names in the code not matching those in the data files
-- code referencing data files whose names do not match the archived files
-- **local or absolute file paths**, which the guidelines single out as one of the
-  most common reasons code does not run
-
-::: {.tada-note}
-Data editors are told to be pragmatic about paths. An absolute path, or a way of
-specifying relative paths they do not know, **should not** be a reason to return
-the code if they can make it run with minor changes. It is logged as a **minor
-error**. Every other error is the author's to fix, because it is not the data
-editor's job to make your code run.
-:::
-
-**Stage 6, results reproduce.** In most cases exact reproducibility is expected,
-so the code should give the same number as the manuscript. If a mismatch has
-one of the following legitimate causes, say so in the metadata:
-
-- **Stochastic methods** such as simulations and MCMC. Set a seed (`set.seed()`
-  in R, `random.seed()` in Python) **at the beginning of any code section that
-  would be run independently**, including for figure generation with jittering.
-  Note that setting a seed does not *always* guarantee reproducibility.
-- **Post-processing of figures in other software.** The data in the figure are
-  still expected to be the same, but the code may not reproduce the figure
-  exactly.
-- **Software version differences.** If results are sensitive to the version
-  used, flag it clearly and justify the version in the manuscript and metadata.
-
-**Computationally expensive or proprietary analyses.** If code needs
-specialist hardware, takes a very long time or depends on proprietary software
-such as ASReml, full computational reproducibility cannot be assessed. In those
-cases:
-
-- Indicate it clearly in the metadata, **alongside a saved output**, for example
-  large Bayesian model objects saved as `.rds`
-- Ideally provide **example code** demonstrating that the code will run, such as
-  an analysis on a subset of the data, or a model run for a reduced duration
-- Where only part of the analysis needs proprietary software, say **which**
-  parts a data editor can assess
-- Consider non-proprietary execution routes, such as GNU Octave for MATLAB code
-  or MATLAB Compiler for standalone applications, but test compatibility and
-  note any limitations in the metadata
-- Build systems such as **`targets`** (R; [Landau 2021]{.tada-cite data-key="landau-2021"})
-  or **Snakemake** ([Köster & Rahmann 2012]{.tada-cite data-key="koster-2012"})
-  can provide reproducibility signatures (hashes) for computationally intensive
-  steps, along with intermediate data objects
-
-## Advice for authors {#sharing-authors}
-
-The guidelines' suggestions ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}):
-
-**1. Adhere to the guidelines from the beginning of the study.** Making a
-project accessible and reproducible at the *end* is a lot of work. Create a
-clear directory structure and a README at the start, and update the metadata as
-new files are added. Annotate code as you write it. Working with reproducibility
-in mind also makes it far more likely that someone else can reuse the project
-and run the code, which matters if several people will work on the study over
-its lifetime.
-
-**2. Prepare data and code before submission to any journal.** Having it ready
-minimises problems during submission and quality control, and makes it easy to
-move to another journal if the paper is rejected.
-
-**3. Perform a pre-submission code review.** Send the project to a colleague or
-co-author before submitting. They can check that the code runs with the data in
-the structure provided, that the metadata are adequate, that data and code match
-the manuscript, and that results reproduce. Co-authors are also more likely to
-spot mistakes *in* the code, because they know the study and the data, while
-data editors do not check code reliability. See
-[Code review](#code-review).
-
-**4. Consider Markdown or Quarto.** Presenting everything in one self-contained
-document is very helpful for data editors and future readers
-([Buckley et al. 2025]{.tada-cite data-key="buckley-2025"}), because it shows how
-code, data and outputs connect.
-
-::: {.tada-tip}
-**Say what was checked.** If your journal does quality control, the guidelines
-suggest saying so in the data and code availability section, for example: *"Data and code were checked from Stage 1–4 of the SORTEE guidelines
-for Data and Code Quality Control"*. Say where a check could not be performed, whether because of proprietary
-software, sensitive data or computationally expensive analyses.
-:::
+How to choose and attach a licence, for both data and code, is covered in
+[The licence](#documented-licence) in the Documented chapter.
 
 ## Checklist {#sharing-checklist}
 

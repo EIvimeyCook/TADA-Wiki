@@ -242,7 +242,7 @@ definitions. Where a chapter covers a term in depth, the definition links to it.
 [Session info]{#gloss-session-info data-match="sessionInfo|session_info|session info"}
 :   A printout of the software environment: language version, operating system
     and every loaded package with its version. Produced by `sessionInfo()` in R
-    or `session_info` in Python.
+    or `session_info` in Python (from the `session-info` package).
 
 [Software]{#gloss-software}
 :   Code written to be general, modular and tested, so it works across systems

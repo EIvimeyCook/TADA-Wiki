@@ -73,11 +73,12 @@
 <li><a class="" href="documented.html"><span class="header-section-number">5</span> D — Documented</a></li>
 <li><a class="" href="annotated.html"><span class="header-section-number">6</span> A — Annotated</a></li>
 <li><a class="" href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></li>
-<li><a class="" href="code-review.html"><span class="header-section-number">8</span> Code review</a></li>
-<li><a class="" href="further-reading.html"><span class="header-section-number">9</span> Further reading</a></li>
-<li><a class="" href="glossary.html"><span class="header-section-number">10</span> Glossary</a></li>
-<li><a class="" href="contribute.html"><span class="header-section-number">11</span> Contribute</a></li>
-<li><a class="" href="references.html"><span class="header-section-number">12</span> References</a></li>
+<li><a class="" href="sortee.html"><span class="header-section-number">8</span> The SORTEE guidelines</a></li>
+<li><a class="" href="code-review.html"><span class="header-section-number">9</span> Code review</a></li>
+<li><a class="" href="further-reading.html"><span class="header-section-number">10</span> Further reading</a></li>
+<li><a class="" href="glossary.html"><span class="header-section-number">11</span> Glossary</a></li>
+<li><a class="" href="contribute.html"><span class="header-section-number">12</span> Contribute</a></li>
+<li><a class="" href="references.html"><span class="header-section-number">13</span> References</a></li>
 </ul>
 
         <div class="book-extra">
@@ -117,7 +118,7 @@ Even so, few papers in the field share code: reported rates range from roughly
 <span class="tada-cite" data-key="culina-2020,kimmel-2023,maitner-2024,kellner-2025,sanchez-tojar-2025,cooper-2026"><strong>5% to 35%</strong></span>,
 and code sharing still lags behind data sharing
 (<span class="tada-cite" data-key="ivimey-cook-2025-policy">Ivimey-Cook et al. 2025</span>).
-However, shared code also often fails to run. Of over 9,000 R files archived in the
+And when code is shared, it often fails to run. Of over 9,000 R files archived in the
 Harvard Dataverse, <span class="tada-cite" data-key="trisovic-2022"><strong>74% failed to complete without error</strong></span>,
 and <strong>56%</strong> still failed after automated cleaning (removing local file paths
 and fixing library installation and loading). A study of species distribution
@@ -130,8 +131,9 @@ for someone preparing a one-off analysis of a single dataset.</p>
 <p><strong>TADA</strong> (Transferable, Available, Documented, Annotated) is a set of simple
 guidelines aimed at that gap. This
 wiki expands them into a working reference and adds the practices that go with
-them: metadata, licences, repository choice, the SORTEE data and code quality
-control guidelines, and code review.</p>
+them: metadata, licences, repository choice, the data and code quality control
+guidelines from SORTEE (the Society for Open, Reliable, and Transparent Ecology
+and Evolutionary Biology), and code review.</p>
 </div>
 <div id="the-four-principles" class="section level2 unnumbered">
 <h2>The four principles<a class="anchor" aria-label="anchor" href="#the-four-principles"><i class="fas fa-link"></i></a>
@@ -162,7 +164,8 @@ result in the paper it produces.</span></p>
 <p>TADA is deliberately a <strong>minimum standard</strong>. Analytical code is usually written
 for one dataset and one study, so it needs to be a transparent, reproducible
 record of that analysis, not reusable software. TADA is pitched at that level
-and maps onto the FAIR principles.</p>
+and maps onto the FAIR principles (Findable, Accessible, Interoperable,
+Reusable).</p>
 </div>
 </div>
 <div id="how-to-use-this-wiki" class="section level2 unnumbered">
@@ -193,12 +196,20 @@ and maps onto the FAIR principles.</p>
 </td>
 </tr>
 <tr class="even">
-<td>Write a README, pick a licence, choose a repository</td>
+<td>Write a README or pick a licence</td>
+<td><a href="documented.html#documented">Documented</a></td>
+</tr>
+<tr class="odd">
+<td>Choose a repository</td>
+<td><a href="available.html#available-where">Available</a></td>
+</tr>
+<tr class="even">
+<td>Decide which data to share, in what format and with what metadata</td>
 <td><a href="data-sharing.html#data-sharing">Data &amp; code sharing</a></td>
 </tr>
 <tr class="odd">
-<td>Know what a journal data editor will check</td>
-<td><a href="data-sharing.html#sortee">The SORTEE guidelines</a></td>
+<td>Know what a journal’s data editor will check</td>
+<td><a href="sortee.html#sortee">The SORTEE guidelines</a></td>
 </tr>
 <tr class="even">
 <td>Set up or run a code review</td>
@@ -209,8 +220,16 @@ and maps onto the FAIR principles.</p>
 <td><a href="further-reading.html#further-reading">Further reading</a></td>
 </tr>
 <tr class="even">
+<td>Look up a term such as DOI, README or licence</td>
+<td><a href="glossary.html#glossary">Glossary</a></td>
+</tr>
+<tr class="odd">
 <td>Add a page to this wiki</td>
 <td><a href="contribute.html#contribute">Contribute</a></td>
+</tr>
+<tr class="even">
+<td>Find the full details of anything cited</td>
+<td><a href="references.html#references">References</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -247,7 +266,7 @@ Paquet, M., Petitjean, Q., Sánchez-Tójar, A., van Dis, N. E., Wilson, L. A. B.
 &amp; Ivimey-Cook, E. R. (2026).</strong> <em>The SORTEE guidelines for data and code
 quality control in ecology and evolutionary biology.</em> <strong>Peer Community
 Journal 6: e20.</strong> <a href="https://doi.org/10.24072/pcjournal.687" class="uri">https://doi.org/10.24072/pcjournal.687</a>
-<br>Source for the <a href="data-sharing.html#sortee">SORTEE guidelines</a> section and most of
+<br>Source for the <a href="sortee.html#sortee">SORTEE guidelines</a> chapter and most of
 <a href="data-sharing.html#data-sharing">Data &amp; code sharing</a>.</p></li>
 <li><p><strong>Ivimey-Cook, E. R., Pick, J. L., Bairos-Novak, K. R., Culina, A.,
 Gould, E., Grainger, M., Marshall, B. M., Moreau, D., Paquet, M.,
@@ -261,15 +280,9 @@ and evolutionary biology.</em> <strong>Journal of Evolutionary Biology 36: 1347�
 <div class="tada-note">
 <p>Where this wiki adds practical detail beyond the source papers, such as a worked
 README, a repository comparison table or a reviewer’s script, that material is
-marked as <strong>wiki guidance</strong>, not as a finding of the papers.</p>
+shown in a <strong>Wiki Tip</strong> box, so you can tell it apart from the findings of the
+papers.</p>
 </div>
-</div>
-<div id="building-this-wiki" class="section level2 unnumbered">
-<h2>Building this wiki<a class="anchor" aria-label="anchor" href="#building-this-wiki"><i class="fas fa-link"></i></a>
-</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="index.html#cb1-1" tabindex="-1"></a><span class="ex">Rscript</span> render.R</span></code></pre></div>
-<p>The rendered site is written to <code>docs/</code>. See <a href="contribute.html#contribute">Contribute</a> for the page
-template and how to add a chapter.</p>
 
 </div>
 </div>
@@ -286,7 +299,6 @@ template and how to add a chapter.</p>
 <li><a class="nav-link" href="#how-to-use-this-wiki">How to use this wiki</a></li>
 <li><a class="nav-link" href="#who-this-is-for">Who this is for</a></li>
 <li><a class="nav-link" href="#where-the-guidance-comes-from">Where the guidance comes from</a></li>
-<li><a class="nav-link" href="#building-this-wiki">Building this wiki</a></li>
 </ul>
 
       <div class="book-extra">

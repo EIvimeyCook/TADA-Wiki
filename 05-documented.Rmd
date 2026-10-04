@@ -40,7 +40,7 @@ paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}), 
 | **Authors & contact** | Authors, with an email address for correspondence. *May be anonymised during peer review* to adhere to double-blind policies |
 | **Funders** | Any relevant funders |
 | **Software** | Language and **version number**, e.g. R v4.3.3 |
-| **Packages** | Important libraries or packages used, **with version numbers**, e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from `sessionInfo()` in R or `session_info` in Python |
+| **Packages** | Important libraries or packages used, **with version numbers**, e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from `sessionInfo()` in R or `session_info` in Python (from the `session-info` package) |
 | **Licence** | A mention of the code-specific licence |
 | **Data location** | Where the relevant data are, ideally with a **PID** |
 | **File contents** | What each file contains |
@@ -49,8 +49,8 @@ paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}), 
 | **Inputs & outputs** | What data the code requires to run, and what data it produces, if any |
 
 ::: {.tada-wiki}
-`sessionInfo()` (R) and `session_info` (Python) list every loaded package and
-its version. Run it at the end of your final
+`sessionInfo()` (R) and `session_info.show()` (Python, from the `session-info`
+package) list every loaded package and its version. Run it at the end of your final
 analysis session, paste the output into a `session_info.txt` next to the README
 and refer to it there. That one command answers most later questions about
 software versions.
@@ -78,7 +78,7 @@ in mixed woodland than in conifer plantation after controlling for year
 (Poisson GLM); we discuss implications for habitat management.
 
 ## Contact
-Edward Ivimey-Cook — e.ivimeycook@gmail.com
+Your Name — your.name@example.ac.uk
 (Anonymised for peer review; restored on acceptance.)
 
 ## Funding
@@ -96,7 +96,6 @@ R v4.3.3. Full session details in `session_info.txt`.
 
 Key packages:
   - here        v1.0.1   (relative file paths)
-  - lme4        v1.1-35  (mixed models)
   - ggplot2     v3.5.1   (figures)
 
 ## How to run
@@ -190,13 +189,20 @@ Choose a copyleft licence when you want derivatives to stay open. Some journals 
 
 #### Data licences {.unlisted .unnumbered}
 
-Data and code are usually best licensed separately.
+Data and code are usually best licensed separately. Without a licence, data
+**cannot be legally reused** in many circumstances, depending on jurisdiction.
+Data usually take a **Creative Commons** licence (chooser:
+<https://creativecommons.org/chooser/>).
 
-**CC0** places work in the public domain with no conditions, and is common for
-research data. **Dryad only supports CC0**, which suits data but is **not well
-suited to code**.
+| Licence | What it means | Notes |
+|---|---|---|
+| **CC0** | Public domain; no attribution required | The most permissive. Default at Figshare; **mandated by Dryad**. |
+| **CC BY 4.0** | Reusers must credit the original author, but may distribute, remix, adapt and build upon the material, including commercially | Default at Zenodo. |
+| **CC BY-NC 4.0** | As CC BY, but prohibits commercial use | More restrictive. |
 
-**CC BY** requires attribution and is also common for data.
+**Dryad only supports CC0**, which suits data but is **not well suited to
+code**. Code uploaded to Dryad as software is published on Zenodo instead
+([Lowenberg 2021]{.tada-cite data-key="lowenberg-2021"}).
 
 If your repository applies a single repository-wide licence, check whether it
 suits *both* your data and your code before depositing them together.
@@ -212,7 +218,9 @@ the code as a `LICENSE` file, the name GitHub looks for
 
 **Let the repository do it.** Some repositories, such as **Zenodo**, let you
 choose the licence when you archive the code. It is then attached to the project
-without you creating a file.
+without you creating a file. Check what you select: repository defaults are
+data licences (CC BY 4.0 at Zenodo, CC0 at Figshare), so pick a code licence
+such as MIT for the code.
 
 :::
 
@@ -233,7 +241,7 @@ The SORTEE guidelines require a licence for both data (Guideline 1.2) and code
 (Guideline 3.2; [Pick et al. 2026]{.tada-cite data-key="pick-2026"}), but they treat the two differently. For **data** they
 **do not recommend or enforce any specific type**, so you only have to choose
 and state one. For **code** they state a preference: *"We suggest using permissive code licences whenever
-possible, for example, MIT, BSD 2-Clause, GNU, and Apache"* (Stage 3.2).
+possible, for example, MIT, BSD 2-Clause, GNU, and Apache"* (Guideline 3.2).
 :::
 
 ## Checklist {#documented-checklist}

@@ -33,8 +33,8 @@ Software standards therefore set too high a bar for analytical code, and researc
 faced with an unrealistic target tend to give up on it. 
 
 TADA instead sets a **minimum standard** that anyone can meet, whatever their
-coding experience, and helps coders archived code that is transparent and helps enable computational
-reproducibility.
+coding experience, and helps researchers archive code that is transparent and
+computationally reproducible.
 
 ## The scale of the problem {#tada-problem}
 
@@ -62,7 +62,7 @@ where code is present and functional, computational reproducibility is not alway
 
 ## The four principles {#tada-four}
 
-Each has its own chapter. Here is each in a paragraph.
+Each has its own chapter.
 
 ::: {.tada-cards}
 ::: {.tada-card .t}
@@ -105,22 +105,17 @@ same script before and after.
 
 ## What TADA does not cover {#tada-scope}
 
-We left three things out of the TADA's paper scope, although all three
-support reproducible analyses ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}) (if you fancy writing a section of the wiki on this, please get in touch!):
+We left three things out of the TADA paper's scope, although all three support
+reproducible analyses ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}):
 
-- **Dependency and environment managers** (`{renv}` in R, `{conda}` in Python),
-  which help ensure the same computational environment is used each time, for
-  example via a lockfile.
-- **Containerisation** (Docker, Apptainer — formerly Singularity), which packages a complete software
-  environment of programs and libraries into an image, so the environment
-  itself is reproducible between systems. It is the standard answer to the
-  "works on my computer" problem.
-- **Workflow managers** (Snakemake, Nextflow), which specify the sequence of
-  scripts or computational steps in a pipeline and their dependencies, so that
-  each step executes in a defined, reproducible order.
+- **Dependency and environment managers**, such as `renv` (R) and `conda` (Python)
+- **Containerisation**, such as Docker and Apptainer (formerly Singularity)
+- **Workflow managers**, such as Snakemake and Nextflow
 
 None of these is a TADA requirement, but all three are worth knowing about.
-See [Further reading](#further-reading).
+[Beyond TADA](#transferable-beyond) explains what each one does, and
+[Further reading](#reading-tools) lists the tools. If you fancy writing a
+section of the wiki on any of them, please get in touch!
 
 ## How TADA maps onto FAIR {#tada-fair}
 
@@ -154,12 +149,9 @@ can open and use your code. Transferability also requires that it *runs* on
 someone else's machine and operating system, which is where hard-coded file
 paths cause problems.
 
-**Annotated has no FAIR principle of its own.** It shares Reusable with
-Documented, because both help someone understand and reuse the code. They differ
-in *where* the description lives: in a README (Documented) or in the code as
-comments (Annotated). Annotated is the letter most specific to research code.
-FAIR is mostly about machines finding and parsing assets, whereas annotation is
-about a person being able to follow what the analysis did. 
+**Annotated is the letter most specific to research code.** FAIR is mostly
+about machines finding and parsing assets, whereas annotation is about a person
+being able to follow what the analysis did.
 
 ::: {.tada-note}
 "Reusable" has two senses. In the FAIR sense it
