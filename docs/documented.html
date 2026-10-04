@@ -19,7 +19,18 @@
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
-<link rel="icon" type="image/png" href="assets/favicon.png">
+<!-- Set the colour theme before the page paints, so a dark-mode reader never
+         sees a flash of white. Uses the saved choice from the toggle
+         (assets/tada-theme.js) or, if there is none, the system setting. --><script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("tada-theme"); } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script><link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <!-- The site's type system (Inter body text, Fraunces display serif for
          headings, JetBrains Mono for code); style.css already declares these
@@ -97,20 +108,19 @@ Figure 5 from <span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Co
 <li>A <strong>licence</strong>, stating how others may use, modify and share the code.</li>
 </ol>
 <p>Documentation carries information that annotation cannot. Comments inside a
-script tell you what a line does, but only the README can tell you which script
-to run first, what version of R you need, or where the data live.</p>
+script say what a line does, but only the README can say which script to run
+first, what version of R you need, or where the data live.</p>
 <div id="documented-readme" class="section level2" number="5.1">
 <h2>
 <span class="header-section-number">5.1</span> The README<a class="anchor" aria-label="anchor" href="#documented-readme"><i class="fas fa-link"></i></a>
 </h2>
 <p>You can provide a <strong>combined README</strong> covering both code and data metadata, or
-<strong>two separate READMEs</strong>, one for code and one for data, if that suits your
-project better.</p>
+<strong>two separate READMEs</strong>, one for code and one for data.</p>
 <div id="what-must-be-in-it" class="section level3 unlisted unnumbered">
 <h3>What must be in it<a class="anchor" aria-label="anchor" href="#what-must-be-in-it"><i class="fas fa-link"></i></a>
 </h3>
 <p>Drawn from the TADA guidelines’ “Documented How To” box and the accompanying
-text, with the package examples updated:</p>
+text (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>), with the package examples updated:</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="50%">
@@ -169,11 +179,11 @@ text, with the package examples updated:</p>
 </tbody>
 </table></div>
 <div class="tada-tip">
-<p><code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> (R) and <code>session_info</code> (Python) will generate the environment
-section for you. Run it at the end of your final analysis session, paste the
-output into a <code>session_info.txt</code> alongside the README, and reference it there.
-It is a single command, and it answers most later questions about software
-versions before anyone has to ask them.</p>
+<p><code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> (R) and <code>session_info</code> (Python) list every loaded package and
+its version. Wiki guidance: run it at the end of your final
+analysis session, paste the output into a <code>session_info.txt</code> alongside the
+README, and reference it there. One command answers most later questions about
+software versions.</p>
 </div>
 </div>
 <div id="a-worked-readme" class="section level3 unlisted unnumbered">
@@ -247,7 +257,7 @@ the author.</p>
 <h3>The SORTEE view<a class="anchor" aria-label="anchor" href="#the-sortee-view"><i class="fas fa-link"></i></a>
 </h3>
 <p>The <a href="data-sharing.html#sortee">SORTEE guidelines</a> state the same requirement from the checking
-side, and set the bar clearly:</p>
+side (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>):</p>
 <ul>
 <li>
 <strong>Guideline 1.5.</strong> Detailed metadata, including but not limited to a README
@@ -260,8 +270,7 @@ tables in the manuscript.</li>
 </ul>
 <p>The test a data editor applies to code metadata is, in effect, whether a reader
 could understand the analysis code without reading the manuscript. For data
-metadata it is the equivalent question: could someone understand the contents of
-the data files without reading the paper?</p>
+metadata it is the same question about the data files.</p>
 </div>
 </div>
 <div id="documented-licence" class="section level2" number="5.2">
@@ -271,13 +280,15 @@ the data files without reading the paper?</p>
 <div class="tada-warn">
 <p>Code with <strong>no licence</strong> is not open code. Without one, others are legally
 restricted from using, sharing or modifying what you archived, even though they
-can see it. Omitting a licence is a common documentation failure, and it defeats
-the purpose of archiving: the code is visible but cannot lawfully be reused.</p>
+can see it (<span class="tada-cite" data-key="github-licensing">GitHub Docs n.d.</span>).
+Omitting a licence is a common documentation failure, and it defeats the purpose
+of archiving: the code is visible but cannot lawfully be reused.
+<!-- [add source: omitting a licence is a common documentation failure] --></p>
 </div>
 <p>The documentation must specify an appropriate licence detailing how others can
-use, modify and share the code. Licences differ in their permission levels and
-conditions: whether attribution is required, meaning whether you must be cited;
-whether the code can be modified; and whether it can be used commercially.</p>
+use, modify and share the code. Licences differ in what they permit
+and require: whether attribution is required (whether you must be cited),
+whether the code can be modified, and whether it can be used commercially.</p>
 <div id="choosing-one" class="section level3 unlisted unnumbered">
 <h3>Choosing one<a class="anchor" aria-label="anchor" href="#choosing-one"><i class="fas fa-link"></i></a>
 </h3>
@@ -286,30 +297,32 @@ whether the code can be modified; and whether it can be used commercially.</p>
 <h4>Permissive<a class="anchor" aria-label="anchor" href="#permissive"><i class="fas fa-link"></i></a>
 </h4>
 <p><strong>MIT</strong> is the archetype, imposing little to no restriction on use. Others may
-copy, modify, merge, publish and share the code, provided the licence and
-copyright notice travel with it.</p>
-<p>Choose a permissive licence when you want the widest possible reuse and are not
-concerned about what downstream users do with derivatives, which is the usual
-case for analytical code accompanying a paper.</p>
+copy, modify, merge, publish and share the code, provided the
+licence and copyright notice travel with it
+(<span class="tada-cite" data-key="choosealicense">choosealicense.com n.d.</span>).</p>
+<p>Wiki guidance: choose a permissive licence when you want the widest possible
+reuse and are not concerned about what downstream users do with derivatives,
+which is the usual case for analytical code accompanying a paper.</p>
 <p>Other permissive options include <strong>BSD 2-Clause</strong>, <strong>BSD 3-Clause</strong>, and
-<strong>Apache 2.0</strong>, which additionally grants patent rights explicitly.</p>
+<strong>Apache 2.0</strong>, which also grants patent rights explicitly
+(<span class="tada-cite" data-key="choosealicense">choosealicense.com n.d.</span>).</p>
 </div>
 <div id="copyleft" class="section level4 unlisted unnumbered">
 <h4>Copyleft<a class="anchor" aria-label="anchor" href="#copyleft"><i class="fas fa-link"></i></a>
 </h4>
-<p><strong>GPL</strong> licences are more restrictive, imposing several conditions that must be
-met. Under <strong>GPL v3.0</strong>, for example, derivative works must carry the same
-licence, and any changes made from the source code must be listed.</p>
-<p>Choose a copyleft licence when you want to guarantee that derivatives remain
-open. Note that some journals require a specific licence on archiving: the
+<p><strong>GPL</strong> licences are more restrictive, imposing several conditions. Under
+<strong>GPL v3.0</strong>, for example, derivative works must carry the same licence, and any
+changes made from the source code must be listed.</p>
+<p>Choose a copyleft licence when you want derivatives to remain open (wiki
+guidance). Some journals require a specific licence on archiving: the
 <strong>Journal of Statistical Software</strong> requires a GPL.</p>
 </div>
 <div id="data-licences" class="section level4 unlisted unnumbered">
 <h4>Data licences<a class="anchor" aria-label="anchor" href="#data-licences"><i class="fas fa-link"></i></a>
 </h4>
 <p>Data and code are usually best licensed separately.</p>
-<p><strong>CC0</strong> places work in the public domain with no conditions, and is the standard
-choice for research data. <strong>Dryad only supports CC0</strong>, which is appropriate for
+<p><strong>CC0</strong> places work in the public domain with no conditions, and is common for
+research data. <strong>Dryad only supports CC0</strong>, which is appropriate for
 data but <strong>not well suited to code</strong>.</p>
 <p><strong>CC BY</strong> requires attribution and is also common for data.</p>
 <p>If your repository applies a single repository-wide licence, check whether it
@@ -319,10 +332,10 @@ suits <em>both</em> your data and your code before depositing them together.</p>
 <h4>How to attach it<a class="anchor" aria-label="anchor" href="#how-to-attach-it"><i class="fas fa-link"></i></a>
 </h4>
 <p>Either route is acceptable.</p>
-<p><strong>Add a licence file.</strong> Consult <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a>, decide which
-licence is most relevant to your project, copy the licence text, and save it as
-a <code>LICENSE</code> file, which is the spelling GitHub and Zenodo recognise, in your
-project alongside the code.</p>
+<p><strong>Add a licence file.</strong> Consult <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a>,
+decide which licence fits your project, copy the licence text, and save it in
+your project alongside the code as a <code>LICENSE</code> file, the name GitHub looks for
+(<span class="tada-cite" data-key="github-licensing">GitHub Docs n.d.</span>).</p>
 <p><strong>Let the repository do it.</strong> In some repositories, such as <strong>Zenodo</strong>, you can
 specify the licence when you archive the code. It is then attached to the
 project without you creating your own file.</p>
@@ -332,7 +345,8 @@ project without you creating your own file.</p>
 <div id="questions-that-determine-the-choice" class="section level3 unlisted unnumbered">
 <h3>Questions that determine the choice<a class="anchor" aria-label="anchor" href="#questions-that-determine-the-choice"><i class="fas fa-link"></i></a>
 </h3>
-<p>The TADA paper identifies the factors that should drive the decision:</p>
+<p>The TADA paper identifies the factors that should drive the decision
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>):</p>
 <ul>
 <li>
 <strong>Who is the audience?</strong> Is the code intended for commercial applications?</li>
@@ -346,7 +360,7 @@ the case to watch for.</li>
 </ul>
 <div class="tada-note">
 <p>The SORTEE guidelines require a licence for both data (Guideline 1.2) and code
-(Guideline 3.2), but they treat the two differently. For <strong>data</strong> they
+(Guideline 3.2; <span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>), but they treat the two differently. For <strong>data</strong> they
 deliberately <strong>do not recommend or enforce any specific type</strong>, so the
 requirement is simply that you choose and state one. For <strong>code</strong> they do
 express a preference: <em>“We suggest using permissive code licences whenever
@@ -384,7 +398,7 @@ possible, for example, MIT, BSD 2-Clause, GNU, and Apache”</em> (Stage 3.2).</
 
 </div>
 </div>
-<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><div class="chapter-nav">
 <div class="prev"><a href="available.html"><span class="header-section-number">4</span> A — Available</a></div>
 <div class="next"><a href="annotated.html"><span class="header-section-number">6</span> A — Annotated</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -422,7 +436,7 @@ possible, for example, MIT, BSD 2-Clause, GNU, and Apache”</em> (Stage 3.2).</
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 02 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 04 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -19,7 +19,18 @@
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
-<link rel="icon" type="image/png" href="assets/favicon.png">
+<!-- Set the colour theme before the page paints, so a dark-mode reader never
+         sees a flash of white. Uses the saved choice from the toggle
+         (assets/tada-theme.js) or, if there is none, the system setting. --><script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("tada-theme"); } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script><link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <!-- The site's type system (Inter body text, Fraunces display serif for
          headings, JetBrains Mono for code); style.css already declares these
@@ -90,11 +101,12 @@ and reproducibility).</p>
 Figure 6 from <span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al.</span>
 </p>
 </div>
-<p>Annotation, like Documentation, corresponds to the FAIR principle of Reusable —
-the TADA paper states that it does the same job “but rather than describing the
-code ‘externally’, provides clear commenting within each coding script.” It is
-the letter most often skipped, and it is also much less work done while writing
-than reconstructed afterwards.</p>
+<p>Annotation, like Documentation, corresponds to the FAIR principle of Reusable.
+The TADA paper says it does the same job “but rather than describing the code
+‘externally’, provides clear commenting within each coding script”
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>). It is the letter most often skipped, and it is much less work
+to do while writing than to reconstruct afterwards.
+<!-- [add source: Annotated is the TADA letter most often skipped] --></p>
 <div id="annotated-header" class="section level2" number="6.1">
 <h2>
 <span class="header-section-number">6.1</span> Script headers<a class="anchor" aria-label="anchor" href="#annotated-header"><i class="fas fa-link"></i></a>
@@ -107,17 +119,16 @@ script does and what it will produce.</p>
 <span><span class="co"># Fits Poisson GLMs of caterpillar counts against habitat and year, and</span></span>
 <span><span class="co"># produces the coefficients and figures reported in Table 2 and Figure 3</span></span>
 <span><span class="co"># of the manuscript. Run after 01_clean_data.R.</span></span></code></pre></div>
-<p>A header takes a reader from “what is this file for?” to an answer in the
-time it takes to read three lines, before they have opened a single chunk.</p>
+<p>A header answers “what is this file for?” in three lines, before the reader
+has opened a single chunk.</p>
 </div>
 <div id="annotated-chunks" class="section level2" number="6.2">
 <h2>
 <span class="header-section-number">6.2</span> Annotate chunks, not lines<a class="anchor" aria-label="anchor" href="#annotated-chunks"><i class="fas fa-link"></i></a>
 </h2>
-<p>The recommendation is explicit: <strong>annotate code chunks rather than every line of
-code.</strong> Line-by-line annotation is possible, but denoting and describing the
-relevant chunks in sufficient detail is usually more helpful for tracking what
-the code does and what it produces.</p>
+<p><strong>Annotate code chunks rather than every line of code.</strong> Line-by-line annotation
+is possible, but describing the relevant chunks in enough detail is usually more
+helpful for tracking what the code does and what it produces.</p>
 <p>A good chunk comment answers three questions:</p>
 <ol style="list-style-type: decimal">
 <li>
@@ -133,8 +144,8 @@ Abundance section”</em>, or <em>“Figure 5A”</em>
 </li>
 </ol>
 <p>The third question is <strong>signposting</strong>, and it is the part people leave out. It
-is what lets a reader, a data editor or a reviewer connect a number in your
-results section to the lines of code that produced it.</p>
+lets a reader, a data editor or a reviewer connect a number in your results
+section to the lines of code that produced it.</p>
 <div class="tada-compare">
 <div class="tada-before">
 <p>Before</p>
@@ -167,8 +178,8 @@ produces. There is no signposting at all.</p>
 <span class="header-section-number">6.3</span> Collapsible sections<a class="anchor" aria-label="anchor" href="#annotated-sections"><i class="fas fa-link"></i></a>
 </h2>
 <p>Certain comment markers create <strong>collapsible sections</strong> in the editor, which
-increases readability and helps structure a file. This is most useful in long
-scripts.</p>
+make a file easier to read and structure. This is most useful in
+long scripts.</p>
 <ul>
 <li>
 <strong><code>#####</code></strong> or <strong><code>#----</code></strong> in RStudio</li>
@@ -193,14 +204,14 @@ scripts.</p>
 </h2>
 <p>Rather than commenting a plain script, you can <strong>embed the code within a
 document alongside descriptive text</strong>. The TADA guidelines list this as an
-equally valid route to being annotated.</p>
+alternative route to annotated code.</p>
 <div class="tabset">
 <div id="rmarkdown-quarto" class="section level3 unlisted unnumbered">
 <h3>RMarkdown / Quarto<a class="anchor" aria-label="anchor" href="#rmarkdown-quarto"><i class="fas fa-link"></i></a>
 </h3>
 <p>Prose and code chunks sit in one file, with the output rendered inline. The
-narrative <em>is</em> the annotation, and the link between a paragraph of explanation
-and the code that follows it is unambiguous.</p>
+narrative <em>is</em> the annotation, and it is clear which paragraph explains which
+chunk.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="annotated.html#cb12-1" tabindex="-1"></a><span class="fu">## Caterpillar abundance</span></span>
 <span id="cb12-2"><a href="annotated.html#cb12-2" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="annotated.html#cb12-3" tabindex="-1"></a>We fitted a Poisson GLM of counts against habitat type, controlling for</span>
@@ -211,14 +222,14 @@ and the code that follows it is unambiguous.</p>
 <span id="cb12-8"><a href="annotated.html#cb12-8" tabindex="-1"></a><span class="in">m1 &lt;- glm(n ~ habitat + year, family = poisson, data = dat)</span></span>
 <span id="cb12-9"><a href="annotated.html#cb12-9" tabindex="-1"></a><span class="in">summary(m1)</span></span>
 <span id="cb12-10"><a href="annotated.html#cb12-10" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
-<p>The <a href="data-sharing.html#sortee">SORTEE guidelines</a> highlight a further advantage: presenting
+<p>The <a href="data-sharing.html#sortee">SORTEE guidelines</a> note a further advantage: presenting
 everything in one self-contained Markdown or Quarto document is <strong>very helpful
 for data editors and future readers</strong>
-(<span class="tada-cite" data-key="buckley-2025">Buckley et al. 2025</span>), because it makes the link between the
+(<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>; <span class="tada-cite" data-key="buckley-2025">Buckley et al. 2025</span>), because it makes the link between the
 code, the data and the resulting outputs explicit.</p>
-<p>A rendered <code>.html</code> or <code>.pdf</code> of your Quarto document is a useful <em>addition</em> to
-the archive, but archive the <code>.qmd</code> or <code>.Rmd</code> source as well. A rendered PDF on
-its own fails <a href="transferable.html#transferable">Transferable</a>.</p>
+<p>Wiki guidance: a rendered <code>.html</code> or <code>.pdf</code> of your Quarto document is a useful
+<em>addition</em> to the archive, but archive the <code>.qmd</code> or <code>.Rmd</code> source as well. A
+rendered PDF on its own fails <a href="transferable.html#transferable">Transferable</a>.</p>
 </div>
 <div id="jupyter-notebook" class="section level3 unlisted unnumbered">
 <h3>Jupyter Notebook<a class="anchor" aria-label="anchor" href="#jupyter-notebook"><i class="fas fa-link"></i></a>
@@ -239,8 +250,8 @@ archiving both the notebook and a plain <code>.py</code> export.</li>
 <div id="plain-scripts" class="section level3 unlisted unnumbered">
 <h3>Plain scripts<a class="anchor" aria-label="anchor" href="#plain-scripts"><i class="fas fa-link"></i></a>
 </h3>
-<p>A well-commented <code>.R</code> or <code>.py</code> file is perfectly adequate, and for many analyses
-it is the clearest option. The requirements are the same:</p>
+<p>A well-commented <code>.R</code> or <code>.py</code> file is adequate, and for many analyses it is
+the clearest option. The requirements are the same:</p>
 <ul>
 <li>logical chunks, marked with <code>#####</code> / <code>#----</code> (RStudio) or <code>#%%</code> (VSCode/Spyder)</li>
 <li>a comment on each chunk giving what it does, why it is needed and where the
@@ -257,18 +268,20 @@ and describe the order in the <a href="documented.html#documented-readme">README
 <span class="header-section-number">6.5</span> Readability<a class="anchor" aria-label="anchor" href="#annotated-readability"><i class="fas fa-link"></i></a>
 </h2>
 <p>Annotation works best on code that is already legible. The code review paper
-identifies four practices that make code reviewable, and they are set out in
+identifies four practices that make code reviewable (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>), set out in
 <a href="code-review.html#review-reviewable">Writing reviewable code</a>: calling packages explicitly by
 namespace, using relative file paths, removing redundant packages, and writing
 code with clear subheadings, intuitive comments and interpretable object names.</p>
 <p>Tooling can enforce a consistent style. <strong><code>styler</code></strong> (<span class="tada-cite" data-key="muller-walthert-2020">Müller &amp; Walthert 2020</span>)
 reformats R code to a standard style in one command, and <strong><code>pycodestyle</code></strong>
-(<span class="tada-cite" data-key="rocholl-2022">Rocholl 2022</span>) checks Python code against PEP 8, with <code>black</code> or <code>autopep8</code> to
-do the reformatting. Supported styles include Google and tidyverse in R, and
-PEP 8 in Python.</p>
+(<span class="tada-cite" data-key="rocholl-2022">Rocholl 2022</span>) checks Python code against PEP 8, with <code>black</code>
+(<span class="tada-cite" data-key="black">Python Software Foundation n.d.</span>) or <code>autopep8</code>
+(<span class="tada-cite" data-key="autopep8">autopep8 contributors n.d.</span>) to do the
+reformatting. Supported styles include Google and tidyverse in R, and PEP 8 in
+Python.</p>
 <div class="tada-note">
 <p>Style is not the same as annotation. A perfectly formatted script with no
-comments still fails the Annotated test. Comments and signposting matter more
+comments still fails the Annotated test; comments and signposting matter more
 than layout.</p>
 </div>
 </div>
@@ -276,14 +289,15 @@ than layout.</p>
 <h2>
 <span class="header-section-number">6.6</span> Annotating as you go<a class="anchor" aria-label="anchor" href="#annotated-asyougo"><i class="fas fa-link"></i></a>
 </h2>
-<p>The SORTEE guidelines make the point plainly. Annotating code as you produce it,
-not only with section descriptions but also with information about how the code
-runs and what output it produces, is <strong>far easier than going back and annotating
-at the end of the study</strong>. The same applies to the README: create it at the
-start and update it as files are added.</p>
-<p>The gain is not only in effort saved. Annotation written months after the fact is
-reconstructed from memory, and is more likely to describe what you intended the
-code to do than what it actually does.</p>
+<p>The SORTEE guidelines put it plainly: annotating code as you produce it, not
+only with section descriptions but also with information about how the code runs
+and what output it produces, is <strong>far easier than going back and annotating at
+the end of the study</strong> (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).
+The same applies to the README: create it at the start and update it as files
+are added.</p>
+<p>Effort is not the only reason (wiki guidance). Annotation written months after
+the fact is reconstructed from memory, and is more likely to describe what you
+meant the code to do than what it does.</p>
 </div>
 <div id="annotated-checklist" class="section level2" number="6.7">
 <h2>
@@ -314,7 +328,7 @@ code to do than what it actually does.</p>
 
 </div>
 </div>
-<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><div class="chapter-nav">
 <div class="prev"><a href="documented.html"><span class="header-section-number">5</span> D — Documented</a></div>
 <div class="next"><a href="data-sharing.html"><span class="header-section-number">7</span> Data &amp; code sharing</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -351,7 +365,7 @@ code to do than what it actually does.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 02 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 04 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

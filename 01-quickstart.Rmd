@@ -32,6 +32,8 @@ links to the chapter that explains it. Tick every box below and see what happens
 
 ### Code (TADA) {.unlisted .unnumbered}
 
+Condensed from the TADA guidelines.
+
 **Transferable** — [full chapter](#transferable)
 
 - [ ] Every script is saved with a standard code extension (`.R`, `.py`, `.cpp`, …), not inside a `.docx` or `.pdf`
@@ -66,7 +68,7 @@ links to the chapter that explains it. Tick every box below and see what happens
 **Before you submit** — [full chapter](#code-review)
 
 - [ ] Someone else has run the whole project from the archived files, successfully
-- [ ] `set.seed()` / `random.seed()` is set before anything stochastic (SORTEE, Stage 6 — not a TADA requirement; see [Code review](#code-review))
+- [ ] `set.seed()` / `random.seed()` is set before anything stochastic (SORTEE Stage 6, [Pick et al. 2026]{.tada-cite data-key="pick-2026"}; not a TADA requirement; see [Code review](#code-review))
 
 ### Data {.unlisted .unnumbered}
 
@@ -103,8 +105,8 @@ chapter, where every point is explained in full.
 The most useful check on this page is to **download your own archived deposit
 into a fresh, empty folder, ideally on a different machine, and run it.** Wiki
 guidance: this is the cheapest way to catch the failures the SORTEE guidelines
-group under Stage 5, meaning paths, missing packages and missing files. It will
-not catch the Stage 6 failures, such as stochasticity and version sensitivity,
+group under Stage 5: paths, missing packages and missing files ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). It
+will not catch Stage 6 failures, such as stochasticity and version sensitivity,
 which need a seed and a documented environment instead.
 :::
 
@@ -145,6 +147,9 @@ Most of the work is being done by two conventions.
 
 ## Three common causes of failure {#quickstart-mistakes}
 
+The first two rows come from the TADA guidelines; the third from the
+SORTEE guidelines ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}, Stage 6).
+
 | Mistake | Why it breaks | Fix |
 |---|---|---|
 | `setwd("C:/Users/ed/Desktop/analysis")` | The path exists on exactly one computer | Open the project through its `.Rproj` file, or start Python inside the project folder, and build paths with `here()` / `pyprojroot` |
@@ -152,10 +157,10 @@ Most of the work is being done by two conventions.
 | No `set.seed()` before a simulation or MCMC run | Results change every run, so nobody can tell a real mismatch from noise | Set a seed at the top of each independently runnable section |
 
 ::: {.tada-warn}
-The `.pdf` and `.docx` problem is worse than it appears. The characters that get
-substituted, such as curly apostrophes for straight ones and non-breaking spaces
-for ordinary ones, produce errors that are hard to see and slow to fix, because
-the code still *looks* right.
+The `.pdf` and `.docx` problem is easy to underestimate. Copying out of these
+formats can change characters (curly apostrophes for straight ones, say) and
+white space (non-breaking spaces for ordinary ones). The
+resulting errors are sometimes difficult to spot or time-consuming to fix, because the code still *looks* right.
 :::
 
 ## The README {#quickstart-readme}
@@ -175,11 +180,10 @@ there.
 
 
 If your target journal has a **data editor**, someone will check your deposit
-against something close to the [SORTEE guidelines](#sortee): six stages running
-from whether the code is archived under a licence through to whether the results
-actually come out the same. Reading that section tells you what those checks are
+against something close to the [SORTEE guidelines](#sortee) ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}): six
+stages running from whether the code is archived under a licence to whether the
+results come out the same. Reading that section tells you what those checks are
 before anyone applies them to your submission.
 
-If your journal has no data editor, the checks still matter. They simply fall to
-you and your co-authors instead, which is what [code review](#code-review)
-provides.
+If your journal has no data editor, the checks still matter; they fall to you
+and your co-authors instead, through [code review](#code-review).

@@ -6,20 +6,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Welcome | The TADA-Wiki</title>
 <meta name="author" content="a community wiki built on the TADA guidelines">
-<meta name="description" content="A practical wiki on best practice for sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated), with chapters on data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
+<meta name="description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="Welcome | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/">
-<meta property="og:description" content="A practical wiki on best practice for sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated), with chapters on data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
+<meta property="og:description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Welcome | The TADA-Wiki">
-<meta name="twitter:description" content="A practical wiki on best practice for sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated), with chapters on data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
+<meta name="twitter:description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
-<link rel="icon" type="image/png" href="assets/favicon.png">
+<!-- Set the colour theme before the page paints, so a dark-mode reader never
+         sees a flash of white. Uses the saved choice from the toggle
+         (assets/tada-theme.js) or, if there is none, the system setting. --><script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("tada-theme"); } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script><link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <!-- The site's type system (Inter body text, Fraunces display serif for
          headings, JetBrains Mono for code); style.css already declares these
@@ -85,10 +96,10 @@ Best practice for code sharing
 <h2>Code that still runs when someone else opens it<a class="anchor" aria-label="anchor" href="#code-that-still-runs-when-someone-else-opens-it"><i class="fas fa-link"></i></a>
 </h2>
 <p>Much of the analytical code behind published papers is never shared, and some
-of the code that is shared cannot be readily used or run. This Wiki sets out
-four practical practices to apply before you submit a project. Together, they
-provide a simple foundation for making analytical code more transferable,
-available, documented, and annotated.</p>
+of what is shared cannot readily be used or run. This
+wiki sets out four practices to apply before you submit a project. Together
+they make analytical code more transferable, available, documented and
+annotated.</p>
 </div>
 </div>
 <div class="tada-hero-figure">
@@ -98,26 +109,29 @@ available, documented, and annotated.</p>
 <div id="what-this-wiki-is" class="section level2 unnumbered">
 <h2>What this wiki is<a class="anchor" aria-label="anchor" href="#what-this-wiki-is"><i class="fas fa-link"></i></a>
 </h2>
-<p>Sharing code is essential for transparency and computational reproducibility,
-and journal policies increasingly require it. Even so, the proportion of papers
-in ecology and evolutionary biology that share code remains low, with reported
-rates ranging from roughly <span class="tada-cite" data-key="culina-2020,kimmel-2023,maitner-2024,kellner-2025,sanchez-tojar-2025,cooper-2026"><strong>5% to 35%</strong></span>,
-well behind the equivalent figures for open data. Code that is shared also
-frequently fails to run. In a review of over 9,000 R files archived in the
+<p>Sharing code supports transparency and computational reproducibility, and
+journal policies increasingly require it
+(<span class="tada-cite" data-key="ivimey-cook-2025-policy">Ivimey-Cook et al. 2025</span>).
+Even so, few papers in the field share code: reported rates range from roughly
+<span class="tada-cite" data-key="culina-2020,kimmel-2023,maitner-2024,kellner-2025,sanchez-tojar-2025,cooper-2026"><strong>5% to 35%</strong></span>,
+and code sharing still lags behind data sharing
+(<span class="tada-cite" data-key="ivimey-cook-2025-policy">Ivimey-Cook et al. 2025</span>).
+Shared code also often fails to run. Of over 9,000 R files archived in the
 Harvard Dataverse, <span class="tada-cite" data-key="trisovic-2022"><strong>74% failed to complete without error</strong></span>,
-and that figure only fell to <strong>56%</strong> after automated cleaning (removing local
-file paths and fixing library installation and loading). A study of species
-distribution and abundance papers abandoned its reproducibility assessment
-altogether because <span class="tada-cite" data-key="kellner-2025"><strong>93% of scripts</strong></span> either
-did not run or ran with errors.</p>
+and <strong>56%</strong> still failed after automated cleaning (removing local file paths
+and fixing library installation and loading). A study of species distribution
+and abundance papers abandoned its reproducibility assessment because
+<span class="tada-cite" data-key="kellner-2025"><strong>93% of scripts</strong></span> either did not run or
+ran with errors.</p>
 <p>One reason is that researchers are rarely taught how to archive analytical code.
+<!-- [add source: researchers are rarely taught how to archive analytical code] -->
 The resources that do exist are written largely for <em>software developers</em>, not
 for someone preparing a one-off analysis of a single dataset.</p>
 <p><strong>TADA</strong> (Transferable, Available, Documented, Annotated) is a set of simple
-guidelines aimed at that gap. This wiki expands them into a working reference and
-sets them alongside the practices that go with them: metadata, licences,
-repository choice, the SORTEE data and code quality control guidelines, and code
-review.</p>
+guidelines aimed at that gap. This
+wiki expands them into a working reference and adds the practices that go with
+them: metadata, licences, repository choice, the SORTEE data and code quality
+control guidelines, and code review.</p>
 </div>
 <div id="the-four-principles" class="section level2 unnumbered">
 <h2>The four principles<a class="anchor" aria-label="anchor" href="#the-four-principles"><i class="fas fa-link"></i></a>
@@ -146,9 +160,9 @@ result in the paper it produces.</span></p>
 </div>
 <div class="tada-key">
 <p>TADA is deliberately a <strong>minimum standard</strong>. Analytical code is usually written
-for one dataset and one study, and its job is to be a transparent, reproducible
-record of that analysis rather than reusable software. TADA sets the bar at what
-that job requires, and maps onto the FAIR principles as it does so.</p>
+for one dataset and one study, so it needs to be a transparent, reproducible
+record of that analysis, not reusable software. TADA is pitched at that level
+and maps onto the FAIR principles.</p>
 </div>
 </div>
 <div id="how-to-use-this-wiki" class="section level2 unnumbered">
@@ -201,25 +215,22 @@ that job requires, and maps onto the FAIR principles as it does so.</p>
 </tbody>
 </table></div>
 <p>Each chapter stands on its own, so you can arrive from a search and read only
-the section you need. Cross-references will take you to the rest.</p>
+the section you need. Cross-references lead to the rest.</p>
 </div>
 <div id="who-this-is-for" class="section level2 unnumbered">
 <h2>Who this is for<a class="anchor" aria-label="anchor" href="#who-this-is-for"><i class="fas fa-link"></i></a>
 </h2>
 <p>Researchers at any level of coding experience who need to share the code behind
-a paper. The examples use R and Python, since those are the languages most used
-in ecology and evolutionary biology, but the principles apply equally to
-workflow languages such as Snakemake, to compiled languages such as C++, and to
-disciplines well beyond ecology.</p>
+a paper. The examples use R and Python, languages widely used in ecology and
+evolutionary biology. The principles also apply to workflow languages such as
+Snakemake, compiled languages such as C++, and other disciplines.</p>
 <p>You do not need to know Git, Docker or unit testing to follow this wiki. Where
-those tools are useful they are mentioned, but always as optional extras rather
-than requirements.</p>
+those tools help, they are mentioned as optional.</p>
 </div>
 <div id="where-the-guidance-comes-from" class="section level2 unnumbered">
 <h2>Where the guidance comes from<a class="anchor" aria-label="anchor" href="#where-the-guidance-comes-from"><i class="fas fa-link"></i></a>
 </h2>
-<p>This wiki draws on three sources, all of which are worth reading in full and
-are linked by DOI below.</p>
+<p>This wiki draws on three sources, linked by DOI below.</p>
 <ul>
 <li><p><strong>Ivimey-Cook, E. R., Culina, A., Dimri, S., Grainger, M. J., Kar, F.,
 Lagisz, M., Moran, N. P., Nakagawa, S., Roche, D. G., Tattan, S.,
@@ -227,7 +238,7 @@ Sánchez-Tójar, A., Windecker, S. M., &amp; Pick, J. L.</strong> (2025). <em>TA
 to improve analytical code sharing for transparency and reproducibility.</em>
 EcoEvoRxiv. <a href="https://doi.org/10.32942/X2D93K" class="uri">https://doi.org/10.32942/X2D93K</a> (preprint; not yet peer
 reviewed).
-<br><em>Underpins</em> the four TADA principles and the
+<br>Source for the four TADA principles and the
 <a href="transferable.html#transferable">Transferable</a>, <a href="available.html#available">Available</a>,
 <a href="documented.html#documented">Documented</a> and <a href="annotated.html#annotated">Annotated</a> chapters.</p></li>
 <li><p><strong>Pick, J. L., Allen, B. J., Bachelot, B., Bairos-Novak, K. R., Brand, J. A.,
@@ -238,7 +249,7 @@ Paquet, M., Petitjean, Q., Sánchez-Tójar, A., van Dis, N. E., Wilson, L. A. B.
 &amp; Ivimey-Cook, E. R. (2026).</strong> <em>The SORTEE guidelines for data and code
 quality control in ecology and evolutionary biology.</em> <strong>Peer Community
 Journal 6: e20.</strong> <a href="https://doi.org/10.24072/pcjournal.687" class="uri">https://doi.org/10.24072/pcjournal.687</a>
-<br><em>Underpins</em> the <a href="data-sharing.html#sortee">SORTEE guidelines</a> section and most of
+<br>Source for the <a href="data-sharing.html#sortee">SORTEE guidelines</a> section and most of
 <a href="data-sharing.html#data-sharing">Data &amp; code sharing</a>.</p></li>
 <li><p><strong>Ivimey-Cook, E. R., Pick, J. L., Bairos-Novak, K. R., Culina, A.,
 Gould, E., Grainger, M., Marshall, B. M., Moreau, D., Paquet, M.,
@@ -246,13 +257,13 @@ Royauté, R., Sánchez-Tójar, A., Silva, I., &amp; Windecker, S. M. (2023).</st
 <em>Implementing code review in the scientific workflow: Insights from ecology
 and evolutionary biology.</em> <strong>Journal of Evolutionary Biology 36: 1347–1356.</strong>
 <a href="https://doi.org/10.1111/jeb.14230" class="uri">https://doi.org/10.1111/jeb.14230</a>
-<br><em>Underpins</em> the <a href="code-review.html#code-review">Code review</a> chapter.</p></li>
+<br>Source for the <a href="code-review.html#code-review">Code review</a> chapter.</p></li>
 </ul>
 <p>Full details, plus everything else cited, are in <a href="references.html#references">References</a>.</p>
 <div class="tada-note">
 <p>Where this wiki adds practical detail beyond the source papers, such as a worked
 README, a repository comparison table or a reviewer’s script, that material is
-marked as <strong>wiki guidance</strong> rather than presented as a finding of the papers.</p>
+marked as <strong>wiki guidance</strong>, not as a finding of the papers.</p>
 </div>
 </div>
 <div id="building-this-wiki" class="section level2 unnumbered">
@@ -264,7 +275,7 @@ template and how to add a chapter.</p>
 
 </div>
 </div>
-<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><div class="chapter-nav">
 <div class="empty"></div>
 <div class="next"><a href="quickstart.html"><span class="header-section-number">1</span> Start here</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -295,7 +306,7 @@ template and how to add a chapter.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 02 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 04 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

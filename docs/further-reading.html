@@ -6,20 +6,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>9 Further reading | The TADA-Wiki</title>
 <meta name="author" content="a community wiki built on the TADA guidelines">
-<meta name="description" content="Everything here is cited in one of the three source papers, or is a tool those papers recommend. The list is grouped by task rather than by author. Full bibliographic details for everything named...">
+<meta name="description" content="Everything here is cited in one of the three source papers, or is a tool those papers recommend. The list is grouped by task, not by author. Full bibliographic details for everything named on this...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="9 Further reading | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/further-reading.html">
-<meta property="og:description" content="Everything here is cited in one of the three source papers, or is a tool those papers recommend. The list is grouped by task rather than by author. Full bibliographic details for everything named...">
+<meta property="og:description" content="Everything here is cited in one of the three source papers, or is a tool those papers recommend. The list is grouped by task, not by author. Full bibliographic details for everything named on this...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="9 Further reading | The TADA-Wiki">
-<meta name="twitter:description" content="Everything here is cited in one of the three source papers, or is a tool those papers recommend. The list is grouped by task rather than by author. Full bibliographic details for everything named...">
+<meta name="twitter:description" content="Everything here is cited in one of the three source papers, or is a tool those papers recommend. The list is grouped by task, not by author. Full bibliographic details for everything named on this...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
-<link rel="icon" type="image/png" href="assets/favicon.png">
+<!-- Set the colour theme before the page paints, so a dark-mode reader never
+         sees a flash of white. Uses the saved choice from the toggle
+         (assets/tada-theme.js) or, if there is none, the system setting. --><script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("tada-theme"); } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script><link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <!-- The site's type system (Inter body text, Fraunces display serif for
          headings, JetBrains Mono for code); style.css already declares these
@@ -78,7 +89,7 @@
 <span class="header-section-number">9</span> Further reading<a class="anchor" aria-label="anchor" href="#further-reading"><i class="fas fa-link"></i></a>
 </h1>
 <p>Everything here is cited in one of the three source papers, or is a tool those
-papers recommend. The list is grouped by task rather than by author.</p>
+papers recommend. The list is grouped by task, not by author.</p>
 <div class="tada-note">
 <p>Full bibliographic details for everything named on this page, and everywhere
 else in the wiki, are in <a href="references.html#references">References</a>.</p>
@@ -95,8 +106,8 @@ else in the wiki, are in <a href="references.html#references">References</a>.</p
 analytical code sharing for transparency and reproducibility.</em> EcoEvoRxiv.
 <a href="https://doi.org/10.32942/X2D93K" class="uri">https://doi.org/10.32942/X2D93K</a> (preprint)</p>
 <p>The four guidelines, the evidence for why they are needed, and worked “How To”
-boxes for each letter with a pre-TADA and post-TADA code comparison. Includes a
-one-page checklist as supplementary Figure S1.</p>
+boxes for each letter with a pre-TADA and post-TADA code comparison. A checklist
+in several languages is supplementary Figure S1.</p>
 <p>Companion site: <a href="https://eivimeycook.github.io/TADA/" class="uri">https://eivimeycook.github.io/TADA/</a></p>
 </div>
 <div id="sortee-guidelines" class="section level3 unlisted unnumbered">
@@ -105,9 +116,9 @@ one-page checklist as supplementary Figure S1.</p>
 <p><strong>Pick, J. L., et al. (2026).</strong> <em>The SORTEE guidelines for data and code quality
 control in ecology and evolutionary biology.</em> Peer Community Journal 6: e20.
 <a href="https://doi.org/10.24072/pcjournal.687" class="uri">https://doi.org/10.24072/pcjournal.687</a></p>
-<p>Six stages of checks, written for journal data editors but the clearest
-statement anywhere of what “good enough to archive” means. Also contains
-suggestions for authors and for journals. Open access, CC BY 4.0.</p>
+<p>Six stages of checks, written for journal data editors, setting out what “good
+enough to archive” means. Also contains suggestions for authors and for
+journals. Open access, CC BY 4.0.</p>
 </div>
 <div id="code-review-1" class="section level3 unlisted unnumbered">
 <h3>Code review<a class="anchor" aria-label="anchor" href="#code-review-1"><i class="fas fa-link"></i></a>
@@ -126,36 +137,43 @@ publication, and a practical primer on starting a code club.</p>
 </h2>
 <ul>
 <li>
-<strong>Cooper, N. &amp; Hsing, P.-Y. (2025).</strong> <em>Guide to Reproducible Code.</em> British
-Ecological Society. The standard field guide, and the one the SORTEE
-guidelines point authors to directly. (An earlier edition is cited as Cooper
-2017 by the TADA paper and as Cooper &amp; Hsing 2017 by the code review paper.)</li>
+<strong>Cooper, N. &amp; Hsing, P.-Y. (2025).</strong> <em>Guide to Reproducible Code</em> (2nd edn).
+British Ecological Society. <a href="https://doi.org/10.5281/zenodo.16421733" class="uri">https://doi.org/10.5281/zenodo.16421733</a> The SORTEE guidelines point authors to it directly
+(<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</li>
 <li>
 <strong>Abdill, R. J., Talarico, E. &amp; Grieneisen, L. (2024).</strong> <em>A how-to guide for
-code sharing in biology.</em> PLOS Biology 22: e3002815.</li>
+code sharing in biology.</em> PLOS Biology 22: e3002815. <a href="https://doi.org/10.1371/journal.pbio.3002815" class="uri">https://doi.org/10.1371/journal.pbio.3002815</a>
+</li>
 <li>
 <strong>Filazzola, A. &amp; Lortie, C. (2022).</strong> <em>A call for clean code to effectively
-communicate science.</em> Methods in Ecology and Evolution 13: 2119–2128.</li>
+communicate science.</em> Methods in Ecology and Evolution 13: 2119–2128. <a href="https://doi.org/10.1111/2041-210X.13961" class="uri">https://doi.org/10.1111/2041-210X.13961</a>
+</li>
 <li>
 <strong>Sandve, G. K., Nekrutenko, A., Taylor, J. &amp; Hovig, E. (2013).</strong> <em>Ten Simple
 Rules for Reproducible Computational Research.</em> PLOS Computational Biology 9:
-e1003285.</li>
+e1003285. <a href="https://doi.org/10.1371/journal.pcbi.1003285" class="uri">https://doi.org/10.1371/journal.pcbi.1003285</a>
+</li>
 <li>
 <strong>Hunter-Zinck, H. et al. (2021).</strong> <em>Ten simple rules on writing clean and
 reliable open-source scientific software.</em> PLOS Computational Biology 17:
-e1009481.</li>
+e1009481. <a href="https://doi.org/10.1371/journal.pcbi.1009481" class="uri">https://doi.org/10.1371/journal.pcbi.1009481</a>
+</li>
 <li>
 <strong>Sweigart, A. (2020).</strong> <em>Beyond the Basic Stuff with Python: Best Practices
-for Writing Clean Code.</em> No Starch Press.</li>
+for Writing Clean Code.</em> No Starch Press. <a href="https://nostarch.com/beyond-basic-stuff-python" class="uri">https://nostarch.com/beyond-basic-stuff-python</a>
+</li>
 <li>
 <strong>Jiménez, R. C. et al. (2017).</strong> <em>Four simple recommendations to encourage
-best practices in research software.</em> F1000Research.</li>
+best practices in research software.</em> F1000Research.
+<a href="https://doi.org/10.12688/f1000research.11407.1" class="uri">https://doi.org/10.12688/f1000research.11407.1</a>
+</li>
 <li>
 <strong>Patel, B., Soundarajan, S., Ménager, H. &amp; Hu, Z. (2023).</strong> <em>Making
 Biomedical Research Software FAIR: Actionable Step-by-step Guidelines with a
-User-support Tool.</em> Scientific Data 10: 557.</li>
+User-support Tool.</em> Scientific Data 10: 557. <a href="https://doi.org/10.1038/s41597-023-02463-x" class="uri">https://doi.org/10.1038/s41597-023-02463-x</a>
+</li>
 </ul>
-<p>Also useful, and cited in the code review paper:
+<p>Also useful, and cited in the code review paper (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>):
 <a href="https://coderefinery.github.io/reproducible-research/" class="uri">https://coderefinery.github.io/reproducible-research/</a> and Lakens’ chapter on
 computational reproducibility,
 <a href="https://lakens.github.io/statistical_inferences/14-computationalreproducibility.html" class="uri">https://lakens.github.io/statistical_inferences/14-computationalreproducibility.html</a></p>
@@ -167,23 +185,27 @@ computational reproducibility,
 <ul>
 <li>
 <strong>Rokem, A. (2024).</strong> <em>Ten simple rules for scientific code review.</em> PLOS
-Computational Biology 20: e1012375.</li>
+Computational Biology 20: e1012375. <a href="https://doi.org/10.1371/journal.pcbi.1012375" class="uri">https://doi.org/10.1371/journal.pcbi.1012375</a>
+</li>
 <li>
 <strong>Hillemann, F., Burant, J. B., Culina, A. &amp; Vriend, S. J. G. (2025).</strong> <em>Code
 review in practice: A checklist for computational reproducibility and
-collaborative research in ecology and evolution.</em> EcoEvoRxiv.</li>
+collaborative research in ecology and evolution.</em> EcoEvoRxiv. <a href="https://doi.org/10.32942/X26S6P" class="uri">https://doi.org/10.32942/X26S6P</a>
+</li>
 <li>
 <strong>Indriasari, T. D., Luxton-Reilly, A. &amp; Denny, P. (2020).</strong> <em>A review of peer
 code review in higher education.</em> ACM Transactions on Computing Education 20:
-1–25.</li>
+1–25. <a href="https://doi.org/10.1145/3403935" class="uri">https://doi.org/10.1145/3403935</a>
+</li>
 <li>
 <strong>Fernández-Juricic, E. (2021).</strong> <em>Why sharing data and code during peer
 review can enhance behavioral ecology research.</em> Behavioral Ecology and
-Sociobiology 75: 103.</li>
+Sociobiology 75: 103. <a href="https://doi.org/10.1007/s00265-021-03036-x" class="uri">https://doi.org/10.1007/s00265-021-03036-x</a>
+</li>
 <li>
 <strong>Nakagawa, S. et al. (2023).</strong> <em>Method reporting with initials for
 transparency (MeRIT) promotes more granularity and accountability for author
-contributions.</em> Nature Communications 14: 1788. Covers how to credit a code
+contributions.</em> Nature Communications 14: 1788. <a href="https://doi.org/10.1038/s41467-023-37039-1" class="uri">https://doi.org/10.1038/s41467-023-37039-1</a> Covers how to credit a code
 reviewer in the methods section.</li>
 </ul>
 </div>
@@ -194,18 +216,20 @@ reviewer in the methods section.</li>
 <ul>
 <li>
 <strong>Wilkinson, M. D. et al. (2016).</strong> <em>The FAIR Guiding Principles for
-scientific data management and stewardship.</em> Scientific Data 3: 160018. The
+scientific data management and stewardship.</em> Scientific Data 3: 160018. <a href="https://doi.org/10.1038/sdata.2016.18" class="uri">https://doi.org/10.1038/sdata.2016.18</a> The
 original, for data.</li>
 <li>
 <strong>Barker, M. et al. (2022).</strong> <em>Introducing the FAIR Principles for research
-software.</em> Scientific Data 9: 622.</li>
+software.</em> Scientific Data 9: 622. <a href="https://doi.org/10.1038/s41597-022-01710-x" class="uri">https://doi.org/10.1038/s41597-022-01710-x</a>
+</li>
 <li>
 <strong>Chue Hong, N. P. et al. (2022).</strong> <em>FAIR Principles for Research Software
 (FAIR4RS Principles).</em> Zenodo. <a href="https://doi.org/10.15497/RDA00068" class="uri">https://doi.org/10.15497/RDA00068</a>
 </li>
 <li>
 <strong>Lamprecht, A.-L. et al. (2020).</strong> <em>Towards FAIR principles for research
-software.</em> Data Science 3: 37–59.</li>
+software.</em> Data Science 3: 37–59. <a href="https://doi.org/10.3233/DS-190026" class="uri">https://doi.org/10.3233/DS-190026</a>
+</li>
 <li>GO FAIR’s plain-language summary: <a href="https://www.go-fair.org/fair-principles/" class="uri">https://www.go-fair.org/fair-principles/</a>
 </li>
 </ul>
@@ -220,49 +244,57 @@ editor.</p>
 <li>
 <strong>Culina, A., van den Berg, I., Evans, S. &amp; Sánchez-Tójar, A. (2020).</strong> <em>Low
 availability of code in ecology: A call for urgent action.</em> PLOS Biology 18:
-e3000763.</li>
+e3000763. <a href="https://doi.org/10.1371/journal.pbio.3000763" class="uri">https://doi.org/10.1371/journal.pbio.3000763</a>
+</li>
 <li>
 <strong>Trisovic, A., Lau, M. K., Pasquier, T. &amp; Crosas, M. (2022).</strong> <em>A large-scale
-study on research code quality and execution.</em> Scientific Data 9: 60. The
+study on research code quality and execution.</em> Scientific Data 9: 60. <a href="https://doi.org/10.1038/s41597-022-01143-6" class="uri">https://doi.org/10.1038/s41597-022-01143-6</a> The
 source of the 74% and 56% figures.</li>
 <li>
 <strong>Kellner, K. F., Doser, J. W. &amp; Belant, J. L. (2025).</strong> <em>Functional R code is
-rare in species distribution and abundance papers.</em> Ecology 106: e4475. The
+rare in species distribution and abundance papers.</em> Ecology 106: e4475. <a href="https://doi.org/10.1002/ecy.4475" class="uri">https://doi.org/10.1002/ecy.4475</a> The
 source of the 93% figure.</li>
 <li>
 <strong>Ivimey-Cook, E. R. et al. (2025).</strong> <em>From policy to practice: Progress
-towards data- and code-sharing in ecology and evolution.</em> EcoEvoRxiv. The
+towards data- and code-sharing in ecology and evolution.</em> Proceedings of the
+Royal Society B 292: 20251394. <a href="https://doi.org/10.1098/rspb.2025.1394" class="uri">https://doi.org/10.1098/rspb.2025.1394</a> The
 source of the 15%-to-88% journal-policy figures.</li>
 <li>
 <strong>Kambouris, S., Wilkinson, D. P., Smith, E. T. &amp; Fidler, F. (2024).</strong>
 <em>Computationally reproducing results from meta-analyses in ecology and
-evolutionary biology using shared code and data.</em> PLOS ONE 19: e0300333.</li>
+evolutionary biology using shared code and data.</em> PLOS ONE 19: e0300333. <a href="https://doi.org/10.1371/journal.pone.0300333" class="uri">https://doi.org/10.1371/journal.pone.0300333</a>
+</li>
 <li>
 <strong>Gomes, D. G. E. et al. (2022).</strong> <em>Why don’t we share data and code?
 Perceived barriers and benefits to public archiving practices.</em> Proceedings of
-the Royal Society B 289: 20221113.</li>
+the Royal Society B 289: 20221113. <a href="https://doi.org/10.1098/rspb.2022.1113" class="uri">https://doi.org/10.1098/rspb.2022.1113</a>
+</li>
 <li>
 <strong>Maitner, B. et al. (2024).</strong> <em>Code sharing in ecology and evolution
 increases citation rates but remains uncommon.</em> Ecology and Evolution 14:
-e70030.</li>
+e70030. <a href="https://doi.org/10.1002/ece3.70030" class="uri">https://doi.org/10.1002/ece3.70030</a>
+</li>
 <li>
 <strong>Vandewalle, P. (2012).</strong> <em>Code Sharing Is Associated with Research Impact in
-Image Processing.</em> Computing in Science &amp; Engineering 14: 42–47.</li>
+Image Processing.</em> Computing in Science &amp; Engineering 14: 42–47. <a href="https://doi.org/10.1109/MCSE.2012.63" class="uri">https://doi.org/10.1109/MCSE.2012.63</a>
+</li>
 <li>
 <strong>McKiernan, E. C. et al. (2016).</strong> <em>How open science helps researchers
-succeed.</em> eLife 5: e16800.</li>
+succeed.</em> eLife 5: e16800. <a href="https://doi.org/10.7554/eLife.16800" class="uri">https://doi.org/10.7554/eLife.16800</a>
+</li>
 <li>
 <strong>Jenkins, G. B. et al. (2023).</strong> <em>Reproducibility in ecology and evolution:
-Minimum standards for data and code.</em> Ecology and Evolution 13: e9961.</li>
+Minimum standards for data and code.</em> Ecology and Evolution 13: e9961. <a href="https://doi.org/10.1002/ece3.9961" class="uri">https://doi.org/10.1002/ece3.9961</a>
+</li>
 <li>
 <strong>Archmiller, A. A. et al. (2020).</strong> <em>Computational reproducibility in The
 Wildlife Society’s flagship journals.</em> The Journal of Wildlife Management 84:
-1012–1017. The source of the conclusion-and-numbers criterion used in
+1012–1017. <a href="https://doi.org/10.1002/jwmg.21855" class="uri">https://doi.org/10.1002/jwmg.21855</a> The source of the conclusion-and-numbers criterion used in
 <a href="code-review.html#review-four-rs">code review</a>.</li>
 <li>
 <strong>Hardwicke, T. E. et al. (2021).</strong> <em>Analytic reproducibility in articles
 receiving open data badges at the journal Psychological Science: An
-observational study.</em> Royal Society Open Science 8: 201494. The source of the
+observational study.</em> Royal Society Open Science 8: 201494. <a href="https://doi.org/10.1098/rsos.201494" class="uri">https://doi.org/10.1098/rsos.201494</a> The source of the
 percentage-error criterion.</li>
 </ul>
 </div>
@@ -286,48 +318,48 @@ percentage-error criterion.</li>
 <tbody>
 <tr class="odd">
 <td>
-<strong><code>here</code></strong> (Müller &amp; Bryan 2020)</td>
+<strong><code>here</code></strong> (<span class="tada-cite" data-key="muller-bryan-2020">Müller &amp; Bryan 2020</span>)</td>
 <td>Relative file paths; see <a href="transferable.html#transferable-paths">Transferable</a>
 </td>
 </tr>
 <tr class="even">
 <td>
-<strong><code>renv</code></strong> (Ushey &amp; Wickham 2023)</td>
+<strong><code>renv</code></strong> (<span class="tada-cite" data-key="ushey-2023">Ushey &amp; Wickham 2023</span>)</td>
 <td>Project-level package environments; replaces <code>packrat</code>. Beyond the scope of TADA.</td>
 </tr>
 <tr class="odd">
 <td>
-<strong><code>groundhog</code></strong> (Simonsohn &amp; Gruson 2023)</td>
+<strong><code>groundhog</code></strong> (<span class="tada-cite" data-key="simonsohn-2023">Simonsohn &amp; Gruson 2023</span>)</td>
 <td>Load packages as they were on a given date. Beyond the scope of TADA.</td>
 </tr>
 <tr class="even">
 <td>
-<strong><code>styler</code></strong> (Müller &amp; Walthert 2020)</td>
+<strong><code>styler</code></strong> (<span class="tada-cite" data-key="muller-walthert-2020">Müller &amp; Walthert 2020</span>)</td>
 <td>Reformat code to a standard style (tidyverse, Google)</td>
 </tr>
 <tr class="odd">
 <td>
-<strong><code>testthat</code></strong> (Wickham 2011)</td>
+<strong><code>testthat</code></strong> (<span class="tada-cite" data-key="wickham-2011">Wickham 2011</span>)</td>
 <td>Unit testing</td>
 </tr>
 <tr class="even">
 <td>
-<strong><code>targets</code></strong> (Landau 2021)</td>
+<strong><code>targets</code></strong> (<span class="tada-cite" data-key="landau-2021">Landau 2021</span>)</td>
 <td>Pipeline management; reproducibility hashes for expensive steps</td>
 </tr>
 <tr class="odd">
 <td>
-<strong><code>workflowr</code></strong> (Blischak et al. 2019)</td>
+<strong><code>workflowr</code></strong> (<span class="tada-cite" data-key="blischak-2019">Blischak et al. 2019</span>)</td>
 <td>Reproducible project scaffolding and websites</td>
 </tr>
 <tr class="even">
 <td>
-<strong><code>codemeta</code></strong> (Boettiger 2017)</td>
+<strong><code>codemeta</code></strong> (<span class="tada-cite" data-key="boettiger-2017">Boettiger 2017</span>)</td>
 <td>Generate standard code metadata</td>
 </tr>
 <tr class="odd">
 <td>
-<strong><code>dataReporter</code></strong> (Petersen &amp; Ekstrøm 2019)</td>
+<strong><code>dataReporter</code></strong> (<span class="tada-cite" data-key="petersen-2019">Petersen &amp; Ekstrøm 2019</span>)</td>
 <td>Document and screen data quality</td>
 </tr>
 <tr class="even">
@@ -356,42 +388,42 @@ percentage-error criterion.</li>
 <tbody>
 <tr class="odd">
 <td>
-<strong><code>pyprojroot</code></strong> (Chen 2023)</td>
+<strong><code>pyprojroot</code></strong> (<span class="tada-cite" data-key="chen-2023">Chen 2023</span>)</td>
 <td>Relative file paths; the <code>here</code> equivalent</td>
 </tr>
 <tr class="even">
 <td>
-<strong><code>poetry</code></strong> (Eustace 2023)</td>
+<strong><code>poetry</code></strong> (<span class="tada-cite" data-key="eustace-2023">Eustace 2023</span>)</td>
 <td>Dependency management and packaging. Beyond the scope of TADA.</td>
 </tr>
 <tr class="odd">
 <td>
-<strong><code>pipenv</code></strong> (Pipenv Maintainer Team 2023)</td>
+<strong><code>pipenv</code></strong> (<span class="tada-cite" data-key="pipenv-2023">Pipenv Maintainer Team 2023</span>)</td>
 <td>Reproducible environments. Beyond the scope of TADA.</td>
 </tr>
 <tr class="even">
 <td>
-<strong><code>pycodestyle</code></strong> (Rocholl 2022)</td>
+<strong><code>pycodestyle</code></strong> (<span class="tada-cite" data-key="rocholl-2022">Rocholl 2022</span>)</td>
 <td>PEP 8 style checking</td>
 </tr>
 <tr class="odd">
 <td>
-<strong><code>pytest</code></strong> (Okken 2022)</td>
+<strong><code>pytest</code></strong> (<span class="tada-cite" data-key="okken-2022">Okken 2022</span>)</td>
 <td>Unit testing</td>
 </tr>
 <tr class="even">
 <td>
-<strong><code>luigi</code></strong> (The Luigi Authors 2023)</td>
+<strong><code>luigi</code></strong> (<span class="tada-cite" data-key="luigi-authors-2023">The Luigi Authors 2023</span>)</td>
 <td>Pipeline management</td>
 </tr>
 <tr class="odd">
 <td>
-<strong><code>CodeMetaPy</code></strong> (van Gompel 2023)</td>
+<strong><code>CodeMetaPy</code></strong> (<span class="tada-cite" data-key="van-gompel-2023">van Gompel 2023</span>)</td>
 <td>Code metadata</td>
 </tr>
 <tr class="even">
 <td>
-<strong><code>cookiecutter</code></strong> (Feldroy 2022)</td>
+<strong><code>cookiecutter</code></strong> (<span class="tada-cite" data-key="feldroy-2022">Feldroy 2022</span>)</td>
 <td>Project templates</td>
 </tr>
 <tr class="odd">
@@ -408,8 +440,8 @@ percentage-error criterion.</li>
 <div id="environments-pipelines" class="section level3 unlisted unnumbered">
 <h3>Environments &amp; pipelines<a class="anchor" aria-label="anchor" href="#environments-pipelines"><i class="fas fa-link"></i></a>
 </h3>
-<p>Beyond the scope of TADA, but recommended where you have the appetite. This
-covers all three categories the TADA paper names as beyond scope: dependency
+<p>Beyond the scope of TADA, but worth using if you have the time.
+This covers all three categories the TADA paper places beyond scope: dependency
 and environment managers (<code>renv</code>, <code>groundhog</code>, <code>conda</code>, <code>poetry</code>, <code>pipenv</code> —
 see the R and Python tabs), containerisation and workflow managers (below).</p>
 <div class="inline-table"><table class="table table-sm">
@@ -424,22 +456,22 @@ see the R and Python tabs), containerisation and workflow managers (below).</p>
 <tbody>
 <tr class="odd">
 <td>
-<strong>Docker</strong> (Merkel 2014; Boettiger 2015)</td>
+<strong>Docker</strong> (<span class="tada-cite" data-key="merkel-2014">Merkel 2014</span>; <span class="tada-cite" data-key="boettiger-2015">Boettiger 2015</span>)</td>
 <td>Containerisation; a complete, portable software environment</td>
 </tr>
 <tr class="even">
 <td>
-<strong>Apptainer</strong>, formerly Singularity (Kurtzer et al. 2017)</td>
+<strong>Apptainer</strong>, formerly Singularity (<span class="tada-cite" data-key="kurtzer-2017">Kurtzer et al. 2017</span>)</td>
 <td>Containerisation, common on HPC systems</td>
 </tr>
 <tr class="odd">
 <td>
-<strong>Snakemake</strong> (Köster &amp; Rahmann 2012)</td>
+<strong>Snakemake</strong> (<span class="tada-cite" data-key="koster-2012">Köster &amp; Rahmann 2012</span>)</td>
 <td>Workflow management; defines step order and dependencies</td>
 </tr>
 <tr class="even">
 <td>
-<strong>Nextflow</strong> (Di Tommaso et al. 2017)</td>
+<strong>Nextflow</strong> (<span class="tada-cite" data-key="di-tommaso-2017">Di Tommaso et al. 2017</span>)</td>
 <td>Workflow management</td>
 </tr>
 </tbody>
@@ -515,7 +547,7 @@ see the R and Python tabs), containerisation and workflow managers (below).</p>
 <td><a href="https://osf.io/" class="uri">https://osf.io/</a></td>
 </tr>
 <tr class="odd">
-<td>Choosing a repository (Harvard Longwood Medical Area Research Data Management Working Group 2023)</td>
+<td>Choosing a repository (<span class="tada-cite" data-key="harvard-2023">Harvard Longwood Medical Area Research Data Management Working Group 2023</span>)</td>
 <td><a href="https://doi.org/10.5281/zenodo.10651775" class="uri">https://doi.org/10.5281/zenodo.10651775</a></td>
 </tr>
 <tr class="even">
@@ -532,7 +564,8 @@ see the R and Python tabs), containerisation and workflow managers (below).</p>
 <ul>
 <li>
 <strong>SORTEE</strong>, the Society for Open, Reliable, and Transparent Ecology and
-Evolutionary Biology. Runs code clubs that are open to join.
+Evolutionary Biology. Runs code clubs for SORTEE members
+(<span class="tada-cite" data-key="sortee-code-club">SORTEE n.d.</span>).
 <a href="https://www.sortee.org/" class="uri">https://www.sortee.org/</a>
 </li>
 <li>
@@ -544,7 +577,7 @@ Evolutionary Biology. Runs code clubs that are open to join.
 
 </div>
 </div>
-<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><div class="chapter-nav">
 <div class="prev"><a href="code-review.html"><span class="header-section-number">8</span> Code review</a></div>
 <div class="next"><a href="contribute.html"><span class="header-section-number">10</span> Contribute</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -589,7 +622,7 @@ Evolutionary Biology. Runs code clubs that are open to join.
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 02 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 04 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

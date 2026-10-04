@@ -1,7 +1,7 @@
 # Contribute {#contribute}
 
-This wiki is meant to be added to. If you have a worked example, a topic you think needs adding, a
-coding language-specific tip, or a correction, here is how to add it to the wiki.
+This wiki is meant to be added to. If you have a worked example, a missing
+topic, a language-specific tip or a correction, here is how to add it.
 
 ::: {.tada-key}
 Copy the page template, write your page, add its filename to `_bookdown.yml`,
@@ -37,7 +37,9 @@ run `Rscript render.R`, and open a pull request. For a small fix, use the
    ```
 
    Open `docs/index.html`. If you cited anything, add it to
-   `11-references.Rmd`, alphabetically by first author.
+   `11-references.Rmd`, alphabetically by first author, and give it an entry
+   in `assets/tada-citations.js` so the hover card works. Cite it in the text
+   as `[Author Year]{.tada-cite data-key="author-year"}`.
 
 5. **Open a pull request** saying what you added and where it came from.
 
@@ -46,8 +48,8 @@ run `Rscript render.R`, and open a pull request. For a small fix, use the
 ::: {.tada-warn}
 **Separate what the papers say from what you are adding.** Cite anything from a
 source paper by author and year; label your own practical advice **wiki
-guidance**, as this wiki does throughout. Keeping the two apart is what makes the
-wiki trustworthy.
+guidance**, as this wiki does throughout. Keeping the two apart lets readers
+check every claim.
 :::
 
 ## Templates {#contribute-templates}

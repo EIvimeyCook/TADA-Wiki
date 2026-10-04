@@ -10,9 +10,8 @@ a journal will check.
 
 ## What archiving is for {#sharing-goals}
 
-This is worth stating explicitly, because the three goals pull in slightly
-different directions and different practices serve each one. The SORTEE
-guidelines set out three:
+The SORTEE guidelines set out three goals ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). They pull in slightly
+different directions, and different practices serve each one.
 
 ::: {.tada-cards}
 ::: {.tada-card .neutral}
@@ -25,9 +24,8 @@ experiments**.]{.tada-gloss}
 
 ::: {.tada-card .neutral}
 [2]{.tada-letter} [Transparency]{.tada-word}
-[Readers can see what was actually done to obtain the reported results. Open
-data will not stop fabrication, but it makes fabrication far easier to
-detect.]{.tada-gloss}
+[Readers can see what was done to obtain the reported results. Open data will
+not stop fabrication, but it makes fabrication much easier to detect.]{.tada-gloss}
 :::
 
 ::: {.tada-card .neutral}
@@ -37,7 +35,7 @@ code.]{.tada-gloss}
 :::
 :::
 
-Two further points from the guidelines are easy to miss:
+Two further points from the guidelines ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}):
 
 - **Data are typically collected with public money**, and so can be seen as a
   public good that should not be lost when a researcher changes job or a
@@ -50,8 +48,8 @@ Two further points from the guidelines are easy to miss:
 
 ## Vocabulary {#sharing-glossary}
 
-Key terms from the SORTEE glossary (Table 1), because these terms are used
-loosely and the distinctions matter when someone asks you for "the raw data".
+Key terms from the SORTEE glossary (Table 1; [Pick et al. 2026]{.tada-cite data-key="pick-2026"}). These terms are used
+loosely, and the distinctions matter when someone asks you for "the raw data".
 
 | Term | Meaning |
 |---|---|
@@ -66,15 +64,15 @@ loosely and the distinctions matter when someone asks you for "the raw data".
 
 ::: {.tada-note}
 Transcribing data from a written to a digital format, and the error-checking
-that follows, does **not** count as processing. A typed-up field sheet is still
-raw data.
+that follows, does **not** count as processing. A typed-up field
+sheet is still raw data.
 :::
 
 ## What data to share {#sharing-what}
 
-Ideally, **both raw and processed data**. The SORTEE guidelines state that
-ideally both raw and processed data are provided, and allow three acceptable
-forms, with (b) and (c) as fallbacks where a full raw upload is not possible:
+Ideally, **both raw and processed data**. The SORTEE guidelines allow three
+acceptable forms, with (b) and (c) as fallbacks where a full raw upload is not
+possible (Guideline 1.3; [Pick et al. 2026]{.tada-cite data-key="pick-2026"}):
 
 **a)** Raw data, along with the processed data and/or the code to prepare the
 data for analysis.
@@ -85,10 +83,9 @@ a full raw data upload is not possible.
 **c)** Processed and filtered data with a **detailed description of how to both
 obtain and process or filter the raw data**.
 
-Raw data matter because without them nobody can check the filtering and
-processing steps, which is where undetected errors most often originate. Option
-(c) is acceptable, but it places the whole burden on your written description
-being complete.
+Raw data matter because filtering and processing are prone to mistakes, and
+without the raw data nobody can check those steps. Option (c) is
+acceptable, but it relies entirely on your written description being complete.
 
 ## File formats {#sharing-formats}
 
@@ -100,8 +97,10 @@ operating systems.
 
 ### Data formats {.unlisted .unnumbered}
 
-**Prefer simple text-based formats.** `.csv`, `.tsv` and `.txt` can be used by
-more software, across more systems, than anything else.
+**Prefer simple text-based formats.** `.csv`, `.tsv` and `.txt` are the most
+interoperable formats.
+
+All verdicts below are from the SORTEE guidelines ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 
 | Format | Verdict |
 |---|---|
@@ -121,9 +120,9 @@ they are judging different things: this table concerns **data** files, where
 files, where an `.sps` syntax file can at least be opened in a text editor.
 :::
 
-Where there is genuinely no alternative, as with data collected by proprietary
-software, provide the non-interoperable file **alongside interoperable extracted
-data**, with a clear description of the conversion process in the metadata,
+Where there is no alternative, as with data collected by proprietary software,
+provide the non-interoperable file **alongside interoperable extracted data**,
+with a clear description of the conversion process in the metadata,
 **including the software version used**.
 
 ### Code formats {.unlisted .unnumbered}
@@ -134,17 +133,16 @@ such as VS Code: `.R`, `.py`, `.cpp`, and so on. See
 
 **Code must not be provided as a `.pdf` or pasted into a Word document.** Even
 where the script can be copied and pasted out, these programs often insert
-additional characters or spacing that the analysis software misinterprets. The
-canonical example is Python code that fails to run because the indentation was
-mangled.
+additional characters or spacing that the analysis software misinterprets, such
+as Python code that fails to run because the indentation was mangled.
 
 :::
 
 ## Metadata: what a README must contain {#sharing-metadata}
 
 The [Documented](#documented-readme) chapter covers the code README in detail.
-The SORTEE guidelines set out what is needed on the **data** side, and the two
-overlap heavily.
+The SORTEE guidelines set out what is needed on the **data** side
+([Pick et al. 2026]{.tada-cite data-key="pick-2026"}), and the two overlap heavily.
 
 **General information**
 
@@ -171,8 +169,9 @@ with one column for variable names and another for their descriptions.
 ::: {.tada-key}
 The bar the guidelines set for both data and code metadata is the word
 **"adequate"**: metadata detailed enough that **anyone can understand the data,
-or the analysis code, without needing to read the manuscript**. A README that
-only makes sense alongside your methods section does not meet that bar.
+or the analysis code, without needing to read the manuscript** ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). A
+README that only makes sense alongside your methods section does not meet that
+bar.
 :::
 
 ::: {.tada-note}
@@ -183,13 +182,13 @@ and filled in then.
 **On LLMs.** The SORTEE guidelines add that the README should state **whether
 and how the authors have used large language models in code generation**
 ([Resnik & Hosseini 2025]{.tada-cite data-key="resnik-2025"}), while
-noting that a data editor is unlikely to be able to verify this.
+noting that a data editor is unlikely to be able to verify this ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 
 ## Licences {#sharing-licences}
 
-Without a licence, data and code **cannot be legally reused** in many
-circumstances, depending on jurisdiction. Most researchers have little knowledge
-of licences, so this is a common and consequential gap.
+Without a licence, data **cannot be legally reused** in many circumstances,
+depending on jurisdiction, and most researchers know little about licences. The same applies
+to code.
 
 ::: {.tabset}
 
@@ -211,16 +210,17 @@ Software licences rather than Creative Commons. Chooser:
 
 | Licence | What it means |
 |---|---|
-| **MIT** | Very permissive: copy, modify, merge, publish and share, with the licence notice retained |
-| **BSD 2-Clause / 3-Clause** | Permissive, similar in spirit to MIT |
-| **Apache 2.0** | Permissive, with an explicit patent grant |
+| **MIT** | Very permissive: copy, modify, merge, publish and share, with the licence notice retained ([choosealicense.com n.d.]{.tada-cite data-key="choosealicense"}) |
+| **BSD 2-Clause / 3-Clause** | Permissive, very similar to MIT ([choosealicense.com n.d.]{.tada-cite data-key="choosealicense"}) |
+| **Apache 2.0** | Permissive, with an explicit patent grant ([choosealicense.com n.d.]{.tada-cite data-key="choosealicense"}) |
 | **GPL v3.0** | Copyleft: derivatives must carry the same licence, and changes from the source must be listed |
 
 The SORTEE guidelines suggest permissive code licences wherever possible,
-naming MIT, BSD 2-Clause, GNU and Apache (Stage 3.2).
+naming MIT, BSD 2-Clause, GNU and Apache (Stage 3.2; [Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 
-CC0 is **not well suited to code**, which is why Dryad, being CC0-only, points
-code deposits at Zenodo.
+CC0 is **not well suited to code**, which is why Dryad, being
+CC0-only, sends code deposits to Zenodo
+([Lowenberg 2021]{.tada-cite data-key="lowenberg-2021"}).
 
 ### Choosing {.unlisted .unnumbered}
 
@@ -250,13 +250,12 @@ it in the repository's deposit form, as Zenodo allows.
 The **SORTEE guidelines for data and code quality control** ([Pick et al. 2026]{.tada-cite data-key="pick-2026"},
 *Peer Community Journal* 6: e20) are written for **data editors**, the editorial
 role responsible for screening and quality-controlling data and code at a
-journal. They are worth reading as an author precisely because they tell you
-what will be checked.
+journal. They are worth reading as an author because they tell you what will be
+checked.
 
 ::: {.tada-note}
 **The limits of quality control.** It is about ensuring archived data and code
-meet minimum standards: complete, usable, documented and runnable. It is
-explicitly **not** a code review. A data editor does not critique your
+meet minimum standards: complete, usable, documented and runnable. It is explicitly **not** a code review. A data editor does not critique your
 analytical techniques, and it is not their role to review, interpret or correct
 your code, nor to check its reliability
 ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}; [Hillemann et al. 2025]{.tada-cite data-key="hillemann-2025"}). That is what
@@ -265,7 +264,7 @@ your code, nor to check its reliability
 
 ### The six stages {#sortee-stages}
 
-Table 2 of the paper is reproduced in full below.
+Table 2 of the paper ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}) is reproduced in full below.
 
 | Stage | Guideline |
 |---|---|
@@ -301,7 +300,7 @@ exactly:
 
 ### Common failures at each stage {#sortee-common-failures}
 
-Drawn from the guidelines' own account of common problems.
+Drawn from the guidelines' own account of common problems ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 
 **Stage 5, code runs.** The most frequent causes of failure are:
 
@@ -316,8 +315,8 @@ Drawn from the guidelines' own account of common problems.
 Data editors are told to be pragmatic about paths. An absolute path, or a way of
 specifying relative paths they are not familiar with, **should not** be a reason
 to return the code, provided they can make it run with minor changes. It is
-logged as a **minor error**. Every other error is the author's to correct, and
-it is explicitly not the data editor's job to make your code run.
+logged as a **minor error**. Every other error is the author's to correct: it is
+not the data editor's job to make your code run.
 :::
 
 **Stage 6, results reproduce.** In most cases exact reproducibility is expected:
@@ -348,21 +347,22 @@ cases:
 - Consider non-proprietary execution routes, such as GNU Octave for MATLAB code
   or MATLAB Compiler for standalone applications, but test compatibility and
   note any limitations in the metadata
-- Build systems such as **`targets`** (R) or **Snakemake** can provide
-  reproducibility signatures (hashes) for computationally intensive steps, along
-  with intermediate data objects
+- Build systems such as **`targets`** (R; [Landau 2021]{.tada-cite data-key="landau-2021"})
+  or **Snakemake** ([Köster & Rahmann 2012]{.tada-cite data-key="koster-2012"})
+  can provide reproducibility signatures (hashes) for computationally intensive
+  steps, along with intermediate data objects
 
 ## Advice for authors {#sharing-authors}
 
-The guidelines' own suggestions, which are the highest-return habits here.
+The guidelines' own suggestions ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 
 **1. Adhere to the guidelines from the beginning of the study.** Making a
-project accessible and reproducible at the *end* is a great deal of work. Create
+project accessible and reproducible at the *end* is a lot of work. Create
 a clear directory structure and a README at the start, and update the metadata
 as new files are added. Annotate code as you produce it. Working with
 reproducibility in mind also makes it far more likely that someone else can
-reuse the project and successfully run the code, which matters a great deal if
-several people will touch the study over its lifetime.
+reuse the project and run the code, which matters if several people will work
+on the study over its lifetime.
 
 **2. Prepare data and code before submission to any journal.** Having it ready
 minimises problems during submission and quality control, and makes transfer to
@@ -373,7 +373,8 @@ co-author before submitting. They can check that the code runs with the data in
 the structure provided, that the metadata is adequate, that data and code match
 the manuscript, and that results reproduce. Co-authors are also more likely to
 spot mistakes *in* the code, because they know the study and the data, and data
-editors do not check code reliability. See [Code review](#code-review).
+editors do not check code reliability. See
+[Code review](#code-review).
 
 **4. Consider Markdown or Quarto.** Presenting everything in one self-contained
 document is very helpful for data editors and future readers

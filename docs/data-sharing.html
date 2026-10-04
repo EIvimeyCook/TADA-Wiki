@@ -19,7 +19,18 @@
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
-<link rel="icon" type="image/png" href="assets/favicon.png">
+<!-- Set the colour theme before the page paints, so a dark-mode reader never
+         sees a flash of white. Uses the saved choice from the toggle
+         (assets/tada-theme.js) or, if there is none, the system setting. --><script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("tada-theme"); } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script><link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <!-- The site's type system (Inter body text, Fraunces display serif for
          headings, JetBrains Mono for code); style.css already declares these
@@ -87,9 +98,8 @@ a journal will check.</p>
 <h2>
 <span class="header-section-number">7.1</span> What archiving is for<a class="anchor" aria-label="anchor" href="#sharing-goals"><i class="fas fa-link"></i></a>
 </h2>
-<p>This is worth stating explicitly, because the three goals pull in slightly
-different directions and different practices serve each one. The SORTEE
-guidelines set out three:</p>
+<p>The SORTEE guidelines set out three goals (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). They pull in slightly
+different directions, and different practices serve each one.</p>
 <div class="tada-cards">
 <div class="tada-card neutral">
 <p><span class="tada-letter">1</span> <span class="tada-word">Data reuse</span>
@@ -100,9 +110,8 @@ experiments</strong>.</span></p>
 </div>
 <div class="tada-card neutral">
 <p><span class="tada-letter">2</span> <span class="tada-word">Transparency</span>
-<span class="tada-gloss">Readers can see what was actually done to obtain the reported results. Open
-data will not stop fabrication, but it makes fabrication far easier to
-detect.</span></p>
+<span class="tada-gloss">Readers can see what was done to obtain the reported results. Open data will
+not stop fabrication, but it makes fabrication much easier to detect.</span></p>
 </div>
 <div class="tada-card neutral">
 <p><span class="tada-letter">3</span> <span class="tada-word">Computational reproducibility</span>
@@ -110,7 +119,7 @@ detect.</span></p>
 code.</span></p>
 </div>
 </div>
-<p>Two further points from the guidelines are easy to miss:</p>
+<p>Two further points from the guidelines (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>):</p>
 <ul>
 <li>
 <strong>Data are typically collected with public money</strong>, and so can be seen as a
@@ -127,8 +136,8 @@ synthesis.</li>
 <h2>
 <span class="header-section-number">7.2</span> Vocabulary<a class="anchor" aria-label="anchor" href="#sharing-glossary"><i class="fas fa-link"></i></a>
 </h2>
-<p>Key terms from the SORTEE glossary (Table 1), because these terms are used
-loosely and the distinctions matter when someone asks you for “the raw data”.</p>
+<p>Key terms from the SORTEE glossary (Table 1; <span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). These terms are used
+loosely, and the distinctions matter when someone asks you for “the raw data”.</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="50%">
@@ -175,27 +184,26 @@ loosely and the distinctions matter when someone asks you for “the raw data”
 </table></div>
 <div class="tada-note">
 <p>Transcribing data from a written to a digital format, and the error-checking
-that follows, does <strong>not</strong> count as processing. A typed-up field sheet is still
-raw data.</p>
+that follows, does <strong>not</strong> count as processing. A typed-up field
+sheet is still raw data.</p>
 </div>
 </div>
 <div id="sharing-what" class="section level2" number="7.3">
 <h2>
 <span class="header-section-number">7.3</span> What data to share<a class="anchor" aria-label="anchor" href="#sharing-what"><i class="fas fa-link"></i></a>
 </h2>
-<p>Ideally, <strong>both raw and processed data</strong>. The SORTEE guidelines state that
-ideally both raw and processed data are provided, and allow three acceptable
-forms, with (b) and (c) as fallbacks where a full raw upload is not possible:</p>
+<p>Ideally, <strong>both raw and processed data</strong>. The SORTEE guidelines allow three
+acceptable forms, with (b) and (c) as fallbacks where a full raw upload is not
+possible (Guideline 1.3; <span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>):</p>
 <p><strong>a)</strong> Raw data, along with the processed data and/or the code to prepare the
 data for analysis.</p>
 <p><strong>b)</strong> A <strong>sample</strong> of raw data alongside the processed and filtered data, when
 a full raw data upload is not possible.</p>
 <p><strong>c)</strong> Processed and filtered data with a <strong>detailed description of how to both
 obtain and process or filter the raw data</strong>.</p>
-<p>Raw data matter because without them nobody can check the filtering and
-processing steps, which is where undetected errors most often originate. Option
-(c) is acceptable, but it places the whole burden on your written description
-being complete.</p>
+<p>Raw data matter because filtering and processing are prone to mistakes, and
+without the raw data nobody can check those steps. Option (c) is
+acceptable, but it relies entirely on your written description being complete.</p>
 </div>
 <div id="sharing-formats" class="section level2" number="7.4">
 <h2>
@@ -208,8 +216,9 @@ operating systems.</p>
 <div id="data-formats" class="section level3 unlisted unnumbered">
 <h3>Data formats<a class="anchor" aria-label="anchor" href="#data-formats"><i class="fas fa-link"></i></a>
 </h3>
-<p><strong>Prefer simple text-based formats.</strong> <code>.csv</code>, <code>.tsv</code> and <code>.txt</code> can be used by
-more software, across more systems, than anything else.</p>
+<p><strong>Prefer simple text-based formats.</strong> <code>.csv</code>, <code>.tsv</code> and <code>.txt</code> are the most
+interoperable formats.</p>
+<p>All verdicts below are from the SORTEE guidelines (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="50%">
@@ -266,9 +275,9 @@ they are judging different things: this table concerns <strong>data</strong> fil
 <code>.sps</code> is a proprietary format, whereas the Transferable test concerns <strong>code</strong>
 files, where an <code>.sps</code> syntax file can at least be opened in a text editor.</p>
 </div>
-<p>Where there is genuinely no alternative, as with data collected by proprietary
-software, provide the non-interoperable file <strong>alongside interoperable extracted
-data</strong>, with a clear description of the conversion process in the metadata,
+<p>Where there is no alternative, as with data collected by proprietary software,
+provide the non-interoperable file <strong>alongside interoperable extracted data</strong>,
+with a clear description of the conversion process in the metadata,
 <strong>including the software version used</strong>.</p>
 </div>
 <div id="code-formats" class="section level3 unlisted unnumbered">
@@ -279,9 +288,8 @@ such as VS Code: <code>.R</code>, <code>.py</code>, <code>.cpp</code>, and so on
 <a href="transferable.html#transferable-filetype">Transferable</a>.</p>
 <p><strong>Code must not be provided as a <code>.pdf</code> or pasted into a Word document.</strong> Even
 where the script can be copied and pasted out, these programs often insert
-additional characters or spacing that the analysis software misinterprets. The
-canonical example is Python code that fails to run because the indentation was
-mangled.</p>
+additional characters or spacing that the analysis software misinterprets, such
+as Python code that fails to run because the indentation was mangled.</p>
 </div>
 </div>
 </div>
@@ -290,8 +298,8 @@ mangled.</p>
 <span class="header-section-number">7.5</span> Metadata: what a README must contain<a class="anchor" aria-label="anchor" href="#sharing-metadata"><i class="fas fa-link"></i></a>
 </h2>
 <p>The <a href="documented.html#documented-readme">Documented</a> chapter covers the code README in detail.
-The SORTEE guidelines set out what is needed on the <strong>data</strong> side, and the two
-overlap heavily.</p>
+The SORTEE guidelines set out what is needed on the <strong>data</strong> side
+(<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>), and the two overlap heavily.</p>
 <p><strong>General information</strong></p>
 <ul>
 <li>Manuscript title and abstract</li>
@@ -316,8 +324,9 @@ with one column for variable names and another for their descriptions.</p>
 <div class="tada-key">
 <p>The bar the guidelines set for both data and code metadata is the word
 <strong>“adequate”</strong>: metadata detailed enough that <strong>anyone can understand the data,
-or the analysis code, without needing to read the manuscript</strong>. A README that
-only makes sense alongside your methods section does not meet that bar.</p>
+or the analysis code, without needing to read the manuscript</strong> (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). A
+README that only makes sense alongside your methods section does not meet that
+bar.</p>
 </div>
 <div class="tada-note">
 <p>Under double-blind review, some sections can be <strong>left blank until acceptance</strong>
@@ -326,15 +335,15 @@ and filled in then.</p>
 <p><strong>On LLMs.</strong> The SORTEE guidelines add that the README should state <strong>whether
 and how the authors have used large language models in code generation</strong>
 (<span class="tada-cite" data-key="resnik-2025">Resnik &amp; Hosseini 2025</span>), while
-noting that a data editor is unlikely to be able to verify this.</p>
+noting that a data editor is unlikely to be able to verify this (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</p>
 </div>
 <div id="sharing-licences" class="section level2" number="7.6">
 <h2>
 <span class="header-section-number">7.6</span> Licences<a class="anchor" aria-label="anchor" href="#sharing-licences"><i class="fas fa-link"></i></a>
 </h2>
-<p>Without a licence, data and code <strong>cannot be legally reused</strong> in many
-circumstances, depending on jurisdiction. Most researchers have little knowledge
-of licences, so this is a common and consequential gap.</p>
+<p>Without a licence, data <strong>cannot be legally reused</strong> in many circumstances,
+depending on jurisdiction, and most researchers know little about licences. The same applies
+to code.</p>
 <div class="tabset">
 <div id="for-data" class="section level3 unlisted unnumbered">
 <h3>For data<a class="anchor" aria-label="anchor" href="#for-data"><i class="fas fa-link"></i></a>
@@ -388,15 +397,15 @@ of licences, so this is a common and consequential gap.</p>
 <tbody>
 <tr class="odd">
 <td><strong>MIT</strong></td>
-<td>Very permissive: copy, modify, merge, publish and share, with the licence notice retained</td>
+<td>Very permissive: copy, modify, merge, publish and share, with the licence notice retained (<span class="tada-cite" data-key="choosealicense">choosealicense.com n.d.</span>)</td>
 </tr>
 <tr class="even">
 <td><strong>BSD 2-Clause / 3-Clause</strong></td>
-<td>Permissive, similar in spirit to MIT</td>
+<td>Permissive, very similar to MIT (<span class="tada-cite" data-key="choosealicense">choosealicense.com n.d.</span>)</td>
 </tr>
 <tr class="odd">
 <td><strong>Apache 2.0</strong></td>
-<td>Permissive, with an explicit patent grant</td>
+<td>Permissive, with an explicit patent grant (<span class="tada-cite" data-key="choosealicense">choosealicense.com n.d.</span>)</td>
 </tr>
 <tr class="even">
 <td><strong>GPL v3.0</strong></td>
@@ -405,9 +414,10 @@ of licences, so this is a common and consequential gap.</p>
 </tbody>
 </table></div>
 <p>The SORTEE guidelines suggest permissive code licences wherever possible,
-naming MIT, BSD 2-Clause, GNU and Apache (Stage 3.2).</p>
-<p>CC0 is <strong>not well suited to code</strong>, which is why Dryad, being CC0-only, points
-code deposits at Zenodo.</p>
+naming MIT, BSD 2-Clause, GNU and Apache (Stage 3.2; <span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</p>
+<p>CC0 is <strong>not well suited to code</strong>, which is why Dryad, being
+CC0-only, sends code deposits to Zenodo
+(<span class="tada-cite" data-key="lowenberg-2021">Lowenberg 2021</span>).</p>
 </div>
 <div id="choosing" class="section level3 unlisted unnumbered">
 <h3>Choosing<a class="anchor" aria-label="anchor" href="#choosing"><i class="fas fa-link"></i></a>
@@ -439,12 +449,11 @@ it in the repository’s deposit form, as Zenodo allows.</p>
 <p>The <strong>SORTEE guidelines for data and code quality control</strong> (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>,
 <em>Peer Community Journal</em> 6: e20) are written for <strong>data editors</strong>, the editorial
 role responsible for screening and quality-controlling data and code at a
-journal. They are worth reading as an author precisely because they tell you
-what will be checked.</p>
+journal. They are worth reading as an author because they tell you what will be
+checked.</p>
 <div class="tada-note">
 <p><strong>The limits of quality control.</strong> It is about ensuring archived data and code
-meet minimum standards: complete, usable, documented and runnable. It is
-explicitly <strong>not</strong> a code review. A data editor does not critique your
+meet minimum standards: complete, usable, documented and runnable. It is explicitly <strong>not</strong> a code review. A data editor does not critique your
 analytical techniques, and it is not their role to review, interpret or correct
 your code, nor to check its reliability
 (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>; <span class="tada-cite" data-key="hillemann-2025">Hillemann et al. 2025</span>). That is what
@@ -454,7 +463,7 @@ your code, nor to check its reliability
 <h3>
 <span class="header-section-number">7.7.1</span> The six stages<a class="anchor" aria-label="anchor" href="#sortee-stages"><i class="fas fa-link"></i></a>
 </h3>
-<p>Table 2 of the paper is reproduced in full below.</p>
+<p>Table 2 of the paper (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>) is reproduced in full below.</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="50%">
@@ -575,7 +584,7 @@ exactly:</p>
 <h3>
 <span class="header-section-number">7.7.3</span> Common failures at each stage<a class="anchor" aria-label="anchor" href="#sortee-common-failures"><i class="fas fa-link"></i></a>
 </h3>
-<p>Drawn from the guidelines’ own account of common problems.</p>
+<p>Drawn from the guidelines’ own account of common problems (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</p>
 <p><strong>Stage 5, code runs.</strong> The most frequent causes of failure are:</p>
 <ul>
 <li>a package or module not installed or loaded within the code</li>
@@ -590,8 +599,8 @@ reasons that code does not run</li>
 <p>Data editors are told to be pragmatic about paths. An absolute path, or a way of
 specifying relative paths they are not familiar with, <strong>should not</strong> be a reason
 to return the code, provided they can make it run with minor changes. It is
-logged as a <strong>minor error</strong>. Every other error is the author’s to correct, and
-it is explicitly not the data editor’s job to make your code run.</p>
+logged as a <strong>minor error</strong>. Every other error is the author’s to correct: it is
+not the data editor’s job to make your code run.</p>
 </div>
 <p><strong>Stage 6, results reproduce.</strong> In most cases exact reproducibility is expected:
 the exact number in the manuscript should come out of the code. State any of the
@@ -625,9 +634,10 @@ parts a data editor can assess</li>
 <li>Consider non-proprietary execution routes, such as GNU Octave for MATLAB code
 or MATLAB Compiler for standalone applications, but test compatibility and
 note any limitations in the metadata</li>
-<li>Build systems such as <strong><code>targets</code></strong> (R) or <strong>Snakemake</strong> can provide
-reproducibility signatures (hashes) for computationally intensive steps, along
-with intermediate data objects</li>
+<li>Build systems such as <strong><code>targets</code></strong> (R; <span class="tada-cite" data-key="landau-2021">Landau 2021</span>)
+or <strong>Snakemake</strong> (<span class="tada-cite" data-key="koster-2012">Köster &amp; Rahmann 2012</span>)
+can provide reproducibility signatures (hashes) for computationally intensive
+steps, along with intermediate data objects</li>
 </ul>
 </div>
 </div>
@@ -635,14 +645,14 @@ with intermediate data objects</li>
 <h2>
 <span class="header-section-number">7.8</span> Advice for authors<a class="anchor" aria-label="anchor" href="#sharing-authors"><i class="fas fa-link"></i></a>
 </h2>
-<p>The guidelines’ own suggestions, which are the highest-return habits here.</p>
+<p>The guidelines’ own suggestions (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</p>
 <p><strong>1. Adhere to the guidelines from the beginning of the study.</strong> Making a
-project accessible and reproducible at the <em>end</em> is a great deal of work. Create
+project accessible and reproducible at the <em>end</em> is a lot of work. Create
 a clear directory structure and a README at the start, and update the metadata
 as new files are added. Annotate code as you produce it. Working with
 reproducibility in mind also makes it far more likely that someone else can
-reuse the project and successfully run the code, which matters a great deal if
-several people will touch the study over its lifetime.</p>
+reuse the project and run the code, which matters if several people will work
+on the study over its lifetime.</p>
 <p><strong>2. Prepare data and code before submission to any journal.</strong> Having it ready
 minimises problems during submission and quality control, and makes transfer to
 another journal straightforward if the paper is rejected.</p>
@@ -651,7 +661,8 @@ co-author before submitting. They can check that the code runs with the data in
 the structure provided, that the metadata is adequate, that data and code match
 the manuscript, and that results reproduce. Co-authors are also more likely to
 spot mistakes <em>in</em> the code, because they know the study and the data, and data
-editors do not check code reliability. See <a href="code-review.html#code-review">Code review</a>.</p>
+editors do not check code reliability. See
+<a href="code-review.html#code-review">Code review</a>.</p>
 <p><strong>4. Consider Markdown or Quarto.</strong> Presenting everything in one self-contained
 document is very helpful for data editors and future readers
 (<span class="tada-cite" data-key="buckley-2025">Buckley et al. 2025</span>), because it makes
@@ -695,7 +706,7 @@ computationally expensive analyses.</p>
 </ul>
 </div>
 </div>
-<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><div class="chapter-nav">
 <div class="prev"><a href="annotated.html"><span class="header-section-number">6</span> A — Annotated</a></div>
 <div class="next"><a href="code-review.html"><span class="header-section-number">8</span> Code review</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -745,7 +756,7 @@ computationally expensive analyses.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 02 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 04 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

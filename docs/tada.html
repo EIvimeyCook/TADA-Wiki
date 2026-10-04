@@ -19,7 +19,18 @@
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
-<link rel="icon" type="image/png" href="assets/favicon.png">
+<!-- Set the colour theme before the page paints, so a dark-mode reader never
+         sees a flash of white. Uses the saved choice from the toggle
+         (assets/tada-theme.js) or, if there is none, the system setting. --><script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("tada-theme"); } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script><link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <!-- The site's type system (Inter body text, Fraunces display serif for
          headings, JetBrains Mono for code); style.css already declares these
@@ -84,35 +95,39 @@ that another researcher can still run.</p>
 <h2>
 <span class="header-section-number">2.1</span> Why another set of guidelines?<a class="anchor" aria-label="anchor" href="#tada-why"><i class="fas fa-link"></i></a>
 </h2>
-<p>There is no shortage of advice on writing good code, but very little of it deals
-with the specific task of <em>archiving an analysis</em>.</p>
-<p>The TADA authors identify three gaps in the existing resources:</p>
+<p>There is plenty of advice on writing good code, but little of it deals with
+the specific task of <em>archiving an analysis</em>. The TADA authors identify four
+gaps in the existing resources (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>):</p>
 <ol style="list-style-type: decimal">
 <li>They do not sufficiently address <strong>how to archive analytical code</strong>.</li>
 <li>Few of them adhere to the <strong>FAIR principles</strong>.</li>
-<li>Those that do, notably <strong>FAIR4RS</strong> (the FAIR principles for Research
-Software), are broad in scope and aimed at <strong>software developers</strong>, which may
-be part of why researchers have not widely adopted them.</li>
+<li>They do not align with <strong>journal requirements</strong>.</li>
+<li>They are complex and developed mainly for <strong>software development</strong>. Even
+<strong>FAIR4RS</strong> (the FAIR principles for Research Software;
+<span class="tada-cite" data-key="barker-2022">Barker et al. 2022</span>;
+<span class="tada-cite" data-key="chue-hong-2022">Chue Hong et al. 2022</span>) is broad in
+scope and focused on software development, which may be part of why it
+has not been widely adopted outside that community.</li>
 </ol>
-<p>Underlying all three is a distinction between <em>analytical code</em> and <em>software</em>.</p>
+<p>The fourth gap rests on a distinction between <em>analytical code</em> and <em>software</em>.</p>
 <p><strong>Software</strong> is written to be general, modular and tested, and to work across
 systems with many different compatible datasets. Designing for that kind of
-reuse is genuinely complicated.</p>
+reuse is complicated.</p>
 <p><strong>Analytical code</strong> is tailored to one dataset and one study. Its purpose is to
 be a transparent, reproducible record of that analysis, not to become a tool for
 other people.</p>
-<p>Holding analytical code to software standards therefore sets an unrealistic
-target, and researchers faced with an unrealistic target tend to give up on it entirely.
+<p>Software standards therefore set too high a bar for analytical code, and researchers faced with an unrealistic target tend to give up
+on it. <!-- [add source: researchers give up on unrealistic coding standards] -->
 TADA instead sets a <strong>minimum standard</strong> that is achievable at any level of
-coding experience while still delivering the transparency and computational
+coding experience and still delivers the transparency and computational
 reproducibility that sharing is meant to provide.</p>
 </div>
 <div id="tada-problem" class="section level2" number="2.2">
 <h2>
 <span class="header-section-number">2.2</span> The scale of the problem<a class="anchor" aria-label="anchor" href="#tada-problem"><i class="fas fa-link"></i></a>
 </h2>
-<p>The numbers, all from the TADA paper’s review of the literature, are
-stark:</p>
+<p>The figures below all come from the TADA paper’s review of the literature
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>).</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="33%">
@@ -165,15 +180,17 @@ stark:</p>
 <strong>The code-sharing cascade.</strong> Reproducible results depend on code that is available (shared with the article) and functional (runs without error). Figure 1 from <span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al.</span>
 </p>
 </div>
-<p>Journal policy has changed a great deal over the past decade; practice has been
-much slower to follow. Even where code is present and does run, computational
-reproducibility still cannot be assumed.</p>
+<p>Journal policy has changed a great deal over the past decade, and practice has
+been much slower to follow
+(<span class="tada-cite" data-key="ivimey-cook-2025-policy">Ivimey-Cook et al. 2025</span>). Even
+where code is present and runs, computational reproducibility cannot be assumed
+(<span class="tada-cite" data-key="kambouris-2024">Kambouris et al. 2024</span>).</p>
 </div>
 <div id="tada-four" class="section level2" number="2.3">
 <h2>
 <span class="header-section-number">2.3</span> The four principles<a class="anchor" aria-label="anchor" href="#tada-four"><i class="fas fa-link"></i></a>
 </h2>
-<p>Each has its own chapter. This is the one-paragraph version of each.</p>
+<p>Each has its own chapter. These are the one-paragraph versions.</p>
 <div class="tada-cards">
 <div class="tada-card t">
 <p><span class="tada-letter">T</span> <a href="transferable.html#transferable" class="tada-word">Transferable</a>
@@ -213,8 +230,8 @@ code: the same script, before and after.</p>
 <h2>
 <span class="header-section-number">2.4</span> What TADA does not cover<a class="anchor" aria-label="anchor" href="#tada-scope"><i class="fas fa-link"></i></a>
 </h2>
-<p>The TADA paper is explicit that three things sit beyond its scope, while noting
-that all three support reproducible analyses:</p>
+<p>The TADA paper places three things beyond its scope, while noting that all
+three support reproducible analyses (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>):</p>
 <ul>
 <li>
 <strong>Dependency and environment managers</strong> (<a href="https://rstudio.github.io/renv/">renv</a> in R, <code>{conda}</code> in Python),
@@ -230,15 +247,18 @@ itself is reproducible between systems. This is the standard answer to the
 scripts or computational steps in a pipeline and their dependencies, so that
 each step executes in a defined, reproducible order.</li>
 </ul>
-<p>None of these is a requirement of TADA. All three are worth knowing about; see
-<a href="further-reading.html#further-reading">Further reading</a>.</p>
+<p>None of these is a requirement of TADA, but all three are worth knowing about;
+see <a href="further-reading.html#further-reading">Further reading</a>.</p>
 </div>
 <div id="tada-fair" class="section level2" number="2.5">
 <h2>
 <span class="header-section-number">2.5</span> How TADA maps onto FAIR<a class="anchor" aria-label="anchor" href="#tada-fair"><i class="fas fa-link"></i></a>
 </h2>
-<p>TADA was built with the FAIR and FAIR4RS principles in mind. Each letter maps
-onto one or more of them, and in two cases deliberately goes further.</p>
+<p>TADA was built with the FAIR
+(<span class="tada-cite" data-key="wilkinson-2016">Wilkinson et al. 2016</span>) and FAIR4RS
+(<span class="tada-cite" data-key="chue-hong-2022">Chue Hong et al. 2022</span>) principles in
+mind. Each letter maps onto one or more of them, and Transferable deliberately
+goes further.</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="33%">
@@ -296,18 +316,19 @@ whether the description sits outside the code (a README) or inside it
 </div>
 <p><strong>Transferable is broader than Interoperable.</strong> Interoperability means anyone
 can open and use your code. Transferability adds the requirement that it also
-<em>runs</em> on someone else’s machine and operating system, which is precisely where
-hard-coded file paths cause problems.</p>
+<em>runs</em> on someone else’s machine and operating system, which is
+where hard-coded file paths cause problems.</p>
 <p><strong>Annotated shares its FAIR principle with Documented, not with a principle of
 its own.</strong> Both map to Reusable, since both are ultimately about enabling
 someone to understand and reuse the code; they differ in <em>where</em> that
-description lives, externally in a README (Documented) or internally as
-comments (Annotated). Annotated remains the letter most specific to research
-code, in the sense that FAIR is largely concerned with machines finding and
-parsing assets, whereas annotation is about a human being able to follow what
-the analysis actually did — and it is the letter most often skipped.</p>
+description lives: externally in a README (Documented) or internally as
+comments (Annotated). Annotated is the letter most specific to research code.
+FAIR is largely concerned with machines finding and parsing assets, whereas
+annotation is about a person being able to follow what the analysis did. It is
+also the letter most often skipped.
+<!-- [add source: Annotated is the TADA letter most often skipped] --></p>
 <div class="tada-note">
-<p>On “reusable”: the word is used in two different senses. In the FAIR sense it
+<p>On “reusable”: the word is used in two senses. In the FAIR sense it
 means sharing code in a way that clearly specifies what can be done with it,
 through a licence and a README. In the software-development sense it means
 writing generalised, modular, tested code that runs across systems and datasets.
@@ -319,11 +340,10 @@ whether it was written for software.</p>
 <h2>
 <span class="header-section-number">2.6</span> Languages<a class="anchor" aria-label="anchor" href="#tada-languages"><i class="fas fa-link"></i></a>
 </h2>
-<p>TADA is tailored mainly to <strong>R and Python</strong>, because those are the open-source
-languages most widely used in ecology and evolutionary biology. The basic
-principles apply just as well to workflow languages such as Snakemake and
-compiled languages such as C++ and, as the authors note, to disciplines other
-than ecology and evolutionary biology.</p>
+<p>TADA is tailored mainly to <strong>R and Python</strong>, because these open-source
+languages are widely used in ecology and evolutionary biology. The basic
+principles also apply to workflow languages such as Snakemake, to compiled
+languages such as C++, and to other disciplines.</p>
 <p>Where a language does not save code in a standard file type, apply the
 Transferable test: <strong>can the resulting file be opened by a plain text editor?</strong>
 SPSS syntax <code>.sps</code> files, for instance, pass.</p>
@@ -342,7 +362,7 @@ SPSS syntax <code>.sps</code> files, for instance, pass.</p>
 </ul>
 </div>
 </div>
-<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><div class="chapter-nav">
+<script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><div class="chapter-nav">
 <div class="prev"><a href="quickstart.html"><span class="header-section-number">1</span> Start here</a></div>
 <div class="next"><a href="transferable.html"><span class="header-section-number">3</span> T — Transferable</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -373,7 +393,7 @@ SPSS syntax <code>.sps</code> files, for instance, pass.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 02 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 04 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

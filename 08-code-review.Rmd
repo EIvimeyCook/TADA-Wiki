@@ -3,8 +3,8 @@
 ::: {.tada-key}
 **Code review** is the process of checking and evaluating each other's code,
 either **formally**, as part of the peer-review process, or **informally**, as
-co-authors or colleagues. It is critical in avoiding **conceptual, programmatic
-and syntactic errors**, and it can take place at any stage of the research cycle.
+co-authors or colleagues. It helps catch **conceptual, programmatic and
+syntactic errors**, and it can take place at any stage of the research cycle.
 :::
 
 This chapter follows [Ivimey-Cook et al. (2023)]{.tada-cite data-key="ivimey-cook-2023"}, *Implementing code review in the
@@ -15,12 +15,12 @@ Evolutionary Biology 36: 1347–1356, <https://doi.org/10.1111/jeb.14230>).
 
 You are probably already using open-source software such as R or Python to
 clean, manipulate, visualise and analyse your data. Code-based software is more
-transparent and reproducible than point-and-click software, and far more
-flexible, since analyses can be tailored to exactly what a study needs.
+transparent and reproducible than point-and-click software, and more flexible,
+since analyses can be tailored to what a study needs.
 
 That flexibility comes at a cost. **Code is more error-prone**
 ([Budd et al. 1998]{.tada-cite data-key="budd-1998"}), and several high-profile
-retractions have centred on exactly this kind of mistake
+retractions have followed coding mistakes
 ([Bolnick & Paull 2009]{.tada-cite data-key="bolnick-2009"};
 [Huijgen et al. 2012]{.tada-cite data-key="huijgen-2012"};
 [Ma & Chang 2007]{.tada-cite data-key="ma-2007"};
@@ -30,23 +30,23 @@ retractions have centred on exactly this kind of mistake
 In computer science and software development, code review is routine. In the
 academic disciplines that rely on code to make inferences and predictions, it is
 **noticeably absent** from the research and publication process
-([Indriasari et al. 2020]{.tada-cite data-key="indriasari-2020"}). Ivimey-Cook et
-al. argue for a fundamental shift in research culture that brings code review
-into **all stages** of the research process.
+([Indriasari et al. 2020]{.tada-cite data-key="indriasari-2020"}). We argue for a
+shift in research culture that brings code review into **all stages** of the
+research process ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}).
 
 There is a structural reason it does not happen. Informal training, combined
 with insufficient time and incentives
 ([Touchon & McCoy 2016]{.tada-cite data-key="touchon-2016"}), means that coding and
-analysis are usually the responsibility of **a single member of a team** for a
-project's entire lifetime, in stark contrast to the team-wide collaboration that is normal
-when developing methodology and experimental design. That individual character
-of research code is precisely what makes pre-publication code review both
-unlikely and critical.
+analysis are often the responsibility of **a single member of a team** for a
+project's entire lifetime, unlike methodology and experimental
+design, which are usually developed by the whole team. Because research code is
+so often one person's work, pre-publication code review is both unlikely to
+happen and important when it does.
 
 ## The four Rs {#review-four-rs}
 
-Whatever the stage, the core priorities are the same. The paper frames them as
-four questions.
+Whatever the stage, the core priorities are the same. We frame them as four
+questions ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}).
 
 ::: {.tada-cards}
 ::: {.tada-card .neutral}
@@ -76,9 +76,10 @@ run?]{.tada-gloss}
 
 ### Reported {.unlisted .unnumbered}
 
-Code is a key research output and a critical component of scientific
-methodology. Open code accompanying written methods sections is becoming more
-common, following the same push that produced Open and FAIR data. The first
+Code is a key research output and part of the scientific method. Open code
+accompanying written methods sections is becoming more common, following similar
+pushes for Open and FAIR data
+([Lamprecht et al. 2020]{.tada-cite data-key="lamprecht-2020"}). The first
 check is therefore **consistency between the code and the manuscript**, and
 these questions catch **conceptual** errors.
 
@@ -105,12 +106,12 @@ Containerisation with **Docker** ([Boettiger 2015]{.tada-cite data-key="boettige
 
 ### Run {.unlisted .unnumbered}
 
-Even if code matches the methodology reported in a paper, that does not mean it
-is executable. **Programmatic and syntactic errors** can stop code re-running.
+Code that matches the methodology reported in a paper is not necessarily
+executable. **Programmatic and syntactic errors** can stop code re-running.
 
-Common causes, the first two from the code review paper and the remainder from
-the SORTEE guidelines' Stage 5, which lists the same failures from the data
-editor's side:
+Common causes, the first two from our code review paper ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}) and the
+rest from the SORTEE guidelines' Stage 5 ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}), which lists the same
+failures from the data editor's side:
 
 - calls to libraries or modules that are not installed in the current
   environment
@@ -137,9 +138,9 @@ who knows the study.
 
 Errors can propagate through code that runs perfectly well and produces an
 output, because **code can produce incorrect results in a reproducible manner**,
-returning the same wrong answer every time. The paper's example: if code selects
+returning the same wrong answer every time. For example, if code selects
 or modifies the wrong column in a dataset, the analysis is wrong but nothing
-errors.
+errors ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}).
 
 **Unit testing** helps, through **`testthat`** ([Wickham 2011]{.tada-cite data-key="wickham-2011"}) in R and
 **`pytest`** ([Okken 2022]{.tada-cite data-key="okken-2022"}) in Python. But this type of error remains common and
@@ -148,15 +149,14 @@ dataset and code**. It is also thought to scale with the number of lines and the
 complexity of the code ([Lipow 1982]{.tada-cite data-key="lipow-1982"}).
 
 ::: {.tada-note}
-This is the strongest argument for **co-author** review over external review. A
-reviewer who does not know your data cannot tell that `mass` should have been
-`mass_g`. A co-author can.
+This is the strongest argument for **co-author** review over external review. A reviewer who does not know your data cannot tell that `mass`
+should have been `mass_g`. A co-author can.
 :::
 
 ### Reproducible {.unlisted .unnumbered}
 
-The most fundamental question is whether **the code can produce the output, and
-thus support the conclusions, given in the paper.**
+The most basic question is whether **the code can produce the output, and
+thus support the conclusions, given in the paper**.
 
 The final step of code review is ensuring that outputs, when the code is re-run,
 match those reported in the analysis and results sections, including relevant
@@ -193,9 +193,9 @@ percentage error is not. Using
 $$\text{PE} = \frac{\text{new} - \text{original}}{\text{original}} \times 100$$
 
 error is classified as **non-existent** when this value is 0, **minor** between
-0 and 10, and **major (and not reproducible)** at 10 or above. Note that the
-formula as published is signed; in practice it is the absolute value that is
-compared against those thresholds.
+0 and 10, and **major (and not reproducible)** at 10 or above. Wiki guidance:
+the formula as published is signed; in practice it is the absolute value that
+is compared against those thresholds.
 
 As well as the overlap with 0, or with the null hypothesis, not changing, the
 reported and reproduced estimates and intervals should not differ significantly
@@ -207,8 +207,8 @@ should sit well within the reported credible interval.
 
 ## Writing reviewable code {#review-reviewable}
 
-Good readability is what makes effective code review possible at all. The paper
-offers four solutions:
+Effective code review depends on readable code. We suggest four
+solutions ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}):
 
 1. **Call packages explicitly** via the namespace: `package::function()` in R,
    `package.module.function()` in Python.
@@ -225,13 +225,13 @@ Python code against PEP 8. Supported styles include Google and tidyverse in R,
 and PEP 8 in Python.
 
 Literate formats, meaning R and Python Markdown, Quarto, and Jupyter Notebook or
-JupyterLab, present code in chunks which, with suitably descriptive comments,
-are far easier to read. See [Annotated](#annotated-literate).
+JupyterLab, present code in chunks which, with descriptive comments, are much
+easier to read. See [Annotated](#annotated-literate).
 
 ### Structure {.unlisted .unnumbered}
 
-A simple folder and file structure goes a long way towards helping researchers
-at all skill levels understand the **order and flow** of an analysis:
+A simple folder and file structure helps researchers at all skill levels
+understand the **order and flow** of an analysis:
 
 - **Sequentially labelled** subfolders and scripts, so that someone following
   the code knows the order to run things in, with files beginning `01…`, `02…`
@@ -242,7 +242,7 @@ at all skill levels understand the **order and flow** of an analysis:
   code: packages and version numbers, descriptions of the data files, the
   project aim, author contact details, and any licences in place
 
-It is also crucial to **explain what data cleaning or curation happened before
+It is also important to **explain what data cleaning or curation happened before
 the analysis code**, meaning what previous manipulation or pre-processing
 produced the data in its current state, or where an intermediate data file was
 used.
@@ -258,43 +258,43 @@ dataset to results: `targets` ([Landau 2021]{.tada-cite data-key="landau-2021"})
 
 ## When code review happens {#review-when}
 
-Code review can begin as early as the first initiation of a project, and it has
-a role beyond publication.
+Code review can begin when a project starts, and it has a role beyond
+publication.
 
 ::: {.tabset}
 
 ### Pre-submission {.unlisted .unnumbered}
 
-**This is where most of the value is.** It is also the stage where a reviewer
-can catch *Reliable* errors, because they know the study.
+Wiki guidance: **this is where most of the value is.** It is also the stage
+where a reviewer can catch *Reliable* errors, because they know the study.
 
 Keep **continuous code collaboration at all stages** of a manuscript.
-Collaboration can be facilitated by code-sharing platforms such as GitHub, where
-users can submit and comment on pull requests. At SORTEE, GitHub issues were
-used to summarise the discussion of an individual's code.
+Code-sharing platforms such as GitHub help, since users can submit and comment
+on pull requests. At SORTEE, GitHub issues were used to summarise the
+discussion of an individual's code.
 
 The [SORTEE guidelines](#sortee) make the same recommendation directly to
-authors, under "Perform a pre-submission code review"; see
+authors, under "Perform a pre-submission code review" ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}); see
 [Advice for authors](#sharing-authors) for what that review should cover.
 
 ### During peer review {.unlisted .unnumbered}
 
-This is one of the most crucial places for code review, because reviewers can
-follow the logic of the analyses carefully, much as they follow the argument
-from introduction to discussion.
+This is one of the most important places for code review, because reviewers can
+follow the logic of the analyses, much as they follow the argument from
+introduction to discussion.
 
 Some journals already request code and data at submission, including
 [The Royal Society]{.tada-cite data-key="royal-society-2023"},
 *[Behavioral Ecology and Sociobiology]{.tada-cite data-key="bakker-2020"}* and
-*[The American Naturalist]{.tada-cite data-key="bolnick-2022"}*, though the paper's
-authors note that in their experience this is not enforced. In some cases, such
-as the **Journal of Open Source Software**, the entire formal peer-review
-process, code and manuscript alike, is hosted on GitHub.
+*[The American Naturalist]{.tada-cite data-key="bolnick-2022"}*, though in our
+experience this is not enforced ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}). In some
+cases, such as the **Journal of Open Source Software**, the entire formal
+peer-review process, code and manuscript alike, is hosted on GitHub.
 
 The benefits run both ways
 ([Fernández-Juricic 2021]{.tada-cite data-key="fernandez-juricic-2021"}). For
 authors, providing code during peer review could increase manuscript quality.
-For reviewers, available code gives far deeper insight, because there is a
+For reviewers, available code gives much more insight, because there is a
 clearer link between experimental methodology and statistical analysis, which
 is the first R, code **as reported**.
 
@@ -324,8 +324,8 @@ reasonable request".
 
 **If you find that the code does not adhere to one of the Rs:**
 
-1. **Contact the corresponding author**, or, if the paper uses the MeRIT system,
-   the person who actually conducted the analysis. A GitHub issue works well if
+1. **Contact the corresponding author**, or, if the paper uses the MeRIT system
+   ([Nakagawa et al. 2023]{.tada-cite data-key="nakagawa-2023"}), the person who conducted the analysis. A GitHub issue works well if
    there is a repository; otherwise, email.
 2. **Rule out benign causes** first, such as differences in software version, in
    R or in package versions, or inherent stochasticity from simulations and MCMC
@@ -347,12 +347,11 @@ harder; publication versioning or "living" documents may be a first step
 
 ## Running a code club {#review-club}
 
-A code club is one of the most effective ways to establish peer code review
-within a lab or among colleagues. The following draws on the authors' experience
-building a code review club in collaboration with **SORTEE**.
+A code club is a good way to establish peer code review within a lab or among
+colleagues. The following draws on our experience building a code
+review club in collaboration with **SORTEE** ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}).
 
-The barriers being addressed are worth naming, because the design of the club
-follows from them ([Gomes et al. 2022]{.tada-cite data-key="gomes-2022"}): **lack of time and incentive**, **lack of
+The design of the club follows from the barriers it addresses ([Gomes et al. 2022]{.tada-cite data-key="gomes-2022"}): **lack of time and incentive**, **lack of
 technical knowledge and unclear workflows**, and **social pressures and the fear
 of being judged by peers**.
 
@@ -360,16 +359,16 @@ of being judged by peers**.
 
 Is the focus **general learning and improving readability**, or is it to
 **error-check and scrutinise reproducibility**? A clear structure and goal for
-each session focuses comments and advice on the precise reason for the review.
+each session keeps comments and advice on the reason for the review.
 
-Relatedly, unless the aim is specifically to evaluate different analytical
-options, it is better to **leave methodological questions aside**. A session
-that drifts into the choice of model is no longer reviewing the code.
+Unless the aim is specifically to evaluate different analytical options, it is
+better to **leave methodological questions aside**. A session that
+drifts into the choice of model is no longer reviewing the code.
 
 ### Make it a judgement-free environment {.unlisted .unnumbered}
 
-Volunteers often feel very anxious about showing code that may have errors. It
-is vital to **normalise the existence of errors** and to highlight that
+Volunteers often feel anxious about showing code that may have errors. It is
+important to **normalise the existence of errors** and to stress that
 perfection is never possible. It is also useful to stress that **there is no
 such thing as bad code** ([Barnes 2010]{.tada-cite data-key="barnes-2010"}), and that there are usually multiple ways
 to approach the same problem.
@@ -389,14 +388,14 @@ project, from error checking to validating that statistical analyses are
 appropriate. So what should reviewers get?
 
 - **Acknowledgement via MeRIT** (Method Reporting with Initials for
-  Transparency), for example: *"…mixed model with a Gaussian error distribution.
+  Transparency; [Nakagawa et al. 2023]{.tada-cite data-key="nakagawa-2023"}), for example: *"…mixed model with a Gaussian error distribution.
   Code was checked by E.I.C."*
 - **Co-authorship**, where the review fundamentally altered the project and the
   resulting paper, for instance where a reviewer finds a major coding error
   that, once fixed, changes the results and conclusions.
 
-The paper's principle is that incentives should be proportionate to the
-reviewer's impact on the project.
+Our view is that incentives should be proportionate to the reviewer's impact
+on the project ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}).
 
 ## A reviewer's script {#review-script}
 
@@ -434,7 +433,7 @@ four Rs. The full checklist is at
 ::: {.tada-tip}
 **Give feedback on the code, not the coder.** "This line reads `mass`, is that
 the right column?" is easier to act on than "you used the wrong column". Fear of
-being judged is one of the three barriers the paper identifies, so how comments
+being judged is one of the barriers we identified ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}; [Gomes et al. 2022]{.tada-cite data-key="gomes-2022"}), so how comments
 are phrased affects whether people keep volunteering.
 :::
 
