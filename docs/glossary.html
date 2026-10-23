@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>11 Glossary | The TADA-Wiki</title>
 <meta name="author" content="Ed Ivimey-Cook">
-<meta name="description" content="Plain-language definitions of the terms used across this wiki. Terms tagged SORTEE follow the glossary in the SORTEE guidelines (Table 1; Pick et al. 2026). The rest are our own definitions. Where...">
+<meta name="description" content="Plain-language definitions of the terms used across this wiki. Terms tagged SORTEE open with the definition from the glossary in the SORTEE guidelines (Table 1; Pick et al. 2026); any sentences...">
 <meta name="generator" content="bookdown 0.48 with bs4_book()">
 <meta property="og:title" content="11 Glossary | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/glossary.html">
-<meta property="og:description" content="Plain-language definitions of the terms used across this wiki. Terms tagged SORTEE follow the glossary in the SORTEE guidelines (Table 1; Pick et al. 2026). The rest are our own definitions. Where...">
+<meta property="og:description" content="Plain-language definitions of the terms used across this wiki. Terms tagged SORTEE open with the definition from the glossary in the SORTEE guidelines (Table 1; Pick et al. 2026); any sentences...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="11 Glossary | The TADA-Wiki">
-<meta name="twitter:description" content="Plain-language definitions of the terms used across this wiki. Terms tagged SORTEE follow the glossary in the SORTEE guidelines (Table 1; Pick et al. 2026). The rest are our own definitions. Where...">
+<meta name="twitter:description" content="Plain-language definitions of the terms used across this wiki. Terms tagged SORTEE open with the definition from the glossary in the SORTEE guidelines (Table 1; Pick et al. 2026); any sentences...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -101,9 +101,11 @@
 <span class="header-section-number">11</span> Glossary<a class="anchor" aria-label="anchor" href="#glossary"><i class="fas fa-link"></i></a>
 </h1>
 <p>Plain-language definitions of the terms used across this wiki. Terms tagged
-<span class="tada-gloss-tag">SORTEE</span> follow the glossary in the SORTEE guidelines (Table 1;
-<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). The rest are our own
-definitions. Where a chapter covers a term in depth, the definition links to it.</p>
+<span class="tada-gloss-tag">SORTEE</span> open with the definition from the glossary in the
+SORTEE guidelines (Table 1; <span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>);
+any sentences after that first one are our own practical notes. The rest are
+our own definitions. Where a chapter covers a term in depth, the definition
+links to it.</p>
 <div class="tada-glossary">
 <dl>
 <dt><span id="gloss-absolute-path" data-match="absolute path|absolute file path|local file path|hard-coded path">Absolute path</span></dt>
@@ -130,9 +132,11 @@ does, why, and where its output appears in the paper. See
 <span id="gloss-archiving">Archiving</span> <span class="tada-gloss-tag">SORTEE</span>
 </dt>
 <dd>
-Depositing data and code in a public repository. Archiving is not the same
-as putting files on GitHub or in supplementary material; see <em>immutable</em>
-and <em>persistent identifier</em>.
+Depositing data and code in a public repository. In practice that means a
+repository that keeps the files unchanged and gives the deposit a
+persistent identifier, such as a DOI. Putting files on GitHub or in
+supplementary material is not archiving; see <em>immutable</em> and <em>persistent
+identifier</em>, and <a href="available.html#available-where">Where to archive</a>.
 </dd>
 <dt><span id="gloss-available">Available</span></dt>
 <dd>
@@ -154,32 +158,35 @@ review or informally among co-authors and colleagues. See
 </dd>
 <dt><span id="gloss-computational-reproducibility" data-match="computational reproducibility|computationally reproducible|computationally reproduced">Computational reproducibility</span></dt>
 <dd>
-Obtaining consistent results using the same input data, computational
-methods and conditions of analysis, the definition the SORTEE guidelines
-use. In practice, it means getting the paper’s results by running its
-archived code on its archived data. This is Stage 6 of the
+Getting consistent results from the same input data, computational methods
+and conditions of analysis (the definition the SORTEE guidelines use). In
+practice, it means getting the paper’s
+results by running its archived code on its archived data. This is Stage 6 of the
 <a href="sortee.html#sortee-stages">SORTEE guidelines</a>.
 </dd>
 <dt><span id="gloss-container" data-match="container|containerisation|Docker|Apptainer|Singularity">Container</span></dt>
 <dd>
-An image that packages a complete software environment, including all the
-programs and libraries your code needs, so it runs the same way on another
-computer. Docker and Apptainer are the common tools.
-Beyond the scope of TADA.
+A packaged copy of a complete software environment, including the
+operating system, programs and libraries your code needs, so it runs the
+same way on any computer. Docker and Apptainer are the common tools for
+building and running them. Beyond the scope of TADA.
 </dd>
 <dt><span id="gloss-copyleft" data-match="copyleft|GPL">Copyleft licence</span></dt>
 <dd>
 A licence that requires anything built from your code to be released under
-the same licence. The GPL is the usual example. Compare <em>permissive
+the same licence if it is shared. The GPL is the usual example. Compare <em>permissive
 licence</em>.
 </dd>
 <dt>
 <span id="gloss-quality-control" data-match="quality control|quality-control">Data and code quality control</span> <span class="tada-gloss-tag">SORTEE</span>
 </dt>
 <dd>
-Checking whether data and code are suitable for public archiving. It is not
-a code review: it does not judge whether the analysis is correct. See
-<a href="sortee.html#sortee">The SORTEE guidelines</a>.
+Checking whether data and code are suitable for public archiving. In
+practice, this means checking that the data are complete and usable and the
+code is documented and runnable, following the six stages of the SORTEE
+guidelines. It is not
+a code review: it does not judge whether the analysis is correct or the
+code well written. See <a href="sortee.html#sortee">The SORTEE guidelines</a>.
 </dd>
 <dt><span id="gloss-das" data-match="data availability statement|data and code availability">Data availability statement</span></dt>
 <dd>
@@ -196,7 +203,10 @@ Also called a codebook. A form of <em>metadata</em>.
 </dt>
 <dd>
 An editor at a journal whose job is to screen and quality-control the data
-and code that will be archived alongside papers under review.
+and code that will be publicly archived alongside manuscripts under review.
+They check the deposit against minimum standards, such as the SORTEE
+guidelines, but do not review the analysis itself. Not every journal has
+one. See <a href="quickstart.html#quickstart-next">What happens next</a>.
 </dd>
 <dt>
 <span id="gloss-filtering" data-match="data filtering|filtered data">Data filtering</span> <span class="tada-gloss-tag">SORTEE</span>
@@ -204,15 +214,20 @@ and code that will be archived alongside papers under review.
 <dd>
 Removing some data to create the dataset used in the analysis, for example
 removing individuals with a certain characteristic. The result is
-<em>filtered data</em>.
+<em>filtered data</em>. Archive the raw data or the filtering code alongside it,
+so others can see what was removed and why. See
+<a href="data-sharing.html#sharing-what">What data to share</a>.
 </dd>
 <dt>
 <span id="gloss-processing" data-match="data processing|processed data">Data processing</span> <span class="tada-gloss-tag">SORTEE</span>
 </dt>
 <dd>
-Transforming data from one form to another: extracting data from images or
-videos, summarising, transforming or calculating new values. The result is
-<em>processed data</em>. Typing up a field sheet does not count.
+Transforming data from one form to another, for example extracting data
+from images or videos, summarising, or calculating new values. The result
+is <em>processed data</em>. Transcribing data from paper into a digital format,
+and checking it for entry errors, does not count. As with filtering,
+archive the raw data or the processing code too. See
+<a href="data-sharing.html#sharing-what">What data to share</a>.
 </dd>
 <dt><span id="gloss-dependency" data-match="dependency|dependencies">Dependency</span></dt>
 <dd>
@@ -239,10 +254,12 @@ Peer review in which neither the authors nor the reviewers know who the
 others are. Code and READMEs have to be anonymised for it. See
 <a href="available.html#available-anonymous">Anonymising for double-blind review</a>.
 </dd>
-<dt><span id="gloss-embargo" data-match="embargo">Embargo</span></dt>
+<dt><span id="gloss-embargo" data-match="embargo|embargoes">Embargo</span></dt>
 <dd>
-A period during which an archived deposit exists but is not yet public.
-Many repositories offer one for sensitive data.
+A set period during which a deposit is archived but not yet public, for
+example to protect sensitive data or until the paper is published. Many
+repositories let you set one. See
+<a href="available.html#available-sensitive">Sensitive data and embargoes</a>.
 </dd>
 <dt><span id="gloss-environment-manager" data-match="environment manager|dependency manager|renv|conda|poetry|pipenv|groundhog">Environment manager</span></dt>
 <dd>
@@ -255,7 +272,8 @@ usually in a <em>lockfile</em>. <code>renv</code> (R) and <code>conda</code>, <c
 </dt>
 <dd>
 Findable, Accessible, Interoperable and Reusable: principles for sharing
-data and code (<span class="tada-cite" data-key="wilkinson-2016">Wilkinson et al. 2016</span>).
+data (<span class="tada-cite" data-key="wilkinson-2016">Wilkinson et al. 2016</span>) and
+code (<span class="tada-cite" data-key="barker-2022">Barker et al. 2022</span>).
 See <a href="tada.html#tada-fair">How TADA maps onto FAIR</a>.
 </dd>
 <dt><span id="gloss-fair4rs" data-match="FAIR4RS">FAIR4RS</span></dt>
@@ -285,8 +303,9 @@ code, such as RStudio, Positron, VS Code, PyCharm or Spyder.
 <dd>
 Cannot be changed or deleted once published. In an immutable repository,
 such as Zenodo, an update creates a new version instead of overwriting the
-old one, so the exact files behind a paper stay available. GitHub and OSF
-are not immutable.
+old one, so the exact files behind a paper stay available. GitHub and
+ordinary OSF projects are not immutable. OSF <em>registrations</em>, which freeze
+a project at one point in time, cannot be edited.
 </dd>
 <dt><span id="gloss-interoperable" data-match="interoperable|interoperability">Interoperable</span></dt>
 <dd>
@@ -322,17 +341,23 @@ checked by E.I.C.”
 <span id="gloss-metadata" data-match="metadata">Metadata</span> <span class="tada-gloss-tag">SORTEE</span>
 </dt>
 <dd>
-A description of, and information about, the data and code. Usually a text
-file called a README, sometimes with a data dictionary.
+A description of, and information about, the data and code. Typically a
+text file called a README, though it can take other forms, such as a
+codebook or data dictionary. Good metadata says what each file contains,
+what each variable means (with units), and how the data were collected and
+processed. See <a href="data-sharing.html#sharing-metadata">Metadata: what a README must contain</a>.
 </dd>
 <dt><span id="gloss-namespace" data-match="namespace">Namespace</span></dt>
 <dd>
-The package a function belongs to. Calling a function with its namespace,
-as in <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code>, shows the reader which package it comes from.
+The set of names (functions and objects) that a package provides. Writing a
+function with its package name, as in <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code>, shows the reader
+which package it comes from and avoids clashes between packages that have
+functions with the same name.
 </dd>
 <dt><span id="gloss-pep8" data-match="PEP 8|PEP8">PEP 8</span></dt>
 <dd>
-The standard style guide for Python code.
+The official style guide for Python code: how to name things, indent, and
+lay out lines so that code is easy to read.
 </dd>
 <dt><span id="gloss-permissive" data-match="permissive">Permissive licence</span></dt>
 <dd>
@@ -355,13 +380,16 @@ Data that have been through <em>data processing</em>.
 <span id="gloss-project">Project</span> <span class="tada-gloss-tag">SORTEE</span>
 </dt>
 <dd>
-The collection of files archived for one manuscript. GitHub calls this a
-<em>repository</em>, which causes some confusion; see <em>repository</em>.
+A collection of files archived for a specific manuscript. In practice, the
+data, code, README and licence for one paper, ideally deposited together
+under one DOI (see <a href="available.html#available-together">Data and code in the same place</a>).
+This is similar to what GitHub calls a “repository”, which is easy to
+confuse with the archive itself; see <em>repository</em>.
 </dd>
 <dt><span id="gloss-proprietary" data-match="proprietary">Proprietary format</span></dt>
 <dd>
-A file format controlled by one company and needing its software to open,
-such as <code>.xls</code> or SPSS <code>.sav</code>. The opposite of an interoperable format.
+A file format controlled by one company, which often needs that company’s
+software to open reliably, such as <code>.xls</code> or SPSS <code>.sav</code>. The opposite of an interoperable format.
 </dd>
 <dt><span id="gloss-pull-request" data-match="pull request">Pull request</span></dt>
 <dd>
@@ -372,8 +400,10 @@ comment on before it is merged.
 <span id="gloss-raw-data" data-match="raw data">Raw data</span> <span class="tada-gloss-tag">SORTEE</span>
 </dt>
 <dd>
-Unprocessed and unfiltered data, including raw files such as photos, audio
-recordings, videos and data sheets.
+Unprocessed and unfiltered data. This includes raw files such as photos,
+audio recordings, videos and data sheets. Ideally, archive the raw data as
+well as the processed data, so nothing is lost and others can reuse it in
+ways you did not plan. See <a href="data-sharing.html#sharing-what">What data to share</a>.
 </dd>
 <dt><span id="gloss-readme" data-match="README">README</span></dt>
 <dd>
@@ -383,8 +413,9 @@ that says what the project is, what each file does and how to run it. See
 </dd>
 <dt><span id="gloss-relative-path" data-match="relative path|relative file path">Relative path</span></dt>
 <dd>
-A file path written from the top of the project folder, such as
-<code>data/raw/counts.csv</code>. It works on any computer, wherever the folder sits.
+A file path written from the project folder rather than from the top of the
+computer’s file system, such as <code>data/raw/counts.csv</code>. It works on any
+computer, wherever the project folder sits.
 Compare <em>absolute path</em>.
 </dd>
 <dt><span id="gloss-release" data-match="release">Release</span></dt>
@@ -396,15 +427,19 @@ release and give it a DOI.
 <span id="gloss-repository" data-match="repository|repositories">Repository</span> <span class="tada-gloss-tag">SORTEE</span>
 </dt>
 <dd>
-A service that stores many projects for the long term, such as Zenodo,
-Dryad or Figshare. On GitHub the word means a single project instead.
+A service that provides long-term storage for the archived data and code of
+many projects, such as Zenodo, Dryad or Figshare. Each deposit is publicly
+accessible and usually gets its own persistent identifier, such as a DOI.
+GitHub uses the same word for something different: a single project’s
+folder of files, not the service that holds it. See <em>project</em> and
+<a href="available.html#available-where">Where to archive</a>.
 </dd>
 <dt><span id="gloss-seed" data-match="seed">Seed</span></dt>
 <dd>
 A number that fixes the starting point of a random number generator, so
-stochastic code generates the same pseudorandom numbers, and gives the
-same result, each run. Set with <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> in R
-or <code>random.seed()</code> in Python.
+code that uses random numbers produces the same sequence, and the same
+results, every time it runs. Set with <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> in R or <code>random.seed()</code>
+in Python.
 </dd>
 <dt><span id="gloss-session-info" data-match="sessionInfo|session_info|session info">Session info</span></dt>
 <dd>

@@ -1,9 +1,11 @@
 # Glossary {#glossary}
 
 Plain-language definitions of the terms used across this wiki. Terms tagged
-[SORTEE]{.tada-gloss-tag} follow the glossary in the SORTEE guidelines (Table 1;
-[Pick et al. 2026]{.tada-cite data-key="pick-2026"}). The rest are our own
-definitions. Where a chapter covers a term in depth, the definition links to it.
+[SORTEE]{.tada-gloss-tag} open with the definition from the glossary in the
+SORTEE guidelines (Table 1; [Pick et al. 2026]{.tada-cite data-key="pick-2026"});
+any sentences after that first one are our own practical notes. The rest are
+our own definitions. Where a chapter covers a term in depth, the definition
+links to it.
 
 ::: {.tada-glossary}
 
@@ -25,9 +27,11 @@ definitions. Where a chapter covers a term in depth, the definition links to it.
     [Annotated](#annotated).
 
 [Archiving]{#gloss-archiving} [SORTEE]{.tada-gloss-tag}
-:   Depositing data and code in a public repository. Archiving is not the same
-    as putting files on GitHub or in supplementary material; see *immutable*
-    and *persistent identifier*.
+:   Depositing data and code in a public repository. In practice that means a
+    repository that keeps the files unchanged and gives the deposit a
+    persistent identifier, such as a DOI. Putting files on GitHub or in
+    supplementary material is not archiving; see *immutable* and *persistent
+    identifier*, and [Where to archive](#available-where).
 
 [Available]{#gloss-available}
 :   The second TADA principle: the code is publicly archived with a persistent
@@ -45,27 +49,30 @@ definitions. Where a chapter covers a term in depth, the definition links to it.
     [Code review](#code-review).
 
 [Computational reproducibility]{#gloss-computational-reproducibility data-match="computational reproducibility|computationally reproducible|computationally reproduced"}
-:   Obtaining consistent results using the same input data, computational
-    methods and conditions of analysis, the definition the SORTEE guidelines
-    use. In practice, it means getting the paper's results by running its
-    archived code on its archived data. This is Stage 6 of the
+:   Getting consistent results from the same input data, computational methods
+    and conditions of analysis (the definition the SORTEE guidelines use). In
+    practice, it means getting the paper's
+    results by running its archived code on its archived data. This is Stage 6 of the
     [SORTEE guidelines](#sortee-stages).
 
 [Container]{#gloss-container data-match="container|containerisation|Docker|Apptainer|Singularity"}
-:   An image that packages a complete software environment, including all the
-    programs and libraries your code needs, so it runs the same way on another
-    computer. Docker and Apptainer are the common tools.
-    Beyond the scope of TADA.
+:   A packaged copy of a complete software environment, including the
+    operating system, programs and libraries your code needs, so it runs the
+    same way on any computer. Docker and Apptainer are the common tools for
+    building and running them. Beyond the scope of TADA.
 
 [Copyleft licence]{#gloss-copyleft data-match="copyleft|GPL"}
 :   A licence that requires anything built from your code to be released under
-    the same licence. The GPL is the usual example. Compare *permissive
+    the same licence if it is shared. The GPL is the usual example. Compare *permissive
     licence*.
 
 [Data and code quality control]{#gloss-quality-control data-match="quality control|quality-control"} [SORTEE]{.tada-gloss-tag}
-:   Checking whether data and code are suitable for public archiving. It is not
-    a code review: it does not judge whether the analysis is correct. See
-    [The SORTEE guidelines](#sortee).
+:   Checking whether data and code are suitable for public archiving. In
+    practice, this means checking that the data are complete and usable and the
+    code is documented and runnable, following the six stages of the SORTEE
+    guidelines. It is not
+    a code review: it does not judge whether the analysis is correct or the
+    code well written. See [The SORTEE guidelines](#sortee).
 
 [Data availability statement]{#gloss-das data-match="data availability statement|data and code availability"}
 :   The section of a paper that says where the data and code are archived and
@@ -77,17 +84,25 @@ definitions. Where a chapter covers a term in depth, the definition links to it.
 
 [Data editor]{#gloss-data-editor data-match="data editor"} [SORTEE]{.tada-gloss-tag}
 :   An editor at a journal whose job is to screen and quality-control the data
-    and code that will be archived alongside papers under review.
+    and code that will be publicly archived alongside manuscripts under review.
+    They check the deposit against minimum standards, such as the SORTEE
+    guidelines, but do not review the analysis itself. Not every journal has
+    one. See [What happens next](#quickstart-next).
 
 [Data filtering]{#gloss-filtering data-match="data filtering|filtered data"} [SORTEE]{.tada-gloss-tag}
 :   Removing some data to create the dataset used in the analysis, for example
     removing individuals with a certain characteristic. The result is
-    *filtered data*.
+    *filtered data*. Archive the raw data or the filtering code alongside it,
+    so others can see what was removed and why. See
+    [What data to share](#sharing-what).
 
 [Data processing]{#gloss-processing data-match="data processing|processed data"} [SORTEE]{.tada-gloss-tag}
-:   Transforming data from one form to another: extracting data from images or
-    videos, summarising, transforming or calculating new values. The result is
-    *processed data*. Typing up a field sheet does not count.
+:   Transforming data from one form to another, for example extracting data
+    from images or videos, summarising, or calculating new values. The result
+    is *processed data*. Transcribing data from paper into a digital format,
+    and checking it for entry errors, does not count. As with filtering,
+    archive the raw data or the processing code too. See
+    [What data to share](#sharing-what).
 
 [Dependency]{#gloss-dependency data-match="dependency|dependencies"}
 :   A package or library that your code needs in order to run.
@@ -110,9 +125,11 @@ definitions. Where a chapter covers a term in depth, the definition links to it.
     others are. Code and READMEs have to be anonymised for it. See
     [Anonymising for double-blind review](#available-anonymous).
 
-[Embargo]{#gloss-embargo data-match="embargo"}
-:   A period during which an archived deposit exists but is not yet public.
-    Many repositories offer one for sensitive data.
+[Embargo]{#gloss-embargo data-match="embargo|embargoes"}
+:   A set period during which a deposit is archived but not yet public, for
+    example to protect sensitive data or until the paper is published. Many
+    repositories let you set one. See
+    [Sensitive data and embargoes](#available-sensitive).
 
 [Environment manager]{#gloss-environment-manager data-match="environment manager|dependency manager|renv|conda|poetry|pipenv|groundhog"}
 :   A tool that records and restores the exact package versions a project uses,
@@ -121,7 +138,8 @@ definitions. Where a chapter covers a term in depth, the definition links to it.
 
 [FAIR principles]{#gloss-fair data-match="FAIR"} [SORTEE]{.tada-gloss-tag}
 :   Findable, Accessible, Interoperable and Reusable: principles for sharing
-    data and code ([Wilkinson et al. 2016]{.tada-cite data-key="wilkinson-2016"}).
+    data ([Wilkinson et al. 2016]{.tada-cite data-key="wilkinson-2016"}) and
+    code ([Barker et al. 2022]{.tada-cite data-key="barker-2022"}).
     See [How TADA maps onto FAIR](#tada-fair).
 
 [FAIR4RS]{#gloss-fair4rs data-match="FAIR4RS"}
@@ -146,8 +164,9 @@ definitions. Where a chapter covers a term in depth, the definition links to it.
 [Immutable]{#gloss-immutable data-match="immutable|immutability"}
 :   Cannot be changed or deleted once published. In an immutable repository,
     such as Zenodo, an update creates a new version instead of overwriting the
-    old one, so the exact files behind a paper stay available. GitHub and OSF
-    are not immutable.
+    old one, so the exact files behind a paper stay available. GitHub and
+    ordinary OSF projects are not immutable. OSF *registrations*, which freeze
+    a project at one point in time, cannot be edited.
 
 [Interoperable]{#gloss-interoperable data-match="interoperable|interoperability"}
 :   Able to be opened and used across different software and operating systems.
@@ -175,15 +194,21 @@ definitions. Where a chapter covers a term in depth, the definition links to it.
     ([Nakagawa et al. 2023]{.tada-cite data-key="nakagawa-2023"}).
 
 [Metadata]{#gloss-metadata data-match="metadata"} [SORTEE]{.tada-gloss-tag}
-:   A description of, and information about, the data and code. Usually a text
-    file called a README, sometimes with a data dictionary.
+:   A description of, and information about, the data and code. Typically a
+    text file called a README, though it can take other forms, such as a
+    codebook or data dictionary. Good metadata says what each file contains,
+    what each variable means (with units), and how the data were collected and
+    processed. See [Metadata: what a README must contain](#sharing-metadata).
 
 [Namespace]{#gloss-namespace data-match="namespace"}
-:   The package a function belongs to. Calling a function with its namespace,
-    as in `dplyr::filter()`, shows the reader which package it comes from.
+:   The set of names (functions and objects) that a package provides. Writing a
+    function with its package name, as in `dplyr::filter()`, shows the reader
+    which package it comes from and avoids clashes between packages that have
+    functions with the same name.
 
 [PEP 8]{#gloss-pep8 data-match="PEP 8|PEP8"}
-:   The standard style guide for Python code.
+:   The official style guide for Python code: how to name things, indent, and
+    lay out lines so that code is easy to read.
 
 [Permissive licence]{#gloss-permissive data-match="permissive"}
 :   A licence with few conditions, usually just that the licence and copyright
@@ -200,20 +225,25 @@ definitions. Where a chapter covers a term in depth, the definition links to it.
 :   Data that have been through *data processing*.
 
 [Project]{#gloss-project} [SORTEE]{.tada-gloss-tag}
-:   The collection of files archived for one manuscript. GitHub calls this a
-    *repository*, which causes some confusion; see *repository*.
+:   A collection of files archived for a specific manuscript. In practice, the
+    data, code, README and licence for one paper, ideally deposited together
+    under one DOI (see [Data and code in the same place](#available-together)).
+    This is similar to what GitHub calls a "repository", which is easy to
+    confuse with the archive itself; see *repository*.
 
 [Proprietary format]{#gloss-proprietary data-match="proprietary"}
-:   A file format controlled by one company and needing its software to open,
-    such as `.xls` or SPSS `.sav`. The opposite of an interoperable format.
+:   A file format controlled by one company, which often needs that company's
+    software to open reliably, such as `.xls` or SPSS `.sav`. The opposite of an interoperable format.
 
 [Pull request]{#gloss-pull-request data-match="pull request"}
 :   On GitHub, a proposed change to a repository that others can review and
     comment on before it is merged.
 
 [Raw data]{#gloss-raw-data data-match="raw data"} [SORTEE]{.tada-gloss-tag}
-:   Unprocessed and unfiltered data, including raw files such as photos, audio
-    recordings, videos and data sheets.
+:   Unprocessed and unfiltered data. This includes raw files such as photos,
+    audio recordings, videos and data sheets. Ideally, archive the raw data as
+    well as the processed data, so nothing is lost and others can reuse it in
+    ways you did not plan. See [What data to share](#sharing-what).
 
 [README]{#gloss-readme data-match="README"}
 :   A plain-text file (`README.md` or `README.txt`) at the top of a project
@@ -221,8 +251,9 @@ definitions. Where a chapter covers a term in depth, the definition links to it.
     [The README](#documented-readme).
 
 [Relative path]{#gloss-relative-path data-match="relative path|relative file path"}
-:   A file path written from the top of the project folder, such as
-    `data/raw/counts.csv`. It works on any computer, wherever the folder sits.
+:   A file path written from the project folder rather than from the top of the
+    computer's file system, such as `data/raw/counts.csv`. It works on any
+    computer, wherever the project folder sits.
     Compare *absolute path*.
 
 [Release]{#gloss-release data-match="release"}
@@ -230,14 +261,18 @@ definitions. Where a chapter covers a term in depth, the definition links to it.
     release and give it a DOI.
 
 [Repository]{#gloss-repository data-match="repository|repositories"} [SORTEE]{.tada-gloss-tag}
-:   A service that stores many projects for the long term, such as Zenodo,
-    Dryad or Figshare. On GitHub the word means a single project instead.
+:   A service that provides long-term storage for the archived data and code of
+    many projects, such as Zenodo, Dryad or Figshare. Each deposit is publicly
+    accessible and usually gets its own persistent identifier, such as a DOI.
+    GitHub uses the same word for something different: a single project's
+    folder of files, not the service that holds it. See *project* and
+    [Where to archive](#available-where).
 
 [Seed]{#gloss-seed data-match="seed"}
 :   A number that fixes the starting point of a random number generator, so
-    stochastic code generates the same pseudorandom numbers, and gives the
-    same result, each run. Set with `set.seed()` in R
-    or `random.seed()` in Python.
+    code that uses random numbers produces the same sequence, and the same
+    results, every time it runs. Set with `set.seed()` in R or `random.seed()`
+    in Python.
 
 [Session info]{#gloss-session-info data-match="sessionInfo|session_info|session info"}
 :   A printout of the software environment: language version, operating system
