@@ -166,7 +166,7 @@ project and replace the angle-bracketed parts. The
 [Documented](#documented-readme) chapter explains each field and why it is
 there.
 
-Or generate one with [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder) (`devtools::install_github("EIvimeyCook/READMEBuilder")`, then `build_readme()`), a Shiny app that fills in these fields from your project and writes the `README.md`.
+Or generate one with [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder) (`pak::pak("EIvimeyCook/READMEBuilder")`, then `build_readme()`), a Shiny app that fills in these fields from your project and writes the `README.md`.
 
 ## What happens next {#quickstart-next}
 
