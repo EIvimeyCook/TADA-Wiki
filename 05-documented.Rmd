@@ -62,7 +62,7 @@ Below is a filled-in version of the fields above. The template is at
 [`templates/README-template.md`](templates/README-template.md).
 
 ::: {.tada-wiki}
-**Generate the README instead of writing it.** [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder), an R package with a built-in Shiny app, walks you through the fields above and writes a `README.md`. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with `devtools::install_github("EIvimeyCook/READMEBuilder")`, then run `build_readme()`.
+**Generate the README instead of writing it.** [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder), an R package with a built-in Shiny app, walks you through the fields above and writes a `README.md`. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with `pak::pak("EIvimeyCook/READMEBuilder")`, then run `build_readme()`.
 :::
 
 ````markdown
