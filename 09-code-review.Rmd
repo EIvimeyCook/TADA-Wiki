@@ -317,6 +317,9 @@ reviewer has checked the code.
 *Double-blind review.* Anonymised data and code can be submitted directly to the
 journal, for example as a zip file, or uploaded to Figshare, OSF, GitHub or
 Dryad, which allow authors to provide an **anonymised link** for peer review.
+GitHub needs a separate anonymising service for this; see
+[Anonymising for double-blind review](#available-anonymous) for how each
+option works.
 
 ### Post-publication {.unlisted .unnumbered}
 

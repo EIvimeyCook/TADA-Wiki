@@ -33,7 +33,7 @@ alteration, on a different computer and operating system.*
 - [ ] If developed on GitHub: a release was created and linked to Zenodo
 - [ ] Nothing exists only as supplementary material attached to the article
 - [ ] Any restricted data have a documented access route
-- [ ] For double-blind review: an anonymised copy or anonymous link exists
+- [ ] For double-blind review: an anonymised copy or anonymous link exists, and the files themselves have been checked for names, emails and personal file paths
 
 ## D — Documented
 

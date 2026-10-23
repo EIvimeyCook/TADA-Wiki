@@ -178,7 +178,7 @@ DOI.</p>
 <td><strong>Dryad</strong></td>
 <td>DOI</td>
 <td><span class="tada-yes">Yes</span></td>
-<td>Data-focused, and <strong>mandates CC0</strong>, which is not well suited to code (see <a href="documented.html#documented-licence">licences</a>). Code uploaded to Dryad as software is published on Zenodo instead (<span class="tada-cite" data-key="lowenberg-2021">Lowenberg 2021</span>).</td>
+<td>Data-focused, and <strong>mandates CC0</strong>, which is not well suited to code (see <a href="documented.html#documented-licence">licences</a>). Code uploaded to Dryad as software is published on Zenodo instead (<span class="tada-cite" data-key="lowenberg-2021">Lowenberg 2021</span>). May charge a deposit fee unless your institution or journal covers it.</td>
 </tr>
 <tr class="even">
 <td><strong>Dataverse</strong></td>
@@ -196,7 +196,7 @@ DOI.</p>
 <td><strong>OSF</strong></td>
 <td>DOI</td>
 <td><span class="tada-no">No</span></td>
-<td>Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it <strong>does not provide file immutability</strong>, so projects and files can be changed or deleted (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). OSF <em>registrations</em> are the exception: they freeze a project at one point in time and cannot be edited. Fine for review, but archive elsewhere.</td>
+<td>Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it <strong>does not provide file immutability</strong>, so projects and files can be changed or deleted (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). OSF <em>registrations</em> are the exception: they freeze a project at one point in time and cannot be edited. From 16 November 2026 new OSF Projects can’t be created, and existing projects become read-only after 19 February 2027 (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Fine for review, but archive elsewhere.</td>
 </tr>
 <tr class="odd">
 <td>Domain repositories (e.g. <strong>GenBank</strong>)</td>
@@ -298,12 +298,89 @@ code. There are two options:</p>
 zip file.</li>
 <li>
 <strong>Upload to a repository that supports anonymised review links</strong>, such as
-Figshare, the Open Science Framework (OSF), GitHub, or Dryad, though Dryad may
-charge a deposit fee.</li>
+Zenodo, Figshare, the Open Science Framework (OSF) or Dryad. GitHub does
+not offer this on its own, because your username is part of every
+repository’s address; use a separate anonymising service (below).</li>
 </ul>
 <p>The README can also be anonymised during peer review to comply with
 double-blind policies, then restored before archiving. See
 <a href="documented.html#documented-readme">Documented</a>.</p>
+<div id="how-to-do-it-on-each-platform" class="section level3 unlisted unnumbered">
+<h3>How to do it on each platform<a class="anchor" aria-label="anchor" href="#how-to-do-it-on-each-platform"><i class="fas fa-link"></i></a>
+</h3>
+<div class="tada-wiki">
+<p>How each service handles anonymous review, checked against its own help pages
+in October 2026. Features change, so check the current help pages before you
+rely on one.</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr class="header">
+<th>Where</th>
+<th>How</th>
+<th>Watch out for</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Zenodo</strong></td>
+<td>Either list the authors as “Anonymous” and publish the record openly, as the British Ecological Society <a href="https://methodsblog.com/2023/08/23/double-anonymous-peer-review-frequently-asked-questions/">recommends</a>, then add the real authors once the paper is accepted. You can <a href="https://help.zenodo.org/docs/deposit/manage-records/">edit a published record’s authors</a> at any time without changing its DOI. Or keep the record restricted (or as an unpublished draft) and send reviewers a <a href="https://help.zenodo.org/docs/share/about">secret link</a>, which works without a Zenodo account.</td>
+<td>The BES notes that if reviewers have to <em>request</em> access to a restricted record, the request shows them your username.</td>
+</tr>
+<tr class="even">
+<td><strong>Dryad</strong></td>
+<td>Tick <a href="https://blog.datadryad.org/2026/03/31/private-for-peer-review/">“Private for Peer Review”</a>. Reviewers get a temporary link to the dataset’s title, files and README, designed for double-anonymous review. A DOI is <a href="https://blog.datadryad.org/2023/02/21/for-journals-benefits-of-our-private-for-peer-review-mode/">reserved at submission</a> and goes live at publication.</td>
+<td>The README is included, so anonymise it. The link stops working at publication and should not go in the data availability statement; use the DOI there.</td>
+</tr>
+<tr class="odd">
+<td><strong>Figshare</strong></td>
+<td>Create a <a href="https://info.figshare.com/?p=2628">private link</a>. It shows the item with author information removed, lets reviewers download the files, and can be set to expire.</td>
+<td>Anyone with the link can see the item, even before it is published.</td>
+</tr>
+<tr class="even">
+<td><strong>OSF</strong></td>
+<td>Create a view-only link with <strong>Anonymize</strong> ticked, which hides contributor names. Only admins can create one. Use a link on an embargoed <a href="https://help.osf.io/article/330-welcome-to-registrations">registration</a> rather than a project.</td>
+<td>From 16 November 2026, new OSF Projects can’t be created, existing projects become read-only after 19 February 2027, and project links will stop working once COS removes private project storage (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Registration links are not affected.</td>
+</tr>
+<tr class="odd">
+<td><strong>GitHub</strong></td>
+<td>Use <a href="https://anonymous.4open.science">Anonymous GitHub</a> (<a href="https://github.com/tdurieux/anonymous_github">project page</a>). Give it your repository and a list of terms to hide, such as your name and institution. It hides the owner and repository name, and those terms in file contents and in file and folder names.</td>
+<td>It only hides the terms you list. It does not change your GitHub repository, so if that is public, it stays public.</td>
+</tr>
+<tr class="even">
+<td><strong>Dataverse</strong></td>
+<td>Create an <a href="https://guides.dataverse.org/en/latest/user/dataset-management.html">Anonymous Preview URL</a> for the draft dataset. It removes author names, and other fields the installation’s administrators choose, from the citation and metadata.</td>
+<td>Only available if your Dataverse installation has set it up, and it stops working once the dataset is published. Open the link yourself first to check what shows.</td>
+</tr>
+<tr class="odd">
+<td><strong>The journal</strong></td>
+<td>Upload an anonymised zip file with your submission.</td>
+<td>Make sure it is the same code you will archive.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="tada-warn">
+<p><strong>These tools anonymise the record, not your files.</strong> Before sharing anything
+for review, check the files themselves: names and emails in the README, author
+lines and comments in the code, file paths such as <code>C:/Users/yourname/</code>,
+institution names in file or folder names, and the author field of any
+document or notebook.</p>
+</div>
+<div class="tada-wiki">
+<p>A few more points from the British Ecological Society’s
+<a href="https://methodsblog.com/2023/08/23/double-anonymous-peer-review-frequently-asked-questions/">double-anonymous review FAQ</a>:</p>
+<ul>
+<li>If your code is already public, for example as an R package on CRAN, you can
+still submit. Tell the journal, and provide an anonymised copy for review.</li>
+<li>Don’t anonymise your own citations as “(Anonymous, 2010)”; it draws attention
+to them. A reference to the data or code archive itself can be anonymised.</li>
+<li>Revised manuscripts and responses to reviewers need anonymising too.</li>
+</ul>
+</div>
+</div>
 </div>
 <div id="available-checklist" class="section level2" number="4.8">
 <h2>
@@ -325,7 +402,7 @@ double-blind policies, then restored before archiving. See
 <li><label><input type="checkbox">Data and code are in the same archived project where possible; where not, each README points to the other</label></li>
 <li><label><input type="checkbox">If developed on GitHub: a release was created and linked to Zenodo</label></li>
 <li><label><input type="checkbox">Any restricted data have a documented access route</label></li>
-<li><label><input type="checkbox">For double-blind review: an anonymised copy or anonymous link is available</label></li>
+<li><label><input type="checkbox">For double-blind review: an anonymised copy or anonymous link is available, and the files themselves have been checked for names, emails and personal file paths</label></li>
 </ul>
 <p><strong>Next:</strong> <a href="documented.html#documented">Documented</a>, on the README and the licence.</p>
 
@@ -344,7 +421,9 @@ double-blind policies, then restored before archiving. See
 <li><a class="nav-link" href="#available-together"><span class="header-section-number">4.4</span> Data and code in the same place</a></li>
 <li><a class="nav-link" href="#available-wrong"><span class="header-section-number">4.5</span> Consequences of not archiving</a></li>
 <li><a class="nav-link" href="#available-sensitive"><span class="header-section-number">4.6</span> Sensitive data and embargoes</a></li>
-<li><a class="nav-link" href="#available-anonymous"><span class="header-section-number">4.7</span> Anonymising for double-blind review</a></li>
+<li>
+<a class="nav-link" href="#available-anonymous"><span class="header-section-number">4.7</span> Anonymising for double-blind review</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#how-to-do-it-on-each-platform">How to do it on each platform</a></li></ul>
+</li>
 <li><a class="nav-link" href="#available-checklist"><span class="header-section-number">4.8</span> Checklist</a></li>
 </ul>
 
