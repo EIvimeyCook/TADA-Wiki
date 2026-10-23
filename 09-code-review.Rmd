@@ -189,7 +189,7 @@ matching within one significant figure. Their worked example:
 
 *Percentage error* ([Hardwicke et al. 2021]{.tada-cite data-key="hardwicke-2021"}; see also [Kambouris et al. 2024]{.tada-cite data-key="kambouris-2024"}).
 Comparison at one significant figure depends heavily on scale, whereas
-percentage error does not. Using
+percentage error does not. With
 
 $$\text{PE} = \frac{\text{new} - \text{original}}{\text{original}} \times 100,$$
 
