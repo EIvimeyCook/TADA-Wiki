@@ -90,7 +90,7 @@ Some comment markers create **collapsible sections** in the editor, which make a
 file easier to read and navigate. They help most in long scripts.
 
 - **`#####`** or **`#----`** in RStudio
-- **`#%%`** in VSCode or Spyder (Python IDEs)
+- **`#%%`** in VS Code or Spyder (Python IDEs)
 
 ```r
 ##### 1. Load and clean data #####
@@ -165,7 +165,7 @@ Two cautions about archiving a notebook:
 A well-commented `.R` or `.py` file is enough, and for many analyses it is the
 clearest option. The requirements are the same:
 
-- logical chunks, marked with `#####` / `#----` (RStudio) or `#%%` (VSCode/Spyder)
+- logical chunks, marked with `#####` / `#----` (RStudio) or `#%%` (VS Code/Spyder)
 - a comment on each chunk giving what it does, why it is needed and where the
   output appears
 - object names a reader can follow

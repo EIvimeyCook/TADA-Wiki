@@ -2,15 +2,24 @@
 <meta name="theme-color" content="#0F6E7B">
 <!-- Set the colour theme before the page paints, so a dark-mode reader never
      sees a flash of white. Uses the saved choice from the toggle
-     (assets/tada-theme.js) or, if there is none, the system setting. -->
+     (assets/tada-theme.js) or, if there is none, the system setting. The
+     saved colour palette and colour-blind mode are applied here too, so they
+     never flash either. -->
 <script>
   (function () {
-    var t = null;
-    try { t = localStorage.getItem("tada-theme"); } catch (e) {}
+    var root = document.documentElement;
+    var t = null, p = null, c = null;
+    try {
+      t = localStorage.getItem("tada-theme");
+      p = localStorage.getItem("tada-palette");
+      c = localStorage.getItem("tada-cvd");
+    } catch (e) {}
     if (t !== "light" && t !== "dark") {
       t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     }
-    document.documentElement.setAttribute("data-theme", t);
+    root.setAttribute("data-theme", t);
+    if (p === "indigo" || p === "plum" || p === "ember") root.setAttribute("data-palette", p);
+    if (c === "on") root.setAttribute("data-cvd", "on");
   })();
 </script>
 <link rel="icon" type="image/png" href="assets/favicon.png">

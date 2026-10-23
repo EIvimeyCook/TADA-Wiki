@@ -47,7 +47,7 @@ DOI.
 
 | Repository | PID | Immutable | Notes |
 |---|---|---|---|
-| **Zenodo** | DOI | [Yes]{.tada-yes} | Connects directly to a GitHub project. Gives a base project-level DOI as well as version-specific DOIs. You can choose the licence at deposit; CC-BY 4.0 is the default. |
+| **Zenodo** | DOI | [Yes]{.tada-yes} | Connects directly to a GitHub project. Gives a base project-level DOI as well as version-specific DOIs. You can choose the licence at deposit; CC BY 4.0 is the default. |
 | **Figshare** | DOI | [Yes]{.tada-yes} | General-purpose, and widely used for code and supplementary material. Assigns CC0 by default. |
 | **Dryad** | DOI | [Yes]{.tada-yes} | Data-focused, and **mandates CC0**, which is not well suited to code (see [licences](#documented-licence)). Code uploaded to Dryad as software is published on Zenodo instead ([Lowenberg 2021]{.tada-cite data-key="lowenberg-2021"}). |
 | **Dataverse** | DOI | [Yes]{.tada-yes} | General-purpose. Published versions are fixed: editing a published dataset creates a new draft version ([Dataverse Project n.d.]{.tada-cite data-key="dataverse-guide"}). |

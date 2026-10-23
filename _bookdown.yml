@@ -4,6 +4,7 @@ delete_merged_file: true
 
 rmd_files:
   - "index.Rmd"
+  - "00-about.Rmd"
   - "01-quickstart.Rmd"
   - "02-tada.Rmd"
   - "03-transferable.Rmd"

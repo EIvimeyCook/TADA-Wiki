@@ -5,9 +5,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>1 Start here | The TADA-Wiki</title>
-<meta name="author" content="a community wiki built on the TADA guidelines">
+<meta name="author" content="Ed Ivimey-Cook">
 <meta name="description" content="Use this chapter if you are about to submit a paper and need to get the code behind it ready to share. It covers the minimum steps to turn your project folder into an archive that someone else can...">
-<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
 <meta property="og:title" content="1 Start here | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/quickstart.html">
@@ -17,18 +17,27 @@
 <meta name="twitter:description" content="Use this chapter if you are about to submit a paper and need to get the code behind it ready to share. It covers the minimum steps to turn your project folder into an archive that someone else can...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
 <!-- Set the colour theme before the page paints, so a dark-mode reader never
          sees a flash of white. Uses the saved choice from the toggle
-         (assets/tada-theme.js) or, if there is none, the system setting. --><script>
+         (assets/tada-theme.js) or, if there is none, the system setting. The
+         saved colour palette and colour-blind mode are applied here too, so they
+         never flash either. --><script>
       (function () {
-        var t = null;
-        try { t = localStorage.getItem("tada-theme"); } catch (e) {}
+        var root = document.documentElement;
+        var t = null, p = null, c = null;
+        try {
+          t = localStorage.getItem("tada-theme");
+          p = localStorage.getItem("tada-palette");
+          c = localStorage.getItem("tada-cvd");
+        } catch (e) {}
         if (t !== "light" && t !== "dark") {
           t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
         }
-        document.documentElement.setAttribute("data-theme", t);
+        root.setAttribute("data-theme", t);
+        if (p === "indigo" || p === "plum" || p === "ember") root.setAttribute("data-palette", p);
+        if (c === "on") root.setAttribute("data-cvd", "on");
       })();
     </script><link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -66,6 +75,7 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="about.html">About this wiki</a></li>
 <li><a class="active" href="quickstart.html"><span class="header-section-number">1</span> Start here</a></li>
 <li><a class="" href="tada.html"><span class="header-section-number">2</span> TADA at a glance</a></li>
 <li><a class="" href="transferable.html"><span class="header-section-number">3</span> T — Transferable</a></li>
@@ -99,6 +109,7 @@ types</strong>, <strong>annotate</strong> the scripts, write the <strong>README<
 run the whole thing. Then <strong>archive</strong> it and get a DOI. Archiving last means the
 DOI points to the version that has already been checked.</p>
 </div>
+<p>Just want the tick list? <a href="quickstart.html#quickstart-checklist">Jump to the checklist</a>.</p>
 <div id="quickstart-checklist" class="section level2" number="1.1">
 <h2>
 <span class="header-section-number">1.1</span> The pre-submission checklist<a class="anchor" aria-label="anchor" href="#quickstart-checklist"><i class="fas fa-link"></i></a>
@@ -135,7 +146,7 @@ DOI points to the version that has already been checked.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">A <code>README.md</code> (or <code>README.txt</code>) sits at the top of the project</label></li>
 <li><label><input type="checkbox">It names the manuscript, the authors, a contact address, and any funders</label></li>
-<li><label><input type="checkbox">It lists software <strong>and version</strong> (e.g. R v4.3.3) and key packages <strong>and versions</strong> (e.g. ggplot2 v3.5.1)</label></li>
+<li><label><input type="checkbox">It lists software <strong>and version</strong> (e.g. R v4.5.2) and key packages <strong>and versions</strong> (e.g. ggplot2 v4.0.2)</label></li>
 <li><label><input type="checkbox">It states the licence</label></li>
 <li><label><input type="checkbox">It says where the data are, ideally with their own DOI</label></li>
 <li><label><input type="checkbox">It says what each file is, what order to run things in, what the code needs and what it produces</label></li>
@@ -281,7 +292,7 @@ SORTEE guidelines (<span class="tada-cite" data-key="pick-2026">Pick et al. 202
 project and replace the angle-bracketed parts. The
 <a href="documented.html#documented-readme">Documented</a> chapter explains each field and why it is
 there.</p>
-<p>Or generate one with <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a> (<code>devtools::install_github("EIvimeyCook/READMEBuilder")</code>, then <code>build_readme()</code>), a Shiny app that fills in these fields from your project and writes the <code>README.md</code>.</p>
+<p>Or generate one with <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a> (<code>pak::pak("EIvimeyCook/READMEBuilder")</code>, then <code>build_readme()</code>), a Shiny app that fills in these fields from your project and writes the <code>README.md</code>.</p>
 </div>
 <div id="quickstart-next" class="section level2" number="1.5">
 <h2>
@@ -301,7 +312,7 @@ and your co-authors, through <a href="code-review.html#code-review">code review<
 </div>
 </div>
 <script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><script src="assets/tada-glossary.js" defer></script><div class="chapter-nav">
-<div class="prev"><a href="index.html">Welcome</a></div>
+<div class="prev"><a href="about.html">About this wiki</a></div>
 <div class="next"><a href="tada.html"><span class="header-section-number">2</span> TADA at a glance</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
@@ -334,7 +345,7 @@ and your co-authors, through <a href="code-review.html#code-review">code review<
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 04 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 23 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

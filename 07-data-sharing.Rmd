@@ -148,7 +148,7 @@ The SORTEE guidelines say what is needed on the **data** side
 - Authors and relevant contact information
 - Date and location of data collection
 - A list of all relevant funders
-- Licence information, for example CC-BY
+- Licence information, for example CC BY
 - Information about data derived from other sources, such as other articles or
   online data
 

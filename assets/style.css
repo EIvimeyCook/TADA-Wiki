@@ -21,6 +21,9 @@
   --tada-surface-2: #EDF2F4;
   --tada-accent: #0F6E7B;
   --tada-accent-soft: #E6F2F3;
+  --tada-accent-hover: #073137;
+  --tada-footer: #0F6E7B;
+  --tada-on-accent: #FFFFFF;   /* text on an accent fill: footer, pressed button */
 
   --tada-good: #1F6B3B;
   --tada-good-bg: #EEF6F0;
@@ -43,6 +46,93 @@
 
   --tada-radius: 12px;
   --tada-shadow: 0 1px 2px rgba(19, 41, 51, .06), 0 6px 20px rgba(19, 41, 51, .06);
+}
+
+/* --------------------------------------------------------------------------
+   Colour themes and colour-blind mode (light values)
+   --------------------------------------------------------------------------
+   Set by data-palette and data-cvd on <html> (assets/head.html applies the
+   saved choice before first paint; the picker is in assets/tada-theme.js).
+   Teal is the default, defined in :root above. A palette only swaps the
+   accent family; colour-blind mode only swaps the four TADA letter colours
+   and the good/bad pair. The two never touch the same token, so every
+   palette works with and without colour-blind mode. Dark values for both are
+   in the dark-theme section at the bottom of the file.
+
+   Every pairing here is checked by tools/check_colours.py (contrast against
+   each surface it sits on, and the letter colours under simulated
+   protanopia, deuteranopia and tritanopia). Rerun it after changing a value:
+     python3 tools/check_colours.py assets/style.css
+   -------------------------------------------------------------------------- */
+
+:root[data-palette="indigo"] {
+  --tada-accent: #3A4AAE;
+  --tada-accent-soft: #ECEEFA;
+  --tada-accent-hover: #232D73;
+  --tada-footer: #3A4AAE;
+  --tada-code-ink: #2E3A8C;
+}
+
+:root[data-palette="plum"] {
+  --tada-accent: #893778;
+  --tada-accent-soft: #F7ECF4;
+  --tada-accent-hover: #55204A;
+  --tada-footer: #893778;
+  --tada-code-ink: #6E2C61;
+}
+
+:root[data-palette="ember"] {
+  --tada-accent: #A2400C;
+  --tada-accent-soft: #FBEFE6;
+  --tada-accent-hover: #662806;
+  --tada-footer: #A2400C;
+  --tada-code-ink: #84340A;
+}
+
+/* Colour-blind mode. The default red / green / purple / blue letters
+   collapse into two look-alike pairs under red-green colour blindness. These
+   four (vermillion, teal, wine, indigo) were found by searching for the set
+   that stays furthest apart under normal vision, protanopia, deuteranopia
+   and tritanopia at once, while still clearing contrast on the page and on
+   their own tinted card. Good / bad become indigo / burnt orange, and links
+   are underlined, so nothing relies on red versus green. */
+:root[data-cvd="on"] {
+  --tada-t: #D9480F;
+  --tada-a1: #128A84;
+  --tada-d: #6B2245;
+  --tada-a2: #3B2FC9;
+  --tada-t-bg: #FCEFE9;
+  --tada-a1-bg: #EAF4F4;
+  --tada-d-bg: #F2EBEE;
+  --tada-a2-bg: #EDECFA;
+  --tada-key-bg: #F2EBEE;
+  --tada-good: #3B2FC9;
+  --tada-good-bg: #EDECFA;
+  --tada-bad: #A93A08;
+  --tada-bad-bg: #F7EDE9;
+}
+
+html[data-cvd="on"] main a:not(.tada-tile-title):not(.tada-word),
+html[data-cvd="on"] .book-extra a {
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+
+/* Bootstrap compiles the primary colour into its own rules (links, the
+   footer bar, outline buttons), so point those at the tokens too, or a
+   palette change would leave them teal. */
+a { color: var(--tada-accent); }
+a:hover { color: var(--tada-accent-hover); }
+.text-primary { color: var(--tada-accent) !important; }
+.bg-primary,
+footer.bg-primary { background-color: var(--tada-footer) !important; color: var(--tada-on-accent); }
+footer.bg-primary a { color: var(--tada-on-accent); }
+.btn-outline-primary { color: var(--tada-accent); border-color: var(--tada-accent); }
+.btn-outline-primary:hover,
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+  color: var(--tada-on-accent);
+  background-color: var(--tada-accent);
+  border-color: var(--tada-accent);
 }
 
 html body {
@@ -133,6 +223,92 @@ div.sourceCode, pre {
   .tada-hero-figure img { width: 148px; }
 }
 
+/* --------------------------------------------------------------------------
+   Hero wizard: "TADA!" reveal on page load
+   --------------------------------------------------------------------------
+   The lettering is part of the wizard image, so it cannot be animated as
+   text. Instead the image is shown with its top-right corner (the word,
+   rows 0-97 of 607, plus a notch for the "!" dot) clipped away, and a
+   ::after layer shows only that corner, using the same image. The wizard
+   waves, sparkles burst from the wand (spans added by tada-mascot.js), and
+   the word pops out of the wand tip. Both layers line up exactly at rest,
+   so the finished picture is the original image.
+
+   Pure CSS, so it runs from first paint with no flash of the word. Only on
+   screen and only when the reader has not asked for reduced motion;
+   otherwise (and in print) it is the plain image. Clicking the wizard
+   replays it (tada-mascot.js).
+   -------------------------------------------------------------------------- */
+
+.tada-spark { display: none; }
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  /* The wave goes on the image, not on this wrapper: a transformed wrapper
+     would isolate its children, and the dark theme's screen blend (which
+     drops the inverted image's black background) would then have nothing to
+     blend with, leaving a black box. */
+  .tada-hero-figure .inline-figure {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .tada-hero-figure img {
+    clip-path: polygon(0 0, 62% 0, 62% 16%, 89% 16%, 89% 17.8%, 100% 17.8%, 100% 100%, 0 100%);
+    transform-origin: 45% 100%;
+    animation: tada-wave .9s ease-in-out .25s both;
+  }
+
+  .tada-hero-figure .inline-figure::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("figures/wizard-tada.png") 0 0 / 100% 100% no-repeat;
+    clip-path: polygon(62% 0, 100% 0, 100% 17.8%, 89% 17.8%, 89% 16%, 62% 16%);
+    mix-blend-mode: multiply;   /* the image's white background drops out */
+    transform-origin: 86% 28%;  /* the star on the wand */
+    animation: tada-pop .65s cubic-bezier(.2, .9, .3, 1.2) 1s both;
+    pointer-events: none;
+  }
+
+  .tada-spark {
+    display: block;
+    position: absolute;
+    left: 86%;
+    top: 28%;
+    width: var(--s, 12px);
+    height: var(--s, 12px);
+    background: #F2B33D;
+    clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    pointer-events: none;
+    /* backwards only: at rest the sparks sit invisible on the wand tip, so
+       they never add to the page's scrollable width. */
+    animation: tada-spark .75s ease-out var(--delay, .9s) backwards;
+  }
+}
+
+@keyframes tada-wave {
+  0%   { transform: rotate(0); }
+  20%  { transform: rotate(-6deg); }
+  45%  { transform: rotate(5deg); }
+  70%  { transform: rotate(-2deg); }
+  100% { transform: rotate(0); }
+}
+
+@keyframes tada-pop {
+  0%   { opacity: 0; transform: scale(.15) rotate(-18deg); }
+  55%  { opacity: 1; transform: scale(1.18) rotate(4deg); }
+  80%  { transform: scale(.96) rotate(-1deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+@keyframes tada-spark {
+  0%   { opacity: 1; transform: translate(-50%, -50%) scale(.2) rotate(0); }
+  60%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1) rotate(90deg); }
+}
+
 .tada-hero .tada-eyebrow {
   text-transform: uppercase;
   letter-spacing: .14em;
@@ -213,6 +389,62 @@ div.sourceCode, pre {
    doesn't borrow a colour that means something specific elsewhere. */
 .tada-card.neutral { border-top-color: var(--tada-accent); background: var(--tada-surface); }
 .tada-card.neutral .tada-letter { color: var(--tada-accent); }
+
+/* --------------------------------------------------------------------------
+   Quick-link tiles (front page). The whole tile is the click target: the
+   title link's ::after stretches over it, so the text stays a real link for
+   keyboard and screen-reader users.
+   -------------------------------------------------------------------------- */
+
+.tada-tiles {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin: 1.2rem 0 2rem;
+}
+
+.tada-tile {
+  position: relative;
+  border: 1px solid var(--tada-line);
+  border-left: 4px solid var(--tada-accent);
+  border-radius: var(--tada-radius);
+  padding: .95rem 1.1rem 1rem;
+  background: var(--tada-card);
+  box-shadow: var(--tada-shadow);
+  transition: transform .12s ease, border-color .12s ease;
+}
+
+.tada-tile:hover,
+.tada-tile:focus-within { transform: translateY(-2px); border-color: var(--tada-accent); }
+
+.tada-tile p { margin: 0; }
+
+.tada-tile .tada-tile-title {
+  display: block;
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin-bottom: .3rem;
+}
+
+.tada-tile a.tada-tile-title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.tada-tile .tada-tile-text {
+  color: var(--tada-ink-soft);
+  font-size: .93rem;
+}
+
+/* Principle cards used as links: same stretched-link trick, no hover lift
+   needed beyond the shared card look. */
+.tada-cards--links .tada-card { position: relative; }
+.tada-cards--links .tada-card a.tada-word::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
 
 /* --------------------------------------------------------------------------
    Callouts
@@ -847,8 +1079,99 @@ html[data-theme="dark"] .tada-theme-toggle .tada-icon-moon { display: none; }
   .tada-theme-toggle { margin-top: .25rem; }
 }
 
+/* With the colour-options button added, both buttons sit in one group that
+   takes the toggle's place: stacked in the 210px desktop sidebar so the title
+   keeps its width, side by side in the mobile header. */
+.tada-theme-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  flex: 0 0 auto;
+  margin: 1.5rem 0 0 auto;
+}
+.tada-theme-buttons .tada-theme-toggle { margin: 0; }
+
+@media (max-width: 991.98px) {
+  .tada-theme-buttons { flex-direction: row; margin-top: .25rem; }
+}
+
+.tada-palette-btn[aria-expanded="true"] { color: var(--tada-accent); border-color: var(--tada-accent); }
+
+.tada-palette-panel {
+  position: fixed;
+  z-index: 1060;
+  width: 16rem;
+  max-width: calc(100vw - 16px);
+  padding: .85rem 1rem .9rem;
+  border: 1px solid var(--tada-line);
+  border-radius: var(--tada-radius);
+  background: var(--tada-card);
+  color: var(--tada-ink);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+  font-size: .92rem;
+}
+
+.tada-palette-panel fieldset { margin: 0 0 .75rem; padding: 0; border: 0; min-width: 0; }
+
+.tada-palette-panel legend {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--tada-ink-soft);
+  margin-bottom: .45rem;
+}
+
+.tada-palette-option {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  width: 48%;
+  margin: 0 0 .35rem;
+  cursor: pointer;
+}
+
+.tada-palette-option input,
+.tada-cvd-option input { accent-color: var(--tada-accent); margin: 0; }
+
+.tada-swatch {
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 999px;
+  border: 1px solid var(--tada-line);
+  flex: 0 0 auto;
+}
+
+/* Swatches show each palette's accent in the current light/dark mode. */
+.tada-swatch--teal   { background: #0F6E7B; }
+.tada-swatch--indigo { background: #3A4AAE; }
+.tada-swatch--plum   { background: #893778; }
+.tada-swatch--ember  { background: #A2400C; }
+
+.tada-cvd-option {
+  display: flex;
+  align-items: flex-start;
+  gap: .55rem;
+  margin: 0;
+  padding-top: .7rem;
+  border-top: 1px solid var(--tada-line);
+  cursor: pointer;
+}
+
+.tada-cvd-option input { margin-top: .3rem; }
+.tada-cvd-option span { font-weight: 600; line-height: 1.35; }
+
+.tada-cvd-option small {
+  display: block;
+  margin-top: .2rem;
+  font-weight: 400;
+  font-size: .8rem;
+  color: var(--tada-ink-soft);
+}
+
 @media print {
-  .tada-theme-toggle { display: none; }
+  .tada-theme-toggle,
+  .tada-palette-panel { display: none; }
 }
 
 /* --------------------------------------------------------------------------
@@ -888,6 +1211,9 @@ html[data-theme="dark"] .tada-theme-toggle .tada-icon-moon { display: none; }
     --tada-surface-2: #1F2B32;
     --tada-accent: #52C2CE;
     --tada-accent-soft: #11282D;
+    --tada-accent-hover: #7FD6DF;
+    --tada-footer: #0B4F58;
+    --tada-on-accent: #FFFFFF;
 
     --tada-good: #6FCF8E;
     --tada-good-bg: #12241A;
@@ -910,13 +1236,56 @@ html[data-theme="dark"] .tada-theme-toggle .tada-icon-moon { display: none; }
     --tada-shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 6px 20px rgba(0, 0, 0, .3);
   }
 
+  /* Dark values for the colour themes and colour-blind mode (see the light
+     section near the top of the file). Each sets the same tokens as its
+     light counterpart, so the extra attribute always wins. */
+  :root[data-theme="dark"][data-palette="indigo"] {
+    --tada-accent: #9EA9F6;
+    --tada-accent-soft: #191D35;
+    --tada-accent-hover: #C4CAFA;
+    --tada-footer: #2B3580;
+    --tada-code-ink: #B7BEFA;
+  }
+
+  :root[data-theme="dark"][data-palette="plum"] {
+    --tada-accent: #E39FD5;
+    --tada-accent-soft: #2A1827;
+    --tada-accent-hover: #F0C5E7;
+    --tada-footer: #642659;
+    --tada-code-ink: #ECB6E1;
+  }
+
+  :root[data-theme="dark"][data-palette="ember"] {
+    --tada-accent: #F2A06E;
+    --tada-accent-soft: #2C1B11;
+    --tada-accent-hover: #F8C5A4;
+    --tada-footer: #7A3009;
+    --tada-code-ink: #F5B58B;
+  }
+
+  :root[data-theme="dark"][data-cvd="on"] {
+    --tada-t: #C5770F;
+    --tada-a1: #83E499;
+    --tada-d: #F1B6D6;
+    --tada-a2: #7483E0;
+    --tada-t-bg: #252219;
+    --tada-a1-bg: #1D2F29;
+    --tada-d-bg: #2A2931;
+    --tada-a2-bg: #1B2332;
+    --tada-key-bg: #2A2931;
+    --tada-good: #8C9AEC;
+    --tada-good-bg: #1B2332;
+    --tada-bad: #D88A2A;
+    --tada-bad-bg: #252219;
+  }
+
   /* Page, text and links */
   html[data-theme="dark"] body {
     background-color: var(--tada-page);
     color: var(--tada-ink);
   }
   html[data-theme="dark"] a { color: var(--tada-accent); }
-  html[data-theme="dark"] a:hover { color: #7FD6DF; }
+  html[data-theme="dark"] a:hover { color: var(--tada-accent-hover); }
   html[data-theme="dark"] .text-muted { color: var(--tada-ink-soft) !important; }
   html[data-theme="dark"] .header-section-number { color: var(--tada-ink-soft); }
   html[data-theme="dark"] hr { border-top-color: var(--tada-line); }
@@ -1044,13 +1413,21 @@ html[data-theme="dark"] .tada-theme-toggle .tada-icon-moon { display: none; }
   html[data-theme="dark"] code span.er,
   html[data-theme="dark"] code span.al { color: #FF7070; }
 
-  /* Footer: a deeper teal so the bar does not glare against the dark page. */
-  html[data-theme="dark"] footer.bg-primary { background-color: #0B4F58 !important; }
+  html[data-theme="dark"] .tada-swatch--teal   { background: #52C2CE; }
+  html[data-theme="dark"] .tada-swatch--indigo { background: #9EA9F6; }
+  html[data-theme="dark"] .tada-swatch--plum   { background: #E39FD5; }
+  html[data-theme="dark"] .tada-swatch--ember  { background: #F2A06E; }
+  html[data-theme="dark"] .tada-palette-panel { box-shadow: 0 10px 30px rgba(0, 0, 0, .55); }
+
+  /* Footer: a deeper shade of the accent so the bar does not glare against
+     the dark page. */
+  html[data-theme="dark"] footer.bg-primary { background-color: var(--tada-footer) !important; }
 
   /* Mascots (wizard, dogs, sidebar logo) are black line art on white with no
      transparency. Inverting turns them into light line art on black, and the
      screen blend then drops the black, so they sit directly on the page. */
   html[data-theme="dark"] .tada-hero-figure img,
+  html[data-theme="dark"] .tada-hero-figure .inline-figure::after,
   html[data-theme="dark"] .tada-logo,
   html[data-theme="dark"] .tada-dog-float img {
     filter: invert(1) hue-rotate(180deg);

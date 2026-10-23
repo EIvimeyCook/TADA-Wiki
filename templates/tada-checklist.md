@@ -66,7 +66,7 @@ descriptive text.*
 - [ ] Each chunk says what it does
 - [ ] Each chunk says why it is needed
 - [ ] Chunks producing results signpost the manuscript location (figure, table, section)
-- [ ] Collapsible section markers used in long scripts (`#####` / `#----` in RStudio, `#%%` in VSCode/Spyder)
+- [ ] Collapsible section markers used in long scripts (`#####` / `#----` in RStudio, `#%%` in VS Code/Spyder)
 - [ ] Object names are interpretable by someone who did not write the code
 - [ ] Unused `library()` / `import` calls removed
 - [ ] Notebooks were restarted and run top to bottom before archiving

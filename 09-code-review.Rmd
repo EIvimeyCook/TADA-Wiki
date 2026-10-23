@@ -191,7 +191,7 @@ matching within one significant figure. Their worked example:
 Comparison at one significant figure depends heavily on scale, whereas
 percentage error does not. Using
 
-$$\text{PE} = \frac{\text{new} - \text{original}}{\text{original}} \times 100$$
+$$\text{PE} = \frac{\text{new} - \text{original}}{\text{original}} \times 100,$$
 
 error is classified as **non-existent** when this value is 0, **minor** between
 0 and 10, and **major (and not reproducible)** at 10 or above.

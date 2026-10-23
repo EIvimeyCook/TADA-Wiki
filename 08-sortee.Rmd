@@ -19,20 +19,20 @@ or to check its reliability
 
 ## The six stages {#sortee-stages}
 
-Table 2 of the paper ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}) is reproduced below.
+Table 2 of the paper ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}) is reproduced below, with spelling in British English to match the rest of this wiki.
 
 | Stage | Guideline |
 |---|---|
 | **1. Data must be archived and adhere to FAIR guiding principles** | |
 | 1.1 Data files are accessible and in an open repository | Data are open and freely available and are located in a permanent public repository with an associated globally unique persistent identifier, that is cited in the text and reference list of the manuscript. |
-| 1.2 Data are associated with a license | Data must be associated with a license. |
+| 1.2 Data are associated with a licence | Data must be associated with a licence. |
 | 1.3 Data files are present and complete | Authors must either provide: a) raw data, along with the processed data and/or code to prepare the data for analysis, or b) a sample of raw data alongside processed/filtered data when full raw data upload is not possible, or c) processed/filtered data with a detailed description of how to both obtain and process/filter the raw data. |
 | 1.4 Data files are in an interoperable format | Data files must be provided in an interoperable format. |
 | 1.5 Data metadata is present and adequate | Detailed metadata, including (but not limited to) a README file, must accompany the data. |
 | **2. Archived data corresponds with the data reported in the manuscript** | The structure and contents of the archived data files must match the description in the manuscript. |
 | **3. Code must be archived and adhere to FAIR guiding principles** | |
 | 3.1 Code files are accessible and in an open repository | Code files are open and freely available and are located in a permanent public repository with an associated globally unique persistent identifier, preferably in the same archived project as the data files, and are cited in the text and the reference list of the manuscript. |
-| 3.2 Code is associated with a license | The code must be associated with a license. |
+| 3.2 Code is associated with a licence | The code must be associated with a licence. |
 | 3.3 Code files are present and complete | All code used for generating the results of the manuscript (including filtering, processing, graphing, and analysis) must be present either in one or more code files. |
 | 3.4 Code is in an interoperable format | Code files must be provided in an interoperable format. |
 | 3.5 Code metadata is present and adequate | A sufficiently detailed README must accompany the code. Code must also be broken into sections with clear annotation stating the purpose of the code with clear links to the relevant sections, figures, and tables in the manuscript. |

@@ -43,7 +43,7 @@ alteration, on a different computer and operating system.*
 - [ ] Manuscript title and abstract
 - [ ] Authors, with a contact email
 - [ ] Relevant funders
-- [ ] Software and version (e.g. R v4.3.3)
+- [ ] Software and version (e.g. R v4.5.2)
 - [ ] Key packages with version numbers
 - [ ] Full environment dump (`sessionInfo()` / `session_info`) included or referenced
 - [ ] Where the data are, with a persistent identifier if archived separately
@@ -66,7 +66,7 @@ descriptive text.*
 - [ ] Each chunk says what it does
 - [ ] Each chunk says why it is needed
 - [ ] Chunks producing results signpost the manuscript location (figure, table, section)
-- [ ] Collapsible section markers used in long scripts (`#####` / `#----` in RStudio, `#%%` in VSCode/Spyder)
+- [ ] Collapsible section markers used in long scripts (`#####` / `#----` in RStudio, `#%%` in VS Code/Spyder)
 - [ ] Object names are interpretable by someone who did not write the code
 - [ ] Unused `library()` / `import` calls removed
 - [ ] Notebooks were restarted and run top to bottom before archiving

@@ -11,6 +11,8 @@ run the whole thing. Then **archive** it and get a DOI. Archiving last means the
 DOI points to the version that has already been checked.
 :::
 
+Just want the tick list? [Jump to the checklist](#quickstart-checklist).
+
 ## The pre-submission checklist {#quickstart-checklist}
 
 :::: {.tada-checklist-head}

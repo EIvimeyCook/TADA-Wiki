@@ -5,9 +5,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>5 D — Documented | The TADA-Wiki</title>
-<meta name="author" content="a community wiki built on the TADA guidelines">
+<meta name="author" content="Ed Ivimey-Cook">
 <meta name="description" content="Documentation means providing accurate and detailed metadata files that describe the code files and how to use them. In the TADA paper we map this onto the FAIR principles of Reusable (assets...">
-<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
 <meta property="og:title" content="5 D — Documented | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/documented.html">
@@ -17,18 +17,27 @@
 <meta name="twitter:description" content="Documentation means providing accurate and detailed metadata files that describe the code files and how to use them. In the TADA paper we map this onto the FAIR principles of Reusable (assets...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- bs4_book and rmarkdown both emit their own viewport meta; do not add a third. --><meta name="theme-color" content="#0F6E7B">
 <!-- Set the colour theme before the page paints, so a dark-mode reader never
          sees a flash of white. Uses the saved choice from the toggle
-         (assets/tada-theme.js) or, if there is none, the system setting. --><script>
+         (assets/tada-theme.js) or, if there is none, the system setting. The
+         saved colour palette and colour-blind mode are applied here too, so they
+         never flash either. --><script>
       (function () {
-        var t = null;
-        try { t = localStorage.getItem("tada-theme"); } catch (e) {}
+        var root = document.documentElement;
+        var t = null, p = null, c = null;
+        try {
+          t = localStorage.getItem("tada-theme");
+          p = localStorage.getItem("tada-palette");
+          c = localStorage.getItem("tada-cvd");
+        } catch (e) {}
         if (t !== "light" && t !== "dark") {
           t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
         }
-        document.documentElement.setAttribute("data-theme", t);
+        root.setAttribute("data-theme", t);
+        if (p === "indigo" || p === "plum" || p === "ember") root.setAttribute("data-palette", p);
+        if (c === "on") root.setAttribute("data-cvd", "on");
       })();
     </script><link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -66,6 +75,7 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="about.html">About this wiki</a></li>
 <li><a class="" href="quickstart.html"><span class="header-section-number">1</span> Start here</a></li>
 <li><a class="" href="tada.html"><span class="header-section-number">2</span> TADA at a glance</a></li>
 <li><a class="" href="transferable.html"><span class="header-section-number">3</span> T — Transferable</a></li>
@@ -122,7 +132,7 @@ version of R you need or where the data live.</p>
 <h3>What must be in it<a class="anchor" aria-label="anchor" href="#what-must-be-in-it"><i class="fas fa-link"></i></a>
 </h3>
 <p>This comes from the “Documented How To” box and its accompanying text in the TADA
-paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>), with the package examples updated:</p>
+paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>):</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="50%">
@@ -147,11 +157,11 @@ paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et a
 </tr>
 <tr class="even">
 <td><strong>Software</strong></td>
-<td>Language and <strong>version number</strong>, e.g. R v4.3.3</td>
+<td>Language and <strong>version number</strong>, e.g. R v4.5.2</td>
 </tr>
 <tr class="odd">
 <td><strong>Packages</strong></td>
-<td>Important libraries or packages used, <strong>with version numbers</strong>, e.g. ggplot2 v3.5.1. Can also be supplied as a separate text file listing every loaded package and version, from <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> in R or <code>session_info</code> in Python (from the <code>session-info</code> package)</td>
+<td>Important libraries or packages used, <strong>with version numbers</strong>, e.g. ggplot2 v4.0.2. Can also be supplied as a separate text file listing every loaded package and version, from <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> in R or <code>session_info</code> in Python (from the <code>session-info</code> package)</td>
 </tr>
 <tr class="even">
 <td><strong>Licence</strong></td>
@@ -194,7 +204,7 @@ software versions.</p>
 <p>Below is a filled-in version of the fields above. The template is at
 <a href="templates/README-template.md"><code>templates/README-template.md</code></a>.</p>
 <div class="tada-wiki">
-<p><strong>Generate the README instead of writing it.</strong> <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a>, an R package with a built-in Shiny app, walks you through the fields above and writes a <code>README.md</code>. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with <code>devtools::install_github("EIvimeyCook/READMEBuilder")</code>, then run <code>build_readme()</code>.</p>
+<p><strong>Generate the README instead of writing it.</strong> <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a>, an R package with a built-in Shiny app, walks you through the fields above and writes a <code>README.md</code>. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with <code>pak::pak("EIvimeyCook/READMEBuilder")</code>, then run <code>build_readme()</code>.</p>
 </div>
 <div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="documented.html#cb6-1" tabindex="-1"></a><span class="fu"># Code for: Caterpillar abundance varies with woodland habitat type</span></span>
 <span id="cb6-2"><a href="documented.html#cb6-2" tabindex="-1"></a></span>
@@ -222,11 +232,11 @@ software versions.</p>
 <span id="cb6-24"><a href="documented.html#cb6-24" tabindex="-1"></a>MIT (see LICENSE). Data are released under CC0.</span>
 <span id="cb6-25"><a href="documented.html#cb6-25" tabindex="-1"></a></span>
 <span id="cb6-26"><a href="documented.html#cb6-26" tabindex="-1"></a><span class="fu">## Software environment</span></span>
-<span id="cb6-27"><a href="documented.html#cb6-27" tabindex="-1"></a>R v4.3.3. Full session details in <span class="in">`session_info.txt`</span>.</span>
+<span id="cb6-27"><a href="documented.html#cb6-27" tabindex="-1"></a>R v4.5.2. Full session details in <span class="in">`session_info.txt`</span>.</span>
 <span id="cb6-28"><a href="documented.html#cb6-28" tabindex="-1"></a></span>
 <span id="cb6-29"><a href="documented.html#cb6-29" tabindex="-1"></a>Key packages:</span>
 <span id="cb6-30"><a href="documented.html#cb6-30" tabindex="-1"></a><span class="ss">  - </span>here        v1.0.1   (relative file paths)</span>
-<span id="cb6-31"><a href="documented.html#cb6-31" tabindex="-1"></a><span class="ss">  - </span>ggplot2     v3.5.1   (figures)</span>
+<span id="cb6-31"><a href="documented.html#cb6-31" tabindex="-1"></a><span class="ss">  - </span>ggplot2     v4.0.2   (figures)</span>
 <span id="cb6-32"><a href="documented.html#cb6-32" tabindex="-1"></a></span>
 <span id="cb6-33"><a href="documented.html#cb6-33" tabindex="-1"></a><span class="fu">## How to run</span></span>
 <span id="cb6-34"><a href="documented.html#cb6-34" tabindex="-1"></a>Open <span class="in">`caterpillars.Rproj`</span> in RStudio, then run the scripts in order:</span>
@@ -379,7 +389,7 @@ such as MIT for the code.</p>
 <div id="questions-that-determine-the-choice" class="section level3 unlisted unnumbered">
 <h3>Questions that determine the choice<a class="anchor" aria-label="anchor" href="#questions-that-determine-the-choice"><i class="fas fa-link"></i></a>
 </h3>
-<p>In the TADA paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>) we set out the questions that should decide the
+<p>In the TADA paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>) we set out three questions that should decide the
 choice:</p>
 <ul>
 <li>
@@ -388,10 +398,11 @@ choice:</p>
 <li>
 <strong>What do your journal, institution and funder require?</strong> Some journals
 mandate a specific licence on archiving.</li>
-<li>
-<strong>Does your repository already impose a licence?</strong> Dryad’s CC0-only policy is
-the case to watch for.</li>
 </ul>
+<div class="tada-wiki">
+<p>Also check whether your repository already imposes a licence. Dryad’s CC0-only
+policy is the case to watch for.</p>
+</div>
 <div class="tada-note">
 <p>The SORTEE guidelines require a licence for both data (Guideline 1.2) and code
 (Guideline 3.2; <span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>), but they treat the two differently. For <strong>data</strong> they
@@ -469,7 +480,7 @@ possible, for example, MIT, BSD 2-Clause, GNU, and Apache”</em> (Guideline 3.2
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by a community wiki built on the TADA guidelines. It was last built on 04 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 23 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

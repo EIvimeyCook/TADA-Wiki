@@ -1,7 +1,7 @@
 ---
 title: "The TADA-Wiki"
 subtitle: "Best practice for sharing analytical code"
-author: "a community wiki built on the TADA guidelines"
+author: "Ed Ivimey-Cook"
 date: "`r format(Sys.Date(), '%d %B %Y')`"
 site: bookdown::bookdown_site
 description: >-
@@ -34,135 +34,68 @@ annotated.
 :::
 :::
 
-## What this wiki is {.unnumbered}
+## Jump in {.unnumbered}
 
-Sharing code supports transparency and computational reproducibility, and
-journal policies increasingly require it
-([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-policy"}).
-Even so, few papers in the field share code: reported rates range from roughly
-[**5% to 35%**]{.tada-cite data-key="culina-2020,kimmel-2023,maitner-2024,kellner-2025,sanchez-tojar-2025,cooper-2026"},
-and code sharing still lags behind data sharing
-([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-policy"}).
-And when code is shared, it often fails to run. Of over 9,000 R files archived in the
-Harvard Dataverse, [**74% failed to complete without error**]{.tada-cite data-key="trisovic-2022"},
-and **56%** still failed after automated cleaning (removing local file paths
-and fixing library installation and loading). A study of species distribution
-and abundance papers abandoned its reproducibility assessment because
-[**93% of scripts**]{.tada-cite data-key="kellner-2025"} either did not run or
-ran with errors.
+::: {.tada-tiles}
+::: {.tada-tile}
+[Start here](#quickstart){.tada-tile-title}
+[The pre-submission checklist, a project layout that works and the three most common causes of failure.]{.tada-tile-text}
+:::
 
-One reason is that researchers are rarely taught how to archive analytical code.
-The resources that do exist are written largely for *software developers*, not
-for someone preparing a one-off analysis of a single dataset.
+::: {.tada-tile}
+[TADA at a glance](#tada){.tada-tile-title}
+[Why TADA exists, the evidence behind it and how it maps onto FAIR.]{.tada-tile-text}
+:::
 
-**TADA** (Transferable, Available, Documented, Annotated) is a set of simple
-guidelines aimed at that gap. This
-wiki expands them into a working reference and adds the practices that go with
-them: metadata, licences, repository choice, the data and code quality control
-guidelines from SORTEE (the Society for Open, Reliable, and Transparent Ecology
-and Evolutionary Biology), and code review.
+::: {.tada-tile}
+[Write a README or pick a licence](#documented){.tada-tile-title}
+[A field-by-field README, a worked example and a guide to code and data licences.]{.tada-tile-text}
+:::
+
+::: {.tada-tile}
+[Choose a repository](#available-where){.tada-tile-title}
+[Zenodo, Figshare, Dryad and others compared, and why GitHub is not an archive.]{.tada-tile-text}
+:::
+
+::: {.tada-tile}
+[What a data editor will check](#sortee){.tada-tile-title}
+[The six-stage SORTEE guidelines for data and code quality control.]{.tada-tile-text}
+:::
+
+::: {.tada-tile}
+[Set up a code review](#code-review){.tada-tile-title}
+[Why, when and how to have a colleague run and check your code.]{.tada-tile-text}
+:::
+:::
 
 ## The four principles {.unnumbered}
 
-::: {.tada-cards}
+::: {.tada-cards .tada-cards--links}
 ::: {.tada-card .t}
-[T]{.tada-letter} [Transferable]{.tada-word}
-[Anyone can open your file and run it on their own machine, without converting
-or editing it first.]{.tada-gloss}
+[T]{.tada-letter} [Transferable](#transferable){.tada-word}
+[Runs on someone else's machine.]{.tada-gloss}
 :::
 
 ::: {.tada-card .a1}
-[A]{.tada-letter} [Available]{.tada-word}
-[The code is publicly archived somewhere immutable, with a persistent
-identifier (a DOI) that is cited in the paper.]{.tada-gloss}
+[A]{.tada-letter} [Available](#available){.tada-word}
+[Archived, with a DOI.]{.tada-gloss}
 :::
 
 ::: {.tada-card .d}
-[D]{.tada-letter} [Documented]{.tada-word}
-[A README describes the files, the software environment, the licence, and
-where the data live.]{.tada-gloss}
+[D]{.tada-letter} [Documented](#documented){.tada-word}
+[A README and a licence.]{.tada-gloss}
 :::
 
 ::: {.tada-card .a2}
-[A]{.tada-letter} [Annotated]{.tada-word}
-[Comments inside the code say what each chunk does, why it is needed and which
-result in the paper it produces.]{.tada-gloss}
+[A]{.tada-letter} [Annotated](#annotated){.tada-word}
+[Comments that explain the code.]{.tada-gloss}
 :::
 :::
 
-::: {.tada-key}
-TADA is deliberately a **minimum standard**. Analytical code is usually written
-for one dataset and one study, so it needs to be a transparent, reproducible
-record of that analysis, not reusable software. TADA is pitched at that level
-and maps onto the FAIR principles (Findable, Accessible, Interoperable,
-Reusable).
-:::
+## Also in the wiki {.unnumbered}
 
-## How to use this wiki {.unnumbered}
+[Data & code sharing](#data-sharing) · [Further reading](#further-reading) ·
+[Glossary](#glossary) · [Contribute](#contribute) · [References](#references)
 
-| If you want to… | Go to |
-|---|---|
-| Get code ready to submit | [Start here](#quickstart) |
-| Understand TADA and how it maps to FAIR | [TADA at a glance](#tada) |
-| Work through one principle at a time | [Transferable](#transferable), [Available](#available), [Documented](#documented), [Annotated](#annotated) |
-| Write a README or pick a licence | [Documented](#documented) |
-| Choose a repository | [Available](#available-where) |
-| Decide which data to share, in what format and with what metadata | [Data & code sharing](#data-sharing) |
-| Know what a journal's data editor will check | [The SORTEE guidelines](#sortee) |
-| Set up or run a code review | [Code review](#code-review) |
-| Find guides, tutorials and papers | [Further reading](#further-reading) |
-| Look up a term such as DOI, README or licence | [Glossary](#glossary) |
-| Add a page to this wiki | [Contribute](#contribute) |
-| Find the full details of anything cited | [References](#references) |
-
-## Who this is for {.unnumbered}
-
-Researchers at any level of coding experience who need to share the code behind
-a paper. The examples use R and Python, languages widely used in ecology and
-evolutionary biology. The principles also apply to workflow languages such as
-Snakemake, compiled languages such as C++, and other disciplines.
-
-You do not need to know Git, Docker or unit testing to follow this wiki. Where
-those tools help, they are mentioned as optional.
-
-## Where the guidance comes from {.unnumbered}
-
-This wiki draws on three sources, linked by DOI below.
-
-- **Ivimey-Cook, E. R., Culina, A., Dimri, S., Grainger, M. J., Kar, F.,
-  Lagisz, M., Moran, N. P., Nakagawa, S., Roche, D. G., Tattan, S.,
-  Sánchez-Tójar, A., Windecker, S. M., & Pick, J. L.** (2025). *TADA! Simple guidelines
-  to improve analytical code sharing for transparency and reproducibility.*
-  EcoEvoRxiv. <https://doi.org/10.32942/X2D93K> (preprint; not yet peer
-  reviewed).
-  <br>Source for the four TADA principles and the
-  [Transferable](#transferable), [Available](#available),
-  [Documented](#documented) and [Annotated](#annotated) chapters.
-
-- **Pick, J. L., Allen, B. J., Bachelot, B., Bairos-Novak, K. R., Brand, J. A.,
-  Class, B., Dallas, T., D'Amelio, P. B., Fenollosa, E., Fernández-Juricic, E.,
-  Gomes, D. G. E., Grainger, M. J., Guillemaud, T., John, C., Krasnow, R.,
-  Lagisz, M., Lequime, S., Maynard, D. S., Nakagawa, S., O'Dea, R. E.,
-  Paquet, M., Petitjean, Q., Sánchez-Tójar, A., van Dis, N. E., Wilson, L. A. B.,
-  & Ivimey-Cook, E. R. (2026).** *The SORTEE guidelines for data and code
-  quality control in ecology and evolutionary biology.* **Peer Community
-  Journal 6: e20.** <https://doi.org/10.24072/pcjournal.687>
-  <br>Source for the [SORTEE guidelines](#sortee) chapter and most of
-  [Data & code sharing](#data-sharing).
-
-- **Ivimey-Cook, E. R., Pick, J. L., Bairos-Novak, K. R., Culina, A.,
-  Gould, E., Grainger, M., Marshall, B. M., Moreau, D., Paquet, M.,
-  Royauté, R., Sánchez-Tójar, A., Silva, I., & Windecker, S. M. (2023).**
-  *Implementing code review in the scientific workflow: Insights from ecology
-  and evolutionary biology.* **Journal of Evolutionary Biology 36: 1347–1356.**
-  <https://doi.org/10.1111/jeb.14230>
-  <br>Source for the [Code review](#code-review) chapter.
-
-Full details, plus everything else cited, are in [References](#references).
-
-::: {.tada-note}
-Where this wiki adds practical detail beyond the source papers, such as a worked
-README, a repository comparison table or a reviewer's script, that material is
-shown in a **Wiki Tip** box, so you can tell it apart from the findings of the
-papers.
-:::
+New here? Read [About this wiki](#about) first: why it exists, who it is for and
+where the guidance comes from.
