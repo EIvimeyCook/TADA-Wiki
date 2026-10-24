@@ -158,7 +158,7 @@ SORTEE guidelines ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}, Stage 6)
 | Mistake | Why it breaks | Fix |
 |---|---|---|
 | `setwd("C:/Users/ed/Desktop/analysis")` | The path exists on exactly one computer | Open the project through its `.Rproj` file, or start Python inside the project folder, and build paths with `here()` / `pyprojroot` |
-| Code shared as a `.pdf` or `.docx` | Copy-pasting silently mangles apostrophes, quotes and whitespace, and drags in line numbers and headers | Save as `.R` / `.py`; see [Transferable](#transferable-filetype) |
+| Code shared as a `.pdf` or `.docx` | Copying and pasting code can change characters such as apostrophes, alter white space, or add line numbers and headers, causing errors that are hard to spot | Save as `.R` / `.py`; see [Transferable](#transferable-filetype) |
 | No `set.seed()` before a simulation or MCMC run | Results change every run, so nobody can tell a real mismatch from noise | Set a seed at the top of each independently runnable section |
 
 ## The README {#quickstart-readme}

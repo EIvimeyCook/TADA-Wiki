@@ -176,7 +176,7 @@ DOI.</p>
 <td><strong>Figshare</strong></td>
 <td>DOI</td>
 <td><span class="tada-yes">Yes</span></td>
-<td>General-purpose, and widely used for code and supplementary material. Assigns CC0 by default.</td>
+<td>General-purpose, and widely used for code and supplementary material. Like Zenodo, connects to a GitHub project and gives a base project-level DOI as well as version-specific DOIs. Assigns CC0 by default.</td>
 </tr>
 <tr class="odd">
 <td><strong>Dryad</strong></td>
@@ -200,7 +200,7 @@ DOI.</p>
 <td><strong>OSF</strong></td>
 <td>DOI</td>
 <td><span class="tada-no">No</span></td>
-<td>Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it <strong>does not provide file immutability</strong>, so projects and files can be changed or deleted (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). OSF <em>registrations</em> are the exception: they are fixed once submitted and cannot be edited. From 16 November 2026 new OSF Projects can’t be created, and existing projects become read-only after 19 February 2027 (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Fine for review, but archive elsewhere.</td>
+<td>Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it <strong>does not provide file immutability</strong>, so projects and files can be changed or deleted (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). OSF <em>registrations</em> are the exception: they are fixed once submitted and cannot be edited. From 16 November 2026 new OSF projects can’t be created, and existing projects become read-only after 19 February 2027 (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Fine for review, but archive elsewhere.</td>
 </tr>
 <tr class="odd">
 <td>Domain repositories (e.g. <strong>GenBank</strong>)</td>
@@ -281,9 +281,14 @@ result cannot be recovered.</p>
 <h2>
 <span class="header-section-number">4.6</span> Sensitive data and embargoes<a class="anchor" aria-label="anchor" href="#available-sensitive"><i class="fas fa-link"></i></a>
 </h2>
-<p>Some data cannot be shared openly, including protected species locations,
-personal data and third-party data held under licence. The SORTEE guidelines
-allow for these cases and note that many repositories offer <strong>embargoes</strong> (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</p>
+<p>Some data cannot be shared openly, such as medical records, identifying
+personal information, the locations of endangered species or fossil sites at
+risk of vandalism, and data covered by Indigenous data sovereignty (see the
+<a href="glossary.html#gloss-care">CARE principles</a>;
+<span class="tada-cite" data-key="carroll-2020">Carroll et al. 2020</span>;
+<span class="tada-cite" data-key="carroll-2021">Carroll et al. 2021</span>). The SORTEE guidelines allow for these cases, note that such
+data can often be obfuscated or anonymised instead, and note that many
+repositories offer <strong>embargoes</strong> (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</p>
 <div class="tada-wiki">
 <p>The exception normally applies to the <strong>data</strong>, not the <strong>code</strong>. Code that
 cannot run without restricted data is still worth archiving openly, because it
@@ -309,7 +314,7 @@ not offer this on its own, because your username is part of every
 repository’s address; use a separate anonymising service (below).</li>
 </ul>
 <p>The README can also be anonymised during peer review to comply with
-double-blind policies, then restored before archiving. See
+double-blind policies, then restored once the paper is accepted. See
 <a href="documented.html#documented-readme">Documented</a>.</p>
 <div id="how-to-do-it-on-each-platform" class="section level3 unlisted unnumbered">
 <h3>How to do it on each platform<a class="anchor" aria-label="anchor" href="#how-to-do-it-on-each-platform"><i class="fas fa-link"></i></a>
@@ -332,7 +337,7 @@ rely on one.</p>
 <tbody>
 <tr class="odd">
 <td><strong>Zenodo</strong></td>
-<td>Either list the authors as “Anonymous” and publish the record openly, one of the two options the British Ecological Society <a href="https://methodsblog.com/2023/08/23/double-anonymous-peer-review-frequently-asked-questions/">suggests</a>, then add the real authors once the paper is accepted. You can <a href="https://help.zenodo.org/docs/deposit/manage-records/">edit a published record’s authors</a> at any time without changing its DOI. Or keep the record restricted (or as an unpublished draft) and send reviewers a <a href="https://help.zenodo.org/docs/share/about">secret link</a>, which works without a Zenodo account.</td>
+<td>Either list the authors as “Anonymous”, publish the record openly, and add the real authors once the paper is accepted (one of two options the British Ecological Society <a href="https://methodsblog.com/2023/08/23/double-anonymous-peer-review-frequently-asked-questions/">suggests</a>). You can <a href="https://help.zenodo.org/docs/deposit/manage-records/">edit a published record’s authors</a> at any time without changing its DOI. Or keep the record restricted (or as an unpublished draft) and send reviewers a <a href="https://help.zenodo.org/docs/share/about">secret link</a>, which works without a Zenodo account.</td>
 <td>The BES notes that if reviewers have to <em>request</em> access to a restricted record, the request shows them your username.</td>
 </tr>
 <tr class="even">
@@ -348,7 +353,7 @@ rely on one.</p>
 <tr class="even">
 <td><strong>OSF</strong></td>
 <td>Create a view-only link with <strong>Anonymize</strong> ticked, which hides contributor names. Only admins can create one. Use a link on an embargoed <a href="https://help.osf.io/article/330-welcome-to-registrations">registration</a> rather than a project.</td>
-<td>From 16 November 2026, new OSF Projects can’t be created, existing projects become read-only after 19 February 2027, and project links will stop working once COS removes private project storage (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Registration links are not affected.</td>
+<td>From 16 November 2026, new OSF projects can’t be created, existing projects become read-only after 19 February 2027, and project links will stop working once COS removes private project storage (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Registration links are not affected.</td>
 </tr>
 <tr class="odd">
 <td><strong>GitHub</strong></td>

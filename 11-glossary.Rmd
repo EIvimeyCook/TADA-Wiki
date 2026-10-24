@@ -37,6 +37,17 @@ links to it.
 :   The second TADA principle: the code is publicly archived with a persistent
     identifier that is cited in the paper. See [Available](#available).
 
+[CARE principles]{#gloss-care data-match="CARE principles|CARE"}
+:   Collective benefit, Authority to control, Responsibility and Ethics:
+    principles for the governance of Indigenous data
+    ([Carroll et al. 2020]{.tada-cite data-key="carroll-2020"}). They
+    complement the FAIR principles, which focus on data, by focusing on people
+    and purpose: the rights and interests of Indigenous Peoples in data about
+    them, their lands and their resources. Use them alongside FAIR when
+    archiving such data
+    ([Carroll et al. 2021]{.tada-cite data-key="carroll-2021"}). See
+    [Sensitive data and embargoes](#available-sensitive).
+
 [CC0 and CC BY]{#gloss-cc data-match="CC0|CC BY|CC-BY"}
 :   Two Creative Commons licences, common for data. CC0 places work in the
     public domain with no conditions. CC BY lets others reuse the work as long
@@ -57,8 +68,8 @@ links to it.
 
 [Container]{#gloss-container data-match="container|containerisation|Docker|Apptainer|Singularity"}
 :   A packaged copy of a complete software environment, including the
-    operating system, programs and libraries your code needs, so it runs the
-    same way on any computer. Docker and Apptainer are the common tools for
+    programs, libraries and system tools your code needs, so it runs the same
+    way on any computer. Docker and Apptainer are the common tools for
     building and running them. Beyond the scope of TADA.
 
 [Copyleft licence]{#gloss-copyleft data-match="copyleft|GPL"}

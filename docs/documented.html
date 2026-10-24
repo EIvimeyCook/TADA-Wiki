@@ -194,6 +194,10 @@ paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et a
 </tr>
 </tbody>
 </table></div>
+<p>Versions matter because different software or package versions can produce
+different results. For example, base R’s <code><a href="https://rdrr.io/r/base/sample.html">sample()</a></code> changed after v3.6.0, and
+dplyr’s <code>distinct()</code> function changed after v0.4.0, each giving different results
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>).</p>
 <div class="tada-wiki">
 <p><code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> (R) and <code>session_info.show()</code> (Python, from the <code>session-info</code>
 package) list every loaded package and its version. Run it at the end of your final
@@ -207,8 +211,8 @@ software versions.</p>
 </h3>
 <p>Below is a filled-in version of the fields above. The template is at
 <a href="templates/README-template.md"><code>templates/README-template.md</code></a>.</p>
-<div class="tada-wiki">
-<p><strong>Generate the README instead of writing it.</strong> <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a>, an R package with a built-in Shiny app, walks you through the fields above and writes a <code>README.md</code>. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with <code>pak::pak("EIvimeyCook/READMEBuilder")</code>, then run <code>build_readme()</code>.</p>
+<div class="tada-note">
+<p><strong>Generate the README instead of writing it.</strong> The TADA paper points to <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a> (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>), an R package with a built-in Shiny app that walks you through the fields above and writes a <code>README.md</code>. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with <code>pak::pak("EIvimeyCook/READMEBuilder")</code>, then run <code>build_readme()</code>.</p>
 </div>
 <div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="documented.html#cb6-1" tabindex="-1"></a><span class="fu"># Code for: Caterpillar abundance varies with woodland habitat type</span></span>
 <span id="cb6-2"><a href="documented.html#cb6-2" tabindex="-1"></a></span>
@@ -301,7 +305,7 @@ cannot lawfully be reused.</p>
 </div>
 <p>The documentation must name a licence that says how others can use, modify and
 share the code. Licences differ in whether attribution is required (whether you
-must be cited), whether the code can be modified and whether it can be used
+must be credited), whether the code can be modified and whether it can be used
 commercially.</p>
 <div id="choosing-one" class="section level3 unlisted unnumbered">
 <h3>Choosing one<a class="anchor" aria-label="anchor" href="#choosing-one"><i class="fas fa-link"></i></a>

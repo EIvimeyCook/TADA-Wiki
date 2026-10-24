@@ -206,8 +206,11 @@ or to check its reliability
 <span class="header-section-number">8.2</span> How TADA maps onto the stages<a class="anchor" aria-label="anchor" href="#sortee-tada-map"><i class="fas fa-link"></i></a>
 </h2>
 <div class="tada-wiki">
-<p>This mapping is ours, not from the SORTEE paper. TADA covers almost exactly the
-author-side work for Stages 1 and 3.</p>
+<p>This mapping is ours, not from the SORTEE paper. The TADA paper aligns TADA
+with Stage 3, and to some extent Stages 4 and 5
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>). The
+same four principles, applied to your data as well as your code, also cover
+much of Stage 1.</p>
 </div>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -221,7 +224,7 @@ author-side work for Stages 1 and 3.</p>
 <tbody>
 <tr class="odd">
 <td><strong>Transferable</strong></td>
-<td>1.4 and 3.4 (interoperable formats) and, in practice, 5 (code runs, since local file paths are the most common cause of failure)</td>
+<td>1.4 and 3.4 (interoperable formats) and, in practice, 5 (code runs, since local file paths are one of the most common causes of failure)</td>
 </tr>
 <tr class="even">
 <td><strong>Available</strong></td>
@@ -293,9 +296,10 @@ large Bayesian model objects saved as <code>.rds</code>
 an analysis on a subset of the data, or a model run for a reduced duration</li>
 <li>Where only part of the analysis needs proprietary software, say <strong>which</strong>
 parts a data editor can assess</li>
-<li>Consider non-proprietary execution routes, such as GNU Octave for MATLAB code
-or MATLAB Compiler for standalone applications, but test compatibility and
-note any limitations in the metadata</li>
+<li>Consider ways to run the code without owning the proprietary software, such
+as running MATLAB code in GNU Octave, or using MATLAB Compiler to turn it into
+a standalone application, but test compatibility and note any limitations in
+the metadata</li>
 <li>Build systems such as <strong><code>targets</code></strong> (R; <span class="tada-cite" data-key="landau-2021">Landau 2021</span>)
 or <strong>Snakemake</strong> (<span class="tada-cite" data-key="koster-2012">Köster &amp; Rahmann 2012</span>)
 can provide reproducibility signatures (hashes) for computationally intensive

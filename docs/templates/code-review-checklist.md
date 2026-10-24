@@ -80,7 +80,7 @@ Take three numbers from the results section and find them in the output.
 
 Judging a match:
 
-- **Conclusion and numbers** (Archmiller et al. 2020) — does the direction and
+- **Conclusion and numbers** (Archmiller et al. 2020) — do the direction and
   significance hold, and do intervals match within one significant figure?
 - **Percentage error** (Hardwicke et al. 2021) —
   `PE = (new − original) / original × 100`.

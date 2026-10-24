@@ -43,13 +43,16 @@ Table 2 of the paper ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}) is re
 ## How TADA maps onto the stages {#sortee-tada-map}
 
 ::: {.tada-wiki}
-This mapping is ours, not from the SORTEE paper. TADA covers almost exactly the
-author-side work for Stages 1 and 3.
+This mapping is ours, not from the SORTEE paper. The TADA paper aligns TADA
+with Stage 3, and to some extent Stages 4 and 5
+([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}). The
+same four principles, applied to your data as well as your code, also cover
+much of Stage 1.
 :::
 
 | TADA | SORTEE stages |
 |---|---|
-| **Transferable** | 1.4 and 3.4 (interoperable formats) and, in practice, 5 (code runs, since local file paths are the most common cause of failure) |
+| **Transferable** | 1.4 and 3.4 (interoperable formats) and, in practice, 5 (code runs, since local file paths are one of the most common causes of failure) |
 | **Available** | 1.1 and 3.1 (open repository, PID, cited in the manuscript) |
 | **Documented** | 1.2, 1.5, 3.2 and 3.5 (licence and metadata) |
 | **Annotated** | 3.5 (sectioned code with clear annotation and signposting), and it is what makes Stage 4 assessable at all |
@@ -101,9 +104,10 @@ cases:
   an analysis on a subset of the data, or a model run for a reduced duration
 - Where only part of the analysis needs proprietary software, say **which**
   parts a data editor can assess
-- Consider non-proprietary execution routes, such as GNU Octave for MATLAB code
-  or MATLAB Compiler for standalone applications, but test compatibility and
-  note any limitations in the metadata
+- Consider ways to run the code without owning the proprietary software, such
+  as running MATLAB code in GNU Octave, or using MATLAB Compiler to turn it into
+  a standalone application, but test compatibility and note any limitations in
+  the metadata
 - Build systems such as **`targets`** (R; [Landau 2021]{.tada-cite data-key="landau-2021"})
   or **Snakemake** ([Köster & Rahmann 2012]{.tada-cite data-key="koster-2012"})
   can provide reproducibility signatures (hashes) for computationally intensive

@@ -24,7 +24,7 @@ Save code with an extension that matches the language: **`.R`**, **`.py`**,
 **`.cpp`**, or the equivalent standard format. These can be viewed, edited and
 saved by any text editor or IDE (RStudio, VS Code, PyCharm) on any system.
 
-**Do not share code inside `.PDF` or `.docx` files.** A PDF can be *viewed*, but
+**Do not share code inside `.pdf` or `.docx` files.** A PDF can be *viewed*, but
 it cannot be opened and edited in an IDE without extra libraries or software, or
 without first converting it to another file type.
 

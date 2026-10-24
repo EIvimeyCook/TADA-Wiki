@@ -119,8 +119,8 @@ Evolutionary Biology 36: 1347–1356, <a href="https://doi.org/10.1111/jeb.14230
 </h2>
 <p>You probably already use open-source software such as R or Python to clean,
 manipulate, visualise and analyse your data. Code-based software is more
-transparent, reproducible and flexible than point-and-click software, because
-analyses can be tailored to what a study needs.</p>
+transparent and reproducible than point-and-click software, and more flexible,
+because analyses can be tailored to what a study needs.</p>
 <p>That flexibility has a cost. <strong>Code is more error-prone</strong>
 (<span class="tada-cite" data-key="budd-1998">Budd et al. 1998</span>), and several high-profile
 retractions have followed coding mistakes
@@ -135,13 +135,13 @@ academic disciplines that rely on code to make inferences and predictions, it is
 (<span class="tada-cite" data-key="indriasari-2020">Indriasari et al. 2020</span>). We argue for a
 shift in research culture that brings code review into <strong>all stages</strong> of the
 research process (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
-<p>Part of the reason is structural. Informal training, together with too little
+<p>Part of the reason it is absent is structural. Informal training, together with too little
 time and too few incentives
 (<span class="tada-cite" data-key="touchon-2016">Touchon &amp; McCoy 2016</span>), means coding and
 analysis are often the responsibility of <strong>a single member of a team</strong> for the
 whole project, unlike methodology and experimental design, which the whole team
-usually develops. Because research code is so often one person’s work,
-pre-publication code review is unlikely to happen, and important when it does.</p>
+usually develops. Because research code is so often one person’s work, it is
+rarely reviewed before publication, which is exactly why review matters.</p>
 </div>
 <div id="review-four-rs" class="section level2" number="9.2">
 <h2>
@@ -161,8 +161,7 @@ section?</span></p>
 </div>
 <div class="tada-card neutral">
 <p><span class="tada-letter">R</span> <span class="tada-word">Reliable</span>
-<span class="tada-gloss">Does the code give the correct result, not just a result, on every
-run?</span></p>
+<span class="tada-gloss">Does the code give the <em>correct</em> result, not just a result?</span></p>
 </div>
 <div class="tada-card neutral">
 <p><span class="tada-letter">R</span> <span class="tada-word">Reproducible</span>
@@ -186,8 +185,9 @@ Gaussian one, the review has to pick that up.</p>
 analysis or visualisation, with version numbers, somewhere in the manuscript. In
 R you can get these with <code><a href="https://rdrr.io/r/utils/citation.html">citation()</a></code>; in Python, with <code>setuptools</code>. A full list
 of everything used, including packages for cleaning and tidying, can go
-elsewhere: the README, or the <code>session_info.txt</code> described in
-<a href="documented.html#documented-readme">Documented</a>, is the natural place.</p>
+elsewhere, such as an associated <code>.R</code> or <code>.py</code> file. A <code>session_info.txt</code> from
+<code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> (see <a href="documented.html#documented-readme">Documented</a>) or, if you use an
+environment manager, its lockfile (<code>renv.lock</code> or <code>conda-lock</code>) also works.</p>
 <p>This is more than bookkeeping. If a package version is later found to contain a
 bug, you can identify the papers that depend on it.</p>
 <p><strong>Environment management</strong> also helps. It is beyond TADA’s minimum standard
@@ -216,9 +216,13 @@ environment</li>
 <li>variable names in the code that do not match those in the data files</li>
 <li>a missing code chunk</li>
 </ul>
-<p>This is the easiest of the four checks, yet it fails often: 74% of over 9,000
+<p>It sounds like the simplest check, yet it fails often: 74% of over 9,000
 archived R files failed to complete without error (<span class="tada-cite" data-key="trisovic-2022">Trisovic
 et al. 2022</span>).</p>
+<p>Share the data with the code wherever possible, so the code can be fully
+re-run. If the data cannot be shared, provide simulated data or a data snippet
+instead. Where re-running would take a long time, as with some Bayesian models,
+provide the model outputs too (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
 <div class="tada-tip">
 <p>Run it in a <strong>fresh session</strong>, from a <strong>fresh download</strong>, in a <strong>new folder</strong>.
 Anything that only works because of what is already loaded in your environment
@@ -233,12 +237,20 @@ study.</p>
 <p>Code can run perfectly well, produce an output and still be wrong, because
 <strong>code can produce incorrect results reproducibly</strong>, giving the same wrong
 answer every time. For example, if code selects or modifies the wrong column in
-a dataset, the analysis is wrong but nothing errors (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
-<p><strong>Unit testing</strong> helps, with <strong><code>testthat</code></strong> (<span class="tada-cite" data-key="wickham-2011">Wickham 2011</span>) in R and
+a dataset, the analysis is wrong but nothing errors (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).
+Errors like this can be <strong>conceptual</strong>, from misunderstanding the dataset, or
+<strong>programmatic</strong>, for example indexing columns by number and getting the order
+wrong.</p>
+<p>Some techniques help: <strong>indexing explicitly by column name</strong>, and <strong>unit
+testing</strong> any user-defined function, with <strong><code>testthat</code></strong> (<span class="tada-cite" data-key="wickham-2011">Wickham 2011</span>) in R and
 <strong><code>pytest</code></strong> (<span class="tada-cite" data-key="okken-2022">Okken 2022</span>) in Python. But this type of error remains common and
 is <strong>extremely difficult to pick up without deep familiarity with the dataset
 and code</strong>. It is also thought to increase with the number of lines and the
 complexity of the code (<span class="tada-cite" data-key="lipow-1982">Lipow 1982</span>).</p>
+<p>Checking reliability therefore means more than confirming that the code runs to
+completion: <strong>examine its intermediate outputs</strong> as well. <code><a href="https://rdrr.io/r/base/identical.html">identical()</a></code> in R and
+<code>numpy.array_equal()</code> in Python compare newly generated intermediate outputs
+with previously saved ones (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
 <div class="tada-note">
 <p>This is the strongest argument for <strong>co-author</strong> review over external review. A
 reviewer who does not know your data cannot tell that <code>mass</code> should have been
@@ -258,11 +270,11 @@ stochastic methods, where parameter estimates change between runs, or with
 computationally demanding and slow techniques. A mismatch happens, for example,
 when <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> (R) or <code>random.seed()</code> (Python) was not used before stochastic
 sampling.</p>
-<p>Providing model outputs helps. Save them with <code><a href="https://rdrr.io/r/base/readRDS.html">saveRDS()</a></code> in R or
-<code>pickle.dump()</code> in Python, though a reviewer then cannot run the code themselves
-to see whether they get similar results. Where the code cannot be re-run in
-reasonable time, compare the newly generated results with those originally
-reported.</p>
+<p>Providing saved model outputs goes some way to helping, for example with
+<code><a href="https://rdrr.io/r/base/readRDS.html">saveRDS()</a></code> in R or <code>pickle.dump()</code> in Python. But saved outputs only let a
+reviewer check the reported results; they do not show that running the code
+produces them. Where the code is re-run and the results cannot match exactly,
+compare the newly generated results with those originally reported.</p>
 <p>The literature gives two criteria for judging a match.</p>
 <p><em>Conclusion and numbers</em> (<span class="tada-cite" data-key="archmiller-2020">Archmiller et al. 2020</span>). Compare the <strong>conclusion</strong>,
 meaning direction and significance level, and the <strong>numbers</strong>, meaning intervals
@@ -320,7 +332,7 @@ should sit well within the reported credible interval.</p>
 <span class="header-section-number">9.3</span> Writing reviewable code<a class="anchor" aria-label="anchor" href="#review-reviewable"><i class="fas fa-link"></i></a>
 </h2>
 <p>Code review depends on readable code. We suggest four
-solutions (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>):</p>
+practices (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>):</p>
 <ol style="list-style-type: decimal">
 <li>
 <strong>Call packages explicitly</strong> via the namespace: <code>package::function()</code> in R,
@@ -477,7 +489,7 @@ of being judged by peers</strong>.</p>
 <h3>Set a clear goal for each session<a class="anchor" aria-label="anchor" href="#set-a-clear-goal-for-each-session"><i class="fas fa-link"></i></a>
 </h3>
 <p>Is the focus <strong>general learning and improving readability</strong>, or is it to
-<strong>error-check and scrutinise reproducibility</strong>? A clear structure and goal for each session keeps comments and advice focused
+<strong>error-check and scrutinise reproducibility</strong>? A clear structure and goal for each session keep comments and advice focused
 on the reason for the review.</p>
 <p>Unless the aim is specifically to evaluate different analytical options, it is
 better to <strong>leave methodological questions aside</strong>. A session that drifts into

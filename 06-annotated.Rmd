@@ -13,7 +13,7 @@ descriptive text. It helps a reader both *understand* your archived code
 <p class="tada-figure-caption">Figure 6 from [Ivimey-Cook et al.]{.tada-cite data-key="ivimey-cook-2025-tada"}</p>
 :::
 
-Annotation, like Documentation, corresponds to the FAIR principle of Reusable.
+Annotation, like documentation, corresponds to the FAIR principle of Reusable.
 As we put it in the TADA paper, it does the same job "but rather than describing the code
 'externally', provides clear commenting within each coding script"
 ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}).
@@ -47,7 +47,7 @@ A good chunk comment answers three questions:
 3. **Where** does its output appear? *"Numeric results shown in Caterpillar
    Abundance section"*, or *"Figure 5A"*
 
-The third question is **signposting**, and people tend to leave it out. It lets
+The third question is **signposting**. It lets
 a reader, a data editor or a reviewer connect a number in your results section
 to the lines of code that produced it.
 
@@ -156,7 +156,7 @@ Two cautions about archiving a notebook:
 - **Restart and run all before you archive.** If the cells were run out of
   order, the notebook records a state that nobody can reproduce.
 - **Notebooks store output in the file.** That helps readers, but it
-  makes the archived `.ipynb` large and awkward to diff. Consider archiving a
+  makes the archived `.ipynb` large and awkward to compare between versions. Consider archiving a
   plain `.py` export as well.
 :::
 

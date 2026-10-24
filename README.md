@@ -82,7 +82,7 @@ tables, checklists and the reviewer's script, that material is shown in a
 the sourcing rule for contributors.
 
 Every claim taken from the source papers, or from other published work, is
-linked inline: click a citation to go to its DOI, or hover it to see the full
+linked inline: click a citation to go to its DOI, or hover over it to see the full
 reference (title, journal, DOI) without leaving the page.
 
 ## Contributing

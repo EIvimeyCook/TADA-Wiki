@@ -59,7 +59,7 @@ The [Glossary](#glossary) defines these and other terms used in this wiki.
 | **Raw data** | Unprocessed and unfiltered data, including any raw files such as photos, audio recordings, videos and data sheets. |
 | **Data filtering** | Removing some data to create the dataset used in the analysis, for example removing individuals with a certain characteristic. The result is **filtered data**. |
 | **Data processing** | Transforming data from one form to another: extraction from images or video, summarising, transforming, calculating. The result is **processed data**. |
-| **Repository** | A framework providing long-term storage for many projects, such as Zenodo, Dryad or Figshare. |
+| **Repository** | A service providing long-term storage for many projects, such as Zenodo, Dryad or Figshare. |
 | **Project** | A collection of files archived for a specific manuscript. This is similar to what GitHub calls a *repository*, which is the source of some confusion. |
 | **Data editor** | An editorial position at a journal, responsible for screening and quality-controlling the data and code archived alongside manuscripts under review. |
 | **Data and code quality control** | Checking the suitability of data and code for public archiving. |
@@ -115,7 +115,7 @@ All verdicts below are from the SORTEE guidelines ([Pick et al. 2026]{.tada-cite
 | `.pdf`, `.docx` | **Never.** Prone to error when copy-pasted, and cannot be readily imported into statistical programs. |
 
 ::: {.tada-note}
-SPSS `.sps` files appear here as unsuitable, yet [Transferable](#tada-languages)
+SPSS `.sps` files appear here as unsuitable, yet [Transferable](#transferable-filetype)
 gives them as an example of a file type that passes. Both are right, because
 they judge different things. This table is about **data** files, where `.sps` is
 a proprietary format. The Transferable test is about **code** files, where an
@@ -184,8 +184,8 @@ a data editor is unlikely to be able to verify this ([Pick et al. 2026]{.tada-ci
 ## Licences {#sharing-licences}
 
 Without a licence, data **cannot be legally reused** in many circumstances,
-depending on jurisdiction, and most researchers know little about licences. The
-same goes for code. Data and code usually need different licences: Creative
+depending on jurisdiction. The same goes for code. Yet most researchers know
+little about licences. Data and code usually need different licences: Creative
 Commons licences such as CC0 or CC BY for data, and software licences such as
 MIT or the GPL for code. The SORTEE guidelines require a licence for both, but
 state a preference only for code, where they suggest permissive licences
@@ -208,7 +208,7 @@ Try doing all of these to make the dog happy.
 ::::
 
 - [ ] Raw data are archived, or a documented reason and route to them is given (option a, b or c)
-- [ ] Processed and filtered data are archived, or the code that produces them is
+- [ ] Processed and filtered data are archived, or the code that produces them is archived
 - [ ] All data are in interoperable formats (`.csv`, `.tsv` or `.txt` preferred; `.parquet` for large datasets)
 - [ ] Any proprietary-format file is accompanied by an interoperable extract and a description of the conversion, including software version
 - [ ] Nothing lives only in supplementary material

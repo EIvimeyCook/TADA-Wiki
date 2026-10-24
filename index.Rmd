@@ -20,13 +20,12 @@ link-citations: true
 ::: {.tada-hero-text}
 <p class="tada-eyebrow">Best practice for code sharing</p>
 
-## Code that still runs when someone else opens it {.unlisted .unnumbered}
+## Code that runs for someone else, not just for you {.unlisted .unnumbered}
 
-Much of the analytical code behind published papers is never shared, and some
-of what is shared cannot readily be used or run. This
-wiki sets out four practices to apply before you submit a project. Together
-they make analytical code more transferable, available, documented and
-annotated.
+Much of the code behind published papers is never shared, and what is shared
+often won't run. This wiki sets out four steps to take before you submit a
+paper: make your code **T**ransferable, **A**vailable, **D**ocumented and
+**A**nnotated.
 :::
 
 ::: {.tada-hero-figure}

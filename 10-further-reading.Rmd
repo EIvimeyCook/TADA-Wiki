@@ -1,7 +1,7 @@
 # Further reading {#further-reading}
 
-Everything here is cited in one of the three source papers or is a tool those
-papers recommend. It is grouped by task, not by author.
+Almost everything here is cited in one of the three source papers or is a tool
+those papers recommend. It is grouped by task, not by author.
 
 ::: {.tada-note}
 Full bibliographic details for everything named on this page, and everywhere
@@ -102,6 +102,11 @@ computational reproducibility,
 - **Lamprecht, A.-L. et al. (2020).** *Towards FAIR principles for research
   software.* Data Science 3: 37–59. <https://doi.org/10.3233/DS-190026>
 - GO FAIR's plain-language summary: <https://www.go-fair.org/fair-principles/>
+- **Carroll, S. R. et al. (2020).** *The CARE Principles for Indigenous Data
+  Governance.* Data Science Journal 19: 43. <https://doi.org/10.5334/dsj-2020-043>
+- **Carroll, S. R., Herczog, E., Hudson, M., Russell, K. & Stall, S. (2021).**
+  *Operationalizing the CARE and FAIR Principles for Indigenous data futures.*
+  Scientific Data 8: 108. <https://doi.org/10.1038/s41597-021-00892-0>
 
 ## The evidence base {#reading-evidence}
 
@@ -179,7 +184,7 @@ Use these if you need to persuade a co-author, a supervisor or an editor.
 Beyond the scope of TADA, but worth using if you have the time. These are the
 three categories we left out of TADA's scope: dependency and environment
 managers (`renv`, `groundhog`, `conda`, `poetry` and `pipenv`; see the R and
-Python tabs), containerisation and workflow managers (below).
+Python tabs), containerisation, and workflow managers (both below).
 
 | Tool | What for |
 |---|---|

@@ -29,8 +29,7 @@ reuse is hard.
 be a transparent, reproducible record of that analysis, not to become a tool for
 other people.
 
-Software standards therefore set too high a bar for analytical code, and researchers
-faced with an unrealistic target tend to give up on it. 
+Software standards therefore likely set too high a bar for analytical code.
 
 TADA instead sets a **minimum standard** that anyone can meet, whatever their
 coding experience, and helps researchers archive code that is transparent and
