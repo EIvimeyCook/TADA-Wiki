@@ -127,6 +127,15 @@ rise of open science: Tracking the evolution and perceived value of data and
 methods link-sharing practices.* arXiv.
 <https://arxiv.org/abs/2310.03193>
 
+**Carroll, S. R., Garba, I., Figueroa-Rodríguez, O. L., Holbrook, J.,
+Lovett, R., Materechera, S., et al.** (2020). *The CARE Principles for
+Indigenous Data Governance.* Data Science Journal 19: 43.
+<https://doi.org/10.5334/dsj-2020-043>
+
+**Carroll, S. R., Herczog, E., Hudson, M., Russell, K., & Stall, S.** (2021).
+*Operationalizing the CARE and FAIR Principles for Indigenous data futures.*
+Scientific Data 8: 108. <https://doi.org/10.1038/s41597-021-00892-0>
+
 **Chen, D.** (2023). *pyprojroot: Project-oriented workflow in Python.*
 <https://pypi.org/project/pyprojroot/>
 
