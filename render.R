@@ -64,6 +64,12 @@ if (length(missing)) {
 
 find_pandoc()
 
+# bs4_book links package names in code via downlit, which downloads CRAN's
+# package list (~13 MB) mid-build. R's default 60-second download timeout is
+# too short on a slow connection, and a timeout stops the build halfway,
+# leaving some pages and search.json stale. Allow longer.
+options(timeout = max(300, getOption("timeout")))
+
 # render_book() needs to run from the book root, wherever the script was called.
 root <- tryCatch(
   dirname(normalizePath(sub("^--file=", "", grep("^--file=", commandArgs(),

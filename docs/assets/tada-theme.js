@@ -149,7 +149,7 @@
       '<input type="checkbox" role="switch"' +
       (root.getAttribute("data-cvd") === "on" ? " checked" : "") + '>' +
       '<span>Colour-blind friendly' +
-      '<small>Letter colours that stay distinct with any colour vision, and underlined links</small></span>' +
+      '<small>Letter colours that stay distinct with the common types of colour blindness, and underlined links</small></span>' +
       '</label>';
 
     // The two buttons share a wrapper: stacked beside the title in the narrow

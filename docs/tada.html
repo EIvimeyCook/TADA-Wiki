@@ -39,7 +39,11 @@
         if (p === "indigo" || p === "plum" || p === "ember") root.setAttribute("data-palette", p);
         if (c === "on") root.setAttribute("data-cvd", "on");
       })();
-    </script><link rel="icon" type="image/png" href="assets/favicon.png">
+    </script><!-- Icons. bs4_book's template loads a Font Awesome "kit" script that now
+         returns 403 everywhere, which left the mobile menu button (fa-bars), the
+         GitHub links (fa-github) and the heading anchors (fa-link) blank. The
+         free stylesheet from cdnjs supplies the same classes. --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <!-- The site's type system (Inter body text, Fraunces display serif for
          headings, JetBrains Mono for code); style.css already declares these
@@ -228,7 +232,9 @@ its output appears in the paper.</span></p>
 </div>
 </div>
 <p>Figure 2 below applies all four to a small piece of generic R code, showing the
-same script before and after.</p>
+same script before and after. For a complete project, the TADA paper’s example
+repository (an analysis with its README, code and example data) is archived on
+Zenodo: <a href="https://doi.org/10.5281/zenodo.20757675" class="uri">https://doi.org/10.5281/zenodo.20757675</a>.</p>
 <div class="tada-figure">
 <div class="inline-figure"><img src="assets/figures/fig-code-example.png" alt="Side-by-side comparison of a pre-TADA and post-TADA R script, showing coloured annotations for Transferable, Available, Documented and Annotated, alongside a README file."></div>
 <p class="tada-figure-caption">
@@ -390,7 +396,7 @@ SPSS syntax <code>.sps</code> files, for instance, pass.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 23 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 24 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

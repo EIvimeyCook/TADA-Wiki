@@ -40,11 +40,12 @@ Read it at: <https://eivimeycook.github.io/TADA-Wiki/>
 
 | Chapter | What it covers |
 |---|---|
-| Welcome | What the wiki is, TADA in four cards, where the guidance comes from |
+| Welcome | Quick links to the most-used sections and the four TADA principles |
+| About this wiki | What the wiki is, the evidence for it, who it is for, where the guidance comes from, who maintains it |
 | Start here | Pre-submission checklist, project layout, three common causes of failure |
 | TADA at a glance | Why TADA exists, the evidence, how it maps onto FAIR |
 | Transferable | File types, relative paths, `here` / `pyprojroot`, dependency managers, containers and workflow managers |
-| Available | Persistent identifiers, why GitHub is not an archive, repository comparison, embargoes and anonymisation |
+| Available | Persistent identifiers, why GitHub is not an archive, repository comparison, embargoes, and how to anonymise data and code for double-blind review on each platform |
 | Documented | The README field by field, a worked example, choosing and attaching code and data licences |
 | Annotated | Chunk-level comments, signposting, collapsible sections, literate formats |
 | Data & code sharing | Raw vs processed data, file formats, metadata, licences in brief |
@@ -61,9 +62,11 @@ The wiki is a synthesis of three papers:
 
 - **Ivimey-Cook, E. R., Culina, A., Dimri, S., Grainger, M. J., Kar, F.,
   Lagisz, M., Moran, N. P., Nakagawa, S., Roche, D. G., Tattan, S.,
-  Sánchez-Tójar, A., Windecker, S. M., & Pick, J. L.** *TADA! Simple guidelines
-  to improve analytical code sharing for transparency and reproducibility.*
-  Worked example: <https://github.com/EIvimeyCook/TADA>
+  Sánchez-Tójar, A., Windecker, S. M., & Pick, J. L.** (2025). *TADA! Simple
+  guidelines to improve analytical code sharing for transparency and
+  reproducibility.* EcoEvoRxiv (preprint). <https://doi.org/10.32942/X2D93K>
+  Example repository: <https://doi.org/10.5281/zenodo.20757675> (on GitHub:
+  <https://github.com/EIvimeyCook/TADA>)
 
 - **Pick, J. L., et al.** (2026). *The SORTEE guidelines for data and code
   quality control in ecology and evolutionary biology.* Peer Community Journal
@@ -74,8 +77,8 @@ The wiki is a synthesis of three papers:
   of Evolutionary Biology 36: 1347–1356. <https://doi.org/10.1111/jeb.14230>
 
 Where the wiki extends beyond these papers, with worked examples, comparison
-tables, checklists and the reviewer's script, that material is labelled **wiki
-guidance** rather than presented as a finding of the papers. That separation is
+tables, checklists and the reviewer's script, that material is shown in a
+**Wiki Tip** box rather than presented as a finding of the papers. That separation is
 the sourcing rule for contributors.
 
 Every claim taken from the source papers, or from other published work, is
@@ -114,14 +117,14 @@ Edward R. Ivimey-Cook — e.ivimeycook@gmail.com
 
 ## Licence
 
-- **Code**, meaning the build script, `assets/style.css`, `assets/tada.js`,
-  `assets/tada-cite.js`, `assets/tada-citations.js`, and the templates, under
-  the [MIT License](LICENSE).
+- **Code**, meaning the build script (`render.R`), the CSS, JavaScript and
+  HTML includes in `assets/`, `tools/`, and the templates, under the
+  [MIT License](LICENSE).
 - **Content**, meaning the wiki text in the `.Rmd` chapters, under
   [CC BY 4.0](LICENSE-data.md).
 
-The three PDFs in `docs/papers/` remain under their original licences. The SORTEE
-guidelines paper is open access under CC BY 4.0.
+Figures reproduced from the source papers remain under those papers' licences.
+The SORTEE guidelines paper is open access under CC BY 4.0.
 
 ## AI declaration
 

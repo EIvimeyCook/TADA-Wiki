@@ -95,7 +95,9 @@ its output appears in the paper.]{.tada-gloss}
 :::
 
 Figure 2 below applies all four to a small piece of generic R code, showing the
-same script before and after.
+same script before and after. For a complete project, the TADA paper's example
+repository (an analysis with its README, code and example data) is archived on
+Zenodo: <https://doi.org/10.5281/zenodo.20757675>.
 
 ::: {.tada-figure}
 ![](assets/figures/fig-code-example.png){alt="Side-by-side comparison of a pre-TADA and post-TADA R script, showing coloured annotations for Transferable, Available, Documented and Annotated, alongside a README file."}

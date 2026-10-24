@@ -39,7 +39,11 @@
         if (p === "indigo" || p === "plum" || p === "ember") root.setAttribute("data-palette", p);
         if (c === "on") root.setAttribute("data-cvd", "on");
       })();
-    </script><link rel="icon" type="image/png" href="assets/favicon.png">
+    </script><!-- Icons. bs4_book's template loads a Font Awesome "kit" script that now
+         returns 403 everywhere, which left the mobile menu button (fa-bars), the
+         GitHub links (fa-github) and the heading anchors (fa-link) blank. The
+         free stylesheet from cdnjs supplies the same classes. --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <!-- The site's type system (Inter body text, Fraunces display serif for
          headings, JetBrains Mono for code); style.css already declares these
@@ -196,7 +200,7 @@ DOI.</p>
 <td><strong>OSF</strong></td>
 <td>DOI</td>
 <td><span class="tada-no">No</span></td>
-<td>Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it <strong>does not provide file immutability</strong>, so projects and files can be changed or deleted (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). OSF <em>registrations</em> are the exception: they freeze a project at one point in time and cannot be edited. From 16 November 2026 new OSF Projects can’t be created, and existing projects become read-only after 19 February 2027 (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Fine for review, but archive elsewhere.</td>
+<td>Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it <strong>does not provide file immutability</strong>, so projects and files can be changed or deleted (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). OSF <em>registrations</em> are the exception: they are fixed once submitted and cannot be edited. From 16 November 2026 new OSF Projects can’t be created, and existing projects become read-only after 19 February 2027 (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Fine for review, but archive elsewhere.</td>
 </tr>
 <tr class="odd">
 <td>Domain repositories (e.g. <strong>GenBank</strong>)</td>
@@ -234,14 +238,14 @@ manuscript, in the text and in the reference list, so the code can be found like
 any other cited work. The <a href="sortee.html#sortee">SORTEE guidelines</a> require this for both data (Guideline 1.1) and code (Guideline 3.1;
 <span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</p>
 <div class="tada-wiki">
-<p>A worked example:</p>
+<p>A worked example, using the TADA paper’s own example repository:</p>
 <blockquote>
 <p><strong>In the data availability statement.</strong> All data and code needed to reproduce
 the analyses are archived on Zenodo:
-<a href="https://doi.org/10.5281/zenodo.0000000" class="uri">https://doi.org/10.5281/zenodo.0000000</a>.</p>
-<p><strong>In the reference list.</strong> Ivimey-Cook, E. R. (2026). <em>Code for: Caterpillar
-abundance varies with habitat</em> (v1.0.0) [Computer software]. Zenodo.
-<a href="https://doi.org/10.5281/zenodo.0000000" class="uri">https://doi.org/10.5281/zenodo.0000000</a></p>
+<a href="https://doi.org/10.5281/zenodo.20757675" class="uri">https://doi.org/10.5281/zenodo.20757675</a>.</p>
+<p><strong>In the reference list.</strong> Ivimey-Cook, E. R. (2026). <em>EIvimeyCook/TADA:
+Updated Code</em> (Update_code) [Computer software]. Zenodo.
+<a href="https://doi.org/10.5281/zenodo.20757675" class="uri">https://doi.org/10.5281/zenodo.20757675</a></p>
 </blockquote>
 </div>
 </div>
@@ -264,7 +268,9 @@ that case, archive them separately and link them in <strong>both</strong> README
 </h2>
 <p>In the “pre-TADA” version of our worked example in the TADA paper, the code is not
 archived and has no DOI, so there is no permanent, immutable, citable copy of
-it (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>).</p>
+it (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>).
+By contrast, the TADA paper’s example repository is archived on Zenodo with its
+own DOI; see the <a href="available.html#available-cite">worked example above</a>.</p>
 <div class="tada-wiki">
 <p>Two things follow. A reader who finds the paper cannot reliably find the code,
 and if the working copy is edited or lost, the analysis behind the published
@@ -326,7 +332,7 @@ rely on one.</p>
 <tbody>
 <tr class="odd">
 <td><strong>Zenodo</strong></td>
-<td>Either list the authors as “Anonymous” and publish the record openly, as the British Ecological Society <a href="https://methodsblog.com/2023/08/23/double-anonymous-peer-review-frequently-asked-questions/">recommends</a>, then add the real authors once the paper is accepted. You can <a href="https://help.zenodo.org/docs/deposit/manage-records/">edit a published record’s authors</a> at any time without changing its DOI. Or keep the record restricted (or as an unpublished draft) and send reviewers a <a href="https://help.zenodo.org/docs/share/about">secret link</a>, which works without a Zenodo account.</td>
+<td>Either list the authors as “Anonymous” and publish the record openly, one of the two options the British Ecological Society <a href="https://methodsblog.com/2023/08/23/double-anonymous-peer-review-frequently-asked-questions/">suggests</a>, then add the real authors once the paper is accepted. You can <a href="https://help.zenodo.org/docs/deposit/manage-records/">edit a published record’s authors</a> at any time without changing its DOI. Or keep the record restricted (or as an unpublished draft) and send reviewers a <a href="https://help.zenodo.org/docs/share/about">secret link</a>, which works without a Zenodo account.</td>
 <td>The BES notes that if reviewers have to <em>request</em> access to a restricted record, the request shows them your username.</td>
 </tr>
 <tr class="even">
@@ -442,7 +448,7 @@ to them. A reference to the data or code archive itself can be anonymised.</li>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 23 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 24 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

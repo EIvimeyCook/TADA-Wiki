@@ -39,6 +39,25 @@
       if (node.nodeType === 3 && node.textContent.trim() === ":") node.textContent = "";
     });
     heading.classList.add("tada-has-logo");
+
+    // Keep hyphenated words ("TADA-Wiki") on one line, so a narrow sidebar
+    // wraps the title at a space rather than after the hyphen.
+    var link = heading.querySelector("a");
+    if (link && link.children.length === 0) {
+      var words = link.textContent.trim().split(/\s+/);
+      link.textContent = "";
+      words.forEach(function (word, i) {
+        if (i) link.appendChild(document.createTextNode(" "));
+        if (word.indexOf("-") === -1) {
+          link.appendChild(document.createTextNode(word));
+        } else {
+          var keep = document.createElement("span");
+          keep.className = "tada-nowrap";
+          keep.textContent = word;
+          link.appendChild(keep);
+        }
+      });
+    }
   }
 
   function initChecklistDogs() {

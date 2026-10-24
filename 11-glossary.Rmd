@@ -3,8 +3,8 @@
 Plain-language definitions of the terms used across this wiki. Terms tagged
 [SORTEE]{.tada-gloss-tag} open with the definition from the glossary in the
 SORTEE guidelines (Table 1; [Pick et al. 2026]{.tada-cite data-key="pick-2026"});
-any sentences after that first one are our own practical notes. The rest are
-our own definitions. Where a chapter covers a term in depth, the definition
+the practical notes and links that follow it are ours. The rest are our own
+definitions. Where a chapter covers a term in depth, the definition
 links to it.
 
 ::: {.tada-glossary}
@@ -165,8 +165,8 @@ links to it.
 :   Cannot be changed or deleted once published. In an immutable repository,
     such as Zenodo, an update creates a new version instead of overwriting the
     old one, so the exact files behind a paper stay available. GitHub and
-    ordinary OSF projects are not immutable. OSF *registrations*, which freeze
-    a project at one point in time, cannot be edited.
+    ordinary OSF projects are not immutable. OSF *registrations* are fixed once
+    submitted and cannot be edited.
 
 [Interoperable]{#gloss-interoperable data-match="interoperable|interoperability"}
 :   Able to be opened and used across different software and operating systems.

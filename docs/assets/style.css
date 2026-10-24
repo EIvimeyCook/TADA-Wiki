@@ -752,6 +752,12 @@ blockquote {
   grid-column: 2;
 }
 
+/* Slightly smaller so "The TADA-Wiki" fits on one line beside the logo and
+   the theme buttons; on very narrow phones it breaks after "The", because
+   tada-mascot.js keeps hyphenated words together. */
+.sidebar h1.tada-has-logo > a { font-size: .92em; }
+.tada-nowrap { white-space: nowrap; }
+
 .sidebar h1.tada-has-logo > small {
   display: block;
   line-height: 1.35;

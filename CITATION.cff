@@ -27,7 +27,7 @@ keywords:
   - code review
   - open science
 # Dual licensed: MIT for the build script, assets and templates; CC BY 4.0 for
-# the wiki text. See LICENSE and LICENSE-CONTENT.
+# the wiki text. See LICENSE and LICENSE-data.md.
 license:
   - MIT
   - CC-BY-4.0
