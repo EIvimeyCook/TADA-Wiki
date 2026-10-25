@@ -269,7 +269,7 @@ policy is the case to watch for.
 The SORTEE guidelines require a licence for both data (Guideline 1.2) and code
 (Guideline 3.2; [Pick et al. 2026]{.tada-cite data-key="pick-2026"}), but they treat the two differently. For **data** they
 **do not recommend or enforce any specific type**, so you only have to choose
-and state one. For **code** they state a preference for permissive code licenses whenever possible (Guideline 3.2).
+and state one. For **code** they state a preference for **permissive code licenses whenever possible** (Guideline 3.2).
 :::
 
 ## Checklist {#documented-checklist}
