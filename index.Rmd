@@ -24,13 +24,38 @@ link-citations: true
 
 Much of the code behind published papers is never shared, and what is shared
 often won't run. This wiki sets out four steps to take before you submit a
-paper: make your code **T**ransferable, **A**vailable, **D**ocumented and
+paper, so that anyone who downloads your code can run it and get your results:
+make your code **T**ransferable, **A**vailable, **D**ocumented and
 **A**nnotated.
 :::
 
 ::: {.tada-hero-figure}
 ![](assets/figures/wizard-tada.png){alt="A cartoon wizard casting a spell, saying TADA!"}
 :::
+:::
+
+## New to sharing code? {#welcome-new .unnumbered}
+
+**Sharing code** means putting the scripts behind your paper somewhere public
+and permanent, alongside your data, so that a reader can re-run your analysis
+and see exactly how you got your results.
+
+By the end of this wiki you will have:
+
+- **one project folder** holding your data, your scripts and a short README
+  that explains them;
+- code that **runs on someone else's computer**, not just yours;
+- that folder **archived in a repository** such as Zenodo, which gives it a
+  **DOI**, a permanent link you cite in your paper.
+
+You do not need to be an experienced programmer. If you can write and run an R
+or Python script, you can follow this wiki. You do not need Git, Docker or unit
+testing either; where they help, they are mentioned as optional.
+
+::: {.tada-key}
+**Submitting soon?** Go straight to [Start here](#quickstart). It is a
+checklist you can work through with your project open, and every item links to
+a fuller explanation if you need one.
 :::
 
 ## Jump in {.unnumbered}
@@ -72,29 +97,44 @@ paper: make your code **T**ransferable, **A**vailable, **D**ocumented and
 ::: {.tada-cards .tada-cards--links}
 ::: {.tada-card .t}
 [T]{.tada-letter} [Transferable](#transferable){.tada-word}
-[Runs on someone else's machine.]{.tada-gloss}
+[Runs on someone else's computer, not just yours.]{.tada-gloss}
 :::
 
 ::: {.tada-card .a1}
 [A]{.tada-letter} [Available](#available){.tada-word}
-[Archived, with a DOI.]{.tada-gloss}
+[Archived somewhere permanent, with a DOI (a permanent link).]{.tada-gloss}
 :::
 
 ::: {.tada-card .d}
 [D]{.tada-letter} [Documented](#documented){.tada-word}
-[A README and a licence.]{.tada-gloss}
+[A README (a guide to your files) and a licence (what others may do with them).]{.tada-gloss}
 :::
 
 ::: {.tada-card .a2}
 [A]{.tada-letter} [Annotated](#annotated){.tada-word}
-[Comments that explain the code.]{.tada-gloss}
+[Comments that explain what the code does and why.]{.tada-gloss}
 :::
 :::
+
+## Words you will meet {#welcome-terms .unnumbered}
+
+A few terms come up on almost every page. Each has a fuller entry in the
+[Glossary](#glossary).
+
+| Term | What it means |
+|---|---|
+| **Repository** | A service that stores archived data and code for the long term, such as Zenodo, Figshare or Dryad. Not the same as a GitHub repository. |
+| **DOI** | Digital Object Identifier: a permanent link to a deposit, such as `https://doi.org/10.5281/zenodo.1234567`, which you cite like a paper. |
+| **Immutable** | Cannot be changed or deleted once published. An update creates a new version rather than overwriting the old one. |
+| **README** | A plain-text file at the top of your project that says what it is, what each file does and how to run it. |
+| **Licence** | A statement of what others may legally do with your code or data. Without one, others cannot lawfully reuse it. |
+| **Relative path** | A file path written from your project folder, such as `data/raw/counts.csv`, so it works on any computer. |
+| **Data editor** | A journal editor who checks the data and code archived alongside a manuscript while it is under review. |
 
 ## Also in the wiki {.unnumbered}
 
 [Data & code sharing](#data-sharing) · [Further reading](#further-reading) ·
 [Glossary](#glossary) · [Contribute](#contribute) · [References](#references)
 
-New here? Read [About this wiki](#about) first: why it exists, who it is for and
-where the guidance comes from.
+Want the background first? Read [About this wiki](#about): why it exists, who
+it is for and where the guidance comes from.
