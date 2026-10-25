@@ -14,7 +14,7 @@ to improve analytical code sharing for transparency and reproducibility.*
 EcoEvoRxiv. <https://doi.org/10.32942/X2D93K> (Preprint, posted 2025-08-02;
 version 3 posted 2026-09-15; not yet peer reviewed.)
 Companion site: <https://eivimeycook.github.io/TADA/>
-<br>Example repository: <https://doi.org/10.5281/zenodo.20757675>
+<br>Example repository, [base project-level DOI](#gloss-project-doi) (otherwise known as a concept DOI on Zenodo): <https://doi.org/10.5281/zenodo.20752886>
 
 **Ivimey-Cook, E. R., Pick, J. L., Bairos-Novak, K. R., Culina, A., Gould, E.,
 Grainger, M., Marshall, B. M., Moreau, D., Paquet, M., Royauté, R.,

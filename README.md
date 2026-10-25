@@ -64,8 +64,9 @@ The wiki is a synthesis of three papers:
   Lagisz, M., Moran, N. P., Nakagawa, S., Roche, D. G., Tattan, S.,
   Sánchez-Tójar, A., Windecker, S. M., & Pick, J. L.** (2025). *TADA! Simple
   guidelines to improve analytical code sharing for transparency and
-  reproducibility.* EcoEvoRxiv (preprint). <https://doi.org/10.32942/X2D93K>
-  Example repository: <https://doi.org/10.5281/zenodo.20757675> (on GitHub:
+  reproducibility.* EcoEvoRxiv (preprint). <https://doi.org/10.32942/X2D93K>.
+  Example repository, base project-level DOI (otherwise known as a concept DOI
+  on Zenodo): <https://doi.org/10.5281/zenodo.20752886> (on GitHub:
   <https://github.com/EIvimeyCook/TADA>)
 
 - **Pick, J. L., et al.** (2026). *The SORTEE guidelines for data and code

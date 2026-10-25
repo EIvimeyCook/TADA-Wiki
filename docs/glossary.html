@@ -147,6 +147,15 @@ identifier</a>, and <a href="available.html#available-where">Where to archive</a
 The second TADA principle: the code is publicly archived with a persistent
 identifier that is cited in the paper. See <a href="available.html#available">Available</a>.
 </dd>
+<dt><span id="gloss-project-doi" data-match="project-level DOI|concept DOI|base DOI">Base project-level DOI</span></dt>
+<dd>
+A <a href="glossary.html#gloss-doi">DOI</a> for a project as a whole, across all its versions
+(otherwise known as a concept DOI on Zenodo). It never changes and always
+resolves to the latest version. On Figshare it is the DOI without a version
+suffix. Give it to readers who want the most recent code; cite a
+<a href="glossary.html#gloss-version-doi">version-specific DOI</a> in the paper. See <a href="available.html#available-where">Where to
+archive</a>.
+</dd>
 <dt><span id="gloss-care" data-match="CARE principles|CARE">CARE principles</span></dt>
 <dd>
 Collective benefit, Authority to control, Responsibility and Ethics:
@@ -249,20 +258,23 @@ archive the raw data or the processing code too. See
 <dd>
 A package or library that your code needs in order to run.
 </dd>
+<dt><span id="gloss-documented">Documented</span></dt>
+<dd>
+The third TADA principle: a README and a licence describe the code, its
+software environment, where the data are and how to run it. See
+<a href="documented.html#documented">Documented</a>.
+</dd>
 <dt><span id="gloss-doi" data-match="DOI">DOI</span></dt>
 <dd>
 Digital Object Identifier. A persistent identifier for a published object,
 such as a paper, dataset or code deposit, written like
 <code>10.5281/zenodo.1234567</code>. Adding <code>https://doi.org/</code> in front gives a link
 that keeps working even if the object’s web address changes. Repositories
-such as Zenodo and Figshare assign one when you deposit. See
+such as Zenodo and Figshare assign one when you deposit. A versioned
+deposit has two kinds: a <a href="glossary.html#gloss-version-doi">version-specific DOI</a> for
+each version and a <a href="glossary.html#gloss-project-doi">base project-level DOI</a> (otherwise
+known as a concept DOI on Zenodo) for the project as a whole. See
 <a href="available.html#available">Available</a>.
-</dd>
-<dt><span id="gloss-documented">Documented</span></dt>
-<dd>
-The third TADA principle: a README and a licence describe the code, its
-software environment, where the data are and how to run it. See
-<a href="documented.html#documented">Documented</a>.
 </dd>
 <dt><span id="gloss-double-blind" data-match="double-blind">Double-blind review</span></dt>
 <dd>
@@ -494,21 +506,31 @@ computer without converting or editing it. See
 A small automated check that a function gives the expected output for a
 known input, written with <code>testthat</code> (R) or <code>pytest</code> (Python).
 </dd>
+<dt><span id="gloss-version-doi" data-match="version-specific DOI|version DOI|versioned DOI">Version-specific DOI</span></dt>
+<dd>
+A <a href="glossary.html#gloss-doi">DOI</a> for one fixed version of a deposit. Zenodo and Figshare
+create a new one for each new version (on Figshare it ends in <code>.v1</code>,
+<code>.v2</code> and so on), and it always resolves to that version. Cite this one in
+the paper, because it points to the exact code that produced the results.
+Compare <a href="glossary.html#gloss-project-doi">base project-level DOI</a> (otherwise known as a
+concept DOI on Zenodo). See <a href="available.html#available-where">Where to
+archive</a>.
+</dd>
 <dt><span id="gloss-virtual-environment" data-match="virtual environment">Virtual environment</span></dt>
 <dd>
 In Python, a self-contained setup for one project with its own packages,
 kept separate from the rest of the computer.
-</dd>
-<dt><span id="gloss-working-directory" data-match="working directory|setwd">Working directory</span></dt>
-<dd>
-The folder R or Python treats as its starting point when reading and saving
-files. Opening an RStudio project sets it to the project folder.
 </dd>
 <dt><span id="gloss-workflow-manager" data-match="workflow manager|Snakemake|Nextflow">Workflow manager</span></dt>
 <dd>
 A tool that runs the steps of an analysis in a defined order and tracks
 which steps depend on which, such as Snakemake or Nextflow. Beyond the
 scope of TADA.
+</dd>
+<dt><span id="gloss-working-directory" data-match="working directory|setwd">Working directory</span></dt>
+<dd>
+The folder R or Python treats as its starting point when reading and saving
+files. Opening an RStudio project sets it to the project folder.
 </dd>
 </dl>
 </div>

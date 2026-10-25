@@ -23,7 +23,7 @@ for each letter with a pre-TADA and post-TADA code comparison. A checklist in
 several languages is supplementary Figure S1.
 
 Companion site: <https://eivimeycook.github.io/TADA/>
-<br>Example repository: <https://doi.org/10.5281/zenodo.20757675>
+<br>Example repository, [base project-level DOI](#gloss-project-doi) (otherwise known as a concept DOI on Zenodo): <https://doi.org/10.5281/zenodo.20752886>
 
 ### SORTEE guidelines {.unlisted .unnumbered}
 

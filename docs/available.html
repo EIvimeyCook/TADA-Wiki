@@ -170,13 +170,13 @@ DOI.</p>
 <td><strong>Zenodo</strong></td>
 <td>DOI</td>
 <td><span class="tada-yes">Yes</span></td>
-<td>Connects directly to a GitHub project. Gives a base project-level DOI as well as version-specific DOIs. You can choose the licence at deposit; CC BY 4.0 is the default.</td>
+<td>Connects directly to a GitHub project. Gives a base project-level DOI (otherwise known as a concept DOI) as well as version-specific DOIs. You can choose the licence at deposit; CC BY 4.0 is the default.</td>
 </tr>
 <tr class="even">
 <td><strong>Figshare</strong></td>
 <td>DOI</td>
 <td><span class="tada-yes">Yes</span></td>
-<td>General-purpose, and widely used for code and supplementary material. Like Zenodo, connects to a GitHub project and gives a base project-level DOI as well as version-specific DOIs. Assigns CC0 by default.</td>
+<td>General-purpose, and widely used for code and supplementary material. Like Zenodo, connects to a GitHub project and gives a base project-level DOI as well as version-specific DOIs. Assigns CC0 to datasets by default.</td>
 </tr>
 <tr class="odd">
 <td><strong>Dryad</strong></td>
@@ -200,7 +200,7 @@ DOI.</p>
 <td><strong>OSF</strong></td>
 <td>DOI</td>
 <td><span class="tada-no">No</span></td>
-<td>Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it <strong>does not provide file immutability</strong>, so projects and files can be changed or deleted (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). OSF <em>registrations</em> are the exception: they are fixed once submitted and cannot be edited. From 16 November 2026 new OSF projects can’t be created, and existing projects become read-only after 19 February 2027 (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Fine for review, but archive elsewhere.</td>
+<td>Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it <strong>does not provide file immutability</strong>, so projects and files can be changed or deleted (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). OSF <em>registrations</em> are the exception: they are fixed once submitted and cannot be edited. From 16 November 2026 new OSF projects cannot be created, and existing projects become read-only after 19 February 2027 (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Fine for review, but archive elsewhere.</td>
 </tr>
 <tr class="odd">
 <td>Domain repositories (e.g. <strong>GenBank</strong>)</td>
@@ -223,10 +223,13 @@ article online, because it has no globally unique persistent identifier and may
 not be open and accessible (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). The same goes for code. Everything must go in a public repository.</p>
 </div>
 <div class="tada-wiki">
-<p><strong>DOI versioning.</strong> On Zenodo, every update to the code gets a new DOI, and a base project-level
-DOI stays the same. Cite the <strong>version-specific DOI</strong> in your
-paper, because that is the version your results came from. Give the
-project-level DOI to someone who wants the latest version. If the code changes
+<p><strong>DOI versioning.</strong> On Zenodo, every new version of the code gets a new
+<a href="glossary.html#gloss-version-doi">version-specific DOI</a>, and a
+<a href="glossary.html#gloss-project-doi">base project-level DOI</a> (otherwise known as a concept DOI
+on Zenodo) stays the same and always resolves to the latest version. Cite the
+<strong>version-specific DOI</strong> in your paper, because that is the version your
+results came from. Give the base project-level DOI to someone who wants the
+latest version. If the code changes
 during peer review, archive the revised code as a new version and update the
 DOI cited in the manuscript before publication.</p>
 </div>
@@ -244,11 +247,16 @@ any other cited work. The <a href="sortee.html#sortee">SORTEE guidelines</a> req
 <blockquote>
 <p><strong>In the data availability statement.</strong> All data and code needed to reproduce
 the analyses are archived on Zenodo:
-<a href="https://doi.org/10.5281/zenodo.20757675" class="uri">https://doi.org/10.5281/zenodo.20757675</a>.</p>
-<p><strong>In the reference list.</strong> Ivimey-Cook, E. R. (2026). <em>EIvimeyCook/TADA:
-Updated Code</em> (Update_code) [Computer software]. Zenodo.
-<a href="https://doi.org/10.5281/zenodo.20757675" class="uri">https://doi.org/10.5281/zenodo.20757675</a></p>
+<a href="https://doi.org/10.5281/zenodo.23648444" class="uri">https://doi.org/10.5281/zenodo.23648444</a>.</p>
+<p><strong>In the reference list.</strong> Ivimey-Cook, E. R., &amp; Pick, J. L. (2026).
+<em>Example repository for: ‘TADA! Simple guidelines to improve analytical code
+sharing for transparency and reproducibility’</em> (Update_v2) [Computer
+software]. Zenodo. <a href="https://doi.org/10.5281/zenodo.23648444" class="uri">https://doi.org/10.5281/zenodo.23648444</a></p>
 </blockquote>
+<p>Both cite the version-specific DOI. The project’s
+<a href="glossary.html#gloss-project-doi">base project-level DOI</a> (otherwise known as a concept DOI
+on Zenodo) is <a href="https://doi.org/10.5281/zenodo.20752886" class="uri">https://doi.org/10.5281/zenodo.20752886</a>. It always resolves to
+the latest version, so give it to readers who want the most recent code.</p>
 </div>
 </div>
 <div id="available-together" class="section level2" number="4.4">
@@ -355,7 +363,7 @@ rely on one.</p>
 <tr class="even">
 <td><strong>OSF</strong></td>
 <td>Create a view-only link with <strong>Anonymize</strong> ticked, which hides contributor names. Only admins can create one. Use a link on an embargoed <a href="https://help.osf.io/article/330-welcome-to-registrations">registration</a> rather than a project.</td>
-<td>From 16 November 2026, new OSF projects can’t be created, existing projects become read-only after 19 February 2027, and project links will stop working once COS removes private project storage (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Registration links are not affected.</td>
+<td>From 16 November 2026, new OSF projects cannot be created, existing projects become read-only after 19 February 2027, and project links will stop working once COS removes private project storage (<a href="https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf">COS</a>). Registration links are not affected.</td>
 </tr>
 <tr class="odd">
 <td><strong>GitHub</strong></td>

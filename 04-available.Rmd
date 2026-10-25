@@ -47,12 +47,12 @@ DOI.
 
 | Repository | PID | Immutable | Notes |
 |---|---|---|---|
-| **Zenodo** | DOI | [Yes]{.tada-yes} | Connects directly to a GitHub project. Gives a base project-level DOI as well as version-specific DOIs. You can choose the licence at deposit; CC BY 4.0 is the default. |
-| **Figshare** | DOI | [Yes]{.tada-yes} | General-purpose, and widely used for code and supplementary material. Like Zenodo, connects to a GitHub project and gives a base project-level DOI as well as version-specific DOIs. Assigns CC0 by default. |
+| **Zenodo** | DOI | [Yes]{.tada-yes} | Connects directly to a GitHub project. Gives a base project-level DOI (otherwise known as a concept DOI) as well as version-specific DOIs. You can choose the licence at deposit; CC BY 4.0 is the default. |
+| **Figshare** | DOI | [Yes]{.tada-yes} | General-purpose, and widely used for code and supplementary material. Like Zenodo, connects to a GitHub project and gives a base project-level DOI as well as version-specific DOIs. Assigns CC0 to datasets by default. |
 | **Dryad** | DOI | [Yes]{.tada-yes} | Data-focused, and **mandates CC0**, which is not well suited to code (see [licences](#documented-licence)). Code uploaded to Dryad as software is published on Zenodo instead ([Lowenberg 2021]{.tada-cite data-key="lowenberg-2021"}). May charge a deposit fee unless your institution or journal covers it. |
 | **Dataverse** | DOI | [Yes]{.tada-yes} | General-purpose. Published versions are fixed: editing a published dataset creates a new draft version ([Dataverse Project n.d.]{.tada-cite data-key="dataverse-guide"}). |
 | **Software Heritage** | SWHID | [Yes]{.tada-yes} | Preserves GitHub projects for long-term storage and provides PIDs as Software Hash Identifiers. |
-| **OSF** | DOI | [No]{.tada-no} | Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it **does not provide file immutability**, so projects and files can be changed or deleted ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). OSF *registrations* are the exception: they are fixed once submitted and cannot be edited. From 16 November 2026 new OSF projects can't be created, and existing projects become read-only after 19 February 2027 ([COS](https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf)). Fine for review, but archive elsewhere. |
+| **OSF** | DOI | [No]{.tada-no} | Widely used, and supports anonymised links for double-blind review, but the SORTEE guidelines note that it **does not provide file immutability**, so projects and files can be changed or deleted ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). OSF *registrations* are the exception: they are fixed once submitted and cannot be edited. From 16 November 2026 new OSF projects cannot be created, and existing projects become read-only after 19 February 2027 ([COS](https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf)). Fine for review, but archive elsewhere. |
 | Domain repositories (e.g. **GenBank**) | Accession no. | [Yes]{.tada-yes} | For sequences and other domain-specific deposits. Other PID types include ARK, Handle and RRID. |
 | GitHub / GitLab / Bitbucket / Codeberg | **None** | [No]{.tada-no} | Development platforms. Use for writing code, not for archiving it. |
 
@@ -64,10 +64,13 @@ not be open and accessible ([Pick et al. 2026]{.tada-cite data-key="pick-2026"})
 :::
 
 ::: {.tada-wiki}
-**DOI versioning.** On Zenodo, every update to the code gets a new DOI, and a base project-level
-DOI stays the same. Cite the **version-specific DOI** in your
-paper, because that is the version your results came from. Give the
-project-level DOI to someone who wants the latest version. If the code changes
+**DOI versioning.** On Zenodo, every new version of the code gets a new
+[version-specific DOI](#gloss-version-doi), and a
+[base project-level DOI](#gloss-project-doi) (otherwise known as a concept DOI
+on Zenodo) stays the same and always resolves to the latest version. Cite the
+**version-specific DOI** in your paper, because that is the version your
+results came from. Give the base project-level DOI to someone who wants the
+latest version. If the code changes
 during peer review, archive the revised code as a new version and update the
 DOI cited in the manuscript before publication.
 :::
@@ -84,11 +87,17 @@ A worked example, using the TADA paper's own example repository:
 
 > **In the data availability statement.** All data and code needed to reproduce
 > the analyses are archived on Zenodo:
-> <https://doi.org/10.5281/zenodo.20757675>.
+> <https://doi.org/10.5281/zenodo.23648444>.
 >
-> **In the reference list.** Ivimey-Cook, E. R. (2026). *EIvimeyCook/TADA:
-> Updated Code* (Update_code) [Computer software]. Zenodo.
-> <https://doi.org/10.5281/zenodo.20757675>
+> **In the reference list.** Ivimey-Cook, E. R., & Pick, J. L. (2026).
+> *Example repository for: 'TADA! Simple guidelines to improve analytical code
+> sharing for transparency and reproducibility'* (Update_v2) [Computer
+> software]. Zenodo. <https://doi.org/10.5281/zenodo.23648444>
+
+Both cite the version-specific DOI. The project's
+[base project-level DOI](#gloss-project-doi) (otherwise known as a concept DOI
+on Zenodo) is <https://doi.org/10.5281/zenodo.20752886>. It always resolves to
+the latest version, so give it to readers who want the most recent code.
 :::
 
 ## Data and code in the same place {#available-together}
@@ -165,7 +174,7 @@ rely on one.
 | **Zenodo** | Either list the authors as "Anonymous", publish the record openly, and add the real authors once the paper is accepted (one of two options the British Ecological Society [suggests](https://methodsblog.com/2023/08/23/double-anonymous-peer-review-frequently-asked-questions/)). You can [edit a published record's authors](https://help.zenodo.org/docs/deposit/manage-records/) at any time without changing its DOI. Or keep the record restricted (or as an unpublished draft) and send reviewers a [secret link](https://help.zenodo.org/docs/share/about), which works without a Zenodo account. | The BES notes that if reviewers have to *request* access to a restricted record, the request shows them your username. |
 | **Dryad** | Tick ["Private for Peer Review"](https://blog.datadryad.org/2026/03/31/private-for-peer-review/). Reviewers get a temporary link to the dataset's title, files and README, designed for double-anonymous review. A DOI is [reserved at submission](https://blog.datadryad.org/2023/02/21/for-journals-benefits-of-our-private-for-peer-review-mode/) and goes live at publication. | The README is included, so anonymise it. The link stops working at publication and should not go in the data availability statement; use the DOI there. |
 | **Figshare** | Create a [private link](https://info.figshare.com/?p=2628). It shows the item with author information removed, lets reviewers download the files, and can be set to expire. | Anyone with the link can see the item, even before it is published. |
-| **OSF** | Create a view-only link with **Anonymize** ticked, which hides contributor names. Only admins can create one. Use a link on an embargoed [registration](https://help.osf.io/article/330-welcome-to-registrations) rather than a project. | From 16 November 2026, new OSF projects can't be created, existing projects become read-only after 19 February 2027, and project links will stop working once COS removes private project storage ([COS](https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf)). Registration links are not affected. |
+| **OSF** | Create a view-only link with **Anonymize** ticked, which hides contributor names. Only admins can create one. Use a link on an embargoed [registration](https://help.osf.io/article/330-welcome-to-registrations) rather than a project. | From 16 November 2026, new OSF projects cannot be created, existing projects become read-only after 19 February 2027, and project links will stop working once COS removes private project storage ([COS](https://www.cos.io/hubfs/OSF%20Transition_Resources%20for%20Publishers%20v2.pdf)). Registration links are not affected. |
 | **GitHub** | Use [Anonymous GitHub](https://anonymous.4open.science) ([project page](https://github.com/tdurieux/anonymous_github)). Give it your repository and a list of terms to hide, such as your name and institution. It hides the owner and repository name, and those terms in file contents and in file and folder names. | It only hides the terms you list. It does not change your GitHub repository, so if that is public, it stays public. |
 | **Dataverse** | Create an [Anonymous Preview URL](https://guides.dataverse.org/en/latest/user/dataset-management.html) for the draft dataset. It removes author names, and other fields the installation's administrators choose, from the citation and metadata. | Only available if your Dataverse installation has set it up, and it stops working once the dataset is published. Open the link yourself first to check what shows. |
 | **The journal** | Upload an anonymised zip file with your submission. | Make sure it is the same code you will archive. |

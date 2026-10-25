@@ -37,6 +37,14 @@ links to it.
 :   The second TADA principle: the code is publicly archived with a persistent
     identifier that is cited in the paper. See [Available](#available).
 
+[Base project-level DOI]{#gloss-project-doi data-match="project-level DOI|concept DOI|base DOI"}
+:   A [DOI](#gloss-doi) for a project as a whole, across all its versions
+    (otherwise known as a concept DOI on Zenodo). It never changes and always
+    resolves to the latest version. On Figshare it is the DOI without a version
+    suffix. Give it to readers who want the most recent code; cite a
+    [version-specific DOI](#gloss-version-doi) in the paper. See [Where to
+    archive](#available-where).
+
 [CARE principles]{#gloss-care data-match="CARE principles|CARE"}
 :   Collective benefit, Authority to control, Responsibility and Ethics:
     principles for the governance of Indigenous data
@@ -118,18 +126,21 @@ links to it.
 [Dependency]{#gloss-dependency data-match="dependency|dependencies"}
 :   A package or library that your code needs in order to run.
 
+[Documented]{#gloss-documented}
+:   The third TADA principle: a README and a licence describe the code, its
+    software environment, where the data are and how to run it. See
+    [Documented](#documented).
+
 [DOI]{#gloss-doi data-match="DOI"}
 :   Digital Object Identifier. A persistent identifier for a published object,
     such as a paper, dataset or code deposit, written like
     `10.5281/zenodo.1234567`. Adding `https://doi.org/` in front gives a link
     that keeps working even if the object's web address changes. Repositories
-    such as Zenodo and Figshare assign one when you deposit. See
+    such as Zenodo and Figshare assign one when you deposit. A versioned
+    deposit has two kinds: a [version-specific DOI](#gloss-version-doi) for
+    each version and a [base project-level DOI](#gloss-project-doi) (otherwise
+    known as a concept DOI on Zenodo) for the project as a whole. See
     [Available](#available).
-
-[Documented]{#gloss-documented}
-:   The third TADA principle: a README and a licence describe the code, its
-    software environment, where the data are and how to run it. See
-    [Documented](#documented).
 
 [Double-blind review]{#gloss-double-blind data-match="double-blind"}
 :   Peer review in which neither the authors nor the reviewers know who the
@@ -315,18 +326,27 @@ links to it.
 :   A small automated check that a function gives the expected output for a
     known input, written with `testthat` (R) or `pytest` (Python).
 
+[Version-specific DOI]{#gloss-version-doi data-match="version-specific DOI|version DOI|versioned DOI"}
+:   A [DOI](#gloss-doi) for one fixed version of a deposit. Zenodo and Figshare
+    create a new one for each new version (on Figshare it ends in `.v1`,
+    `.v2` and so on), and it always resolves to that version. Cite this one in
+    the paper, because it points to the exact code that produced the results.
+    Compare [base project-level DOI](#gloss-project-doi) (otherwise known as a
+    concept DOI on Zenodo). See [Where to
+    archive](#available-where).
+
 [Virtual environment]{#gloss-virtual-environment data-match="virtual environment"}
 :   In Python, a self-contained setup for one project with its own packages,
     kept separate from the rest of the computer.
-
-[Working directory]{#gloss-working-directory data-match="working directory|setwd"}
-:   The folder R or Python treats as its starting point when reading and saving
-    files. Opening an RStudio project sets it to the project folder.
 
 [Workflow manager]{#gloss-workflow-manager data-match="workflow manager|Snakemake|Nextflow"}
 :   A tool that runs the steps of an analysis in a defined order and tracks
     which steps depend on which, such as Snakemake or Nextflow. Beyond the
     scope of TADA.
+
+[Working directory]{#gloss-working-directory data-match="working directory|setwd"}
+:   The folder R or Python treats as its starting point when reading and saving
+    files. Opening an RStudio project sets it to the project folder.
 
 :::
 
