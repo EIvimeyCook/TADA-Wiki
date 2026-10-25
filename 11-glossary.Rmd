@@ -13,13 +13,13 @@ links to it.
 :   A file path written out in full from the top of one computer's file system,
     such as `C:/Users/ed/Desktop/data.csv`. Also called a local or hard-coded
     path. It only exists on that machine, so code that uses one fails for
-    everyone else. Compare *relative path*. See
+    everyone else. Compare [relative path](#gloss-relative-path). See
     [Transferable](#transferable-paths).
 
 [Analytical code]{#gloss-analytical-code data-match="analytical code"}
 :   Code written to analyse one dataset for one study. Its job is to be a
     transparent, reproducible record of that analysis, not a tool for other
-    people. Compare *software*. See [TADA at a glance](#tada-why).
+    people. Compare [software](#gloss-software). See [TADA at a glance](#tada-why).
 
 [Annotated]{#gloss-annotated}
 :   The fourth TADA principle: comments inside the code say what each chunk
@@ -30,8 +30,8 @@ links to it.
 :   Depositing data and code in a public repository. In practice that means a
     repository that keeps the files unchanged and gives the deposit a
     persistent identifier, such as a DOI. Putting files on GitHub or in
-    supplementary material is not archiving; see *immutable* and *persistent
-    identifier*, and [Where to archive](#available-where).
+    supplementary material is not archiving; see [immutable](#gloss-immutable) and [persistent
+    identifier](#gloss-pid), and [Where to archive](#available-where).
 
 [Available]{#gloss-available}
 :   The second TADA principle: the code is publicly archived with a persistent
@@ -74,8 +74,8 @@ links to it.
 
 [Copyleft licence]{#gloss-copyleft data-match="copyleft|GPL"}
 :   A licence that requires anything built from your code to be released under
-    the same licence if it is shared. The GPL is the usual example. Compare *permissive
-    licence*.
+    the same licence if it is shared. The GPL is the usual example. Compare [permissive
+    licence](#gloss-permissive).
 
 [Data and code quality control]{#gloss-quality-control data-match="quality control|quality-control"} [SORTEE]{.tada-gloss-tag}
 :   Checking whether data and code are suitable for public archiving. In
@@ -91,7 +91,7 @@ links to it.
 
 [Data dictionary]{#gloss-data-dictionary data-match="data dictionary|data dictionaries|codebook"}
 :   A file listing every variable in a dataset with its description and units.
-    Also called a codebook. A form of *metadata*.
+    Also called a codebook. A form of [metadata](#gloss-metadata).
 
 [Data editor]{#gloss-data-editor data-match="data editor"} [SORTEE]{.tada-gloss-tag}
 :   An editor at a journal whose job is to screen and quality-control the data
@@ -110,7 +110,7 @@ links to it.
 [Data processing]{#gloss-processing data-match="data processing|processed data"} [SORTEE]{.tada-gloss-tag}
 :   Transforming data from one form to another, for example extracting data
     from images or videos, summarising, or calculating new values. The result
-    is *processed data*. Transcribing data from paper into a digital format,
+    is [processed data](#gloss-processed-data). Transcribing data from paper into a digital format,
     and checking it for entry errors, does not count. As with filtering,
     archive the raw data or the processing code too. See
     [What data to share](#sharing-what).
@@ -144,7 +144,7 @@ links to it.
 
 [Environment manager]{#gloss-environment-manager data-match="environment manager|dependency manager|renv|conda|poetry|pipenv|groundhog"}
 :   A tool that records and restores the exact package versions a project uses,
-    usually in a *lockfile*. `renv` (R) and `conda`, `poetry` and `pipenv`
+    usually in a [lockfile](#gloss-lockfile). `renv` (R) and `conda`, `poetry` and `pipenv`
     (Python) are examples. Beyond the scope of TADA.
 
 [FAIR principles]{#gloss-fair data-match="FAIR"} [SORTEE]{.tada-gloss-tag}
@@ -195,7 +195,7 @@ links to it.
 
 [MCMC]{#gloss-mcmc data-match="MCMC"}
 :   Markov chain Monte Carlo, a family of stochastic sampling methods, common in
-    Bayesian models. Results differ slightly between runs unless a *seed* is
+    Bayesian models. Results differ slightly between runs unless a [seed](#gloss-seed) is
     set.
 
 [MeRIT]{#gloss-merit data-match="MeRIT"}
@@ -223,8 +223,8 @@ links to it.
 
 [Permissive licence]{#gloss-permissive data-match="permissive"}
 :   A licence with few conditions, usually just that the licence and copyright
-    notice are kept. MIT, BSD and Apache 2.0 are examples. Compare *copyleft
-    licence*.
+    notice are kept. MIT, BSD and Apache 2.0 are examples. Compare [copyleft
+    licence](#gloss-copyleft).
 
 [Persistent identifier (PID)]{#gloss-pid data-match="persistent identifier|PID"}
 :   A globally unique, long-lasting reference to a digital object that keeps
@@ -233,14 +233,14 @@ links to it.
     from GenBank. A GitHub URL is not one.
 
 [Processed data]{#gloss-processed-data}
-:   Data that have been through *data processing*.
+:   Data that have been through [data processing](#gloss-processing).
 
 [Project]{#gloss-project} [SORTEE]{.tada-gloss-tag}
 :   A collection of files archived for a specific manuscript. In practice, the
     data, code, README and licence for one paper, ideally deposited together
     under one DOI (see [Data and code in the same place](#available-together)).
     This is similar to what GitHub calls a "repository", which is easy to
-    confuse with the archive itself; see *repository*.
+    confuse with the archive itself; see [repository](#gloss-repository).
 
 [Proprietary format]{#gloss-proprietary data-match="proprietary"}
 :   A file format controlled by one company, which often needs that company's
@@ -265,7 +265,7 @@ links to it.
 :   A file path written from the project folder rather than from the top of the
     computer's file system, such as `data/raw/counts.csv`. It works on any
     computer, wherever the project folder sits.
-    Compare *absolute path*.
+    Compare [absolute path](#gloss-absolute-path).
 
 [Release]{#gloss-release data-match="release"}
 :   On GitHub, a named, fixed snapshot of a repository. Zenodo can archive each
@@ -276,7 +276,7 @@ links to it.
     many projects, such as Zenodo, Dryad or Figshare. Each deposit is publicly
     accessible and usually gets its own persistent identifier, such as a DOI.
     GitHub uses the same word for something different: a single project's
-    folder of files, not the service that holds it. See *project* and
+    folder of files, not the service that holds it. See [project](#gloss-project) and
     [Where to archive](#available-where).
 
 [Seed]{#gloss-seed data-match="seed"}
@@ -292,7 +292,7 @@ links to it.
 
 [Software]{#gloss-software}
 :   Code written to be general, modular and tested, so it works across systems
-    and on many datasets. Compare *analytical code*.
+    and on many datasets. Compare [analytical code](#gloss-analytical-code).
 
 [Stochastic]{#gloss-stochastic data-match="stochastic"}
 :   Involving randomness, so the output can differ between runs. Simulations,

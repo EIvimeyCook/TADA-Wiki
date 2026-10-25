@@ -113,12 +113,37 @@ Best practice for code sharing
 </h2>
 <p>Much of the code behind published papers is never shared, and what is shared
 often won’t run. This wiki sets out four steps to take before you submit a
-paper: make your code <strong>T</strong>ransferable, <strong>A</strong>vailable, <strong>D</strong>ocumented and
+paper, so that anyone who downloads your code can run it and get your results:
+make your code <strong>T</strong>ransferable, <strong>A</strong>vailable, <strong>D</strong>ocumented and
 <strong>A</strong>nnotated.</p>
 </div>
 </div>
 <div class="tada-hero-figure">
 <div class="inline-figure"><img src="assets/figures/wizard-tada.png" alt="A cartoon wizard casting a spell, saying TADA!"></div>
+</div>
+</div>
+<div id="welcome-new" class="section level2 unnumbered">
+<h2>New to sharing code?<a class="anchor" aria-label="anchor" href="#welcome-new"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>Sharing code</strong> means putting the scripts behind your paper somewhere public
+and permanent, alongside your data, so that a reader can re-run your analysis
+and see exactly how you got your results.</p>
+<p>By the end of this wiki you will have:</p>
+<ul>
+<li>
+<strong>one project folder</strong> holding your data, your scripts and a short README
+that explains them;</li>
+<li>code that <strong>runs on someone else’s computer</strong>, not just yours;</li>
+<li>that folder <strong>archived in a repository</strong> such as Zenodo, which gives it a
+<strong>DOI</strong>, a permanent link you cite in your paper.</li>
+</ul>
+<p>You do not need to be an experienced programmer. If you can write and run an R
+or Python script, you can follow this wiki. You do not need Git, Docker or unit
+testing either; where they help, they are mentioned as optional.</p>
+<div class="tada-key">
+<p><strong>Submitting soon?</strong> Go straight to <a href="quickstart.html#quickstart">Start here</a>. It is a
+checklist you can work through with your project open, and every item links to
+a fuller explanation if you need one.</p>
 </div>
 </div>
 <div id="jump-in" class="section level2 unnumbered">
@@ -157,29 +182,75 @@ paper: make your code <strong>T</strong>ransferable, <strong>A</strong>vailable,
 <div class="tada-cards tada-cards--links">
 <div class="tada-card t">
 <p><span class="tada-letter">T</span> <a href="transferable.html#transferable" class="tada-word">Transferable</a>
-<span class="tada-gloss">Runs on someone else’s machine.</span></p>
+<span class="tada-gloss">Runs on someone else’s computer, not just yours.</span></p>
 </div>
 <div class="tada-card a1">
 <p><span class="tada-letter">A</span> <a href="available.html#available" class="tada-word">Available</a>
-<span class="tada-gloss">Archived, with a DOI.</span></p>
+<span class="tada-gloss">Archived somewhere permanent, with a DOI (a permanent link).</span></p>
 </div>
 <div class="tada-card d">
 <p><span class="tada-letter">D</span> <a href="documented.html#documented" class="tada-word">Documented</a>
-<span class="tada-gloss">A README and a licence.</span></p>
+<span class="tada-gloss">A README (a guide to your files) and a licence (what others may do with them).</span></p>
 </div>
 <div class="tada-card a2">
 <p><span class="tada-letter">A</span> <a href="annotated.html#annotated" class="tada-word">Annotated</a>
-<span class="tada-gloss">Comments that explain the code.</span></p>
+<span class="tada-gloss">Comments that explain what the code does and why.</span></p>
 </div>
 </div>
+</div>
+<div id="welcome-terms" class="section level2 unnumbered">
+<h2>Words you will meet<a class="anchor" aria-label="anchor" href="#welcome-terms"><i class="fas fa-link"></i></a>
+</h2>
+<p>A few terms come up on almost every page. Each has a fuller entry in the
+<a href="glossary.html#glossary">Glossary</a>.</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr class="header">
+<th>Term</th>
+<th>What it means</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Repository</strong></td>
+<td>A service that stores archived data and code for the long term, such as Zenodo, Figshare or Dryad. Not the same as a GitHub repository.</td>
+</tr>
+<tr class="even">
+<td><strong>DOI</strong></td>
+<td>Digital Object Identifier: a permanent link to a deposit, such as <code>https://doi.org/10.5281/zenodo.1234567</code>, which you cite like a paper.</td>
+</tr>
+<tr class="odd">
+<td><strong>Immutable</strong></td>
+<td>Cannot be changed or deleted once published. An update creates a new version rather than overwriting the old one.</td>
+</tr>
+<tr class="even">
+<td><strong>README</strong></td>
+<td>A plain-text file at the top of your project that says what it is, what each file does and how to run it.</td>
+</tr>
+<tr class="odd">
+<td><strong>Licence</strong></td>
+<td>A statement of what others may legally do with your code or data. Without one, others cannot lawfully reuse it.</td>
+</tr>
+<tr class="even">
+<td><strong>Relative path</strong></td>
+<td>A file path written from your project folder, such as <code>data/raw/counts.csv</code>, so it works on any computer.</td>
+</tr>
+<tr class="odd">
+<td><strong>Data editor</strong></td>
+<td>A journal editor who checks the data and code archived alongside a manuscript while it is under review.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="also-in-the-wiki" class="section level2 unnumbered">
 <h2>Also in the wiki<a class="anchor" aria-label="anchor" href="#also-in-the-wiki"><i class="fas fa-link"></i></a>
 </h2>
 <p><a href="data-sharing.html#data-sharing">Data &amp; code sharing</a> · <a href="further-reading.html#further-reading">Further reading</a> ·
 <a href="glossary.html#glossary">Glossary</a> · <a href="contribute.html#contribute">Contribute</a> · <a href="references.html#references">References</a></p>
-<p>New here? Read <a href="about.html#about">About this wiki</a> first: why it exists, who it is for and
-where the guidance comes from.</p>
+<p>Want the background first? Read <a href="about.html#about">About this wiki</a>: why it exists, who
+it is for and where the guidance comes from.</p>
 
 </div>
 </div>
@@ -191,8 +262,10 @@ where the guidance comes from.</p>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#welcome">Welcome</a></li>
 <li><a class="nav-link" href="#code-that-runs-for-someone-else-not-just-for-you">Code that runs for someone else, not just for you</a></li>
+<li><a class="nav-link" href="#welcome-new">New to sharing code?</a></li>
 <li><a class="nav-link" href="#jump-in">Jump in</a></li>
 <li><a class="nav-link" href="#the-four-principles">The four principles</a></li>
+<li><a class="nav-link" href="#welcome-terms">Words you will meet</a></li>
 <li><a class="nav-link" href="#also-in-the-wiki">Also in the wiki</a></li>
 </ul>
 
