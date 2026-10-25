@@ -272,12 +272,6 @@ The SORTEE guidelines require a licence for both data (Guideline 1.2) and code
 and state one. For **code** they state a preference for permissive code licenses whenever possible (Guideline 3.2).
 :::
 
-::: {.tada-wiki}
-If you choose a GNU licence such as the GPL, note that it is a copyleft
-licence: anything built from your code must use the same licence if it is
-shared (see *Copyleft* above).
-:::
-
 ## Checklist {#documented-checklist}
 
 :::: {.tada-checklist-head}
