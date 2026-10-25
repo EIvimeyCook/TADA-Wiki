@@ -128,9 +128,9 @@ As we put it in the TADA paper, it does the same job “but rather than describi
 top of the file saying what the whole script does and what it produces.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">##### Caterpillar abundance analysis #####</span></span>
-<span><span class="co"># Fits Poisson GLMs of caterpillar counts against habitat and year, and</span></span>
-<span><span class="co"># produces the coefficients and figures reported in Table 2 and Figure 3</span></span>
-<span><span class="co"># of the manuscript. Run after 01_clean_data.R.</span></span></code></pre></div>
+<span><span class="co"># Fits a Poisson GLM of caterpillar counts against habitat, and produces</span></span>
+<span><span class="co"># the results in the "Caterpillar abundance" section and Figure 1 of the</span></span>
+<span><span class="co"># manuscript. Run after 01_clean_data.R.</span></span></code></pre></div>
 <p>A header answers “what is this file for?” in a few lines, before the reader
 reaches the first chunk.</p>
 </div>
@@ -162,9 +162,9 @@ to the lines of code that produced it.</p>
 <div class="tada-before">
 <p>Before</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">n</span> <span class="op">~</span> <span class="va">habitat</span> <span class="op">+</span> <span class="va">year</span>, family <span class="op">=</span> <span class="va">poisson</span>, data <span class="op">=</span> <span class="va">dat</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">habitat</span>, <span class="va">dat</span><span class="op">$</span><span class="va">n</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">model1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">caterpillar_count</span> <span class="op">~</span> <span class="va">habitat</span>, family <span class="op">=</span> <span class="va">poisson</span>, data <span class="op">=</span> <span class="va">filtered_data</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model1</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html">boxplot</a></span><span class="op">(</span><span class="va">caterpillar_count</span> <span class="op">~</span> <span class="va">habitat</span>, data <span class="op">=</span> <span class="va">filtered_data</span><span class="op">)</span></span></code></pre></div>
 <p>Nothing tells a reader what is being run, why, or what it produces. There is no
 signposting.</p>
 </div>
@@ -172,16 +172,15 @@ signposting.</p>
 <p>After</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">##### Caterpillar abundance model #####</span></span>
-<span><span class="co"># Poisson GLM of caterpillar counts against habitat type, controlling</span></span>
-<span><span class="co"># for year, to test H1 (abundance differs between woodland types).</span></span>
-<span><span class="co"># Produces the coefficients reported in Table 2 and the numbers quoted</span></span>
-<span><span class="co"># in Results, "Caterpillar abundance".</span></span>
-<span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">n</span> <span class="op">~</span> <span class="va">habitat</span> <span class="op">+</span> <span class="va">year</span>, family <span class="op">=</span> <span class="va">poisson</span>, data <span class="op">=</span> <span class="va">dat</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span>
+<span><span class="co"># Run a Poisson generalised linear model to test whether caterpillar</span></span>
+<span><span class="co"># abundance differs between habitats (habitat D already removed as</span></span>
+<span><span class="co"># erroneous). Produces the numbers in Results, "Caterpillar abundance".</span></span>
+<span><span class="va">model1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">caterpillar_count</span> <span class="op">~</span> <span class="va">habitat</span>, family <span class="op">=</span> <span class="va">poisson</span>, data <span class="op">=</span> <span class="va">filtered_data</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model1</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">##### Figure 3A #####</span></span>
-<span><span class="co"># Raw counts by habitat, plotted as the left panel of Figure 3.</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">habitat</span>, <span class="va">dat</span><span class="op">$</span><span class="va">n</span><span class="op">)</span></span></code></pre></div>
+<span><span class="co">##### Figure 1 #####</span></span>
+<span><span class="co"># Caterpillar counts by habitat, shown as Figure 1.</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html">boxplot</a></span><span class="op">(</span><span class="va">caterpillar_count</span> <span class="op">~</span> <span class="va">habitat</span>, data <span class="op">=</span> <span class="va">filtered_data</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -225,14 +224,18 @@ narrative <em>is</em> the annotation, and it is clear which paragraph explains w
 chunk.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="annotated.html#cb11-1" tabindex="-1"></a><span class="fu">## Caterpillar abundance</span></span>
 <span id="cb11-2"><a href="annotated.html#cb11-2" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="annotated.html#cb11-3" tabindex="-1"></a>We fitted a Poisson GLM of counts against habitat type, controlling for</span>
-<span id="cb11-4"><a href="annotated.html#cb11-4" tabindex="-1"></a>year, to test whether abundance differs between woodland types. These</span>
-<span id="cb11-5"><a href="annotated.html#cb11-5" tabindex="-1"></a>coefficients are reported in Table 2.</span>
+<span id="cb11-3"><a href="annotated.html#cb11-3" tabindex="-1"></a>We fitted a Poisson GLM of caterpillar counts against habitat to test</span>
+<span id="cb11-4"><a href="annotated.html#cb11-4" tabindex="-1"></a>whether abundance differs between habitats. These results are reported in</span>
+<span id="cb11-5"><a href="annotated.html#cb11-5" tabindex="-1"></a>the "Caterpillar abundance" section.</span>
 <span id="cb11-6"><a href="annotated.html#cb11-6" tabindex="-1"></a></span>
 <span id="cb11-7"><a href="annotated.html#cb11-7" tabindex="-1"></a><span class="in">```{r abundance-model}</span></span>
-<span id="cb11-8"><a href="annotated.html#cb11-8" tabindex="-1"></a><span class="in">m1 &lt;- glm(n ~ habitat + year, family = poisson, data = dat)</span></span>
-<span id="cb11-9"><a href="annotated.html#cb11-9" tabindex="-1"></a><span class="in">summary(m1)</span></span>
+<span id="cb11-8"><a href="annotated.html#cb11-8" tabindex="-1"></a><span class="in">model1 &lt;- glm(caterpillar_count ~ habitat, family = poisson, data = filtered_data)</span></span>
+<span id="cb11-9"><a href="annotated.html#cb11-9" tabindex="-1"></a><span class="in">summary(model1)</span></span>
 <span id="cb11-10"><a href="annotated.html#cb11-10" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<p>For a complete example, see the TADA paper’s worked R Markdown report, which
+combines code, its output and descriptive text in one document
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>):
+<a href="https://eivimeycook.github.io/TADA/" class="uri">https://eivimeycook.github.io/TADA/</a>.</p>
 <p>The <a href="sortee.html#sortee">SORTEE guidelines</a> add that presenting everything in one
 self-contained Markdown or Quarto document is <strong>very helpful for data editors
 and future readers</strong>

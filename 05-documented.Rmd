@@ -83,16 +83,16 @@ Below is a filled-in version of the fields above. The template is at
 :::
 
 ````markdown
-# Code for: Caterpillar abundance varies with woodland habitat type
+# Code for: Caterpillar abundance varies with habitat type
 
 Associated manuscript: Ivimey-Cook et al. (2026), *Journal of Example Ecology*.
 Preprint: https://doi.org/10.00000/example
 
 ## Abstract
-We tested whether caterpillar abundance differs between woodland habitat
-types, using count data collected across three seasons. Abundance was higher
-in mixed woodland than in conifer plantation after controlling for year
-(Poisson GLM); we discuss implications for habitat management.
+We tested whether caterpillar abundance differs between habitat types. Of 150
+surveys across five habitats (A–E), the 30 from habitat D were excluded as
+erroneous, leaving 120 from four habitats. Abundance differed significantly
+between habitats and was highest in habitat E (Poisson GLM).
 
 ## Contact
 Your Name — your.name@example.ac.uk
@@ -103,24 +103,25 @@ Example Research Council, grant ABC/123456/1.
 
 ## Data
 Archived with this project. If archived separately:
-https://doi.org/10.5061/dryad.000000 (`caterpillars_2024.csv`).
-Collected May–August 2022–2024 at three woodland sites in Norfolk, UK.
+https://doi.org/10.5281/zenodo.0000000 (`caterpillars_2024.csv`).
+150 surveys (rows) of caterpillar counts across five habitats.
 
 Variables in `caterpillars_2024.csv`:
-  site      Site ID (W1–W3)
-  habitat   Woodland type (mixed, conifer)
-  year      Survey year (2022–2024)
-  n         Caterpillar count per 30-minute survey (count)
+  habitat             Habitat type (A–E; D is excluded from the
+                      analysis as erroneous)
+  caterpillar_count   Number of caterpillars found during the survey
+                      (count; range 2–36)
 
 ## Licence
-MIT (see LICENSE). Data are released under CC0.
+MIT (see LICENSE). Data are released under CC BY 4.0.
 
 ## Software environment
 R v4.5.2. Full session details in `session_info.txt`.
 
 Key packages:
-  - here        v1.0.1   (relative file paths)
+  - dplyr       v1.2.1   (data summaries and filtering)
   - ggplot2     v4.0.2   (figures)
+  - here        v1.0.2   (relative file paths)
 
 LLM use: none.
 

@@ -25,9 +25,9 @@ top of the file saying what the whole script does and what it produces.
 
 ```r
 ##### Caterpillar abundance analysis #####
-# Fits Poisson GLMs of caterpillar counts against habitat and year, and
-# produces the coefficients and figures reported in Table 2 and Figure 3
-# of the manuscript. Run after 01_clean_data.R.
+# Fits a Poisson GLM of caterpillar counts against habitat, and produces
+# the results in the "Caterpillar abundance" section and Figure 1 of the
+# manuscript. Run after 01_clean_data.R.
 ```
 
 A header answers "what is this file for?" in a few lines, before the reader
@@ -56,9 +56,9 @@ to the lines of code that produced it.
 Before
 
 ```r
-m1 <- glm(n ~ habitat + year, family = poisson, data = dat)
-summary(m1)
-plot(dat$habitat, dat$n)
+model1 <- glm(caterpillar_count ~ habitat, family = poisson, data = filtered_data)
+summary(model1)
+boxplot(caterpillar_count ~ habitat, data = filtered_data)
 ```
 
 Nothing tells a reader what is being run, why, or what it produces. There is no
@@ -70,16 +70,15 @@ After
 
 ```r
 ##### Caterpillar abundance model #####
-# Poisson GLM of caterpillar counts against habitat type, controlling
-# for year, to test H1 (abundance differs between woodland types).
-# Produces the coefficients reported in Table 2 and the numbers quoted
-# in Results, "Caterpillar abundance".
-m1 <- glm(n ~ habitat + year, family = poisson, data = dat)
-summary(m1)
+# Run a Poisson generalised linear model to test whether caterpillar
+# abundance differs between habitats (habitat D already removed as
+# erroneous). Produces the numbers in Results, "Caterpillar abundance".
+model1 <- glm(caterpillar_count ~ habitat, family = poisson, data = filtered_data)
+summary(model1)
 
-##### Figure 3A #####
-# Raw counts by habitat, plotted as the left panel of Figure 3.
-plot(dat$habitat, dat$n)
+##### Figure 1 #####
+# Caterpillar counts by habitat, shown as Figure 1.
+boxplot(caterpillar_count ~ habitat, data = filtered_data)
 ```
 :::
 ::::
@@ -123,15 +122,20 @@ chunk.
 ````{verbatim, lang="markdown"}
 ## Caterpillar abundance
 
-We fitted a Poisson GLM of counts against habitat type, controlling for
-year, to test whether abundance differs between woodland types. These
-coefficients are reported in Table 2.
+We fitted a Poisson GLM of caterpillar counts against habitat to test
+whether abundance differs between habitats. These results are reported in
+the "Caterpillar abundance" section.
 
 ```{r abundance-model}
-m1 <- glm(n ~ habitat + year, family = poisson, data = dat)
-summary(m1)
+model1 <- glm(caterpillar_count ~ habitat, family = poisson, data = filtered_data)
+summary(model1)
 ```
 ````
+
+For a complete example, see the TADA paper's worked R Markdown report, which
+combines code, its output and descriptive text in one document
+([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}):
+<https://eivimeycook.github.io/TADA/>.
 
 The [SORTEE guidelines](#sortee) add that presenting everything in one
 self-contained Markdown or Quarto document is **very helpful for data editors

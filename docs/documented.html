@@ -225,16 +225,16 @@ software versions.</p>
 <div class="tada-note">
 <p><strong>Generate the README instead of writing it.</strong> The TADA paper points to <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a> (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>), an R package with a built-in Shiny app that walks you through the fields above and writes a <code>README.md</code>. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with <code>pak::pak("EIvimeyCook/READMEBuilder")</code>, then run <code>build_readme()</code>.</p>
 </div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="documented.html#cb6-1" tabindex="-1"></a><span class="fu"># Code for: Caterpillar abundance varies with woodland habitat type</span></span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="documented.html#cb6-1" tabindex="-1"></a><span class="fu"># Code for: Caterpillar abundance varies with habitat type</span></span>
 <span id="cb6-2"><a href="documented.html#cb6-2" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="documented.html#cb6-3" tabindex="-1"></a>Associated manuscript: Ivimey-Cook et al. (2026), *Journal of Example Ecology*.</span>
 <span id="cb6-4"><a href="documented.html#cb6-4" tabindex="-1"></a>Preprint: https://doi.org/10.00000/example</span>
 <span id="cb6-5"><a href="documented.html#cb6-5" tabindex="-1"></a></span>
 <span id="cb6-6"><a href="documented.html#cb6-6" tabindex="-1"></a><span class="fu">## Abstract</span></span>
-<span id="cb6-7"><a href="documented.html#cb6-7" tabindex="-1"></a>We tested whether caterpillar abundance differs between woodland habitat</span>
-<span id="cb6-8"><a href="documented.html#cb6-8" tabindex="-1"></a>types, using count data collected across three seasons. Abundance was higher</span>
-<span id="cb6-9"><a href="documented.html#cb6-9" tabindex="-1"></a>in mixed woodland than in conifer plantation after controlling for year</span>
-<span id="cb6-10"><a href="documented.html#cb6-10" tabindex="-1"></a>(Poisson GLM); we discuss implications for habitat management.</span>
+<span id="cb6-7"><a href="documented.html#cb6-7" tabindex="-1"></a>We tested whether caterpillar abundance differs between habitat types. Of 150</span>
+<span id="cb6-8"><a href="documented.html#cb6-8" tabindex="-1"></a>surveys across five habitats (A–E), the 30 from habitat D were excluded as</span>
+<span id="cb6-9"><a href="documented.html#cb6-9" tabindex="-1"></a>erroneous, leaving 120 from four habitats. Abundance differed significantly</span>
+<span id="cb6-10"><a href="documented.html#cb6-10" tabindex="-1"></a>between habitats and was highest in habitat E (Poisson GLM).</span>
 <span id="cb6-11"><a href="documented.html#cb6-11" tabindex="-1"></a></span>
 <span id="cb6-12"><a href="documented.html#cb6-12" tabindex="-1"></a><span class="fu">## Contact</span></span>
 <span id="cb6-13"><a href="documented.html#cb6-13" tabindex="-1"></a>Your Name — your.name@example.ac.uk</span>
@@ -245,46 +245,47 @@ software versions.</p>
 <span id="cb6-18"><a href="documented.html#cb6-18" tabindex="-1"></a></span>
 <span id="cb6-19"><a href="documented.html#cb6-19" tabindex="-1"></a><span class="fu">## Data</span></span>
 <span id="cb6-20"><a href="documented.html#cb6-20" tabindex="-1"></a>Archived with this project. If archived separately:</span>
-<span id="cb6-21"><a href="documented.html#cb6-21" tabindex="-1"></a>https://doi.org/10.5061/dryad.000000 (<span class="in">`caterpillars_2024.csv`</span>).</span>
-<span id="cb6-22"><a href="documented.html#cb6-22" tabindex="-1"></a>Collected May–August 2022–2024 at three woodland sites in Norfolk, UK.</span>
+<span id="cb6-21"><a href="documented.html#cb6-21" tabindex="-1"></a>https://doi.org/10.5281/zenodo.0000000 (<span class="in">`caterpillars_2024.csv`</span>).</span>
+<span id="cb6-22"><a href="documented.html#cb6-22" tabindex="-1"></a>150 surveys (rows) of caterpillar counts across five habitats.</span>
 <span id="cb6-23"><a href="documented.html#cb6-23" tabindex="-1"></a></span>
 <span id="cb6-24"><a href="documented.html#cb6-24" tabindex="-1"></a>Variables in <span class="in">`caterpillars_2024.csv`</span>:</span>
-<span id="cb6-25"><a href="documented.html#cb6-25" tabindex="-1"></a>  site      Site ID (W1–W3)</span>
-<span id="cb6-26"><a href="documented.html#cb6-26" tabindex="-1"></a>  habitat   Woodland type (mixed, conifer)</span>
-<span id="cb6-27"><a href="documented.html#cb6-27" tabindex="-1"></a>  year      Survey year (2022–2024)</span>
-<span id="cb6-28"><a href="documented.html#cb6-28" tabindex="-1"></a>  n         Caterpillar count per 30-minute survey (count)</span>
+<span id="cb6-25"><a href="documented.html#cb6-25" tabindex="-1"></a>  habitat             Habitat type (A–E; D is excluded from the</span>
+<span id="cb6-26"><a href="documented.html#cb6-26" tabindex="-1"></a>                      analysis as erroneous)</span>
+<span id="cb6-27"><a href="documented.html#cb6-27" tabindex="-1"></a>  caterpillar_count   Number of caterpillars found during the survey</span>
+<span id="cb6-28"><a href="documented.html#cb6-28" tabindex="-1"></a>                      (count; range 2–36)</span>
 <span id="cb6-29"><a href="documented.html#cb6-29" tabindex="-1"></a></span>
 <span id="cb6-30"><a href="documented.html#cb6-30" tabindex="-1"></a><span class="fu">## Licence</span></span>
-<span id="cb6-31"><a href="documented.html#cb6-31" tabindex="-1"></a>MIT (see LICENSE). Data are released under CC0.</span>
+<span id="cb6-31"><a href="documented.html#cb6-31" tabindex="-1"></a>MIT (see LICENSE). Data are released under CC BY 4.0.</span>
 <span id="cb6-32"><a href="documented.html#cb6-32" tabindex="-1"></a></span>
 <span id="cb6-33"><a href="documented.html#cb6-33" tabindex="-1"></a><span class="fu">## Software environment</span></span>
 <span id="cb6-34"><a href="documented.html#cb6-34" tabindex="-1"></a>R v4.5.2. Full session details in <span class="in">`session_info.txt`</span>.</span>
 <span id="cb6-35"><a href="documented.html#cb6-35" tabindex="-1"></a></span>
 <span id="cb6-36"><a href="documented.html#cb6-36" tabindex="-1"></a>Key packages:</span>
-<span id="cb6-37"><a href="documented.html#cb6-37" tabindex="-1"></a><span class="ss">  - </span>here        v1.0.1   (relative file paths)</span>
+<span id="cb6-37"><a href="documented.html#cb6-37" tabindex="-1"></a><span class="ss">  - </span>dplyr       v1.2.1   (data summaries and filtering)</span>
 <span id="cb6-38"><a href="documented.html#cb6-38" tabindex="-1"></a><span class="ss">  - </span>ggplot2     v4.0.2   (figures)</span>
-<span id="cb6-39"><a href="documented.html#cb6-39" tabindex="-1"></a></span>
-<span id="cb6-40"><a href="documented.html#cb6-40" tabindex="-1"></a>LLM use: none.</span>
-<span id="cb6-41"><a href="documented.html#cb6-41" tabindex="-1"></a></span>
-<span id="cb6-42"><a href="documented.html#cb6-42" tabindex="-1"></a><span class="fu">## How to run</span></span>
-<span id="cb6-43"><a href="documented.html#cb6-43" tabindex="-1"></a>Open <span class="in">`caterpillars.Rproj`</span> in RStudio, then run the scripts in order:</span>
-<span id="cb6-44"><a href="documented.html#cb6-44" tabindex="-1"></a></span>
-<span id="cb6-45"><a href="documented.html#cb6-45" tabindex="-1"></a><span class="ss">  1. </span><span class="in">`R/01_clean_data.R`</span>    reads data/raw/caterpillars_2024.csv</span>
-<span id="cb6-46"><a href="documented.html#cb6-46" tabindex="-1"></a>                            writes data/processed/caterpillars_clean.csv</span>
-<span id="cb6-47"><a href="documented.html#cb6-47" tabindex="-1"></a><span class="ss">  2. </span><span class="in">`R/02_fit_models.R`</span>    fits the models reported in Table 2</span>
-<span id="cb6-48"><a href="documented.html#cb6-48" tabindex="-1"></a>                            writes output/models/*.rds   (~25 min)</span>
-<span id="cb6-49"><a href="documented.html#cb6-49" tabindex="-1"></a><span class="ss">  3. </span><span class="in">`R/03_make_figures.R`</span>  produces Figures 2 and 3</span>
-<span id="cb6-50"><a href="documented.html#cb6-50" tabindex="-1"></a>                            writes output/figures/*.png</span>
-<span id="cb6-51"><a href="documented.html#cb6-51" tabindex="-1"></a></span>
-<span id="cb6-52"><a href="documented.html#cb6-52" tabindex="-1"></a>Total runtime approximately 30 minutes on a 2023 MacBook Pro. Script 02 is</span>
-<span id="cb6-53"><a href="documented.html#cb6-53" tabindex="-1"></a>the slow step; its outputs are saved so 03 can be re-run on its own.</span>
-<span id="cb6-54"><a href="documented.html#cb6-54" tabindex="-1"></a></span>
-<span id="cb6-55"><a href="documented.html#cb6-55" tabindex="-1"></a><span class="fu">## Files</span></span>
-<span id="cb6-56"><a href="documented.html#cb6-56" tabindex="-1"></a>  data/raw/         Unmodified field data. Never written to by any script.</span>
-<span id="cb6-57"><a href="documented.html#cb6-57" tabindex="-1"></a>  data/processed/   Generated by script 01. Safe to delete and regenerate.</span>
-<span id="cb6-58"><a href="documented.html#cb6-58" tabindex="-1"></a>  R/                Analysis scripts, numbered in run order.</span>
-<span id="cb6-59"><a href="documented.html#cb6-59" tabindex="-1"></a>  functions/        Helper functions sourced by the scripts.</span>
-<span id="cb6-60"><a href="documented.html#cb6-60" tabindex="-1"></a>  output/           Figures and saved model objects.</span></code></pre></div>
+<span id="cb6-39"><a href="documented.html#cb6-39" tabindex="-1"></a><span class="ss">  - </span>here        v1.0.2   (relative file paths)</span>
+<span id="cb6-40"><a href="documented.html#cb6-40" tabindex="-1"></a></span>
+<span id="cb6-41"><a href="documented.html#cb6-41" tabindex="-1"></a>LLM use: none.</span>
+<span id="cb6-42"><a href="documented.html#cb6-42" tabindex="-1"></a></span>
+<span id="cb6-43"><a href="documented.html#cb6-43" tabindex="-1"></a><span class="fu">## How to run</span></span>
+<span id="cb6-44"><a href="documented.html#cb6-44" tabindex="-1"></a>Open <span class="in">`caterpillars.Rproj`</span> in RStudio, then run the scripts in order:</span>
+<span id="cb6-45"><a href="documented.html#cb6-45" tabindex="-1"></a></span>
+<span id="cb6-46"><a href="documented.html#cb6-46" tabindex="-1"></a><span class="ss">  1. </span><span class="in">`R/01_clean_data.R`</span>    reads data/raw/caterpillars_2024.csv</span>
+<span id="cb6-47"><a href="documented.html#cb6-47" tabindex="-1"></a>                            writes data/processed/caterpillars_clean.csv</span>
+<span id="cb6-48"><a href="documented.html#cb6-48" tabindex="-1"></a><span class="ss">  2. </span><span class="in">`R/02_fit_models.R`</span>    fits the models reported in Table 2</span>
+<span id="cb6-49"><a href="documented.html#cb6-49" tabindex="-1"></a>                            writes output/models/*.rds   (~25 min)</span>
+<span id="cb6-50"><a href="documented.html#cb6-50" tabindex="-1"></a><span class="ss">  3. </span><span class="in">`R/03_make_figures.R`</span>  produces Figures 2 and 3</span>
+<span id="cb6-51"><a href="documented.html#cb6-51" tabindex="-1"></a>                            writes output/figures/*.png</span>
+<span id="cb6-52"><a href="documented.html#cb6-52" tabindex="-1"></a></span>
+<span id="cb6-53"><a href="documented.html#cb6-53" tabindex="-1"></a>Total runtime approximately 30 minutes on a 2023 MacBook Pro. Script 02 is</span>
+<span id="cb6-54"><a href="documented.html#cb6-54" tabindex="-1"></a>the slow step; its outputs are saved so 03 can be re-run on its own.</span>
+<span id="cb6-55"><a href="documented.html#cb6-55" tabindex="-1"></a></span>
+<span id="cb6-56"><a href="documented.html#cb6-56" tabindex="-1"></a><span class="fu">## Files</span></span>
+<span id="cb6-57"><a href="documented.html#cb6-57" tabindex="-1"></a>  data/raw/         Unmodified field data. Never written to by any script.</span>
+<span id="cb6-58"><a href="documented.html#cb6-58" tabindex="-1"></a>  data/processed/   Generated by script 01. Safe to delete and regenerate.</span>
+<span id="cb6-59"><a href="documented.html#cb6-59" tabindex="-1"></a>  R/                Analysis scripts, numbered in run order.</span>
+<span id="cb6-60"><a href="documented.html#cb6-60" tabindex="-1"></a>  functions/        Helper functions sourced by the scripts.</span>
+<span id="cb6-61"><a href="documented.html#cb6-61" tabindex="-1"></a>  output/           Figures and saved model objects.</span></code></pre></div>
 <div class="tada-note">
 <p>That README gives the total runtime, says which step is slow and whether its
 output is cached, which script makes which figure, and that <code>data/processed/</code>
