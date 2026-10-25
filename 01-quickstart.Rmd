@@ -161,7 +161,7 @@ SORTEE guidelines ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}, Stage 6)
 |---|---|---|
 | `setwd("C:/Users/ed/Desktop/analysis")` | The path exists on exactly one computer | Open the project through its `.Rproj` file, or start Python inside the project folder, and build paths with `here()` / `pyprojroot` (packages you install; see [Transferable](#transferable-paths)) |
 | Code shared as a `.pdf` or `.docx` | Copying and pasting code can change characters such as apostrophes, alter white space, or add line numbers and headers, causing errors that are hard to spot | Save as `.R` / `.py`; see [Transferable](#transferable-filetype) |
-| No `set.seed()` before a simulation or MCMC run | Results change every run, so nobody can tell a real mismatch from noise | Set a seed at the top of each independently runnable section |
+| No `set.seed()` before a simulation or MCMC run | Results change every run, so nobody can tell a real mismatch from noise | Set a seed at the top of each independently runnable section; see the example in [The SORTEE guidelines](#sortee-common-failures) |
 
 ## The README {#quickstart-readme}
 

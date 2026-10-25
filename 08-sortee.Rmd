@@ -92,12 +92,56 @@ one of the following legitimate causes, say so in the metadata:
 - **Stochastic methods** such as simulations and MCMC. Set a seed (`set.seed()`
   in R, `random.seed()` in Python) **at the beginning of any code section that
   would be run independently**, including for figure generation with jittering.
-  Note that setting a seed does not *always* guarantee reproducibility.
+  Note that setting a seed does not *always* guarantee reproducibility. For
+  example, `rmvnorm()` in R does not create the same random numbers across
+  different operating systems, because of floating-point errors, and different
+  hardware can similarly lead to subtly different results.
 - **Post-processing of figures in other software.** The data in the figure are
   still expected to be the same, but the code may not reproduce the figure
   exactly.
 - **Software version differences.** If results are sensitive to the version
   used, flag it clearly and justify the version in the manuscript and metadata.
+
+::: {.tada-wiki}
+**Setting a seed.** Put it at the top of each section that can be run on its
+own, before anything random. Any whole number works; what matters is that it is
+written into the code. Both examples below run as they are and give the same
+interval every time.
+
+```r
+##### Bootstrap confidence interval for mean count (Table 2) #####
+set.seed(2024)
+
+# Example data: 40 caterpillar counts (use your own data here)
+counts <- rpois(40, lambda = 5)
+
+boot_means <- replicate(1000, mean(sample(counts, replace = TRUE)))
+quantile(boot_means, c(0.025, 0.975))
+#  2.5% 97.5%
+# 4.250 5.775   (R 4.5.2)
+```
+
+```python
+# Bootstrap confidence interval for mean count (Table 2)
+import numpy
+
+rng = numpy.random.default_rng(2024)
+
+# Example data: 40 caterpillar counts (use your own data here)
+counts = rng.poisson(lam=5, size=40)
+
+boot_means = [rng.choice(counts, size=counts.size, replace=True).mean()
+              for _ in range(1000)]
+print(numpy.quantile(boot_means, [0.025, 0.975]))
+# [3.775 4.925]   (NumPy 2.0.2)
+```
+
+In Python, `random.seed()` only affects the built-in `random` module. NumPy
+(and libraries built on it) uses its own generator, so seed that too, as above.
+
+The same seed can give different numbers in a different software version, as
+with R's `sample()` after v3.6.0, so record the versions in the README.
+:::
 
 **Computationally expensive or proprietary analyses.** If code needs
 specialist hardware, takes a very long time or depends on proprietary software

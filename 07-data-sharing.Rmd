@@ -111,17 +111,16 @@ All verdicts below are from the SORTEE guidelines ([Pick et al. 2026]{.tada-cite
 | `.xlsx` | Not proprietary, so interoperable, but can carry information such as formatting that is **lost on import** into statistical software. |
 | `.xls` | Proprietary format. Avoid. |
 | `.RData`, `.rds` | Usable with open-source software, but requires knowledge of R to extract, and may depend on the R version used to save it. Restricts reuse. |
-| `.sps` and other proprietary formats | Not interoperable; do not facilitate reuse. |
+| `.sav` (SPSS) and other proprietary formats | Not interoperable; do not facilitate reuse. |
 | `.pdf`, `.docx` | **Never.** Prone to error when copy-pasted, and cannot be readily imported into statistical programs. |
 
 ::: {.tada-wiki}
-SPSS `.sps` files appear here as unsuitable, yet [Transferable](#transferable-filetype)
-gives them as an example of a file type that passes. Both are right, because
-they judge different things. This table is about **data** files, where `.sps` is
-a proprietary format. The Transferable test is about **code** files, where an
-`.sps` syntax file can at least be opened in a text editor. `.txt` is the
-reverse: a preferred format for data, but code saved as `.txt` may not run in
-an IDE until it is re-saved with its language's extension.
+This table is about **data** files. SPSS stores data in `.sav` files, which are
+proprietary. Its `.sps` files are syntax (code) files, which
+[Transferable](#transferable-filetype) treats as passing because they open in a
+text editor. `.txt` works the other way: a preferred format for data, but code
+saved as `.txt` may not run in an IDE until it is re-saved with its language's
+extension.
 :::
 
 Where there is no alternative, as with data collected by proprietary software,

@@ -280,7 +280,10 @@ one of the following legitimate causes, say so in the metadata:</p>
 <strong>Stochastic methods</strong> such as simulations and MCMC. Set a seed (<code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code>
 in R, <code>random.seed()</code> in Python) <strong>at the beginning of any code section that
 would be run independently</strong>, including for figure generation with jittering.
-Note that setting a seed does not <em>always</em> guarantee reproducibility.</li>
+Note that setting a seed does not <em>always</em> guarantee reproducibility. For
+example, <code>rmvnorm()</code> in R does not create the same random numbers across
+different operating systems, because of floating-point errors, and different
+hardware can similarly lead to subtly different results.</li>
 <li>
 <strong>Post-processing of figures in other software.</strong> The data in the figure are
 still expected to be the same, but the code may not reproduce the figure
@@ -289,6 +292,39 @@ exactly.</li>
 <strong>Software version differences.</strong> If results are sensitive to the version
 used, flag it clearly and justify the version in the manuscript and metadata.</li>
 </ul>
+<div class="tada-wiki">
+<p><strong>Setting a seed.</strong> Put it at the top of each section that can be run on its
+own, before anything random. Any whole number works; what matters is that it is
+written into the code. Both examples below run as they are and give the same
+interval every time.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">##### Bootstrap confidence interval for mean count (Table 2) #####</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">2024</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Example data: 40 caterpillar counts (use your own data here)</span></span>
+<span><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">rpois</a></span><span class="op">(</span><span class="fl">40</span>, lambda <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">boot_means</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">replicate</a></span><span class="op">(</span><span class="fl">1000</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">counts</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">boot_means</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.025</span>, <span class="fl">0.975</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#  2.5% 97.5%</span></span>
+<span><span class="co"># 4.250 5.775   (R 4.5.2)</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="sortee.html#cb13-1" tabindex="-1"></a><span class="co"># Bootstrap confidence interval for mean count (Table 2)</span></span>
+<span id="cb13-2"><a href="sortee.html#cb13-2" tabindex="-1"></a><span class="im">import</span> numpy</span>
+<span id="cb13-3"><a href="sortee.html#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="sortee.html#cb13-4" tabindex="-1"></a>rng <span class="op">=</span> numpy.random.default_rng(<span class="dv">2024</span>)</span>
+<span id="cb13-5"><a href="sortee.html#cb13-5" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="sortee.html#cb13-6" tabindex="-1"></a><span class="co"># Example data: 40 caterpillar counts (use your own data here)</span></span>
+<span id="cb13-7"><a href="sortee.html#cb13-7" tabindex="-1"></a>counts <span class="op">=</span> rng.poisson(lam<span class="op">=</span><span class="dv">5</span>, size<span class="op">=</span><span class="dv">40</span>)</span>
+<span id="cb13-8"><a href="sortee.html#cb13-8" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="sortee.html#cb13-9" tabindex="-1"></a>boot_means <span class="op">=</span> [rng.choice(counts, size<span class="op">=</span>counts.size, replace<span class="op">=</span><span class="va">True</span>).mean()</span>
+<span id="cb13-10"><a href="sortee.html#cb13-10" tabindex="-1"></a>              <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1000</span>)]</span>
+<span id="cb13-11"><a href="sortee.html#cb13-11" tabindex="-1"></a><span class="bu">print</span>(numpy.quantile(boot_means, [<span class="fl">0.025</span>, <span class="fl">0.975</span>]))</span>
+<span id="cb13-12"><a href="sortee.html#cb13-12" tabindex="-1"></a><span class="co"># [3.775 4.925]   (NumPy 2.0.2)</span></span></code></pre></div>
+<p>In Python, <code>random.seed()</code> only affects the built-in <code>random</code> module. NumPy
+(and libraries built on it) uses its own generator, so seed that too, as above.</p>
+<p>The same seed can give different numbers in a different software version, as
+with R’s <code><a href="https://rdrr.io/r/base/sample.html">sample()</a></code> after v3.6.0, so record the versions in the README.</p>
+</div>
 <p><strong>Computationally expensive or proprietary analyses.</strong> If code needs
 specialist hardware, takes a very long time or depends on proprietary software
 such as ASReml, full computational reproducibility cannot be assessed. In those
