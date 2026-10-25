@@ -79,6 +79,12 @@ error**. Every other error is the author's to fix, because it is not the data
 editor's job to make your code run.
 :::
 
+::: {.tada-wiki}
+This differs in emphasis from TADA, which asks authors to remove absolute paths
+altogether. The leniency is for the editor, not permission for authors: use
+relative paths anyway (see [Transferable](#transferable-paths)).
+:::
+
 **Stage 6, results reproduce.** In most cases exact reproducibility is expected,
 so the code should give the same number as the manuscript. If a mismatch has
 one of the following legitimate causes, say so in the metadata:

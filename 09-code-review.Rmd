@@ -86,24 +86,35 @@ describe a generalised linear model with Poisson error and the code fits a
 Gaussian one, the review has to pick that up.
 
 **Software and package versions.** At minimum, list the packages central to the
-analysis or visualisation, with version numbers, somewhere in the manuscript. In
-R you can get these with `citation()`; in Python, with `setuptools`. A full list
-of everything used, including packages for cleaning and tidying, can go
-elsewhere, such as an associated `.R` or `.py` file. A `session_info.txt` from
-`sessionInfo()` (see [Documented](#documented-readme)) or, if you use an
-environment manager, its lockfile (`renv.lock` or `conda-lock`) also works.
+analysis or visualisation, with version numbers, somewhere in the manuscript, as
+well as in the README (see [Documented](#documented-readme)). Our code review
+paper suggests `citation()` in R, which usually includes the version, and
+`setuptools` in Python. A full list of everything used, including packages for
+cleaning and tidying, can go elsewhere, such as an associated `.R` or `.py`
+file. A `session_info.txt` from `sessionInfo()` (see
+[Documented](#documented-readme)) or, if you use an environment manager, its
+lockfile (`renv.lock` or `conda-lock`) also works.
+
+::: {.tada-wiki}
+`packageVersion()` in R and the `session-info` package in Python give versions
+directly.
+:::
 
 This is more than bookkeeping. If a package version is later found to contain a
 bug, you can identify the papers that depend on it.
 
-**Environment management** also helps. It is beyond TADA's minimum standard
-(see [Beyond TADA](#transferable-beyond)), but worth using where you can.
-Packages such as **`renv`**
+**Environment management** also helps. Packages such as **`renv`**
 ([Ushey & Wickham 2023]{.tada-cite data-key="ushey-2023"}), which replaces `packrat` ([Ushey et al. 2022]{.tada-cite data-key="ushey-2022"}), and
 **`groundhog`** ([Simonsohn & Gruson 2023]{.tada-cite data-key="simonsohn-2023"}) in R, or **`poetry`** ([Eustace 2023]{.tada-cite data-key="eustace-2023"})
 and **`pipenv`** ([Pipenv Maintainer Team 2023]{.tada-cite data-key="pipenv-2023"}) in Python, help make the
 environment reproducible and let you load specific package versions.
 Containerisation with **Docker** ([Boettiger 2015]{.tada-cite data-key="boettiger-2015"}) is another option.
+
+::: {.tada-wiki}
+The TADA paper treats environment managers and containers as beyond its minimum
+standard (see [Beyond TADA](#transferable-beyond)): worth using, but not
+required.
+:::
 
 ### Run {.unlisted .unnumbered}
 
@@ -221,6 +232,14 @@ should not differ significantly from each other. With stochastic MCMC methods, v
 expected to be much lower than variation within a chain, so the reproduced value
 should sit well within the reported credible interval.
 
+::: {.tada-wiki}
+The SORTEE guidelines are stricter than this. They expect exact reproduction in
+most cases, treat any unexplained deviation as a failure, and allow a tolerance
+only when the code metadata says why results may differ (Stage 6; see
+[The SORTEE guidelines](#sortee-common-failures)). So when you share code, set
+seeds and say in the README where, and why, results might not match exactly.
+:::
+
 :::
 
 ## Writing reviewable code {#review-reviewable}
@@ -232,10 +251,16 @@ practices ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}):
    `package.module.function()` in Python.
 2. **Use relative file paths**, for example the `here` package
    ([Müller & Bryan 2020]{.tada-cite data-key="muller-bryan-2020"}), preferably with an R project file if you use R and
-   RStudio, or a virtual environment in Python.
+   RStudio, or in a virtual environment if you use Python.
 3. **Remove redundant packages.**
 4. **Write analysis code with clear subheadings, intuitive comments and
    easy-to-understand object names.**
+
+::: {.tada-wiki}
+In Python, `pyprojroot` is the counterpart to `here` (see
+[Transferable](#transferable-paths)). A virtual environment keeps the project's
+packages separate, but it does not make file paths relative on its own.
+:::
 
 For style, **`styler`** ([Müller & Walthert 2020]{.tada-cite data-key="muller-walthert-2020"}) reformats R code to a
 standard style in one command, while **`pycodestyle`** ([Rocholl 2022]{.tada-cite data-key="rocholl-2022"}) checks
@@ -329,11 +354,17 @@ that the code is as reported, and for the journal to make sure **at least one**
 reviewer has checked the code.
 
 *Double-blind review.* Anonymised data and code can be submitted directly to the
-journal, for example as a zip file, or uploaded to Figshare, OSF, GitHub or
-Dryad, which allow authors to provide an **anonymised link** for peer review.
-GitHub needs a separate anonymising service for this; see
-[Anonymising for double-blind review](#available-anonymous) for how each
-option works.
+journal, for example as a zip file, or uploaded to repositories such as
+Figshare, OSF, GitHub or Dryad, which let authors provide an **anonymised link**
+for peer review.
+
+::: {.tada-wiki}
+Zenodo also supports anonymised review links. GitHub does not on its own: use a
+separate service such as Anonymous GitHub. OSF projects are being made
+read-only, so use a link on a registration instead. See
+[Anonymising for double-blind review](#available-anonymous) for how each option
+works.
+:::
 
 ### Post-publication {.unlisted .unnumbered}
 

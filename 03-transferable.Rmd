@@ -72,8 +72,7 @@ have loaded.
 After
 
 ```r
-library(here)
-dat <- read.csv(here("data", "raw", "caterpillars_2024.csv"))
+dat <- read.csv(here::here("data", "raw", "caterpillars_2024.csv"))
 ```
 
 This works on any operating system and wherever the project folder sits, so
@@ -98,11 +97,9 @@ See <https://docs.posit.co/ide/user/ide/get-started/>.
 to the project directory, whatever the operating system:
 
 ```r
-library(here)
-
-raw     <- read.csv(here("data", "raw", "caterpillars_2024.csv"))
-clean   <- here("data", "processed", "caterpillars_clean.csv")
-figure  <- here("output", "figures", "fig3_abundance.png")
+raw     <- read.csv(here::here("data", "raw", "caterpillars_2024.csv"))
+clean   <- here::here("data", "processed", "caterpillars_clean.csv")
+figure  <- here::here("output", "figures", "fig3_abundance.png")
 ```
 
 **Use both.** We recommend RStudio projects and `here` together, because they
@@ -123,10 +120,10 @@ other people run your code on other systems.
 file paths relative to the project directory regardless of operating system:
 
 ```python
-from pyprojroot import here
-import pandas as pd
+import pandas
+import pyprojroot
 
-raw = pd.read_csv(here("data/raw/caterpillars_2024.csv"))
+raw = pandas.read_csv(pyprojroot.here("data/raw/caterpillars_2024.csv"))
 ```
 
 **Work inside the project directory.** If you run Python from within the
@@ -199,11 +196,12 @@ Try doing all of these to make the dog happy.
 
 - [ ] Every script has a standard extension for its language (`.R`, `.py`, `.cpp`, …)
 - [ ] No code is distributed only inside a `.pdf` or `.docx`
+- [ ] If the language has no standard file type, the file opens in a plain text editor
 - [ ] Data, code and materials are all inside a single project directory
 - [ ] No `setwd()` (R) or `os.chdir()` (Python) anywhere in the code
 - [ ] No absolute paths (`/Users/…`, `C:/…`, `~/Dropbox/…`)
 - [ ] Paths are built with `here()` / `pyprojroot`, or are relative to the project root
-- [ ] The project opens via `.Rproj` or a virtual environment, and this is stated in the README
+- [ ] The project opens via an `.Rproj` file, a virtual environment, or by opening the folder, and this is stated in the README
 - [ ] The project has been copied to a different folder, ideally on a different machine, and run successfully
 
 **Next:** [Available](#available), on getting the code archived with a DOI.

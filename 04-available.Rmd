@@ -67,7 +67,9 @@ not be open and accessible ([Pick et al. 2026]{.tada-cite data-key="pick-2026"})
 **DOI versioning.** On Zenodo, every update to the code gets a new DOI, and a base project-level
 DOI stays the same. Cite the **version-specific DOI** in your
 paper, because that is the version your results came from. Give the
-project-level DOI to someone who wants the latest version.
+project-level DOI to someone who wants the latest version. If the code changes
+during peer review, archive the revised code as a new version and update the
+DOI cited in the manuscript before publication.
 :::
 
 ## Cite the code in the manuscript {#available-cite}
@@ -206,7 +208,8 @@ Try doing all of these to make the dog happy.
 - [ ] The version-specific DOI corresponds to the code that produced the published results
 - [ ] The DOI is cited in the manuscript text **and** the reference list
 - [ ] Data and code are in the same archived project where possible; where not, each README points to the other
-- [ ] If developed on GitHub: a release was created and linked to Zenodo
+- [ ] If developed on GitHub: a release was created and linked to Zenodo or Figshare
+- [ ] Nothing exists only as supplementary material attached to the article
 - [ ] Any restricted data have a documented access route
 - [ ] For double-blind review: an anonymised copy or anonymous link is available, and the files themselves have been checked for names, emails and personal file paths
 

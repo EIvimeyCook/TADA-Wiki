@@ -219,7 +219,7 @@ Try doing all of these to make the dog happy.
 - [ ] Chunks that produce results signpost the manuscript location (figure, table, section)
 - [ ] Collapsible section markers (`#####` / `#----` / `#%%`) are used in long scripts
 - [ ] Object names are interpretable by someone who did not write the code
-- [ ] Packages are called explicitly by namespace where it aids clarity
+- [ ] Packages are called explicitly by namespace (`package::function()`)
 - [ ] Unused `library()` / `import` calls have been removed
 - [ ] If using a notebook: it has been restarted and run top to bottom before archiving
 - [ ] If using Quarto or RMarkdown: the **source** file is archived, not only the rendered output

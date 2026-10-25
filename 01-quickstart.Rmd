@@ -6,8 +6,9 @@ folder into an archive that someone else can download, open and run.
 
 ::: {.tada-key}
 Work through the project roughly in this order: fix the **paths and file
-types**, **annotate** the scripts, write the **README**, and ask a colleague to
-run the whole thing. Then **archive** it and get a DOI. Archiving last means the
+types**, **annotate** the scripts (ideally you have been annotating as you go;
+see [Annotated](#annotated-asyougo)), write the **README**, and ask a colleague
+to run the whole thing. Then **archive** it and get a DOI. Archiving last means the
 DOI points to the version that has already been checked.
 :::
 
@@ -46,7 +47,7 @@ Condensed from the TADA guidelines.
 
 - [ ] Code is deposited in an immutable repository that mints a persistent identifier (Zenodo, Figshare, …)
 - [ ] The DOI is **cited in the manuscript text and reference list**
-- [ ] If the code was developed on GitHub, a release has been created and linked to Zenodo, since GitHub does not produce DOIs
+- [ ] If the code was developed on GitHub, a release has been created and linked to Zenodo or Figshare, since GitHub does not produce DOIs
 
 **Documented** — [full chapter](#documented)
 
@@ -57,6 +58,7 @@ Condensed from the TADA guidelines.
 - [ ] It says where the data are, ideally with their own DOI
 - [ ] It says what each file is, what order to run things in, what the code needs and what it produces
 - [ ] It flags anything slow or resource-hungry
+- [ ] It says whether and how large language models were used to write the code (SORTEE; not a TADA requirement)
 - [ ] A licence is actually attached to the deposit
 
 **Annotated** — [full chapter](#annotated)

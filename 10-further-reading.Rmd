@@ -214,7 +214,7 @@ A curated list of pipeline tools: <https://github.com/pditommaso/awesome-pipelin
 | Figshare | <https://figshare.com/> |
 | Dryad | <https://datadryad.org/> |
 | Software Heritage | <https://www.softwareheritage.org/> |
-| Open Science Framework | <https://osf.io/> |
+| Open Science Framework (for review links, not archiving; see [Available](#available-where)) | <https://osf.io/> |
 | Choosing a repository ([Harvard Longwood Medical Area Research Data Management Working Group 2023]{.tada-cite data-key="harvard-2023"}) | <https://doi.org/10.5281/zenodo.10651775> |
 | RStudio projects: getting started | <https://docs.posit.co/ide/user/ide/get-started/> |
 

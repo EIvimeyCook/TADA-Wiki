@@ -114,12 +114,14 @@ All verdicts below are from the SORTEE guidelines ([Pick et al. 2026]{.tada-cite
 | `.sps` and other proprietary formats | Not interoperable; do not facilitate reuse. |
 | `.pdf`, `.docx` | **Never.** Prone to error when copy-pasted, and cannot be readily imported into statistical programs. |
 
-::: {.tada-note}
+::: {.tada-wiki}
 SPSS `.sps` files appear here as unsuitable, yet [Transferable](#transferable-filetype)
 gives them as an example of a file type that passes. Both are right, because
 they judge different things. This table is about **data** files, where `.sps` is
 a proprietary format. The Transferable test is about **code** files, where an
-`.sps` syntax file can at least be opened in a text editor.
+`.sps` syntax file can at least be opened in a text editor. `.txt` is the
+reverse: a preferred format for data, but code saved as `.txt` may not run in
+an IDE until it is re-saved with its language's extension.
 :::
 
 Where there is no alternative, as with data collected by proprietary software,

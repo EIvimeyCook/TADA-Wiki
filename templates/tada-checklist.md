@@ -30,7 +30,7 @@ alteration, on a different computer and operating system.*
 - [ ] The version-specific identifier matches the code that produced the published results
 - [ ] The identifier is cited in the manuscript text **and** the reference list
 - [ ] Code and data are in the same archived project where possible
-- [ ] If developed on GitHub: a release was created and linked to Zenodo
+- [ ] If developed on GitHub: a release was created and linked to Zenodo or Figshare
 - [ ] Nothing exists only as supplementary material attached to the article
 - [ ] Any restricted data have a documented access route
 - [ ] For double-blind review: an anonymised copy or anonymous link exists, and the files themselves have been checked for names, emails and personal file paths
@@ -68,6 +68,7 @@ descriptive text.*
 - [ ] Chunks producing results signpost the manuscript location (figure, table, section)
 - [ ] Collapsible section markers used in long scripts (`#####` / `#----` in RStudio, `#%%` in VS Code/Spyder)
 - [ ] Object names are interpretable by someone who did not write the code
+- [ ] Packages are called explicitly by namespace (`package::function()`)
 - [ ] Unused `library()` / `import` calls removed
 - [ ] Notebooks were restarted and run top to bottom before archiving
 - [ ] For Quarto/RMarkdown: the **source** file is archived, not only rendered output

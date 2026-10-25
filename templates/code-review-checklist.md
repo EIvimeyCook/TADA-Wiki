@@ -31,8 +31,9 @@ From the TADA-Wiki, following Ivimey-Cook et al. (2023),
 - [ ] Nothing substantive in the code is missing from the methods
 - [ ] Model structures match (family, link, random effects, fixed effects)
 - [ ] Filtering and exclusion criteria match what the paper reports
-- [ ] Software and key packages, with versions, are stated
-      (`citation()` in R; `setuptools` in Python)
+- [ ] Software and key packages, with versions, are stated in the manuscript
+      and the README (`packageVersion()` or `sessionInfo()` in R; the
+      `session-info` package in Python)
 
 Notes: ____________________________________________________________
 

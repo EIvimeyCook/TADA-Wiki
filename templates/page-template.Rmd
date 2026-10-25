@@ -41,17 +41,16 @@ because only one pane is visible at a time.
 
 ```r
 # Illustrative only: chunks are not executed at build time.
-library(here)
-dat <- read.csv(here("data", "raw", "example.csv"))
+dat <- read.csv(here::here("data", "raw", "example.csv"))
 ```
 
 ### Python {.unlisted .unnumbered}
 
 ```python
-from pyprojroot import here
-import pandas as pd
+import pandas
+import pyprojroot
 
-dat = pd.read_csv(here("data/raw/example.csv"))
+dat = pandas.read_csv(pyprojroot.here("data/raw/example.csv"))
 ```
 
 :::
@@ -76,7 +75,7 @@ One sentence on why this breaks.
 After
 
 ```r
-library(here)
+dat <- read.csv(here::here("data", "raw", "example.csv"))
 ```
 
 One sentence on why this works.

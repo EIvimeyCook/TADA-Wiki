@@ -27,7 +27,10 @@ version of R you need or where the data live.
 ## The README {#documented-readme}
 
 You can provide a **combined README** covering both code and data metadata, or
-**two separate READMEs**, one for code and one for data.
+**two separate READMEs**, one for code and one for data. Metadata for data
+should describe the data files, the variables and their units of measurement
+([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}); see
+[Data & code sharing](#sharing-metadata) for the full list.
 
 ### What must be in it {.unlisted .unnumbered}
 
@@ -51,7 +54,16 @@ paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}):
 Versions matter because different software or package versions can produce
 different results. For example, base R's `sample()` changed after v3.6.0, and
 dplyr's `distinct()` function changed after v0.4.0, each giving different results
-([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}).
+([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}). List
+versions in the README, and also state the packages central to the analysis,
+with versions, in the manuscript itself
+([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}; see
+[Code review](#review-four-rs)).
+
+The SORTEE guidelines add one more field to the README: say whether and how large language
+models were used in code generation
+([Pick et al. 2026]{.tada-cite data-key="pick-2026"}; see
+[Data & code sharing](#sharing-metadata)).
 
 ::: {.tada-wiki}
 `sessionInfo()` (R) and `session_info.show()` (Python, from the `session-info`
@@ -92,6 +104,13 @@ Example Research Council, grant ABC/123456/1.
 ## Data
 Archived with this project. If archived separately:
 https://doi.org/10.5061/dryad.000000 (`caterpillars_2024.csv`).
+Collected May–August 2022–2024 at three woodland sites in Norfolk, UK.
+
+Variables in `caterpillars_2024.csv`:
+  site      Site ID (W1–W3)
+  habitat   Woodland type (mixed, conifer)
+  year      Survey year (2022–2024)
+  n         Caterpillar count per 30-minute survey (count)
 
 ## Licence
 MIT (see LICENSE). Data are released under CC0.
@@ -102,6 +121,8 @@ R v4.5.2. Full session details in `session_info.txt`.
 Key packages:
   - here        v1.0.1   (relative file paths)
   - ggplot2     v4.0.2   (figures)
+
+LLM use: none.
 
 ## How to run
 Open `caterpillars.Rproj` in RStudio, then run the scripts in order:
@@ -252,6 +273,12 @@ and state one. For **code** they state a preference: *"We suggest using permissi
 possible, for example, MIT, BSD 2-Clause, GNU, and Apache"* (Guideline 3.2).
 :::
 
+::: {.tada-wiki}
+If you choose a GNU licence such as the GPL, note that it is a copyleft
+licence: anything built from your code must use the same licence if it is
+shared (see *Copyleft* above).
+:::
+
 ## Checklist {#documented-checklist}
 
 :::: {.tada-checklist-head}
@@ -276,6 +303,8 @@ Try doing all of these to make the dog happy.
 - [ ] It states what the code needs as input and what it produces
 - [ ] A licence is chosen, stated in the README, and attached (file or repository setting)
 - [ ] Data and code licences are each appropriate to what they cover
+- [ ] If data are included, every variable is described, with units
+- [ ] Any use of large language models in code generation is disclosed (SORTEE)
 - [ ] For double-blind review, an anonymised version of the README exists
 
 **Next:** [Annotated](#annotated), on comments inside the code.

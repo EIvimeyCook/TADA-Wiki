@@ -168,8 +168,7 @@ have loaded.</p>
 <div class="tada-after">
 <p>After</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span></span>
-<span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"caterpillars_2024.csv"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"caterpillars_2024.csv"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>This works on any operating system and wherever the project folder sits, so
 anyone who downloads the project can load the data.</p>
 </div>
@@ -186,14 +185,12 @@ anyone who downloads the project can load the data.</p>
 the project, RStudio sets the working directory to the project folder, so you
 never need <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code>.
 See <a href="https://docs.posit.co/ide/user/ide/get-started/" class="uri">https://docs.posit.co/ide/user/ide/get-started/</a>.</p>
-<p><strong>Use the <code>here</code> package</strong> (<span class="tada-cite" data-key="muller-bryan-2020">Müller &amp; Bryan 2020</span>). <code><a href="https://here.r-lib.org/reference/here.html">here()</a></code> builds paths relative
+<p><strong>Use the <code>here</code> package</strong> (<span class="tada-cite" data-key="muller-bryan-2020">Müller &amp; Bryan 2020</span>). <code>here()</code> builds paths relative
 to the project directory, whatever the operating system:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">raw</span>     <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"caterpillars_2024.csv"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">clean</span>   <span class="op">&lt;-</span> <span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"processed"</span>, <span class="st">"caterpillars_clean.csv"</span><span class="op">)</span></span>
-<span><span class="va">figure</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"output"</span>, <span class="st">"figures"</span>, <span class="st">"fig3_abundance.png"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">raw</span>     <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"caterpillars_2024.csv"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">clean</span>   <span class="op">&lt;-</span> <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"processed"</span>, <span class="st">"caterpillars_clean.csv"</span><span class="op">)</span></span>
+<span><span class="va">figure</span>  <span class="op">&lt;-</span> <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"output"</span>, <span class="st">"figures"</span>, <span class="st">"fig3_abundance.png"</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Use both.</strong> We recommend RStudio projects and <code>here</code> together, because they
 make code most transferable across operating systems (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>).</p>
 <p><strong>Without an IDE</strong>, launching R from inside the project directory does much the
@@ -209,10 +206,10 @@ other people run your code on other systems.</p>
 </h4>
 <p><strong>Use <code>pyprojroot</code></strong> (<span class="tada-cite" data-key="chen-2023">Chen 2023</span>), the Python counterpart to <code>here</code>, which builds
 file paths relative to the project directory regardless of operating system:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="transferable.html#cb5-1" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here</span>
-<span id="cb5-2"><a href="transferable.html#cb5-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="transferable.html#cb5-1" tabindex="-1"></a><span class="im">import</span> pandas</span>
+<span id="cb5-2"><a href="transferable.html#cb5-2" tabindex="-1"></a><span class="im">import</span> pyprojroot</span>
 <span id="cb5-3"><a href="transferable.html#cb5-3" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="transferable.html#cb5-4" tabindex="-1"></a>raw <span class="op">=</span> pd.read_csv(here(<span class="st">"data/raw/caterpillars_2024.csv"</span>))</span></code></pre></div>
+<span id="cb5-4"><a href="transferable.html#cb5-4" tabindex="-1"></a>raw <span class="op">=</span> pandas.read_csv(pyprojroot.here(<span class="st">"data/raw/caterpillars_2024.csv"</span>))</span></code></pre></div>
 <p><strong>Work inside the project directory.</strong> If you run Python from within the
 project folder, you do not need local file paths.</p>
 <div class="tada-warn">
@@ -279,11 +276,12 @@ on their own.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Every script has a standard extension for its language (<code>.R</code>, <code>.py</code>, <code>.cpp</code>, …)</label></li>
 <li><label><input type="checkbox">No code is distributed only inside a <code>.pdf</code> or <code>.docx</code></label></li>
+<li><label><input type="checkbox">If the language has no standard file type, the file opens in a plain text editor</label></li>
 <li><label><input type="checkbox">Data, code and materials are all inside a single project directory</label></li>
 <li><label><input type="checkbox">No <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> (R) or <code>os.chdir()</code> (Python) anywhere in the code</label></li>
 <li><label><input type="checkbox">No absolute paths (<code>/Users/…</code>, <code>C:/…</code>, <code>~/Dropbox/…</code>)</label></li>
-<li><label><input type="checkbox">Paths are built with <code><a href="https://here.r-lib.org/reference/here.html">here()</a></code> / <code>pyprojroot</code>, or are relative to the project root</label></li>
-<li><label><input type="checkbox">The project opens via <code>.Rproj</code> or a virtual environment, and this is stated in the README</label></li>
+<li><label><input type="checkbox">Paths are built with <code>here()</code> / <code>pyprojroot</code>, or are relative to the project root</label></li>
+<li><label><input type="checkbox">The project opens via an <code>.Rproj</code> file, a virtual environment, or by opening the folder, and this is stated in the README</label></li>
 <li><label><input type="checkbox">The project has been copied to a different folder, ideally on a different machine, and run successfully</label></li>
 </ul>
 <p><strong>Next:</strong> <a href="available.html#available">Available</a>, on getting the code archived with a DOI.</p>
@@ -320,7 +318,7 @@ on their own.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 24 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 25 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

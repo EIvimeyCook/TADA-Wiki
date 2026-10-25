@@ -131,7 +131,10 @@ version of R you need or where the data live.</p>
 <span class="header-section-number">5.1</span> The README<a class="anchor" aria-label="anchor" href="#documented-readme"><i class="fas fa-link"></i></a>
 </h2>
 <p>You can provide a <strong>combined README</strong> covering both code and data metadata, or
-<strong>two separate READMEs</strong>, one for code and one for data.</p>
+<strong>two separate READMEs</strong>, one for code and one for data. Metadata for data
+should describe the data files, the variables and their units of measurement
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>); see
+<a href="data-sharing.html#sharing-metadata">Data &amp; code sharing</a> for the full list.</p>
 <div id="what-must-be-in-it" class="section level3 unlisted unnumbered">
 <h3>What must be in it<a class="anchor" aria-label="anchor" href="#what-must-be-in-it"><i class="fas fa-link"></i></a>
 </h3>
@@ -197,7 +200,15 @@ paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et a
 <p>Versions matter because different software or package versions can produce
 different results. For example, base R’s <code><a href="https://rdrr.io/r/base/sample.html">sample()</a></code> changed after v3.6.0, and
 dplyr’s <code>distinct()</code> function changed after v0.4.0, each giving different results
-(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>).</p>
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>). List
+versions in the README, and also state the packages central to the analysis,
+with versions, in the manuscript itself
+(<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>; see
+<a href="code-review.html#review-four-rs">Code review</a>).</p>
+<p>The SORTEE guidelines add one more field to the README: say whether and how large language
+models were used in code generation
+(<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>; see
+<a href="data-sharing.html#sharing-metadata">Data &amp; code sharing</a>).</p>
 <div class="tada-wiki">
 <p><code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> (R) and <code>session_info.show()</code> (Python, from the <code>session-info</code>
 package) list every loaded package and its version. Run it at the end of your final
@@ -235,36 +246,45 @@ software versions.</p>
 <span id="cb6-19"><a href="documented.html#cb6-19" tabindex="-1"></a><span class="fu">## Data</span></span>
 <span id="cb6-20"><a href="documented.html#cb6-20" tabindex="-1"></a>Archived with this project. If archived separately:</span>
 <span id="cb6-21"><a href="documented.html#cb6-21" tabindex="-1"></a>https://doi.org/10.5061/dryad.000000 (<span class="in">`caterpillars_2024.csv`</span>).</span>
-<span id="cb6-22"><a href="documented.html#cb6-22" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="documented.html#cb6-23" tabindex="-1"></a><span class="fu">## Licence</span></span>
-<span id="cb6-24"><a href="documented.html#cb6-24" tabindex="-1"></a>MIT (see LICENSE). Data are released under CC0.</span>
-<span id="cb6-25"><a href="documented.html#cb6-25" tabindex="-1"></a></span>
-<span id="cb6-26"><a href="documented.html#cb6-26" tabindex="-1"></a><span class="fu">## Software environment</span></span>
-<span id="cb6-27"><a href="documented.html#cb6-27" tabindex="-1"></a>R v4.5.2. Full session details in <span class="in">`session_info.txt`</span>.</span>
-<span id="cb6-28"><a href="documented.html#cb6-28" tabindex="-1"></a></span>
-<span id="cb6-29"><a href="documented.html#cb6-29" tabindex="-1"></a>Key packages:</span>
-<span id="cb6-30"><a href="documented.html#cb6-30" tabindex="-1"></a><span class="ss">  - </span>here        v1.0.1   (relative file paths)</span>
-<span id="cb6-31"><a href="documented.html#cb6-31" tabindex="-1"></a><span class="ss">  - </span>ggplot2     v4.0.2   (figures)</span>
+<span id="cb6-22"><a href="documented.html#cb6-22" tabindex="-1"></a>Collected May–August 2022–2024 at three woodland sites in Norfolk, UK.</span>
+<span id="cb6-23"><a href="documented.html#cb6-23" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="documented.html#cb6-24" tabindex="-1"></a>Variables in <span class="in">`caterpillars_2024.csv`</span>:</span>
+<span id="cb6-25"><a href="documented.html#cb6-25" tabindex="-1"></a>  site      Site ID (W1–W3)</span>
+<span id="cb6-26"><a href="documented.html#cb6-26" tabindex="-1"></a>  habitat   Woodland type (mixed, conifer)</span>
+<span id="cb6-27"><a href="documented.html#cb6-27" tabindex="-1"></a>  year      Survey year (2022–2024)</span>
+<span id="cb6-28"><a href="documented.html#cb6-28" tabindex="-1"></a>  n         Caterpillar count per 30-minute survey (count)</span>
+<span id="cb6-29"><a href="documented.html#cb6-29" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="documented.html#cb6-30" tabindex="-1"></a><span class="fu">## Licence</span></span>
+<span id="cb6-31"><a href="documented.html#cb6-31" tabindex="-1"></a>MIT (see LICENSE). Data are released under CC0.</span>
 <span id="cb6-32"><a href="documented.html#cb6-32" tabindex="-1"></a></span>
-<span id="cb6-33"><a href="documented.html#cb6-33" tabindex="-1"></a><span class="fu">## How to run</span></span>
-<span id="cb6-34"><a href="documented.html#cb6-34" tabindex="-1"></a>Open <span class="in">`caterpillars.Rproj`</span> in RStudio, then run the scripts in order:</span>
+<span id="cb6-33"><a href="documented.html#cb6-33" tabindex="-1"></a><span class="fu">## Software environment</span></span>
+<span id="cb6-34"><a href="documented.html#cb6-34" tabindex="-1"></a>R v4.5.2. Full session details in <span class="in">`session_info.txt`</span>.</span>
 <span id="cb6-35"><a href="documented.html#cb6-35" tabindex="-1"></a></span>
-<span id="cb6-36"><a href="documented.html#cb6-36" tabindex="-1"></a><span class="ss">  1. </span><span class="in">`R/01_clean_data.R`</span>    reads data/raw/caterpillars_2024.csv</span>
-<span id="cb6-37"><a href="documented.html#cb6-37" tabindex="-1"></a>                            writes data/processed/caterpillars_clean.csv</span>
-<span id="cb6-38"><a href="documented.html#cb6-38" tabindex="-1"></a><span class="ss">  2. </span><span class="in">`R/02_fit_models.R`</span>    fits the models reported in Table 2</span>
-<span id="cb6-39"><a href="documented.html#cb6-39" tabindex="-1"></a>                            writes output/models/*.rds   (~25 min)</span>
-<span id="cb6-40"><a href="documented.html#cb6-40" tabindex="-1"></a><span class="ss">  3. </span><span class="in">`R/03_make_figures.R`</span>  produces Figures 2 and 3</span>
-<span id="cb6-41"><a href="documented.html#cb6-41" tabindex="-1"></a>                            writes output/figures/*.png</span>
-<span id="cb6-42"><a href="documented.html#cb6-42" tabindex="-1"></a></span>
-<span id="cb6-43"><a href="documented.html#cb6-43" tabindex="-1"></a>Total runtime approximately 30 minutes on a 2023 MacBook Pro. Script 02 is</span>
-<span id="cb6-44"><a href="documented.html#cb6-44" tabindex="-1"></a>the slow step; its outputs are saved so 03 can be re-run on its own.</span>
-<span id="cb6-45"><a href="documented.html#cb6-45" tabindex="-1"></a></span>
-<span id="cb6-46"><a href="documented.html#cb6-46" tabindex="-1"></a><span class="fu">## Files</span></span>
-<span id="cb6-47"><a href="documented.html#cb6-47" tabindex="-1"></a>  data/raw/         Unmodified field data. Never written to by any script.</span>
-<span id="cb6-48"><a href="documented.html#cb6-48" tabindex="-1"></a>  data/processed/   Generated by script 01. Safe to delete and regenerate.</span>
-<span id="cb6-49"><a href="documented.html#cb6-49" tabindex="-1"></a>  R/                Analysis scripts, numbered in run order.</span>
-<span id="cb6-50"><a href="documented.html#cb6-50" tabindex="-1"></a>  functions/        Helper functions sourced by the scripts.</span>
-<span id="cb6-51"><a href="documented.html#cb6-51" tabindex="-1"></a>  output/           Figures and saved model objects.</span></code></pre></div>
+<span id="cb6-36"><a href="documented.html#cb6-36" tabindex="-1"></a>Key packages:</span>
+<span id="cb6-37"><a href="documented.html#cb6-37" tabindex="-1"></a><span class="ss">  - </span>here        v1.0.1   (relative file paths)</span>
+<span id="cb6-38"><a href="documented.html#cb6-38" tabindex="-1"></a><span class="ss">  - </span>ggplot2     v4.0.2   (figures)</span>
+<span id="cb6-39"><a href="documented.html#cb6-39" tabindex="-1"></a></span>
+<span id="cb6-40"><a href="documented.html#cb6-40" tabindex="-1"></a>LLM use: none.</span>
+<span id="cb6-41"><a href="documented.html#cb6-41" tabindex="-1"></a></span>
+<span id="cb6-42"><a href="documented.html#cb6-42" tabindex="-1"></a><span class="fu">## How to run</span></span>
+<span id="cb6-43"><a href="documented.html#cb6-43" tabindex="-1"></a>Open <span class="in">`caterpillars.Rproj`</span> in RStudio, then run the scripts in order:</span>
+<span id="cb6-44"><a href="documented.html#cb6-44" tabindex="-1"></a></span>
+<span id="cb6-45"><a href="documented.html#cb6-45" tabindex="-1"></a><span class="ss">  1. </span><span class="in">`R/01_clean_data.R`</span>    reads data/raw/caterpillars_2024.csv</span>
+<span id="cb6-46"><a href="documented.html#cb6-46" tabindex="-1"></a>                            writes data/processed/caterpillars_clean.csv</span>
+<span id="cb6-47"><a href="documented.html#cb6-47" tabindex="-1"></a><span class="ss">  2. </span><span class="in">`R/02_fit_models.R`</span>    fits the models reported in Table 2</span>
+<span id="cb6-48"><a href="documented.html#cb6-48" tabindex="-1"></a>                            writes output/models/*.rds   (~25 min)</span>
+<span id="cb6-49"><a href="documented.html#cb6-49" tabindex="-1"></a><span class="ss">  3. </span><span class="in">`R/03_make_figures.R`</span>  produces Figures 2 and 3</span>
+<span id="cb6-50"><a href="documented.html#cb6-50" tabindex="-1"></a>                            writes output/figures/*.png</span>
+<span id="cb6-51"><a href="documented.html#cb6-51" tabindex="-1"></a></span>
+<span id="cb6-52"><a href="documented.html#cb6-52" tabindex="-1"></a>Total runtime approximately 30 minutes on a 2023 MacBook Pro. Script 02 is</span>
+<span id="cb6-53"><a href="documented.html#cb6-53" tabindex="-1"></a>the slow step; its outputs are saved so 03 can be re-run on its own.</span>
+<span id="cb6-54"><a href="documented.html#cb6-54" tabindex="-1"></a></span>
+<span id="cb6-55"><a href="documented.html#cb6-55" tabindex="-1"></a><span class="fu">## Files</span></span>
+<span id="cb6-56"><a href="documented.html#cb6-56" tabindex="-1"></a>  data/raw/         Unmodified field data. Never written to by any script.</span>
+<span id="cb6-57"><a href="documented.html#cb6-57" tabindex="-1"></a>  data/processed/   Generated by script 01. Safe to delete and regenerate.</span>
+<span id="cb6-58"><a href="documented.html#cb6-58" tabindex="-1"></a>  R/                Analysis scripts, numbered in run order.</span>
+<span id="cb6-59"><a href="documented.html#cb6-59" tabindex="-1"></a>  functions/        Helper functions sourced by the scripts.</span>
+<span id="cb6-60"><a href="documented.html#cb6-60" tabindex="-1"></a>  output/           Figures and saved model objects.</span></code></pre></div>
 <div class="tada-note">
 <p>That README gives the total runtime, says which step is slow and whether its
 output is cached, which script makes which figure, and that <code>data/processed/</code>
@@ -418,6 +438,11 @@ policy is the case to watch for.</p>
 and state one. For <strong>code</strong> they state a preference: <em>“We suggest using permissive code licences whenever
 possible, for example, MIT, BSD 2-Clause, GNU, and Apache”</em> (Guideline 3.2).</p>
 </div>
+<div class="tada-wiki">
+<p>If you choose a GNU licence such as the GPL, note that it is a copyleft
+licence: anything built from your code must use the same licence if it is
+shared (see <em>Copyleft</em> above).</p>
+</div>
 </div>
 </div>
 <div id="documented-checklist" class="section level2" number="5.3">
@@ -444,6 +469,8 @@ possible, for example, MIT, BSD 2-Clause, GNU, and Apache”</em> (Guideline 3.2
 <li><label><input type="checkbox">It states what the code needs as input and what it produces</label></li>
 <li><label><input type="checkbox">A licence is chosen, stated in the README, and attached (file or repository setting)</label></li>
 <li><label><input type="checkbox">Data and code licences are each appropriate to what they cover</label></li>
+<li><label><input type="checkbox">If data are included, every variable is described, with units</label></li>
+<li><label><input type="checkbox">Any use of large language models in code generation is disclosed (SORTEE)</label></li>
 <li><label><input type="checkbox">For double-blind review, an anonymised version of the README exists</label></li>
 </ul>
 <p><strong>Next:</strong> <a href="annotated.html#annotated">Annotated</a>, on comments inside the code.</p>
@@ -488,7 +515,7 @@ possible, for example, MIT, BSD 2-Clause, GNU, and Apache”</em> (Guideline 3.2
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 24 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 25 October 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
