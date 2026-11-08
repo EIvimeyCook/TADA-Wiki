@@ -30,8 +30,12 @@ Human-readable summary: https://creativecommons.org/licenses/by/4.0/
 
 Scope and exceptions
 
-  * The code in this repository (render.R, assets/, templates/) is licensed
-    separately under the MIT License — see LICENSE.
+  * The code in this repository (render.R, the CSS, JavaScript and HTML files
+    in assets/, tools/ and templates/) is licensed separately under the MIT
+    License — see LICENSE.
+
+  * Figures reproduced from the source papers (assets/figures/fig-*.png) remain
+    under those papers' licences.
 
   * Quotations from and summaries of these papers within the wiki text are
     attributed in the References chapter.

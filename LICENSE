@@ -2,10 +2,10 @@ MIT License
 
 Copyright (c) 2026 Edward R. Ivimey-Cook
 
-Applies to the code in this repository: render.R, assets/style.css,
-assets/tada.js, assets/head.html, assets/foot.html, and the files in
-templates/. The prose content of the wiki chapters is licensed separately
-under CC BY 4.0 — see LICENSE-CONTENT.
+Applies to the code in this repository: render.R, the CSS, JavaScript and
+HTML files in assets/, tools/check_colours.py, and the files in templates/.
+The prose content of the wiki chapters is licensed separately under CC BY 4.0
+— see LICENSE-data.md.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

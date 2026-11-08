@@ -29,9 +29,9 @@ control, and code review.
 
 The wiki exists because the gap between policy and practice is wide. In ecology
 and evolutionary biology, 88% of journals had code-sharing policies by 2024, yet
-only 5–35% of articles share code, and of the code that is shared, 74% of
-archived R files in one large study failed to run without error. TADA sets a
-**minimum standard** that closes most of that gap, and is achievable by
+only 5–35% of articles share code. Shared code often does not run either: of
+over 9,000 R files archived in the Harvard Dataverse, 74% failed to run without
+error. TADA sets a **minimum standard** aimed at that gap, and is achievable by
 researchers at any level of coding experience.
 
 Read it at: <https://eivimeycook.github.io/TADA-Wiki/>
@@ -78,8 +78,9 @@ The wiki is a synthesis of three papers:
   of Evolutionary Biology 36: 1347–1356. <https://doi.org/10.1111/jeb.14230>
 
 Where the wiki extends beyond these papers, with worked examples, comparison
-tables, checklists and the reviewer's script, that material is shown in a
-**Wiki Tip** box rather than presented as a finding of the papers. That separation is
+tables, checklists and the reviewer's script, that material is the wiki's own
+rather than a finding of the papers. Practical advice of this kind is flagged in
+a **Wiki Tip** box, and claims from the papers are cited inline. That separation is
 the sourcing rule for contributors.
 
 Every claim taken from the source papers, or from other published work, is
@@ -121,10 +122,11 @@ Edward R. Ivimey-Cook — e.ivimeycook@gmail.com
 - **Code**, meaning the build script (`render.R`), the CSS, JavaScript and
   HTML includes in `assets/`, `tools/`, and the templates, under the
   [MIT License](LICENSE).
-- **Content**, meaning the wiki text in the `.Rmd` chapters, under
-  [CC BY 4.0](LICENSE-data.md).
+- **Content**, meaning the wiki text in the `.Rmd` chapters and the rendered
+  site in `docs/`, under [CC BY 4.0](LICENSE-data.md).
 
-Figures reproduced from the source papers remain under those papers' licences.
+Figures reproduced from the source papers (`assets/figures/fig-*.png`) remain
+under those papers' licences.
 The SORTEE guidelines paper is open access under CC BY 4.0.
 
 ## AI declaration
