@@ -261,8 +261,8 @@ much of Stage 1.</p>
 most common reasons code does not run</li>
 </ul>
 <div class="tada-note">
-<p>Data editors are told to be pragmatic about paths. An absolute path, or a way of
-specifying relative paths they do not know, <strong>should not</strong> be a reason to return
+<p>Data editors are told to be pragmatic about paths. An absolute path, or an
+unfamiliar way of specifying relative paths, <strong>should not</strong> be a reason to return
 the code if they can make it run with minor changes. It is logged as a <strong>minor
 error</strong>. Every other error is the author’s to fix, because it is not the data
 editor’s job to make your code run.</p>
@@ -295,8 +295,8 @@ used, flag it clearly and justify the version in the manuscript and metadata.</l
 <div class="tada-wiki">
 <p><strong>Setting a seed.</strong> Put it at the top of each section that can be run on its
 own, before anything random. Any whole number works; what matters is that it is
-written into the code. Both examples below run as they are and give the same
-interval every time.</p>
+written into the code. Each example runs as shown and gives a consistent
+interval on repeated runs.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">##### Bootstrap confidence interval for mean count (Table 2) #####</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">2024</span><span class="op">)</span></span>
@@ -321,7 +321,7 @@ interval every time.</p>
 <span id="cb13-11"><a href="sortee.html#cb13-11" tabindex="-1"></a><span class="bu">print</span>(numpy.quantile(boot_means, [<span class="fl">0.025</span>, <span class="fl">0.975</span>]))</span>
 <span id="cb13-12"><a href="sortee.html#cb13-12" tabindex="-1"></a><span class="co"># [3.775 4.925]   (NumPy 2.0.2)</span></span></code></pre></div>
 <p>In Python, <code>random.seed()</code> only affects the built-in <code>random</code> module. NumPy
-(and libraries built on it) uses its own generator, so seed that too, as above.</p>
+uses its own generator, so seed it separately, as above.</p>
 <p>The same seed can give different numbers in a different software version, as
 with R’s <code><a href="https://rdrr.io/r/base/sample.html">sample()</a></code> after v3.6.0, so record the versions in the README.</p>
 </div>
@@ -351,7 +351,7 @@ steps, along with intermediate data objects</li>
 <h2>
 <span class="header-section-number">8.4</span> Advice for authors<a class="anchor" aria-label="anchor" href="#sharing-authors"><i class="fas fa-link"></i></a>
 </h2>
-<p>The guidelines’ suggestions (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>):</p>
+<p>The guidelines suggest the following (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>):</p>
 <p><strong>1. Adhere to the guidelines from the beginning of the study.</strong> Making a
 project accessible and reproducible at the <em>end</em> is a lot of work. Create a
 clear directory structure and a README at the start, and update the metadata as
@@ -410,7 +410,7 @@ software, sensitive data or computationally expensive analyses.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 25 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 09 November 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

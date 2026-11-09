@@ -250,12 +250,12 @@ a dataset, the analysis is wrong but nothing errors (<span class="tada-cite" dat
 Errors like this can be <strong>conceptual</strong>, from misunderstanding the dataset, or
 <strong>programmatic</strong>, for example indexing columns by number and getting the order
 wrong.</p>
-<p>Some techniques help: <strong>indexing explicitly by column name</strong>, and <strong>unit
-testing</strong> any user-defined function, with <strong><code>testthat</code></strong> (<span class="tada-cite" data-key="wickham-2011">Wickham 2011</span>) in R and
+<p>Some techniques help: <strong>indexing explicitly by column name</strong> and <strong>unit
+testing</strong> any user-defined function with <strong><code>testthat</code></strong> (<span class="tada-cite" data-key="wickham-2011">Wickham 2011</span>) in R and
 <strong><code>pytest</code></strong> (<span class="tada-cite" data-key="okken-2022">Okken 2022</span>) in Python. But this type of error remains common and
 is <strong>extremely difficult to pick up without deep familiarity with the dataset
-and code</strong>. It is also thought to increase with the number of lines and the
-complexity of the code (<span class="tada-cite" data-key="lipow-1982">Lipow 1982</span>).</p>
+and code</strong>. The risk of these errors is also thought to increase with the number
+of lines and the complexity of the code (<span class="tada-cite" data-key="lipow-1982">Lipow 1982</span>).</p>
 <p>Checking reliability therefore means more than confirming that the code runs to
 completion: <strong>examine its intermediate outputs</strong> as well. <code><a href="https://rdrr.io/r/base/identical.html">identical()</a></code> in R and
 <code>numpy.array_equal()</code> in Python compare newly generated intermediate outputs
@@ -269,8 +269,8 @@ reviewer who does not know your data cannot tell that <code>mass</code> should h
 <div id="reproducible" class="section level3 unlisted unnumbered">
 <h3>Reproducible<a class="anchor" aria-label="anchor" href="#reproducible"><i class="fas fa-link"></i></a>
 </h3>
-<p>The basic question is whether <strong>the code can produce the output, and so
-support the conclusions, given in the paper</strong>.</p>
+<p>The basic question is whether <strong>the code can produce the outputs reported in
+the paper and thus support its conclusions</strong>.</p>
 <p>The final step of code review is to check that the outputs, when the code is
 re-run, match those reported in the analysis and results sections, including
 the relevant figures and the narrative text.</p>
@@ -413,7 +413,7 @@ data to results: <code>targets</code> (<span class="tada-cite" data-key="landau-
 <h2>
 <span class="header-section-number">9.4</span> When code review happens<a class="anchor" aria-label="anchor" href="#review-when"><i class="fas fa-link"></i></a>
 </h2>
-<p>Code review can start when a project starts, and it is useful beyond
+<p>Code review can begin at the start of a project and remain useful beyond
 publication.</p>
 <div class="tabset">
 <div id="pre-submission" class="section level3 unlisted unnumbered">
@@ -447,7 +447,7 @@ peer-review process, code and manuscript alike, is hosted on GitHub.</p>
 (<span class="tada-cite" data-key="fernandez-juricic-2021">Fernández-Juricic 2021</span>). For
 authors, providing code during peer review could improve the manuscript. For
 reviewers, available code gives much more insight, because the link between
-experimental methods and statistical analysis is clearer. That is the first R,
+experimental methods and statistical analysis is clearer. That is the first R:
 code <strong>as reported</strong>.</p>
 <p>There are two practical obstacles.</p>
 <p><em>Finding reviewers.</em> Willing reviewers are already in short supply. It is
@@ -475,7 +475,8 @@ works.</p>
 being published, but it does let you check the four Rs afterwards.</p>
 <p>The first question is whether <strong>all the code used to produce the results has been
 made available</strong>. If not, the main option is to ask the corresponding author or
-the journal, much as data are requested “upon reasonable request”.</p>
+the journal, much as readers might request data that are available “upon
+reasonable request”.</p>
 <p><strong>If you find that the code does not adhere to one of the Rs:</strong></p>
 <ol style="list-style-type: decimal">
 <li>
@@ -682,7 +683,7 @@ being judged is one of the barriers our code review paper highlights (<span clas
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 25 October 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 09 November 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
