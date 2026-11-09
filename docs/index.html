@@ -112,10 +112,9 @@ Best practice for code sharing
 <h2>Code that runs for someone else, not just for you<a class="anchor" aria-label="anchor" href="#code-that-runs-for-someone-else-not-just-for-you"><i class="fas fa-link"></i></a>
 </h2>
 <p>Much of the code behind published papers is never shared, and what is shared
-often won’t run. This wiki sets out four steps to take before you submit a
-paper, so that anyone who downloads your code can run it and get your results:
-make your code <strong>T</strong>ransferable, <strong>A</strong>vailable, <strong>D</strong>ocumented and
-<strong>A</strong>nnotated.</p>
+often won’t run. This wiki introduces four principles for sharing analytical
+code so that others can understand, run and reuse it: make your code
+<strong>T</strong>ransferable, <strong>A</strong>vailable, <strong>D</strong>ocumented and <strong>A</strong>nnotated.</p>
 </div>
 </div>
 <div class="tada-hero-figure">
@@ -125,9 +124,10 @@ make your code <strong>T</strong>ransferable, <strong>A</strong>vailable, <stron
 <div id="welcome-new" class="section level2 unnumbered">
 <h2>New to sharing code?<a class="anchor" aria-label="anchor" href="#welcome-new"><i class="fas fa-link"></i></a>
 </h2>
-<p><strong>Sharing code</strong> means putting the scripts behind your paper in a public,
-permanent repository alongside your data, so that a reader can re-run your
-analysis and see exactly how you got your results.</p>
+<p><strong>Sharing code</strong> means making the scripts behind your paper publicly available
+and depositing them in a permanent repository. Where possible, archive the
+code alongside your data, so that readers can access, understand and rerun your
+analysis.</p>
 <p>By the end of this wiki you will have:</p>
 <ul>
 <li>a <strong>project folder</strong> holding your data, scripts and a short README that
@@ -135,7 +135,7 @@ explains them;</li>
 <li>
 <strong>code that runs on someone else’s computer</strong>, not just yours;</li>
 <li>an <strong>archived copy of that folder</strong> in a repository such as Zenodo, with a
-<strong>DOI</strong> (a permanent link you can cite in your paper).</li>
+<strong>DOI</strong> (a persistent identifier you can cite in your paper).</li>
 </ul>
 <p>You do not need to be an experienced programmer. If you can write and run an R
 or Python script, you can follow this wiki. You do not need Git, Docker or unit
@@ -186,7 +186,7 @@ a fuller explanation if you need one.</p>
 </div>
 <div class="tada-card a1">
 <p><span class="tada-letter">A</span> <a href="available.html#available" class="tada-word">Available</a>
-<span class="tada-gloss">Archived somewhere permanent, with a DOI (a permanent link).</span></p>
+<span class="tada-gloss">Archived in a permanent repository, with a DOI (a persistent identifier).</span></p>
 </div>
 <div class="tada-card d">
 <p><span class="tada-letter">D</span> <a href="documented.html#documented" class="tada-word">Documented</a>
@@ -219,7 +219,7 @@ a fuller explanation if you need one.</p>
 </tr>
 <tr class="even">
 <td><strong>DOI</strong></td>
-<td>Digital Object Identifier: a permanent link to a deposit, such as <code>https://doi.org/10.5281/zenodo.1234567</code>, which you cite like a paper.</td>
+<td>Digital Object Identifier: a persistent identifier for a deposit, such as <code>10.5281/zenodo.1234567</code>. The <code>https://doi.org/</code> form is its resolvable link, which you cite like a paper.</td>
 </tr>
 <tr class="odd">
 <td><strong>Immutable</strong></td>

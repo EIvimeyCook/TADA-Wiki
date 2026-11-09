@@ -114,8 +114,7 @@ be checked.</p>
 <p><strong>The limits of quality control.</strong> Quality control checks that archived data and
 code meet minimum standards: complete, usable, documented and runnable. It is
 <strong>not</strong> a code review. A data editor does not critique your analytical
-techniques, and it is not their role to review, interpret or correct your code,
-or to check its reliability
+techniques or review, interpret, correct or check the reliability of your code
 (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>; <span class="tada-cite" data-key="hillemann-2025">Hillemann et al. 2025</span>). That is what
 <a href="code-review.html#code-review">code review</a> is for.</p>
 </div>
@@ -296,8 +295,8 @@ used, flag it clearly and justify the version in the manuscript and metadata.</l
 <div class="tada-wiki">
 <p><strong>Setting a seed.</strong> Put it at the top of each section that can be run on its
 own, before anything random. Any whole number works; what matters is that it is
-written into the code. Each example runs as shown and gives a consistent
-interval on repeated runs.</p>
+written into the code. When rerun in the same software environment, each
+example gives the same interval.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">##### Bootstrap confidence interval for mean count (Table 2) #####</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">2024</span><span class="op">)</span></span>
