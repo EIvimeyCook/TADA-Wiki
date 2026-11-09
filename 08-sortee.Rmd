@@ -11,8 +11,7 @@ be checked.
 **The limits of quality control.** Quality control checks that archived data and
 code meet minimum standards: complete, usable, documented and runnable. It is
 **not** a code review. A data editor does not critique your analytical
-techniques, and it is not their role to review, interpret or correct your code,
-or to check its reliability
+techniques or review, interpret, correct or check the reliability of your code
 ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}; [Hillemann et al. 2025]{.tada-cite data-key="hillemann-2025"}). That is what
 [code review](#code-review) is for.
 :::
@@ -106,8 +105,8 @@ for one of the following legitimate reasons, explain this in the metadata:
 ::: {.tada-wiki}
 **Setting a seed.** Put it at the top of each section that can be run on its
 own, before anything random. Any whole number works; what matters is that it is
-written into the code. Each example runs as shown and gives a consistent
-interval on repeated runs.
+written into the code. When rerun in the same software environment, each
+example gives the same interval.
 
 ```r
 ##### Bootstrap confidence interval for mean count (Table 2) #####

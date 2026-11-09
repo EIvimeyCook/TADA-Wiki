@@ -1,8 +1,8 @@
 # TADA at a glance {#tada}
 
-**T**ransferable, **A**vailable, **D**ocumented, **A**nnotated. Four steps that
-take analytical code from a working copy on one machine to an archived record
-that another researcher can run.
+**T**ransferable, **A**vailable, **D**ocumented, **A**nnotated. Four principles
+for taking analytical code from a working copy on one machine to an archived
+record that another researcher can run.
 
 ## Why another set of guidelines? {#tada-why}
 

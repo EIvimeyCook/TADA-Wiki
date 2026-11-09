@@ -23,10 +23,9 @@ link-citations: true
 ## Code that runs for someone else, not just for you {.unlisted .unnumbered}
 
 Much of the code behind published papers is never shared, and what is shared
-often won't run. This wiki sets out four steps to take before you submit a
-paper, so that anyone who downloads your code can run it and get your results:
-make your code **T**ransferable, **A**vailable, **D**ocumented and
-**A**nnotated.
+often won't run. This wiki introduces four principles for sharing analytical
+code so that others can understand, run and reuse it: make your code
+**T**ransferable, **A**vailable, **D**ocumented and **A**nnotated.
 :::
 
 ::: {.tada-hero-figure}
@@ -36,9 +35,10 @@ make your code **T**ransferable, **A**vailable, **D**ocumented and
 
 ## New to sharing code? {#welcome-new .unnumbered}
 
-**Sharing code** means putting the scripts behind your paper in a public,
-permanent repository alongside your data, so that a reader can re-run your
-analysis and see exactly how you got your results.
+**Sharing code** means making the scripts behind your paper publicly available
+and depositing them in a permanent repository. Where possible, archive the
+code alongside your data, so that readers can access, understand and rerun your
+analysis.
 
 By the end of this wiki you will have:
 
@@ -46,7 +46,7 @@ By the end of this wiki you will have:
   explains them;
 - **code that runs on someone else's computer**, not just yours;
 - an **archived copy of that folder** in a repository such as Zenodo, with a
-  **DOI** (a permanent link you can cite in your paper).
+  **DOI** (a persistent identifier you can cite in your paper).
 
 You do not need to be an experienced programmer. If you can write and run an R
 or Python script, you can follow this wiki. You do not need Git, Docker or unit
@@ -102,7 +102,7 @@ a fuller explanation if you need one.
 
 ::: {.tada-card .a1}
 [A]{.tada-letter} [Available](#available){.tada-word}
-[Archived somewhere permanent, with a DOI (a permanent link).]{.tada-gloss}
+[Archived in a permanent repository, with a DOI (a persistent identifier).]{.tada-gloss}
 :::
 
 ::: {.tada-card .d}
@@ -124,7 +124,7 @@ A few terms come up on almost every page. Each has a fuller entry in the
 | Term | What it means |
 |---|---|
 | **Repository** | A service for archiving data and code for the long term, such as Zenodo, Figshare or Dryad. This is different from a GitHub repository, which is generally used to host and manage working code. |
-| **DOI** | Digital Object Identifier: a permanent link to a deposit, such as `https://doi.org/10.5281/zenodo.1234567`, which you cite like a paper. |
+| **DOI** | Digital Object Identifier: a persistent identifier for a deposit, such as `10.5281/zenodo.1234567`. The `https://doi.org/` form is its resolvable link, which you cite like a paper. |
 | **Immutable** | Cannot be changed or deleted once published. An update creates a new version rather than overwriting the old one. |
 | **README** | A plain-text file at the top of your project that says what it is, what each file does and how to run it. |
 | **Licence** | A statement of what others may legally do with your code or data. Without one, others cannot lawfully reuse it. |
