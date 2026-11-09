@@ -133,9 +133,9 @@ personal information, the locations of endangered species or fossil sites at
 risk of vandalism, and data covered by Indigenous data sovereignty (see the
 [CARE principles](#gloss-care);
 [Carroll et al. 2020]{.tada-cite data-key="carroll-2020"};
-[Carroll et al. 2021]{.tada-cite data-key="carroll-2021"}). The SORTEE guidelines allow for these cases, note that such
-data can often be obfuscated or anonymised instead, and note that many
-repositories offer **embargoes** ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
+[Carroll et al. 2021]{.tada-cite data-key="carroll-2021"}). The SORTEE guidelines allow for these cases and note that such
+data can often be obfuscated or anonymised instead, and that many repositories offer
+**embargoes** ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 
 ::: {.tada-wiki}
 The exception normally applies to the **data**, not the **code**. Code that

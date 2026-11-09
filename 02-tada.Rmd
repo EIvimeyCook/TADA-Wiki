@@ -54,7 +54,7 @@ All the figures below come from the TADA paper ([Ivimey-Cook et al. 2025]{.tada-
 :::
 
 Journal policy has changed a lot over the past decade, but practice has been
-much slower to follow
+much slower to catch up
 ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-policy"}). Even
 where code is present and functional, computational reproducibility is not always possible
 ([Kambouris et al. 2024]{.tada-cite data-key="kambouris-2024"}).

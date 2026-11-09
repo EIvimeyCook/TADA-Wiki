@@ -167,7 +167,7 @@ column for variable names and another for their descriptions.
 
 ::: {.tada-key}
 The guidelines' standard for both data and code metadata is **"adequate"**:
-detailed enough that **anyone can understand the data, or the analysis code,
+detailed enough that **anyone can understand the data or the analysis code
 without reading the manuscript** ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). A
 README that only makes sense next to your methods section does not meet it.
 :::

@@ -41,7 +41,7 @@ Condensed from the TADA guidelines.
 - [ ] No `setwd()` (R) or `os.chdir()` (Python) appears anywhere in the code
 - [ ] No absolute paths (`/Users/you/…`, `C:/Users/you/…`) remain; paths are [relative](#transferable-paths) (written from the project folder, e.g. `data/raw/file.csv`)
 - [ ] Data, code and materials all live in **one** project directory
-- [ ] The project has been opened from a clean start (restart R or Python with nothing already loaded) and still runs
+- [ ] The project runs successfully from a clean start (restart R or Python with nothing already loaded)
 
 **Available** — [full chapter](#available)
 

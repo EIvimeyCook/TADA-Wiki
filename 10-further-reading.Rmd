@@ -18,9 +18,10 @@ else in the wiki, are in [References](#references).
 analytical code sharing for transparency and reproducibility.* EcoEvoRxiv.
 <https://doi.org/10.32942/X2D93K> (preprint)
 
-The four guidelines, the evidence for why they are needed, and "How To" boxes
-for each letter with a pre-TADA and post-TADA code comparison. A checklist in
-several languages is supplementary Figure S1.
+The paper presents the four guidelines, the evidence for why they are needed,
+and "How To" boxes for each letter, with a pre-TADA and post-TADA code
+comparison. A checklist in several languages is provided in Supplementary
+Figure S1.
 
 Companion site: <https://eivimeycook.github.io/TADA/>
 <br>Example repository, [base project-level DOI](#gloss-project-doi) (otherwise known as a concept DOI on Zenodo): <https://doi.org/10.5281/zenodo.20752886>
@@ -31,8 +32,9 @@ Companion site: <https://eivimeycook.github.io/TADA/>
 control in ecology and evolutionary biology.* Peer Community Journal 6: e20.
 <https://doi.org/10.24072/pcjournal.687>
 
-Six stages of checks, written for journal data editors, that define what "good
-enough to archive" means. It also has suggestions for authors and for journals.
+The paper sets out six stages of checks for journal data editors, defining
+what "good enough to archive" means. It also offers suggestions for authors
+and journals.
 Open access, CC BY 4.0.
 
 ### Code review {.unlisted .unnumbered}
@@ -41,8 +43,8 @@ Open access, CC BY 4.0.
 scientific workflow: Insights from ecology and evolutionary biology.* Journal of
 Evolutionary Biology 36: 1347–1356. <https://doi.org/10.1111/jeb.14230>
 
-The four Rs, how to write reviewable code, where code review fits at each stage
-of publication, and how to start a code club.
+It covers the four Rs, how to write reviewable code, where code review fits
+at each stage of publication, and how to start a code club.
 
 :::
 
@@ -69,9 +71,9 @@ of publication, and how to start a code club.
   Biomedical Research Software FAIR: Actionable Step-by-step Guidelines with a
   User-support Tool.* Scientific Data 10: 557. <https://doi.org/10.1038/s41597-023-02463-x>
 
-Also useful, and cited in our code review paper ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}):
-<https://coderefinery.github.io/reproducible-research/> and Daniël Lakens' chapter on
-computational reproducibility,
+Other useful resources cited in our code review paper ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}) include
+<https://coderefinery.github.io/reproducible-research/> and Daniël Lakens'
+chapter on computational reproducibility,
 <https://lakens.github.io/statistical_inferences/14-computationalreproducibility.html>
 
 ## Code review literature {#reading-review}

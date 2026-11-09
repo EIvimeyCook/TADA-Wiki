@@ -161,12 +161,12 @@ Errors like this can be **conceptual**, from misunderstanding the dataset, or
 **programmatic**, for example indexing columns by number and getting the order
 wrong.
 
-Some techniques help: **indexing explicitly by column name**, and **unit
-testing** any user-defined function, with **`testthat`** ([Wickham 2011]{.tada-cite data-key="wickham-2011"}) in R and
+Some techniques help: **indexing explicitly by column name** and **unit
+testing** any user-defined function with **`testthat`** ([Wickham 2011]{.tada-cite data-key="wickham-2011"}) in R and
 **`pytest`** ([Okken 2022]{.tada-cite data-key="okken-2022"}) in Python. But this type of error remains common and
 is **extremely difficult to pick up without deep familiarity with the dataset
-and code**. It is also thought to increase with the number of lines and the
-complexity of the code ([Lipow 1982]{.tada-cite data-key="lipow-1982"}).
+and code**. The risk of these errors is also thought to increase with the number
+of lines and the complexity of the code ([Lipow 1982]{.tada-cite data-key="lipow-1982"}).
 
 Checking reliability therefore means more than confirming that the code runs to
 completion: **examine its intermediate outputs** as well. `identical()` in R and
@@ -181,8 +181,8 @@ reviewer who does not know your data cannot tell that `mass` should have been
 
 ### Reproducible {.unlisted .unnumbered}
 
-The basic question is whether **the code can produce the output, and so
-support the conclusions, given in the paper**.
+The basic question is whether **the code can produce the outputs reported in
+the paper and thus support its conclusions**.
 
 The final step of code review is to check that the outputs, when the code is
 re-run, match those reported in the analysis and results sections, including
@@ -303,7 +303,7 @@ data to results: `targets` ([Landau 2021]{.tada-cite data-key="landau-2021"}) an
 
 ## When code review happens {#review-when}
 
-Code review can start when a project starts, and it is useful beyond
+Code review can begin at the start of a project and remain useful beyond
 publication.
 
 ::: {.tabset}
@@ -341,7 +341,7 @@ Both sides benefit
 ([Fernández-Juricic 2021]{.tada-cite data-key="fernandez-juricic-2021"}). For
 authors, providing code during peer review could improve the manuscript. For
 reviewers, available code gives much more insight, because the link between
-experimental methods and statistical analysis is clearer. That is the first R,
+experimental methods and statistical analysis is clearer. That is the first R:
 code **as reported**.
 
 There are two practical obstacles.
@@ -373,7 +373,8 @@ being published, but it does let you check the four Rs afterwards.
 
 The first question is whether **all the code used to produce the results has been
 made available**. If not, the main option is to ask the corresponding author or
-the journal, much as data are requested "upon reasonable request".
+the journal, much as readers might request data that are available "upon
+reasonable request".
 
 **If you find that the code does not adhere to one of the Rs:**
 

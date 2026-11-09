@@ -72,8 +72,8 @@ From the guidelines' account of common problems ([Pick et al. 2026]{.tada-cite d
   most common reasons code does not run
 
 ::: {.tada-note}
-Data editors are told to be pragmatic about paths. An absolute path, or a way of
-specifying relative paths they do not know, **should not** be a reason to return
+Data editors are told to be pragmatic about paths. An absolute path, or an
+unfamiliar way of specifying relative paths, **should not** be a reason to return
 the code if they can make it run with minor changes. It is logged as a **minor
 error**. Every other error is the author's to fix, because it is not the data
 editor's job to make your code run.
@@ -105,8 +105,8 @@ one of the following legitimate causes, say so in the metadata:
 ::: {.tada-wiki}
 **Setting a seed.** Put it at the top of each section that can be run on its
 own, before anything random. Any whole number works; what matters is that it is
-written into the code. Both examples below run as they are and give the same
-interval every time.
+written into the code. Each example runs as shown and gives a consistent
+interval on repeated runs.
 
 ```r
 ##### Bootstrap confidence interval for mean count (Table 2) #####
@@ -137,7 +137,7 @@ print(numpy.quantile(boot_means, [0.025, 0.975]))
 ```
 
 In Python, `random.seed()` only affects the built-in `random` module. NumPy
-(and libraries built on it) uses its own generator, so seed that too, as above.
+uses its own generator, so seed it separately, as above.
 
 The same seed can give different numbers in a different software version, as
 with R's `sample()` after v3.6.0, so record the versions in the README.
@@ -165,7 +165,7 @@ cases:
 
 ## Advice for authors {#sharing-authors}
 
-The guidelines' suggestions ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}):
+The guidelines suggest the following ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}):
 
 **1. Adhere to the guidelines from the beginning of the study.** Making a
 project accessible and reproducible at the *end* is a lot of work. Create a

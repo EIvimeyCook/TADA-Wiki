@@ -147,10 +147,10 @@ the slow step; its outputs are saved so 03 can be re-run on its own.
 ````
 
 ::: {.tada-note}
-That README gives the total runtime, says which step is slow and whether its
-output is cached, which script makes which figure, and that `data/processed/`
-can be deleted and regenerated. A reader does not need to contact the author for
-any of it.
+That README gives the total runtime, identifies the slow step and says whether
+its output is cached. It also shows which script makes each figure and explains
+that `data/processed/` can be deleted and regenerated. A reader does not need to
+contact the author for any of it.
 :::
 
 ### The SORTEE view {.unlisted .unnumbered}
