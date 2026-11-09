@@ -249,7 +249,8 @@ much of Stage 1.</p>
 <h2>
 <span class="header-section-number">8.3</span> Common failures at each stage<a class="anchor" aria-label="anchor" href="#sortee-common-failures"><i class="fas fa-link"></i></a>
 </h2>
-<p>From the guidelines’ account of common problems (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</p>
+<p>The following examples are drawn from the guidelines’ account of common
+problems (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>).</p>
 <p><strong>Stage 5, code runs.</strong> The most frequent causes of failure are:</p>
 <ul>
 <li>a package or module not installed or loaded within the code</li>
@@ -273,8 +274,8 @@ altogether. The leniency is for the editor, not permission for authors: use
 relative paths anyway (see <a href="transferable.html#transferable-paths">Transferable</a>).</p>
 </div>
 <p><strong>Stage 6, results reproduce.</strong> In most cases exact reproducibility is expected,
-so the code should give the same number as the manuscript. If a mismatch has
-one of the following legitimate causes, say so in the metadata:</p>
+so the code should give the same number as the manuscript. If results differ
+for one of the following legitimate reasons, explain this in the metadata:</p>
 <ul>
 <li>
 <strong>Stochastic methods</strong> such as simulations and MCMC. Set a seed (<code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code>
@@ -364,7 +365,7 @@ minimises problems during submission and quality control, and makes it easy to
 move to another journal if the paper is rejected.</p>
 <p><strong>3. Perform a pre-submission code review.</strong> Send the project to a colleague or
 co-author before submitting. They can check that the code runs with the data in
-the structure provided, that the metadata are adequate, that data and code match
+the provided structure, that the metadata are adequate, that data and code match
 the manuscript, and that results reproduce. Co-authors are also more likely to
 spot mistakes <em>in</em> the code, because they know the study and the data, while
 data editors do not check code reliability. See
@@ -375,7 +376,7 @@ document is very helpful for data editors and future readers
 code, data and outputs connect.</p>
 <div class="tada-tip">
 <p><strong>Say what was checked.</strong> If your journal does quality control, the guidelines
-suggest saying so in the data and code availability section, for example: <em>“Data and code were checked from Stage 1–4 of the SORTEE guidelines
+suggest saying so in the data and code availability section, for example: <em>“Data and code were checked against Stages 1–4 of the SORTEE guidelines
 for Data and Code Quality Control”</em>. Say where a check could not be performed, whether because of proprietary
 software, sensitive data or computationally expensive analyses.</p>
 </div>

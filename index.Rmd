@@ -7,7 +7,8 @@ site: bookdown::bookdown_site
 description: >-
   A wiki on sharing analytical code, built around the TADA guidelines
   (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing
-  basics, metadata, licences, the SORTEE guidelines for data and code quality control, and code review.
+  basics, metadata, licences, the SORTEE Guidelines for Data and Code Quality Control
+  in Ecology and Evolutionary Biology, and code review.
 url: https://eivimeycook.github.io/TADA-Wiki/
 github-repo: "EIvimeyCook/TADA-Wiki"
 link-citations: true
@@ -35,17 +36,17 @@ make your code **T**ransferable, **A**vailable, **D**ocumented and
 
 ## New to sharing code? {#welcome-new .unnumbered}
 
-**Sharing code** means putting the scripts behind your paper somewhere public
-and permanent, alongside your data, so that a reader can re-run your analysis
-and see exactly how you got your results.
+**Sharing code** means putting the scripts behind your paper in a public,
+permanent repository alongside your data, so that a reader can re-run your
+analysis and see exactly how you got your results.
 
 By the end of this wiki you will have:
 
-- **one project folder** holding your data, your scripts and a short README
-  that explains them;
-- code that **runs on someone else's computer**, not just yours;
-- that folder **archived in a repository** such as Zenodo, which gives it a
-  **DOI**, a permanent link you cite in your paper.
+- a **project folder** holding your data, scripts and a short README that
+  explains them;
+- **code that runs on someone else's computer**, not just yours;
+- an **archived copy of that folder** in a repository such as Zenodo, with a
+  **DOI** (a permanent link you can cite in your paper).
 
 You do not need to be an experienced programmer. If you can write and run an R
 or Python script, you can follow this wiki. You do not need Git, Docker or unit
@@ -122,12 +123,12 @@ A few terms come up on almost every page. Each has a fuller entry in the
 
 | Term | What it means |
 |---|---|
-| **Repository** | A service that stores archived data and code for the long term, such as Zenodo, Figshare or Dryad. Not the same as a GitHub repository. |
+| **Repository** | A service for archiving data and code for the long term, such as Zenodo, Figshare or Dryad. This is different from a GitHub repository, which is generally used to host and manage working code. |
 | **DOI** | Digital Object Identifier: a permanent link to a deposit, such as `https://doi.org/10.5281/zenodo.1234567`, which you cite like a paper. |
 | **Immutable** | Cannot be changed or deleted once published. An update creates a new version rather than overwriting the old one. |
 | **README** | A plain-text file at the top of your project that says what it is, what each file does and how to run it. |
 | **Licence** | A statement of what others may legally do with your code or data. Without one, others cannot lawfully reuse it. |
-| **Relative path** | A file path written from your project folder, such as `data/raw/counts.csv`, so it works on any computer. |
+| **Relative path** | A file path written from your project folder, such as `data/raw/counts.csv`, so it can work across different computers. |
 | **Data editor** | A journal editor who checks the data and code archived alongside a manuscript while it is under review. |
 
 ## Also in the wiki {.unnumbered}

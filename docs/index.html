@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Welcome | The TADA-Wiki</title>
 <meta name="author" content="Ed Ivimey-Cook">
-<meta name="description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
+<meta name="description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing basics, metadata, licences, the SORTEE Guidelines for Data and Code Quality Control in Ecology and Evolutionary Biology, and code review.">
 <meta name="generator" content="bookdown 0.48 with bs4_book()">
 <meta property="og:title" content="Welcome | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/">
-<meta property="og:description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
+<meta property="og:description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing basics, metadata, licences, the SORTEE Guidelines for Data and Code Quality Control in Ecology and Evolutionary Biology, and code review.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Welcome | The TADA-Wiki">
-<meta name="twitter:description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing basics, metadata, licences, the SORTEE data and code quality control guidelines, and code review.">
+<meta name="twitter:description" content="A wiki on sharing analytical code, built around the TADA guidelines (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing basics, metadata, licences, the SORTEE Guidelines for Data and Code Quality Control in Ecology and Evolutionary Biology, and code review.">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -125,17 +125,17 @@ make your code <strong>T</strong>ransferable, <strong>A</strong>vailable, <stron
 <div id="welcome-new" class="section level2 unnumbered">
 <h2>New to sharing code?<a class="anchor" aria-label="anchor" href="#welcome-new"><i class="fas fa-link"></i></a>
 </h2>
-<p><strong>Sharing code</strong> means putting the scripts behind your paper somewhere public
-and permanent, alongside your data, so that a reader can re-run your analysis
-and see exactly how you got your results.</p>
+<p><strong>Sharing code</strong> means putting the scripts behind your paper in a public,
+permanent repository alongside your data, so that a reader can re-run your
+analysis and see exactly how you got your results.</p>
 <p>By the end of this wiki you will have:</p>
 <ul>
+<li>a <strong>project folder</strong> holding your data, scripts and a short README that
+explains them;</li>
 <li>
-<strong>one project folder</strong> holding your data, your scripts and a short README
-that explains them;</li>
-<li>code that <strong>runs on someone else’s computer</strong>, not just yours;</li>
-<li>that folder <strong>archived in a repository</strong> such as Zenodo, which gives it a
-<strong>DOI</strong>, a permanent link you cite in your paper.</li>
+<strong>code that runs on someone else’s computer</strong>, not just yours;</li>
+<li>an <strong>archived copy of that folder</strong> in a repository such as Zenodo, with a
+<strong>DOI</strong> (a permanent link you can cite in your paper).</li>
 </ul>
 <p>You do not need to be an experienced programmer. If you can write and run an R
 or Python script, you can follow this wiki. You do not need Git, Docker or unit
@@ -215,7 +215,7 @@ a fuller explanation if you need one.</p>
 <tbody>
 <tr class="odd">
 <td><strong>Repository</strong></td>
-<td>A service that stores archived data and code for the long term, such as Zenodo, Figshare or Dryad. Not the same as a GitHub repository.</td>
+<td>A service for archiving data and code for the long term, such as Zenodo, Figshare or Dryad. This is different from a GitHub repository, which is generally used to host and manage working code.</td>
 </tr>
 <tr class="even">
 <td><strong>DOI</strong></td>
@@ -235,7 +235,7 @@ a fuller explanation if you need one.</p>
 </tr>
 <tr class="even">
 <td><strong>Relative path</strong></td>
-<td>A file path written from your project folder, such as <code>data/raw/counts.csv</code>, so it works on any computer.</td>
+<td>A file path written from your project folder, such as <code>data/raw/counts.csv</code>, so it can work across different computers.</td>
 </tr>
 <tr class="odd">
 <td><strong>Data editor</strong></td>

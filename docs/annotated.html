@@ -221,8 +221,8 @@ code.</p>
 <h3>RMarkdown / Quarto<a class="anchor" aria-label="anchor" href="#rmarkdown-quarto"><i class="fas fa-link"></i></a>
 </h3>
 <p>Prose and code chunks sit in one file, with the output shown inline. The
-narrative <em>is</em> the annotation, and it is clear which paragraph explains which
-chunk.</p>
+narrative itself provides the annotation, making clear which paragraph explains
+each chunk.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="annotated.html#cb11-1" tabindex="-1"></a><span class="fu">## Caterpillar abundance</span></span>
 <span id="cb11-2"><a href="annotated.html#cb11-2" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="annotated.html#cb11-3" tabindex="-1"></a>We fitted a Poisson GLM of caterpillar counts against habitat to test</span>
@@ -261,7 +261,7 @@ output, and are another route to annotated code.</p>
 order, the notebook records a state that nobody can reproduce.</li>
 <li>
 <strong>Notebooks store output in the file.</strong> That helps readers, but it
-makes the archived <code>.ipynb</code> large and awkward to compare between versions. Consider archiving a
+makes the archived <code>.ipynb</code> large and difficult to compare across versions. Consider archiving a
 plain <code>.py</code> export as well.</li>
 </ul>
 </div>
@@ -273,7 +273,7 @@ plain <code>.py</code> export as well.</li>
 clearest option. The requirements are the same:</p>
 <ul>
 <li>logical chunks, marked with <code>#####</code> / <code>#----</code> (RStudio) or <code>#%%</code> (VS Code/Spyder)</li>
-<li>a comment on each chunk giving what it does, why it is needed and where the
+<li>a comment on each chunk explaining what it does, why it is needed and where its
 output appears</li>
 <li>object names a reader can follow</li>
 </ul>

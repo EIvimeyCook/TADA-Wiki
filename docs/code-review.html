@@ -118,9 +118,9 @@ Evolutionary Biology 36: 1347–1356, <a href="https://doi.org/10.1111/jeb.14230
 <span class="header-section-number">9.1</span> Why it is missing, and why it matters<a class="anchor" aria-label="anchor" href="#review-why"><i class="fas fa-link"></i></a>
 </h2>
 <p>You probably already use open-source software such as R or Python to clean,
-manipulate, visualise and analyse your data. Code-based software is more
-transparent and reproducible than point-and-click software, and more flexible,
-because analyses can be tailored to what a study needs.</p>
+manipulate, visualise and analyse your data. Using code rather than point-and-click
+software makes analyses more transparent and reproducible, and more flexible
+because they can be tailored to a study’s needs.</p>
 <p>That flexibility has a cost. <strong>Code is more error-prone</strong>
 (<span class="tada-cite" data-key="budd-1998">Budd et al. 1998</span>), and several high-profile
 retractions have followed coding mistakes
@@ -135,13 +135,13 @@ academic disciplines that rely on code to make inferences and predictions, it is
 (<span class="tada-cite" data-key="indriasari-2020">Indriasari et al. 2020</span>). We argue for a
 shift in research culture that brings code review into <strong>all stages</strong> of the
 research process (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>).</p>
-<p>Part of the reason it is absent is structural. Informal training, together with too little
-time and too few incentives
+<p>Part of the reason it is absent is structural. Informal training, together with
+too little time and too few incentives
 (<span class="tada-cite" data-key="touchon-2016">Touchon &amp; McCoy 2016</span>), means coding and
-analysis are often the responsibility of <strong>a single member of a team</strong> for the
-whole project, unlike methodology and experimental design, which the whole team
-usually develops. Because research code is so often one person’s work, it is
-rarely reviewed before publication, which is exactly why review matters.</p>
+analysis are often left to <strong>a single team member</strong> throughout a project. Unlike
+methodology and experimental design, these tasks are rarely developed by the
+whole team. As a result, research code is rarely reviewed before publication,
+which is exactly why review matters.</p>
 </div>
 <div id="review-four-rs" class="section level2" number="9.2">
 <h2>
@@ -276,12 +276,12 @@ re-run, match those reported in the analysis and results sections, including
 the relevant figures and the narrative text.</p>
 <p><strong>When exact matching is not possible.</strong> Apply some tolerance, especially with
 stochastic methods, where parameter estimates change between runs, or with
-computationally demanding and slow techniques. A mismatch happens, for example,
-when <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> (R) or <code>random.seed()</code> (Python) was not used before stochastic
-sampling.</p>
-<p>Providing saved model outputs goes some way to helping, for example with
-<code><a href="https://rdrr.io/r/base/readRDS.html">saveRDS()</a></code> in R or <code>pickle.dump()</code> in Python. But saved outputs only let a
-reviewer check the reported results; they do not show that running the code
+computationally demanding and slow techniques. A mismatch can arise, for
+example, when a seed has not been set with <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> in R or <code>random.seed()</code>
+in Python before stochastic sampling.</p>
+<p>Providing saved model outputs can help; for example, you can use <code><a href="https://rdrr.io/r/base/readRDS.html">saveRDS()</a></code>
+in R or <code>pickle.dump()</code> in Python. But saved outputs only let a reviewer check
+the reported results; they do not show that running the code
 produces them. Where the code is re-run and the results cannot match exactly,
 compare the newly generated results with those originally reported.</p>
 <p>The literature gives two criteria for judging a match.</p>
@@ -374,8 +374,8 @@ Python code against PEP 8, with <code>black</code>
 reformatting. Supported styles include Google and tidyverse in R, and PEP 8 in
 Python.</p>
 <p>Literate formats (R and Python Markdown, Quarto, and Jupyter Notebook or
-JupyterLab) show code in chunks that, with descriptive comments, are much easier
-to read. See <a href="annotated.html#annotated-literate">Annotated</a>.</p>
+JupyterLab) show code in chunks that are much easier to read when accompanied
+by descriptive comments. See <a href="annotated.html#annotated-literate">Annotated</a>.</p>
 <div id="structure" class="section level3 unlisted unnumbered">
 <h3>Structure<a class="anchor" aria-label="anchor" href="#structure"><i class="fas fa-link"></i></a>
 </h3>
@@ -471,12 +471,12 @@ works.</p>
 <div id="post-publication" class="section level3 unlisted unnumbered">
 <h3>Post-publication<a class="anchor" aria-label="anchor" href="#post-publication"><i class="fas fa-link"></i></a>
 </h3>
-<p>Post-publication review is discussed much less. It cannot stop incorrect results
-being published, but it does let you check the four Rs afterwards.</p>
+<p>Post-publication review is discussed much less often. It cannot stop incorrect
+results being published, but it does let you check the four Rs afterwards.</p>
 <p>The first question is whether <strong>all the code used to produce the results has been
 made available</strong>. If not, the main option is to ask the corresponding author or
-the journal, much as readers might request data that are available “upon
-reasonable request”.</p>
+the journal, much as readers might request data that a paper describes as
+available “upon reasonable request”.</p>
 <p><strong>If you find that the code does not adhere to one of the Rs:</strong></p>
 <ol style="list-style-type: decimal">
 <li>
@@ -516,8 +516,8 @@ of being judged by peers</strong>.</p>
 <h3>Set a clear goal for each session<a class="anchor" aria-label="anchor" href="#set-a-clear-goal-for-each-session"><i class="fas fa-link"></i></a>
 </h3>
 <p>Is the focus <strong>general learning and improving readability</strong>, or is it to
-<strong>error-check and scrutinise reproducibility</strong>? A clear structure and goal for each session keep comments and advice focused
-on the reason for the review.</p>
+<strong>error-check and scrutinise reproducibility</strong>? A clear structure and goal for
+each session keep comments and advice focused on that goal.</p>
 <p>Unless the aim is specifically to evaluate different analytical options, it is
 better to <strong>leave methodological questions aside</strong>. A session that drifts into
 the choice of model is no longer reviewing the code.</p>
@@ -541,8 +541,9 @@ groups</strong> work better for general discussion of themes and tips.</p>
 <div id="decide-on-credit" class="section level3 unlisted unnumbered">
 <h3>Decide on credit<a class="anchor" aria-label="anchor" href="#decide-on-credit"><i class="fas fa-link"></i></a>
 </h3>
-<p>Code review outside formal peer review can have a large impact on a project,
-from error checking to confirming that the statistical analyses are appropriate.
+<p>Code review outside formal peer review can make a substantial contribution to
+a project, helping to identify errors and confirm that the statistical analyses
+are appropriate.
 So what should reviewers get?</p>
 <ul>
 <li>
