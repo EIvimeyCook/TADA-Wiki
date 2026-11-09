@@ -180,10 +180,11 @@ Or generate one with [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilde
 
 
 If your target journal has a **data editor**, someone will check your deposit
-against something close to the [SORTEE guidelines](#sortee) ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
-These have six stages, from whether the code is archived under a licence to
-whether the results reproduce. Read that chapter to see what the checks
-are before they are applied to your submission.
+against criteria similar to those in the [SORTEE guidelines](#sortee)
+([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
+The guidelines set out six stages, ranging from whether the code is archived
+under a licence to whether the results reproduce. Read that chapter to
+understand what will be checked when your submission is assessed.
 
 If your journal has no data editor, the checks still matter. They fall to you
 and your co-authors, through [code review](#code-review).

@@ -1,9 +1,9 @@
 # References {#references}
 
-Sources cited in this wiki, together with the key works the three source papers
-draw on. Bibliographic details follow the reference lists of those papers; where
-a source gives an abbreviated form, that form is reproduced here rather than
-completed by guesswork.
+This chapter lists sources cited in the wiki, together with the key works the
+three source papers draw on. Bibliographic details follow the reference lists
+of those papers; where a source gives an abbreviated form, that form is
+reproduced here rather than completed by guesswork.
 
 ## The source papers {#references-sources}
 

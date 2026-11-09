@@ -7,8 +7,7 @@ site: bookdown::bookdown_site
 description: >-
   A wiki on sharing analytical code, built around the TADA guidelines
   (Transferable, Available, Documented, Annotated). Other chapters cover data-sharing
-  basics, metadata, licences, the SORTEE data and code quality control
-  guidelines, and code review.
+  basics, metadata, licences, the SORTEE guidelines for data and code quality control, and code review.
 url: https://eivimeycook.github.io/TADA-Wiki/
 github-repo: "EIvimeyCook/TADA-Wiki"
 link-citations: true

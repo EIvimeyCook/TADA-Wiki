@@ -19,7 +19,7 @@ There is plenty of advice on writing good code, but little of it covers
    scope and focused on software development, which may be part of why it
    has not been widely adopted outside that community.
 
-The fourth gap depends on the difference between *analytical code* and *software*.
+The fourth gap reflects a distinction between *analytical code* and *software*.
 
 **Software** is written to be general, modular and tested, and to work across
 systems with many different compatible datasets. Designing for that kind of
@@ -45,7 +45,7 @@ All the figures below come from the TADA paper ([Ivimey-Cook et al. 2025]{.tada-
 | Articles in the field with open code | **5–35%**, depending on the study | [Culina et al. 2020]{.tada-cite data-key="culina-2020"}; [Kimmel et al. 2023]{.tada-cite data-key="kimmel-2023"}; [Maitner et al. 2024]{.tada-cite data-key="maitner-2024"}; [Kellner et al. 2025]{.tada-cite data-key="kellner-2025"}; [Sánchez-Tójar et al. 2025]{.tada-cite data-key="sanchez-tojar-2025"}; [Cooper & the BES Data and Code Hackathon Group 2026]{.tada-cite data-key="cooper-2026"} |
 | Archived R files in Harvard Dataverse failing to run without error | **74%**, falling to 56% after automated cleaning | [Trisovic et al. 2022]{.tada-cite data-key="trisovic-2022"} |
 | Scripts in species distribution and abundance papers that did not run, or ran with errors | **93%** | [Kellner et al. 2025]{.tada-cite data-key="kellner-2025"} |
-| Meta-analyses computationally reproducible given working data and code | between **27%** (every result matching exactly) and **73%** (half of results within 10%) | [Kambouris et al. 2024]{.tada-cite data-key="kambouris-2024"} |
+| Meta-analyses that could be computationally reproduced using the shared data and code | between **27%** (every result matching exactly) and **73%** (half of results within 10%) | [Kambouris et al. 2024]{.tada-cite data-key="kambouris-2024"} |
 
 ::: {.tada-figure}
 ![](assets/figures/fig-cascade.png){alt="Funnel diagram: published articles narrow to 5-35% with available code, then 7-26% of those are functional, then 27-73% of functional code is reproducible."}
@@ -125,8 +125,8 @@ section of the wiki on any of them, please get in touch!
 TADA was built with the FAIR
 ([Wilkinson et al. 2016]{.tada-cite data-key="wilkinson-2016"}) and FAIR4RS
 ([Chue Hong et al. 2022]{.tada-cite data-key="chue-hong-2022"}) principles in
-mind. Each letter maps onto one or more of them, and Transferable goes further on
-purpose.
+mind. Each letter maps onto one or more of them, and
+Transferable deliberately goes further.
 
 | FAIR principle | Definition | Covered by |
 |---|---|---|

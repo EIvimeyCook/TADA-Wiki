@@ -117,8 +117,8 @@ code.
 ### RMarkdown / Quarto {.unlisted .unnumbered}
 
 Prose and code chunks sit in one file, with the output shown inline. The
-narrative *is* the annotation, and it is clear which paragraph explains which
-chunk.
+narrative itself provides the annotation, making clear which paragraph explains
+each chunk.
 
 ````{verbatim, lang="markdown"}
 ## Caterpillar abundance
@@ -161,7 +161,7 @@ Two cautions about archiving a notebook:
 - **Restart and run all before you archive.** If the cells were run out of
   order, the notebook records a state that nobody can reproduce.
 - **Notebooks store output in the file.** That helps readers, but it
-  makes the archived `.ipynb` large and awkward to compare between versions. Consider archiving a
+  makes the archived `.ipynb` large and difficult to compare across versions. Consider archiving a
   plain `.py` export as well.
 :::
 
@@ -171,7 +171,7 @@ A well-commented `.R` or `.py` file is enough, and for many analyses it is the
 clearest option. The requirements are the same:
 
 - logical chunks, marked with `#####` / `#----` (RStudio) or `#%%` (VS Code/Spyder)
-- a comment on each chunk giving what it does, why it is needed and where the
+- a comment on each chunk explaining what it does, why it is needed and where its
   output appears
 - object names a reader can follow
 

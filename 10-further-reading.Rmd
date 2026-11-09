@@ -71,10 +71,10 @@ at each stage of publication, and how to start a code club.
   Biomedical Research Software FAIR: Actionable Step-by-step Guidelines with a
   User-support Tool.* Scientific Data 10: 557. <https://doi.org/10.1038/s41597-023-02463-x>
 
-Other useful resources cited in our code review paper ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}) include
-<https://coderefinery.github.io/reproducible-research/> and Daniël Lakens'
-chapter on computational reproducibility,
-<https://lakens.github.io/statistical_inferences/14-computationalreproducibility.html>
+Other useful resources cited in our code review paper ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}) are the CodeRefinery guide to
+reproducible research (<https://coderefinery.github.io/reproducible-research/>)
+and Daniël Lakens' chapter on computational reproducibility
+(<https://lakens.github.io/statistical_inferences/14-computationalreproducibility.html>).
 
 ## Code review literature {#reading-review}
 
@@ -183,8 +183,8 @@ Use these if you need to persuade a co-author, a supervisor or an editor.
 
 ### Environments & pipelines {.unlisted .unnumbered}
 
-Beyond the scope of TADA, but worth using if you have the time. These are the
-three categories we left out of TADA's scope: dependency and environment
+These tools are beyond the scope of TADA, but worth using if you have the
+time. They fall into the three categories we left out: dependency and environment
 managers (`renv`, `groundhog`, `conda`, `poetry` and `pipenv`; see the R and
 Python tabs), containerisation, and workflow managers (both below).
 

@@ -14,9 +14,9 @@ Evolutionary Biology 36: 1347–1356, <https://doi.org/10.1111/jeb.14230>).
 ## Why it is missing, and why it matters {#review-why}
 
 You probably already use open-source software such as R or Python to clean,
-manipulate, visualise and analyse your data. Code-based software is more
-transparent and reproducible than point-and-click software, and more flexible,
-because analyses can be tailored to what a study needs.
+manipulate, visualise and analyse your data. Using code rather than point-and-click
+software makes analyses more transparent and reproducible, and more flexible
+because they can be tailored to a study's needs.
 
 That flexibility has a cost. **Code is more error-prone**
 ([Budd et al. 1998]{.tada-cite data-key="budd-1998"}), and several high-profile
@@ -34,13 +34,13 @@ academic disciplines that rely on code to make inferences and predictions, it is
 shift in research culture that brings code review into **all stages** of the
 research process ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}).
 
-Part of the reason it is absent is structural. Informal training, together with too little
-time and too few incentives
+Part of the reason it is absent is structural. Informal training, together with
+too little time and too few incentives
 ([Touchon & McCoy 2016]{.tada-cite data-key="touchon-2016"}), means coding and
-analysis are often the responsibility of **a single member of a team** for the
-whole project, unlike methodology and experimental design, which the whole team
-usually develops. Because research code is so often one person's work, it is
-rarely reviewed before publication, which is exactly why review matters.
+analysis are often left to **a single team member** throughout a project. Unlike
+methodology and experimental design, these tasks are rarely developed by the
+whole team. As a result, research code is rarely reviewed before publication,
+which is exactly why review matters.
 
 ## The four Rs {#review-four-rs}
 
@@ -190,13 +190,13 @@ the relevant figures and the narrative text.
 
 **When exact matching is not possible.** Apply some tolerance, especially with
 stochastic methods, where parameter estimates change between runs, or with
-computationally demanding and slow techniques. A mismatch happens, for example,
-when `set.seed()` (R) or `random.seed()` (Python) was not used before stochastic
-sampling.
+computationally demanding and slow techniques. A mismatch can arise, for
+example, when a seed has not been set with `set.seed()` in R or `random.seed()`
+in Python before stochastic sampling.
 
-Providing saved model outputs goes some way to helping, for example with
-`saveRDS()` in R or `pickle.dump()` in Python. But saved outputs only let a
-reviewer check the reported results; they do not show that running the code
+Providing saved model outputs can help; for example, you can use `saveRDS()`
+in R or `pickle.dump()` in Python. But saved outputs only let a reviewer check
+the reported results; they do not show that running the code
 produces them. Where the code is re-run and the results cannot match exactly,
 compare the newly generated results with those originally reported.
 
@@ -271,8 +271,8 @@ reformatting. Supported styles include Google and tidyverse in R, and PEP 8 in
 Python.
 
 Literate formats (R and Python Markdown, Quarto, and Jupyter Notebook or
-JupyterLab) show code in chunks that, with descriptive comments, are much easier
-to read. See [Annotated](#annotated-literate).
+JupyterLab) show code in chunks that are much easier to read when accompanied
+by descriptive comments. See [Annotated](#annotated-literate).
 
 ### Structure {.unlisted .unnumbered}
 
@@ -368,13 +368,13 @@ works.
 
 ### Post-publication {.unlisted .unnumbered}
 
-Post-publication review is discussed much less. It cannot stop incorrect results
-being published, but it does let you check the four Rs afterwards.
+Post-publication review is discussed much less often. It cannot stop incorrect
+results being published, but it does let you check the four Rs afterwards.
 
 The first question is whether **all the code used to produce the results has been
 made available**. If not, the main option is to ask the corresponding author or
-the journal, much as readers might request data that are available "upon
-reasonable request".
+the journal, much as readers might request data that a paper describes as
+available "upon reasonable request".
 
 **If you find that the code does not adhere to one of the Rs:**
 
@@ -411,8 +411,8 @@ of being judged by peers**.
 ### Set a clear goal for each session {.unlisted .unnumbered}
 
 Is the focus **general learning and improving readability**, or is it to
-**error-check and scrutinise reproducibility**? A clear structure and goal for each session keep comments and advice focused
-on the reason for the review.
+**error-check and scrutinise reproducibility**? A clear structure and goal for
+each session keep comments and advice focused on that goal.
 
 Unless the aim is specifically to evaluate different analytical options, it is
 better to **leave methodological questions aside**. A session that drifts into
@@ -434,8 +434,9 @@ groups** work better for general discussion of themes and tips.
 
 ### Decide on credit {.unlisted .unnumbered}
 
-Code review outside formal peer review can have a large impact on a project,
-from error checking to confirming that the statistical analyses are appropriate.
+Code review outside formal peer review can make a substantial contribution to
+a project, helping to identify errors and confirm that the statistical analyses
+are appropriate.
 So what should reviewers get?
 
 - **Acknowledgement via MeRIT** (Method Reporting with Initials for

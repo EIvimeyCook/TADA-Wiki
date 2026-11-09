@@ -44,8 +44,8 @@ Two further points from the guidelines ([Pick et al. 2026]{.tada-cite data-key="
   waste.
 - Published results are often **not described in enough detail to be included in
   a meta-analysis**. Archiving the data lets a synthesist re-analyse them to get
-  what they need, which substantially increases the evidence available for
-  synthesis.
+  the information they need, which substantially increases the evidence
+  available for synthesis.
 
 ## Vocabulary {#sharing-glossary}
 
@@ -82,8 +82,8 @@ data for analysis.
 **b)** A **sample** of raw data alongside the processed and filtered data, when
 a full raw data upload is not possible.
 
-**c)** Processed and filtered data with a **detailed description of how to both
-obtain and process or filter the raw data**.
+**c)** Processed and filtered data with a **detailed description of how to
+obtain the raw data and how they were processed or filtered**.
 
 Raw data matter because filtering and processing are prone to mistakes, and
 without the raw data nobody can check those steps. Option (c) is acceptable, but
@@ -157,7 +157,7 @@ The SORTEE guidelines say what is needed on the **data** side
 
 - What each data file contains and how it is structured
 - What variables it contains
-- **What units of measurement they are in**
+- **The units of measurement for each variable**
 - How they link to the data described in the manuscript, so that every column in
   a `.csv` is explained
 
@@ -173,8 +173,8 @@ README that only makes sense next to your methods section does not meet it.
 :::
 
 ::: {.tada-note}
-Under double-blind review, some sections can be **left blank until acceptance**
-and filled in then.
+Under double-blind review, some sections can be **left blank during peer review**
+and completed after acceptance.
 :::
 
 **On LLMs.** The SORTEE guidelines add that the README should say **whether

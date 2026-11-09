@@ -60,7 +60,8 @@ much of Stage 1.
 
 ## Common failures at each stage {#sortee-common-failures}
 
-From the guidelines' account of common problems ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
+The following examples are drawn from the guidelines' account of common
+problems ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}).
 
 **Stage 5, code runs.** The most frequent causes of failure are:
 
@@ -86,8 +87,8 @@ relative paths anyway (see [Transferable](#transferable-paths)).
 :::
 
 **Stage 6, results reproduce.** In most cases exact reproducibility is expected,
-so the code should give the same number as the manuscript. If a mismatch has
-one of the following legitimate causes, say so in the metadata:
+so the code should give the same number as the manuscript. If results differ
+for one of the following legitimate reasons, explain this in the metadata:
 
 - **Stochastic methods** such as simulations and MCMC. Set a seed (`set.seed()`
   in R, `random.seed()` in Python) **at the beginning of any code section that
@@ -181,7 +182,7 @@ move to another journal if the paper is rejected.
 
 **3. Perform a pre-submission code review.** Send the project to a colleague or
 co-author before submitting. They can check that the code runs with the data in
-the structure provided, that the metadata are adequate, that data and code match
+the provided structure, that the metadata are adequate, that data and code match
 the manuscript, and that results reproduce. Co-authors are also more likely to
 spot mistakes *in* the code, because they know the study and the data, while
 data editors do not check code reliability. See
@@ -194,7 +195,7 @@ code, data and outputs connect.
 
 ::: {.tada-tip}
 **Say what was checked.** If your journal does quality control, the guidelines
-suggest saying so in the data and code availability section, for example: *"Data and code were checked from Stage 1–4 of the SORTEE guidelines
+suggest saying so in the data and code availability section, for example: *"Data and code were checked against Stages 1–4 of the SORTEE guidelines
 for Data and Code Quality Control"*. Say where a check could not be performed, whether because of proprietary
 software, sensitive data or computationally expensive analyses.
 :::

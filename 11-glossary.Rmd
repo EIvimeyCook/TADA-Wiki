@@ -118,7 +118,7 @@ links to it.
 [Data processing]{#gloss-processing data-match="data processing|processed data"} [SORTEE]{.tada-gloss-tag}
 :   Transforming data from one form to another, for example extracting data
     from images or videos, summarising, or calculating new values. The result
-    is [processed data](#gloss-processed-data). Transcribing data from paper into a digital format,
+    is [processed data](#gloss-processed-data). Transcribing data from paper records into a digital format,
     and checking it for entry errors, does not count. As with filtering,
     archive the raw data or the processing code too. See
     [What data to share](#sharing-what).
@@ -148,7 +148,7 @@ links to it.
     [Anonymising for double-blind review](#available-anonymous).
 
 [Embargo]{#gloss-embargo data-match="embargo|embargoes"}
-:   A set period during which a deposit is archived but not yet public, for
+:   A period during which a deposit is archived but not yet made public, for
     example to protect sensitive data or until the paper is published. Many
     repositories let you set one. See
     [Sensitive data and embargoes](#available-sensitive).

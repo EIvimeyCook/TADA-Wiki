@@ -20,8 +20,8 @@ In practice, documentation means two files:
 1. A **README**, in `.txt` or `.md`, describing the code and how to run it.
 2. A **licence**, stating how others may use, modify and share the code.
 
-Documentation holds information that annotation cannot. Comments in a script say
-what a line does, but only the README can say which script to run first, which
+Documentation provides information that annotation cannot. Comments in a
+script say what a line does, but only the README can say which script to run first, which
 version of R you need or where the data live.
 
 ## The README {#documented-readme}
@@ -60,8 +60,8 @@ with versions, in the manuscript itself
 ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}; see
 [Code review](#review-four-rs)).
 
-The SORTEE guidelines add one more field to the README: say whether and how large language
-models were used in code generation
+The SORTEE guidelines add one more field to the README: a statement of whether
+and how large language models were used in code generation
 ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}; see
 [Data & code sharing](#sharing-metadata)).
 
@@ -161,9 +161,9 @@ side ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}):
 - **Guideline 1.5.** Detailed metadata, including but not limited to a README
   file, must accompany the **data**.
 - **Guideline 3.5.** A sufficiently detailed README must accompany the **code**.
-  The code must also be broken into sections with clear annotation stating the
-  purpose of the code, with clear links to the relevant sections, figures and
-  tables in the manuscript.
+  The code must also be broken into sections, with clear annotations explaining
+  its purpose and linking to the relevant sections, figures and tables in the
+  manuscript.
 
 For code metadata, the question a data editor asks is whether a reader could
 understand the analysis code without reading the manuscript. For data metadata,
@@ -253,7 +253,7 @@ such as MIT for the code.
 
 ### Questions that determine the choice {.unlisted .unnumbered}
 
-In the TADA paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}) we set out three questions that should decide the
+In the TADA paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}) we set out three questions to guide the
 choice:
 
 - **Who is the audience?** Is the code intended for commercial applications?

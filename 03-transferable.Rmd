@@ -1,8 +1,8 @@
 # [T]{.k-t} — Transferable {#transferable}
 
 ::: {.tada-key}
-**Transferability** is the ability for anyone to open the file, view and run the
-code **without conversion or alteration**. It covers the FAIR principle of
+**Transferability** is the ability for anyone to open the file, view the code and run
+it **without conversion or alteration**. It covers the FAIR principle of
 interoperability, meaning that anyone can open and use your code, and extends it
 so that the code also runs on **different computers and operating systems**.
 :::
@@ -15,7 +15,7 @@ so that the code also runs on **different computers and operating systems**.
 
 Transferability has two requirements, and you need both.
 
-1. The code is saved in a **file type any text editor or IDE can open**.
+1. The code is saved in a **file type that any text editor or IDE can open**.
 2. The code contains **no paths specific to your machine**.
 
 ## Save code in an interoperable file type {#transferable-filetype}
@@ -24,9 +24,8 @@ Save code with an extension that matches the language: **`.R`**, **`.py`**,
 **`.cpp`**, or the equivalent standard format. These can be viewed, edited and
 saved by any text editor or IDE (RStudio, VS Code, PyCharm) on any system.
 
-**Do not share code inside `.pdf` or `.docx` files.** A PDF can be *viewed*, but
-it cannot be opened and edited in an IDE without extra libraries or software, or
-without first converting it to another file type.
+**Do not share code inside `.pdf` or `.docx` files.** A PDF can be *viewed*, but editing it in an IDE requires extra libraries or
+software, or conversion to another file type.
 
 ::: {.tada-warn}
 The bigger problem with PDFs and Word documents is copying code out of them.
@@ -103,7 +102,7 @@ figure  <- here::here("output", "figures", "fig3_abundance.png")
 ```
 
 **Use both.** We recommend RStudio projects and `here` together, because they
-make code most transferable across operating systems ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}).
+make code as transferable as possible across operating systems ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}).
 
 **Without an IDE**, launching R from inside the project directory does much the
 same.
@@ -141,8 +140,8 @@ the individual file. This works like an RStudio project: the
 workspace root is the reference point for relative paths.
 
 **Standalone interpreters.** Launching R or Python from within the project
-directory does the same thing. The working directory is the project, so every
-path in the code can be relative to it.
+directory does the same thing. The working directory is the project folder, so
+every path in the code can be relative to it.
 
 **Any language.** The principle is the same whatever the tool: put everything in
 one project directory and write every path relative to the top of it.
