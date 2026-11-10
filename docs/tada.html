@@ -112,7 +112,7 @@ record that another researcher can run.</p>
 <span class="header-section-number">2.1</span> Why another set of guidelines?<a class="anchor" aria-label="anchor" href="#tada-why"><i class="fas fa-link"></i></a>
 </h2>
 <p>There is plenty of advice on writing good code, but little of it covers
-<em>archiving an analysis</em>. In the TADA paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>) we identified four gaps in the existing resources:</p>
+<em>archiving an analysis</em>. In the TADA paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>) we identified four gaps in the existing resources:</p>
 <ol style="list-style-type: decimal">
 <li>They do not sufficiently address <strong>how to archive analytical code</strong>.</li>
 <li>Few of them adhere to the <strong>FAIR principles</strong>.</li>
@@ -140,7 +140,7 @@ computationally reproducible.</p>
 <h2>
 <span class="header-section-number">2.2</span> The scale of the problem<a class="anchor" aria-label="anchor" href="#tada-problem"><i class="fas fa-link"></i></a>
 </h2>
-<p>All the figures below come from the TADA paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>).</p>
+<p>All the figures below come from the TADA paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>).</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="33%">
@@ -158,7 +158,7 @@ computationally reproducible.</p>
 <td>15% in 2015, rising to <strong>88% in 2024</strong>
 </td>
 <td>
-<span class="tada-cite" data-key="mislan-2016">Mislan et al. 2016</span>; <span class="tada-cite" data-key="culina-2020">Culina et al. 2020</span>; <span class="tada-cite" data-key="ivimey-cook-2025-policy">Ivimey-Cook et al. 2025</span>
+<span class="tada-cite" data-key="mislan-2016">Mislan et al. 2016</span>; <span class="tada-cite" data-key="culina-2020">Culina et al. 2020</span>; <span class="tada-cite" data-key="ivimey-cook-2025-policy">Ivimey-Cook et al. 2025a</span>
 </td>
 </tr>
 <tr class="even">
@@ -187,6 +187,13 @@ computationally reproducible.</p>
 </tr>
 </tbody>
 </table></div>
+<div class="tada-wiki">
+<p>Two notes on reading this table. The 88% comes from a sample of 95 journals
+(84 of 95; <span class="tada-cite" data-key="ivimey-cook-2025-policy">Ivimey-Cook et al. 2025a</span>), not from every journal in the field. The 93% is the share of the
+497 papers surveyed that did not come with working code, and it includes papers that shared no
+code at all. <span class="tada-cite" data-key="kellner-2025">Kellner et al. 2025</span> found that only 7% of the 497 papers
+(27% of the 133 they tested) came with code that ran without errors.</p>
+</div>
 <div class="tada-figure">
 <div class="inline-figure"><img src="assets/figures/fig-cascade.png" alt="Funnel diagram: published articles narrow to 5-35% with available code, then 7-26% of those are functional, then 27-73% of functional code is reproducible."></div>
 <p class="tada-figure-caption">
@@ -195,7 +202,7 @@ computationally reproducible.</p>
 </div>
 <p>Journal policy has changed a lot over the past decade, but practice has been
 much slower to catch up
-(<span class="tada-cite" data-key="ivimey-cook-2025-policy">Ivimey-Cook et al. 2025</span>). Even
+(<span class="tada-cite" data-key="ivimey-cook-2025-policy">Ivimey-Cook et al. 2025a</span>). Even
 where code is present and functional, computational reproducibility is not always possible
 (<span class="tada-cite" data-key="kambouris-2024">Kambouris et al. 2024</span>).</p>
 </div>
@@ -225,7 +232,7 @@ runs in what order.</span></p>
 </div>
 <div class="tada-card a2">
 <p><span class="tada-letter">A</span> <a href="annotated.html#annotated" class="tada-word">Annotated</a>
-<span class="tada-gloss"><strong>Comments inside the code</strong>, or code embedded in RMarkdown or Quarto alongside
+<span class="tada-gloss"><strong>Comments inside the code</strong>, or code embedded in R Markdown or Quarto alongside
 descriptive text, explaining what each chunk does, why it is needed and where
 its output appears in the paper.</span></p>
 </div>
@@ -248,7 +255,7 @@ Zenodo), which always resolves to the latest version.</p>
 <span class="header-section-number">2.4</span> What TADA does not cover<a class="anchor" aria-label="anchor" href="#tada-scope"><i class="fas fa-link"></i></a>
 </h2>
 <p>We left three things out of the TADA paper’s scope, although all three support
-reproducible analyses (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>):</p>
+reproducible analyses (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>):</p>
 <ul>
 <li>
 <strong>Dependency and environment managers</strong>, such as <code>renv</code> (R) and <code>conda</code> (Python)</li>
@@ -397,7 +404,7 @@ SPSS syntax <code>.sps</code> files, for instance, pass.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 09 November 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 10 November 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

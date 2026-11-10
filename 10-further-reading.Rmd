@@ -14,7 +14,7 @@ else in the wiki, are in [References](#references).
 
 ### TADA {.unlisted .unnumbered}
 
-**Ivimey-Cook, E. R., et al. (2025).** *TADA! Simple guidelines to improve
+**Ivimey-Cook, E. R., et al. (2025b).** *TADA! Simple guidelines to improve
 analytical code sharing for transparency and reproducibility.* EcoEvoRxiv.
 <https://doi.org/10.32942/X2D93K> (preprint)
 
@@ -121,7 +121,7 @@ Use these if you need to persuade a co-author, a supervisor or an editor.
   study on research code quality and execution.* Scientific Data 9: 60. <https://doi.org/10.1038/s41597-022-01143-6> 
 - **Kellner, K. F., Doser, J. W. & Belant, J. L. (2025).** *Functional R code is
   rare in species distribution and abundance papers.* Ecology 106: e4475. <https://doi.org/10.1002/ecy.4475> 
-- **Ivimey-Cook, E. R. et al. (2025).** *From policy to practice: Progress
+- **Ivimey-Cook, E. R. et al. (2025a).** *From policy to practice: Progress
   towards data- and code-sharing in ecology and evolution.* Proceedings of the
   Royal Society B 292: 20251394. <https://doi.org/10.1098/rspb.2025.1394> 
 - **Kambouris, S., Wilkinson, D. P., Smith, E. T. & Fidler, F. (2024).**
@@ -179,6 +179,7 @@ Use these if you need to persuade a co-author, a supervisor or an editor.
 | **`CodeMetaPy`** ([van Gompel 2023]{.tada-cite data-key="van-gompel-2023"}) | Code metadata |
 | **`cookiecutter`** ([Feldroy 2022]{.tada-cite data-key="feldroy-2022"}) | Project templates |
 | **`setuptools`** | Package and version information |
+| **`importlib.metadata`** (Python standard library) | The installed version of a package, for example `importlib.metadata.version("pandas")` |
 | `session_info` (from the `session-info` package) | The environment section of your README |
 
 ### Environments & pipelines {.unlisted .unnumbered}
@@ -186,7 +187,7 @@ Use these if you need to persuade a co-author, a supervisor or an editor.
 These tools are beyond the scope of TADA, but worth using if you have the
 time. They fall into the three categories we left out: dependency and environment
 managers (`renv`, `groundhog`, `conda`, `poetry` and `pipenv`; see the R and
-Python tabs), containerisation, and workflow managers (both below).
+Python tabs), containerisation, and workflow managers (in the table below).
 
 | Tool | What for |
 |---|---|

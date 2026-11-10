@@ -9,7 +9,7 @@ reproduced here rather than completed by guesswork.
 
 **Ivimey-Cook, E. R., Culina, A., Dimri, S., Grainger, M. J., Kar, F.,
 Lagisz, M., Moran, N. P., Nakagawa, S., Roche, D. G., Tattan, S.,
-Sánchez-Tójar, A., Windecker, S. M., & Pick, J. L.** (2025). *TADA! Simple guidelines
+Sánchez-Tójar, A., Windecker, S. M., & Pick, J. L.** (2025b). *TADA! Simple guidelines
 to improve analytical code sharing for transparency and reproducibility.*
 EcoEvoRxiv. <https://doi.org/10.32942/X2D93K> (Preprint, posted 2025-08-02;
 version 3 posted 2026-09-15; not yet peer reviewed.)
@@ -268,7 +268,7 @@ code review in higher education.* ACM Transactions on Computing Education 20:
 <https://doi.org/10.1145/3403935>
 
 **Ivimey-Cook, E. R., Sánchez-Tójar, A., Berberi, I., Culina, A., Roche, D. G.,
-Almeida, R. A., et al.** (2025). *From policy to practice: Progress towards
+Almeida, R. A., et al.** (2025a). *From policy to practice: Progress towards
 data- and code-sharing in ecology and evolution.* Proceedings of the Royal
 Society B 292: 20251394. <https://doi.org/10.1098/rspb.2025.1394>
 
@@ -280,7 +280,7 @@ e9961.
 
 **Jiménez, R. C., Kuzak, M., Alhamdoosh, M., Barker, M., Batut, B., Borg, M.,
 et al.** (2017). *Four simple recommendations to encourage best practices in
-research software.* F1000Research.
+research software.* F1000Research 6: 876.
 <https://doi.org/10.12688/f1000research.11407.1>
 
 **Kambouris, S., Wilkinson, D. P., Smith, E. T., & Fidler, F.** (2024).
@@ -421,7 +421,7 @@ transparency in ecology.* Ecological Applications 29: e01822.
 
 **Resnik, D. B., & Hosseini, M.** (2025). *Disclosing artificial intelligence use
 in scientific research and publication: When should disclosure be mandatory,
-optional, or unnecessary?* Accountability in Research 24: 1–13.
+optional, or unnecessary?* Accountability in Research 33(2): 2481949.
 <https://doi.org/10.1080/08989621.2025.2481949>
 
 **Rocholl, J. C.** (2022). *pycodestyle: Python style guide checker.*

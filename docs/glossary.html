@@ -116,7 +116,7 @@ links to it.</p>
 <dd>
 A file path written out in full from the top of one computer’s file system,
 such as <code>C:/Users/ed/Desktop/data.csv</code>. Also called a local or hard-coded
-path. It only exists on that machine, so code that uses one fails for
+path. It only exists on that machine, so code that uses one usually fails for
 everyone else. Compare <a href="glossary.html#gloss-relative-path">relative path</a>. See
 <a href="transferable.html#transferable-paths">Transferable</a>.
 </dd>
@@ -174,6 +174,12 @@ Two Creative Commons licences, common for data. CC0 places work in the
 public domain with no conditions. CC BY lets others reuse the work as long
 as they credit you. Neither is designed for code. See
 <a href="data-sharing.html#sharing-licences">Licences</a>.
+</dd>
+<dt><span id="gloss-chunk" data-match="chunk|chunks">Chunk</span></dt>
+<dd>
+A block of code that does one job, usually with a heading comment saying what
+it does. In R Markdown and Quarto it is a code block between fences; in
+Jupyter it is called a cell. See <a href="annotated.html#annotated">Annotated</a>.
 </dd>
 <dt><span id="gloss-code-review" data-match="code review">Code review</span></dt>
 <dd>
@@ -293,7 +299,7 @@ repositories let you set one. See
 <dd>
 A tool that records and restores the exact package versions a project uses,
 usually in a <a href="glossary.html#gloss-lockfile">lockfile</a>. <code>renv</code> (R) and <code>conda</code>, <code>poetry</code> and <code>pipenv</code>
-(Python) are examples. Beyond the scope of TADA.
+(mostly used with Python) are examples. Beyond the scope of TADA.
 </dd>
 <dt>
 <span id="gloss-fair" data-match="FAIR">FAIR principles</span> <span class="tada-gloss-tag">SORTEE</span>
@@ -314,6 +320,11 @@ The FAIR principles adapted for research software
 The ending of a file name, such as <code>.R</code>, <code>.py</code> or <code>.csv</code>, which tells
 software what kind of file it is. See
 <a href="transferable.html#transferable-filetype">Transferable</a>.
+</dd>
+<dt><span id="gloss-git" data-match="Git">Git</span></dt>
+<dd>
+A tool that records every change to your files, so you can go back to earlier
+versions. You do not need it to follow this wiki. See <a href="glossary.html#gloss-github">GitHub</a>.
 </dd>
 <dt><span id="gloss-github" data-match="GitHub">GitHub</span></dt>
 <dd>
@@ -532,6 +543,13 @@ scope of TADA.
 The folder R or Python treats as its starting point when reading and saving
 files. Opening an RStudio project sets it to the project folder.
 </dd>
+<dt><span id="gloss-zenodo" data-match="Zenodo">Zenodo</span></dt>
+<dd>
+A free repository run by CERN that archives files and gives them a DOI. Files
+cannot be changed after publishing; to correct them you publish a new version.
+See <a href="available.html#available-where">Available</a> and
+<a href="quickstart.html#quickstart-zenodo">Archiving on Zenodo, step by step</a>.
+</dd>
 </dl>
 </div>
 <p>Missing a term? See <a href="contribute.html#contribute">Contribute</a>.</p>
@@ -559,7 +577,7 @@ files. Opening an RStudio project sets it to the project folder.
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 09 November 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 10 November 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

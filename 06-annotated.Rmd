@@ -2,7 +2,7 @@
 
 ::: {.tada-key}
 **Annotation** means adding comments **within each code file** (with `#` in R and
-Python), or embedding code in an **RMarkdown or Quarto** document alongside
+Python), or embedding code in an **R Markdown or Quarto** document alongside
 descriptive text. It helps a reader both *understand* your archived code
 (transparency) and *run* it (functionality and reproducibility).
 :::
@@ -17,7 +17,7 @@ Annotation, like documentation, corresponds to the FAIR principle of Reusable.
 In the TADA paper, we describe annotation as doing the same job as
 documentation, but providing clear comments within each coding script rather
 than describing the code "externally"
-([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}).
+([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}).
 
 ## Script headers {#annotated-header}
 
@@ -46,7 +46,7 @@ A good chunk comment answers three questions:
 2. **Why** is it needed? *"…to analyse caterpillar abundance varying with
    habitat…"*
 3. **Where** does its output appear? *"Numeric results shown in Caterpillar
-   Abundance section"*, or *"Figure 5A"*
+   abundance section"*, or *"Figure 5A"*
 
 The third question is **signposting**. It lets
 a reader, a data editor or a reviewer connect a number in your results section
@@ -92,6 +92,12 @@ file easier to read and navigate. They help most in long scripts.
 - **`#####`** or **`#----`** in RStudio
 - **`#%%`** in VS Code or Spyder (Python IDEs)
 
+::: {.tada-wiki}
+In RStudio, a section marker needs a label before the trailing dashes or hashes,
+for example `# Load data ----` or `#### Load data ####`. The bare markers listed
+above are not documented as sections by Posit.
+:::
+
 ```r
 ##### 1. Load and clean data #####
 # ...
@@ -114,7 +120,7 @@ code.
 
 ::: {.tabset}
 
-### RMarkdown / Quarto {.unlisted .unnumbered}
+### R Markdown / Quarto {.unlisted .unnumbered}
 
 Prose and code chunks sit in one file, with the output shown inline. The
 narrative itself provides the annotation, making clear which paragraph explains
@@ -135,7 +141,7 @@ summary(model1)
 
 For a complete example, see the TADA paper's worked R Markdown report, which
 combines code, its output and descriptive text in one document
-([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}):
+([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}):
 <https://eivimeycook.github.io/TADA/>.
 
 The [SORTEE guidelines](#sortee) add that presenting everything in one
@@ -152,7 +158,7 @@ own fails [Transferable](#transferable).
 
 ### Jupyter Notebook {.unlisted .unnumbered}
 
-Notebooks and JupyterLab show code in chunks with descriptive text and inline
+Notebooks and JupyterLab show code in cells with descriptive text and inline
 output, and are another route to annotated code.
 
 ::: {.tada-wiki}
@@ -227,6 +233,6 @@ Try doing all of these to make the dog happy.
 - [ ] Packages are called explicitly by namespace (`package::function()`)
 - [ ] Unused `library()` / `import` calls have been removed
 - [ ] If using a notebook: it has been restarted and run top to bottom before archiving
-- [ ] If using Quarto or RMarkdown: the **source** file is archived, not only the rendered output
+- [ ] If using Quarto or R Markdown: the **source** file is archived, not only the rendered output
 
 **Next:** [Data & code sharing](#data-sharing), on the wider practices around TADA.

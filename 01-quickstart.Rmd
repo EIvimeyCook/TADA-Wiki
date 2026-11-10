@@ -12,6 +12,14 @@ to run the whole thing. Then **archive** it and get a DOI. Archiving last means 
 DOI points to the version that has already been checked.
 :::
 
+::: {.tada-wiki}
+The checklist below is grouped by TADA principle, not by the order you do the
+work. Run the project from a clean copy of your folder first, then archive it,
+then run it once more from the archived download. If that second run breaks, fix
+the problem and publish a new version of the deposit, and cite the final
+version.
+:::
+
 Just want the tick list? [Jump to the checklist](#quickstart-checklist).
 
 ## The pre-submission checklist {#quickstart-checklist}
@@ -41,7 +49,7 @@ Condensed from the TADA guidelines.
 - [ ] No `setwd()` (R) or `os.chdir()` (Python) appears anywhere in the code
 - [ ] No absolute paths (`/Users/you/…`, `C:/Users/you/…`) remain; paths are [relative](#transferable-paths) (written from the project folder, e.g. `data/raw/file.csv`)
 - [ ] Data, code and materials all live in **one** project directory
-- [ ] The project runs successfully from a clean start (restart R or Python with nothing already loaded)
+- [ ] The project runs successfully from a clean start (restart R or Python with nothing already loaded: in RStudio use *Session → Restart R* and clear the Environment pane with the broom icon; in Jupyter, restart the kernel)
 
 **Available** — [full chapter](#available)
 
@@ -58,7 +66,7 @@ Condensed from the TADA guidelines.
 - [ ] It says where the data are, ideally with their own DOI
 - [ ] It says what each file is, what order to run things in, what the code needs and what it produces
 - [ ] It flags anything slow or resource-hungry
-- [ ] It says whether and how large language models were used to write the code (SORTEE; not a TADA requirement)
+- [ ] It says whether and how large language models were used in code generation (SORTEE; not a TADA requirement)
 - [ ] A [licence](#documented-licence) is actually attached to the deposit
 
 **Annotated** — [full chapter](#annotated)
@@ -69,8 +77,8 @@ Condensed from the TADA guidelines.
 
 **Before you submit** — [full chapter](#code-review)
 
-- [ ] Someone else has run the whole project from the archived files, successfully
-- [ ] `set.seed()` / `random.seed()` is set before anything that uses random numbers, such as simulations or MCMC (SORTEE Stage 6, [Pick et al. 2026]{.tada-cite data-key="pick-2026"}; not a TADA requirement; see [Code review](#code-review))
+- [ ] Someone else (a colleague or co-author) has run the whole project from the archived files, successfully (if you work alone, see the tip under [A project layout that works](#quickstart-layout))
+- [ ] `set.seed()` / `random.seed()` is set before anything that uses random numbers, such as simulations or MCMC (Markov chain Monte Carlo, a method for fitting models by random sampling; [SORTEE Stage 6](#sortee), [Pick et al. 2026]{.tada-cite data-key="pick-2026"}; not a TADA requirement; see [Code review](#code-review))
 
 ### Data {.unlisted .unnumbered}
 
@@ -108,8 +116,8 @@ chapter, where every point is explained in full.
 ::: {.tada-wiki}
 The most useful check on this page is to **download your own archived deposit
 into a fresh, empty folder, ideally on a different machine, and run it.** It catches the failures the SORTEE guidelines group under
-Stage 5: wrong paths, missing packages and missing files ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). It
-will not catch Stage 6 failures, such as stochasticity and version sensitivity.
+[Stage 5](#sortee): wrong paths, missing packages and missing files ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}). It
+will not catch [Stage 6](#sortee) failures, such as stochasticity and version sensitivity.
 Those need a seed and a documented environment.
 :::
 
@@ -171,6 +179,21 @@ project and replace the angle-bracketed parts. The
 there.
 
 Or generate one with [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder) (`pak::pak("EIvimeyCook/READMEBuilder")`, then `build_readme()`), a Shiny app that fills in these fields from your project and writes the `README.md`.
+
+## Archiving on Zenodo, step by step {#quickstart-zenodo}
+
+::: {.tada-wiki}
+Zenodo is free and a sensible default if you are unsure where to deposit
+(see [Available](#available-where) for the alternatives). Button names change
+occasionally, so check [Zenodo's help](https://help.zenodo.org/) if something
+looks different.
+
+1. Make a free account at <https://zenodo.org>. You can log in with ORCID or GitHub.
+2. Choose **New upload** and add the files from your project folder (or a single `.zip` of the folder if there are many).
+3. Fill in the details: the upload type (**Software** for code), a title, the authors, a description, and a **licence**.
+4. Choose **Publish**. Treat the files as permanent from this point. To fix a mistake in the files, create a **New version**, which gets its own DOI.
+5. Copy the DOI from the record page. Zenodo gives you two: a version-specific DOI for exactly this upload, and a base DOI that always points to the latest version. See [Available](#available-cite) for which to cite.
+:::
 
 ## What happens next {#quickstart-next}
 

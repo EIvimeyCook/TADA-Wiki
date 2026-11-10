@@ -3,6 +3,7 @@ quickstart-checklist
 quickstart-layout
 quickstart-mistakes
 quickstart-readme
+quickstart-zenodo
 quickstart-next
 tada
 tada-why

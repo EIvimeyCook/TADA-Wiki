@@ -54,7 +54,7 @@ testing either; where they help, they are mentioned as optional.
 
 ::: {.tada-key}
 **Submitting soon?** Go straight to [Start here](#quickstart). It is a
-checklist you can work through with your project open, and every item links to
+checklist you can work through with your project open, and most items link to
 a fuller explanation if you need one.
 :::
 

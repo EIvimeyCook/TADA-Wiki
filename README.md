@@ -28,7 +28,7 @@ licences, repository choice, the SORTEE guidelines for data and code quality
 control, and code review.
 
 The wiki exists because the gap between policy and practice is wide. In ecology
-and evolutionary biology, 88% of journals had code-sharing policies by 2024, yet
+and evolutionary biology, 88% of journals in a sample of 95 had code-sharing policies by 2024, yet
 only 5–35% of articles share code. Shared code often does not run either: of
 over 9,000 R files archived in the Harvard Dataverse, 74% failed to run without
 error. TADA sets a **minimum standard** aimed at that gap, and is achievable by
@@ -62,7 +62,7 @@ The wiki is a synthesis of three papers:
 
 - **Ivimey-Cook, E. R., Culina, A., Dimri, S., Grainger, M. J., Kar, F.,
   Lagisz, M., Moran, N. P., Nakagawa, S., Roche, D. G., Tattan, S.,
-  Sánchez-Tójar, A., Windecker, S. M., & Pick, J. L.** (2025). *TADA! Simple
+  Sánchez-Tójar, A., Windecker, S. M., & Pick, J. L.** (2025b). *TADA! Simple
   guidelines to improve analytical code sharing for transparency and
   reproducibility.* EcoEvoRxiv (preprint). <https://doi.org/10.32942/X2D93K>.
   Example repository, base project-level DOI (otherwise known as a concept DOI

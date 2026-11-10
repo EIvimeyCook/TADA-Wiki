@@ -133,13 +133,13 @@ version of R you need or where the data live.</p>
 <p>You can provide a <strong>combined README</strong> covering both code and data metadata, or
 <strong>two separate READMEs</strong>, one for code and one for data. Metadata for data
 should describe the data files, the variables and their units of measurement
-(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>); see
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>); see
 <a href="data-sharing.html#sharing-metadata">Data &amp; code sharing</a> for the full list.</p>
 <div id="what-must-be-in-it" class="section level3 unlisted unnumbered">
 <h3>What must be in it<a class="anchor" aria-label="anchor" href="#what-must-be-in-it"><i class="fas fa-link"></i></a>
 </h3>
 <p>This comes from the “Documented How To” box and its accompanying text in the TADA
-paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>):</p>
+paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>):</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="50%">
@@ -168,7 +168,7 @@ paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et a
 </tr>
 <tr class="odd">
 <td><strong>Packages</strong></td>
-<td>Important libraries or packages used, <strong>with version numbers</strong>, e.g. ggplot2 v4.0.2. Can also be supplied as a separate text file listing every loaded package and version, from <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> in R or <code>session_info</code> in Python (from the <code>session-info</code> package)</td>
+<td>Important libraries or packages used, <strong>with version numbers</strong>, e.g. ggplot2 v4.0.2. Can also be supplied as a separate text file listing every loaded package and version, from <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> in R or <code>session_info.show()</code> in Python (from the <code>session-info</code> package)</td>
 </tr>
 <tr class="even">
 <td><strong>Licence</strong></td>
@@ -200,7 +200,7 @@ paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et a
 <p>Versions matter because different software or package versions can produce
 different results. For example, base R’s <code><a href="https://rdrr.io/r/base/sample.html">sample()</a></code> changed after v3.6.0, and
 dplyr’s <code>distinct()</code> function changed after v0.4.0, each giving different results
-(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>). List
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>). List
 versions in the README, and also state the packages central to the analysis,
 with versions, in the manuscript itself
 (<span class="tada-cite" data-key="ivimey-cook-2023">Ivimey-Cook et al. 2023</span>; see
@@ -211,9 +211,10 @@ and how large language models were used in code generation
 <a href="data-sharing.html#sharing-metadata">Data &amp; code sharing</a>).</p>
 <div class="tada-wiki">
 <p><code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> (R) and <code>session_info.show()</code> (Python, from the <code>session-info</code>
-package) list every loaded package and its version. Run it at the end of your final
-analysis session, paste the output into a <code>session_info.txt</code> next to the README
-and refer to it there. That one command answers most later questions about
+package) list every loaded package and its version. Run them at the end of your final
+analysis session, save the output as a <code>session_info.txt</code> next to the README
+(in R, <code>writeLines(capture.output(sessionInfo()), "session_info.txt")</code> does this)
+and refer to it there. Those commands answer most later questions about
 software versions.</p>
 </div>
 </div>
@@ -223,7 +224,7 @@ software versions.</p>
 <p>Below is a filled-in version of the fields above. The template is at
 <a href="templates/README-template.md"><code>templates/README-template.md</code></a>.</p>
 <div class="tada-note">
-<p><strong>Generate the README instead of writing it.</strong> The TADA paper points to <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a> (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>), an R package with a built-in Shiny app that walks you through the fields above and writes a <code>README.md</code>. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with <code>pak::pak("EIvimeyCook/READMEBuilder")</code>, then run <code>build_readme()</code>.</p>
+<p><strong>Generate the README instead of writing it.</strong> The TADA paper points to <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a> (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>), an R package with a built-in Shiny app that walks you through the fields above and writes a <code>README.md</code>. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with <code>pak::pak("EIvimeyCook/READMEBuilder")</code>, then run <code>build_readme()</code>.</p>
 </div>
 <div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="documented.html#cb6-1" tabindex="-1"></a><span class="fu"># Code for: Caterpillar abundance varies with habitat type</span></span>
 <span id="cb6-2"><a href="documented.html#cb6-2" tabindex="-1"></a></span>
@@ -342,7 +343,8 @@ copyright notice travel with it
 <div class="tada-wiki">
 <p>Choose a permissive licence when you want the widest possible reuse and do not
 mind what downstream users do with derivatives. That is the usual case for
-analytical code that accompanies a paper.</p>
+analytical code that accompanies a paper. If you are unsure, MIT is a common
+default for code, and CC BY 4.0 or CC0 for data.</p>
 </div>
 <p>Other permissive options include <strong>BSD 2-Clause</strong>, <strong>BSD 3-Clause</strong>, and
 <strong>Apache 2.0</strong>, which also grants patent rights explicitly
@@ -402,7 +404,8 @@ suits <em>both</em> your data and your code before depositing them together.</p>
 <div id="how-to-attach-it" class="section level4 unlisted unnumbered">
 <h4>How to attach it<a class="anchor" aria-label="anchor" href="#how-to-attach-it"><i class="fas fa-link"></i></a>
 </h4>
-<p>Either route works.</p>
+<p>Either route works. Some licence texts, such as MIT, contain placeholders for the
+year and your name, so fill those in.</p>
 <p><strong>Add a licence file.</strong> Decide which licence fits your project using
 <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a>, copy its text, and save it in your project next to
 the code as a <code>LICENSE</code> file, the name GitHub looks for
@@ -418,7 +421,7 @@ such as MIT for the code.</p>
 <div id="questions-that-determine-the-choice" class="section level3 unlisted unnumbered">
 <h3>Questions that determine the choice<a class="anchor" aria-label="anchor" href="#questions-that-determine-the-choice"><i class="fas fa-link"></i></a>
 </h3>
-<p>In the TADA paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>) we set out three questions to guide the
+<p>In the TADA paper (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>) we set out three questions to guide the
 choice:</p>
 <ul>
 <li>
@@ -510,7 +513,7 @@ and state one. For <strong>code</strong> they state a preference for <strong>per
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 09 November 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 10 November 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -180,18 +180,21 @@ anyone who downloads the project can load the data.</p>
 <div id="r" class="section level4 unlisted unnumbered">
 <h4>R<a class="anchor" aria-label="anchor" href="#r"><i class="fas fa-link"></i></a>
 </h4>
-<p><strong>Use an RStudio project.</strong> <em>File → New Project</em> creates a <code>.Rproj</code> file. When you open
+<p><strong>Use an RStudio project.</strong> Choose <em>File → New Project → Existing Directory</em> and pick your project folder; this creates a <code>.Rproj</code> file. When you open
 the project, RStudio sets the working directory to the project folder, so you
 never need <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code>.
 See <a href="https://docs.posit.co/ide/user/ide/get-started/" class="uri">https://docs.posit.co/ide/user/ide/get-started/</a>.</p>
 <p><strong>Use the <code>here</code> package</strong> (<span class="tada-cite" data-key="muller-bryan-2020">Müller &amp; Bryan 2020</span>). <code>here()</code> builds paths relative
-to the project directory, whatever the operating system:</p>
+to the project directory, whatever the operating system. Install it once with
+<code>install.packages("here")</code>. Writing <code><a href="https://here.r-lib.org/reference/here.html">here::here()</a></code> means “the <code>here()</code> function
+from the <code>here</code> package”, so you do not need to load the package first. The package finds
+the top of your project by looking for a <code>.Rproj</code> file (or a <code>.git</code> folder):</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">raw</span>     <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"caterpillars_2024.csv"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">clean</span>   <span class="op">&lt;-</span> <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"processed"</span>, <span class="st">"caterpillars_clean.csv"</span><span class="op">)</span></span>
 <span><span class="va">figure</span>  <span class="op">&lt;-</span> <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html">here</a></span><span class="op">(</span><span class="st">"output"</span>, <span class="st">"figures"</span>, <span class="st">"fig3_abundance.png"</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Use both.</strong> We recommend RStudio projects and <code>here</code> together, because they
-make code as transferable as possible across operating systems (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>).</p>
+make code as transferable as possible across operating systems (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>).</p>
 <p><strong>Without an IDE</strong>, launching R from inside the project directory does much the
 same.</p>
 <div class="tada-warn">
@@ -241,10 +244,10 @@ virtual environment, before running anything. See
 <h2>
 <span class="header-section-number">3.3</span> Beyond TADA: environments and pipelines<a class="anchor" aria-label="anchor" href="#transferable-beyond"><i class="fas fa-link"></i></a>
 </h2>
-<p>We left the following out of TADA’s scope (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>), but they are
+<p>We left the following out of TADA’s scope (<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>), but they are
 worth knowing about because they fix failures that relative paths cannot.</p>
-<p><strong>Dependency and environment managers</strong>, such as <strong><a href="https://rstudio.github.io/renv/">renv</a></strong> (<span class="tada-cite" data-key="ushey-2023">Ushey &amp; Wickham 2023</span>) in R
-and <strong><code>{conda}</code></strong> (<span class="tada-cite" data-key="conda-2026">conda contributors 2026</span>) in Python, help make sure the same computational environment is
+<p><strong>Dependency and environment managers</strong>, such as <strong><code>renv</code></strong> (<span class="tada-cite" data-key="ushey-2023">Ushey &amp; Wickham 2023</span>) in R
+and <strong><code>conda</code></strong> (<span class="tada-cite" data-key="conda-2026">conda contributors 2026</span>; widely used with Python, though it supports other languages), help make sure the same computational environment is
 used each time a project is run, typically via a lockfile.</p>
 <p><strong>Containerisation</strong>, through <strong>Docker</strong> (<span class="tada-cite" data-key="merkel-2014">Merkel 2014</span>) and <strong>Apptainer</strong>,
 formerly called Singularity (<span class="tada-cite" data-key="kurtzer-2017">Kurtzer et al. 2017</span>; <span class="tada-cite" data-key="apptainer">Apptainer n.d.</span>), uses images that encapsulate a complete software
@@ -317,7 +320,7 @@ on their own.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 09 November 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 10 November 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

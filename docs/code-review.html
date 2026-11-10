@@ -192,7 +192,7 @@ file. A <code>session_info.txt</code> from <code><a href="https://rdrr.io/r/util
 lockfile (<code>renv.lock</code> or <code>conda-lock</code>) also works.</p>
 <div class="tada-wiki">
 <p><code><a href="https://rdrr.io/r/utils/packageDescription.html">packageVersion()</a></code> in R and the <code>session-info</code> package in Python give versions
-directly.</p>
+directly, and so does <code>importlib.metadata.version("package")</code> in the standard library.</p>
 </div>
 <p>This is more than bookkeeping. If a package version is later found to contain a
 bug, you can identify the papers that depend on it.</p>
@@ -572,7 +572,7 @@ is at <a href="templates/code-review-checklist.md"><code>templates/code-review-c
 <li>Download the project into a <strong>new, empty folder</strong>.</li>
 <li>Open the README. Can you tell what to run, in what order, and what you need
 installed? Note anything you had to guess.</li>
-<li>Try to run it, in a <strong>fresh session</strong>. Record every error word for word, and stop
+<li>Try to run it, in a <strong>fresh session</strong>. Copy each error message exactly, and stop
 at the first one you cannot resolve in two minutes.</li>
 </ol>
 <p><strong>In the session</strong></p>
@@ -629,6 +629,8 @@ being judged is one of the barriers our code review paper highlights (<span clas
 <li><label><input type="checkbox">Slow or proprietary steps have saved outputs archived</label></li>
 <li><label><input type="checkbox">The reviewer’s contribution is credited (MeRIT, acknowledgement, or authorship)</label></li>
 </ul>
+<p><strong>Next:</strong> <a href="further-reading.html#further-reading">Further reading</a>, on tools and sources beyond TADA.</p>
+
 </div>
 </div>
 <script src="assets/tada.js" defer></script><script src="assets/tada-citations.js" defer></script><script src="assets/tada-cite.js" defer></script><script src="assets/tada-mascot.js" defer></script><script src="assets/tada-theme.js" defer></script><script src="assets/tada-glossary.js" defer></script><div class="chapter-nav">
@@ -684,7 +686,7 @@ being judged is one of the barriers our code review paper highlights (<span clas
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 09 November 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 10 November 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

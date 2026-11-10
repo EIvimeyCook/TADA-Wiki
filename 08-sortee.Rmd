@@ -44,7 +44,7 @@ Table 2 of the paper ([Pick et al. 2026]{.tada-cite data-key="pick-2026"}) is re
 ::: {.tada-wiki}
 This mapping is ours, not from the SORTEE paper. The TADA paper aligns TADA
 with Stage 3, and to some extent Stages 4 and 5
-([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}). The
+([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}). The
 same four principles, applied to your data as well as your code, also cover
 much of Stage 1.
 :::
@@ -198,3 +198,5 @@ suggest saying so in the data and code availability section, for example: *"Data
 for Data and Code Quality Control"*. Say where a check could not be performed, whether because of proprietary
 software, sensitive data or computationally expensive analyses.
 :::
+
+**Next:** [Code review](#code-review), on checking someone else's code before submission.

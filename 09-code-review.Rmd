@@ -97,7 +97,7 @@ lockfile (`renv.lock` or `conda-lock`) also works.
 
 ::: {.tada-wiki}
 `packageVersion()` in R and the `session-info` package in Python give versions
-directly.
+directly, and so does `importlib.metadata.version("package")` in the standard library.
 :::
 
 This is more than bookkeeping. If a package version is later found to contain a
@@ -460,7 +460,7 @@ is at [`templates/code-review-checklist.md`](templates/code-review-checklist.md)
 1. Download the project into a **new, empty folder**.
 2. Open the README. Can you tell what to run, in what order, and what you need
    installed? Note anything you had to guess.
-3. Try to run it, in a **fresh session**. Record every error word for word, and stop
+3. Try to run it, in a **fresh session**. Copy each error message exactly, and stop
    at the first one you cannot resolve in two minutes.
 
 **In the session**
@@ -512,3 +512,5 @@ Try doing all of these to make the dog happy.
 - [ ] Mismatches are explained (version, stochasticity, post-processing) and documented
 - [ ] Slow or proprietary steps have saved outputs archived
 - [ ] The reviewer's contribution is credited (MeRIT, acknowledgement, or authorship)
+
+**Next:** [Further reading](#further-reading), on tools and sources beyond TADA.

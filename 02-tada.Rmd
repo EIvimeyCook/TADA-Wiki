@@ -7,7 +7,7 @@ record that another researcher can run.
 ## Why another set of guidelines? {#tada-why}
 
 There is plenty of advice on writing good code, but little of it covers
-*archiving an analysis*. In the TADA paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}) we identified four gaps in the existing resources:
+*archiving an analysis*. In the TADA paper ([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}) we identified four gaps in the existing resources:
 
 1. They do not sufficiently address **how to archive analytical code**.
 2. Few of them adhere to the **FAIR principles**.
@@ -37,15 +37,23 @@ computationally reproducible.
 
 ## The scale of the problem {#tada-problem}
 
-All the figures below come from the TADA paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}).
+All the figures below come from the TADA paper ([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}).
 
 | What | Figure | Primary source |
 |---|---|---|
-| Journals in ecology & evolutionary biology with code-sharing policies | 15% in 2015, rising to **88% in 2024** | [Mislan et al. 2016]{.tada-cite data-key="mislan-2016"}; [Culina et al. 2020]{.tada-cite data-key="culina-2020"}; [Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-policy"} |
+| Journals in ecology & evolutionary biology with code-sharing policies | 15% in 2015, rising to **88% in 2024** | [Mislan et al. 2016]{.tada-cite data-key="mislan-2016"}; [Culina et al. 2020]{.tada-cite data-key="culina-2020"}; [Ivimey-Cook et al. 2025a]{.tada-cite data-key="ivimey-cook-2025-policy"} |
 | Articles in the field with open code | **5–35%**, depending on the study | [Culina et al. 2020]{.tada-cite data-key="culina-2020"}; [Kimmel et al. 2023]{.tada-cite data-key="kimmel-2023"}; [Maitner et al. 2024]{.tada-cite data-key="maitner-2024"}; [Kellner et al. 2025]{.tada-cite data-key="kellner-2025"}; [Sánchez-Tójar et al. 2025]{.tada-cite data-key="sanchez-tojar-2025"}; [Cooper & the BES Data and Code Hackathon Group 2026]{.tada-cite data-key="cooper-2026"} |
 | Archived R files in Harvard Dataverse failing to run without error | **74%**, falling to 56% after automated cleaning | [Trisovic et al. 2022]{.tada-cite data-key="trisovic-2022"} |
 | Scripts in species distribution and abundance papers that did not run, or ran with errors | **93%** | [Kellner et al. 2025]{.tada-cite data-key="kellner-2025"} |
 | Meta-analyses that could be computationally reproduced using the shared data and code | between **27%** (every result matching exactly) and **73%** (half of results within 10%) | [Kambouris et al. 2024]{.tada-cite data-key="kambouris-2024"} |
+
+::: {.tada-wiki}
+Two notes on reading this table. The 88% comes from a sample of 95 journals
+(84 of 95; [Ivimey-Cook et al. 2025a]{.tada-cite data-key="ivimey-cook-2025-policy"}), not from every journal in the field. The 93% is the share of the
+497 papers surveyed that did not come with working code, and it includes papers that shared no
+code at all. [Kellner et al. 2025]{.tada-cite data-key="kellner-2025"} found that only 7% of the 497 papers
+(27% of the 133 they tested) came with code that ran without errors.
+:::
 
 ::: {.tada-figure}
 ![](assets/figures/fig-cascade.png){alt="Funnel diagram: published articles narrow to 5-35% with available code, then 7-26% of those are functional, then 27-73% of functional code is reproducible."}
@@ -55,7 +63,7 @@ All the figures below come from the TADA paper ([Ivimey-Cook et al. 2025]{.tada-
 
 Journal policy has changed a lot over the past decade, but practice has been
 much slower to catch up
-([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-policy"}). Even
+([Ivimey-Cook et al. 2025a]{.tada-cite data-key="ivimey-cook-2025-policy"}). Even
 where code is present and functional, computational reproducibility is not always possible
 ([Kambouris et al. 2024]{.tada-cite data-key="kambouris-2024"}).
 
@@ -87,7 +95,7 @@ runs in what order.]{.tada-gloss}
 
 ::: {.tada-card .a2}
 [A]{.tada-letter} [Annotated](#annotated){.tada-word}
-[**Comments inside the code**, or code embedded in RMarkdown or Quarto alongside
+[**Comments inside the code**, or code embedded in R Markdown or Quarto alongside
 descriptive text, explaining what each chunk does, why it is needed and where
 its output appears in the paper.]{.tada-gloss}
 :::
@@ -109,7 +117,7 @@ Zenodo), which always resolves to the latest version.
 ## What TADA does not cover {#tada-scope}
 
 We left three things out of the TADA paper's scope, although all three support
-reproducible analyses ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}):
+reproducible analyses ([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}):
 
 - **Dependency and environment managers**, such as `renv` (R) and `conda` (Python)
 - **Containerisation**, such as Docker and Apptainer (formerly Singularity)

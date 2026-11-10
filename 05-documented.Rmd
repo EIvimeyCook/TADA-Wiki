@@ -29,13 +29,13 @@ version of R you need or where the data live.
 You can provide a **combined README** covering both code and data metadata, or
 **two separate READMEs**, one for code and one for data. Metadata for data
 should describe the data files, the variables and their units of measurement
-([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}); see
+([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}); see
 [Data & code sharing](#sharing-metadata) for the full list.
 
 ### What must be in it {.unlisted .unnumbered}
 
 This comes from the "Documented How To" box and its accompanying text in the TADA
-paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}):
+paper ([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}):
 
 | Field | Detail |
 |---|---|
@@ -43,7 +43,7 @@ paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}):
 | **Authors & contact** | Authors, with an email address for correspondence. *May be anonymised during peer review* to adhere to double-blind policies |
 | **Funders** | Any relevant funders |
 | **Software** | Language and **version number**, e.g. R v4.5.2 |
-| **Packages** | Important libraries or packages used, **with version numbers**, e.g. ggplot2 v4.0.2. Can also be supplied as a separate text file listing every loaded package and version, from `sessionInfo()` in R or `session_info` in Python (from the `session-info` package) |
+| **Packages** | Important libraries or packages used, **with version numbers**, e.g. ggplot2 v4.0.2. Can also be supplied as a separate text file listing every loaded package and version, from `sessionInfo()` in R or `session_info.show()` in Python (from the `session-info` package) |
 | **Licence** | A mention of the code-specific licence |
 | **Data location** | Where the relevant data are, ideally with a **PID** |
 | **File contents** | What each file contains |
@@ -54,7 +54,7 @@ paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}):
 Versions matter because different software or package versions can produce
 different results. For example, base R's `sample()` changed after v3.6.0, and
 dplyr's `distinct()` function changed after v0.4.0, each giving different results
-([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}). List
+([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}). List
 versions in the README, and also state the packages central to the analysis,
 with versions, in the manuscript itself
 ([Ivimey-Cook et al. 2023]{.tada-cite data-key="ivimey-cook-2023"}; see
@@ -67,9 +67,10 @@ and how large language models were used in code generation
 
 ::: {.tada-wiki}
 `sessionInfo()` (R) and `session_info.show()` (Python, from the `session-info`
-package) list every loaded package and its version. Run it at the end of your final
-analysis session, paste the output into a `session_info.txt` next to the README
-and refer to it there. That one command answers most later questions about
+package) list every loaded package and its version. Run them at the end of your final
+analysis session, save the output as a `session_info.txt` next to the README
+(in R, `writeLines(capture.output(sessionInfo()), "session_info.txt")` does this)
+and refer to it there. Those commands answer most later questions about
 software versions.
 :::
 
@@ -79,7 +80,7 @@ Below is a filled-in version of the fields above. The template is at
 [`templates/README-template.md`](templates/README-template.md).
 
 ::: {.tada-note}
-**Generate the README instead of writing it.** The TADA paper points to [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder) ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}), an R package with a built-in Shiny app that walks you through the fields above and writes a `README.md`. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with `pak::pak("EIvimeyCook/READMEBuilder")`, then run `build_readme()`.
+**Generate the README instead of writing it.** The TADA paper points to [READMEBuilder](https://github.com/EIvimeyCook/READMEBuilder) ([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}), an R package with a built-in Shiny app that walks you through the fields above and writes a `README.md`. It covers project metadata, per-column data summaries, a directory map, script run order, detected package versions, and separate code and data licences. Install with `pak::pak("EIvimeyCook/READMEBuilder")`, then run `build_readme()`.
 :::
 
 ````markdown
@@ -198,7 +199,8 @@ copyright notice travel with it
 ::: {.tada-wiki}
 Choose a permissive licence when you want the widest possible reuse and do not
 mind what downstream users do with derivatives. That is the usual case for
-analytical code that accompanies a paper.
+analytical code that accompanies a paper. If you are unsure, MIT is a common
+default for code, and CC BY 4.0 or CC0 for data.
 :::
 
 Other permissive options include **BSD 2-Clause**, **BSD 3-Clause**, and
@@ -236,7 +238,8 @@ suits *both* your data and your code before depositing them together.
 
 #### How to attach it {.unlisted .unnumbered}
 
-Either route works.
+Either route works. Some licence texts, such as MIT, contain placeholders for the
+year and your name, so fill those in.
 
 **Add a licence file.** Decide which licence fits your project using
 <https://choosealicense.com/>, copy its text, and save it in your project next to
@@ -253,7 +256,7 @@ such as MIT for the code.
 
 ### Questions that determine the choice {.unlisted .unnumbered}
 
-In the TADA paper ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}) we set out three questions to guide the
+In the TADA paper ([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}) we set out three questions to guide the
 choice:
 
 - **Who is the audience?** Is the code intended for commercial applications?

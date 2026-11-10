@@ -87,13 +87,16 @@ There are several options, and you can combine them.
 
 #### R {.unlisted .unnumbered}
 
-**Use an RStudio project.** *File → New Project* creates a `.Rproj` file. When you open
+**Use an RStudio project.** Choose *File → New Project → Existing Directory* and pick your project folder; this creates a `.Rproj` file. When you open
 the project, RStudio sets the working directory to the project folder, so you
 never need `setwd()`.
 See <https://docs.posit.co/ide/user/ide/get-started/>.
 
 **Use the `here` package** ([Müller & Bryan 2020]{.tada-cite data-key="muller-bryan-2020"}). `here()` builds paths relative
-to the project directory, whatever the operating system:
+to the project directory, whatever the operating system. Install it once with
+`install.packages("here")`. Writing `here::here()` means "the `here()` function
+from the `here` package", so you do not need to load the package first. The package finds
+the top of your project by looking for a `.Rproj` file (or a `.git` folder):
 
 ```r
 raw     <- read.csv(here::here("data", "raw", "caterpillars_2024.csv"))
@@ -102,7 +105,7 @@ figure  <- here::here("output", "figures", "fig3_abundance.png")
 ```
 
 **Use both.** We recommend RStudio projects and `here` together, because they
-make code as transferable as possible across operating systems ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}).
+make code as transferable as possible across operating systems ([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}).
 
 **Without an IDE**, launching R from inside the project directory does much the
 same.
@@ -157,11 +160,11 @@ virtual environment, before running anything. See
 
 ## Beyond TADA: environments and pipelines {#transferable-beyond}
 
-We left the following out of TADA's scope ([Ivimey-Cook et al. 2025]{.tada-cite data-key="ivimey-cook-2025-tada"}), but they are
+We left the following out of TADA's scope ([Ivimey-Cook et al. 2025b]{.tada-cite data-key="ivimey-cook-2025-tada"}), but they are
 worth knowing about because they fix failures that relative paths cannot.
 
-**Dependency and environment managers**, such as **`{renv}`** ([Ushey & Wickham 2023]{.tada-cite data-key="ushey-2023"}) in R
-and **`{conda}`** ([conda contributors 2026]{.tada-cite data-key="conda-2026"}) in Python, help make sure the same computational environment is
+**Dependency and environment managers**, such as **`renv`** ([Ushey & Wickham 2023]{.tada-cite data-key="ushey-2023"}) in R
+and **`conda`** ([conda contributors 2026]{.tada-cite data-key="conda-2026"}; widely used with Python, though it supports other languages), help make sure the same computational environment is
 used each time a project is run, typically via a lockfile.
 
 **Containerisation**, through **Docker** ([Merkel 2014]{.tada-cite data-key="merkel-2014"}) and **Apptainer**,

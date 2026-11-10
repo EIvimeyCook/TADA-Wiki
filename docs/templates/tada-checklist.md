@@ -1,6 +1,6 @@
 # TADA checklist
 
-Drop this into your project and work down it before you deposit.
+Drop this into your project and work through it before you deposit.
 From the TADA-Wiki; see the wiki for the reasoning behind each item.
 
 ---
@@ -58,7 +58,7 @@ alteration, on a different computer and operating system.*
 
 ## A — Annotated
 
-*Comments within each code file, or code embedded in RMarkdown/Quarto with
+*Comments within each code file, or code embedded in R Markdown/Quarto with
 descriptive text.*
 
 - [ ] The script has a header at the top describing what it does and what it produces
@@ -71,7 +71,7 @@ descriptive text.*
 - [ ] Packages are called explicitly by namespace (`package::function()`)
 - [ ] Unused `library()` / `import` calls removed
 - [ ] Notebooks were restarted and run top to bottom before archiving
-- [ ] For Quarto/RMarkdown: the **source** file is archived, not only rendered output
+- [ ] For Quarto/R Markdown: the **source** file is archived, not only rendered output
 
 ## Before you submit
 

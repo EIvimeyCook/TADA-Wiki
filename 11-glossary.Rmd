@@ -12,7 +12,7 @@ links to it.
 [Absolute path]{#gloss-absolute-path data-match="absolute path|absolute file path|local file path|hard-coded path"}
 :   A file path written out in full from the top of one computer's file system,
     such as `C:/Users/ed/Desktop/data.csv`. Also called a local or hard-coded
-    path. It only exists on that machine, so code that uses one fails for
+    path. It only exists on that machine, so code that uses one usually fails for
     everyone else. Compare [relative path](#gloss-relative-path). See
     [Transferable](#transferable-paths).
 
@@ -61,6 +61,11 @@ links to it.
     public domain with no conditions. CC BY lets others reuse the work as long
     as they credit you. Neither is designed for code. See
     [Licences](#sharing-licences).
+
+[Chunk]{#gloss-chunk data-match="chunk|chunks"}
+:   A block of code that does one job, usually with a heading comment saying what
+    it does. In R Markdown and Quarto it is a code block between fences; in
+    Jupyter it is called a cell. See [Annotated](#annotated).
 
 [Code review]{#gloss-code-review data-match="code review"}
 :   Checking and evaluating each other's code, either formally during peer
@@ -156,7 +161,7 @@ links to it.
 [Environment manager]{#gloss-environment-manager data-match="environment manager|dependency manager|renv|conda|poetry|pipenv|groundhog"}
 :   A tool that records and restores the exact package versions a project uses,
     usually in a [lockfile](#gloss-lockfile). `renv` (R) and `conda`, `poetry` and `pipenv`
-    (Python) are examples. Beyond the scope of TADA.
+    (mostly used with Python) are examples. Beyond the scope of TADA.
 
 [FAIR principles]{#gloss-fair data-match="FAIR"} [SORTEE]{.tada-gloss-tag}
 :   Findable, Accessible, Interoperable and Reusable: principles for sharing
@@ -172,6 +177,10 @@ links to it.
 :   The ending of a file name, such as `.R`, `.py` or `.csv`, which tells
     software what kind of file it is. See
     [Transferable](#transferable-filetype).
+
+[Git]{#gloss-git data-match="Git"}
+:   A tool that records every change to your files, so you can go back to earlier
+    versions. You do not need it to follow this wiki. See [GitHub](#gloss-github).
 
 [GitHub]{#gloss-github data-match="GitHub"}
 :   A website for developing code with version control and collaborating on it.
@@ -347,6 +356,12 @@ links to it.
 [Working directory]{#gloss-working-directory data-match="working directory|setwd"}
 :   The folder R or Python treats as its starting point when reading and saving
     files. Opening an RStudio project sets it to the project folder.
+
+[Zenodo]{#gloss-zenodo data-match="Zenodo"}
+:   A free repository run by CERN that archives files and gives them a DOI. Files
+    cannot be changed after publishing; to correct them you publish a new version.
+    See [Available](#available-where) and
+    [Archiving on Zenodo, step by step](#quickstart-zenodo).
 
 :::
 

@@ -114,6 +114,13 @@ see <a href="annotated.html#annotated-asyougo">Annotated</a>), write the <strong
 to run the whole thing. Then <strong>archive</strong> it and get a DOI. Archiving last means the
 DOI points to the version that has already been checked.</p>
 </div>
+<div class="tada-wiki">
+<p>The checklist below is grouped by TADA principle, not by the order you do the
+work. Run the project from a clean copy of your folder first, then archive it,
+then run it once more from the archived download. If that second run breaks, fix
+the problem and publish a new version of the deposit, and cite the final
+version.</p>
+</div>
 <p>Just want the tick list? <a href="quickstart.html#quickstart-checklist">Jump to the checklist</a>.</p>
 <div id="quickstart-checklist" class="section level2" number="1.1">
 <h2>
@@ -139,7 +146,7 @@ DOI points to the version that has already been checked.</p>
 <li><label><input type="checkbox">No <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> (R) or <code>os.chdir()</code> (Python) appears anywhere in the code</label></li>
 <li><label><input type="checkbox">No absolute paths (<code>/Users/you/…</code>, <code>C:/Users/you/…</code>) remain; paths are <a href="transferable.html#transferable-paths">relative</a> (written from the project folder, e.g. <code>data/raw/file.csv</code>)</label></li>
 <li><label><input type="checkbox">Data, code and materials all live in <strong>one</strong> project directory</label></li>
-<li><label><input type="checkbox">The project runs successfully from a clean start (restart R or Python with nothing already loaded)</label></li>
+<li><label><input type="checkbox">The project runs successfully from a clean start (restart R or Python with nothing already loaded: in RStudio use <em>Session → Restart R</em> and clear the Environment pane with the broom icon; in Jupyter, restart the kernel)</label></li>
 </ul>
 <p><strong>Available</strong> — <a href="available.html#available">full chapter</a></p>
 <ul class="task-list">
@@ -156,7 +163,7 @@ DOI points to the version that has already been checked.</p>
 <li><label><input type="checkbox">It says where the data are, ideally with their own DOI</label></li>
 <li><label><input type="checkbox">It says what each file is, what order to run things in, what the code needs and what it produces</label></li>
 <li><label><input type="checkbox">It flags anything slow or resource-hungry</label></li>
-<li><label><input type="checkbox">It says whether and how large language models were used to write the code (SORTEE; not a TADA requirement)</label></li>
+<li><label><input type="checkbox">It says whether and how large language models were used in code generation (SORTEE; not a TADA requirement)</label></li>
 <li><label><input type="checkbox">A <a href="documented.html#documented-licence">licence</a> is actually attached to the deposit</label></li>
 </ul>
 <p><strong>Annotated</strong> — <a href="annotated.html#annotated">full chapter</a></p>
@@ -167,8 +174,8 @@ DOI points to the version that has already been checked.</p>
 </ul>
 <p><strong>Before you submit</strong> — <a href="code-review.html#code-review">full chapter</a></p>
 <ul class="task-list">
-<li><label><input type="checkbox">Someone else has run the whole project from the archived files, successfully</label></li>
-<li><label><input type="checkbox"><code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> / <code>random.seed()</code> is set before anything that uses random numbers, such as simulations or MCMC (SORTEE Stage 6, <span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>; not a TADA requirement; see <a href="code-review.html#code-review">Code review</a>)</label></li>
+<li><label><input type="checkbox">Someone else (a colleague or co-author) has run the whole project from the archived files, successfully (if you work alone, see the tip under <a href="quickstart.html#quickstart-layout">A project layout that works</a>)</label></li>
+<li><label><input type="checkbox"><code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> / <code>random.seed()</code> is set before anything that uses random numbers, such as simulations or MCMC (Markov chain Monte Carlo, a method for fitting models by random sampling; <a href="sortee.html#sortee">SORTEE Stage 6</a>, <span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>; not a TADA requirement; see <a href="code-review.html#code-review">Code review</a>)</label></li>
 </ul>
 </div>
 <div id="data" class="section level3 unlisted unnumbered">
@@ -207,8 +214,8 @@ chapter, where every point is explained in full.</p>
 <div class="tada-wiki">
 <p>The most useful check on this page is to <strong>download your own archived deposit
 into a fresh, empty folder, ideally on a different machine, and run it.</strong> It catches the failures the SORTEE guidelines group under
-Stage 5: wrong paths, missing packages and missing files (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). It
-will not catch Stage 6 failures, such as stochasticity and version sensitivity.
+<a href="sortee.html#sortee">Stage 5</a>: wrong paths, missing packages and missing files (<span class="tada-cite" data-key="pick-2026">Pick et al. 2026</span>). It
+will not catch <a href="sortee.html#sortee">Stage 6</a> failures, such as stochasticity and version sensitivity.
 Those need a seed and a documented environment.</p>
 </div>
 </div>
@@ -300,9 +307,27 @@ project and replace the angle-bracketed parts. The
 there.</p>
 <p>Or generate one with <a href="https://github.com/EIvimeyCook/READMEBuilder">READMEBuilder</a> (<code>pak::pak("EIvimeyCook/READMEBuilder")</code>, then <code>build_readme()</code>), a Shiny app that fills in these fields from your project and writes the <code>README.md</code>.</p>
 </div>
-<div id="quickstart-next" class="section level2" number="1.5">
+<div id="quickstart-zenodo" class="section level2" number="1.5">
 <h2>
-<span class="header-section-number">1.5</span> What happens next<a class="anchor" aria-label="anchor" href="#quickstart-next"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.5</span> Archiving on Zenodo, step by step<a class="anchor" aria-label="anchor" href="#quickstart-zenodo"><i class="fas fa-link"></i></a>
+</h2>
+<div class="tada-wiki">
+<p>Zenodo is free and a sensible default if you are unsure where to deposit
+(see <a href="available.html#available-where">Available</a> for the alternatives). Button names change
+occasionally, so check <a href="https://help.zenodo.org/">Zenodo’s help</a> if something
+looks different.</p>
+<ol style="list-style-type: decimal">
+<li>Make a free account at <a href="https://zenodo.org" class="uri">https://zenodo.org</a>. You can log in with ORCID or GitHub.</li>
+<li>Choose <strong>New upload</strong> and add the files from your project folder (or a single <code>.zip</code> of the folder if there are many).</li>
+<li>Fill in the details: the upload type (<strong>Software</strong> for code), a title, the authors, a description, and a <strong>licence</strong>.</li>
+<li>Choose <strong>Publish</strong>. Treat the files as permanent from this point. To fix a mistake in the files, create a <strong>New version</strong>, which gets its own DOI.</li>
+<li>Copy the DOI from the record page. Zenodo gives you two: a version-specific DOI for exactly this upload, and a base DOI that always points to the latest version. See <a href="available.html#available-cite">Available</a> for which to cite.</li>
+</ol>
+</div>
+</div>
+<div id="quickstart-next" class="section level2" number="1.6">
+<h2>
+<span class="header-section-number">1.6</span> What happens next<a class="anchor" aria-label="anchor" href="#quickstart-next"><i class="fas fa-link"></i></a>
 </h2>
 <div class="tada-dog-float tada-dog-float--standalone is-happy">
 <div class="inline-figure"><img src="assets/figures/dog-happy.png" class="tada-dog-happy" alt="A happy cartoon dog wearing a wizard hat"></div>
@@ -334,7 +359,8 @@ and your co-authors, through <a href="code-review.html#code-review">code review<
 <li><a class="nav-link" href="#quickstart-layout"><span class="header-section-number">1.2</span> A project layout that works</a></li>
 <li><a class="nav-link" href="#quickstart-mistakes"><span class="header-section-number">1.3</span> Three common causes of failure</a></li>
 <li><a class="nav-link" href="#quickstart-readme"><span class="header-section-number">1.4</span> The README</a></li>
-<li><a class="nav-link" href="#quickstart-next"><span class="header-section-number">1.5</span> What happens next</a></li>
+<li><a class="nav-link" href="#quickstart-zenodo"><span class="header-section-number">1.5</span> Archiving on Zenodo, step by step</a></li>
+<li><a class="nav-link" href="#quickstart-next"><span class="header-section-number">1.6</span> What happens next</a></li>
 </ul>
 
       <div class="book-extra">
@@ -352,7 +378,7 @@ and your co-authors, through <a href="code-review.html#code-review">code review<
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 09 November 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 10 November 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

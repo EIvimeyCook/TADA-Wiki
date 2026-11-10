@@ -19,7 +19,7 @@ run `Rscript render.R`, and open a pull request. For a small fix, use the
 
    [`templates/page-template.Rmd`](templates/page-template.Rmd) is a working
    example of everything this wiki uses: the callouts, the R/Python tabs, the
-   before/after blocks, a checklist and the house style. Write over it.
+   before/after blocks, a checklist and the house style. Replace its contents with your own.
 
 2. **Start with a level-1 heading and an ID**, so other pages can link to it:
 

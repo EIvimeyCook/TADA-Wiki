@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>6 A — Annotated | The TADA-Wiki</title>
 <meta name="author" content="Ed Ivimey-Cook">
-<meta name="description" content="Annotation means adding comments within each code file (with # in R and Python), or embedding code in an RMarkdown or Quarto document alongside descriptive text. It helps a reader both understand...">
+<meta name="description" content="Annotation means adding comments within each code file (with # in R and Python), or embedding code in an R Markdown or Quarto document alongside descriptive text. It helps a reader both understand...">
 <meta name="generator" content="bookdown 0.48 with bs4_book()">
 <meta property="og:title" content="6 A — Annotated | The TADA-Wiki">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://eivimeycook.github.io/TADA-Wiki/annotated.html">
-<meta property="og:description" content="Annotation means adding comments within each code file (with # in R and Python), or embedding code in an RMarkdown or Quarto document alongside descriptive text. It helps a reader both understand...">
+<meta property="og:description" content="Annotation means adding comments within each code file (with # in R and Python), or embedding code in an R Markdown or Quarto document alongside descriptive text. It helps a reader both understand...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="6 A — Annotated | The TADA-Wiki">
-<meta name="twitter:description" content="Annotation means adding comments within each code file (with # in R and Python), or embedding code in an RMarkdown or Quarto document alongside descriptive text. It helps a reader both understand...">
+<meta name="twitter:description" content="Annotation means adding comments within each code file (with # in R and Python), or embedding code in an R Markdown or Quarto document alongside descriptive text. It helps a reader both understand...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -106,7 +106,7 @@
 </h1>
 <div class="tada-key">
 <p><strong>Annotation</strong> means adding comments <strong>within each code file</strong> (with <code>#</code> in R and
-Python), or embedding code in an <strong>RMarkdown or Quarto</strong> document alongside
+Python), or embedding code in an <strong>R Markdown or Quarto</strong> document alongside
 descriptive text. It helps a reader both <em>understand</em> your archived code
 (transparency) and <em>run</em> it (functionality and reproducibility).</p>
 </div>
@@ -120,7 +120,7 @@ Figure 6 from <span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Co
 In the TADA paper, we describe annotation as doing the same job as
 documentation, but providing clear comments within each coding script rather
 than describing the code “externally”
-(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>).</p>
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>).</p>
 <div id="annotated-header" class="section level2" number="6.1">
 <h2>
 <span class="header-section-number">6.1</span> Script headers<a class="anchor" aria-label="anchor" href="#annotated-header"><i class="fas fa-link"></i></a>
@@ -153,7 +153,7 @@ habitat…”</em>
 </li>
 <li>
 <strong>Where</strong> does its output appear? <em>“Numeric results shown in Caterpillar
-Abundance section”</em>, or <em>“Figure 5A”</em>
+abundance section”</em>, or <em>“Figure 5A”</em>
 </li>
 </ol>
 <p>The third question is <strong>signposting</strong>. It lets
@@ -197,6 +197,11 @@ file easier to read and navigate. They help most in long scripts.</p>
 <li>
 <strong><code>#%%</code></strong> in VS Code or Spyder (Python IDEs)</li>
 </ul>
+<div class="tada-wiki">
+<p>In RStudio, a section marker needs a label before the trailing dashes or hashes,
+for example <code># Load data ----</code> or <code>#### Load data ####</code>. The bare markers listed
+above are not documented as sections by Posit.</p>
+</div>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">##### 1. Load and clean data #####</span></span>
 <span><span class="co"># ...</span></span>
@@ -217,8 +222,8 @@ file easier to read and navigate. They help most in long scripts.</p>
 alongside descriptive text</strong>. We list this as an alternative route to annotated
 code.</p>
 <div class="tabset">
-<div id="rmarkdown-quarto" class="section level3 unlisted unnumbered">
-<h3>RMarkdown / Quarto<a class="anchor" aria-label="anchor" href="#rmarkdown-quarto"><i class="fas fa-link"></i></a>
+<div id="r-markdown-quarto" class="section level3 unlisted unnumbered">
+<h3>R Markdown / Quarto<a class="anchor" aria-label="anchor" href="#r-markdown-quarto"><i class="fas fa-link"></i></a>
 </h3>
 <p>Prose and code chunks sit in one file, with the output shown inline. The
 narrative itself provides the annotation, making clear which paragraph explains
@@ -235,7 +240,7 @@ each chunk.</p>
 <span id="cb11-10"><a href="annotated.html#cb11-10" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <p>For a complete example, see the TADA paper’s worked R Markdown report, which
 combines code, its output and descriptive text in one document
-(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025</span>):
+(<span class="tada-cite" data-key="ivimey-cook-2025-tada">Ivimey-Cook et al. 2025b</span>):
 <a href="https://eivimeycook.github.io/TADA/" class="uri">https://eivimeycook.github.io/TADA/</a>.</p>
 <p>The <a href="sortee.html#sortee">SORTEE guidelines</a> add that presenting everything in one
 self-contained Markdown or Quarto document is <strong>very helpful for data editors
@@ -251,7 +256,7 @@ own fails <a href="transferable.html#transferable">Transferable</a>.</p>
 <div id="jupyter-notebook" class="section level3 unlisted unnumbered">
 <h3>Jupyter Notebook<a class="anchor" aria-label="anchor" href="#jupyter-notebook"><i class="fas fa-link"></i></a>
 </h3>
-<p>Notebooks and JupyterLab show code in chunks with descriptive text and inline
+<p>Notebooks and JupyterLab show code in cells with descriptive text and inline
 output, and are another route to annotated code.</p>
 <div class="tada-wiki">
 <p>Two cautions about archiving a notebook:</p>
@@ -331,7 +336,7 @@ added.</p>
 <li><label><input type="checkbox">Packages are called explicitly by namespace (<code>package::function()</code>)</label></li>
 <li><label><input type="checkbox">Unused <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> / <code>import</code> calls have been removed</label></li>
 <li><label><input type="checkbox">If using a notebook: it has been restarted and run top to bottom before archiving</label></li>
-<li><label><input type="checkbox">If using Quarto or RMarkdown: the <strong>source</strong> file is archived, not only the rendered output</label></li>
+<li><label><input type="checkbox">If using Quarto or R Markdown: the <strong>source</strong> file is archived, not only the rendered output</label></li>
 </ul>
 <p><strong>Next:</strong> <a href="data-sharing.html#data-sharing">Data &amp; code sharing</a>, on the wider practices around TADA.</p>
 
@@ -349,7 +354,7 @@ added.</p>
 <li><a class="nav-link" href="#annotated-sections"><span class="header-section-number">6.3</span> Collapsible sections</a></li>
 <li>
 <a class="nav-link" href="#annotated-literate"><span class="header-section-number">6.4</span> Literate alternatives</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#rmarkdown-quarto">RMarkdown / Quarto</a></li>
+<li><a class="nav-link" href="#r-markdown-quarto">R Markdown / Quarto</a></li>
 <li><a class="nav-link" href="#jupyter-notebook">Jupyter Notebook</a></li>
 <li><a class="nav-link" href="#plain-scripts">Plain scripts</a></li>
 </ul>
@@ -374,7 +379,7 @@ added.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 09 November 2026.</p>
+    <p>"<strong>The TADA-Wiki</strong>: Best practice for sharing analytical code" was written by Ed Ivimey-Cook. It was last built on 10 November 2026.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

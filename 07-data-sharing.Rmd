@@ -185,7 +185,7 @@ a data editor is unlikely to be able to verify this ([Pick et al. 2026]{.tada-ci
 ## Licences {#sharing-licences}
 
 Without a licence, data **cannot be legally reused** in many circumstances,
-depending on jurisdiction. The same goes for code. Yet most researchers know
+depending on jurisdiction. The same goes for code. Yet many researchers know
 little about licences. Data and code usually need different licences: Creative
 Commons licences such as CC0 or CC BY for data, and software licences such as
 MIT or the GPL for code. The SORTEE guidelines require a licence for both, but
@@ -222,3 +222,5 @@ Try doing all of these to make the dog happy.
 - [ ] Seeds are set before anything stochastic
 - [ ] Saved outputs are provided for anything slow or proprietary, and flagged in the metadata
 - [ ] LLM use in code generation is disclosed in the README
+
+**Next:** [The SORTEE guidelines](#sortee), on the six stages a data editor checks.
