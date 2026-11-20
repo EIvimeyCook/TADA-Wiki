@@ -42,6 +42,8 @@ run `Rscript render.R`, and open a pull request. For a small fix, use the
    as `[Author Year]{.tada-cite data-key="author-year"}`.
 
 5. **Open a pull request** saying what you added and where it came from.
+   Commit only the source files: `docs/` is not tracked, and the site is
+   rebuilt and published automatically once the change is merged.
 
 ## The one rule {#contribute-rule}
 

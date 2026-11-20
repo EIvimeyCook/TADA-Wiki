@@ -4,7 +4,8 @@
 #
 #   Rscript render.R
 #
-# Output goes to docs/ (set in _bookdown.yml), ready to serve from GitHub Pages.
+# Output goes to docs/ (set in _bookdown.yml), which is git-ignored. On GitHub,
+# .github/workflows/deploy-book.yml runs this script and publishes docs/.
 # Pandoc is required. If it is not on the PATH, this script looks for the copy
 # bundled with RStudio. Override with:
 #
