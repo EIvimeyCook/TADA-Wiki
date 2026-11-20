@@ -28,7 +28,7 @@ jobs:
           use-public-rspm: true
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          packages: any::bookdown, any::rmarkdown, any::knitr, any::downlit, any::bslib
+          packages: any::bookdown, any::rmarkdown, any::knitr, any::downlit, any::bslib, any::jsonlite, any::xml2
       - name: Render book
         run: Rscript render.R
       - uses: actions/upload-pages-artifact@v3

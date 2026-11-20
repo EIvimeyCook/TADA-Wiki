@@ -48,7 +48,8 @@ find_pandoc <- function() {
 
 # --- Dependencies ------------------------------------------------------------
 
-required <- c("bookdown", "rmarkdown", "knitr", "downlit", "bslib")
+required <- c("bookdown", "rmarkdown", "knitr", "downlit", "bslib", "jsonlite",
+              "xml2")
 missing  <- required[!vapply(required, requireNamespace, logical(1),
                              quietly = TRUE)]
 
